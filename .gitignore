@@ -1,0 +1,14 @@
+.DS_Store
+.env
+.env.*
+!.env.example
+node_modules/
+.venv/
+__pycache__/
+*.db
+*.sqlite*
+# Local course and personal planning material
+MAI-October 2026 Team_Breakout_Handout.docx
+host-ready-notion-setup.json
+BRAINSTORMING-CONTEXT.md
+PROJECT-NAME-OPTIONS.md

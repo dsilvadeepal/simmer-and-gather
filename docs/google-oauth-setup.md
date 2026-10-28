@@ -1,6 +1,6 @@
 # Google sign-in and Calendar setup
 
-Use a separate **Simmer and Gather** project. No paid services or billing linkage needed for this setup. Project creation is awaiting explicit user approval after automatic approval review blocked it; no project was created by the agent.
+Use a separate **Simmer and Gather** project. No paid services or billing linkage needed for this setup. Created with explicit user approval on October 28, 2026: project ID `keen-autumn-513015-c5`, project number `139534566656`. No billing was linked. Google Calendar API enabled and its Enabled status verified on October 28, 2026, after explicit user approval of the API terms. The web OAuth client has been created; calendar access has not yet been granted.
 
 1. In Google Cloud Console, create/select the app project. Enable **Google Calendar API**.
 2. Open Google Auth Platform → Branding. App name: Simmer and Gather. Use your own support/contact email. Review the Google API User Data Policy yourself before accepting it.
@@ -13,3 +13,7 @@ Use a separate **Simmer and Gather** project. No paid services or billing linkag
 The callback uses single-use browser-bound state, PKCE, verified Google ID token email and a one-owner allowlist. Refresh tokens stay encrypted server-side. Production startup fails closed without required configuration. The separate `simmer.dev` entrypoint is synthetic loopback demo only.
 
 Sources: https://developers.google.com/identity/protocols/oauth2/web-server ; https://developers.google.com/workspace/calendar/api/auth . Live OAuth exchange and booking remain unverified until setup and user consent.
+
+Setup progress: OAuth app information is filled as Simmer and Gather, using the project owner Gmail for support/contact and External / Testing audience. The User Data Policy was accepted with explicit approval and Google confirmed OAuth configuration created. The Web application client form is prepared as Simmer and Gather web with callback http://localhost:8000/api/google/callback; client creation was explicitly approved and completed on October 28, 2026. Credentials are stored in the Git-ignored `.env.google` with owner-only (0600) permissions. Test-user configuration and live user consent remain pending.
+
+October 28 connection setup: owner Gmail added and verified as the sole test user; publishing remains Testing. The real OAuth server is running locally on localhost:8000 with encrypted credential storage and a separate owner ID from synthetic demo data. Google accepted the authorization request and displayed the account chooser. User sign-in/consent and live Calendar read verification remain pending. No calendar events created.

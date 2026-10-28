@@ -53,9 +53,9 @@ Define these contracts in Task 2; later tasks extend only through explicit revie
 
 ## Budget and deployment decision
 
-Builder recommendation: keep the approved Python/PostgreSQL architecture, first evaluating a single Render Free web service serving the built frontend with Supabase Free PostgreSQL/auth/storage. This is a candidate, not an account entitlement or a production reliability promise. Replit can be a development/temporary demo option only if total operating costs after credits independently fit the ceiling. Do not use expiring Render Free Postgres as persistent app storage.
+Keep the approved Python/PostgreSQL architecture. Supabase is not required or selected. Google OAuth supplies owner sign-in; standard PostgreSQL holds app state. Evaluate Neon Free or the user's previously used Replit PostgreSQL alongside hosting, selecting only a verified combination within $5/month after credits. Hosting remains undecided. The current session-level advisory locks require a direct/session-mode database connection, not transaction pooling. Do not use expiring Render Free Postgres as persistent storage. Verify independent upload cleanup before enabling hosted uploads.
 
-Official references checked October 27: [Render free limitations](https://render.com/docs/free), [Supabase pricing](https://supabase.com/pricing). Render Free sleeps after 15 minutes and has ephemeral local files; Supabase Free may pause after inactivity. Confirm quota availability, connection pooling, private storage cleanup and OAuth before selecting. Do not buy a domain or upgrade plans. If this topology fails, record the blocker and propose a bounded alternative before implementing a different runtime.
+Earlier Render/Supabase comparisons were research candidates, not approved purchases or entitlements. Recheck current pricing and account limits before deployment; do not buy a domain or upgrade plans without authorization.
 
 Budget target, not measured forecast: $0 fixed infrastructure, at most $3/month combined model/search/eval/trace spend, $2 headroom for remaining usage/taxes. Model planning runs per month and token/search/image usage explicitly in `docs/budget.md`; report maximum supported usage rather than inventing a universal monthly total. Price at normal rates after credits. Track credit balances separately. LangSmith included/credit entitlement and retention must be verified; disable paid judging and cap trace volume before spending the reserve. Development experiments get a separate explicit spend allowance before live calls; no paid calls in fixture tests.
 
@@ -211,3 +211,21 @@ Native execution is approved: one implementer uses Superpowers executing-plans w
 UI/UX is approved: guided Gathering → Menu → Prep plan, editable cards, backward navigation preserving choices, selected prep days and per-day totals, Manageable/More generous menus with editable category counts, compact attributed recipe photos and labeled icons. Laptop and phone share readable task typography; task ingredient quantities remain visible and extra notes expand. Cleanup is a short title/duration. Phone consultation/quick edits are included; cooking progress remains deferred.
 
 Benchmark available Nebius and Fireworks vision endpoints using existing credits. Begin with a bounded development experiment capped at $1 total, no automatic recharge; verify each model ID and published rates before calls. Compare identical labeled images, extraction precision/recall, quantities/units, unsupported claims, latency and normal-rate cost per usable extraction. Distinguish synthetic receipts, public licensed images and any later user-provided samples. A small test yields a provisional selection, not general accuracy. Prefer the cheapest model meeting the accuracy/abstention gate; keep manual correction and unknown amounts. No personal uploads are required to continue building, and no live winner is claimed before results. Jev remains an optional text decision experiment, not the vision extractor.
+
+## Build status and Google setup — October 28, 2026
+
+The implementation plan is ready and execution has started; this is not a declaration that the app is finished. Tasks 1–9 have local implementation slices and tests, with remaining integration and acceptance work. Task 10 (cost controls/evals/tracing) is in progress; hosted release and final whole-branch review are outstanding. Unchecked task steps remain acceptance requirements, even where local code already exists.
+
+- [x] Create dedicated Google Cloud project `keen-autumn-513015-c5`, without billing linkage.
+- [x] Enable Google Calendar API with approved terms.
+- [x] Create OAuth app configuration in External / Testing mode with approved User Data Policy.
+- [x] Create Web application client with callback `http://localhost:8000/api/google/callback`; keep credentials local, Git-ignored and owner-readable only.
+- [x] Add the owner as sole test user and prepare the real local OAuth server.
+- [ ] Owner completes Google sign-in and consent (account chooser opened; consent pending).
+- [ ] Verify token exchange, encrypted storage, calendar listing and selected-calendar availability reads.
+- [ ] Verify reviewed plan approval and Busy booking in the dedicated app calendar, without changing unrelated events.
+- [ ] Add the exact hosted callback only after the deployment host is selected.
+
+Detailed connection steps and current evidence: `docs/google-oauth-setup.md`. Vision comparison: `docs/vision-benchmark.md`. Remaining app work includes runtime Notion/model/vision wiring, UI refinements, broader live evaluation, final review and deployment.
+
+GitHub: https://github.com/dsilvadeepal/simmer-and-gather (private, verified October 28). Local implementation branch: `build/hosting-demo`. Remote currently has only `main`; latest implementation and document changes have not yet been pushed. Commit/review and push the implementation branch before treating GitHub as the current build backup. Never include `.env.google` or other credentials.

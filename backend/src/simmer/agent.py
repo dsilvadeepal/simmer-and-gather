@@ -1,6 +1,8 @@
 """One bounded planning workflow; all external writes stay outside the graph."""
 from .db import serialized
 from typing import TypedDict
+from langsmith import tracing_context
+from time import perf_counter
 from uuid import uuid5, NAMESPACE_URL
 from sqlalchemy import select
 from sqlalchemy.orm import Session
@@ -20,7 +22,7 @@ class State(TypedDict,total=False):
     plan: PlanCandidate
 
 class PlanningService:
-    def __init__(self,store,model=None): self.store=store; self.host=HostingService(store); self.model=model
+    def __init__(self,store,model=None,telemetry=None): self.store=store; self.host=HostingService(store); self.model=model; self.telemetry=telemetry
     def load(self,owner,id): return self.host.load_plan_inputs(owner,id)
     @serialized
     def apply_menu_changes(self,owner,gathering_id,changes,expected_revision):
@@ -57,7 +59,8 @@ class PlanningService:
         graph.add_node('retrieve',lambda state:{'recipes':RecipeService(self.store).list_recipes(owner)})
         graph.add_node('propose',lambda state:{'proposal':propose_menu(state['inputs'],rank_recipes(state['inputs'].gathering,state['recipes'],self.model))})
         graph.add_edge(START,'retrieve'); graph.add_edge('retrieve','propose'); graph.add_edge('propose',END)
-        return graph.compile().invoke({'inputs':self.load(owner,id)},{'recursion_limit':8})['proposal']
+        with tracing_context(enabled=False):
+            return graph.compile().invoke({'inputs':self.load(owner,id)},{'recursion_limit':8})['proposal']
     def generate_final_plan(self,owner,gathering_id,expected_revision,availability=None):
         inputs=self.load(owner,gathering_id)
         if inputs.gathering.revision!=expected_revision: raise Conflict('Gathering changed; reload')
@@ -71,7 +74,9 @@ class PlanningService:
             plan.content_hash=content_hash(plan)
             return {'plan':plan}
         graph.add_node('validate',validate); graph.add_edge(START,'schedule'); graph.add_edge('schedule','validate'); graph.add_edge('validate',END)
-        plan=graph.compile().invoke({'inputs':inputs},{'recursion_limit':8})['plan']
+        started=perf_counter()
+        with tracing_context(enabled=False):
+            plan=graph.compile().invoke({'inputs':inputs},{'recursion_limit':8})['plan']
         plan.id=str(uuid5(NAMESPACE_URL,owner+gathering_id+plan.content_hash))
         # Guard against a concurrent edit while generation was running.
         with Session(self.store.engine) as s, s.begin():
@@ -79,4 +84,7 @@ class PlanningService:
             if not row or row.revision!=expected_revision: raise Conflict('Inputs changed during planning')
             existing=s.get(Document,(owner,'plan',plan.id))
             if not existing: s.add(Document(owner=owner,kind='plan',id=plan.id,body={'plan':plan.model_dump(mode='json'),'inputs':inputs.model_dump(mode='json')},revision=1))
+        if self.telemetry:
+            try: self.telemetry.record_run({'revision':plan.revision,'plan_id':plan.id,'mode':inputs.availability.status},{'status':plan.status,'task_count':len(plan.assignments),'violation_codes':[v.code for v in plan.violations],'latency_seconds':perf_counter()-started})
+            except Exception: pass  # Trace availability must not discard a saved plan.
         return plan

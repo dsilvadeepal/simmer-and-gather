@@ -380,5 +380,184 @@
     },
     "estimated_usd": 0.0001226,
     "seconds": 3.416
+  },
+  {
+    "provider": "fireworks-deepseek",
+    "model": "accounts/fireworks/models/deepseek-v4p1-flash",
+    "case": "receipt-clear",
+    "expected": [
+      {
+        "name": "rice",
+        "quantity": 2,
+        "unit": "kg"
+      },
+      {
+        "name": "milk",
+        "quantity": 1,
+        "unit": "l"
+      },
+      {
+        "name": "eggs",
+        "quantity": 12,
+        "unit": "count"
+      }
+    ],
+    "status": 200,
+    "usage": {
+      "prompt_tokens": 320,
+      "completion_tokens": 148,
+      "total_tokens": 468,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      },
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "reasoning_tokens": 100,
+        "rejected_prediction_tokens": null
+      }
+    },
+    "response": "{\"items\":[{\"name\":\"rice\",\"quantity\":2,\"unit\":\"kg\"},{\"name\":\"milk\",\"quantity\":1,\"unit\":\"l\"},{\"name\":\"eggs\",\"quantity\":12,\"unit\":\"count\"}]}",
+    "score": {
+      "matched": 3,
+      "expected": 3,
+      "predicted": 3,
+      "exact": 3,
+      "unsupported": 0
+    },
+    "estimated_usd": 0.00027360000000000004,
+    "seconds": 1.62
+  },
+  {
+    "provider": "fireworks-deepseek",
+    "model": "accounts/fireworks/models/deepseek-v4p1-flash",
+    "case": "receipt-decimals",
+    "expected": [
+      {
+        "name": "paneer",
+        "quantity": 0.5,
+        "unit": "kg"
+      },
+      {
+        "name": "tomatoes",
+        "quantity": 750,
+        "unit": "g"
+      },
+      {
+        "name": "yogurt",
+        "quantity": 1,
+        "unit": "kg"
+      }
+    ],
+    "status": 200,
+    "usage": {
+      "prompt_tokens": 320,
+      "completion_tokens": 218,
+      "total_tokens": 538,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      },
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "reasoning_tokens": 165,
+        "rejected_prediction_tokens": null
+      }
+    },
+    "response": "{\"items\":[{\"name\":\"paneer\",\"quantity\":0.5,\"unit\":\"kg\"},{\"name\":\"tomatoes\",\"quantity\":750,\"unit\":\"g\"},{\"name\":\"yogurt\",\"quantity\":1,\"unit\":\"kg\"}]}",
+    "score": {
+      "matched": 3,
+      "expected": 3,
+      "predicted": 3,
+      "exact": 3,
+      "unsupported": 0
+    },
+    "estimated_usd": 0.00035759999999999996,
+    "seconds": 2.038
+  },
+  {
+    "provider": "fireworks-deepseek",
+    "model": "accounts/fireworks/models/deepseek-v4p1-flash",
+    "case": "pantry-label-unknown",
+    "expected": [
+      {
+        "name": "rice",
+        "quantity": null,
+        "unit": null
+      },
+      {
+        "name": "lentils",
+        "quantity": null,
+        "unit": null
+      },
+      {
+        "name": "sugar",
+        "quantity": null,
+        "unit": null
+      }
+    ],
+    "status": 200,
+    "usage": {
+      "prompt_tokens": 320,
+      "completion_tokens": 149,
+      "total_tokens": 469,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      },
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "reasoning_tokens": 103,
+        "rejected_prediction_tokens": null
+      }
+    },
+    "response": "{\"items\":[{\"name\":\"rice\",\"quantity\":null,\"unit\":null},{\"name\":\"lentils\",\"quantity\":null,\"unit\":null},{\"name\":\"sugar\",\"quantity\":null,\"unit\":null}]}",
+    "score": {
+      "matched": 3,
+      "expected": 3,
+      "predicted": 3,
+      "exact": 3,
+      "unsupported": 0
+    },
+    "estimated_usd": 0.00027479999999999996,
+    "seconds": 1.304
+  },
+  {
+    "provider": "fireworks-deepseek",
+    "model": "accounts/fireworks/models/deepseek-v4p1-flash",
+    "case": "receipt-nonfood",
+    "expected": [
+      {
+        "name": "spinach",
+        "quantity": 200,
+        "unit": "g"
+      },
+      {
+        "name": "cumin",
+        "quantity": 100,
+        "unit": "g"
+      }
+    ],
+    "status": 200,
+    "usage": {
+      "prompt_tokens": 320,
+      "completion_tokens": 178,
+      "total_tokens": 498,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      },
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "reasoning_tokens": 144,
+        "rejected_prediction_tokens": null
+      }
+    },
+    "response": "{\"items\":[{\"name\":\"spinach\",\"quantity\":200,\"unit\":\"g\"},{\"name\":\"cumin\",\"quantity\":100,\"unit\":\"g\"}]}",
+    "score": {
+      "matched": 2,
+      "expected": 2,
+      "predicted": 2,
+      "exact": 2,
+      "unsupported": 0
+    },
+    "estimated_usd": 0.00030960000000000004,
+    "seconds": 1.512
   }
 ]

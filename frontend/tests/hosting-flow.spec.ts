@@ -1,0 +1,35 @@
+import {test,expect} from '@playwright/test';
+test('gathering edits survive reload and navigation; mobile quantities stay visible',async({page})=>{
+ await page.goto('/');
+ await expect(page.getByRole('heading',{name:'Make room for the gathering.'})).toBeVisible();
+ await page.getByLabel('Gathering name').fill('Diwali with family');
+ await page.getByRole('button',{name:'Save gathering'}).click();
+ await expect(page.getByText('Saved', {exact:true})).toBeVisible();
+ await page.reload();
+ await expect(page.getByLabel('Gathering name')).toHaveValue('Diwali with family');
+ await page.getByRole('button',{name:'2 Menu',exact:true}).click();
+ await expect(page.getByRole('heading',{name:'A spread that fits your week.'})).toBeVisible();
+ await page.setViewportSize({width:375,height:812});
+ expect(await page.evaluate(()=>document.documentElement.scrollWidth<=window.innerWidth)).toBe(true);
+ await page.getByRole('button',{name:'3 Prep plan',exact:true}).click();
+ await expect(page.getByRole('button',{name:'Generate final plan',exact:true})).toBeVisible();
+ await expect(page.getByText('Mark complete',{exact:true})).toHaveCount(0);
+});
+test('cook versus buy changes rebuild tasks and keep phone ingredients visible',async({page})=>{
+ await page.goto('/');
+ await page.getByRole('button',{name:'2 Menu',exact:true}).click();
+ await page.getByLabel('Preparation Palak paneer').selectOption('cook');
+ await expect(page.getByText('Saved',{exact:true})).toBeVisible();
+ await page.getByRole('button',{name:'3 Prep plan',exact:true}).click();
+ await page.getByRole('button',{name:'Generate final plan',exact:true}).click();
+ await expect(page.getByRole('heading',{name:'Palak paneer · Prepare palak paneer'})).toBeVisible();
+ await page.setViewportSize({width:375,height:812});
+ await expect(page.getByText('600 g').first()).toBeVisible();
+ await page.getByRole('button',{name:'2 Menu',exact:true}).click();
+ await page.getByLabel('Preparation Palak paneer').selectOption('buy');
+ await expect(page.getByText('Saved',{exact:true})).toBeVisible();
+ await page.getByRole('button',{name:'3 Prep plan',exact:true}).click();
+ await expect(page.getByRole('button',{name:'Approve these blocks'})).toHaveCount(0);
+ await page.getByRole('button',{name:'Generate final plan',exact:true}).click();
+ await expect(page.getByRole('heading',{name:'Palak paneer · Prepare palak paneer'})).toHaveCount(0);
+});

@@ -18,3 +18,4 @@ PROJECT-NAME-OPTIONS.md
 frontend/dist/
 frontend/test-results/
 frontend/playwright-report/
+frontend/*.tsbuildinfo

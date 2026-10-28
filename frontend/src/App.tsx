@@ -23,6 +23,8 @@ import {
   type Recipe,
   type Selection,
 } from "./api";
+import { RecipeReview } from "./RecipeReview";
+import { CalendarPicker } from "./CalendarPicker";
 import { TaskCard } from "./TaskCard";
 const categories = ["starters", "mains", "sides", "desserts", "drinks"];
 function localDate(value?: string | null) {
@@ -58,12 +60,13 @@ export default function App() {
     [plan, setPlan] = useState<Plan | null>(null),
     [source, setSource] = useState(""),
     [preview, setPreview] = useState<Recipe | null>(null),
-    [reviewJson, setReviewJson] = useState(""),
     [inventory, setInventory] = useState(""),
     [approval, setApproval] = useState<string | null>(null),
     [booking, setBooking] = useState<{
       outcomes: { status: string; title?: string }[];
     } | null>(null);
+  const [calendars,setCalendars] = useState<{id:string;name:string}[]>([]);
+  const [calendarError,setCalendarError] = useState("");
   async function run(action: () => Promise<void>) {
     setLoading(true);
     setError("");
@@ -95,6 +98,8 @@ export default function App() {
         gs = [created];
       }
       await load(gs[0].id!);
+      try { setCalendars(await api<{id:string;name:string}[]>("/calendars")); }
+      catch { setCalendarError("Connect Google to choose your calendars. Sample mode uses illustrative availability."); }
     });
   }, []);
   function change(values: Partial<Gathering>) {
@@ -641,21 +646,8 @@ export default function App() {
                 <CalendarDays />
                 Calendars & protected time
               </h2>
-              <label>
-                Calendar IDs to check
-                <input
-                  placeholder="Connect Google Calendar during setup"
-                  value={(g.selected_calendars || []).join(", ")}
-                  onChange={(e) =>
-                    change({
-                      selected_calendars: e.target.value
-                        .split(",")
-                        .map((x) => x.trim())
-                        .filter(Boolean),
-                    })
-                  }
-                />
-              </label>
+              <CalendarPicker calendars={calendars} selected={g.selected_calendars || []}
+                onChange={ids=>change({selected_calendars:ids})} error={calendarError}/>
               <p className="meta">
                 Work, family and sleep remain protected even when a calendar
                 looks free.
@@ -1023,7 +1015,6 @@ export default function App() {
                   run(async () => {
                     const r = await api<Recipe>("/recipes/preview", { source });
                     setPreview(r);
-                    setReviewJson(JSON.stringify(r, null, 2));
                   })
                 }
               >
@@ -1031,21 +1022,12 @@ export default function App() {
               </button>
               {preview && (
                 <>
-                  <p className="meta">
-                    Review record: missing fields stay unknown. This first build
-                    uses a structured editor; a friendlier editor is pending.
-                  </p>
-                  <textarea
-                    aria-label="Recipe review"
-                    rows={14}
-                    value={reviewJson}
-                    onChange={(e) => setReviewJson(e.target.value)}
-                  />
+                  <RecipeReview recipe={preview} onChange={setPreview}/>
                   <button
                     onClick={() =>
                       run(async () => {
                         await api("/recipes", {
-                          recipe: { ...JSON.parse(reviewJson), reviewed: true },
+                          recipe: { ...preview, reviewed: true },
                         });
                         await load(g.id!);
                         setPreview(null);

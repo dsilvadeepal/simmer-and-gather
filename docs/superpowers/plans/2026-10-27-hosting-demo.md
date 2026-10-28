@@ -228,4 +228,6 @@ The implementation plan is ready and execution has started; this is not a declar
 
 Detailed connection steps and current evidence: `docs/google-oauth-setup.md`. Vision comparison: `docs/vision-benchmark.md`. Remaining app work includes runtime Notion/model/vision wiring, UI refinements, broader live evaluation, final review and deployment.
 
-GitHub: https://github.com/dsilvadeepal/simmer-and-gather (private, verified October 28). Local implementation branch: `build/hosting-demo`. Remote currently has only `main`; latest implementation and document changes have not yet been pushed. Commit/review and push the implementation branch before treating GitHub as the current build backup. Never include `.env.google` or other credentials.
+GitHub: https://github.com/dsilvadeepal/simmer-and-gather (private, verified October 28). Local implementation branch: `build/hosting-demo`. Implementation branch was pushed on October 28. Subsequent work is committed and pushed in verified increments; the main branch is not merged automatically. Never include `.env.google` or other credentials.
+
+October 28 continuation: runtime text-model budget wiring, calendar checkbox picker, recipe review form, Google refresh-race recovery, CI workflow, Docker packaging and operating runbook added. Backend 54 tests, frontend 3 tests, production build and 25 fixture eval checks pass; Docker image builds locally. Live integrations and final acceptance remain incomplete.

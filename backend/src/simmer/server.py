@@ -27,7 +27,8 @@ def build_app(config=None):
     google=GoogleCalendar(GoogleCredentials(store,config['ALLOWED_OWNER_ID'],config).access_token)
     availability=AvailabilityService(google.events)
     auth=Authenticator(config['SESSION_SECRET'],config['ALLOWED_OWNER_ID'],'simmer','simmer')
-    app=create_app(store,auth,availability=availability)
+    from .runtime import build_text_model
+    app=create_app(store,auth,availability=availability,model=build_text_model(store,config['ALLOWED_OWNER_ID'],config))
     install_oauth(app,store,config)
     owner=app.state.owner
     @app.get('/api/calendars')

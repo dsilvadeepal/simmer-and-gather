@@ -35,7 +35,15 @@ class GoogleCredentials:
             r=client.post('https://oauth2.googleapis.com/token',data={'client_id':self.config['GOOGLE_CLIENT_ID'],'client_secret':self.config['GOOGLE_CLIENT_SECRET'],'refresh_token':credentials['refresh_token'],'grant_type':'refresh_token'})
             r.raise_for_status(); updated=r.json()
         credentials.update(updated,expires=(datetime.now(timezone.utc)+timedelta(seconds=updated['expires_in'])).isoformat())
-        self.store.put(self.owner,'credential','google',{'encrypted':encrypt_secret(json.dumps(credentials),self.config['CREDENTIAL_ENCRYPTION_KEY'])},rev)
+        try:
+            self.store.put(self.owner,'credential','google',{'encrypted':encrypt_secret(json.dumps(credentials),self.config['CREDENTIAL_ENCRYPTION_KEY'])},rev)
+        except Conflict:
+            # Another refresh or reconnect won. Never overwrite its newer credentials.
+            saved,_=self.store.get(self.owner,'credential','google')
+            winner=json.loads(decrypt_secret(saved['encrypted'],self.config['CREDENTIAL_ENCRYPTION_KEY']))
+            if datetime.fromisoformat(winner['expires'])<=datetime.now(timezone.utc)+timedelta(seconds=60):
+                raise Conflict('Google credentials changed; retry the connection')
+            return winner['access_token']
         return credentials['access_token']
 
 def install_oauth(app,store,config):

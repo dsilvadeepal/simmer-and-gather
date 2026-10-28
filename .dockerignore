@@ -1,0 +1,12 @@
+.git
+.superpowers
+.env*
+!.env.example
+.venv
+**/node_modules
+**/__pycache__
+frontend/dist
+frontend/test-results
+frontend/playwright-report
+*.docx
+host-ready-notion-setup.json

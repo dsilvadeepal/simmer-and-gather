@@ -22,7 +22,7 @@ app=create_app(store,Authenticator(KEY,OWNER,'simmer-local','simmer-local'),fixt
 def session(request:Request):
     if request.client.host not in ('127.0.0.1','::1'): raise HTTPException(403,'Local demo only')
     origin=request.headers.get('origin','')
-    if origin and origin not in ('http://127.0.0.1:5173','http://localhost:5173','http://127.0.0.1:8000'): raise HTTPException(403,'Local origin required')
+    if origin and origin not in ('http://127.0.0.1:5173','http://localhost:5173','http://127.0.0.1:8000','http://127.0.0.1:5174'): raise HTTPException(403,'Local origin required')
     return {'token':jwt.encode({'sub':OWNER,'iss':'simmer-local','aud':'simmer-local','exp':datetime.now(timezone.utc)+timedelta(hours=4)},KEY,algorithm='HS256'),'fixture_mode':True}
 
 def seed():

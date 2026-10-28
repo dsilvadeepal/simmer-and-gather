@@ -4,7 +4,7 @@ Curated October 28, 2026. 40 candidates: 15 Diwali/Indian hosting and 25 holiday
 
 31 pages supplied structured recipe metadata (individual timing fields may still be absent). The Ruchik Randhap chutney page was accessible but lacked structured recipe data; it remains a source-linked candidate. Eight Wendy pages remain source-link candidates because their individual pages returned HTTP 403; the accessible site index established the links. No protection was bypassed.
 
-All records in the existing HR Recipe Library are Needs details and Planning Ready=false. Not personally tested. Task timings, allergens, make-ahead/storage evidence and servings need review. Source prep time does not equal active hosting workload.
+Tavily extracted all 40 source pages on October 28. Source-backed make-ahead notes were confirmed for 14; the other 26 remain Needs details. Publisher prep time is available for 31 and cook time for 29, stored as recipe-level facts. All 40 remain Planning Ready=false until task-level active/presence time, allergens, scaling and storage are reviewed. No recipe was marked personally tested.
 
 | Occasion | Recipe | Category | Publisher rating snapshot |
 |---|---|---|---|

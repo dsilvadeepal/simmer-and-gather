@@ -407,26 +407,58 @@
     "review": "Base recipe only; confirm servings, equipment batches, and real pace before scheduling."
   },
   {
-    "title": "The Best Goan Pork Roast",
-    "url": "https://withwendyandshannon.com/blog/the-best-goan-pork-roast/",
-    "basis": "insufficient source detail",
-    "phases": [],
-    "cleanup_minutes": null,
-    "active_minutes": null,
-    "unattended_minutes": null,
-    "elapsed_minutes": null,
-    "review": "Find complete ingredients and directions before task-level estimate."
+    "title": "Goan Pork Vindaloo",
+    "url": "https://theaspiringhomecook.com/2019/10/goan-pork-vindaloo.html",
+    "basis": "chef estimate, untested",
+    "phases": [
+      {
+        "task": "Cut pork and grind spice paste",
+        "active_minutes": 25,
+        "unattended_minutes": 0
+      },
+      {
+        "task": "Saute onions, paste and pork",
+        "active_minutes": 15,
+        "unattended_minutes": 0
+      },
+      {
+        "task": "Covered simmer; check tenderness",
+        "active_minutes": 10,
+        "unattended_minutes": 60
+      }
+    ],
+    "cleanup_minutes": 10,
+    "active_minutes": 60,
+    "unattended_minutes": 60,
+    "elapsed_minutes": 120,
+    "review": "Base recipe only; confirm servings, equipment batches and real pace before scheduling. Author says it can be made one or two days ahead; refrigerate promptly and reheat thoroughly."
   },
   {
-    "title": "Traditional Goan Stew",
-    "url": "https://withwendyandshannon.com/blog/traditional-goan-stew/",
-    "basis": "insufficient source detail",
-    "phases": [],
-    "cleanup_minutes": null,
-    "active_minutes": null,
-    "unattended_minutes": null,
-    "elapsed_minutes": null,
-    "review": "Find complete ingredients and directions before task-level estimate."
+    "title": "Chicken Cafreal",
+    "url": "https://aromaticessence.co/chicken-cafreal/",
+    "basis": "chef estimate, untested",
+    "phases": [
+      {
+        "task": "Prepare chicken and blend cafreal paste",
+        "active_minutes": 25,
+        "unattended_minutes": 0
+      },
+      {
+        "task": "Marinate covered in refrigerator",
+        "active_minutes": 0,
+        "unattended_minutes": 180
+      },
+      {
+        "task": "Sear and finish chicken in sauce",
+        "active_minutes": 20,
+        "unattended_minutes": 25
+      }
+    ],
+    "cleanup_minutes": 10,
+    "active_minutes": 55,
+    "unattended_minutes": 205,
+    "elapsed_minutes": 260,
+    "review": "Base recipe only; confirm servings, equipment batches and real pace before scheduling. Author recommends marinating for 2\u20133 hours or overnight in the refrigerator; cook near serving or verify a safe cooked-ahead/reheat plan."
   },
   {
     "title": "The Ultimate Goan Caldin Curry",
@@ -505,15 +537,31 @@
     "review": "Base recipe only; confirm servings, equipment batches, and real pace before scheduling."
   },
   {
-    "title": "Easy Fruit Cake",
-    "url": "https://withwendyandshannon.com/blog/easy-fruit-cake/",
-    "basis": "insufficient source detail",
-    "phases": [],
-    "cleanup_minutes": null,
-    "active_minutes": null,
-    "unattended_minutes": null,
-    "elapsed_minutes": null,
-    "review": "Find complete ingredients and directions before task-level estimate."
+    "title": "Easy Christmas Fruit Cake Without Alcohol",
+    "url": "https://www.ruchikrandhap.com/christmas-fruit-cake-without-alcohol/",
+    "basis": "chef estimate, untested",
+    "phases": [
+      {
+        "task": "Chop and soak dried fruit in orange juice",
+        "active_minutes": 30,
+        "unattended_minutes": 480
+      },
+      {
+        "task": "Mix batter and prepare tin",
+        "active_minutes": 30,
+        "unattended_minutes": 0
+      },
+      {
+        "task": "Bake and cool completely",
+        "active_minutes": 10,
+        "unattended_minutes": 240
+      }
+    ],
+    "cleanup_minutes": 15,
+    "active_minutes": 85,
+    "unattended_minutes": 720,
+    "elapsed_minutes": 805,
+    "review": "Base recipe only; confirm servings, equipment batches and real pace before scheduling. Author specifies 6\u20138 hours or overnight fruit soak; bake 2\u00bd\u20133 hours and cool fully. Author says nonalcoholic cake has a short room-temperature shelf life; verify storage plan."
   },
   {
     "title": "Super Easy Snowball Cookies",
@@ -923,15 +971,36 @@
     "review": "Base recipe only; confirm servings, equipment batches, and real pace before scheduling."
   },
   {
-    "title": "Coconut & Roasted Chana Dal Chutney",
-    "url": "https://www.ruchikrandhap.com/coconut-roasted-chana-dal-chutney/",
-    "basis": "insufficient source detail",
-    "phases": [],
-    "cleanup_minutes": null,
-    "active_minutes": null,
-    "unattended_minutes": null,
-    "elapsed_minutes": null,
-    "review": "Find complete ingredients and directions before task-level estimate."
+    "title": "Sonay Sukhe (Black Chana Sukka)",
+    "url": "https://www.ruchikrandhap.com/sonay-sukhe-black-chana-fugadsukka/",
+    "basis": "chef estimate, untested",
+    "phases": [
+      {
+        "task": "Rinse and soak black chana",
+        "active_minutes": 5,
+        "unattended_minutes": 660
+      },
+      {
+        "task": "Slice onion and prepare spices",
+        "active_minutes": 10,
+        "unattended_minutes": 0
+      },
+      {
+        "task": "Pressure cook beans and allow release",
+        "active_minutes": 10,
+        "unattended_minutes": 35
+      },
+      {
+        "task": "Temper, combine and simmer",
+        "active_minutes": 15,
+        "unattended_minutes": 10
+      }
+    ],
+    "cleanup_minutes": 10,
+    "active_minutes": 50,
+    "unattended_minutes": 705,
+    "elapsed_minutes": 755,
+    "review": "Source calls for 10\u201312 hour or overnight soak. Base recipe serves about 2\u20133; scaling and pressure-cooker batches need review. Cook until beans are tender, not by time alone."
   },
   {
     "title": "Coffee Fruit Cake",

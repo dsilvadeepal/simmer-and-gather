@@ -945,58 +945,127 @@
     ]
   },
   {
-    "url": "https://withwendyandshannon.com/blog/the-best-goan-pork-roast/",
+    "url": "https://theaspiringhomecook.com/2019/10/goan-pork-vindaloo.html",
     "occasion": "Christmas / Goan",
     "category": "mains",
-    "status": "source link only \u2014 importer access restricted",
-    "title": "The Best Goan Pork Roast",
-    "structured": false,
+    "status": "fetched",
+    "title": "Goan Pork Vindaloo",
+    "structured": true,
     "rating": null,
-    "publisher": "With Wendy and Shannon (formerly Platin\u2019 It With Wendy)",
+    "publisher": "The Aspiring Home Cook",
     "rating_display": "No rating verified",
     "planning_ready": false,
-    "prep_evidence_status": "Needs details",
-    "prep_evidence_methods": "Tavily source-page extract",
-    "prep_summary": "No recipe-specific make-ahead or safe storage window confirmed from the extracted page. Review the original: https://withwendyandshannon.com/blog/the-best-goan-pork-roast/",
-    "source_prep_minutes": null,
-    "source_cook_minutes": null,
+    "prep_evidence_status": "Source reviewed",
+    "prep_evidence_methods": "Publisher recipe page",
+    "prep_summary": "Author says it can be made one or two days ahead; refrigerate promptly and reheat thoroughly.",
+    "source_prep_minutes": 20,
+    "source_cook_minutes": 60,
     "shortlist": null,
     "gluten_screen": {
-      "status": "unknown",
+      "status": "none explicitly listed",
       "evidence": []
     },
     "nut_screen": {
-      "status": "unknown",
+      "status": "none explicitly listed",
       "evidence": []
     },
-    "label_review": []
+    "label_review": [
+      "1-2 tbsp oil"
+    ],
+    "yield_text": [
+      "8",
+      "8 servings"
+    ],
+    "prep": "PT20M",
+    "cook": "PT1H",
+    "total": "PT1H20M",
+    "chef_prep_draft": "Cut pork and grind spice paste: 25 min active + 0 min waiting (estimate). Saute onions, paste and pork: 15 min active + 0 min waiting (estimate). Covered simmer; check tenderness: 10 min active + 60 min waiting (estimate). Cleanup: 10 min (estimate).",
+    "pending_review": "Confirm base servings, batch count, allergens and storage before scheduling.",
+    "ingredients": [
+      "1 kilo boneless pork (pick a slightly fatty cut)",
+      "1-2 tbsp oil",
+      "1 \u2013 1 1/2 onion, finely chopped",
+      "Salt, to taste",
+      "Vinegar, to taste",
+      "1 tsp sugar",
+      "12 Kashmiri chillies, deseeded",
+      "6 black peppercorns",
+      "5 cloves",
+      "3 green cardamom pods",
+      "2\u2033 cinnamon",
+      "6-8 large garlic cloves",
+      "1 1/2 inch ginger",
+      "Vinegar, to grind to a paste"
+    ],
+    "ingredient_source": "publisher structured data"
   },
   {
-    "url": "https://withwendyandshannon.com/blog/traditional-goan-stew/",
+    "url": "https://aromaticessence.co/chicken-cafreal/",
     "occasion": "Christmas / Goan",
     "category": "mains",
-    "status": "source link only \u2014 importer access restricted",
-    "title": "Traditional Goan Stew",
-    "structured": false,
-    "rating": null,
-    "publisher": "With Wendy and Shannon (formerly Platin\u2019 It With Wendy)",
-    "rating_display": "No rating verified",
+    "status": "fetched",
+    "title": "Chicken Cafreal",
+    "structured": true,
+    "rating": {
+      "@type": "AggregateRating",
+      "ratingValue": "5",
+      "ratingCount": "9",
+      "reviewCount": "5"
+    },
+    "publisher": "Aromatic Essence",
+    "rating_display": "5/5 from 9 ratings",
     "planning_ready": false,
-    "prep_evidence_status": "Needs details",
-    "prep_evidence_methods": "Tavily source-page extract",
-    "prep_summary": "No recipe-specific make-ahead or safe storage window confirmed from the extracted page. Review the original: https://withwendyandshannon.com/blog/traditional-goan-stew/",
-    "source_prep_minutes": null,
-    "source_cook_minutes": null,
+    "prep_evidence_status": "Source reviewed",
+    "prep_evidence_methods": "Publisher recipe page",
+    "prep_summary": "Author recommends marinating for 2\u20133 hours or overnight in the refrigerator; cook near serving or verify a safe cooked-ahead/reheat plan.",
+    "source_prep_minutes": 10,
+    "source_cook_minutes": 25,
     "shortlist": null,
     "gluten_screen": {
-      "status": "unknown",
+      "status": "none explicitly listed",
       "evidence": []
     },
     "nut_screen": {
-      "status": "unknown",
+      "status": "none explicitly listed",
       "evidence": []
     },
-    "label_review": []
+    "label_review": [
+      "1 tbsp lemon juice/vinegar",
+      "1/2 tsp turmeric powder",
+      "A small\u00a0ball of tamarind/Juice of half a lime",
+      "1 tbsp oil",
+      "1 tbsp lemon juice"
+    ],
+    "yield_text": [
+      "2",
+      "2 people"
+    ],
+    "prep": "PT10M",
+    "cook": "PT25M",
+    "total": "PT35M",
+    "chef_prep_draft": "Prepare chicken and blend cafreal paste: 25 min active + 0 min waiting (estimate). Marinate covered in refrigerator: 0 min active + 180 min waiting (estimate). Sear and finish chicken in sauce: 20 min active + 25 min waiting (estimate). Cleanup: 10 min (estimate).",
+    "pending_review": "Confirm base servings, batch count, allergens and storage before scheduling.",
+    "ingredients": [
+      "1.5 lbs chicken thighs",
+      "1/2 tbsp ginger garlic paste",
+      "1 tbsp lemon juice/vinegar",
+      "1 tsp salt",
+      "1 cup loosely packed cilantro/coriander leaves with \u00a0tender stalks, (about 30 stalks)",
+      "6-7  green chillies, (adjust as per desired heat)",
+      "6-7  large garlic cloves",
+      "1 & 1/2  inch  piece of ginger",
+      "4  cloves",
+      "8  peppercorns",
+      "1 inch of cinnamon",
+      "1 tsp cumin seeds",
+      "2 tsp\u00a0 poppy seeds",
+      "1/2 tsp turmeric powder",
+      "A small\u00a0ball of tamarind/Juice of half a lime",
+      "2 tbsp butter",
+      "1 tbsp oil",
+      "1 tbsp lemon juice"
+    ],
+    "ingredient_source": "publisher structured data"
   },
   {
     "url": "https://withwendyandshannon.com/blog/the-ultimate-goan-caldin-curry/",
@@ -1139,31 +1208,73 @@
     ]
   },
   {
-    "url": "https://withwendyandshannon.com/blog/easy-fruit-cake/",
+    "url": "https://www.ruchikrandhap.com/christmas-fruit-cake-without-alcohol/",
     "occasion": "Christmas / Goan",
     "category": "desserts",
-    "status": "source link only \u2014 importer access restricted",
-    "title": "Easy Fruit Cake",
-    "structured": false,
-    "rating": null,
-    "publisher": "With Wendy and Shannon (formerly Platin\u2019 It With Wendy)",
-    "rating_display": "No rating verified",
+    "status": "fetched",
+    "title": "Easy Christmas Fruit Cake Without Alcohol",
+    "structured": true,
+    "rating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.92",
+      "ratingCount": "12"
+    },
+    "publisher": "Ruchik Randhap",
+    "rating_display": "4.92/5 from 12 ratings",
     "planning_ready": false,
-    "prep_evidence_status": "Needs details",
-    "prep_evidence_methods": "Tavily source-page extract",
-    "prep_summary": "No recipe-specific make-ahead or safe storage window confirmed from the extracted page. Review the original: https://withwendyandshannon.com/blog/easy-fruit-cake/",
-    "source_prep_minutes": null,
-    "source_cook_minutes": null,
+    "prep_evidence_status": "Source reviewed",
+    "prep_evidence_methods": "Publisher recipe page",
+    "prep_summary": "Author specifies 6\u20138 hours or overnight fruit soak; bake 2\u00bd\u20133 hours and cool fully. Author says nonalcoholic cake has a short room-temperature shelf life; verify storage plan.",
+    "source_prep_minutes": 30,
+    "source_cook_minutes": 180,
     "shortlist": null,
     "gluten_screen": {
-      "status": "unknown",
-      "evidence": []
+      "status": "listed ingredient",
+      "evidence": [
+        "225 grams all purpose flour"
+      ]
     },
     "nut_screen": {
-      "status": "unknown",
-      "evidence": []
+      "status": "listed ingredient",
+      "evidence": [
+        "25 grams almonds, chopped",
+        "25 grams walnuts, chopped"
+      ]
     },
-    "label_review": []
+    "label_review": [
+      "1/2 teaspoon mixed spice",
+      "3/4 cup  (175ml) fresh orange juice",
+      "225 grams all purpose flour",
+      "1 teaspoon baking powder",
+      "1/2 teaspoon mixed spice"
+    ],
+    "yield_text": null,
+    "prep": "PT30M",
+    "cook": "PT180M",
+    "total": "PT210M",
+    "chef_prep_draft": "Chop and soak dried fruit in orange juice: 30 min active + 480 min waiting (estimate). Mix batter and prepare tin: 30 min active + 0 min waiting (estimate). Bake and cool completely: 10 min active + 240 min waiting (estimate). Cleanup: 15 min (estimate).",
+    "pending_review": "Confirm base servings, batch count, allergens and storage before scheduling.",
+    "ingredients": [
+      "125 grams seedless black raisins",
+      "125 grams golden raisins",
+      "125 grams seedless dates",
+      "125 grams candied/glace cherries (rinsed) * see notes",
+      "1/2 teaspoon mixed spice",
+      "3/4 cup  (175ml) fresh orange juice",
+      "225 grams unsalted butter, at room temperature",
+      "200 grams caster sugar, you may use soft brown/muscovado too",
+      "4  eggs, at room temperature",
+      "zest of 1 orange",
+      "zest of 1 lemon",
+      "2 tablespoons treacle/black caramel syrup",
+      "225 grams all purpose flour",
+      "1/2 teaspoon salt",
+      "1 teaspoon baking powder",
+      "1/2 teaspoon mixed spice",
+      "25 grams almonds, chopped",
+      "25 grams walnuts, chopped"
+    ],
+    "ingredient_source": "publisher structured data"
   },
   {
     "url": "https://withwendyandshannon.com/blog/super-easy-snowball-cookies/",
@@ -2117,31 +2228,54 @@
     ]
   },
   {
-    "url": "https://www.ruchikrandhap.com/coconut-roasted-chana-dal-chutney/",
+    "url": "https://www.ruchikrandhap.com/sonay-sukhe-black-chana-fugadsukka/",
     "category": "sides",
     "occasion": "Christmas / Mangalorean",
-    "title": "Coconut & Roasted Chana Dal Chutney",
+    "title": "Sonay Sukhe (Black Chana Sukka)",
     "structured": false,
     "rating": null,
-    "status": "fetched",
-    "publisher": "Ruchik Randhap \u2014 Shireen",
+    "status": "source page reviewed",
+    "publisher": "Ruchik Randhap",
     "rating_display": "No rating verified",
     "planning_ready": false,
-    "prep_evidence_status": "Needs details",
-    "prep_evidence_methods": "Tavily source-page extract",
-    "prep_summary": "No recipe-specific make-ahead or safe storage window confirmed from the extracted page. Review the original: https://www.ruchikrandhap.com/coconut-roasted-chana-dal-chutney/",
-    "source_prep_minutes": null,
-    "source_cook_minutes": null,
+    "prep_evidence_status": "Source reviewed",
+    "prep_evidence_methods": "Publisher visible recipe card",
+    "prep_summary": "Source calls for soaking black chana 10-12 hours or overnight before pressure cooking. No cooked make-ahead or storage window stated.",
+    "source_prep_minutes": 10,
+    "source_cook_minutes": 25,
     "shortlist": null,
     "gluten_screen": {
-      "status": "unknown",
+      "status": "none explicitly listed",
       "evidence": []
     },
     "nut_screen": {
-      "status": "unknown",
+      "status": "none explicitly listed",
       "evidence": []
     },
-    "label_review": []
+    "label_review": [
+      "1 tsp bafat powder"
+    ],
+    "yield_text": [
+      "2-3 servings"
+    ],
+    "prep": "PT10M",
+    "cook": "PT25M",
+    "total": null,
+    "chef_prep_draft": "Rinse and soak chana: 5 min active plus 10-12 hours waiting. Slice onion and prepare spices: 10 min. Pressure cook beans: 10 min setup plus about 35 min cooking/release estimate. Temper, combine and finish: 15 min active plus 10 min simmer estimate. Cleanup: 10 min.",
+    "pending_review": "Confirm beans are fully tender, dry seasoning product label, base serving size, pressure cooker capacity and storage plan.",
+    "ingredients": [
+      "1/2 cup kala chana / black chickpeas, soaked 10-12 hours or overnight",
+      "1/2 tsp mustard seeds",
+      "1 sprig curry leaves",
+      "3-4 garlic cloves, crushed",
+      "1 medium onion, sliced",
+      "About 3/4 cup grated coconut",
+      "1 tsp bafat powder",
+      "3/4 tsp tamarind paste or a small ball of tamarind",
+      "Oil",
+      "Salt to taste"
+    ],
+    "ingredient_source": "publisher visible recipe card"
   },
   {
     "url": "https://www.ruchikrandhap.com/coffee-fruit-cake-no-alcohol-las/",

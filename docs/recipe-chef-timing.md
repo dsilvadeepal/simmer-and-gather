@@ -1,8 +1,8 @@
 # Home-cook recipe timing draft
 
-These are **untested estimates for one base recipe**, not publisher timings. Active minutes include hands-on work, occasional checks and cleanup; unattended minutes cover marinating, cooking, resting and cooling. Elapsed minutes add the two as a conservative sequential estimate. Some passive time can overlap another task, but equipment and person availability decide whether it actually can. For 15 guests, batch count and quantities can increase the estimates. The app should allow adjustment after a trial run.
+These are **untested estimates for one base recipe**, not publisher timings. Active minutes include hands-on work, occasional checks and cleanup; unattended minutes cover marinating, soaking, cooking, resting and cooling. Elapsed minutes add the two as a conservative sequential estimate. Some passive time can overlap another task. For 15 guests, scaling and extra batches can increase active and elapsed time.
 
-The full task breakdown, uncertainty and source links are in [recipe-chef-timing.json](recipe-chef-timing.json) and on the 36 matching Notion recipe pages. Their Notion timing basis is `Estimated - review needed`; none is marked Planning Ready. Do not use these estimates alone to set make-ahead windows or food-safe cooking endpoints. For the 14–16 lb turkey in this collection, I allowed roughly four hours of oven time; [FoodSafety.gov’s size chart](https://www.foodsafety.gov/food-safety-charts/meat-poultry-charts) gives 3¾–4¼ hours for a 14–18 lb unstuffed turkey. Use a thermometer to confirm 165°F in poultry, rather than relying on minutes alone. [FoodSafety.gov](https://www.foodsafety.gov/food-safety-charts/safe-minimum-internal-temperatures)
+The [task breakdown](recipe-chef-timing.json) and the Notion pages include these estimates. `Planning Ready=false` remains in Notion. The black chana has a 10–12 hour or overnight soak, and the Christmas fruit cake has a 6–8 hour or overnight fruit soak; those waits should appear on the calendar even though they are not continuous labor. For the 14–16 lb turkey, the roast allowance follows [FoodSafety.gov’s size chart](https://www.foodsafety.gov/food-safety-charts/meat-poultry-charts); use a thermometer to confirm 165°F in poultry, rather than relying on minutes alone. [FoodSafety.gov](https://www.foodsafety.gov/food-safety-charts/safe-minimum-internal-temperatures)
 
 | Recipe | Active incl. cleanup | Unattended | Conservative elapsed |
 |---|---:|---:|---:|
@@ -22,12 +22,12 @@ The full task breakdown, uncertainty and source links are in [recipe-chef-timing
 | [Instant Pot Carrot Halwa Recipe](https://ministryofcurry.com/carrot-halwa-instant-pot/) | 50 min | 25 min | 75 min |
 | [Quick & Easy Badam Burfi (30 Minutes)](https://ministryofcurry.com/badam-burfi/) | 45 min | 25 min | 70 min |
 | [Easy Tuna Croquettes](https://withwendyandshannon.com/blog/easy-tuna-croquettes/) | 70 min | 20 min | 90 min |
-| [The Best Goan Pork Roast](https://withwendyandshannon.com/blog/the-best-goan-pork-roast/) | Needs source | — | — |
-| [Traditional Goan Stew](https://withwendyandshannon.com/blog/traditional-goan-stew/) | Needs source | — | — |
+| [Goan Pork Vindaloo](https://theaspiringhomecook.com/2019/10/goan-pork-vindaloo.html) | 60 min | 60 min | 120 min |
+| [Chicken Cafreal](https://aromaticessence.co/chicken-cafreal/) | 55 min | 205 min | 260 min |
 | [The Ultimate Goan Caldin Curry](https://withwendyandshannon.com/blog/the-ultimate-goan-caldin-curry/) | 70 min | 30 min | 100 min |
 | [Easy Traditional Goan Sannas](https://withwendyandshannon.com/blog/easy-traditional-goan-sannas-recipe/) | 45 min | 510 min | 555 min |
 | [The Best Doce](https://withwendyandshannon.com/blog/the-best-doce/) | 65 min | 55 min | 120 min |
-| [Easy Fruit Cake](https://withwendyandshannon.com/blog/easy-fruit-cake/) | Needs source | — | — |
+| [Easy Christmas Fruit Cake Without Alcohol](https://www.ruchikrandhap.com/christmas-fruit-cake-without-alcohol/) | 85 min | 720 min | 805 min |
 | [Super Easy Snowball Cookies](https://withwendyandshannon.com/blog/super-easy-snowball-cookies/) | 55 min | 45 min | 100 min |
 | [Baked Brie En Croute](https://www.wellplated.com/brie-en-croute/) | 40 min | 45 min | 85 min |
 | [Stuffed Dates (6 Ways!)](https://www.wellplated.com/stuffed-dates/) | 35 min | 0 min | 35 min |
@@ -44,9 +44,7 @@ The full task breakdown, uncertainty and source links are in [recipe-chef-timing
 | [Mushroom Cutlets](https://www.ruchikrandhap.com/mushroom-cutlets/) | 75 min | 25 min | 100 min |
 | [Mince Meat Cutlets](https://www.ruchikrandhap.com/mince-meat-cutlets/) | 85 min | 35 min | 120 min |
 | [Pork Bafat | Dukra Maas](https://www.ruchikrandhap.com/pork-bafa/) | 60 min | 40 min | 100 min |
-| [Coconut & Roasted Chana Dal Chutney](https://www.ruchikrandhap.com/coconut-roasted-chana-dal-chutney/) | Needs source | — | — |
+| [Sonay Sukhe (Black Chana Sukka)](https://www.ruchikrandhap.com/sonay-sukhe-black-chana-fugadsukka/) | 50 min | 705 min | 755 min |
 | [Coffee Fruit Cake](https://www.ruchikrandhap.com/coffee-fruit-cake-no-alcohol-las/) | 80 min | 60 min | 140 min |
 
-Four recipes still need complete source ingredients and directions: The Best Goan Pork Roast, Traditional Goan Stew, Easy Fruit Cake, and Coconut & Roasted Chana Dal Chutney. Their minutes are intentionally blank.
-
-The seven-dish [Diwali shortlist](diwali-chef-shortlist.md) remains a more source-specific planning draft. This broader timing pass is for menu comparison and should be reconciled with those notes when building a gathering plan.
+The seven-dish [Diwali shortlist](diwali-chef-shortlist.md) has more source-specific make-ahead notes. Reconcile any selected recipe with its original source and actual equipment before placing prep blocks.

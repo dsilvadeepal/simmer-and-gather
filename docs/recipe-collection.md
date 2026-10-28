@@ -1,12 +1,8 @@
 # Starter recipe collection
 
-Curated October 28, 2026. 40 candidates: 15 Diwali/Indian hosting and 25 holiday options (8 Goan Christmas, 5 Mangalorean Christmas and 12 US Thanksgiving/Christmas). These are options to choose from, not one menu.
+Current curated collection, October 28, 2026: 40 candidates—15 Diwali/Indian hosting and 25 Thanksgiving/Christmas options. They are menu options, not one suggested spread. Four incomplete entries were replaced with source-complete candidates; see [replacement record](recipe-replacements.md).
 
-31 pages supplied structured recipe metadata (individual timing fields may still be absent). The Ruchik Randhap chutney page was accessible but lacked structured recipe data; it remains a source-linked candidate. Eight Wendy pages remain source-link candidates because their individual pages returned HTTP 403; the accessible site index established the links. No protection was bypassed.
-
-Tavily extracted all 40 source pages on October 28. Source-backed make-ahead notes were confirmed for 14. Seven dishes now have a detailed Diwali chef draft in docs/diwali-chef-shortlist.md; the other 33 are set to Needs details for later review. Publisher prep time is available for 31 and cook time for 29, stored as recipe-level facts. Ingredient lists were recovered for 36. All 40 have gluten and nut screening notes in Notion, but remain Planning Ready=false until task-level active/presence time, label checks, scaling and storage are reviewed. No recipe was marked personally tested. See [allergen audit](recipe-allergen-audit.md).
-
-A separate [home-cook timing draft](recipe-chef-timing.md) estimates hands-on, waiting and cleanup minutes for the 36 recipes with usable ingredient/source detail. Four remain unknown. These estimates are for comparing menu workload; they are not measured times or automatically approved schedules.
+All 40 now have ingredient lists and approximate home-cook task timing drafts. The timing estimates are untested and include cleanup; scaling, equipment batches, safe storage, exact product labels and make-ahead suitability remain review items. All Notion recipes remain `Planning Ready=false`. See [timing draft](recipe-chef-timing.md) and [gluten/nut screen](recipe-allergen-audit.md).
 
 | Occasion | Recipe | Category | Publisher rating snapshot |
 |---|---|---|---|
@@ -19,19 +15,19 @@ A separate [home-cook timing draft](recipe-chef-timing.md) estimates hands-on, w
 | Diwali / Indian hosting | [Instant Pot Chana Masala (Punjabi Chole)](https://ministryofcurry.com/instant-pot-chana-masala-recipe/) | mains | 4.8/5 from 67 ratings |
 | Diwali / Indian hosting | [Instant Pot Dal Makhani with Brown Rice](https://ministryofcurry.com/madras-lentils-daal-makhani-instant-pot/) | mains | 4.68/5 from 134 ratings |
 | Diwali / Indian hosting | [Instant Pot Palak Paneer](https://ministryofcurry.com/palak-paneer-instant-pot/) | mains | 4.61/5 from 97 ratings |
-| Diwali / Indian hosting | [Vegetable Pulao Recipe / Veg Pulav](https://ministryofcurry.com/moms-veg-pulao/) | sides | 4.75/5 from 4 ratings |
+| Diwali / Indian hosting | [Vegetable Pulao Recipe | Veg Pulav](https://ministryofcurry.com/moms-veg-pulao/) | sides | 4.75/5 from 4 ratings |
 | Diwali / Indian hosting | [Indian Cucumber Salad (Kakdi Koshimbir)](https://ministryofcurry.com/indian-cucumber-salad/) | sides | 4.75/5 from 12 ratings |
 | Diwali / Indian hosting | [Cilantro Mint Chutney](https://ministryofcurry.com/cilantro-mint-chutney/) | sides | 4.77/5 from 34 ratings |
 | Diwali / Indian hosting | [Instant Pot Rice Pudding](https://ministryofcurry.com/rice-pudding-instant-pot/) | desserts | 4.43/5 from 61 ratings |
 | Diwali / Indian hosting | [Instant Pot Carrot Halwa Recipe](https://ministryofcurry.com/carrot-halwa-instant-pot/) | desserts | 4.71/5 from 44 ratings |
 | Diwali / Indian hosting | [Quick & Easy Badam Burfi (30 Minutes)](https://ministryofcurry.com/badam-burfi/) | desserts | 4.81/5 from 77 ratings |
 | Christmas / Goan | [Easy Tuna Croquettes](https://withwendyandshannon.com/blog/easy-tuna-croquettes/) | starters | No rating verified |
-| Christmas / Goan | [The Best Goan Pork Roast](https://withwendyandshannon.com/blog/the-best-goan-pork-roast/) | mains | No rating verified |
-| Christmas / Goan | [Traditional Goan Stew](https://withwendyandshannon.com/blog/traditional-goan-stew/) | mains | No rating verified |
+| Christmas / Goan | [Goan Pork Vindaloo](https://theaspiringhomecook.com/2019/10/goan-pork-vindaloo.html) | mains | No rating verified |
+| Christmas / Goan | [Chicken Cafreal](https://aromaticessence.co/chicken-cafreal/) | mains | 5/5 from 9 ratings |
 | Christmas / Goan | [The Ultimate Goan Caldin Curry](https://withwendyandshannon.com/blog/the-ultimate-goan-caldin-curry/) | mains | No rating verified |
 | Christmas / Goan | [Easy Traditional Goan Sannas](https://withwendyandshannon.com/blog/easy-traditional-goan-sannas-recipe/) | sides | No rating verified |
 | Christmas / Goan | [The Best Doce](https://withwendyandshannon.com/blog/the-best-doce/) | desserts | No rating verified |
-| Christmas / Goan | [Easy Fruit Cake](https://withwendyandshannon.com/blog/easy-fruit-cake/) | desserts | No rating verified |
+| Christmas / Goan | [Easy Christmas Fruit Cake Without Alcohol](https://www.ruchikrandhap.com/christmas-fruit-cake-without-alcohol/) | desserts | 4.92/5 from 12 ratings |
 | Christmas / Goan | [Super Easy Snowball Cookies](https://withwendyandshannon.com/blog/super-easy-snowball-cookies/) | desserts | No rating verified |
 | Thanksgiving / US Christmas | [Baked Brie En Croute](https://www.wellplated.com/brie-en-croute/) | starters | 5/5 from 7 ratings |
 | Thanksgiving / US Christmas | [Stuffed Dates (6 Ways!)](https://www.wellplated.com/stuffed-dates/) | starters | 5/5 from 3 ratings |
@@ -47,6 +43,6 @@ A separate [home-cook timing draft](recipe-chef-timing.md) estimates hands-on, w
 | Thanksgiving / US Christmas | [Gluten Free Apple Crisp](https://www.wellplated.com/gluten-free-apple-crisp/) | desserts | 4.87/5 from 23 ratings |
 | Christmas / Mangalorean | [Mushroom Cutlets](https://www.ruchikrandhap.com/mushroom-cutlets/) | starters | No rating verified |
 | Christmas / Mangalorean | [Mince Meat Cutlets](https://www.ruchikrandhap.com/mince-meat-cutlets/) | starters | 5/5 from 2 ratings |
-| Christmas / Mangalorean | [Pork Bafat / Dukra Maas](https://www.ruchikrandhap.com/pork-bafa/) | mains | 5/5 from 10 ratings |
-| Christmas / Mangalorean | [Coconut & Roasted Chana Dal Chutney](https://www.ruchikrandhap.com/coconut-roasted-chana-dal-chutney/) | sides | No rating verified |
+| Christmas / Mangalorean | [Pork Bafat | Dukra Maas](https://www.ruchikrandhap.com/pork-bafa/) | mains | 5/5 from 10 ratings |
+| Christmas / Mangalorean | [Sonay Sukhe (Black Chana Sukka)](https://www.ruchikrandhap.com/sonay-sukhe-black-chana-fugadsukka/) | sides | No rating verified |
 | Christmas / Mangalorean | [Coffee Fruit Cake](https://www.ruchikrandhap.com/coffee-fruit-cake-no-alcohol-las/) | desserts | No rating verified |

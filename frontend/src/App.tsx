@@ -132,7 +132,7 @@ export default function App() {
         <p className="brand">♧ Simmer and Gather</p>
         <h1>Your hosting plans, together.</h1>
         <p>{error || "Opening your saved gathering…"}</p>
-        {error && <button onClick={() => location.reload()}>Try again</button>}
+        {error && <><a className="login-link" href="/api/google/start">Sign in with Google</a><button onClick={() => location.reload()}>Try again</button></>}
       </main>
     );
   const profile = g.profile || {

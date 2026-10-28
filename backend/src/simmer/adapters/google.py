@@ -24,4 +24,4 @@ class GoogleCalendar:
         return self._pages('/calendars/'+quote(calendar,safe='')+'/events',{'timeMin':start.isoformat(),'timeMax':end.isoformat(),'singleEvents':'true','maxResults':2500})
     def get_event(self,calendar,id): return self.request('GET',f'/calendars/{quote(calendar,safe="")}/events/{id}')
     def insert_event(self,calendar,event): return self.request('POST',f'/calendars/{quote(calendar,safe="")}/events',event,{'sendUpdates':'none'})
-    def create_hosting_calendar(self): return self.request('POST','/calendars',{'summary':'Simmer and Gather','description':'Hosting prep blocks managed by Simmer and Gather'})
+    def create_hosting_calendar(self,marker): return self.request('POST','/calendars',{'summary':'Simmer and Gather','description':marker})

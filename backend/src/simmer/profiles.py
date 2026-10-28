@@ -1,8 +1,10 @@
+from .db import serialized
 from .domain import Gathering, HostProfile, PlanInputs
 from .db import Missing
 
 class HostingService:
     def __init__(self,store): self.store=store
+    @serialized
     def save_gathering(self,owner,gathering,expected_revision):
         value=gathering.model_copy(deep=True)
         value.revision=1 if expected_revision is None else expected_revision+1

@@ -1,4 +1,5 @@
 """One bounded planning workflow; all external writes stay outside the graph."""
+from .db import serialized
 from typing import TypedDict
 from uuid import uuid5, NAMESPACE_URL
 from sqlalchemy import select
@@ -21,6 +22,7 @@ class State(TypedDict,total=False):
 class PlanningService:
     def __init__(self,store,model=None): self.store=store; self.host=HostingService(store); self.model=model
     def load(self,owner,id): return self.host.load_plan_inputs(owner,id)
+    @serialized
     def apply_menu_changes(self,owner,gathering_id,changes,expected_revision):
         with Session(self.store.engine) as session, session.begin():
             row=session.scalar(select(Document).where(Document.owner==owner,Document.kind=='gathering',Document.id==gathering_id).with_for_update())

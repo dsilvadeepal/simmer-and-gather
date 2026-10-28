@@ -30,11 +30,15 @@ export async function api<T>(
   return r.json();
 }
 export async function localLogin() {
-  const r = await fetch("/api/dev-session", { method: "POST" });
-  if (!r.ok)
-    throw new Error(
-      "Sign in is required. Hosted authentication setup is pending.",
-    );
-  const d = await r.json();
-  sessionStorage.setItem("simmer-token", d.token);
+  const fragment = new URLSearchParams(location.hash.slice(1));
+  if (fragment.get('session')) {
+    sessionStorage.setItem('simmer-token', fragment.get('session')!);
+    history.replaceState(null, '', location.pathname);
+  }
+  if (sessionStorage.getItem('simmer-token')) {
+    try { await api('/profile'); return; } catch { sessionStorage.removeItem('simmer-token'); }
+  }
+  const r = await fetch('/api/dev-session', {method:'POST'});
+  if (!r.ok) throw new Error('Sign in with Google to open your private hosting plans.');
+  const data = await r.json(); sessionStorage.setItem('simmer-token', data.token);
 }

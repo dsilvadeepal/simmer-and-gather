@@ -25,7 +25,10 @@
     "prep_evidence_methods": "Tavily source-page extract",
     "prep_summary": "Marinate the uncooked paneer, then refrigerate for up to 24 hours. Cook near serving; the author says it is best hot and fresh.",
     "source_prep_minutes": 15,
-    "source_cook_minutes": 10
+    "source_cook_minutes": 10,
+    "shortlist": "Diwali draft",
+    "chef_prep_draft": "Mix marinade and coat paneer: 10-15 min active (estimate). Refrigerate uncooked marinated paneer up to 24 h (author). Skewer and air-fry: 10 min per source batch, plus 5-10 min for each extra batch (estimate; air-fryer capacity unknown). Cleanup: 10 min (estimate). Serve soon after cooking; author says best hot and fresh.",
+    "pending_review": "Confirm actual air-fryer batches, allergens and amount for 15 guests."
   },
   {
     "url": "https://ministryofcurry.com/aloo-chaat-in-phyllo-cups/",
@@ -53,7 +56,10 @@
     "prep_evidence_methods": "Tavily source-page extract",
     "prep_summary": "Make the green and tamarind chutneys ahead; the author states they keep refrigerated for a week or can be frozen. Assembly timing still needs review.",
     "source_prep_minutes": 30,
-    "source_cook_minutes": 15
+    "source_cook_minutes": 15,
+    "shortlist": "Diwali draft",
+    "chef_prep_draft": "Make green/tamarind chutneys up to 1 week ahead (author). Steam/dice potatoes and cook filling: 30-40 min active (estimate); refrigerate prepared potatoes up to 1 day (author). Fill phyllo shells near serving: 10-15 min active (estimate). Cleanup: 10 min (estimate).",
+    "pending_review": "Confirm phyllo shell crispness, guest servings, allergens and assembly timing."
   },
   {
     "url": "https://ministryofcurry.com/tandoori-chicken-wings/",
@@ -81,7 +87,8 @@
     "prep_evidence_methods": "Tavily source-page extract",
     "prep_summary": "No recipe-specific make-ahead or safe storage window confirmed from the extracted page. Review the original: https://ministryofcurry.com/tandoori-chicken-wings/",
     "source_prep_minutes": 60,
-    "source_cook_minutes": 30
+    "source_cook_minutes": 30,
+    "shortlist": null
   },
   {
     "url": "https://ministryofcurry.com/masala-nuts/",
@@ -109,7 +116,8 @@
     "prep_evidence_methods": "Tavily source-page extract",
     "prep_summary": "No recipe-specific make-ahead or safe storage window confirmed from the extracted page. Review the original: https://ministryofcurry.com/masala-nuts/",
     "source_prep_minutes": 5,
-    "source_cook_minutes": 20
+    "source_cook_minutes": 20,
+    "shortlist": null
   },
   {
     "url": "https://ministryofcurry.com/instant-pot-butter-chicken/",
@@ -137,7 +145,10 @@
     "prep_evidence_methods": "Tavily source-page extract",
     "prep_summary": "No recipe-specific make-ahead or safe storage window confirmed from the extracted page. Review the original: https://ministryofcurry.com/instant-pot-butter-chicken/",
     "source_prep_minutes": 10,
-    "source_cook_minutes": 25
+    "source_cook_minutes": 25,
+    "shortlist": "Diwali draft",
+    "chef_prep_draft": "Prepare ingredients and sauce: 10-15 min active (estimate). Pressure-cook and thicken: source cook time 25 min, with 5 min final saut\u00e9 described on page. Cleanup: 10 min (estimate). Source says cooked leftovers keep refrigerated up to 5 days; for a party, propose cooking the day before and cooling/refrigerating promptly, then reheating fully. This day-before use is a chef proposal, not explicit author make-ahead timing.",
+    "pending_review": "Confirm raw chicken quantity for 15, allergen ingredients, Instant Pot size, cooling and reheat capacity."
   },
   {
     "url": "https://ministryofcurry.com/paneer-butter-masala/",
@@ -165,7 +176,8 @@
     "prep_evidence_methods": "Tavily source-page extract",
     "prep_summary": "No recipe-specific make-ahead or safe storage window confirmed from the extracted page. Review the original: https://ministryofcurry.com/paneer-butter-masala/",
     "source_prep_minutes": 10,
-    "source_cook_minutes": 20
+    "source_cook_minutes": 20,
+    "shortlist": null
   },
   {
     "url": "https://ministryofcurry.com/instant-pot-chana-masala-recipe/",
@@ -193,7 +205,8 @@
     "prep_evidence_methods": "Tavily source-page extract",
     "prep_summary": "No recipe-specific make-ahead or safe storage window confirmed from the extracted page. Review the original: https://ministryofcurry.com/instant-pot-chana-masala-recipe/",
     "source_prep_minutes": 10,
-    "source_cook_minutes": 60
+    "source_cook_minutes": 60,
+    "shortlist": null
   },
   {
     "url": "https://ministryofcurry.com/madras-lentils-daal-makhani-instant-pot/",
@@ -221,7 +234,10 @@
     "prep_evidence_methods": "Tavily source-page extract",
     "prep_summary": "The author cooks this dal the night before entertaining. The page says leftovers keep refrigerated for up to five days.",
     "source_prep_minutes": 10,
-    "source_cook_minutes": 50
+    "source_cook_minutes": 50,
+    "shortlist": "Diwali draft",
+    "chef_prep_draft": "Prepare ingredients: source prep 10 min. Pressure-cook: source cook 50 min with much of the time unattended; 10-15 min active/presence estimate. Cleanup: 10 min estimate. The author cooks it the night before parties and says refrigerated leftovers keep up to 5 days. If freezing, leave cream out until serving (author).",
+    "pending_review": "Confirm Instant Pot batch capacity, final reheating, dairy allergens and portions."
   },
   {
     "url": "https://ministryofcurry.com/palak-paneer-instant-pot/",
@@ -249,7 +265,8 @@
     "prep_evidence_methods": "Tavily source-page extract",
     "prep_summary": "No recipe-specific make-ahead or safe storage window confirmed from the extracted page. Review the original: https://ministryofcurry.com/palak-paneer-instant-pot/",
     "source_prep_minutes": 5,
-    "source_cook_minutes": 10
+    "source_cook_minutes": 10,
+    "shortlist": null
   },
   {
     "url": "https://ministryofcurry.com/moms-veg-pulao/",
@@ -277,7 +294,10 @@
     "prep_evidence_methods": "Tavily source-page extract",
     "prep_summary": "No recipe-specific make-ahead or safe storage window confirmed from the extracted page. Review the original: https://ministryofcurry.com/moms-veg-pulao/",
     "source_prep_minutes": 20,
-    "source_cook_minutes": 30
+    "source_cook_minutes": 30,
+    "shortlist": "Diwali draft",
+    "chef_prep_draft": "Chop and saut\u00e9 vegetables up to 2 days ahead (author): 20-25 min active estimate. Cook rice and combine on party day: source cook 30 min, 10-15 min active estimate. Cleanup: 10 min estimate. Source says leftover pulao can be refrigerated up to 3 days; use the author\u2019s separate 2-day vegetable prep window for this plan.",
+    "pending_review": "Confirm rice quantity, stove/Instant Pot resource and final cooking slot outside relaxation hour."
   },
   {
     "url": "https://ministryofcurry.com/indian-cucumber-salad/",
@@ -305,7 +325,8 @@
     "prep_evidence_methods": "Tavily source-page extract",
     "prep_summary": "No recipe-specific make-ahead or safe storage window confirmed from the extracted page. Review the original: https://ministryofcurry.com/indian-cucumber-salad/",
     "source_prep_minutes": 5,
-    "source_cook_minutes": 5
+    "source_cook_minutes": 5,
+    "shortlist": null
   },
   {
     "url": "https://ministryofcurry.com/cilantro-mint-chutney/",
@@ -333,7 +354,10 @@
     "prep_evidence_methods": "Tavily source-page extract",
     "prep_summary": "Store the chutney refrigerated in a glass jar for up to one week, or freeze in small portions. Thaw frozen portions in the refrigerator.",
     "source_prep_minutes": 15,
-    "source_cook_minutes": null
+    "source_cook_minutes": null,
+    "shortlist": "Diwali draft",
+    "chef_prep_draft": "Blend chutney: source prep 15 min. Cleanup: 5 min estimate. Store refrigerated in a glass jar for up to one week (author); freeze small portions for longer storage and use thawed chutney within 1-2 days (author).",
+    "pending_review": "Confirm herb quantities, spice level and any guest-specific allergens."
   },
   {
     "url": "https://ministryofcurry.com/rice-pudding-instant-pot/",
@@ -361,7 +385,8 @@
     "prep_evidence_methods": "Tavily source-page extract",
     "prep_summary": "No recipe-specific make-ahead or safe storage window confirmed from the extracted page. Review the original: https://ministryofcurry.com/rice-pudding-instant-pot/",
     "source_prep_minutes": 5,
-    "source_cook_minutes": 40
+    "source_cook_minutes": 40,
+    "shortlist": null
   },
   {
     "url": "https://ministryofcurry.com/carrot-halwa-instant-pot/",
@@ -389,7 +414,10 @@
     "prep_evidence_methods": "Tavily source-page extract",
     "prep_summary": "Make the halwa ahead; the author states it keeps refrigerated for up to one week and can also be frozen. Thaw frozen portions overnight in the refrigerator.",
     "source_prep_minutes": 10,
-    "source_cook_minutes": 20
+    "source_cook_minutes": 20,
+    "shortlist": "Diwali draft",
+    "chef_prep_draft": "Prepare ingredients: source prep 10 min. Pressure-cook and reduce: source cook 20 min, including a final 5-7 min saut\u00e9/stirring step. Cleanup: 10 min estimate. Make ahead and refrigerate up to one week (author); frozen portions may be thawed overnight in the refrigerator (author).",
+    "pending_review": "Confirm nuts and dairy allergens, Instant Pot capacity and portions."
   },
   {
     "url": "https://ministryofcurry.com/badam-burfi/",
@@ -417,7 +445,8 @@
     "prep_evidence_methods": "Tavily source-page extract",
     "prep_summary": "Store airtight at room temperature for one to two days or refrigerated for up to two weeks.",
     "source_prep_minutes": 5,
-    "source_cook_minutes": 5
+    "source_cook_minutes": 5,
+    "shortlist": null
   },
   {
     "url": "https://withwendyandshannon.com/blog/easy-tuna-croquettes/",
@@ -434,7 +463,8 @@
     "prep_evidence_methods": "Tavily source-page extract",
     "prep_summary": "No recipe-specific make-ahead or safe storage window confirmed from the extracted page. Review the original: https://withwendyandshannon.com/blog/easy-tuna-croquettes/",
     "source_prep_minutes": null,
-    "source_cook_minutes": null
+    "source_cook_minutes": null,
+    "shortlist": null
   },
   {
     "url": "https://withwendyandshannon.com/blog/the-best-goan-pork-roast/",
@@ -451,7 +481,8 @@
     "prep_evidence_methods": "Tavily source-page extract",
     "prep_summary": "No recipe-specific make-ahead or safe storage window confirmed from the extracted page. Review the original: https://withwendyandshannon.com/blog/the-best-goan-pork-roast/",
     "source_prep_minutes": null,
-    "source_cook_minutes": null
+    "source_cook_minutes": null,
+    "shortlist": null
   },
   {
     "url": "https://withwendyandshannon.com/blog/traditional-goan-stew/",
@@ -468,7 +499,8 @@
     "prep_evidence_methods": "Tavily source-page extract",
     "prep_summary": "No recipe-specific make-ahead or safe storage window confirmed from the extracted page. Review the original: https://withwendyandshannon.com/blog/traditional-goan-stew/",
     "source_prep_minutes": null,
-    "source_cook_minutes": null
+    "source_cook_minutes": null,
+    "shortlist": null
   },
   {
     "url": "https://withwendyandshannon.com/blog/the-ultimate-goan-caldin-curry/",
@@ -485,7 +517,8 @@
     "prep_evidence_methods": "Tavily source-page extract",
     "prep_summary": "No recipe-specific make-ahead or safe storage window confirmed from the extracted page. Review the original: https://withwendyandshannon.com/blog/the-ultimate-goan-caldin-curry/",
     "source_prep_minutes": null,
-    "source_cook_minutes": null
+    "source_cook_minutes": null,
+    "shortlist": null
   },
   {
     "url": "https://withwendyandshannon.com/blog/easy-traditional-goan-sannas-recipe/",
@@ -502,7 +535,8 @@
     "prep_evidence_methods": "Tavily source-page extract",
     "prep_summary": "No recipe-specific make-ahead or safe storage window confirmed from the extracted page. Review the original: https://withwendyandshannon.com/blog/easy-traditional-goan-sannas-recipe/",
     "source_prep_minutes": null,
-    "source_cook_minutes": null
+    "source_cook_minutes": null,
+    "shortlist": null
   },
   {
     "url": "https://withwendyandshannon.com/blog/the-best-doce/",
@@ -519,7 +553,8 @@
     "prep_evidence_methods": "Tavily source-page extract",
     "prep_summary": "No recipe-specific make-ahead or safe storage window confirmed from the extracted page. Review the original: https://withwendyandshannon.com/blog/the-best-doce/",
     "source_prep_minutes": null,
-    "source_cook_minutes": null
+    "source_cook_minutes": null,
+    "shortlist": null
   },
   {
     "url": "https://withwendyandshannon.com/blog/easy-fruit-cake/",
@@ -536,7 +571,8 @@
     "prep_evidence_methods": "Tavily source-page extract",
     "prep_summary": "No recipe-specific make-ahead or safe storage window confirmed from the extracted page. Review the original: https://withwendyandshannon.com/blog/easy-fruit-cake/",
     "source_prep_minutes": null,
-    "source_cook_minutes": null
+    "source_cook_minutes": null,
+    "shortlist": null
   },
   {
     "url": "https://withwendyandshannon.com/blog/super-easy-snowball-cookies/",
@@ -553,7 +589,8 @@
     "prep_evidence_methods": "Tavily source-page extract",
     "prep_summary": "No recipe-specific make-ahead or safe storage window confirmed from the extracted page. Review the original: https://withwendyandshannon.com/blog/super-easy-snowball-cookies/",
     "source_prep_minutes": null,
-    "source_cook_minutes": null
+    "source_cook_minutes": null,
+    "shortlist": null
   },
   {
     "url": "https://www.wellplated.com/brie-en-croute/",
@@ -582,7 +619,8 @@
     "prep_evidence_methods": "Tavily source-page extract",
     "prep_summary": "Assemble the brie and pastry ahead without egg wash, wrap and freeze. The source says preparation up to two weeks ahead; review freezing and final baking details on the original page.",
     "source_prep_minutes": 15,
-    "source_cook_minutes": 45
+    "source_cook_minutes": 45,
+    "shortlist": null
   },
   {
     "url": "https://www.wellplated.com/stuffed-dates/",
@@ -611,7 +649,8 @@
     "prep_evidence_methods": "Tavily source-page extract",
     "prep_summary": "The author says stuffed dates can be prepared up to one day ahead for a party; refrigerate. Longer snack storage is described separately, not assumed for the party.",
     "source_prep_minutes": 5,
-    "source_cook_minutes": null
+    "source_cook_minutes": null,
+    "shortlist": null
   },
   {
     "url": "https://www.wellplated.com/how-to-cook-a-turkey/",
@@ -640,7 +679,8 @@
     "prep_evidence_methods": "Tavily source-page extract",
     "prep_summary": "No recipe-specific make-ahead or safe storage window confirmed from the extracted page. Review the original: https://www.wellplated.com/how-to-cook-a-turkey/",
     "source_prep_minutes": 20,
-    "source_cook_minutes": 135
+    "source_cook_minutes": 135,
+    "shortlist": null
   },
   {
     "url": "https://www.wellplated.com/garlic-mashed-potatoes/",
@@ -669,7 +709,8 @@
     "prep_evidence_methods": "publisher page",
     "prep_summary": "Make the potatoes one day ahead. The publisher describes gentle reheating over simmering water with warm milk or broth as needed. Source: https://www.wellplated.com/garlic-mashed-potatoes/",
     "source_prep_minutes": 10,
-    "source_cook_minutes": 25
+    "source_cook_minutes": 25,
+    "shortlist": null
   },
   {
     "url": "https://www.wellplated.com/healthy-sweet-potato-casserole/",
@@ -698,7 +739,8 @@
     "prep_evidence_methods": "Tavily source-page extract",
     "prep_summary": "Prepare through the recipe\u2019s Step 5 one day ahead and refrigerate covered. Let it come to room temperature before baking, as directed by the source.",
     "source_prep_minutes": 15,
-    "source_cook_minutes": 80
+    "source_cook_minutes": 80,
+    "shortlist": null
   },
   {
     "url": "https://www.wellplated.com/cornbread-sausage-stuffing/",
@@ -727,7 +769,8 @@
     "prep_evidence_methods": "Tavily source-page extract",
     "prep_summary": "Make cornbread up to two days ahead; toast cubes up to one day ahead, keeping them at room temperature. The source also describes preparing mix-ins ahead; verify the exact window before scheduling them.",
     "source_prep_minutes": 60,
-    "source_cook_minutes": 40
+    "source_cook_minutes": 40,
+    "shortlist": null
   },
   {
     "url": "https://www.wellplated.com/homemade-cranberry-sauce/",
@@ -756,7 +799,8 @@
     "prep_evidence_methods": "Tavily source-page extract",
     "prep_summary": "No recipe-specific make-ahead or safe storage window confirmed from the extracted page. Review the original: https://www.wellplated.com/homemade-cranberry-sauce/",
     "source_prep_minutes": 5,
-    "source_cook_minutes": 15
+    "source_cook_minutes": 15,
+    "shortlist": null
   },
   {
     "url": "https://www.wellplated.com/healthy-green-bean-casserole/",
@@ -785,7 +829,8 @@
     "prep_evidence_methods": "Tavily source-page extract",
     "prep_summary": "No recipe-specific make-ahead or safe storage window confirmed from the extracted page. Review the original: https://www.wellplated.com/healthy-green-bean-casserole/",
     "source_prep_minutes": 15,
-    "source_cook_minutes": 35
+    "source_cook_minutes": 35,
+    "shortlist": null
   },
   {
     "url": "https://www.wellplated.com/caramelized-brussels-sprouts/",
@@ -814,7 +859,8 @@
     "prep_evidence_methods": "Tavily source-page extract",
     "prep_summary": "No recipe-specific make-ahead or safe storage window confirmed from the extracted page. Review the original: https://www.wellplated.com/caramelized-brussels-sprouts/",
     "source_prep_minutes": 10,
-    "source_cook_minutes": 25
+    "source_cook_minutes": 25,
+    "shortlist": null
   },
   {
     "url": "https://www.wellplated.com/chocolate-pecan-pie/",
@@ -843,7 +889,8 @@
     "prep_evidence_methods": "Tavily source-page extract",
     "prep_summary": "Prepare, roll and crimp the pie crust up to three days ahead; wrap and refrigerate. Filling/baking timing still needs review.",
     "source_prep_minutes": 25,
-    "source_cook_minutes": 85
+    "source_cook_minutes": 85,
+    "shortlist": null
   },
   {
     "url": "https://www.wellplated.com/old-fashioned-sweet-potato-pie/",
@@ -872,7 +919,8 @@
     "prep_evidence_methods": "Tavily source-page extract",
     "prep_summary": "Cook and mash the sweet potatoes up to three days ahead, then measure the required amount. The full pie assembly window still needs review.",
     "source_prep_minutes": 45,
-    "source_cook_minutes": 60
+    "source_cook_minutes": 60,
+    "shortlist": null
   },
   {
     "url": "https://www.wellplated.com/gluten-free-apple-crisp/",
@@ -901,7 +949,8 @@
     "prep_evidence_methods": "Tavily source-page extract",
     "prep_summary": "Assemble before baking, cover tightly and freeze flat for up to three months. Thaw overnight in the refrigerator before baking.",
     "source_prep_minutes": 15,
-    "source_cook_minutes": 55
+    "source_cook_minutes": 55,
+    "shortlist": null
   },
   {
     "url": "https://www.ruchikrandhap.com/mushroom-cutlets/",
@@ -925,7 +974,8 @@
     "prep_evidence_methods": "Tavily source-page extract",
     "prep_summary": "No recipe-specific make-ahead or safe storage window confirmed from the extracted page. Review the original: https://www.ruchikrandhap.com/mushroom-cutlets/",
     "source_prep_minutes": 25,
-    "source_cook_minutes": 15
+    "source_cook_minutes": 15,
+    "shortlist": null
   },
   {
     "url": "https://www.ruchikrandhap.com/mince-meat-cutlets/",
@@ -954,7 +1004,8 @@
     "prep_evidence_methods": "Tavily source-page extract",
     "prep_summary": "No recipe-specific make-ahead or safe storage window confirmed from the extracted page. Review the original: https://www.ruchikrandhap.com/mince-meat-cutlets/",
     "source_prep_minutes": 25,
-    "source_cook_minutes": 25
+    "source_cook_minutes": 25,
+    "shortlist": null
   },
   {
     "url": "https://www.ruchikrandhap.com/pork-bafa/",
@@ -983,7 +1034,8 @@
     "prep_evidence_methods": "Tavily source-page extract",
     "prep_summary": "No recipe-specific make-ahead or safe storage window confirmed from the extracted page. Review the original: https://www.ruchikrandhap.com/pork-bafa/",
     "source_prep_minutes": 25,
-    "source_cook_minutes": 40
+    "source_cook_minutes": 40,
+    "shortlist": null
   },
   {
     "url": "https://www.ruchikrandhap.com/coconut-roasted-chana-dal-chutney/",
@@ -1000,7 +1052,8 @@
     "prep_evidence_methods": "Tavily source-page extract",
     "prep_summary": "No recipe-specific make-ahead or safe storage window confirmed from the extracted page. Review the original: https://www.ruchikrandhap.com/coconut-roasted-chana-dal-chutney/",
     "source_prep_minutes": null,
-    "source_cook_minutes": null
+    "source_cook_minutes": null,
+    "shortlist": null
   },
   {
     "url": "https://www.ruchikrandhap.com/coffee-fruit-cake-no-alcohol-las/",
@@ -1021,6 +1074,7 @@
     "prep_evidence_methods": "Tavily source-page extract",
     "prep_summary": "No recipe-specific make-ahead or safe storage window confirmed from the extracted page. Review the original: https://www.ruchikrandhap.com/coffee-fruit-cake-no-alcohol-las/",
     "source_prep_minutes": 45,
-    "source_cook_minutes": 60
+    "source_cook_minutes": 60,
+    "shortlist": null
   }
 ]

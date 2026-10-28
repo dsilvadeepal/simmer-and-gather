@@ -4,7 +4,7 @@ export function RecipeReview({recipe:r,onChange}:{recipe:Recipe;onChange:(r:Reci
  const update=(v:Partial<Recipe>)=>onChange({...r,...v});
  const task=(i:number,v:Partial<Task>)=>update({tasks:(r.tasks||[]).map((t,j)=>j===i?{...t,...v}:t)});
  return <div className="recipe-review">
-  <p className="meta">Review what the source supports. Leave unknown values blank; missing timing or storage evidence will prevent an unsupported prep plan.</p>
+  <p className="meta">Review the source ingredients and adjust the planning estimates before saving this recipe.</p>
   <div className="grid">
    <label>Recipe name<input value={r.title} onChange={e=>update({title:e.target.value})}/></label>
    <label>Servings<input type="number" min="1" value={r.servings??''} onChange={e=>update({servings:numberOrNull(e.target.value)})}/></label>
@@ -25,9 +25,9 @@ export function RecipeReview({recipe:r,onChange}:{recipe:Recipe;onChange:(r:Reci
    <summary>{t.title||`Step ${i+1}`}</summary>
    <label>Step name<input value={t.title} onChange={e=>task(i,{title:e.target.value})}/></label>
    <div className="grid">
-    {(['minutes','active_minutes','presence_minutes','max_ahead_hours'] as const).map((key,k)=><label key={key}>{['Elapsed minutes','Hands-on minutes','Minutes someone must be present','Maximum hours ahead supported by source'][k]}<input aria-label={`${['Elapsed minutes','Hands-on minutes','Presence minutes','Make-ahead hours'][k]} · ${t.title}`} type="number" min={key==='minutes'?1:0} value={t[key]??''} onChange={e=>task(i,{[key]:numberOrNull(e.target.value)})}/></label>)}
+    {(['minutes','active_minutes','presence_minutes','max_ahead_hours'] as const).map((key,k)=><label key={key}>{['Elapsed minutes','Hands-on minutes','Minutes someone must be present','Maximum hours ahead for this plan'][k]}<input aria-label={`${['Elapsed minutes','Hands-on minutes','Presence minutes','Make-ahead hours'][k]} · ${t.title}`} type="number" min={key==='minutes'?1:0} value={t[key]??''} onChange={e=>task(i,{[key]:numberOrNull(e.target.value)})}/></label>)}
    </div>
-   <label>Source evidence<textarea value={t.evidence||''} onChange={e=>task(i,{evidence:e.target.value||null})}/></label>
+   <label>Timing basis<textarea value={t.evidence||''} onChange={e=>task(i,{evidence:e.target.value||null})}/></label>
    <label>Storage / preparation notes<textarea value={t.guidance||''} onChange={e=>task(i,{guidance:e.target.value||null})}/></label>
    <label>Equipment<select value={t.resource||''} onChange={e=>task(i,{resource:e.target.value||null})}><option value="">None</option>{['oven','stovetop','air_fryer','instant_pot'].map(x=><option key={x}>{x}</option>)}</select></label>
    <label>Depends on completed steps<select multiple value={t.dependencies||[]} onChange={e=>task(i,{dependencies:Array.from(e.target.selectedOptions,x=>x.value)})}>{(r.tasks||[]).filter(x=>x.id!==t.id).map(x=><option key={x.id} value={x.id}>{x.title}</option>)}</select></label>

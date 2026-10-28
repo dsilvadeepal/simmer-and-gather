@@ -16,3 +16,10 @@ class Telemetry:
         safe=sanitized_run(metadata,redacted_payload);now=datetime.now(timezone.utc)
         self.client.create_run(name=name,id=id,run_type='chain',inputs={},outputs=safe['outputs'],extra={'metadata':safe['metadata']},start_time=now,end_time=now,project_name=self.project,**({'parent_run_id':parent_id} if parent_id else {}))
         return id
+
+def configured_telemetry(config):
+    """Send only allowlisted plan outcomes when the owner configured LangSmith."""
+    if config.get('LANGSMITH_TRACING','false').lower()!='true' or not config.get('LANGSMITH_API_KEY'):
+        return None
+    from langsmith import Client
+    return Telemetry(Client(api_key=config['LANGSMITH_API_KEY']),project=config.get('LANGSMITH_PROJECT','simmer-and-gather-dev'))

@@ -1015,7 +1015,7 @@ export default function App() {
             </div>
             <details>
               <summary>Import a recipe</summary>
-              {!ws.fixture_mode && <NotionCollection onSelect={setSource}/>}
+              {!ws.fixture_mode && <NotionCollection onSelect={setPreview}/>}
               {!ws.fixture_mode && <RecipeDiscovery onSelect={setSource}/>}
               {!ws.fixture_mode && ws.recipes.length>0 && <div>
                 <p className="meta">Publish a saved, reviewed recipe to your Notion library. Retrying checks the previous save.</p>

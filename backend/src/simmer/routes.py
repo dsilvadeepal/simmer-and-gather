@@ -22,8 +22,8 @@ class Workspace(BaseModel):
     plan: PlanCandidate | None = None
     fixture_mode: bool
 
-def install_routes(app,owner,store,availability=None,fixture_mode=False,model=None):
-    planning=PlanningService(store,model); recipes=RecipeService(store)
+def install_routes(app,owner,store,availability=None,fixture_mode=False,model=None,telemetry=None):
+    planning=PlanningService(store,model,telemetry); recipes=RecipeService(store)
     def unavailable(*args): raise ValueError('Calendar disconnected')
     calendar=availability or AvailabilityService(unavailable)
     def snapshot(o,g,force=False):

@@ -12,7 +12,7 @@ class SaveGathering(BaseModel):
     gathering: Gathering
     expected_revision: int | None = None
 
-def create_app(store=None, auth=None, fixture_mode=False, availability=None, model=None):
+def create_app(store=None, auth=None, fixture_mode=False, availability=None, model=None, telemetry=None):
     app=FastAPI(title='Simmer and Gather')
     store=store or Store(os.environ['DATABASE_URL'])
     service=HostingService(store)
@@ -38,5 +38,5 @@ def create_app(store=None, auth=None, fixture_mode=False, availability=None, mod
     def get(id:str,o=Depends(owner)): return service.get_gathering(o,id)
     app.state.store=store; app.state.service=service; app.state.owner=owner
     from .routes import install_routes
-    install_routes(app,owner,store,availability,fixture_mode,model)
+    install_routes(app,owner,store,availability,fixture_mode,model,telemetry)
     return app

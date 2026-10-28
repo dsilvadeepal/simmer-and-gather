@@ -20,5 +20,21 @@ def read_recipe(page_id:str):
     """Read a recipe after verifying its collection membership."""
     return adapter().page(page_id,'recipes')
 
+@server.tool()
+def read_recipe_details(page_id:str):
+    """Read a scoped recipe and its bounded top-level content blocks."""
+    scoped=adapter()
+    page=scoped.page(page_id,'recipes')
+    blocks=[]; cursor=None
+    for _ in range(10):
+        path=f'/blocks/{page_id}/children?page_size=100'
+        if cursor: path+='&start_cursor='+cursor
+        result=scoped.transport('GET',path)
+        blocks.extend(result.get('results',[]))
+        if not result.get('has_more'): return {'page':page,'blocks':blocks}
+        cursor=result.get('next_cursor')
+        if not cursor: raise ValueError('Invalid Notion block cursor')
+    raise ValueError('Recipe page exceeds 1,000 blocks')
+
 # No write tool exposed to the planning model. Reviewed projection writes use application code.
 if __name__=='__main__': server.run(transport='stdio')

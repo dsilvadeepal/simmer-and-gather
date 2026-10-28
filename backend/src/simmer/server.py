@@ -34,7 +34,8 @@ def build_app(config=None):
     availability=AvailabilityService(google.events)
     auth=Authenticator(config['SESSION_SECRET'],config['ALLOWED_OWNER_ID'],'simmer','simmer')
     from .runtime import build_text_model
-    app=create_app(store,auth,availability=availability,model=build_text_model(store,config['ALLOWED_OWNER_ID'],config))
+    from .telemetry import configured_telemetry
+    app=create_app(store,auth,availability=availability,model=build_text_model(store,config['ALLOWED_OWNER_ID'],config),telemetry=configured_telemetry(config))
     install_oauth(app,store,config)
     owner=app.state.owner
     if config.get('NOTION_TOKEN') and config.get('NOTION_COLLECTIONS'):
@@ -54,6 +55,11 @@ def build_app(config=None):
         def notion_recipes(o=Depends(owner)):
             try: return notion.list_candidates()
             except Exception: raise HTTPException(503,'Notion unavailable; saved local recipes remain available')
+        @app.get('/api/notion/recipes/{id}/preview')
+        def notion_recipe_preview(id:str,o=Depends(owner)):
+            try: return notion.preview_candidate(id)
+            except ValueError as exc: raise HTTPException(422,str(exc))
+            except Exception: raise HTTPException(503,'Notion recipe details are unavailable; open the source link and try again')
     @app.post('/api/recipes/discover')
     def discover(body:SearchRequest,o=Depends(owner)):
         if config.get('ENABLE_RECIPE_SEARCH')!='true' or not config.get('TAVILY_API_KEY'):

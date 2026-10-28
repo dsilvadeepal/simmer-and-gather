@@ -65,7 +65,7 @@ def install_oauth(app,store,config):
             tokens=r.json()
         key=jwt.PyJWKClient('https://www.googleapis.com/oauth2/v3/certs').get_signing_key_from_jwt(tokens['id_token'])
         claims=jwt.decode(tokens['id_token'],key.key,algorithms=['RS256'],audience=config['GOOGLE_CLIENT_ID'],issuer=['https://accounts.google.com','accounts.google.com'],options={'require':['exp','sub','email']})
-        if not claims.get('email_verified') or claims['email'].casefold()!=config['ALLOWED_EMAIL'].casefold(): raise HTTPException(403,'This demo is private to its owner')
+        if not claims.get('email_verified') or claims['email'].casefold()!=config['ALLOWED_EMAIL'].casefold(): raise HTTPException(403,'This app is private to its owner')
         owner=config['ALLOWED_OWNER_ID']; tokens['expires']=(datetime.now(timezone.utc)+timedelta(seconds=tokens['expires_in'])).isoformat()
         tokens.pop('id_token',None)
         try:

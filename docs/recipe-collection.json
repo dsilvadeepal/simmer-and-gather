@@ -59,7 +59,16 @@
       "1 tablespoon Kashmiri red chili powder",
       "1 teaspoon garam masala",
       "1 teaspoon chat masala (optional)"
-    ]
+    ],
+    "estimated_base_servings": 8,
+    "base_servings_basis": "publisher recipe yield; confirm whether servings or individual pieces",
+    "equipment_assumption": [
+      "Air fryer",
+      "Refrigerator"
+    ],
+    "equipment_review": "Confirm usable capacity, pot/pan size, number of batches and overlap with other dishes.",
+    "chef_make_ahead_proposal": null,
+    "make_ahead_basis": "Publisher-specific note retained in prep_summary; confirm actual storage plan"
   },
   {
     "url": "https://ministryofcurry.com/aloo-chaat-in-phyllo-cups/",
@@ -126,7 +135,16 @@
       "2 teaspoons Kashmiri red chili powder",
       "\u00bd cup Cilantro Mint Chutney",
       "\u00bd cup Tamarind Chutney"
-    ]
+    ],
+    "estimated_base_servings": 8,
+    "base_servings_basis": "publisher recipe yield; confirm whether servings or individual pieces",
+    "equipment_assumption": [
+      "Stovetop",
+      "Refrigerator"
+    ],
+    "equipment_review": "Confirm usable capacity, pot/pan size, number of batches and overlap with other dishes.",
+    "chef_make_ahead_proposal": null,
+    "make_ahead_basis": "Publisher-specific note retained in prep_summary; confirm actual storage plan"
   },
   {
     "url": "https://ministryofcurry.com/tandoori-chicken-wings/",
@@ -181,7 +199,16 @@
     "label_review": [
       "1 to 2 teaspoons garam masala (**)",
       "1 to 2 tablespoons Kashmiri red chili powder"
-    ]
+    ],
+    "estimated_base_servings": 6,
+    "base_servings_basis": "publisher recipe yield; confirm whether servings or individual pieces",
+    "equipment_assumption": [
+      "Oven",
+      "Refrigerator"
+    ],
+    "equipment_review": "Confirm usable capacity, pot/pan size, number of batches and overlap with other dishes.",
+    "chef_make_ahead_proposal": "Mix yogurt marinade and coat wings the prior evening; refrigerate covered. Cook in batches near serving for crisp skin. Do not count unattended marination as active work.",
+    "make_ahead_basis": "Chef planning proposal, not publisher-confirmed storage window"
   },
   {
     "url": "https://ministryofcurry.com/masala-nuts/",
@@ -243,7 +270,15 @@
       "3\u00bd tablespoons oil",
       "1 teaspoon chaat masala",
       "2 teaspoons Kashmiri red chili powder"
-    ]
+    ],
+    "estimated_base_servings": 16,
+    "base_servings_basis": "publisher recipe yield; confirm whether servings or individual pieces",
+    "equipment_assumption": [
+      "Oven"
+    ],
+    "equipment_review": "Confirm usable capacity, pot/pan size, number of batches and overlap with other dishes.",
+    "chef_make_ahead_proposal": "Roast and cool completely 1-2 days ahead; seal airtight only after cooling. Check crunch before serving; nuts are an explicit allergen.",
+    "make_ahead_basis": "Chef planning proposal, not publisher-confirmed storage window"
   },
   {
     "url": "https://ministryofcurry.com/instant-pot-butter-chicken/",
@@ -305,7 +340,16 @@
       "2 tablespoons ghee (or coconut oil)",
       "1 tablespoon Kashmiri red chili powder",
       "1 teaspoon garam masala"
-    ]
+    ],
+    "estimated_base_servings": 6,
+    "base_servings_basis": "publisher recipe yield; confirm whether servings or individual pieces",
+    "equipment_assumption": [
+      "Pressure cooker",
+      "Refrigerator"
+    ],
+    "equipment_review": "Confirm usable capacity, pot/pan size, number of batches and overlap with other dishes.",
+    "chef_make_ahead_proposal": "Cook fully 1 day ahead; divide into shallow containers and refrigerate promptly. Reheat thoroughly before serving; sauce usually tolerates this better than last-minute cooking.",
+    "make_ahead_basis": "Chef planning proposal, not publisher-confirmed storage window"
   },
   {
     "url": "https://ministryofcurry.com/paneer-butter-masala/",
@@ -369,7 +413,16 @@
     "label_review": [
       "2 teaspoons kashmiri red chili powder (or another mild red chili powder)",
       "1 teaspoon garam masala"
-    ]
+    ],
+    "estimated_base_servings": 6,
+    "base_servings_basis": "publisher recipe yield; confirm whether servings or individual pieces",
+    "equipment_assumption": [
+      "Stovetop",
+      "Refrigerator"
+    ],
+    "equipment_review": "Confirm usable capacity, pot/pan size, number of batches and overlap with other dishes.",
+    "chef_make_ahead_proposal": "Cook sauce 1 day ahead and refrigerate promptly. Add or warm paneer close to serving to avoid rubbery texture; optional naan is separate and contains wheat unless a verified substitute is used.",
+    "make_ahead_basis": "Chef planning proposal, not publisher-confirmed storage window"
   },
   {
     "url": "https://ministryofcurry.com/instant-pot-chana-masala-recipe/",
@@ -428,7 +481,16 @@
       "2 tablespoons ghee (or oil)",
       "1 to 2 teaspoons kashmiri red chili powder",
       "\u00bc teaspoon garam masala"
-    ]
+    ],
+    "estimated_base_servings": 4,
+    "base_servings_basis": "publisher recipe yield; confirm whether servings or individual pieces",
+    "equipment_assumption": [
+      "Pressure cooker",
+      "Refrigerator"
+    ],
+    "equipment_review": "Confirm usable capacity, pot/pan size, number of batches and overlap with other dishes.",
+    "chef_make_ahead_proposal": "Soak dried chickpeas as the source method requires; cook curry 1 day ahead and refrigerate promptly. Reheat thoroughly; check bean tenderness before relying on the planned cook time.",
+    "make_ahead_basis": "Chef planning proposal, not publisher-confirmed storage window"
   },
   {
     "url": "https://ministryofcurry.com/madras-lentils-daal-makhani-instant-pot/",
@@ -494,7 +556,16 @@
       "1 tablespoon oil ((ghee or butter))",
       "2 teaspoons Kashmiri red chili powder",
       "1 teaspoon garam masala"
-    ]
+    ],
+    "estimated_base_servings": 6,
+    "base_servings_basis": "publisher recipe yield; confirm whether servings or individual pieces",
+    "equipment_assumption": [
+      "Pressure cooker",
+      "Refrigerator"
+    ],
+    "equipment_review": "Confirm usable capacity, pot/pan size, number of batches and overlap with other dishes.",
+    "chef_make_ahead_proposal": null,
+    "make_ahead_basis": "Publisher-specific note retained in prep_summary; confirm actual storage plan"
   },
   {
     "url": "https://ministryofcurry.com/palak-paneer-instant-pot/",
@@ -552,7 +623,17 @@
     },
     "label_review": [
       "1 teaspoon garam masala"
-    ]
+    ],
+    "estimated_base_servings": 4,
+    "base_servings_basis": "publisher recipe yield; confirm whether servings or individual pieces",
+    "equipment_assumption": [
+      "Pressure cooker",
+      "Blender",
+      "Refrigerator"
+    ],
+    "equipment_review": "Confirm usable capacity, pot/pan size, number of batches and overlap with other dishes.",
+    "chef_make_ahead_proposal": "Wash spinach and prepare sauce base 1 day ahead; refrigerate promptly. Finish with paneer near serving to protect texture and color. Contains cashews in the listed recipe.",
+    "make_ahead_basis": "Chef planning proposal, not publisher-confirmed storage window"
   },
   {
     "url": "https://ministryofcurry.com/moms-veg-pulao/",
@@ -618,7 +699,16 @@
     },
     "label_review": [
       "\u00bd teaspoon garam Masala"
-    ]
+    ],
+    "estimated_base_servings": 6,
+    "base_servings_basis": "publisher recipe yield; confirm whether servings or individual pieces",
+    "equipment_assumption": [
+      "Stovetop",
+      "Refrigerator"
+    ],
+    "equipment_review": "Confirm usable capacity, pot/pan size, number of batches and overlap with other dishes.",
+    "chef_make_ahead_proposal": "Wash/chop vegetables and measure spices 1 day ahead. Cook rice on party day, then hold hot or refrigerate promptly; rice quality drops if repeatedly warmed. Contains cashews in the listed recipe.",
+    "make_ahead_basis": "Chef planning proposal, not publisher-confirmed storage window"
   },
   {
     "url": "https://ministryofcurry.com/indian-cucumber-salad/",
@@ -670,7 +760,16 @@
         "2 tablespoons peanuts (roasted and ground)"
       ]
     },
-    "label_review": []
+    "label_review": [],
+    "estimated_base_servings": 4,
+    "base_servings_basis": "publisher recipe yield; confirm whether servings or individual pieces",
+    "equipment_assumption": [
+      "Stovetop",
+      "Refrigerator"
+    ],
+    "equipment_review": "Confirm usable capacity, pot/pan size, number of batches and overlap with other dishes.",
+    "chef_make_ahead_proposal": "Wash cucumbers and prepare dressing components 1 day ahead, refrigerated separately. Chop/combine close to serving to avoid watery texture. Listed peanuts require allergy review.",
+    "make_ahead_basis": "Chef planning proposal, not publisher-confirmed storage window"
   },
   {
     "url": "https://ministryofcurry.com/cilantro-mint-chutney/",
@@ -723,7 +822,16 @@
       "status": "none explicitly listed",
       "evidence": []
     },
-    "label_review": []
+    "label_review": [],
+    "estimated_base_servings": 14,
+    "base_servings_basis": "publisher recipe yield; confirm whether servings or individual pieces",
+    "equipment_assumption": [
+      "Blender",
+      "Refrigerator"
+    ],
+    "equipment_review": "Confirm usable capacity, pot/pan size, number of batches and overlap with other dishes.",
+    "chef_make_ahead_proposal": null,
+    "make_ahead_basis": "Publisher-specific note retained in prep_summary; confirm actual storage plan"
   },
   {
     "url": "https://ministryofcurry.com/rice-pudding-instant-pot/",
@@ -779,7 +887,16 @@
     },
     "label_review": [
       "1 teaspoon cardamom powder"
-    ]
+    ],
+    "estimated_base_servings": 6,
+    "base_servings_basis": "publisher recipe yield; confirm whether servings or individual pieces",
+    "equipment_assumption": [
+      "Pressure cooker",
+      "Refrigerator"
+    ],
+    "equipment_review": "Confirm usable capacity, pot/pan size, number of batches and overlap with other dishes.",
+    "chef_make_ahead_proposal": "Cook fully 1 day ahead; cool promptly in shallow containers and refrigerate. Stir and adjust consistency before serving; serve chilled or reheat thoroughly if serving hot.",
+    "make_ahead_basis": "Chef planning proposal, not publisher-confirmed storage window"
   },
   {
     "url": "https://ministryofcurry.com/carrot-halwa-instant-pot/",
@@ -838,7 +955,16 @@
     "label_review": [
       "2 tablespoons ghee ( or coconut oil or vegan butter)",
       "2 teaspoons cardamom powder"
-    ]
+    ],
+    "estimated_base_servings": 6,
+    "base_servings_basis": "publisher recipe yield; confirm whether servings or individual pieces",
+    "equipment_assumption": [
+      "Pressure cooker",
+      "Refrigerator"
+    ],
+    "equipment_review": "Confirm usable capacity, pot/pan size, number of batches and overlap with other dishes.",
+    "chef_make_ahead_proposal": null,
+    "make_ahead_basis": "Publisher-specific note retained in prep_summary; confirm actual storage plan"
   },
   {
     "url": "https://ministryofcurry.com/badam-burfi/",
@@ -890,7 +1016,16 @@
         "1 tablespoon thinly sliced almonds"
       ]
     },
-    "label_review": []
+    "label_review": [],
+    "estimated_base_servings": 10,
+    "base_servings_basis": "publisher recipe yield; confirm whether servings or individual pieces",
+    "equipment_assumption": [
+      "Stovetop",
+      "Refrigerator"
+    ],
+    "equipment_review": "Confirm usable capacity, pot/pan size, number of batches and overlap with other dishes.",
+    "chef_make_ahead_proposal": null,
+    "make_ahead_basis": "Publisher-specific note retained in prep_summary; confirm actual storage plan"
   },
   {
     "url": "https://withwendyandshannon.com/blog/easy-tuna-croquettes/",
@@ -942,7 +1077,16 @@
     "label_review": [
       "1 tbsp Oil",
       "Oil as required for Shallow frying or Deep Frying"
-    ]
+    ],
+    "estimated_base_servings": 8,
+    "base_servings_basis": "chef estimate; 2 tuna cans, starter-size croquettes",
+    "equipment_assumption": [
+      "Stovetop",
+      "Refrigerator"
+    ],
+    "equipment_review": "Confirm usable capacity, pot/pan size, number of batches and overlap with other dishes.",
+    "chef_make_ahead_proposal": "Mix and shape up to 1 day ahead; refrigerate covered. Fry close to serving for crispness; avoid a long warm hold. Tuna and bread crumbs are in the listed ingredients.",
+    "make_ahead_basis": "Chef planning proposal, not publisher-confirmed storage window"
   },
   {
     "url": "https://theaspiringhomecook.com/2019/10/goan-pork-vindaloo.html",
@@ -997,7 +1141,17 @@
       "1 1/2 inch ginger",
       "Vinegar, to grind to a paste"
     ],
-    "ingredient_source": "publisher structured data"
+    "ingredient_source": "publisher structured data",
+    "estimated_base_servings": 8,
+    "base_servings_basis": "publisher recipe yield; confirm whether servings or individual pieces",
+    "equipment_assumption": [
+      "Stovetop",
+      "Blender",
+      "Refrigerator"
+    ],
+    "equipment_review": "Confirm usable capacity, pot/pan size, number of batches and overlap with other dishes.",
+    "chef_make_ahead_proposal": null,
+    "make_ahead_basis": "Publisher-specific note retained in prep_summary; confirm actual storage plan"
   },
   {
     "url": "https://aromaticessence.co/chicken-cafreal/",
@@ -1065,7 +1219,17 @@
       "1 tbsp oil",
       "1 tbsp lemon juice"
     ],
-    "ingredient_source": "publisher structured data"
+    "ingredient_source": "publisher structured data",
+    "estimated_base_servings": 2,
+    "base_servings_basis": "publisher recipe yield; confirm whether servings or individual pieces",
+    "equipment_assumption": [
+      "Stovetop",
+      "Blender",
+      "Refrigerator"
+    ],
+    "equipment_review": "Confirm usable capacity, pot/pan size, number of batches and overlap with other dishes.",
+    "chef_make_ahead_proposal": null,
+    "make_ahead_basis": "Publisher-specific note retained in prep_summary; confirm actual storage plan"
   },
   {
     "url": "https://withwendyandshannon.com/blog/the-ultimate-goan-caldin-curry/",
@@ -1125,7 +1289,17 @@
       "1\u00bd tsp Turmeric Powder",
       "3-4 tbsp Oil",
       "Tamarind Extract (from above)"
-    ]
+    ],
+    "estimated_base_servings": 4,
+    "base_servings_basis": "chef estimate; 500 g fish",
+    "equipment_assumption": [
+      "Stovetop",
+      "Blender",
+      "Refrigerator"
+    ],
+    "equipment_review": "Confirm usable capacity, pot/pan size, number of batches and overlap with other dishes.",
+    "chef_make_ahead_proposal": "Make the spice/coconut curry base 1 day ahead and refrigerate. Add fish and finish cooking near serving to avoid overcooked fish; verify full cooking and seafood storage.",
+    "make_ahead_basis": "Chef planning proposal, not publisher-confirmed storage window"
   },
   {
     "url": "https://withwendyandshannon.com/blog/easy-traditional-goan-sannas-recipe/",
@@ -1167,7 +1341,17 @@
     },
     "label_review": [
       "\u215b cup vegetable oil"
-    ]
+    ],
+    "estimated_base_servings": 12,
+    "base_servings_basis": "chef estimate; count of individual steamed cakes varies by mold",
+    "equipment_assumption": [
+      "Stovetop",
+      "Blender",
+      "Refrigerator"
+    ],
+    "equipment_review": "Confirm usable capacity, pot/pan size, number of batches and overlap with other dishes.",
+    "chef_make_ahead_proposal": "Start rice preparation and fermentation according to the source well before the party; fermentation varies with temperature. Steam 1 day ahead if needed, cool/refrigerate promptly, and re-steam near serving; test texture first.",
+    "make_ahead_basis": "Chef planning proposal, not publisher-confirmed storage window"
   },
   {
     "url": "https://withwendyandshannon.com/blog/the-best-doce/",
@@ -1205,7 +1389,16 @@
     },
     "label_review": [
       "1 tsp (10-12 pods) Cardamom Powder, freshly ground"
-    ]
+    ],
+    "estimated_base_servings": 24,
+    "base_servings_basis": "chef estimate; small sweet pieces, cut size varies",
+    "equipment_assumption": [
+      "Stovetop",
+      "Refrigerator"
+    ],
+    "equipment_review": "Confirm usable capacity, pot/pan size, number of batches and overlap with other dishes.",
+    "chef_make_ahead_proposal": "Cook, shape and cool sweets 1 day ahead. Store covered according to ingredients and room conditions; choose refrigeration if uncertain. Large-batch stirring is hands-on and may exceed the current time estimate.",
+    "make_ahead_basis": "Chef planning proposal, not publisher-confirmed storage window"
   },
   {
     "url": "https://www.ruchikrandhap.com/christmas-fruit-cake-without-alcohol/",
@@ -1274,7 +1467,16 @@
       "25 grams almonds, chopped",
       "25 grams walnuts, chopped"
     ],
-    "ingredient_source": "publisher structured data"
+    "ingredient_source": "publisher structured data",
+    "estimated_base_servings": 12,
+    "base_servings_basis": "chef estimate; 8-inch cake cut into 12 slices",
+    "equipment_assumption": [
+      "Oven",
+      "Refrigerator"
+    ],
+    "equipment_review": "Confirm usable capacity, pot/pan size, number of batches and overlap with other dishes.",
+    "chef_make_ahead_proposal": null,
+    "make_ahead_basis": "Publisher-specific note retained in prep_summary; confirm actual storage plan"
   },
   {
     "url": "https://withwendyandshannon.com/blog/super-easy-snowball-cookies/",
@@ -1317,7 +1519,15 @@
     },
     "label_review": [
       "1 tsp Pure Vanilla Extract"
-    ]
+    ],
+    "estimated_base_servings": 18,
+    "base_servings_basis": "chef estimate; cookie size varies",
+    "equipment_assumption": [
+      "Oven"
+    ],
+    "equipment_review": "Confirm usable capacity, pot/pan size, number of batches and overlap with other dishes.",
+    "chef_make_ahead_proposal": "Bake and cool 1-2 days ahead; store airtight. Roll/coating can be refreshed before serving if needed. Recipe lists wheat flour and pecans.",
+    "make_ahead_basis": "Chef planning proposal, not publisher-confirmed storage window"
   },
   {
     "url": "https://www.wellplated.com/brie-en-croute/",
@@ -1375,7 +1585,16 @@
     },
     "label_review": [
       "Crackers or baguette slices, toasted (for serving (or just eat it with a fork))"
-    ]
+    ],
+    "estimated_base_servings": 8,
+    "base_servings_basis": "publisher recipe yield; confirm whether servings or individual pieces",
+    "equipment_assumption": [
+      "Oven",
+      "Refrigerator"
+    ],
+    "equipment_review": "Confirm usable capacity, pot/pan size, number of batches and overlap with other dishes.",
+    "chef_make_ahead_proposal": null,
+    "make_ahead_basis": "Publisher-specific note retained in prep_summary; confirm actual storage plan"
   },
   {
     "url": "https://www.wellplated.com/stuffed-dates/",
@@ -1449,7 +1668,15 @@
       "12 oil-packed sun-dried tomato halves",
       "\u00bd cup dark chocolate chips (melted)",
       "\u00bc cup dark chocolate chips (melted)"
-    ]
+    ],
+    "estimated_base_servings": 12,
+    "base_servings_basis": "publisher count of 12 dates; assumes one date per guest",
+    "equipment_assumption": [
+      "Refrigerator"
+    ],
+    "equipment_review": "Confirm usable capacity, pot/pan size, number of batches and overlap with other dishes.",
+    "chef_make_ahead_proposal": null,
+    "make_ahead_basis": "Publisher-specific note retained in prep_summary; confirm actual storage plan"
   },
   {
     "url": "https://www.wellplated.com/how-to-cook-a-turkey/",
@@ -1502,7 +1729,16 @@
       "status": "none explicitly listed",
       "evidence": []
     },
-    "label_review": []
+    "label_review": [],
+    "estimated_base_servings": 10,
+    "base_servings_basis": "publisher recipe yield; confirm whether servings or individual pieces",
+    "equipment_assumption": [
+      "Oven",
+      "Refrigerator"
+    ],
+    "equipment_review": "Confirm usable capacity, pot/pan size, number of batches and overlap with other dishes.",
+    "chef_make_ahead_proposal": "For a 14-16 lb frozen bird, plan refrigerator thawing 3-4 days ahead. Season/brine per source before roasting; roast and rest early enough to protect the final hour. A whole turkey may need a simplified or bought alternative if oven capacity or schedule is tight.",
+    "make_ahead_basis": "Chef planning proposal, not publisher-confirmed storage window"
   },
   {
     "url": "https://www.wellplated.com/garlic-mashed-potatoes/",
@@ -1553,7 +1789,16 @@
     },
     "label_review": [
       "3 tablespoons unsalted butter (or olive oil)"
-    ]
+    ],
+    "estimated_base_servings": 6,
+    "base_servings_basis": "publisher recipe yield; confirm whether servings or individual pieces",
+    "equipment_assumption": [
+      "Stovetop",
+      "Refrigerator"
+    ],
+    "equipment_review": "Confirm usable capacity, pot/pan size, number of batches and overlap with other dishes.",
+    "chef_make_ahead_proposal": null,
+    "make_ahead_basis": "Publisher-specific note retained in prep_summary; confirm actual storage plan"
   },
   {
     "url": "https://www.wellplated.com/healthy-sweet-potato-casserole/",
@@ -1618,7 +1863,17 @@
       "2 tablespoons virgin coconut oil (melted)",
       "1 \u2153 cups old-fashioned rolled oats",
       "5 tablespoons melted coconut oil"
-    ]
+    ],
+    "estimated_base_servings": 10,
+    "base_servings_basis": "publisher recipe yield; confirm whether servings or individual pieces",
+    "equipment_assumption": [
+      "Oven",
+      "Stovetop",
+      "Refrigerator"
+    ],
+    "equipment_review": "Confirm usable capacity, pot/pan size, number of batches and overlap with other dishes.",
+    "chef_make_ahead_proposal": null,
+    "make_ahead_basis": "Publisher-specific note retained in prep_summary; confirm actual storage plan"
   },
   {
     "url": "https://www.wellplated.com/cornbread-sausage-stuffing/",
@@ -1689,7 +1944,16 @@
     "label_review": [
       "2 teaspoons baking powder",
       "2 1/2 cups reduced sodium chicken broth"
-    ]
+    ],
+    "estimated_base_servings": 10,
+    "base_servings_basis": "publisher recipe yield; confirm whether servings or individual pieces",
+    "equipment_assumption": [
+      "Oven",
+      "Stovetop"
+    ],
+    "equipment_review": "Confirm usable capacity, pot/pan size, number of batches and overlap with other dishes.",
+    "chef_make_ahead_proposal": null,
+    "make_ahead_basis": "Publisher-specific note retained in prep_summary; confirm actual storage plan"
   },
   {
     "url": "https://www.wellplated.com/homemade-cranberry-sauce/",
@@ -1739,7 +2003,16 @@
       "status": "none explicitly listed",
       "evidence": []
     },
-    "label_review": []
+    "label_review": [],
+    "estimated_base_servings": 16,
+    "base_servings_basis": "chef estimate; approximately 2 cups at 2 tablespoons per condiment portion",
+    "equipment_assumption": [
+      "Stovetop",
+      "Refrigerator"
+    ],
+    "equipment_review": "Confirm usable capacity, pot/pan size, number of batches and overlap with other dishes.",
+    "chef_make_ahead_proposal": "Cook 1-2 days ahead; cool promptly and refrigerate covered. Serve chilled or bring to serving temperature as preferred.",
+    "make_ahead_basis": "Chef planning proposal, not publisher-confirmed storage window"
   },
   {
     "url": "https://www.wellplated.com/healthy-green-bean-casserole/",
@@ -1799,7 +2072,17 @@
     },
     "label_review": [
       "4 tablespoons extra-virgin olive oil (divided)"
-    ]
+    ],
+    "estimated_base_servings": 10,
+    "base_servings_basis": "publisher recipe yield; confirm whether servings or individual pieces",
+    "equipment_assumption": [
+      "Oven",
+      "Stovetop",
+      "Refrigerator"
+    ],
+    "equipment_review": "Confirm usable capacity, pot/pan size, number of batches and overlap with other dishes.",
+    "chef_make_ahead_proposal": "Trim/blanch beans and prepare sauce 1 day ahead; refrigerate separately. Assemble/bake on party day and keep crumb topping separate until near baking for texture.",
+    "make_ahead_basis": "Chef planning proposal, not publisher-confirmed storage window"
   },
   {
     "url": "https://www.wellplated.com/caramelized-brussels-sprouts/",
@@ -1850,7 +2133,16 @@
     },
     "label_review": [
       "2 tablespoons extra virgin olive oil"
-    ]
+    ],
+    "estimated_base_servings": 4,
+    "base_servings_basis": "publisher recipe yield; confirm whether servings or individual pieces",
+    "equipment_assumption": [
+      "Oven",
+      "Refrigerator"
+    ],
+    "equipment_review": "Confirm usable capacity, pot/pan size, number of batches and overlap with other dishes.",
+    "chef_make_ahead_proposal": "Trim/halve sprouts and mix glaze 1 day ahead; refrigerate separately. Roast near serving for caramelization; reheating softens them.",
+    "make_ahead_basis": "Chef planning proposal, not publisher-confirmed storage window"
   },
   {
     "url": "https://www.wellplated.com/chocolate-pecan-pie/",
@@ -1911,7 +2203,16 @@
     "label_review": [
       "\u2153 cup bittersweet chocolate chips ((I used 60% dark))",
       "1 \u00bd teaspoons pure vanilla extract"
-    ]
+    ],
+    "estimated_base_servings": 10,
+    "base_servings_basis": "publisher recipe yield; confirm whether servings or individual pieces",
+    "equipment_assumption": [
+      "Oven",
+      "Refrigerator"
+    ],
+    "equipment_review": "Confirm usable capacity, pot/pan size, number of batches and overlap with other dishes.",
+    "chef_make_ahead_proposal": null,
+    "make_ahead_basis": "Publisher-specific note retained in prep_summary; confirm actual storage plan"
   },
   {
     "url": "https://www.wellplated.com/old-fashioned-sweet-potato-pie/",
@@ -1976,7 +2277,17 @@
       "1 tablespoon bourbon (or 2 additional teaspoons pure vanilla extract)",
       "1 teaspoon pure vanilla extract",
       "1 teaspoon pure vanilla extract"
-    ]
+    ],
+    "estimated_base_servings": 10,
+    "base_servings_basis": "publisher recipe yield; confirm whether servings or individual pieces",
+    "equipment_assumption": [
+      "Oven",
+      "Stovetop",
+      "Refrigerator"
+    ],
+    "equipment_review": "Confirm usable capacity, pot/pan size, number of batches and overlap with other dishes.",
+    "chef_make_ahead_proposal": null,
+    "make_ahead_basis": "Publisher-specific note retained in prep_summary; confirm actual storage plan"
   },
   {
     "url": "https://www.wellplated.com/gluten-free-apple-crisp/",
@@ -2036,7 +2347,16 @@
     },
     "label_review": [
       "1 cup old fashioned rolled oats"
-    ]
+    ],
+    "estimated_base_servings": 6,
+    "base_servings_basis": "publisher recipe yield; confirm whether servings or individual pieces",
+    "equipment_assumption": [
+      "Oven",
+      "Refrigerator"
+    ],
+    "equipment_review": "Confirm usable capacity, pot/pan size, number of batches and overlap with other dishes.",
+    "chef_make_ahead_proposal": null,
+    "make_ahead_basis": "Publisher-specific note retained in prep_summary; confirm actual storage plan"
   },
   {
     "url": "https://www.ruchikrandhap.com/mushroom-cutlets/",
@@ -2098,7 +2418,16 @@
       "1/4 teaspoon garam masala powder",
       "1/2 teaspoon amchur (dry mango powder) or few drops of lime juice",
       "oil for shallow frying"
-    ]
+    ],
+    "estimated_base_servings": 8,
+    "base_servings_basis": "source yield, 8 medium cutlets",
+    "equipment_assumption": [
+      "Stovetop",
+      "Refrigerator"
+    ],
+    "equipment_review": "Confirm usable capacity, pot/pan size, number of batches and overlap with other dishes.",
+    "chef_make_ahead_proposal": "Cook mushroom filling and shape cutlets up to 1 day ahead; refrigerate covered. Fry near serving for crispness and verify filling moisture.",
+    "make_ahead_basis": "Chef planning proposal, not publisher-confirmed storage window"
   },
   {
     "url": "https://www.ruchikrandhap.com/mince-meat-cutlets/",
@@ -2168,7 +2497,16 @@
       "1/4 teaspoon cumin powder",
       "1 teaspoon garam masala powder",
       "Oil for frying"
-    ]
+    ],
+    "estimated_base_servings": 8,
+    "base_servings_basis": "source yield, 8 servings",
+    "equipment_assumption": [
+      "Stovetop",
+      "Refrigerator"
+    ],
+    "equipment_review": "Confirm usable capacity, pot/pan size, number of batches and overlap with other dishes.",
+    "chef_make_ahead_proposal": "Cook meat filling fully and shape cutlets up to 1 day ahead; cool/refrigerate promptly. Fry near serving; verify the center is hot and the meat was safely cooked.",
+    "make_ahead_basis": "Chef planning proposal, not publisher-confirmed storage window"
   },
   {
     "url": "https://www.ruchikrandhap.com/pork-bafa/",
@@ -2225,7 +2563,16 @@
     "label_review": [
       "2-3 tablespoons bafat powder",
       "2-3 teaspoons thick tamarind extract"
-    ]
+    ],
+    "estimated_base_servings": 4,
+    "base_servings_basis": "source yield, 4 people",
+    "equipment_assumption": [
+      "Stovetop",
+      "Refrigerator"
+    ],
+    "equipment_review": "Confirm usable capacity, pot/pan size, number of batches and overlap with other dishes.",
+    "chef_make_ahead_proposal": "Cook fully 1 day ahead; cool promptly in shallow containers and refrigerate. Reheat thoroughly. Flavor may deepen, but actual pork tenderness and batch size need checking.",
+    "make_ahead_basis": "Chef planning proposal, not publisher-confirmed storage window"
   },
   {
     "url": "https://www.ruchikrandhap.com/sonay-sukhe-black-chana-fugadsukka/",
@@ -2275,7 +2622,17 @@
       "Oil",
       "Salt to taste"
     ],
-    "ingredient_source": "publisher visible recipe card"
+    "ingredient_source": "publisher visible recipe card",
+    "estimated_base_servings": 2,
+    "base_servings_basis": "publisher recipe yield; confirm whether servings or individual pieces",
+    "equipment_assumption": [
+      "Pressure cooker",
+      "Stovetop",
+      "Refrigerator"
+    ],
+    "equipment_review": "Confirm usable capacity, pot/pan size, number of batches and overlap with other dishes.",
+    "chef_make_ahead_proposal": null,
+    "make_ahead_basis": "Publisher-specific note retained in prep_summary; confirm actual storage plan"
   },
   {
     "url": "https://www.ruchikrandhap.com/coffee-fruit-cake-no-alcohol-las/",
@@ -2319,6 +2676,16 @@
       "status": "none explicitly listed",
       "evidence": []
     },
-    "label_review": []
+    "label_review": [],
+    "estimated_base_servings": 10,
+    "base_servings_basis": "chef estimate; loaf/cake slice size varies",
+    "equipment_assumption": [
+      "Oven",
+      "Stovetop",
+      "Refrigerator"
+    ],
+    "equipment_review": "Confirm usable capacity, pot/pan size, number of batches and overlap with other dishes.",
+    "chef_make_ahead_proposal": "Bake 1-2 days ahead, cool completely before wrapping. Confirm the publisher storage advice and choose refrigeration/freezing if storing longer; nonalcoholic fruit cake is not a shelf-stable preserve.",
+    "make_ahead_basis": "Chef planning proposal, not publisher-confirmed storage window"
   }
 ]

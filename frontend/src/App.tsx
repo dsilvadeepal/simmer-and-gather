@@ -177,9 +177,8 @@ export default function App() {
       </header>
       {ws.fixture_mode && (
         <div className="demo-banner">
-          Local demo · sample recipes and calendar availability. Illustrative
-          quantities and storage guidance—not instructions for cooking. No live
-          calendar writes.
+          Sample workspace · recipes and calendar availability are illustrative.
+          No live calendar writes.
         </div>
       )}
       <nav aria-label="Planning steps">
@@ -1358,7 +1357,7 @@ export default function App() {
                     )}
                     {ws.fixture_mode && (
                       <p className="meta">
-                        Live booking is disabled in the sample demo.
+                        Live booking is unavailable in this sample workspace.
                       </p>
                     )}
                     {booking?.outcomes.map((x, i) => (

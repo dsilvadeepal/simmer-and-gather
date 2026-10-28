@@ -2,7 +2,7 @@
 
 Current curated collection, October 28, 2026: 40 candidates—15 Diwali/Indian hosting and 25 Thanksgiving/Christmas options. They are menu options, not one suggested spread. Four incomplete entries were replaced with source-complete candidates; see [replacement record](recipe-replacements.md).
 
-All 40 now have ingredient lists and approximate home-cook task timing drafts. The timing estimates are untested and include cleanup; scaling, equipment batches, safe storage, exact product labels and make-ahead suitability remain review items. All Notion recipes remain `Planning Ready=false`. See [timing draft](recipe-chef-timing.md) and [gluten/nut screen](recipe-allergen-audit.md).
+All 40 now have ingredient lists, approximate home-cook task timing drafts, a base portion estimate and equipment needs. Source-backed make-ahead notes are retained where available; 22 remaining recipes have clearly labeled chef proposals. The timing estimates include cleanup. Scaling, equipment batches, safe storage and exact product labels remain gathering-specific checks. All Notion recipes remain `Planning Ready=false`. See [planning enrichment](recipe-planning-enrichment.md), [timing draft](recipe-chef-timing.md) and [gluten/nut screen](recipe-allergen-audit.md).
 
 | Occasion | Recipe | Category | Publisher rating snapshot |
 |---|---|---|---|

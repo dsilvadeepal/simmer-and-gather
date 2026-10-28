@@ -6,6 +6,8 @@ Curated October 28, 2026. 40 candidates: 15 Diwali/Indian hosting and 25 holiday
 
 Tavily extracted all 40 source pages on October 28. Source-backed make-ahead notes were confirmed for 14. Seven dishes now have a detailed Diwali chef draft in docs/diwali-chef-shortlist.md; the other 33 are set to Needs details for later review. Publisher prep time is available for 31 and cook time for 29, stored as recipe-level facts. Ingredient lists were recovered for 36. All 40 have gluten and nut screening notes in Notion, but remain Planning Ready=false until task-level active/presence time, label checks, scaling and storage are reviewed. No recipe was marked personally tested. See [allergen audit](recipe-allergen-audit.md).
 
+A separate [home-cook timing draft](recipe-chef-timing.md) estimates hands-on, waiting and cleanup minutes for the 36 recipes with usable ingredient/source detail. Four remain unknown. These estimates are for comparing menu workload; they are not measured times or automatically approved schedules.
+
 | Occasion | Recipe | Category | Publisher rating snapshot |
 |---|---|---|---|
 | Diwali / Indian hosting | [Air Fryer Paneer Tikka](https://ministryofcurry.com/paneer-tikka/) | starters | 4.7/5 from 10 ratings |

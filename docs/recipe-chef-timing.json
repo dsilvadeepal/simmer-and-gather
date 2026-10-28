@@ -1,0 +1,963 @@
+[
+  {
+    "title": "Air Fryer Paneer Tikka",
+    "url": "https://ministryofcurry.com/paneer-tikka/",
+    "basis": "chef estimate, untested",
+    "phases": [
+      {
+        "task": "Cut paneer and vegetables; mix marinade",
+        "active_minutes": 20,
+        "unattended_minutes": 0
+      },
+      {
+        "task": "Marinate in refrigerator",
+        "active_minutes": 0,
+        "unattended_minutes": 30
+      },
+      {
+        "task": "Skewer and air-fry one batch",
+        "active_minutes": 10,
+        "unattended_minutes": 10
+      }
+    ],
+    "cleanup_minutes": 10,
+    "active_minutes": 40,
+    "unattended_minutes": 40,
+    "elapsed_minutes": 80,
+    "review": "Base recipe only; confirm servings, equipment batches, and real pace before scheduling."
+  },
+  {
+    "title": "Aloo Chaat in Phyllo Shells",
+    "url": "https://ministryofcurry.com/aloo-chaat-in-phyllo-cups/",
+    "basis": "chef estimate, untested",
+    "phases": [
+      {
+        "task": "Cook and dice potatoes; prepare filling",
+        "active_minutes": 25,
+        "unattended_minutes": 15
+      },
+      {
+        "task": "Prepare chutneys if needed",
+        "active_minutes": 15,
+        "unattended_minutes": 0
+      },
+      {
+        "task": "Fill shells near serving",
+        "active_minutes": 15,
+        "unattended_minutes": 0
+      }
+    ],
+    "cleanup_minutes": 10,
+    "active_minutes": 65,
+    "unattended_minutes": 15,
+    "elapsed_minutes": 80,
+    "review": "Base recipe only; confirm servings, equipment batches, and real pace before scheduling."
+  },
+  {
+    "title": "Tandoori chicken wings",
+    "url": "https://ministryofcurry.com/tandoori-chicken-wings/",
+    "basis": "chef estimate, untested",
+    "phases": [
+      {
+        "task": "Mix marinade and coat wings",
+        "active_minutes": 20,
+        "unattended_minutes": 0
+      },
+      {
+        "task": "Marinate in refrigerator",
+        "active_minutes": 0,
+        "unattended_minutes": 30
+      },
+      {
+        "task": "Cook wings in batches",
+        "active_minutes": 15,
+        "unattended_minutes": 30
+      }
+    ],
+    "cleanup_minutes": 10,
+    "active_minutes": 45,
+    "unattended_minutes": 60,
+    "elapsed_minutes": 105,
+    "review": "Base recipe only; confirm servings, equipment batches, and real pace before scheduling."
+  },
+  {
+    "title": "Masala Nuts",
+    "url": "https://ministryofcurry.com/masala-nuts/",
+    "basis": "chef estimate, untested",
+    "phases": [
+      {
+        "task": "Measure and season nuts",
+        "active_minutes": 5,
+        "unattended_minutes": 0
+      },
+      {
+        "task": "Roast and cool",
+        "active_minutes": 5,
+        "unattended_minutes": 20
+      }
+    ],
+    "cleanup_minutes": 5,
+    "active_minutes": 15,
+    "unattended_minutes": 20,
+    "elapsed_minutes": 35,
+    "review": "Base recipe only; confirm servings, equipment batches, and real pace before scheduling."
+  },
+  {
+    "title": "Instant Pot Butter Chicken",
+    "url": "https://ministryofcurry.com/instant-pot-butter-chicken/",
+    "basis": "chef estimate, untested",
+    "phases": [
+      {
+        "task": "Cut chicken and measure sauce ingredients",
+        "active_minutes": 15,
+        "unattended_minutes": 0
+      },
+      {
+        "task": "Pressure cook and release",
+        "active_minutes": 5,
+        "unattended_minutes": 25
+      },
+      {
+        "task": "Finish sauce",
+        "active_minutes": 10,
+        "unattended_minutes": 0
+      }
+    ],
+    "cleanup_minutes": 10,
+    "active_minutes": 40,
+    "unattended_minutes": 25,
+    "elapsed_minutes": 65,
+    "review": "Base recipe only; confirm servings, equipment batches, and real pace before scheduling."
+  },
+  {
+    "title": "Butter Paneer {Paneer Makhani}",
+    "url": "https://ministryofcurry.com/paneer-butter-masala/",
+    "basis": "chef estimate, untested",
+    "phases": [
+      {
+        "task": "Measure sauce ingredients and prepare paneer",
+        "active_minutes": 15,
+        "unattended_minutes": 0
+      },
+      {
+        "task": "Cook sauce and warm paneer",
+        "active_minutes": 10,
+        "unattended_minutes": 20
+      }
+    ],
+    "cleanup_minutes": 10,
+    "active_minutes": 35,
+    "unattended_minutes": 20,
+    "elapsed_minutes": 55,
+    "review": "Base recipe only; confirm servings, equipment batches, and real pace before scheduling."
+  },
+  {
+    "title": "Instant Pot Chana Masala (Punjabi Chole)",
+    "url": "https://ministryofcurry.com/instant-pot-chana-masala-recipe/",
+    "basis": "chef estimate, untested",
+    "phases": [
+      {
+        "task": "Soak chickpeas if using dried beans",
+        "active_minutes": 5,
+        "unattended_minutes": 180
+      },
+      {
+        "task": "Chop aromatics and measure spices",
+        "active_minutes": 20,
+        "unattended_minutes": 0
+      },
+      {
+        "task": "Pressure cook and finish curry",
+        "active_minutes": 10,
+        "unattended_minutes": 60
+      }
+    ],
+    "cleanup_minutes": 10,
+    "active_minutes": 45,
+    "unattended_minutes": 240,
+    "elapsed_minutes": 285,
+    "review": "Base recipe only; confirm servings, equipment batches, and real pace before scheduling."
+  },
+  {
+    "title": "Instant Pot Dal Makhani with Brown Rice",
+    "url": "https://ministryofcurry.com/madras-lentils-daal-makhani-instant-pot/",
+    "basis": "chef estimate, untested",
+    "phases": [
+      {
+        "task": "Rinse lentils and measure ingredients",
+        "active_minutes": 15,
+        "unattended_minutes": 0
+      },
+      {
+        "task": "Pressure cook and release",
+        "active_minutes": 5,
+        "unattended_minutes": 50
+      },
+      {
+        "task": "Finish with cream and seasoning",
+        "active_minutes": 10,
+        "unattended_minutes": 0
+      }
+    ],
+    "cleanup_minutes": 10,
+    "active_minutes": 40,
+    "unattended_minutes": 50,
+    "elapsed_minutes": 90,
+    "review": "Base recipe only; confirm servings, equipment batches, and real pace before scheduling."
+  },
+  {
+    "title": "Instant Pot Palak Paneer",
+    "url": "https://ministryofcurry.com/palak-paneer-instant-pot/",
+    "basis": "chef estimate, untested",
+    "phases": [
+      {
+        "task": "Wash/chop spinach and prepare paneer",
+        "active_minutes": 20,
+        "unattended_minutes": 0
+      },
+      {
+        "task": "Cook, blend and finish sauce",
+        "active_minutes": 15,
+        "unattended_minutes": 15
+      }
+    ],
+    "cleanup_minutes": 10,
+    "active_minutes": 45,
+    "unattended_minutes": 15,
+    "elapsed_minutes": 60,
+    "review": "Base recipe only; confirm servings, equipment batches, and real pace before scheduling."
+  },
+  {
+    "title": "Vegetable Pulao Recipe | Veg Pulav",
+    "url": "https://ministryofcurry.com/moms-veg-pulao/",
+    "basis": "chef estimate, untested",
+    "phases": [
+      {
+        "task": "Rinse rice and chop vegetables",
+        "active_minutes": 25,
+        "unattended_minutes": 10
+      },
+      {
+        "task": "Saute vegetables and spices",
+        "active_minutes": 10,
+        "unattended_minutes": 0
+      },
+      {
+        "task": "Cook rice and rest",
+        "active_minutes": 5,
+        "unattended_minutes": 25
+      }
+    ],
+    "cleanup_minutes": 10,
+    "active_minutes": 50,
+    "unattended_minutes": 35,
+    "elapsed_minutes": 85,
+    "review": "Base recipe only; confirm servings, equipment batches, and real pace before scheduling."
+  },
+  {
+    "title": "Indian Cucumber Salad (Kakdi Koshimbir)",
+    "url": "https://ministryofcurry.com/indian-cucumber-salad/",
+    "basis": "chef estimate, untested",
+    "phases": [
+      {
+        "task": "Chop cucumber and herbs",
+        "active_minutes": 10,
+        "unattended_minutes": 0
+      },
+      {
+        "task": "Mix dressing and combine",
+        "active_minutes": 5,
+        "unattended_minutes": 0
+      }
+    ],
+    "cleanup_minutes": 5,
+    "active_minutes": 20,
+    "unattended_minutes": 0,
+    "elapsed_minutes": 20,
+    "review": "Base recipe only; confirm servings, equipment batches, and real pace before scheduling."
+  },
+  {
+    "title": "Cilantro Mint Chutney",
+    "url": "https://ministryofcurry.com/cilantro-mint-chutney/",
+    "basis": "chef estimate, untested",
+    "phases": [
+      {
+        "task": "Wash herbs and measure ingredients",
+        "active_minutes": 10,
+        "unattended_minutes": 0
+      },
+      {
+        "task": "Blend and adjust seasoning",
+        "active_minutes": 5,
+        "unattended_minutes": 0
+      }
+    ],
+    "cleanup_minutes": 5,
+    "active_minutes": 20,
+    "unattended_minutes": 0,
+    "elapsed_minutes": 20,
+    "review": "Base recipe only; confirm servings, equipment batches, and real pace before scheduling."
+  },
+  {
+    "title": "Instant Pot Rice Pudding",
+    "url": "https://ministryofcurry.com/rice-pudding-instant-pot/",
+    "basis": "chef estimate, untested",
+    "phases": [
+      {
+        "task": "Rinse rice and measure milk/sugar",
+        "active_minutes": 10,
+        "unattended_minutes": 0
+      },
+      {
+        "task": "Pressure cook and release",
+        "active_minutes": 5,
+        "unattended_minutes": 35
+      },
+      {
+        "task": "Stir and adjust texture",
+        "active_minutes": 10,
+        "unattended_minutes": 0
+      }
+    ],
+    "cleanup_minutes": 10,
+    "active_minutes": 35,
+    "unattended_minutes": 35,
+    "elapsed_minutes": 70,
+    "review": "Base recipe only; confirm servings, equipment batches, and real pace before scheduling."
+  },
+  {
+    "title": "Instant Pot Carrot Halwa Recipe",
+    "url": "https://ministryofcurry.com/carrot-halwa-instant-pot/",
+    "basis": "chef estimate, untested",
+    "phases": [
+      {
+        "task": "Grate carrots and measure ingredients",
+        "active_minutes": 25,
+        "unattended_minutes": 0
+      },
+      {
+        "task": "Pressure cook and release",
+        "active_minutes": 5,
+        "unattended_minutes": 15
+      },
+      {
+        "task": "Reduce while stirring",
+        "active_minutes": 10,
+        "unattended_minutes": 10
+      }
+    ],
+    "cleanup_minutes": 10,
+    "active_minutes": 50,
+    "unattended_minutes": 25,
+    "elapsed_minutes": 75,
+    "review": "Base recipe only; confirm servings, equipment batches, and real pace before scheduling."
+  },
+  {
+    "title": "Quick & Easy Badam Burfi (30 Minutes)",
+    "url": "https://ministryofcurry.com/badam-burfi/",
+    "basis": "chef estimate, untested",
+    "phases": [
+      {
+        "task": "Measure ingredients and prepare pan",
+        "active_minutes": 10,
+        "unattended_minutes": 0
+      },
+      {
+        "task": "Cook mixture while stirring",
+        "active_minutes": 15,
+        "unattended_minutes": 5
+      },
+      {
+        "task": "Set, cut and portion",
+        "active_minutes": 10,
+        "unattended_minutes": 20
+      }
+    ],
+    "cleanup_minutes": 10,
+    "active_minutes": 45,
+    "unattended_minutes": 25,
+    "elapsed_minutes": 70,
+    "review": "Base recipe only; confirm servings, equipment batches, and real pace before scheduling."
+  },
+  {
+    "title": "Easy Tuna Croquettes",
+    "url": "https://withwendyandshannon.com/blog/easy-tuna-croquettes/",
+    "basis": "chef estimate, untested",
+    "phases": [
+      {
+        "task": "Prepare fish mixture and crumbs",
+        "active_minutes": 20,
+        "unattended_minutes": 0
+      },
+      {
+        "task": "Shape and coat croquettes",
+        "active_minutes": 15,
+        "unattended_minutes": 0
+      },
+      {
+        "task": "Fry in batches",
+        "active_minutes": 20,
+        "unattended_minutes": 20
+      }
+    ],
+    "cleanup_minutes": 15,
+    "active_minutes": 70,
+    "unattended_minutes": 20,
+    "elapsed_minutes": 90,
+    "review": "Base recipe only; confirm servings, equipment batches, and real pace before scheduling."
+  },
+  {
+    "title": "The Best Goan Pork Roast",
+    "url": "https://withwendyandshannon.com/blog/the-best-goan-pork-roast/",
+    "basis": "insufficient source detail",
+    "phases": [],
+    "cleanup_minutes": null,
+    "active_minutes": null,
+    "unattended_minutes": null,
+    "elapsed_minutes": null,
+    "review": "Find complete ingredients and directions before task-level estimate."
+  },
+  {
+    "title": "Traditional Goan Stew",
+    "url": "https://withwendyandshannon.com/blog/traditional-goan-stew/",
+    "basis": "insufficient source detail",
+    "phases": [],
+    "cleanup_minutes": null,
+    "active_minutes": null,
+    "unattended_minutes": null,
+    "elapsed_minutes": null,
+    "review": "Find complete ingredients and directions before task-level estimate."
+  },
+  {
+    "title": "The Ultimate Goan Caldin Curry",
+    "url": "https://withwendyandshannon.com/blog/the-ultimate-goan-caldin-curry/",
+    "basis": "chef estimate, untested",
+    "phases": [
+      {
+        "task": "Measure and grind curry paste",
+        "active_minutes": 25,
+        "unattended_minutes": 0
+      },
+      {
+        "task": "Prepare protein/vegetables",
+        "active_minutes": 15,
+        "unattended_minutes": 0
+      },
+      {
+        "task": "Cook curry and adjust seasoning",
+        "active_minutes": 15,
+        "unattended_minutes": 30
+      }
+    ],
+    "cleanup_minutes": 15,
+    "active_minutes": 70,
+    "unattended_minutes": 30,
+    "elapsed_minutes": 100,
+    "review": "Base recipe only; confirm servings, equipment batches, and real pace before scheduling."
+  },
+  {
+    "title": "Easy Traditional Goan Sannas",
+    "url": "https://withwendyandshannon.com/blog/easy-traditional-goan-sannas-recipe/",
+    "basis": "chef estimate, untested",
+    "phases": [
+      {
+        "task": "Prepare batter and fermentation vessel",
+        "active_minutes": 20,
+        "unattended_minutes": 0
+      },
+      {
+        "task": "Ferment batter; duration depends on source and room",
+        "active_minutes": 0,
+        "unattended_minutes": 480
+      },
+      {
+        "task": "Portion and steam in batches",
+        "active_minutes": 15,
+        "unattended_minutes": 30
+      }
+    ],
+    "cleanup_minutes": 10,
+    "active_minutes": 45,
+    "unattended_minutes": 510,
+    "elapsed_minutes": 555,
+    "review": "Base recipe only; confirm servings, equipment batches, and real pace before scheduling. Fermentation time is highly variable."
+  },
+  {
+    "title": "The Best Doce",
+    "url": "https://withwendyandshannon.com/blog/the-best-doce/",
+    "basis": "chef estimate, untested",
+    "phases": [
+      {
+        "task": "Measure and cook coconut/lentil mixture",
+        "active_minutes": 25,
+        "unattended_minutes": 25
+      },
+      {
+        "task": "Stir, shape and cool sweets",
+        "active_minutes": 25,
+        "unattended_minutes": 30
+      }
+    ],
+    "cleanup_minutes": 15,
+    "active_minutes": 65,
+    "unattended_minutes": 55,
+    "elapsed_minutes": 120,
+    "review": "Base recipe only; confirm servings, equipment batches, and real pace before scheduling."
+  },
+  {
+    "title": "Easy Fruit Cake",
+    "url": "https://withwendyandshannon.com/blog/easy-fruit-cake/",
+    "basis": "insufficient source detail",
+    "phases": [],
+    "cleanup_minutes": null,
+    "active_minutes": null,
+    "unattended_minutes": null,
+    "elapsed_minutes": null,
+    "review": "Find complete ingredients and directions before task-level estimate."
+  },
+  {
+    "title": "Super Easy Snowball Cookies",
+    "url": "https://withwendyandshannon.com/blog/super-easy-snowball-cookies/",
+    "basis": "chef estimate, untested",
+    "phases": [
+      {
+        "task": "Mix cookie dough",
+        "active_minutes": 20,
+        "unattended_minutes": 0
+      },
+      {
+        "task": "Shape and bake batches",
+        "active_minutes": 15,
+        "unattended_minutes": 25
+      },
+      {
+        "task": "Cool and coat cookies",
+        "active_minutes": 10,
+        "unattended_minutes": 20
+      }
+    ],
+    "cleanup_minutes": 10,
+    "active_minutes": 55,
+    "unattended_minutes": 45,
+    "elapsed_minutes": 100,
+    "review": "Base recipe only; confirm servings, equipment batches, and real pace before scheduling."
+  },
+  {
+    "title": "Baked Brie En Croute",
+    "url": "https://www.wellplated.com/brie-en-croute/",
+    "basis": "chef estimate, untested",
+    "phases": [
+      {
+        "task": "Cook apple filling",
+        "active_minutes": 15,
+        "unattended_minutes": 10
+      },
+      {
+        "task": "Wrap brie and brush dough",
+        "active_minutes": 10,
+        "unattended_minutes": 0
+      },
+      {
+        "task": "Bake and rest",
+        "active_minutes": 5,
+        "unattended_minutes": 35
+      }
+    ],
+    "cleanup_minutes": 10,
+    "active_minutes": 40,
+    "unattended_minutes": 45,
+    "elapsed_minutes": 85,
+    "review": "Base recipe only; confirm servings, equipment batches, and real pace before scheduling."
+  },
+  {
+    "title": "Stuffed Dates (6 Ways!)",
+    "url": "https://www.wellplated.com/stuffed-dates/",
+    "basis": "chef estimate, untested",
+    "phases": [
+      {
+        "task": "Pit dates and prepare fillings",
+        "active_minutes": 10,
+        "unattended_minutes": 0
+      },
+      {
+        "task": "Fill and arrange dates",
+        "active_minutes": 20,
+        "unattended_minutes": 0
+      }
+    ],
+    "cleanup_minutes": 5,
+    "active_minutes": 35,
+    "unattended_minutes": 0,
+    "elapsed_minutes": 35,
+    "review": "Base recipe only; confirm servings, equipment batches, and real pace before scheduling."
+  },
+  {
+    "title": "Thanksgiving Turkey",
+    "url": "https://www.wellplated.com/how-to-cook-a-turkey/",
+    "basis": "chef estimate, untested",
+    "phases": [
+      {
+        "task": "Season turkey and prepare roasting pan",
+        "active_minutes": 25,
+        "unattended_minutes": 0
+      },
+      {
+        "task": "Roast; monitor temperature and baste as needed",
+        "active_minutes": 15,
+        "unattended_minutes": 240
+      },
+      {
+        "task": "Rest and carve",
+        "active_minutes": 20,
+        "unattended_minutes": 30
+      }
+    ],
+    "cleanup_minutes": 20,
+    "active_minutes": 80,
+    "unattended_minutes": 270,
+    "elapsed_minutes": 350,
+    "review": "Base recipe only; confirm servings, equipment batches, and real pace before scheduling. The listed bird is 14\u201316 lb; roast duration is a size-based planning allowance, not a doneness target. Cook to a measured safe internal temperature."
+  },
+  {
+    "title": "Garlic Mashed Potatoes Recipe",
+    "url": "https://www.wellplated.com/garlic-mashed-potatoes/",
+    "basis": "chef estimate, untested",
+    "phases": [
+      {
+        "task": "Peel/cut potatoes and garlic",
+        "active_minutes": 15,
+        "unattended_minutes": 0
+      },
+      {
+        "task": "Boil until tender",
+        "active_minutes": 5,
+        "unattended_minutes": 25
+      },
+      {
+        "task": "Mash and season",
+        "active_minutes": 10,
+        "unattended_minutes": 0
+      }
+    ],
+    "cleanup_minutes": 10,
+    "active_minutes": 40,
+    "unattended_minutes": 25,
+    "elapsed_minutes": 65,
+    "review": "Base recipe only; confirm servings, equipment batches, and real pace before scheduling."
+  },
+  {
+    "title": "Healthy Sweet Potato Casserole",
+    "url": "https://www.wellplated.com/healthy-sweet-potato-casserole/",
+    "basis": "chef estimate, untested",
+    "phases": [
+      {
+        "task": "Prepare sweet potatoes and topping",
+        "active_minutes": 25,
+        "unattended_minutes": 0
+      },
+      {
+        "task": "Cook/assemble casserole",
+        "active_minutes": 15,
+        "unattended_minutes": 30
+      },
+      {
+        "task": "Bake",
+        "active_minutes": 5,
+        "unattended_minutes": 50
+      }
+    ],
+    "cleanup_minutes": 15,
+    "active_minutes": 60,
+    "unattended_minutes": 80,
+    "elapsed_minutes": 140,
+    "review": "Base recipe only; confirm servings, equipment batches, and real pace before scheduling."
+  },
+  {
+    "title": "Cornbread Stuffing Recipe",
+    "url": "https://www.wellplated.com/cornbread-sausage-stuffing/",
+    "basis": "chef estimate, untested",
+    "phases": [
+      {
+        "task": "Make or cube cornbread and chop vegetables",
+        "active_minutes": 45,
+        "unattended_minutes": 0
+      },
+      {
+        "task": "Saute aromatics and assemble stuffing",
+        "active_minutes": 20,
+        "unattended_minutes": 10
+      },
+      {
+        "task": "Bake",
+        "active_minutes": 5,
+        "unattended_minutes": 40
+      }
+    ],
+    "cleanup_minutes": 15,
+    "active_minutes": 85,
+    "unattended_minutes": 50,
+    "elapsed_minutes": 135,
+    "review": "Base recipe only; confirm servings, equipment batches, and real pace before scheduling."
+  },
+  {
+    "title": "Cranberry Orange Sauce",
+    "url": "https://www.wellplated.com/homemade-cranberry-sauce/",
+    "basis": "chef estimate, untested",
+    "phases": [
+      {
+        "task": "Wash fruit and measure ingredients",
+        "active_minutes": 10,
+        "unattended_minutes": 0
+      },
+      {
+        "task": "Simmer sauce",
+        "active_minutes": 5,
+        "unattended_minutes": 15
+      },
+      {
+        "task": "Cool and refrigerate",
+        "active_minutes": 0,
+        "unattended_minutes": 30
+      }
+    ],
+    "cleanup_minutes": 5,
+    "active_minutes": 20,
+    "unattended_minutes": 45,
+    "elapsed_minutes": 65,
+    "review": "Base recipe only; confirm servings, equipment batches, and real pace before scheduling."
+  },
+  {
+    "title": "Healthy Green Bean Casserole",
+    "url": "https://www.wellplated.com/healthy-green-bean-casserole/",
+    "basis": "chef estimate, untested",
+    "phases": [
+      {
+        "task": "Trim beans and prepare sauce/topping",
+        "active_minutes": 25,
+        "unattended_minutes": 0
+      },
+      {
+        "task": "Cook and assemble casserole",
+        "active_minutes": 15,
+        "unattended_minutes": 20
+      },
+      {
+        "task": "Bake",
+        "active_minutes": 5,
+        "unattended_minutes": 20
+      }
+    ],
+    "cleanup_minutes": 15,
+    "active_minutes": 60,
+    "unattended_minutes": 40,
+    "elapsed_minutes": 100,
+    "review": "Base recipe only; confirm servings, equipment batches, and real pace before scheduling."
+  },
+  {
+    "title": "Caramelized Brussels Sprouts",
+    "url": "https://www.wellplated.com/caramelized-brussels-sprouts/",
+    "basis": "chef estimate, untested",
+    "phases": [
+      {
+        "task": "Trim and halve sprouts",
+        "active_minutes": 15,
+        "unattended_minutes": 0
+      },
+      {
+        "task": "Roast or saute in batches",
+        "active_minutes": 10,
+        "unattended_minutes": 25
+      }
+    ],
+    "cleanup_minutes": 10,
+    "active_minutes": 35,
+    "unattended_minutes": 25,
+    "elapsed_minutes": 60,
+    "review": "Base recipe only; confirm servings, equipment batches, and real pace before scheduling."
+  },
+  {
+    "title": "Chocolate Pecan Pie",
+    "url": "https://www.wellplated.com/chocolate-pecan-pie/",
+    "basis": "chef estimate, untested",
+    "phases": [
+      {
+        "task": "Make filling and prepare pie shell",
+        "active_minutes": 30,
+        "unattended_minutes": 0
+      },
+      {
+        "task": "Bake and cool",
+        "active_minutes": 5,
+        "unattended_minutes": 85
+      }
+    ],
+    "cleanup_minutes": 15,
+    "active_minutes": 50,
+    "unattended_minutes": 85,
+    "elapsed_minutes": 135,
+    "review": "Base recipe only; confirm servings, equipment batches, and real pace before scheduling."
+  },
+  {
+    "title": "Sweet Potato Pie",
+    "url": "https://www.wellplated.com/old-fashioned-sweet-potato-pie/",
+    "basis": "chef estimate, untested",
+    "phases": [
+      {
+        "task": "Cook/mash sweet potatoes and make filling",
+        "active_minutes": 45,
+        "unattended_minutes": 20
+      },
+      {
+        "task": "Fill crust and bake",
+        "active_minutes": 10,
+        "unattended_minutes": 60
+      },
+      {
+        "task": "Cool before slicing",
+        "active_minutes": 0,
+        "unattended_minutes": 60
+      }
+    ],
+    "cleanup_minutes": 15,
+    "active_minutes": 70,
+    "unattended_minutes": 140,
+    "elapsed_minutes": 210,
+    "review": "Base recipe only; confirm servings, equipment batches, and real pace before scheduling."
+  },
+  {
+    "title": "Gluten Free Apple Crisp",
+    "url": "https://www.wellplated.com/gluten-free-apple-crisp/",
+    "basis": "chef estimate, untested",
+    "phases": [
+      {
+        "task": "Peel and slice apples; mix topping",
+        "active_minutes": 25,
+        "unattended_minutes": 0
+      },
+      {
+        "task": "Bake and rest",
+        "active_minutes": 5,
+        "unattended_minutes": 55
+      }
+    ],
+    "cleanup_minutes": 10,
+    "active_minutes": 40,
+    "unattended_minutes": 55,
+    "elapsed_minutes": 95,
+    "review": "Base recipe only; confirm servings, equipment batches, and real pace before scheduling."
+  },
+  {
+    "title": "Mushroom Cutlets",
+    "url": "https://www.ruchikrandhap.com/mushroom-cutlets/",
+    "basis": "chef estimate, untested",
+    "phases": [
+      {
+        "task": "Cook/chop mushrooms and aromatics",
+        "active_minutes": 25,
+        "unattended_minutes": 10
+      },
+      {
+        "task": "Mix, shape and coat cutlets",
+        "active_minutes": 20,
+        "unattended_minutes": 0
+      },
+      {
+        "task": "Fry in batches",
+        "active_minutes": 15,
+        "unattended_minutes": 15
+      }
+    ],
+    "cleanup_minutes": 15,
+    "active_minutes": 75,
+    "unattended_minutes": 25,
+    "elapsed_minutes": 100,
+    "review": "Base recipe only; confirm servings, equipment batches, and real pace before scheduling."
+  },
+  {
+    "title": "Mince Meat Cutlets",
+    "url": "https://www.ruchikrandhap.com/mince-meat-cutlets/",
+    "basis": "chef estimate, untested",
+    "phases": [
+      {
+        "task": "Cook/season filling and prepare binder",
+        "active_minutes": 30,
+        "unattended_minutes": 15
+      },
+      {
+        "task": "Shape and coat cutlets",
+        "active_minutes": 20,
+        "unattended_minutes": 0
+      },
+      {
+        "task": "Fry in batches",
+        "active_minutes": 20,
+        "unattended_minutes": 20
+      }
+    ],
+    "cleanup_minutes": 15,
+    "active_minutes": 85,
+    "unattended_minutes": 35,
+    "elapsed_minutes": 120,
+    "review": "Base recipe only; confirm servings, equipment batches, and real pace before scheduling."
+  },
+  {
+    "title": "Pork Bafat | Dukra Maas",
+    "url": "https://www.ruchikrandhap.com/pork-bafa/",
+    "basis": "chef estimate, untested",
+    "phases": [
+      {
+        "task": "Cut pork and prepare spice blend",
+        "active_minutes": 30,
+        "unattended_minutes": 0
+      },
+      {
+        "task": "Cook and stir bafat",
+        "active_minutes": 15,
+        "unattended_minutes": 40
+      }
+    ],
+    "cleanup_minutes": 15,
+    "active_minutes": 60,
+    "unattended_minutes": 40,
+    "elapsed_minutes": 100,
+    "review": "Base recipe only; confirm servings, equipment batches, and real pace before scheduling."
+  },
+  {
+    "title": "Coconut & Roasted Chana Dal Chutney",
+    "url": "https://www.ruchikrandhap.com/coconut-roasted-chana-dal-chutney/",
+    "basis": "insufficient source detail",
+    "phases": [],
+    "cleanup_minutes": null,
+    "active_minutes": null,
+    "unattended_minutes": null,
+    "elapsed_minutes": null,
+    "review": "Find complete ingredients and directions before task-level estimate."
+  },
+  {
+    "title": "Coffee Fruit Cake",
+    "url": "https://www.ruchikrandhap.com/coffee-fruit-cake-no-alcohol-las/",
+    "basis": "chef estimate, untested",
+    "phases": [
+      {
+        "task": "Chop/soak fruit and measure cake ingredients",
+        "active_minutes": 45,
+        "unattended_minutes": 0
+      },
+      {
+        "task": "Mix batter and prepare pan",
+        "active_minutes": 15,
+        "unattended_minutes": 0
+      },
+      {
+        "task": "Bake and cool before slicing",
+        "active_minutes": 5,
+        "unattended_minutes": 60
+      }
+    ],
+    "cleanup_minutes": 15,
+    "active_minutes": 80,
+    "unattended_minutes": 60,
+    "elapsed_minutes": 140,
+    "review": "Base recipe only; confirm servings, equipment batches, and real pace before scheduling."
+  }
+]

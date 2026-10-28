@@ -13,3 +13,8 @@ MAI-October 2026 Team_Breakout_Handout.docx
 host-ready-notion-setup.json
 BRAINSTORMING-CONTEXT.md
 PROJECT-NAME-OPTIONS.md
+.pytest_cache/
+.ruff_cache/
+frontend/dist/
+frontend/test-results/
+frontend/playwright-report/

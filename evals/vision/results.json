@@ -1,0 +1,384 @@
+[
+  {
+    "provider": "nebius",
+    "model": "zai-org/GLM-5.3-Flash",
+    "case": "receipt-clear",
+    "expected": [
+      {
+        "name": "rice",
+        "quantity": 2,
+        "unit": "kg"
+      },
+      {
+        "name": "milk",
+        "quantity": 1,
+        "unit": "l"
+      },
+      {
+        "name": "eggs",
+        "quantity": 12,
+        "unit": "count"
+      }
+    ],
+    "status": 200,
+    "usage": {
+      "completion_tokens": 112,
+      "prompt_tokens": 504,
+      "total_tokens": 616,
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": null,
+        "reasoning_tokens": 65,
+        "rejected_prediction_tokens": null
+      },
+      "prompt_tokens_details": {
+        "audio_tokens": null,
+        "cached_tokens": 0,
+        "image_tokens": 403
+      },
+      "prompt_cache_hit_tokens": 0,
+      "prompt_cache_miss_tokens": 504,
+      "reasoning_tokens": 65
+    },
+    "response": "```json\n{\"items\":[{\"name\":\"rice\",\"quantity\":2,\"unit\":\"kg\"},{\"name\":\"milk\",\"quantity\":1,\"unit\":\"l\"},{\"name\":\"eggs\",\"quantity\":12,\"unit\":\"count\"}]}\n```",
+    "score": {
+      "matched": 3,
+      "expected": 3,
+      "predicted": 3,
+      "exact": 3,
+      "unsupported": 0
+    },
+    "estimated_usd": 0.0001316,
+    "seconds": 4.808
+  },
+  {
+    "provider": "fireworks",
+    "model": "accounts/fireworks/models/glm-5p3-flash",
+    "case": "receipt-clear",
+    "expected": [
+      {
+        "name": "rice",
+        "quantity": 2,
+        "unit": "kg"
+      },
+      {
+        "name": "milk",
+        "quantity": 1,
+        "unit": "l"
+      },
+      {
+        "name": "eggs",
+        "quantity": 12,
+        "unit": "count"
+      }
+    ],
+    "status": 200,
+    "usage": {
+      "prompt_tokens": 504,
+      "completion_tokens": 85,
+      "total_tokens": 589,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      },
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "reasoning_tokens": 41,
+        "rejected_prediction_tokens": null
+      }
+    },
+    "response": "{\"items\":[{\"name\":\"rice\",\"quantity\":2,\"unit\":\"kg\"},{\"name\":\"milk\",\"quantity\":1,\"unit\":\"l\"},{\"name\":\"eggs\",\"quantity\":12,\"unit\":\"count\"}]}",
+    "score": {
+      "matched": 3,
+      "expected": 3,
+      "predicted": 3,
+      "exact": 3,
+      "unsupported": 0
+    },
+    "estimated_usd": 0.0001181,
+    "seconds": 3.2
+  },
+  {
+    "provider": "nebius",
+    "model": "zai-org/GLM-5.3-Flash",
+    "case": "receipt-decimals",
+    "expected": [
+      {
+        "name": "paneer",
+        "quantity": 0.5,
+        "unit": "kg"
+      },
+      {
+        "name": "tomatoes",
+        "quantity": 750,
+        "unit": "g"
+      },
+      {
+        "name": "yogurt",
+        "quantity": 1,
+        "unit": "kg"
+      }
+    ],
+    "status": 200,
+    "usage": {
+      "completion_tokens": 145,
+      "prompt_tokens": 504,
+      "total_tokens": 649,
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": null,
+        "reasoning_tokens": 94,
+        "rejected_prediction_tokens": null
+      },
+      "prompt_tokens_details": {
+        "audio_tokens": null,
+        "cached_tokens": 0,
+        "image_tokens": 403
+      },
+      "prompt_cache_hit_tokens": 0,
+      "prompt_cache_miss_tokens": 504,
+      "reasoning_tokens": 94
+    },
+    "response": "```json\n{\"items\":[{\"name\":\"paneer\",\"quantity\":0.5,\"unit\":\"kg\"},{\"name\":\"tomatoes\",\"quantity\":750,\"unit\":\"g\"},{\"name\":\"yogurt\",\"quantity\":1,\"unit\":\"kg\"}]}\n```",
+    "score": {
+      "matched": 3,
+      "expected": 3,
+      "predicted": 3,
+      "exact": 3,
+      "unsupported": 0
+    },
+    "estimated_usd": 0.0001481,
+    "seconds": 7.495
+  },
+  {
+    "provider": "fireworks",
+    "model": "accounts/fireworks/models/glm-5p3-flash",
+    "case": "receipt-decimals",
+    "expected": [
+      {
+        "name": "paneer",
+        "quantity": 0.5,
+        "unit": "kg"
+      },
+      {
+        "name": "tomatoes",
+        "quantity": 750,
+        "unit": "g"
+      },
+      {
+        "name": "yogurt",
+        "quantity": 1,
+        "unit": "kg"
+      }
+    ],
+    "status": 200,
+    "usage": {
+      "prompt_tokens": 504,
+      "completion_tokens": 99,
+      "total_tokens": 603,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      },
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "reasoning_tokens": 47,
+        "rejected_prediction_tokens": null
+      }
+    },
+    "response": "```json\n{\"items\":[{\"name\":\"paneer\",\"quantity\":0.5,\"unit\":\"kg\"},{\"name\":\"tomatoes\",\"quantity\":750,\"unit\":\"g\"},{\"name\":\"yogurt\",\"quantity\":1,\"unit\":\"kg\"}]}\n```",
+    "score": {
+      "matched": 3,
+      "expected": 3,
+      "predicted": 3,
+      "exact": 3,
+      "unsupported": 0
+    },
+    "estimated_usd": 0.0001251,
+    "seconds": 2.592
+  },
+  {
+    "provider": "nebius",
+    "model": "zai-org/GLM-5.3-Flash",
+    "case": "pantry-label-unknown",
+    "expected": [
+      {
+        "name": "rice",
+        "quantity": null,
+        "unit": null
+      },
+      {
+        "name": "lentils",
+        "quantity": null,
+        "unit": null
+      },
+      {
+        "name": "sugar",
+        "quantity": null,
+        "unit": null
+      }
+    ],
+    "status": 200,
+    "usage": {
+      "completion_tokens": 131,
+      "prompt_tokens": 504,
+      "total_tokens": 635,
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": null,
+        "reasoning_tokens": 83,
+        "rejected_prediction_tokens": null
+      },
+      "prompt_tokens_details": {
+        "audio_tokens": null,
+        "cached_tokens": 0,
+        "image_tokens": 403
+      },
+      "prompt_cache_hit_tokens": 0,
+      "prompt_cache_miss_tokens": 504,
+      "reasoning_tokens": 83
+    },
+    "response": "```json\n{\"items\":[{\"name\":\"rice\",\"quantity\":null,\"unit\":null},{\"name\":\"lentils\",\"quantity\":null,\"unit\":null},{\"name\":\"sugar\",\"quantity\":null,\"unit\":null}]}\n```",
+    "score": {
+      "matched": 3,
+      "expected": 3,
+      "predicted": 3,
+      "exact": 3,
+      "unsupported": 0
+    },
+    "estimated_usd": 0.0001411,
+    "seconds": 5.27
+  },
+  {
+    "provider": "fireworks",
+    "model": "accounts/fireworks/models/glm-5p3-flash",
+    "case": "pantry-label-unknown",
+    "expected": [
+      {
+        "name": "rice",
+        "quantity": null,
+        "unit": null
+      },
+      {
+        "name": "lentils",
+        "quantity": null,
+        "unit": null
+      },
+      {
+        "name": "sugar",
+        "quantity": null,
+        "unit": null
+      }
+    ],
+    "status": 200,
+    "usage": {
+      "prompt_tokens": 504,
+      "completion_tokens": 188,
+      "total_tokens": 692,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      },
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "reasoning_tokens": 143,
+        "rejected_prediction_tokens": null
+      }
+    },
+    "response": "{\"items\":[{\"name\":\"rice\",\"quantity\":null,\"unit\":null},{\"name\":\"lentils\",\"quantity\":null,\"unit\":null},{\"name\":\"sugar\",\"quantity\":null,\"unit\":null}]}",
+    "score": {
+      "matched": 3,
+      "expected": 3,
+      "predicted": 3,
+      "exact": 3,
+      "unsupported": 0
+    },
+    "estimated_usd": 0.0001696,
+    "seconds": 3.514
+  },
+  {
+    "provider": "nebius",
+    "model": "zai-org/GLM-5.3-Flash",
+    "case": "receipt-nonfood",
+    "expected": [
+      {
+        "name": "spinach",
+        "quantity": 200,
+        "unit": "g"
+      },
+      {
+        "name": "cumin",
+        "quantity": 100,
+        "unit": "g"
+      }
+    ],
+    "status": 200,
+    "usage": {
+      "completion_tokens": 134,
+      "prompt_tokens": 504,
+      "total_tokens": 638,
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": null,
+        "reasoning_tokens": 99,
+        "rejected_prediction_tokens": null
+      },
+      "prompt_tokens_details": {
+        "audio_tokens": null,
+        "cached_tokens": 0,
+        "image_tokens": 403
+      },
+      "prompt_cache_hit_tokens": 0,
+      "prompt_cache_miss_tokens": 504,
+      "reasoning_tokens": 99
+    },
+    "response": "```json\n{\"items\":[{\"name\":\"spinach\",\"quantity\":200,\"unit\":\"g\"},{\"name\":\"cumin\",\"quantity\":100,\"unit\":\"g\"}]}\n```",
+    "score": {
+      "matched": 2,
+      "expected": 2,
+      "predicted": 2,
+      "exact": 2,
+      "unsupported": 0
+    },
+    "estimated_usd": 0.0001426,
+    "seconds": 8.851
+  },
+  {
+    "provider": "fireworks",
+    "model": "accounts/fireworks/models/glm-5p3-flash",
+    "case": "receipt-nonfood",
+    "expected": [
+      {
+        "name": "spinach",
+        "quantity": 200,
+        "unit": "g"
+      },
+      {
+        "name": "cumin",
+        "quantity": 100,
+        "unit": "g"
+      }
+    ],
+    "status": 200,
+    "usage": {
+      "prompt_tokens": 504,
+      "completion_tokens": 94,
+      "total_tokens": 598,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      },
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "reasoning_tokens": 62,
+        "rejected_prediction_tokens": null
+      }
+    },
+    "response": "{\"items\":[{\"name\":\"spinach\",\"quantity\":200,\"unit\":\"g\"},{\"name\":\"cumin\",\"quantity\":100,\"unit\":\"g\"}]}",
+    "score": {
+      "matched": 2,
+      "expected": 2,
+      "predicted": 2,
+      "exact": 2,
+      "unsupported": 0
+    },
+    "estimated_usd": 0.0001226,
+    "seconds": 3.416
+  }
+]

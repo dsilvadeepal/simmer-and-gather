@@ -727,5 +727,100 @@
     "publisher": "Well Plated by Erin",
     "rating_display": "4.87/5 from 23 ratings",
     "planning_ready": false
+  },
+  {
+    "url": "https://www.ruchikrandhap.com/mushroom-cutlets/",
+    "category": "starters",
+    "occasion": "Christmas / Mangalorean",
+    "title": "Mushroom Cutlets",
+    "rating": null,
+    "yield_text": [
+      "8",
+      "8 medium sized cutlets"
+    ],
+    "prep": "PT25M",
+    "cook": "PT15M",
+    "total": "PT40M",
+    "structured": true,
+    "status": "fetched",
+    "publisher": "Ruchik Randhap \u2014 Shireen",
+    "rating_display": "No rating verified",
+    "planning_ready": false
+  },
+  {
+    "url": "https://www.ruchikrandhap.com/mince-meat-cutlets/",
+    "category": "starters",
+    "occasion": "Christmas / Mangalorean",
+    "title": "Mince Meat Cutlets",
+    "rating": {
+      "@type": "AggregateRating",
+      "ratingValue": "5",
+      "ratingCount": "2",
+      "reviewCount": "2"
+    },
+    "yield_text": [
+      "8",
+      "8 servings"
+    ],
+    "prep": "PT25M",
+    "cook": "PT25M",
+    "total": "PT50M",
+    "structured": true,
+    "status": "fetched",
+    "publisher": "Ruchik Randhap \u2014 Shireen",
+    "rating_display": "5/5 from 2 ratings",
+    "planning_ready": false
+  },
+  {
+    "url": "https://www.ruchikrandhap.com/pork-bafa/",
+    "category": "mains",
+    "occasion": "Christmas / Mangalorean",
+    "title": "Pork Bafat | Dukra Maas",
+    "rating": {
+      "@type": "AggregateRating",
+      "ratingValue": "5",
+      "ratingCount": "10",
+      "reviewCount": "5"
+    },
+    "yield_text": [
+      "4",
+      "4 people"
+    ],
+    "prep": "PT25M",
+    "cook": "PT40M",
+    "total": "PT65M",
+    "structured": true,
+    "status": "fetched",
+    "publisher": "Ruchik Randhap \u2014 Shireen",
+    "rating_display": "5/5 from 10 ratings",
+    "planning_ready": false
+  },
+  {
+    "url": "https://www.ruchikrandhap.com/coconut-roasted-chana-dal-chutney/",
+    "category": "sides",
+    "occasion": "Christmas / Mangalorean",
+    "title": "Coconut & Roasted Chana Dal Chutney",
+    "structured": false,
+    "rating": null,
+    "status": "fetched",
+    "publisher": "Ruchik Randhap \u2014 Shireen",
+    "rating_display": "No rating verified",
+    "planning_ready": false
+  },
+  {
+    "url": "https://www.ruchikrandhap.com/coffee-fruit-cake-no-alcohol-las/",
+    "category": "desserts",
+    "occasion": "Christmas / Mangalorean",
+    "title": "Coffee Fruit Cake",
+    "rating": null,
+    "yield_text": null,
+    "prep": "PT45M",
+    "cook": "PT60M",
+    "total": "PT105M",
+    "structured": true,
+    "status": "fetched",
+    "publisher": "Ruchik Randhap \u2014 Shireen",
+    "rating_display": "No rating verified",
+    "planning_ready": false
   }
 ]

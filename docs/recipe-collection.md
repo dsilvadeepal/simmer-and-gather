@@ -1,8 +1,8 @@
 # Starter recipe collection
 
-Curated October 28, 2026. 35 candidates: 15 Diwali/Indian hosting, 8 Goan Christmas and 12 US Thanksgiving/Christmas. These are options to choose from, not one menu.
+Curated October 28, 2026. 40 candidates: 15 Diwali/Indian hosting and 25 holiday options (8 Goan Christmas, 5 Mangalorean Christmas and 12 US Thanksgiving/Christmas). These are options to choose from, not one menu.
 
-27 pages supplied structured ingredients and recipe-level timing metadata. Eight Wendy pages remain source-link candidates because their individual pages returned HTTP 403; the accessible site index established the links. No protection was bypassed.
+31 pages supplied structured recipe metadata (individual timing fields may still be absent). The Ruchik Randhap chutney page was accessible but lacked structured recipe data; it remains a source-linked candidate. Eight Wendy pages remain source-link candidates because their individual pages returned HTTP 403; the accessible site index established the links. No protection was bypassed.
 
 All records in the existing HR Recipe Library are Needs details and Planning Ready=false. Not personally tested. Task timings, allergens, make-ahead/storage evidence and servings need review. Source prep time does not equal active hosting workload.
 
@@ -43,3 +43,8 @@ All records in the existing HR Recipe Library are Needs details and Planning Rea
 | Thanksgiving / US Christmas | [Chocolate Pecan Pie](https://www.wellplated.com/chocolate-pecan-pie/) | desserts | 5/5 from 14 ratings |
 | Thanksgiving / US Christmas | [Sweet Potato Pie](https://www.wellplated.com/old-fashioned-sweet-potato-pie/) | desserts | 4.99/5 from 64 ratings |
 | Thanksgiving / US Christmas | [Gluten Free Apple Crisp](https://www.wellplated.com/gluten-free-apple-crisp/) | desserts | 4.87/5 from 23 ratings |
+| Christmas / Mangalorean | [Mushroom Cutlets](https://www.ruchikrandhap.com/mushroom-cutlets/) | starters | No rating verified |
+| Christmas / Mangalorean | [Mince Meat Cutlets](https://www.ruchikrandhap.com/mince-meat-cutlets/) | starters | 5/5 from 2 ratings |
+| Christmas / Mangalorean | [Pork Bafat / Dukra Maas](https://www.ruchikrandhap.com/pork-bafa/) | mains | 5/5 from 10 ratings |
+| Christmas / Mangalorean | [Coconut & Roasted Chana Dal Chutney](https://www.ruchikrandhap.com/coconut-roasted-chana-dal-chutney/) | sides | No rating verified |
+| Christmas / Mangalorean | [Coffee Fruit Cake](https://www.ruchikrandhap.com/coffee-fruit-cake-no-alcohol-las/) | desserts | No rating verified |

@@ -3,7 +3,7 @@ from fastapi import Depends, HTTPException, UploadFile
 from pydantic import BaseModel
 from .domain import *
 from .agent import PlanningService
-from .recipes import RecipeService
+from .recipes import RecipeService, extract_candidate
 from .availability import AvailabilityService
 from .adapters.storage import UploadStore
 from .db import Missing
@@ -43,7 +43,14 @@ def install_routes(app,owner,store,availability=None,fixture_mode=False,model=No
     @app.get('/api/recipes',response_model=list[RecipeSnapshot])
     def recipe_list(o=Depends(owner)): return recipes.list_recipes(o)
     @app.post('/api/recipes/preview',response_model=RecipeSnapshot)
-    def preview(body:Preview,o=Depends(owner)): return recipes.preview_recipe(o,body.source)
+    def preview(body:Preview,o=Depends(owner)):
+        candidate=recipes.preview_recipe(o,body.source)
+        if model:
+            try: candidate=extract_candidate(candidate,model)
+            except Exception:
+                # Provider or parsing failures preserve usable source preview/manual review.
+                candidate.uncertainties.append('Automatic step extraction unavailable; review the original source manually')
+        return candidate
     @app.post('/api/recipes',response_model=RecipeSnapshot)
     def recipe_save(body:SaveRecipe,o=Depends(owner)): return recipes.save_reviewed_recipe(o,body.recipe,body.expected_source_version)
     @app.post('/api/menu/{id}',response_model=PlanInputs)

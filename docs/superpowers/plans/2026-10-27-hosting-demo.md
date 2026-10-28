@@ -231,3 +231,5 @@ Detailed connection steps and current evidence: `docs/google-oauth-setup.md`. Vi
 GitHub: https://github.com/dsilvadeepal/simmer-and-gather (private, verified October 28). Local implementation branch: `build/hosting-demo`. Implementation branch was pushed on October 28. Subsequent work is committed and pushed in verified increments; the main branch is not merged automatically. Never include `.env.google` or other credentials.
 
 October 28 continuation: runtime text-model budget wiring, calendar checkbox picker, recipe review form, Google refresh-race recovery, CI workflow, Docker packaging and operating runbook added. Backend 54 tests, frontend 3 tests, production build and 25 fixture eval checks pass; Docker image builds locally. Live integrations and final acceptance remain incomplete.
+
+Recipe preview now uses the explicitly enabled, budgeted text model for candidate steps; original source survives failures and candidates never become automatically reviewed. Latest local backend run: 55 passed. Existing Deepal Old project databases will be reused; app-owned Notion connection is awaiting browser sign-in.

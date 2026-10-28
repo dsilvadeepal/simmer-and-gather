@@ -29,3 +29,5 @@ Load the ignored `.env.google` into process environment without printing its con
 `uv run pytest -q`, `npm --prefix frontend test -- --run`, `npm --prefix frontend run build`, and `uv run python evals/run.py --mode fixtures --split all`.
 
 GitHub Actions runs these checks with temporary PostgreSQL. Browser journeys require the sample backend and Playwright browsers. No production provider credentials belong in CI. Dockerfile is packaging only; no host has been provisioned or deployment verified.
+
+When the paid text model is enabled, recipe previews also propose source-quoted preparation steps. The result remains unreviewed; extraction failures retain the original source for manual editing. Make-ahead/storage limits remain unknown until reviewed.

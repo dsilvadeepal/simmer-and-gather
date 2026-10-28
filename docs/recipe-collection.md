@@ -4,7 +4,7 @@ Curated October 28, 2026. 40 candidates: 15 Diwali/Indian hosting and 25 holiday
 
 31 pages supplied structured recipe metadata (individual timing fields may still be absent). The Ruchik Randhap chutney page was accessible but lacked structured recipe data; it remains a source-linked candidate. Eight Wendy pages remain source-link candidates because their individual pages returned HTTP 403; the accessible site index established the links. No protection was bypassed.
 
-Tavily extracted all 40 source pages on October 28. Source-backed make-ahead notes were confirmed for 14. Seven dishes now have a detailed Diwali chef draft in docs/diwali-chef-shortlist.md; the other 33 are set to Needs details for later review. Publisher prep time is available for 31 and cook time for 29, stored as recipe-level facts. All 40 remain Planning Ready=false until task-level active/presence time, allergens, scaling and storage are reviewed. No recipe was marked personally tested.
+Tavily extracted all 40 source pages on October 28. Source-backed make-ahead notes were confirmed for 14. Seven dishes now have a detailed Diwali chef draft in docs/diwali-chef-shortlist.md; the other 33 are set to Needs details for later review. Publisher prep time is available for 31 and cook time for 29, stored as recipe-level facts. Ingredient lists were recovered for 36. All 40 have gluten and nut screening notes in Notion, but remain Planning Ready=false until task-level active/presence time, label checks, scaling and storage are reviewed. No recipe was marked personally tested. See [allergen audit](recipe-allergen-audit.md).
 
 | Occasion | Recipe | Category | Publisher rating snapshot |
 |---|---|---|---|

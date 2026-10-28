@@ -23,6 +23,7 @@ import {
   type Recipe,
   type Selection,
 } from "./api";
+import { NotionCollection } from "./NotionCollection";
 import { RecipeReview } from "./RecipeReview";
 import { CalendarPicker } from "./CalendarPicker";
 import { TaskCard } from "./TaskCard";
@@ -1000,6 +1001,7 @@ export default function App() {
             </div>
             <details>
               <summary>Import a recipe</summary>
+              {!ws.fixture_mode && <NotionCollection onSelect={setSource}/>}
               <p className="meta">
                 Paste a source URL or recipe text. Review missing timings and
                 make-ahead support before saving.
@@ -1032,7 +1034,7 @@ export default function App() {
                         await load(g.id!);
                         setPreview(null);
                         setNotice(
-                          "Recipe saved locally; Notion sync requires connection.",
+                          "Recipe saved to this app. Publishing reviewed recipes back to Notion is not enabled yet.",
                         );
                       })
                     }

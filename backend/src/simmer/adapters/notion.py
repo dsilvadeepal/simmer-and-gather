@@ -29,7 +29,10 @@ class ScopedNotion:
     def create_reviewed(self,key,title,summary,reviewed):
         target=self.scope(key)
         if not reviewed: raise ValueError('Review required')
-        return self.transport('POST','/pages',{'parent':{'type':'data_source_id','data_source_id':target},'properties':{'Name':{'title':[{'text':{'content':title[:2000]}}]}},'children':[{'object':'block','type':'paragraph','paragraph':{'rich_text':[{'type':'text','text':{'content':summary[:2000]}}]}}]})
+        schema=self.transport('GET',f'/data_sources/{target}')
+        titles=[name for name,prop in schema.get('properties',{}).items() if prop.get('type')=='title']
+        if len(titles)!=1: raise ValueError('Expected one title property in approved collection')
+        return self.transport('POST','/pages',{'parent':{'type':'data_source_id','data_source_id':target},'properties':{titles[0]:{'title':[{'text':{'content':title[:2000]}}]}},'children':[{'object':'block','type':'paragraph','paragraph':{'rich_text':[{'type':'text','text':{'content':summary[:2000]}}]}}]})
 
 class NotionAPITransport:
     def __init__(self,token): self.token=token

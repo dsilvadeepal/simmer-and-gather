@@ -31,6 +31,14 @@ def build_app(config=None):
     app=create_app(store,auth,availability=availability,model=build_text_model(store,config['ALLOWED_OWNER_ID'],config))
     install_oauth(app,store,config)
     owner=app.state.owner
+    if config.get('NOTION_TOKEN') and config.get('NOTION_COLLECTIONS'):
+        import json
+        from .adapters.notion_client import NotionRecipes
+        notion=NotionRecipes(config['NOTION_TOKEN'],json.loads(config['NOTION_COLLECTIONS']))
+        @app.get('/api/notion/recipes')
+        def notion_recipes(o=Depends(owner)):
+            try: return notion.list_candidates()
+            except Exception: raise HTTPException(503,'Notion unavailable; saved local recipes remain available')
     @app.get('/api/calendars')
     def calendars(o=Depends(owner)):
         return [{'id':c['id'],'name':c.get('summary','Calendar')} for c in google.list_calendars()]

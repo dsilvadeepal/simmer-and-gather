@@ -3,10 +3,10 @@ Run: uv run python -m simmer.adapters.notion_mcp
 Only the three configured collections are reachable. No workspace search tool.
 """
 import json, os
-from mcp.server.fastmcp import FastMCP
+from mcp.server.mcpserver import MCPServer
 from .notion import ScopedNotion, NotionAPITransport
 
-server=FastMCP('Simmer and Gather recipes')
+server=MCPServer('Simmer and Gather recipes')
 def adapter():
     return ScopedNotion(NotionAPITransport(os.environ['NOTION_TOKEN']),json.loads(os.environ['NOTION_COLLECTIONS']))
 

@@ -233,3 +233,9 @@ GitHub: https://github.com/dsilvadeepal/simmer-and-gather (private, verified Oct
 October 28 continuation: runtime text-model budget wiring, calendar checkbox picker, recipe review form, Google refresh-race recovery, CI workflow, Docker packaging and operating runbook added. Backend 54 tests, frontend 3 tests, production build and 25 fixture eval checks pass; Docker image builds locally. Live integrations and final acceptance remain incomplete.
 
 Recipe preview now uses the explicitly enabled, budgeted text model for candidate steps; original source survives failures and candidates never become automatically reviewed. Latest local backend run: 55 passed. Existing Deepal Old project databases will be reused; app-owned Notion connection is awaiting browser sign-in.
+
+### Live connections verified — October 28, 2026
+
+The app-owned Notion connection is authorized only for the existing HR Recipe Library, Gatherings and Prep Sessions databases in Deepal Old. All three data sources returned successful read responses; all are empty. Recipe browsing now runs through the scoped app MCP server and opens candidates for source import/review. A Notion Planning Ready flag never bypasses application recipe validation. Reviewed recipe publication and gathering/session projections back to Notion remain to be implemented. No unrelated pages were granted access. Credentials are local, ignored by Git, owner-readable only.
+
+Google OAuth and listing of 11 accessible calendars verified. The user chooses calendars in the app before availability checks. No real calendar events have been created. Local production server now loads both integrations; this is not a hosted deployment.

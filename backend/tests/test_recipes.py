@@ -36,3 +36,14 @@ def test_stale_recipe_save_and_unreviewed_rejected(store,owner):
     saved.title='New rice'
     service.save_reviewed_recipe(owner,saved,'1')
     with pytest.raises(Conflict): service.save_reviewed_recipe(owner,r,'1')
+
+def test_notion_uses_real_title_property():
+    calls=[]
+    def transport(method,path,body=None):
+        calls.append((method,path,body))
+        if method=='GET': return {'properties':{'Recipe':{'type':'title'},'Source URL':{'type':'url'}}}
+        return {'id':'created'}
+    adapter=ScopedNotion(transport,{'recipes':'approved'})
+    adapter.create_reviewed('recipes','Rice','Reviewed steps',True)
+    assert 'Recipe' in calls[-1][2]['properties']
+    assert 'Name' not in calls[-1][2]['properties']

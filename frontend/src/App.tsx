@@ -23,6 +23,7 @@ import {
   type Recipe,
   type Selection,
 } from "./api";
+import { RecipeDiscovery } from "./RecipeDiscovery";
 import { NotionCollection } from "./NotionCollection";
 import { RecipeReview } from "./RecipeReview";
 import { CalendarPicker } from "./CalendarPicker";
@@ -68,6 +69,7 @@ export default function App() {
     } | null>(null);
   const [calendars,setCalendars] = useState<{id:string;name:string}[]>([]);
   const [calendarError,setCalendarError] = useState("");
+  const [proposal,setProposal]=useState<Selection[]|null>(null);
   async function run(action: () => Promise<void>) {
     setLoading(true);
     setError("");
@@ -82,6 +84,7 @@ export default function App() {
   }
   async function load(id: string) {
     const data = await api<Workspace>("/workspace/" + id);
+    setProposal(null);
     setWs(data);
     setG(data.inputs.gathering);
     setPlan(data.plan || null);
@@ -939,6 +942,18 @@ export default function App() {
             ))}
           </div>
           <section className="card">
+            <h2>Suggestions from your reviewed recipes</h2>
+            <p>Fill gaps in your menu, then review additions before saving. Import recipes from Notion first if your collection is empty.</p>
+            <button disabled={loading||dirty} className="secondary" onClick={()=>run(async()=>{
+              const items=await api<Selection[]>("/menu/"+g.id+"/propose",{});
+              setProposal(items.filter(item=>!ws.inputs.selections.some(s=>s.id===item.id)));
+            })}>Suggest dishes</button>
+            {proposal && <><ul>{proposal.map(item=><li key={item.id}>{item.title} · {item.category} · {item.servings} servings</li>)}</ul>
+              {!proposal.length?<p>No additional reviewed recipes fit the open categories. Import more options or adjust your counts.</p>:<button disabled={loading||dirty} onClick={()=>run(async()=>{
+                await edit(proposal.map(selection=>({action:"add",selection})));setProposal(null);
+              })}>Add these suggestions</button>}</>}
+          </section>
+          <section className="card">
             <h2>
               <Plus />
               Add to your spread
@@ -1002,6 +1017,14 @@ export default function App() {
             <details>
               <summary>Import a recipe</summary>
               {!ws.fixture_mode && <NotionCollection onSelect={setSource}/>}
+              {!ws.fixture_mode && <RecipeDiscovery onSelect={setSource}/>}
+              {!ws.fixture_mode && ws.recipes.length>0 && <div>
+                <p className="meta">Publish a saved, reviewed recipe to your Notion library. Retrying checks the previous save.</p>
+                {ws.recipes.filter(r=>r.reviewed).map(r=><button key={r.id} className="secondary" disabled={loading} onClick={()=>run(async()=>{
+                  const result=await api<{status:string;message?:string}>("/notion/recipes/"+r.id,{version:r.version});
+                  setNotice(result.status==='saved'?r.title+" saved to Notion.":result.message||"Save uncertain; retry to check Notion.");
+                })}>Save {r.title} to Notion</button>)}
+              </div>}
               <p className="meta">
                 Paste a source URL or recipe text. Review missing timings and
                 make-ahead support before saving.
@@ -1034,7 +1057,7 @@ export default function App() {
                         await load(g.id!);
                         setPreview(null);
                         setNotice(
-                          "Recipe saved to this app. Publishing reviewed recipes back to Notion is not enabled yet.",
+                          "Recipe saved to this app. Use Save to Notion above to publish this reviewed version.",
                         );
                       })
                     }
@@ -1278,6 +1301,14 @@ export default function App() {
                       ))}
                     </ul>
                   </section>
+                  {!ws.fixture_mode && <section className="card">
+                    <h2>Keep this plan in Notion</h2>
+                    <p>Save this reviewed menu and prep schedule. Calendar approval is separate.</p>
+                    <button disabled={loading || dirty || plan.status!=="feasible"} onClick={()=>run(async()=>{
+                      const result=await api<{status:string}>("/notion/plans/"+plan.id,{revision:plan.revision,content_hash:plan.content_hash});
+                      setNotice(result.status==='saved'?"Plan and prep tasks saved to Notion.":"Some saves are unconfirmed. Retry to reconcile; confirmed pages will not be duplicated.");
+                    })}>Save reviewed plan to Notion</button>
+                  </section>}
                   <section className="card">
                     <h2>
                       <CalendarDays />

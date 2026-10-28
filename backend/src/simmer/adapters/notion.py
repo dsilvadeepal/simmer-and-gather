@@ -5,6 +5,8 @@ not evidence of hosted MCP connectivity. Persist local snapshots separately.
 """
 import httpx
 
+class BeforeWriteError(ValueError): pass
+
 class ScopedNotion:
     def __init__(self,transport,collections): self.transport,self.collections=transport,collections
     def scope(self,key):
@@ -33,6 +35,27 @@ class ScopedNotion:
         titles=[name for name,prop in schema.get('properties',{}).items() if prop.get('type')=='title']
         if len(titles)!=1: raise ValueError('Expected one title property in approved collection')
         return self.transport('POST','/pages',{'parent':{'type':'data_source_id','data_source_id':target},'properties':{titles[0]:{'title':[{'text':{'content':title[:2000]}}]}},'children':[{'object':'block','type':'paragraph','paragraph':{'rich_text':[{'type':'text','text':{'content':summary[:2000]}}]}}]})
+
+    def title_property(self,key):
+        schema=self.transport('GET',f'/data_sources/{self.scope(key)}')
+        titles=[name for name,prop in schema.get('properties',{}).items() if prop.get('type')=='title']
+        if len(titles)!=1: raise ValueError('Expected one title property')
+        return titles[0]
+    def find_projection(self,key,title):
+        prop=self.title_property(key)
+        result=self.transport('POST',f'/data_sources/{self.scope(key)}/query',{'filter':{'property':prop,'title':{'equals':title}},'page_size':100})
+        if result.get('has_more'): raise ValueError('Ambiguous projection')
+        return result.get('results',[])
+    def create_projection(self,key,title,lines,properties=None):
+        try:
+            chunks=[line[i:i+1800] for line in lines for i in range(0,len(line),1800)]
+            if len(chunks)>100: raise ValueError('Recipe or plan exceeds single-page export limit')
+            payload={'parent':{'type':'data_source_id','data_source_id':self.scope(key)},'properties':{**(properties or {}),self.title_property(key):{'title':[{'text':{'content':title}}]}},'children':[{'object':'block','type':'paragraph','paragraph':{'rich_text':[{'type':'text','text':{'content':line}}]}} for line in chunks]}
+        except Exception as e: raise BeforeWriteError('Notion export could not be prepared') from e
+        try: return self.transport('POST','/pages',payload)
+        except httpx.HTTPStatusError as e:
+            if e.response.status_code in (400,401,403,404,413,422,429): raise BeforeWriteError('Notion rejected the write') from e
+            raise
 
 class NotionAPITransport:
     def __init__(self,token): self.token=token

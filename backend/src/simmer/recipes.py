@@ -1,6 +1,6 @@
 import hashlib, html, http.client, ipaddress, json, re, socket, ssl
 from html.parser import HTMLParser
-from urllib.parse import urlsplit
+from urllib.parse import urlsplit, urljoin
 from .domain import RecipeSnapshot, PrepTask, Ingredient
 from .db import Conflict
 
@@ -15,7 +15,7 @@ def validate_public_url(url):
     return parsed, sorted(addresses)[0]
 
 
-def fetch_recipe_html(url):
+def fetch_recipe_html(url,redirects=0):
     parsed,address=validate_public_url(url)
     conn=http.client.HTTPSConnection(parsed.hostname,timeout=15,context=ssl.create_default_context())
     # Pin validated address; certificate verification and SNI retain original hostname.
@@ -26,7 +26,11 @@ def fetch_recipe_html(url):
     try:
         conn.request('GET',(parsed.path or '/')+('?' + parsed.query if parsed.query else ''),headers={'User-Agent':'SimmerAndGather/0.1 recipe-preview'})
         response=conn.getresponse()
-        if response.status!=200: raise ValueError('Recipe unavailable or redirected; paste recipe text or use its final URL')
+        if response.status in (301,302,303,307,308):
+            location=response.getheader('Location')
+            if redirects>=3 or not location: raise ValueError('Too many recipe redirects; use the final source URL')
+            return fetch_recipe_html(urljoin(url,location),redirects+1)
+        if response.status!=200: raise ValueError('Recipe unavailable; paste recipe text or open its source')
         if 'text/html' not in response.getheader('Content-Type',''): raise ValueError('Expected an HTML recipe page')
         body=response.read(2_000_001)
         if len(body)>2_000_000: raise ValueError('Page exceeds preview limit')
@@ -64,7 +68,13 @@ def preview_html(content,source):
         instructions=data.get('recipeInstructions',[])
         if isinstance(instructions,str): instructions=[instructions]
         steps=[]
-        for step in instructions:
+        pending=list(instructions) if isinstance(instructions,list) else [instructions]
+        while pending and len(steps)<100:
+            step=pending.pop(0)
+            if isinstance(step,dict) and isinstance(step.get('itemListElement'),list):
+                pending=step['itemListElement']+pending
+                continue
+            if not isinstance(step,(str,dict)): continue
             text=step if isinstance(step,str) else step.get('text','')
             if text: steps.append(PrepTask(id=f'step-{len(steps)+1}',title=html.unescape(re.sub('<[^>]+>','',text)),evidence=text))
         # Do not distribute total recipe duration across steps or infer storage limits.

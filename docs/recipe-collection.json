@@ -1,0 +1,731 @@
+[
+  {
+    "url": "https://ministryofcurry.com/paneer-tikka/",
+    "occasion": "Diwali / Indian hosting",
+    "category": "starters",
+    "title": "Air Fryer Paneer Tikka",
+    "rating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.7",
+      "ratingCount": "10",
+      "reviewCount": "2"
+    },
+    "yield_text": [
+      "8"
+    ],
+    "prep": "PT15M",
+    "cook": "PT10M",
+    "total": "PT53M",
+    "structured": true,
+    "status": "fetched",
+    "publisher": "Ministry of Curry",
+    "rating_display": "4.7/5 from 10 ratings",
+    "planning_ready": false
+  },
+  {
+    "url": "https://ministryofcurry.com/aloo-chaat-in-phyllo-cups/",
+    "occasion": "Diwali / Indian hosting",
+    "category": "starters",
+    "title": "Aloo Chaat in Phyllo Shells",
+    "rating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.67",
+      "ratingCount": "27",
+      "reviewCount": "2"
+    },
+    "yield_text": [
+      "8"
+    ],
+    "prep": "PT30M",
+    "cook": "PT15M",
+    "total": "PT55M",
+    "structured": true,
+    "status": "fetched",
+    "publisher": "Ministry of Curry",
+    "rating_display": "4.67/5 from 27 ratings",
+    "planning_ready": false
+  },
+  {
+    "url": "https://ministryofcurry.com/tandoori-chicken-wings/",
+    "occasion": "Diwali / Indian hosting",
+    "category": "starters",
+    "title": "Tandoori chicken wings",
+    "rating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.57",
+      "ratingCount": "64",
+      "reviewCount": "2"
+    },
+    "yield_text": [
+      "6"
+    ],
+    "prep": "PT60M",
+    "cook": "PT30M",
+    "total": "PT90M",
+    "structured": true,
+    "status": "fetched",
+    "publisher": "Ministry of Curry",
+    "rating_display": "4.57/5 from 64 ratings",
+    "planning_ready": false
+  },
+  {
+    "url": "https://ministryofcurry.com/masala-nuts/",
+    "occasion": "Diwali / Indian hosting",
+    "category": "starters",
+    "title": "Masala Nuts",
+    "rating": {
+      "@type": "AggregateRating",
+      "ratingValue": "5",
+      "ratingCount": "2",
+      "reviewCount": "1"
+    },
+    "yield_text": [
+      "16"
+    ],
+    "prep": "PT5M",
+    "cook": "PT20M",
+    "total": "PT25M",
+    "structured": true,
+    "status": "fetched",
+    "publisher": "Ministry of Curry",
+    "rating_display": "5/5 from 2 ratings",
+    "planning_ready": false
+  },
+  {
+    "url": "https://ministryofcurry.com/instant-pot-butter-chicken/",
+    "occasion": "Diwali / Indian hosting",
+    "category": "mains",
+    "title": "Instant Pot Butter Chicken",
+    "rating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.73",
+      "ratingCount": "123",
+      "reviewCount": "10"
+    },
+    "yield_text": [
+      "6"
+    ],
+    "prep": "PT10M",
+    "cook": "PT25M",
+    "total": "PT35M",
+    "structured": true,
+    "status": "fetched",
+    "publisher": "Ministry of Curry",
+    "rating_display": "4.73/5 from 123 ratings",
+    "planning_ready": false
+  },
+  {
+    "url": "https://ministryofcurry.com/paneer-butter-masala/",
+    "occasion": "Diwali / Indian hosting",
+    "category": "mains",
+    "title": "Butter Paneer {Paneer Makhani}",
+    "rating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.82",
+      "ratingCount": "80",
+      "reviewCount": "6"
+    },
+    "yield_text": [
+      "6"
+    ],
+    "prep": "PT10M",
+    "cook": "PT20M",
+    "total": "PT30M",
+    "structured": true,
+    "status": "fetched",
+    "publisher": "Ministry of Curry",
+    "rating_display": "4.82/5 from 80 ratings",
+    "planning_ready": false
+  },
+  {
+    "url": "https://ministryofcurry.com/instant-pot-chana-masala-recipe/",
+    "occasion": "Diwali / Indian hosting",
+    "category": "mains",
+    "title": "Instant Pot Chana Masala (Punjabi Chole)",
+    "rating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.8",
+      "ratingCount": "67",
+      "reviewCount": "8"
+    },
+    "yield_text": [
+      "4"
+    ],
+    "prep": "PT10M",
+    "cook": "PT60M",
+    "total": "PT310M",
+    "structured": true,
+    "status": "fetched",
+    "publisher": "Ministry of Curry",
+    "rating_display": "4.8/5 from 67 ratings",
+    "planning_ready": false
+  },
+  {
+    "url": "https://ministryofcurry.com/madras-lentils-daal-makhani-instant-pot/",
+    "occasion": "Diwali / Indian hosting",
+    "category": "mains",
+    "title": "Instant Pot Dal Makhani with Brown Rice",
+    "rating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.68",
+      "ratingCount": "134",
+      "reviewCount": "9"
+    },
+    "yield_text": [
+      "6"
+    ],
+    "prep": "PT10M",
+    "cook": "PT50M",
+    "total": "PT60M",
+    "structured": true,
+    "status": "fetched",
+    "publisher": "Ministry of Curry",
+    "rating_display": "4.68/5 from 134 ratings",
+    "planning_ready": false
+  },
+  {
+    "url": "https://ministryofcurry.com/palak-paneer-instant-pot/",
+    "occasion": "Diwali / Indian hosting",
+    "category": "mains",
+    "title": "Instant Pot Palak Paneer",
+    "rating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.61",
+      "ratingCount": "97",
+      "reviewCount": "9"
+    },
+    "yield_text": [
+      "4"
+    ],
+    "prep": "PT5M",
+    "cook": "PT10M",
+    "total": "PT15M",
+    "structured": true,
+    "status": "fetched",
+    "publisher": "Ministry of Curry",
+    "rating_display": "4.61/5 from 97 ratings",
+    "planning_ready": false
+  },
+  {
+    "url": "https://ministryofcurry.com/moms-veg-pulao/",
+    "occasion": "Diwali / Indian hosting",
+    "category": "sides",
+    "title": "Vegetable Pulao Recipe | Veg Pulav",
+    "rating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.75",
+      "ratingCount": "4",
+      "reviewCount": "1"
+    },
+    "yield_text": [
+      "6"
+    ],
+    "prep": "PT20M",
+    "cook": "PT30M",
+    "total": "PT50M",
+    "structured": true,
+    "status": "fetched",
+    "publisher": "Ministry of Curry",
+    "rating_display": "4.75/5 from 4 ratings",
+    "planning_ready": false
+  },
+  {
+    "url": "https://ministryofcurry.com/indian-cucumber-salad/",
+    "occasion": "Diwali / Indian hosting",
+    "category": "sides",
+    "title": "Indian Cucumber Salad (Kakdi Koshimbir)",
+    "rating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.75",
+      "ratingCount": "12",
+      "reviewCount": "1"
+    },
+    "yield_text": [
+      "4"
+    ],
+    "prep": "PT5M",
+    "cook": "PT5M",
+    "total": "PT10M",
+    "structured": true,
+    "status": "fetched",
+    "publisher": "Ministry of Curry",
+    "rating_display": "4.75/5 from 12 ratings",
+    "planning_ready": false
+  },
+  {
+    "url": "https://ministryofcurry.com/cilantro-mint-chutney/",
+    "occasion": "Diwali / Indian hosting",
+    "category": "sides",
+    "title": "Cilantro Mint Chutney",
+    "rating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.77",
+      "ratingCount": "34",
+      "reviewCount": "9"
+    },
+    "yield_text": [
+      "14"
+    ],
+    "prep": "PT15M",
+    "cook": null,
+    "total": "PT15M",
+    "structured": true,
+    "status": "fetched",
+    "publisher": "Ministry of Curry",
+    "rating_display": "4.77/5 from 34 ratings",
+    "planning_ready": false
+  },
+  {
+    "url": "https://ministryofcurry.com/rice-pudding-instant-pot/",
+    "occasion": "Diwali / Indian hosting",
+    "category": "desserts",
+    "title": "Instant Pot Rice Pudding",
+    "rating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.43",
+      "ratingCount": "61",
+      "reviewCount": "9"
+    },
+    "yield_text": [
+      "6"
+    ],
+    "prep": "PT5M",
+    "cook": "PT40M",
+    "total": "PT45M",
+    "structured": true,
+    "status": "fetched",
+    "publisher": "Ministry of Curry",
+    "rating_display": "4.43/5 from 61 ratings",
+    "planning_ready": false
+  },
+  {
+    "url": "https://ministryofcurry.com/carrot-halwa-instant-pot/",
+    "occasion": "Diwali / Indian hosting",
+    "category": "desserts",
+    "title": "Instant Pot Carrot Halwa Recipe",
+    "rating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.71",
+      "ratingCount": "44",
+      "reviewCount": "4"
+    },
+    "yield_text": [
+      "6"
+    ],
+    "prep": "PT10M",
+    "cook": "PT20M",
+    "total": "PT30M",
+    "structured": true,
+    "status": "fetched",
+    "publisher": "Ministry of Curry",
+    "rating_display": "4.71/5 from 44 ratings",
+    "planning_ready": false
+  },
+  {
+    "url": "https://ministryofcurry.com/badam-burfi/",
+    "occasion": "Diwali / Indian hosting",
+    "category": "desserts",
+    "title": "Quick & Easy Badam Burfi (30 Minutes)",
+    "rating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.81",
+      "ratingCount": "77",
+      "reviewCount": "9"
+    },
+    "yield_text": [
+      "10"
+    ],
+    "prep": "PT5M",
+    "cook": "PT5M",
+    "total": "PT30M",
+    "structured": true,
+    "status": "fetched",
+    "publisher": "Ministry of Curry",
+    "rating_display": "4.81/5 from 77 ratings",
+    "planning_ready": false
+  },
+  {
+    "url": "https://withwendyandshannon.com/blog/easy-tuna-croquettes/",
+    "occasion": "Christmas / Goan",
+    "category": "starters",
+    "status": "source link only \u2014 importer access restricted",
+    "title": "Easy Tuna Croquettes",
+    "structured": false,
+    "rating": null,
+    "publisher": "With Wendy and Shannon (formerly Platin\u2019 It With Wendy)",
+    "rating_display": "No rating verified",
+    "planning_ready": false
+  },
+  {
+    "url": "https://withwendyandshannon.com/blog/the-best-goan-pork-roast/",
+    "occasion": "Christmas / Goan",
+    "category": "mains",
+    "status": "source link only \u2014 importer access restricted",
+    "title": "The Best Goan Pork Roast",
+    "structured": false,
+    "rating": null,
+    "publisher": "With Wendy and Shannon (formerly Platin\u2019 It With Wendy)",
+    "rating_display": "No rating verified",
+    "planning_ready": false
+  },
+  {
+    "url": "https://withwendyandshannon.com/blog/traditional-goan-stew/",
+    "occasion": "Christmas / Goan",
+    "category": "mains",
+    "status": "source link only \u2014 importer access restricted",
+    "title": "Traditional Goan Stew",
+    "structured": false,
+    "rating": null,
+    "publisher": "With Wendy and Shannon (formerly Platin\u2019 It With Wendy)",
+    "rating_display": "No rating verified",
+    "planning_ready": false
+  },
+  {
+    "url": "https://withwendyandshannon.com/blog/the-ultimate-goan-caldin-curry/",
+    "occasion": "Christmas / Goan",
+    "category": "mains",
+    "status": "source link only \u2014 importer access restricted",
+    "title": "The Ultimate Goan Caldin Curry",
+    "structured": false,
+    "rating": null,
+    "publisher": "With Wendy and Shannon (formerly Platin\u2019 It With Wendy)",
+    "rating_display": "No rating verified",
+    "planning_ready": false
+  },
+  {
+    "url": "https://withwendyandshannon.com/blog/easy-traditional-goan-sannas-recipe/",
+    "occasion": "Christmas / Goan",
+    "category": "sides",
+    "status": "source link only \u2014 importer access restricted",
+    "title": "Easy Traditional Goan Sannas",
+    "structured": false,
+    "rating": null,
+    "publisher": "With Wendy and Shannon (formerly Platin\u2019 It With Wendy)",
+    "rating_display": "No rating verified",
+    "planning_ready": false
+  },
+  {
+    "url": "https://withwendyandshannon.com/blog/the-best-doce/",
+    "occasion": "Christmas / Goan",
+    "category": "desserts",
+    "status": "source link only \u2014 importer access restricted",
+    "title": "The Best Doce",
+    "structured": false,
+    "rating": null,
+    "publisher": "With Wendy and Shannon (formerly Platin\u2019 It With Wendy)",
+    "rating_display": "No rating verified",
+    "planning_ready": false
+  },
+  {
+    "url": "https://withwendyandshannon.com/blog/easy-fruit-cake/",
+    "occasion": "Christmas / Goan",
+    "category": "desserts",
+    "status": "source link only \u2014 importer access restricted",
+    "title": "Easy Fruit Cake",
+    "structured": false,
+    "rating": null,
+    "publisher": "With Wendy and Shannon (formerly Platin\u2019 It With Wendy)",
+    "rating_display": "No rating verified",
+    "planning_ready": false
+  },
+  {
+    "url": "https://withwendyandshannon.com/blog/super-easy-snowball-cookies/",
+    "occasion": "Christmas / Goan",
+    "category": "desserts",
+    "status": "source link only \u2014 importer access restricted",
+    "title": "Super Easy Snowball Cookies",
+    "structured": false,
+    "rating": null,
+    "publisher": "With Wendy and Shannon (formerly Platin\u2019 It With Wendy)",
+    "rating_display": "No rating verified",
+    "planning_ready": false
+  },
+  {
+    "url": "https://www.wellplated.com/brie-en-croute/",
+    "occasion": "Thanksgiving / US Christmas",
+    "category": "starters",
+    "title": "Baked Brie En Croute",
+    "rating": {
+      "@type": "AggregateRating",
+      "ratingValue": "5",
+      "ratingCount": "7",
+      "reviewCount": "3"
+    },
+    "yield_text": [
+      "8",
+      "8 to 10 servings"
+    ],
+    "prep": "PT15M",
+    "cook": "PT45M",
+    "total": "PT75M",
+    "structured": true,
+    "status": "fetched",
+    "publisher": "Well Plated by Erin",
+    "rating_display": "5/5 from 7 ratings",
+    "planning_ready": false
+  },
+  {
+    "url": "https://www.wellplated.com/stuffed-dates/",
+    "occasion": "Thanksgiving / US Christmas",
+    "category": "starters",
+    "title": "Stuffed Dates (6 Ways!)",
+    "rating": {
+      "@type": "AggregateRating",
+      "ratingValue": "5",
+      "ratingCount": "3",
+      "reviewCount": "3"
+    },
+    "yield_text": [
+      "12",
+      "12 dates"
+    ],
+    "prep": "PT5M",
+    "cook": null,
+    "total": "PT5M",
+    "structured": true,
+    "status": "fetched",
+    "publisher": "Well Plated by Erin",
+    "rating_display": "5/5 from 3 ratings",
+    "planning_ready": false
+  },
+  {
+    "url": "https://www.wellplated.com/how-to-cook-a-turkey/",
+    "occasion": "Thanksgiving / US Christmas",
+    "category": "mains",
+    "title": "Thanksgiving Turkey",
+    "rating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.98",
+      "ratingCount": "302",
+      "reviewCount": "9"
+    },
+    "yield_text": [
+      "10",
+      "10 to 12 servings"
+    ],
+    "prep": "PT20M",
+    "cook": "PT135M",
+    "total": "PT210M",
+    "structured": true,
+    "status": "fetched",
+    "publisher": "Well Plated by Erin",
+    "rating_display": "4.98/5 from 302 ratings",
+    "planning_ready": false
+  },
+  {
+    "url": "https://www.wellplated.com/garlic-mashed-potatoes/",
+    "occasion": "Thanksgiving / US Christmas",
+    "category": "sides",
+    "title": "Garlic Mashed Potatoes Recipe",
+    "rating": {
+      "@type": "AggregateRating",
+      "ratingValue": "5",
+      "ratingCount": "6",
+      "reviewCount": "1"
+    },
+    "yield_text": [
+      "6",
+      "6 people"
+    ],
+    "prep": "PT10M",
+    "cook": "PT25M",
+    "total": "PT35M",
+    "structured": true,
+    "status": "fetched",
+    "publisher": "Well Plated by Erin",
+    "rating_display": "5/5 from 6 ratings",
+    "planning_ready": false
+  },
+  {
+    "url": "https://www.wellplated.com/healthy-sweet-potato-casserole/",
+    "occasion": "Thanksgiving / US Christmas",
+    "category": "sides",
+    "title": "Healthy Sweet Potato Casserole",
+    "rating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.95",
+      "ratingCount": "35",
+      "reviewCount": "10"
+    },
+    "yield_text": [
+      "10",
+      "10 servings (1 9x13-inch casserole)"
+    ],
+    "prep": "PT15M",
+    "cook": "PT80M",
+    "total": "PT90M",
+    "structured": true,
+    "status": "fetched",
+    "publisher": "Well Plated by Erin",
+    "rating_display": "4.95/5 from 35 ratings",
+    "planning_ready": false
+  },
+  {
+    "url": "https://www.wellplated.com/cornbread-sausage-stuffing/",
+    "occasion": "Thanksgiving / US Christmas",
+    "category": "sides",
+    "title": "Cornbread Stuffing Recipe",
+    "rating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.99",
+      "ratingCount": "51",
+      "reviewCount": "8"
+    },
+    "yield_text": [
+      "10",
+      "10 servings"
+    ],
+    "prep": "PT60M",
+    "cook": "PT40M",
+    "total": "PT100M",
+    "structured": true,
+    "status": "fetched",
+    "publisher": "Well Plated by Erin",
+    "rating_display": "4.99/5 from 51 ratings",
+    "planning_ready": false
+  },
+  {
+    "url": "https://www.wellplated.com/homemade-cranberry-sauce/",
+    "occasion": "Thanksgiving / US Christmas",
+    "category": "sides",
+    "title": "Cranberry Orange Sauce",
+    "rating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.96",
+      "ratingCount": "42",
+      "reviewCount": "9"
+    },
+    "yield_text": [
+      "2",
+      "2 cups, approx."
+    ],
+    "prep": "PT5M",
+    "cook": "PT15M",
+    "total": "PT20M",
+    "structured": true,
+    "status": "fetched",
+    "publisher": "Well Plated by Erin",
+    "rating_display": "4.96/5 from 42 ratings",
+    "planning_ready": false
+  },
+  {
+    "url": "https://www.wellplated.com/healthy-green-bean-casserole/",
+    "occasion": "Thanksgiving / US Christmas",
+    "category": "sides",
+    "title": "Healthy Green Bean Casserole",
+    "rating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.92",
+      "ratingCount": "45",
+      "reviewCount": "7"
+    },
+    "yield_text": [
+      "10",
+      "10 servings"
+    ],
+    "prep": "PT15M",
+    "cook": "PT35M",
+    "total": "PT55M",
+    "structured": true,
+    "status": "fetched",
+    "publisher": "Well Plated by Erin",
+    "rating_display": "4.92/5 from 45 ratings",
+    "planning_ready": false
+  },
+  {
+    "url": "https://www.wellplated.com/caramelized-brussels-sprouts/",
+    "occasion": "Thanksgiving / US Christmas",
+    "category": "sides",
+    "title": "Caramelized Brussels Sprouts",
+    "rating": {
+      "@type": "AggregateRating",
+      "ratingValue": "5",
+      "ratingCount": "4",
+      "reviewCount": "4"
+    },
+    "yield_text": [
+      "4",
+      "4 servings"
+    ],
+    "prep": "PT10M",
+    "cook": "PT25M",
+    "total": "PT35M",
+    "structured": true,
+    "status": "fetched",
+    "publisher": "Well Plated by Erin",
+    "rating_display": "5/5 from 4 ratings",
+    "planning_ready": false
+  },
+  {
+    "url": "https://www.wellplated.com/chocolate-pecan-pie/",
+    "occasion": "Thanksgiving / US Christmas",
+    "category": "desserts",
+    "title": "Chocolate Pecan Pie",
+    "rating": {
+      "@type": "AggregateRating",
+      "ratingValue": "5",
+      "ratingCount": "14",
+      "reviewCount": "7"
+    },
+    "yield_text": [
+      "10",
+      "10 servings"
+    ],
+    "prep": "PT25M",
+    "cook": "PT85M",
+    "total": "PT140M",
+    "structured": true,
+    "status": "fetched",
+    "publisher": "Well Plated by Erin",
+    "rating_display": "5/5 from 14 ratings",
+    "planning_ready": false
+  },
+  {
+    "url": "https://www.wellplated.com/old-fashioned-sweet-potato-pie/",
+    "occasion": "Thanksgiving / US Christmas",
+    "category": "desserts",
+    "title": "Sweet Potato Pie",
+    "rating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.99",
+      "ratingCount": "64",
+      "reviewCount": "7"
+    },
+    "yield_text": [
+      "10",
+      "10 slices; 1 (9-inch) pie"
+    ],
+    "prep": "PT45M",
+    "cook": "PT60M",
+    "total": "PT120M",
+    "structured": true,
+    "status": "fetched",
+    "publisher": "Well Plated by Erin",
+    "rating_display": "4.99/5 from 64 ratings",
+    "planning_ready": false
+  },
+  {
+    "url": "https://www.wellplated.com/gluten-free-apple-crisp/",
+    "occasion": "Thanksgiving / US Christmas",
+    "category": "desserts",
+    "title": "Gluten Free Apple Crisp",
+    "rating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.87",
+      "ratingCount": "23",
+      "reviewCount": "8"
+    },
+    "yield_text": [
+      "6",
+      "6 servings (1 9x9-inch pan)"
+    ],
+    "prep": "PT15M",
+    "cook": "PT55M",
+    "total": "PT70M",
+    "structured": true,
+    "status": "fetched",
+    "publisher": "Well Plated by Erin",
+    "rating_display": "4.87/5 from 23 ratings",
+    "planning_ready": false
+  }
+]

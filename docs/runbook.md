@@ -31,3 +31,5 @@ Load the ignored `.env.google` into process environment without printing its con
 GitHub Actions runs these checks with temporary PostgreSQL. Browser journeys require the sample backend and Playwright browsers. No production provider credentials belong in CI. Dockerfile is packaging only; no host has been provisioned or deployment verified.
 
 When the paid text model is enabled, recipe previews also propose source-quoted preparation steps. The result remains unreviewed; extraction failures retain the original source for manual editing. Make-ahead/storage limits remain unknown until reviewed.
+
+Local integration verification October 28: load private `.env.google`, `.env.notion` and `.env.services` into the server configuration. Google listing, Notion reads, reviewed snapshot exports and source discovery were verified. No keys are committed. The 35 recipe candidates need review before scheduling.

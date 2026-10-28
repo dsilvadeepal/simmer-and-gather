@@ -9,3 +9,5 @@ Illustrative planning envelope at Qwen3-30B rates ($0.10/M input, $0.30/M output
 Credits tracker: Nebius $25 and Fireworks $15 recorded received; remaining balances cannot be inferred from those grants. No automatic paid fallback. Unknown call cost retains its reservation until reconciled; budget exhaustion must preserve saved/manual functions.
 
 October 28 clarification: Supabase is optional, not selected. Existing projects use Replit PostgreSQL; Demo Story Studio's design targets Neon. This app uses standard PostgreSQL and can use either. Prefer evaluating Neon Free plus separately budgeted hosting; do not share unrelated project tables/credentials. Google sign-in can handle the initial owner login without buying a separate auth product. Independent upload cleanup support must be checked for the chosen database; pg_cron is not assumed available on every provider.
+
+Basic Tavily discovery reserves $0.008 per request (one credit), with a daily per-owner query cache, at most three links and no automatic import. One live search was verified on October 28; no automatic recharge. Official rate: https://docs.tavily.com/documentation/api-credits .

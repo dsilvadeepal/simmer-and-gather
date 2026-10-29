@@ -205,11 +205,9 @@ export default function App() {
       {step === 0 && (
         <>
           <div className="intro">
-            <p className="eyebrow">YOUR GATHERING</p>
-            <h1>Make room for the gathering.</h1>
+            <h1>Your gathering</h1>
             <p>
-              Start with the people, the time you have, and the evening you
-              want.
+              Set the guest list and choose when you can prep.
             </p>
           </div>
           <div className="grid">
@@ -309,7 +307,7 @@ export default function App() {
             <details className="card scheduling-extra"><summary>More scheduling options</summary>
               <label>Light finishing allowance (minutes)<input type="number" min="0" value={g.finishing_minutes} onChange={e=>change({finishing_minutes:+e.target.value})}/></label>
               <h3>Choose specific times (optional)</h3>
-              <p className="meta">Saved windows replace automatic 9 am–9 pm availability. Remove all windows to let the app find time.</p>
+              <p className="meta">These times replace the default 9 am–9 pm range. Remove all to use the default.</p>
 
               {(g.prep_windows || []).map((w, i) => (
                 <div className="fields" key={i}>
@@ -587,10 +585,9 @@ export default function App() {
       {step === 1 && (
         <>
           <div className="intro">
-            <p className="eyebrow">A MENU WITH BREATHING ROOM</p>
-            <h1>A spread that fits your week.</h1>
+            <h1>Your menu</h1>
             <p>
-              Keep your favorites. Buy a little. Let everyone bring something.
+              Choose what to cook, buy or ask guests to bring.
             </p>
           </div>
           <section className="card">
@@ -654,8 +651,7 @@ export default function App() {
               ))}
             </div>
             <p className="meta">
-              Includes bought and guest-contributed dishes. Changing counts
-              keeps your current dishes until you review additions or removals.
+              Counts include bought dishes and guest contributions. Your selected dishes stay until you change them.
             </p>
             <button
               className="secondary"
@@ -811,8 +807,8 @@ export default function App() {
             ))}
           </div>
           <section className="card">
-            <h2>Suggestions from your reviewed recipes</h2>
-            <p>Fill gaps in your menu, then review additions before saving. Import recipes from Notion first if your collection is empty.</p>
+            <h2>Recipe suggestions</h2>
+            <p>Find dishes for the open categories in your menu.</p>
             <button disabled={loading||dirty} className="secondary" onClick={()=>run(async()=>{
               const items=await api<Selection[]>("/menu/"+g.id+"/propose",{});
               setProposal(items.filter(item=>!(ws.inputs.selections||[]).some(s=>s.id===item.id)));
@@ -825,7 +821,7 @@ export default function App() {
           <section className="card">
             <h2>
               <Plus />
-              Add to your spread
+              Add a dish
             </h2>
             <div className="row">
               <select
@@ -888,7 +884,7 @@ export default function App() {
               {!ws.fixture_mode && <NotionCollection onSelect={setPreview}/>}
               {!ws.fixture_mode && <RecipeDiscovery onSelect={setSource}/>}
               {!ws.fixture_mode && ws.recipes.length>0 && <div>
-                <p className="meta">Publish a saved, reviewed recipe to your Notion library. Retrying checks the previous save.</p>
+                <p className="meta">Save reviewed recipes to your Notion collection.</p>
                 {ws.recipes.filter(r=>r.reviewed).map(r=><button key={r.id} className="secondary" disabled={loading} onClick={()=>run(async()=>{
                   const result=await api<{status:string;message?:string}>("/notion/recipes/"+r.id,{version:r.version});
                   setNotice(result.status==='saved'?r.title+" saved to Notion.":result.message||"Save uncertain; retry to check Notion.");
@@ -943,8 +939,7 @@ export default function App() {
               What you already have
             </h2>
             <p className="meta">
-              Optional snapshot for this gathering. Enter one item per line:
-              name, quantity, unit. Only confirmed amounts reduce shopping.
+              Optional: enter one item per line as name, quantity, unit. Confirmed amounts are subtracted from your shopping list.
             </p>
             <textarea
               aria-label="Ingredients on hand"
@@ -1065,13 +1060,13 @@ export default function App() {
               >
                 <strong>
                   {plan.status === "feasible"
-                    ? "Your plan fits the entered constraints."
+                    ? "Your plan fits your available time."
                     : "A few things need your attention."}
                 </strong>
                 <p className="meta">
                   {ws.fixture_mode
-                    ? "Fixture validation only. Real calendar availability and recipe timing need verification."
-                    : "Review source evidence and timings before approval."}
+                    ? "Sample plan — live calendar availability has not been checked."
+                    : "Timings are estimates. Review before adding to your calendar."}
                 </p>
               </div>
               {(plan.violations || []).length > 0 && (
@@ -1111,12 +1106,12 @@ export default function App() {
               <PlanViews inputs={ws.inputs} plan={plan}/>
               <details className="card save-plan"><summary>Save plan & calendar options</summary><div className="grid">
                   {!ws.fixture_mode && <section className="card">
-                    <h2>Keep this plan in Notion</h2>
-                    <p>Save this reviewed menu and prep schedule. Calendar approval is separate.</p>
+                    <h2>Save to Notion</h2>
+                    <p>Save your menu and prep schedule. This does not add calendar events.</p>
                     <button disabled={loading || dirty || !!ws.recipe_updates?.length || plan.status!=="feasible"} onClick={()=>run(async()=>{
                       const result=await api<{status:string}>("/notion/plans/"+plan.id,{revision:plan.revision,content_hash:plan.content_hash});
                       setNotice(result.status==='saved'?"Plan and prep tasks saved to Notion.":"Some saves are unconfirmed. Retry to reconcile; confirmed pages will not be duplicated.");
-                    })}>Save reviewed plan to Notion</button>
+                    })}>Save plan to Notion</button>
                   </section>}
                   <section className="card">
                     <h2>

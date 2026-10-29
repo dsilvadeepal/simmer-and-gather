@@ -7,7 +7,7 @@ export function HostingSummary({inputs,plan,view='all'}:{inputs:Inputs;plan:Plan
  const fmt=amount;
  return <section className="card hosting-summary">
   {view!=='fit'&&<><h2>Your menu</h2>
-  <p className="meta">{g.guests} people · quantities scale ingredients, not cooking batches</p>
+  <p className="meta">{g.guests} guests</p>
   <div className="menu-summary" role="table" aria-label="Selected menu">
    <div role="row" className="menu-summary-head"><strong>Role / dish</strong><strong>Quantity to prepare</strong><strong>In your menu</strong></div>
    {(inputs.selections||[]).map(s=>{
@@ -22,7 +22,7 @@ export function HostingSummary({inputs,plan,view='all'}:{inputs:Inputs;plan:Plan
   </div>
   </>}{view!=='menu'&&<><h2>Your time</h2>
   {deadline&&<p>Major cooking ends by <strong>{deadline.toLocaleTimeString('en-US',{hour:'numeric',minute:'2-digit',timeZone:zone})}</strong> · {g.relax_minutes??60}-minute buffer before guests arrive.</p>}
-  <p className="meta">Calendar: {inputs.availability?.status||'not checked'}{inputs.availability?.checked_at?' · checked '+new Date(inputs.availability.checked_at).toLocaleString('en-US',{timeZone:zone}):''}. Time below includes required presence and cleanup; waiting alone does not count.</p>
+  <p className="meta">Calendar: {({fresh:'up to date',stale:'needs rechecking',unavailable:'unavailable',fixture:'sample data',unknown:'not checked'} as Record<string,string>)[inputs.availability?.status||'unknown']||'not checked'}{inputs.availability?.checked_at?' · checked '+new Date(inputs.availability.checked_at).toLocaleString('en-US',{month:'short',day:'numeric',hour:'numeric',minute:'2-digit',timeZone:zone}):''}. Daily totals include cooking, supervision and cleanup.</p>
   {(plan.fit_days||[]).map((d:any)=><p className="fit-day" key={d.day}><strong>{d.day}</strong> · {d.presence_minutes} min of {d.limit_minutes} min{d.presence_minutes>d.limit_minutes?` + up to ${d.cleanup_allowance} min cleanup`:''}</p>)}
   {!!plan.advisories?.length&&<details><summary>Optional menu suggestions · {plan.advisories.length}</summary><ul>{plan.advisories.map((a,i)=><li key={i}>{a.explanation}</li>)}</ul></details>}
  </>}</section>;

@@ -645,3 +645,14 @@ nav.step-navigation {gap:3px;justify-content:flex-start;padding:16px 0;}
 .scheduling-choices h2:not(:first-child){margin-top:24px;}
 .scheduling-extra{align-self:start;}.scheduling-extra[open]>summary{margin-bottom:16px;}
 .cooking-deadline{font-size:16px;line-height:1.5;}
+/* Copy-edit pass: compact hierarchy and consistent disclosure targets. */
+.intro {padding:22px 0 16px;}
+.intro h1 {font-size:32px;line-height:1.2;margin:8px 0;}
+.intro p:last-child {font-size:16px;margin:8px 0;}
+.scheduling-choices details {margin:4px 0;}
+.scheduling-choices .prep-day-chips label {margin:0;}
+.scheduling-choices .prep-day-chips {margin:12px 0;gap:8px;}
+.scheduling-choices h2:not(:first-child) {margin-top:18px;}
+.scheduling-choices p {margin:10px 0;}
+.plan-workspace summary {min-height:44px;align-content:center;cursor:pointer;}
+@media(max-width:700px){.intro h1{font-size:28px;}.scheduling-choices{padding:18px;}.scheduling-choices h2{font-size:20px;}}

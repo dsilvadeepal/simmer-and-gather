@@ -3,7 +3,7 @@
 Updated October 28, 2026. Spec: PRD.md. Native Superpowers execution. Existing implementation is retained; earlier plan is archived under docs/archive. Do not recreate integrations or databases.
 
 ## Global constraints
-Preserve daily 60/120-minute limits, 15-minute flexible cleanup, one-hour arrival buffer and 20-minute finishing allowance. One batch per dish for demo. No standalone measuring tasks. No calendar writes without exact approval. No model call on ordinary calendar-only replanning. No hidden fallback to an old plan. Preserve existing recipe and gathering snapshots.
+Preserve daily 120-minute defaults (weekdays and weekends), 15-minute flexible cleanup, one-hour arrival buffer and 20-minute finishing allowance. One batch per dish for demo. No standalone measuring tasks. No calendar writes without exact approval. No model call on ordinary calendar-only replanning. No hidden fallback to an old plan. Preserve existing recipe and gathering snapshots.
 
 ## Task 1: Versioned recipe preparation
 - [x] Add explicit same-day/advance preparation policy, next-step storage anchor, start/end attention segments and granular readiness.
@@ -18,7 +18,7 @@ Preserve daily 60/120-minute limits, 15-minute flexible cleanup, one-hour arriva
 - [x] Bounded adjustment search proposes changes only. Never claim infeasibility proven or apply a larger allowance silently.
 
 ## Task 3: Plan lifecycle and output
-- [x] Store generation time; return current and prior plan separately with recipe-version staleness. Never substitute previous assignments.
+- [x] Store generation time; retain prior plans internally and show only the current proposal, with recipe-version staleness. Never substitute previous assignments.
 - [x] Show menu/quantity/reason table; daily fit summary; compact When/What/Details rows with expanded quantities/source/helper notes.
 - [x] Passive waits remain notes and dependencies; split separated work sessions. Retain small finishing checklist and grouped shopping.
 - [x] Frontend tests cover output, outdated plan state and approval disabled for outdated inputs.

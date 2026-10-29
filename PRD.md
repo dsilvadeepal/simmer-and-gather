@@ -16,7 +16,7 @@ The plan shows:
 5. Optional small finishing checklist: warming, drinks, serving dishes and spoons. No lengthy table-setting instructions in cooking blocks.
 
 ## Time and kitchen constraints
-Defaults: 60 minutes per weekday and 120 per weekend day, counted across the day including required host presence/supervision. Gathering/day overrides are explicit. Cleanup may exceed the allowance by up to 15 minutes; it does not permit more cooking time. One-hour pre-arrival buffer; major cooking and cleanup end before it. At most 20 minutes of optional warming/drinks/finishing inside the buffer, editable per gathering. Never silently enlarge limits to make a plan fit.
+Defaults: 120 minutes per day on both weekdays and weekends, counted across the day including required host presence/supervision. Gathering/day overrides are explicit. Cleanup may exceed the allowance by up to 15 minutes; it does not permit more cooking time. One-hour pre-arrival buffer; major cooking and cleanup end before it. At most 20 minutes of optional warming/drinks/finishing inside the buffer, editable per gathering. Never silently enlarge limits to make a plan fit.
 
 Respect selected prep days, earliest start, protected times and chosen calendar availability. Typical home kitchen: oven, two stovetop positions, air fryer and Instant Pot. No appliance setup UI. Demo assumes one batch per dish; retain resource conflicts and ingredient scaling, do not infer capacity from source servings. No claim of verified appliance capacity.
 
@@ -31,7 +31,7 @@ Preparation readiness is granular: ingredients, logical steps, timing and advanc
 
 Tools/services: prepare_recipe_for_hosting; assess_menu_coverage; build_prep_schedule; validate_hosting_plan; suggest_plan_adjustments. The model interprets and explains; code calculates, validates and controls writes. Scheduling uses a bounded heuristic, an independent constraint validator and bounded adjustment search. Failure to find a schedule is not proof of impossibility. Proposed adjustments never change user constraints automatically.
 
-Plan states distinguish complete cooking schedule, menu advisories, blocking constraints, outdated inputs and booking status. Never substitute an older schedule for a failed current attempt. Previous plans can be viewed separately with their original inputs and no current approval. Recipe edits mark dependent plans outdated without silently rewriting them.
+Plan states distinguish complete cooking schedule, menu advisories, blocking constraints, outdated inputs and booking status. Never substitute an older schedule for a failed current attempt. Previous plans retain original inputs internally for recovery; hide revision/history sections from the hosting screen. Recipe edits mark dependent plans outdated without silently rewriting them.
 
 ## Integrations, privacy and budget
 Notion access stays restricted to project databases. Calendar checks on open, manual Recheck and before writes; no background checks or alerts. Selected calendars only. Book Busy blocks only in dedicated Simmer and Gather calendar after approval, fresh recheck and revision/hash validation. Idempotent operation ledger handles retries and partial failures; never move personal events.

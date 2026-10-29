@@ -12,14 +12,14 @@
       "day": "2026-10-29",
       "presence_minutes": 0,
       "cooking_minutes": 0,
-      "limit_minutes": 60,
+      "limit_minutes": 120,
       "cleanup_allowance": 15
     },
     {
       "day": "2026-10-30",
       "presence_minutes": 45,
       "cooking_minutes": 30,
-      "limit_minutes": 60,
+      "limit_minutes": 120,
       "cleanup_allowance": 15
     },
     {

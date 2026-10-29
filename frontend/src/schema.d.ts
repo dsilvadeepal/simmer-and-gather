@@ -456,7 +456,7 @@ export interface components {
             timezone?: string;
             /**
              * Weekday Minutes
-             * @default 60
+             * @default 120
              */
             weekday_minutes?: number;
             /**

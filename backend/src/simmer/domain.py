@@ -30,7 +30,7 @@ class Helper(Schema):
 
 class HostProfile(Schema):
     timezone: str = 'America/New_York'
-    weekday_minutes: int = Field(60, ge=0, le=1440)
+    weekday_minutes: int = Field(120, ge=0, le=1440)
     weekend_minutes: int = Field(120, ge=0, le=1440)
     protected: list[Interval] = []
     equipment: dict[str, int | None] = Field(default_factory=lambda: {'oven':1,'stovetop':2,'air_fryer':1,'instant_pot':1})

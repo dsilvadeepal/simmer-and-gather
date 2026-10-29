@@ -16,3 +16,7 @@ Final live regeneration after attention refinement: 22 assignments, no constrain
 
 Additional lifecycle regression: opening a saved plan with newly busy calendar time now displays conflict without rewriting its immutable saved snapshot. Test observed failing then passing.
 Final verification: 92 backend tests and 6 frontend tests plus production build passed. Phone-width375 browser rendering verified. Existing build branch retained; no merge or calendar booking.
+
+User refinement: daily default changed to120 minutes on weekdays and weekends, preserving explicit daily overrides and60-minute arrival buffer. Applied to saved default profile and current Diwali gathering; regenerated proposal with primary calendar.
+
+UX correction requested by user: remove the previous-proposal/revision section from the product screen. Retain stored history internally for recovery only. Broader visual redesign is being reviewed, not yet applied.

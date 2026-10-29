@@ -149,7 +149,7 @@ export default function App() {
     );
   const profile = g.profile || {
     timezone: "America/New_York",
-    weekday_minutes: 60,
+    weekday_minutes: 120,
     weekend_minutes: 120,
     protected: [],
     equipment: {},
@@ -164,7 +164,7 @@ export default function App() {
     g.daily_limits?.[day] ??
     (new Date(day + "T12:00:00").getDay() % 6 === 0
       ? (g.profile?.weekend_minutes ?? 120)
-      : (g.profile?.weekday_minutes ?? 60));
+      : (g.profile?.weekday_minutes ?? 120));
   const updateItem = (s: Selection, values: Partial<Selection>) =>
     run(() => edit([{ action: "update", id: s.id, values }]));
   return (
@@ -1171,7 +1171,6 @@ export default function App() {
             <button disabled={loading||dirty} onClick={()=>run(()=>edit((ws.inputs.selections||[]).filter(s=>s.recipe&&ws.recipe_updates?.includes(s.title)).map(s=>({action:'update',id:s.id,values:{recipe:ws.recipes.find(r=>r.id===s.recipe?.id)}}))))}>Refresh selected recipes</button>
 
           </div>}
-          {ws.previous_plan && <details className="card"><summary>Previous proposal · revision {ws.previous_plan.revision} (not current)</summary><p>This earlier schedule has its own recipe and calendar snapshot. Regenerate to use your current choices.</p><PrepOverview assignments={ws.previous_plan.assignments||[]} timezone={g.profile?.timezone}/></details>}
           {plan && (
             <>
               <div

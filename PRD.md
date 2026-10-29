@@ -6,7 +6,7 @@ Updated October 28, 2026. Approved direction: focused private hosting planner; n
 Create an editable proposed hosting plan that explains the menu, quantities, practical preparation steps and whether the work fits the host's time. Diwali for 15 is the acceptance journey; Thanksgiving, Christmas and birthdays reuse the same contracts. One user now, owner-scoped records for future accounts. Cooking progress, live recovery, voice, meal planning and additional users are deferred.
 
 ## Experience and output contract
-Guided Gathering → Menu → Prep plan, preserving edits and mobile readability. Generate proposed plan never means irreversible finalization. The host can swap dishes, set must-haves, select helpers and availability, choose bought/semi-prepared items, or enter potluck contributions, then regenerate.
+Guided Gathering → Menu → Prep plan with connected clickable chevron steps, an explicit current-step highlight, preserved edits and mobile readability. Generate proposed plan never means irreversible finalization. The host can swap dishes, set must-haves, select helpers and availability, choose bought/semi-prepared items, or enter potluck contributions, then regenerate.
 
 The plan shows:
 1. Menu table: role, source-linked recipe, portions/known ingredient quantities, and a factual reason for selection. Ingredient multipliers never imply appliance batch counts.

@@ -29,6 +29,7 @@ import { RecipeReview } from "./RecipeReview";
 import { CalendarPicker } from "./CalendarPicker";
 import { ShoppingList } from "./ShoppingList";
 import { HostingSummary } from "./HostingSummary";
+import { StepNavigation } from "./StepNavigation";
 import { PrepOverview } from "./PrepOverview";
 const categories = ["starters", "mains", "sides", "desserts", "drinks"];
 function localDate(value?: string | null) {
@@ -184,17 +185,7 @@ export default function App() {
           No live calendar writes.
         </div>
       )}
-      <nav aria-label="Planning steps">
-        {["Gathering", "Menu", "Prep plan"].map((s, i) => (
-          <button
-            className={step === i ? "active" : ""}
-            key={s}
-            onClick={() => setStep(i)}
-          >
-            {i + 1} {s}
-          </button>
-        ))}
-      </nav>
+      <StepNavigation step={step} onSelect={setStep}/>
       {error && (
         <div role="alert" className="alert">
           {error}

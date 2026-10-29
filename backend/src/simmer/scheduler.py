@@ -12,6 +12,23 @@ from .inventory import shopping_for
 
 UTC=timezone.utc
 
+def prep_windows_for(g):
+    """Explicit windows win; otherwise search selected local days 09:00–21:00."""
+    if g.prep_windows:
+        return g.prep_windows
+    zone=ZoneInfo(g.profile.timezone)
+    windows=[]
+    for day in sorted(set(g.prep_days)):
+        if g.earliest_prep and day<g.earliest_prep:
+            continue
+        start=datetime.combine(day,datetime.min.time(),zone).replace(hour=9)
+        end=start.replace(hour=21)
+        if g.arrival:
+            end=min(end,g.arrival-timedelta(minutes=g.relax_minutes))
+        if end>start:
+            windows.append(Interval(start=start,end=end))
+    return windows
+
 def digest(value):
     if hasattr(value,'model_dump'): value=value.model_dump(mode='json')
     return hashlib.sha256(json.dumps(value,sort_keys=True,separators=(',',':')).encode()).hexdigest()
@@ -123,7 +140,7 @@ def validate_schedule(inputs,candidate,partial=False):
     expected,issues=tasks_for(inputs); expected={t.id:t for t in expected}
     violations=list(issues)
     def fail(code,text,ids=()): violations.append(ConstraintViolation(code=code,affected_ids=list(ids),explanation=text))
-    if not g.arrival or not g.earliest_prep or not g.prep_days or not g.prep_windows: fail('setup','Set arrival, prep days and available prep windows'); return violations
+    if not g.arrival or not g.earliest_prep or not g.prep_days or not prep_windows_for(g): fail('setup','Set arrival, prep days and available prep windows'); return violations
     if inputs.availability.status not in ('fresh','fixture'): fail('calendar','Recheck calendar availability')
     if g.allergies is None and not partial: fail('dietary','Confirm allergies, including none')
     by_id={a.task.id:a for a in candidate.assignments}
@@ -157,7 +174,7 @@ def validate_schedule(inputs,candidate,partial=False):
         helper=next((h for h in helpers if h.id==a.person),None)
         if a.person!='host' and (not helper or t.skill not in helper.skills or not any(w.start<=window.start and w.end>=window.end for w in helper.available)): fail('helper','Helper lacks capability or full availability',[t.id])
         for presence in occupancy_windows(a,helpers):
-            if not any(w.start<=presence.start and w.end>=presence.end for w in g.prep_windows) and t.phase!='finishing': fail('window','Task needs presence outside chosen prep windows',[t.id])
+            if not any(w.start<=presence.start and w.end>=presence.end for w in prep_windows_for(g)) and t.phase!='finishing': fail('window','Task needs presence outside chosen prep windows',[t.id])
             if overlaps_any(presence,inputs.availability.busy+g.profile.protected): fail('busy','Task conflicts with calendar or protected time',[t.id])
             for day in daily_presence([a],g.profile.timezone,helpers):
                 if datetime.fromisoformat(day).date() not in g.prep_days: fail('day','Task needs presence on an unselected prep day',[t.id])
@@ -172,7 +189,7 @@ def validate_schedule(inputs,candidate,partial=False):
                 temps={x.task.temperature for x in active if x.task.temperature is not None}
                 if t.resource=='oven' and len(temps)>1: fail('temperature','Concurrent oven temperatures conflict',[t.id])
     if not partial:
-        for session in g.prep_windows:
+        for session in prep_windows_for(g):
             cooking=[a for a in candidate.assignments if a.task.phase=='cooking' and not (a.task.unattended and a.task.presence_minutes==0) and session.start<=a.interval.start<session.end]
             cleanup=[a for a in candidate.assignments if a.task.phase=='cleanup' and session.start<=a.interval.start and a.interval.end<=session.end]
             if cooking and not any(c.task.minutes and c.task.minutes>=15 and c.interval.start>=max(a.interval.end for a in cooking) for c in cleanup):
@@ -195,7 +212,7 @@ def _schedule(inputs,priority=False):
     g=inputs.gathering
     p=PlanCandidate(gathering_id=g.id,revision=g.revision,input_hash=digest(inputs),shopping=shopping_for(inputs),checklist=['Keep dishes warm as directed','Transfer to serving dishes','Check serving spoons','Finish drinks'])
     tasks,issues=tasks_for(inputs)
-    if issues or not g.arrival or not g.prep_windows:
+    if issues or not g.arrival or not prep_windows_for(g):
         p.violations=issues or [ConstraintViolation(code='setup',explanation='Complete gathering times and prep windows')]; return p
     remaining=list(tasks); scheduled=set(); attempts=0
     while remaining and attempts<20000:
@@ -204,7 +221,7 @@ def _schedule(inputs,priority=False):
         if not ready: break
         placed=False
         for task in ready:
-            windows=g.prep_windows if task.phase!='finishing' else [Interval(start=g.arrival-timedelta(minutes=g.relax_minutes),end=g.arrival)]
+            windows=prep_windows_for(g) if task.phase!='finishing' else [Interval(start=g.arrival-timedelta(minutes=g.relax_minutes),end=g.arrival)]
             for window in windows:
                 start=window.start.astimezone(UTC)
                 start+=timedelta(minutes=(-start.minute)%5,seconds=-start.second,microseconds=-start.microsecond)
@@ -217,7 +234,7 @@ def _schedule(inputs,priority=False):
                         # Reserve cleanup while placing work, so it cannot push a
                         # fully used daily allowance over the limit afterward.
                         projected=list(trial.assignments)
-                        for index,session in enumerate(g.prep_windows):
+                        for index,session in enumerate(prep_windows_for(g)):
                             cooking=[a for a in trial.assignments if a.task.phase=='cooking' and not (a.task.unattended and a.task.presence_minutes==0) and session.start<=a.interval.start<session.end]
                             cleanup=[a for a in trial.assignments if a.task.phase=='cleanup' and session.start<=a.interval.start and a.interval.end<=session.end]
                             if cooking and not cleanup:
@@ -232,7 +249,7 @@ def _schedule(inputs,priority=False):
             if placed: break
         if not placed: break
     # Each chosen prep session needs cleanup, including when helpers do the cooking.
-    for index,session in enumerate(g.prep_windows):
+    for index,session in enumerate(prep_windows_for(g)):
         cooking=[a for a in p.assignments if a.task.phase=='cooking' and not (a.task.unattended and a.task.presence_minutes==0) and session.start<=a.interval.start<session.end]
         cleanup=[a for a in p.assignments if a.task.phase=='cleanup' and session.start<=a.interval.start and a.interval.end<=session.end]
         if not cooking or cleanup: continue
@@ -255,7 +272,7 @@ def schedule(inputs):
             trial.gathering.daily_limits[str(day)]=min(1440,current+30)
             candidate=_schedule(trial)
             if candidate.status=='feasible':
-                window=next((w for w in trial.gathering.prep_windows if w.start.astimezone(ZoneInfo(trial.gathering.profile.timezone)).date()==day),None)
+                window=next((w for w in prep_windows_for(trial.gathering) if w.start.astimezone(ZoneInfo(trial.gathering.profile.timezone)).date()==day),None)
                 plan.adjustments.append(TimeAdjustment(day=day,current_minutes=current,proposed_minutes=current+30,window=window,reason='This candidate fits with 30 additional minutes within your existing free window; it is not a minimum-time guarantee.'))
     plan.fit_days=fit_summary(inputs,plan)
     plan.content_hash=content_hash(plan)

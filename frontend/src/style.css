@@ -637,3 +637,11 @@ nav.step-navigation {gap:3px;justify-content:flex-start;padding:16px 0;}
 .plan-actions {margin:12px 0;}.plan-actions .actions {justify-content:flex-start;}
 .plan-status {padding:12px 16px;margin:16px 0;}
 @media(max-width:700px){.plan-actions .actions{display:flex;gap:8px;}.plan-actions button{flex:1;min-height:44px;font-size:14px;padding:10px 8px;}}
+.prep-day-chips{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0;}
+.prep-day-chips label{display:flex;align-items:center;gap:8px;min-height:44px;padding:8px 12px;border:1px solid #cfd8cd;border-radius:24px;cursor:pointer;font-size:14px;}
+.prep-day-chips label.chosen{background:#e6edde;border-color:#395749;}
+.prep-day-chips input{width:16px;height:16px;margin:0;}
+.scheduling-choices summary,.scheduling-extra>summary,.protected-options>summary{min-height:44px;align-content:center;cursor:pointer;font-size:15px;}
+.scheduling-choices h2:not(:first-child){margin-top:24px;}
+.scheduling-extra{align-self:start;}.scheduling-extra[open]>summary{margin-bottom:16px;}
+.cooking-deadline{font-size:16px;line-height:1.5;}

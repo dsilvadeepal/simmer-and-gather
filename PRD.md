@@ -22,6 +22,11 @@ Place Notion save and calendar actions in a compact expandable area after the pl
 
 Visual and accessibility requirements: warm ivory/green styling, restrained heading sizes, readable body text around 16px and metadata around 14px, reduced card/padding clutter, and touch targets at least 44px. The connected chevron navigation retains its current-step highlight and allows returning to earlier steps without starting over. Secondary views support keyboard navigation, visible focus and selected-state semantics. At 375px width, content must remain readable without page-level horizontal scrolling; adapt the schedule table into compact rows/cards as needed.
 
+## Simple scheduling setup
+The main gathering screen presents selectable prep days, a compact daily allowance with expandable per-day overrides, and a cooking-finished deadline derived from arrival minus the buffer. Keep earliest-date changes expandable. More scheduling options contains the light-finishing allowance and optional specific time windows; protected periods are collapsed beside calendar selection. Existing windows, overrides and protected times remain intact.
+
+When no specific windows are set, code searches selected local dates from 9 am to 9 pm, clipped to the cooking deadline, excluding calendar conflicts and protected time. This range is shown to the host. Explicit windows replace that default; no automatic change to saved preferences or daily limits. Clearing windows returns to automatic availability. Generating a schedule still requires chosen calendars and the existing validation/approval flow.
+
 ## Time and kitchen constraints
 Defaults: 120 minutes per day on both weekdays and weekends, counted across the day including required host presence/supervision. Gathering/day overrides are explicit. Cleanup may exceed the allowance by up to 15 minutes; it does not permit more cooking time. One-hour pre-arrival buffer; major cooking and cleanup end before it. At most 20 minutes of optional warming/drinks/finishing inside the buffer, editable per gathering. Never silently enlarge limits to make a plan fit.
 

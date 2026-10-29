@@ -25,3 +25,8 @@ Review focus: hidden panels focus, long ingredient/task text, stale/dirty propos
 - Independent review: fixed menu fat prioritization and added full scaled ingredient disclosure; regression test observed RED then GREEN. Fixed cross-day waiting timestamps with RED/GREEN regression.
 - Browser: actual saved Diwali plan; Schedule default, all secondary tabs, expanded menu quantities and task notes verified. At 375px document width is 375px, including expanded details; at 1280px document width is 1280px and schedule uses three columns. Viewport reset after checks. No calendar events written.
 - PRD synchronized. No deferred review findings. Photo display remains optional; no new images fetched.
+
+## Scheduling simplification — October 29
+Approved: prep-day chips, expandable daily limits, cooking-finished time, optional windows/finishing and protected-time disclosures. Empty windows now use a visible 9 am–9 pm local search range, constrained by calendars, protected periods, daily totals and arrival buffer. Existing explicit windows are retained. Regression covers automatic availability without mutating input snapshots.
+
+Verification: 93 backend and 12 frontend tests pass; production build passes. Independent review found the deadline input maximum exceeded the API limit; corrected to 240 minutes. Existing saved data and calendar events are unchanged.

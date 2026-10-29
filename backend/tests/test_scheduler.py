@@ -106,3 +106,12 @@ def test_unattended_overnight_step_spans_prep_windows_without_consuming_daily_ti
     p=schedule(i)
     assert p.status=='feasible'
     assert daily_presence(p.assignments,g.profile.timezone,[])=={}
+
+def test_optional_windows_use_daytime_and_respect_busy_without_mutating_inputs():
+    i=inputs(limit=120); i.gathering.prep_windows=[]
+    i.availability.busy=[Interval(start='2026-11-06T09:00:00-05:00',end='2026-11-06T17:00:00-05:00')]
+    p=schedule(i)
+    assert p.status=='feasible'
+    assert not validate_schedule(i,p)
+    assert i.gathering.prep_windows==[]
+    assert all(a.interval.start.hour>=17 for a in p.assignments)

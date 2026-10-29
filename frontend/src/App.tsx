@@ -29,6 +29,7 @@ import { RecipeReview } from "./RecipeReview";
 import { CalendarPicker } from "./CalendarPicker";
 
 import { PlanViews } from "./PlanViews";
+import { SchedulingChoices } from "./SchedulingChoices";
 import { StepNavigation } from "./StepNavigation";
 
 const categories = ["starters", "mains", "sides", "desserts", "drinks"];
@@ -304,104 +305,12 @@ export default function App() {
                 />
               </label>
             </section>
-            <section className="card">
-              <h2>
-                <CalendarDays />
-                Your prep days
-              </h2>
-              <label>
-                I can start preparing on
-                <input
-                  type="date"
-                  value={g.earliest_prep || ""}
-                  onChange={(e) => change({ earliest_prep: e.target.value })}
-                />
-              </label>
-              <p className="meta">
-                Choose the days that work. Daily totals include cleanup and
-                supervision.
-              </p>
-              {prepDays.map((day) => (
-                <div className="day" key={day}>
-                  <label className="check">
-                    <input
-                      type="checkbox"
-                      checked={selected.includes(day)}
-                      onChange={(e) =>
-                        change({
-                          prep_days: e.target.checked
-                            ? [...selected, day]
-                            : selected.filter((x) => x !== day),
-                        })
-                      }
-                    />
-                    {new Date(day + "T12:00:00").toLocaleDateString([], {
-                      weekday: "short",
-                      month: "short",
-                      day: "numeric",
-                    })}
-                  </label>
-                  <label className="minutes">
-                    Daily minutes
-                    <input
-                      aria-label={"Daily minutes " + day}
-                      type="number"
-                      min="0"
-                      max="1440"
-                      value={limit(day)}
-                      onChange={(e) =>
-                        change({
-                          daily_limits: {
-                            ...g.daily_limits,
-                            [day]: +e.target.value,
-                          },
-                        })
-                      }
-                    />
-                  </label>
-                </div>
-              ))}
-              <p className="total">
-                {selected.reduce((a, d) => a + limit(d), 0)} minutes allowed ·
-                calendar availability may be less
-              </p>
-            </section>
-            <section className="card">
-              <h2>
-                <Clock />
-                Make time to relax
-              </h2>
-              <div className="fields">
-                <label>
-                  Finish major cooking before arrival (minutes)
-                  <input
-                    type="number"
-                    min="0"
-                    value={g.relax_minutes}
-                    onChange={(e) => change({ relax_minutes: +e.target.value })}
-                  />
-                </label>
-                <label>
-                  Small finishing tasks within that time (minutes)
-                  <input
-                    type="number"
-                    min="0"
-                    value={g.finishing_minutes}
-                    onChange={(e) =>
-                      change({ finishing_minutes: +e.target.value })
-                    }
-                  />
-                </label>
-              </div>
-              <p className="meta">
-                The remaining{" "}
-                {Math.max(
-                  0,
-                  (g.relax_minutes || 0) - (g.finishing_minutes || 0),
-                )}{" "}
-                minutes stay free for you.
-              </p>
-              <h3>Possible prep windows</h3>
+            <SchedulingChoices gathering={g} days={prepDays} change={change}/>
+            <details className="card scheduling-extra"><summary>More scheduling options</summary>
+              <label>Light finishing allowance (minutes)<input type="number" min="0" value={g.finishing_minutes} onChange={e=>change({finishing_minutes:+e.target.value})}/></label>
+              <h3>Choose specific times (optional)</h3>
+              <p className="meta">Saved windows replace automatic 9 am–9 pm availability. Remove all windows to let the app find time.</p>
+
               {(g.prep_windows || []).map((w, i) => (
                 <div className="fields" key={i}>
                   <label>
@@ -465,7 +374,7 @@ export default function App() {
                 <Plus size={16} />
                 Add prep window
               </button>
-            </section>
+            </details>
             <section className="card">
               <h2>
                 <Flame />
@@ -608,11 +517,11 @@ export default function App() {
             <section className="card full">
               <h2>
                 <CalendarDays />
-                Calendars & protected time
+                Calendars
               </h2>
               <CalendarPicker calendars={calendars} selected={g.selected_calendars || []}
                 onChange={ids=>change({selected_calendars:ids})} error={calendarError}/>
-              <p className="meta">
+              <details className="protected-options"><summary>Protected time · {(g.profile?.protected||[]).length} saved</summary><p className="meta">
                 Work, family and sleep remain protected even when a calendar
                 looks free.
               </p>
@@ -659,7 +568,7 @@ export default function App() {
                 }}
               >
                 Add protected time
-              </button>
+              </button></details>
             </section>
           </div>
           <div className="footer-actions">

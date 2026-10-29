@@ -1,0 +1,2267 @@
+{
+  "calendar_status": "fresh",
+  "assumptions": [
+    "Thu\u2013Sun prep",
+    "Five vegetarian guests; no declared allergies for simulation only",
+    "No helpers",
+    "Two stovetop positions; one other appliance each",
+    "Recipe drafts accepted only in isolated evaluation; no saved approvals or calendar writes"
+  ],
+  "results": [
+    {
+      "scenario": "four cooked dishes",
+      "status": "conflict",
+      "menu": [
+        "Vegetable Pulao Recipe | Veg Pulav",
+        "Instant Pot Dal Makhani with Brown Rice",
+        "Instant Pot Butter Chicken",
+        "Air Fryer Paneer Tikka",
+        "Prepared dessert",
+        "Ready-to-serve drinks"
+      ],
+      "daily_minutes": {
+        "2026-10-31": 130,
+        "2026-10-30": 65,
+        "2026-11-01": 135
+      },
+      "plan": {
+        "id": "cca805c3-1d52-4600-8587-4ec20ec37969",
+        "gathering_id": "cf24d0e3-cf40-434b-b70d-b5b9dd4cab7b",
+        "revision": 1,
+        "input_hash": "ff1fa05c03d4c6f5579f63585763cc7d77a779511a152b9687e742174cbc4ec4",
+        "content_hash": "4c2c4e43589c37e61b10c1bd4ce9d472e6766c56a80369130cab512b437c36c3",
+        "assignments": [
+          {
+            "task": {
+              "id": "4076c09a-c77f-81d5-b19a-dde806211e86:0:notion-step-1",
+              "title": "Vegetable Pulao Recipe | Veg Pulav \u00b7 Chop vegetables and measure spices; rinse rice on cooking day (batch 1)",
+              "recipe_id": "4076c09a-c77f-81d5-b19a-dde806211e86",
+              "dependencies": [],
+              "minutes": 35,
+              "active_minutes": 25,
+              "presence_minutes": 25,
+              "skill": "cook",
+              "resource": null,
+              "capacity": 1,
+              "temperature": null,
+              "eligible": null,
+              "max_ahead_hours": 48.0,
+              "evidence": "Notion home-cook timing draft (estimate)",
+              "ingredients": [],
+              "guidance": "CHEF PROPOSAL \u2014 untested; not a publisher storage instruction. Wash/chop vegetables and measure spices 1 day ahead. Cook rice on party day, then hold hot or refrigerate promptly; rice quality drops if repeatedly warmed. Contains cashews in the listed recipe.",
+              "phase": "cooking",
+              "unattended": false
+            },
+            "interval": {
+              "start": "2026-10-30T22:25:00Z",
+              "end": "2026-10-30T23:00:00Z"
+            },
+            "person": "host"
+          },
+          {
+            "task": {
+              "id": "4076c09a-c77f-81d5-b19a-dde806211e86:0:notion-step-2",
+              "title": "Vegetable Pulao Recipe | Veg Pulav \u00b7 Saute vegetables and spices (batch 1)",
+              "recipe_id": "4076c09a-c77f-81d5-b19a-dde806211e86",
+              "dependencies": [
+                "4076c09a-c77f-81d5-b19a-dde806211e86:0:notion-step-1"
+              ],
+              "minutes": 10,
+              "active_minutes": 10,
+              "presence_minutes": 10,
+              "skill": "cook",
+              "resource": "stovetop",
+              "capacity": 1,
+              "temperature": null,
+              "eligible": null,
+              "max_ahead_hours": 8.0,
+              "evidence": "Notion home-cook timing draft (estimate)",
+              "ingredients": [],
+              "guidance": "CHEF PROPOSAL \u2014 untested; not a publisher storage instruction. Wash/chop vegetables and measure spices 1 day ahead. Cook rice on party day, then hold hot or refrigerate promptly; rice quality drops if repeatedly warmed. Contains cashews in the listed recipe.",
+              "phase": "cooking",
+              "unattended": false
+            },
+            "interval": {
+              "start": "2026-11-01T15:30:00Z",
+              "end": "2026-11-01T15:40:00Z"
+            },
+            "person": "host"
+          },
+          {
+            "task": {
+              "id": "4076c09a-c77f-81d5-b19a-dde806211e86:0:notion-step-3",
+              "title": "Vegetable Pulao Recipe | Veg Pulav \u00b7 Cook rice and rest (batch 1)",
+              "recipe_id": "4076c09a-c77f-81d5-b19a-dde806211e86",
+              "dependencies": [
+                "4076c09a-c77f-81d5-b19a-dde806211e86:0:notion-step-2"
+              ],
+              "minutes": 30,
+              "active_minutes": 5,
+              "presence_minutes": 5,
+              "skill": "cook",
+              "resource": "stovetop",
+              "capacity": 1,
+              "temperature": null,
+              "eligible": null,
+              "max_ahead_hours": 8.0,
+              "evidence": "Notion home-cook timing draft (estimate)",
+              "ingredients": [],
+              "guidance": "CHEF PROPOSAL \u2014 untested; not a publisher storage instruction. Wash/chop vegetables and measure spices 1 day ahead. Cook rice on party day, then hold hot or refrigerate promptly; rice quality drops if repeatedly warmed. Contains cashews in the listed recipe.",
+              "phase": "cooking",
+              "unattended": false
+            },
+            "interval": {
+              "start": "2026-11-01T15:40:00Z",
+              "end": "2026-11-01T16:10:00Z"
+            },
+            "person": "host"
+          },
+          {
+            "task": {
+              "id": "4076c09a-c77f-81d5-b19a-dde806211e86:1:notion-step-1",
+              "title": "Vegetable Pulao Recipe | Veg Pulav \u00b7 Chop vegetables and measure spices; rinse rice on cooking day (batch 2)",
+              "recipe_id": "4076c09a-c77f-81d5-b19a-dde806211e86",
+              "dependencies": [],
+              "minutes": 35,
+              "active_minutes": 25,
+              "presence_minutes": 25,
+              "skill": "cook",
+              "resource": null,
+              "capacity": 1,
+              "temperature": null,
+              "eligible": null,
+              "max_ahead_hours": 48.0,
+              "evidence": "Notion home-cook timing draft (estimate)",
+              "ingredients": [],
+              "guidance": "CHEF PROPOSAL \u2014 untested; not a publisher storage instruction. Wash/chop vegetables and measure spices 1 day ahead. Cook rice on party day, then hold hot or refrigerate promptly; rice quality drops if repeatedly warmed. Contains cashews in the listed recipe.",
+              "phase": "cooking",
+              "unattended": false
+            },
+            "interval": {
+              "start": "2026-10-30T22:50:00Z",
+              "end": "2026-10-30T23:25:00Z"
+            },
+            "person": "host"
+          },
+          {
+            "task": {
+              "id": "4076c09a-c77f-81d5-b19a-dde806211e86:1:notion-step-2",
+              "title": "Vegetable Pulao Recipe | Veg Pulav \u00b7 Saute vegetables and spices (batch 2)",
+              "recipe_id": "4076c09a-c77f-81d5-b19a-dde806211e86",
+              "dependencies": [
+                "4076c09a-c77f-81d5-b19a-dde806211e86:1:notion-step-1"
+              ],
+              "minutes": 10,
+              "active_minutes": 10,
+              "presence_minutes": 10,
+              "skill": "cook",
+              "resource": "stovetop",
+              "capacity": 1,
+              "temperature": null,
+              "eligible": null,
+              "max_ahead_hours": 8.0,
+              "evidence": "Notion home-cook timing draft (estimate)",
+              "ingredients": [],
+              "guidance": "CHEF PROPOSAL \u2014 untested; not a publisher storage instruction. Wash/chop vegetables and measure spices 1 day ahead. Cook rice on party day, then hold hot or refrigerate promptly; rice quality drops if repeatedly warmed. Contains cashews in the listed recipe.",
+              "phase": "cooking",
+              "unattended": false
+            },
+            "interval": {
+              "start": "2026-11-01T15:45:00Z",
+              "end": "2026-11-01T15:55:00Z"
+            },
+            "person": "host"
+          },
+          {
+            "task": {
+              "id": "4076c09a-c77f-81d5-b19a-dde806211e86:1:notion-step-3",
+              "title": "Vegetable Pulao Recipe | Veg Pulav \u00b7 Cook rice and rest (batch 2)",
+              "recipe_id": "4076c09a-c77f-81d5-b19a-dde806211e86",
+              "dependencies": [
+                "4076c09a-c77f-81d5-b19a-dde806211e86:1:notion-step-2"
+              ],
+              "minutes": 30,
+              "active_minutes": 5,
+              "presence_minutes": 5,
+              "skill": "cook",
+              "resource": "stovetop",
+              "capacity": 1,
+              "temperature": null,
+              "eligible": null,
+              "max_ahead_hours": 8.0,
+              "evidence": "Notion home-cook timing draft (estimate)",
+              "ingredients": [],
+              "guidance": "CHEF PROPOSAL \u2014 untested; not a publisher storage instruction. Wash/chop vegetables and measure spices 1 day ahead. Cook rice on party day, then hold hot or refrigerate promptly; rice quality drops if repeatedly warmed. Contains cashews in the listed recipe.",
+              "phase": "cooking",
+              "unattended": false
+            },
+            "interval": {
+              "start": "2026-11-01T15:55:00Z",
+              "end": "2026-11-01T16:25:00Z"
+            },
+            "person": "host"
+          },
+          {
+            "task": {
+              "id": "4076c09a-c77f-81d5-b19a-dde806211e86:2:notion-step-1",
+              "title": "Vegetable Pulao Recipe | Veg Pulav \u00b7 Chop vegetables and measure spices; rinse rice on cooking day (batch 3)",
+              "recipe_id": "4076c09a-c77f-81d5-b19a-dde806211e86",
+              "dependencies": [],
+              "minutes": 35,
+              "active_minutes": 25,
+              "presence_minutes": 25,
+              "skill": "cook",
+              "resource": null,
+              "capacity": 1,
+              "temperature": null,
+              "eligible": null,
+              "max_ahead_hours": 48.0,
+              "evidence": "Notion home-cook timing draft (estimate)",
+              "ingredients": [],
+              "guidance": "CHEF PROPOSAL \u2014 untested; not a publisher storage instruction. Wash/chop vegetables and measure spices 1 day ahead. Cook rice on party day, then hold hot or refrigerate promptly; rice quality drops if repeatedly warmed. Contains cashews in the listed recipe.",
+              "phase": "cooking",
+              "unattended": false
+            },
+            "interval": {
+              "start": "2026-10-31T14:30:00Z",
+              "end": "2026-10-31T15:05:00Z"
+            },
+            "person": "host"
+          },
+          {
+            "task": {
+              "id": "4076c09a-c77f-81d5-b19a-dde806211e86:2:notion-step-2",
+              "title": "Vegetable Pulao Recipe | Veg Pulav \u00b7 Saute vegetables and spices (batch 3)",
+              "recipe_id": "4076c09a-c77f-81d5-b19a-dde806211e86",
+              "dependencies": [
+                "4076c09a-c77f-81d5-b19a-dde806211e86:2:notion-step-1"
+              ],
+              "minutes": 10,
+              "active_minutes": 10,
+              "presence_minutes": 10,
+              "skill": "cook",
+              "resource": "stovetop",
+              "capacity": 1,
+              "temperature": null,
+              "eligible": null,
+              "max_ahead_hours": 8.0,
+              "evidence": "Notion home-cook timing draft (estimate)",
+              "ingredients": [],
+              "guidance": "CHEF PROPOSAL \u2014 untested; not a publisher storage instruction. Wash/chop vegetables and measure spices 1 day ahead. Cook rice on party day, then hold hot or refrigerate promptly; rice quality drops if repeatedly warmed. Contains cashews in the listed recipe.",
+              "phase": "cooking",
+              "unattended": false
+            },
+            "interval": {
+              "start": "2026-11-01T16:10:00Z",
+              "end": "2026-11-01T16:20:00Z"
+            },
+            "person": "host"
+          },
+          {
+            "task": {
+              "id": "4076c09a-c77f-81d5-b19a-dde806211e86:2:notion-step-3",
+              "title": "Vegetable Pulao Recipe | Veg Pulav \u00b7 Cook rice and rest (batch 3)",
+              "recipe_id": "4076c09a-c77f-81d5-b19a-dde806211e86",
+              "dependencies": [
+                "4076c09a-c77f-81d5-b19a-dde806211e86:2:notion-step-2"
+              ],
+              "minutes": 30,
+              "active_minutes": 5,
+              "presence_minutes": 5,
+              "skill": "cook",
+              "resource": "stovetop",
+              "capacity": 1,
+              "temperature": null,
+              "eligible": null,
+              "max_ahead_hours": 8.0,
+              "evidence": "Notion home-cook timing draft (estimate)",
+              "ingredients": [],
+              "guidance": "CHEF PROPOSAL \u2014 untested; not a publisher storage instruction. Wash/chop vegetables and measure spices 1 day ahead. Cook rice on party day, then hold hot or refrigerate promptly; rice quality drops if repeatedly warmed. Contains cashews in the listed recipe.",
+              "phase": "cooking",
+              "unattended": false
+            },
+            "interval": {
+              "start": "2026-11-01T16:20:00Z",
+              "end": "2026-11-01T16:50:00Z"
+            },
+            "person": "host"
+          },
+          {
+            "task": {
+              "id": "4076c09a-c77f-81ee-933a-d7fb512817dc:0:notion-step-1",
+              "title": "Instant Pot Dal Makhani with Brown Rice \u00b7 Rinse lentils and measure ingredients (batch 1)",
+              "recipe_id": "4076c09a-c77f-81ee-933a-d7fb512817dc",
+              "dependencies": [],
+              "minutes": 15,
+              "active_minutes": 15,
+              "presence_minutes": 15,
+              "skill": "cook",
+              "resource": null,
+              "capacity": 1,
+              "temperature": null,
+              "eligible": null,
+              "max_ahead_hours": 36.0,
+              "evidence": "Notion home-cook timing draft (estimate)",
+              "ingredients": [],
+              "guidance": "Day-before cooking proposal; refrigerate promptly and reheat thoroughly before serving. Main, vegetarian. Prepare ingredients: source prep 10 min. Pressure-cook: source cook 50 min with much of the time unattended; 10-15 min active/presence estimate. Cleanup: 10 min estimate. The author cooks it the night before parties and says refrigerated leftovers keep up to 5 days. If freezing, leave cream out until serving (author). Source: https://ministryofcurry.com/madras-lentils-daal-makhani-instant-pot/",
+              "phase": "cooking",
+              "unattended": false
+            },
+            "interval": {
+              "start": "2026-10-31T14:55:00Z",
+              "end": "2026-10-31T15:10:00Z"
+            },
+            "person": "host"
+          },
+          {
+            "task": {
+              "id": "4076c09a-c77f-81ee-933a-d7fb512817dc:0:notion-step-2",
+              "title": "Instant Pot Dal Makhani with Brown Rice \u00b7 Pressure cook and release (batch 1)",
+              "recipe_id": "4076c09a-c77f-81ee-933a-d7fb512817dc",
+              "dependencies": [
+                "4076c09a-c77f-81ee-933a-d7fb512817dc:0:notion-step-1"
+              ],
+              "minutes": 55,
+              "active_minutes": 5,
+              "presence_minutes": 5,
+              "skill": "cook",
+              "resource": "instant_pot",
+              "capacity": 1,
+              "temperature": null,
+              "eligible": null,
+              "max_ahead_hours": 36.0,
+              "evidence": "Notion home-cook timing draft (estimate)",
+              "ingredients": [],
+              "guidance": "Day-before cooking proposal; refrigerate promptly and reheat thoroughly before serving. Main, vegetarian. Prepare ingredients: source prep 10 min. Pressure-cook: source cook 50 min with much of the time unattended; 10-15 min active/presence estimate. Cleanup: 10 min estimate. The author cooks it the night before parties and says refrigerated leftovers keep up to 5 days. If freezing, leave cream out until serving (author). Source: https://ministryofcurry.com/madras-lentils-daal-makhani-instant-pot/",
+              "phase": "cooking",
+              "unattended": false
+            },
+            "interval": {
+              "start": "2026-10-31T15:10:00Z",
+              "end": "2026-10-31T16:05:00Z"
+            },
+            "person": "host"
+          },
+          {
+            "task": {
+              "id": "4076c09a-c77f-81ee-933a-d7fb512817dc:0:notion-step-3",
+              "title": "Instant Pot Dal Makhani with Brown Rice \u00b7 Finish with cream and seasoning (batch 1)",
+              "recipe_id": "4076c09a-c77f-81ee-933a-d7fb512817dc",
+              "dependencies": [
+                "4076c09a-c77f-81ee-933a-d7fb512817dc:0:notion-step-2"
+              ],
+              "minutes": 10,
+              "active_minutes": 10,
+              "presence_minutes": 10,
+              "skill": "cook",
+              "resource": null,
+              "capacity": 1,
+              "temperature": null,
+              "eligible": null,
+              "max_ahead_hours": 36.0,
+              "evidence": "Notion home-cook timing draft (estimate)",
+              "ingredients": [],
+              "guidance": "Day-before cooking proposal; refrigerate promptly and reheat thoroughly before serving. Main, vegetarian. Prepare ingredients: source prep 10 min. Pressure-cook: source cook 50 min with much of the time unattended; 10-15 min active/presence estimate. Cleanup: 10 min estimate. The author cooks it the night before parties and says refrigerated leftovers keep up to 5 days. If freezing, leave cream out until serving (author). Source: https://ministryofcurry.com/madras-lentils-daal-makhani-instant-pot/",
+              "phase": "cooking",
+              "unattended": false
+            },
+            "interval": {
+              "start": "2026-10-31T16:05:00Z",
+              "end": "2026-10-31T16:15:00Z"
+            },
+            "person": "host"
+          },
+          {
+            "task": {
+              "id": "4076c09a-c77f-81ee-933a-d7fb512817dc:0:notion-reheat",
+              "title": "Instant Pot Dal Makhani with Brown Rice \u00b7 Reheat thoroughly before serving (batch 1)",
+              "recipe_id": "4076c09a-c77f-81ee-933a-d7fb512817dc",
+              "dependencies": [
+                "4076c09a-c77f-81ee-933a-d7fb512817dc:0:notion-step-3"
+              ],
+              "minutes": 20,
+              "active_minutes": 5,
+              "presence_minutes": 20,
+              "skill": "cook",
+              "resource": "stovetop",
+              "capacity": 1,
+              "temperature": null,
+              "eligible": null,
+              "max_ahead_hours": 2.0,
+              "evidence": "Chef planning estimate; verify temperature and batch capacity",
+              "ingredients": [],
+              "guidance": null,
+              "phase": "cooking",
+              "unattended": false
+            },
+            "interval": {
+              "start": "2026-11-01T20:40:00Z",
+              "end": "2026-11-01T21:00:00Z"
+            },
+            "person": "host"
+          },
+          {
+            "task": {
+              "id": "4076c09a-c77f-81ee-933a-d7fb512817dc:1:notion-step-1",
+              "title": "Instant Pot Dal Makhani with Brown Rice \u00b7 Rinse lentils and measure ingredients (batch 2)",
+              "recipe_id": "4076c09a-c77f-81ee-933a-d7fb512817dc",
+              "dependencies": [],
+              "minutes": 15,
+              "active_minutes": 15,
+              "presence_minutes": 15,
+              "skill": "cook",
+              "resource": null,
+              "capacity": 1,
+              "temperature": null,
+              "eligible": null,
+              "max_ahead_hours": 36.0,
+              "evidence": "Notion home-cook timing draft (estimate)",
+              "ingredients": [],
+              "guidance": "Day-before cooking proposal; refrigerate promptly and reheat thoroughly before serving. Main, vegetarian. Prepare ingredients: source prep 10 min. Pressure-cook: source cook 50 min with much of the time unattended; 10-15 min active/presence estimate. Cleanup: 10 min estimate. The author cooks it the night before parties and says refrigerated leftovers keep up to 5 days. If freezing, leave cream out until serving (author). Source: https://ministryofcurry.com/madras-lentils-daal-makhani-instant-pot/",
+              "phase": "cooking",
+              "unattended": false
+            },
+            "interval": {
+              "start": "2026-10-31T15:15:00Z",
+              "end": "2026-10-31T15:30:00Z"
+            },
+            "person": "host"
+          },
+          {
+            "task": {
+              "id": "4076c09a-c77f-81ee-933a-d7fb512817dc:1:notion-step-2",
+              "title": "Instant Pot Dal Makhani with Brown Rice \u00b7 Pressure cook and release (batch 2)",
+              "recipe_id": "4076c09a-c77f-81ee-933a-d7fb512817dc",
+              "dependencies": [
+                "4076c09a-c77f-81ee-933a-d7fb512817dc:1:notion-step-1"
+              ],
+              "minutes": 55,
+              "active_minutes": 5,
+              "presence_minutes": 5,
+              "skill": "cook",
+              "resource": "instant_pot",
+              "capacity": 1,
+              "temperature": null,
+              "eligible": null,
+              "max_ahead_hours": 36.0,
+              "evidence": "Notion home-cook timing draft (estimate)",
+              "ingredients": [],
+              "guidance": "Day-before cooking proposal; refrigerate promptly and reheat thoroughly before serving. Main, vegetarian. Prepare ingredients: source prep 10 min. Pressure-cook: source cook 50 min with much of the time unattended; 10-15 min active/presence estimate. Cleanup: 10 min estimate. The author cooks it the night before parties and says refrigerated leftovers keep up to 5 days. If freezing, leave cream out until serving (author). Source: https://ministryofcurry.com/madras-lentils-daal-makhani-instant-pot/",
+              "phase": "cooking",
+              "unattended": false
+            },
+            "interval": {
+              "start": "2026-10-31T16:15:00Z",
+              "end": "2026-10-31T17:10:00Z"
+            },
+            "person": "host"
+          },
+          {
+            "task": {
+              "id": "4076c09a-c77f-81ee-933a-d7fb512817dc:1:notion-step-3",
+              "title": "Instant Pot Dal Makhani with Brown Rice \u00b7 Finish with cream and seasoning (batch 2)",
+              "recipe_id": "4076c09a-c77f-81ee-933a-d7fb512817dc",
+              "dependencies": [
+                "4076c09a-c77f-81ee-933a-d7fb512817dc:1:notion-step-2"
+              ],
+              "minutes": 10,
+              "active_minutes": 10,
+              "presence_minutes": 10,
+              "skill": "cook",
+              "resource": null,
+              "capacity": 1,
+              "temperature": null,
+              "eligible": null,
+              "max_ahead_hours": 36.0,
+              "evidence": "Notion home-cook timing draft (estimate)",
+              "ingredients": [],
+              "guidance": "Day-before cooking proposal; refrigerate promptly and reheat thoroughly before serving. Main, vegetarian. Prepare ingredients: source prep 10 min. Pressure-cook: source cook 50 min with much of the time unattended; 10-15 min active/presence estimate. Cleanup: 10 min estimate. The author cooks it the night before parties and says refrigerated leftovers keep up to 5 days. If freezing, leave cream out until serving (author). Source: https://ministryofcurry.com/madras-lentils-daal-makhani-instant-pot/",
+              "phase": "cooking",
+              "unattended": false
+            },
+            "interval": {
+              "start": "2026-10-31T17:10:00Z",
+              "end": "2026-10-31T17:20:00Z"
+            },
+            "person": "host"
+          },
+          {
+            "task": {
+              "id": "4076c09a-c77f-81ee-933a-d7fb512817dc:1:notion-reheat",
+              "title": "Instant Pot Dal Makhani with Brown Rice \u00b7 Reheat thoroughly before serving (batch 2)",
+              "recipe_id": "4076c09a-c77f-81ee-933a-d7fb512817dc",
+              "dependencies": [
+                "4076c09a-c77f-81ee-933a-d7fb512817dc:1:notion-step-3"
+              ],
+              "minutes": 20,
+              "active_minutes": 5,
+              "presence_minutes": 20,
+              "skill": "cook",
+              "resource": "stovetop",
+              "capacity": 1,
+              "temperature": null,
+              "eligible": null,
+              "max_ahead_hours": 2.0,
+              "evidence": "Chef planning estimate; verify temperature and batch capacity",
+              "ingredients": [],
+              "guidance": null,
+              "phase": "cooking",
+              "unattended": false
+            },
+            "interval": {
+              "start": "2026-11-01T20:45:00Z",
+              "end": "2026-11-01T21:05:00Z"
+            },
+            "person": "host"
+          },
+          {
+            "task": {
+              "id": "4076c09a-c77f-81ee-933a-d7fb512817dc:2:notion-step-1",
+              "title": "Instant Pot Dal Makhani with Brown Rice \u00b7 Rinse lentils and measure ingredients (batch 3)",
+              "recipe_id": "4076c09a-c77f-81ee-933a-d7fb512817dc",
+              "dependencies": [],
+              "minutes": 15,
+              "active_minutes": 15,
+              "presence_minutes": 15,
+              "skill": "cook",
+              "resource": null,
+              "capacity": 1,
+              "temperature": null,
+              "eligible": null,
+              "max_ahead_hours": 36.0,
+              "evidence": "Notion home-cook timing draft (estimate)",
+              "ingredients": [],
+              "guidance": "Day-before cooking proposal; refrigerate promptly and reheat thoroughly before serving. Main, vegetarian. Prepare ingredients: source prep 10 min. Pressure-cook: source cook 50 min with much of the time unattended; 10-15 min active/presence estimate. Cleanup: 10 min estimate. The author cooks it the night before parties and says refrigerated leftovers keep up to 5 days. If freezing, leave cream out until serving (author). Source: https://ministryofcurry.com/madras-lentils-daal-makhani-instant-pot/",
+              "phase": "cooking",
+              "unattended": false
+            },
+            "interval": {
+              "start": "2026-10-31T15:30:00Z",
+              "end": "2026-10-31T15:45:00Z"
+            },
+            "person": "host"
+          },
+          {
+            "task": {
+              "id": "4076c09a-c77f-81ee-933a-d7fb512817dc:2:notion-step-2",
+              "title": "Instant Pot Dal Makhani with Brown Rice \u00b7 Pressure cook and release (batch 3)",
+              "recipe_id": "4076c09a-c77f-81ee-933a-d7fb512817dc",
+              "dependencies": [
+                "4076c09a-c77f-81ee-933a-d7fb512817dc:2:notion-step-1"
+              ],
+              "minutes": 55,
+              "active_minutes": 5,
+              "presence_minutes": 5,
+              "skill": "cook",
+              "resource": "instant_pot",
+              "capacity": 1,
+              "temperature": null,
+              "eligible": null,
+              "max_ahead_hours": 36.0,
+              "evidence": "Notion home-cook timing draft (estimate)",
+              "ingredients": [],
+              "guidance": "Day-before cooking proposal; refrigerate promptly and reheat thoroughly before serving. Main, vegetarian. Prepare ingredients: source prep 10 min. Pressure-cook: source cook 50 min with much of the time unattended; 10-15 min active/presence estimate. Cleanup: 10 min estimate. The author cooks it the night before parties and says refrigerated leftovers keep up to 5 days. If freezing, leave cream out until serving (author). Source: https://ministryofcurry.com/madras-lentils-daal-makhani-instant-pot/",
+              "phase": "cooking",
+              "unattended": false
+            },
+            "interval": {
+              "start": "2026-10-31T17:20:00Z",
+              "end": "2026-10-31T18:15:00Z"
+            },
+            "person": "host"
+          },
+          {
+            "task": {
+              "id": "4076c09a-c77f-81ee-933a-d7fb512817dc:2:notion-step-3",
+              "title": "Instant Pot Dal Makhani with Brown Rice \u00b7 Finish with cream and seasoning (batch 3)",
+              "recipe_id": "4076c09a-c77f-81ee-933a-d7fb512817dc",
+              "dependencies": [
+                "4076c09a-c77f-81ee-933a-d7fb512817dc:2:notion-step-2"
+              ],
+              "minutes": 10,
+              "active_minutes": 10,
+              "presence_minutes": 10,
+              "skill": "cook",
+              "resource": null,
+              "capacity": 1,
+              "temperature": null,
+              "eligible": null,
+              "max_ahead_hours": 36.0,
+              "evidence": "Notion home-cook timing draft (estimate)",
+              "ingredients": [],
+              "guidance": "Day-before cooking proposal; refrigerate promptly and reheat thoroughly before serving. Main, vegetarian. Prepare ingredients: source prep 10 min. Pressure-cook: source cook 50 min with much of the time unattended; 10-15 min active/presence estimate. Cleanup: 10 min estimate. The author cooks it the night before parties and says refrigerated leftovers keep up to 5 days. If freezing, leave cream out until serving (author). Source: https://ministryofcurry.com/madras-lentils-daal-makhani-instant-pot/",
+              "phase": "cooking",
+              "unattended": false
+            },
+            "interval": {
+              "start": "2026-10-31T18:15:00Z",
+              "end": "2026-10-31T18:25:00Z"
+            },
+            "person": "host"
+          },
+          {
+            "task": {
+              "id": "4076c09a-c77f-81ee-933a-d7fb512817dc:2:notion-reheat",
+              "title": "Instant Pot Dal Makhani with Brown Rice \u00b7 Reheat thoroughly before serving (batch 3)",
+              "recipe_id": "4076c09a-c77f-81ee-933a-d7fb512817dc",
+              "dependencies": [
+                "4076c09a-c77f-81ee-933a-d7fb512817dc:2:notion-step-3"
+              ],
+              "minutes": 20,
+              "active_minutes": 5,
+              "presence_minutes": 20,
+              "skill": "cook",
+              "resource": "stovetop",
+              "capacity": 1,
+              "temperature": null,
+              "eligible": null,
+              "max_ahead_hours": 2.0,
+              "evidence": "Chef planning estimate; verify temperature and batch capacity",
+              "ingredients": [],
+              "guidance": null,
+              "phase": "cooking",
+              "unattended": false
+            },
+            "interval": {
+              "start": "2026-11-01T21:00:00Z",
+              "end": "2026-11-01T21:20:00Z"
+            },
+            "person": "host"
+          },
+          {
+            "task": {
+              "id": "4076c09a-c77f-81a0-8f19-f69b0348138d:0:notion-step-1",
+              "title": "Instant Pot Butter Chicken \u00b7 Cut chicken and measure sauce ingredients (batch 1)",
+              "recipe_id": "4076c09a-c77f-81a0-8f19-f69b0348138d",
+              "dependencies": [],
+              "minutes": 15,
+              "active_minutes": 15,
+              "presence_minutes": 15,
+              "skill": "cook",
+              "resource": null,
+              "capacity": 1,
+              "temperature": null,
+              "eligible": null,
+              "max_ahead_hours": 36.0,
+              "evidence": "Notion home-cook timing draft (estimate)",
+              "ingredients": [],
+              "guidance": "Day-before cooking proposal; refrigerate promptly and reheat thoroughly before serving. CHEF PROPOSAL \u2014 untested; not a publisher storage instruction. Cook fully 1 day ahead; divide into shallow containers and refrigerate promptly. Reheat thoroughly before serving; sauce usually tolerates this better than last-minute cooking.",
+              "phase": "cooking",
+              "unattended": false
+            },
+            "interval": {
+              "start": "2026-11-01T16:25:00Z",
+              "end": "2026-11-01T16:40:00Z"
+            },
+            "person": "host"
+          },
+          {
+            "task": {
+              "id": "4076c09a-c77f-81a0-8f19-f69b0348138d:0:notion-step-2",
+              "title": "Instant Pot Butter Chicken \u00b7 Pressure cook and release (batch 1)",
+              "recipe_id": "4076c09a-c77f-81a0-8f19-f69b0348138d",
+              "dependencies": [
+                "4076c09a-c77f-81a0-8f19-f69b0348138d:0:notion-step-1"
+              ],
+              "minutes": 30,
+              "active_minutes": 5,
+              "presence_minutes": 5,
+              "skill": "cook",
+              "resource": "instant_pot",
+              "capacity": 1,
+              "temperature": null,
+              "eligible": null,
+              "max_ahead_hours": 36.0,
+              "evidence": "Notion home-cook timing draft (estimate)",
+              "ingredients": [],
+              "guidance": "Day-before cooking proposal; refrigerate promptly and reheat thoroughly before serving. CHEF PROPOSAL \u2014 untested; not a publisher storage instruction. Cook fully 1 day ahead; divide into shallow containers and refrigerate promptly. Reheat thoroughly before serving; sauce usually tolerates this better than last-minute cooking.",
+              "phase": "cooking",
+              "unattended": false
+            },
+            "interval": {
+              "start": "2026-11-01T16:40:00Z",
+              "end": "2026-11-01T17:10:00Z"
+            },
+            "person": "host"
+          },
+          {
+            "task": {
+              "id": "4076c09a-c77f-81a0-8f19-f69b0348138d:0:notion-step-3",
+              "title": "Instant Pot Butter Chicken \u00b7 Finish sauce (batch 1)",
+              "recipe_id": "4076c09a-c77f-81a0-8f19-f69b0348138d",
+              "dependencies": [
+                "4076c09a-c77f-81a0-8f19-f69b0348138d:0:notion-step-2"
+              ],
+              "minutes": 10,
+              "active_minutes": 10,
+              "presence_minutes": 10,
+              "skill": "cook",
+              "resource": null,
+              "capacity": 1,
+              "temperature": null,
+              "eligible": null,
+              "max_ahead_hours": 36.0,
+              "evidence": "Notion home-cook timing draft (estimate)",
+              "ingredients": [],
+              "guidance": "Day-before cooking proposal; refrigerate promptly and reheat thoroughly before serving. CHEF PROPOSAL \u2014 untested; not a publisher storage instruction. Cook fully 1 day ahead; divide into shallow containers and refrigerate promptly. Reheat thoroughly before serving; sauce usually tolerates this better than last-minute cooking.",
+              "phase": "cooking",
+              "unattended": false
+            },
+            "interval": {
+              "start": "2026-11-01T17:10:00Z",
+              "end": "2026-11-01T17:20:00Z"
+            },
+            "person": "host"
+          },
+          {
+            "task": {
+              "id": "4076c09a-c77f-81a0-8f19-f69b0348138d:0:notion-reheat",
+              "title": "Instant Pot Butter Chicken \u00b7 Reheat thoroughly before serving (batch 1)",
+              "recipe_id": "4076c09a-c77f-81a0-8f19-f69b0348138d",
+              "dependencies": [
+                "4076c09a-c77f-81a0-8f19-f69b0348138d:0:notion-step-3"
+              ],
+              "minutes": 20,
+              "active_minutes": 5,
+              "presence_minutes": 20,
+              "skill": "cook",
+              "resource": "stovetop",
+              "capacity": 1,
+              "temperature": null,
+              "eligible": null,
+              "max_ahead_hours": 2.0,
+              "evidence": "Chef planning estimate; verify temperature and batch capacity",
+              "ingredients": [],
+              "guidance": null,
+              "phase": "cooking",
+              "unattended": false
+            },
+            "interval": {
+              "start": "2026-11-01T21:05:00Z",
+              "end": "2026-11-01T21:25:00Z"
+            },
+            "person": "host"
+          },
+          {
+            "task": {
+              "id": "4076c09a-c77f-81a0-8f19-f69b0348138d:1:notion-step-1",
+              "title": "Instant Pot Butter Chicken \u00b7 Cut chicken and measure sauce ingredients (batch 2)",
+              "recipe_id": "4076c09a-c77f-81a0-8f19-f69b0348138d",
+              "dependencies": [],
+              "minutes": 15,
+              "active_minutes": 15,
+              "presence_minutes": 15,
+              "skill": "cook",
+              "resource": null,
+              "capacity": 1,
+              "temperature": null,
+              "eligible": null,
+              "max_ahead_hours": 36.0,
+              "evidence": "Notion home-cook timing draft (estimate)",
+              "ingredients": [],
+              "guidance": "Day-before cooking proposal; refrigerate promptly and reheat thoroughly before serving. CHEF PROPOSAL \u2014 untested; not a publisher storage instruction. Cook fully 1 day ahead; divide into shallow containers and refrigerate promptly. Reheat thoroughly before serving; sauce usually tolerates this better than last-minute cooking.",
+              "phase": "cooking",
+              "unattended": false
+            },
+            "interval": {
+              "start": "2026-11-01T21:10:00Z",
+              "end": "2026-11-01T21:25:00Z"
+            },
+            "person": "host"
+          },
+          {
+            "task": {
+              "id": "cleanup:1",
+              "title": "Cleanup",
+              "recipe_id": "",
+              "dependencies": [],
+              "minutes": 15,
+              "active_minutes": null,
+              "presence_minutes": null,
+              "skill": "cook",
+              "resource": null,
+              "capacity": 1,
+              "temperature": null,
+              "eligible": null,
+              "max_ahead_hours": null,
+              "evidence": "Planning allowance: 15-minute cleanup estimate",
+              "ingredients": [],
+              "guidance": null,
+              "phase": "cleanup",
+              "unattended": false
+            },
+            "interval": {
+              "start": "2026-10-30T23:25:00Z",
+              "end": "2026-10-30T23:40:00Z"
+            },
+            "person": "host"
+          },
+          {
+            "task": {
+              "id": "cleanup:2",
+              "title": "Cleanup",
+              "recipe_id": "",
+              "dependencies": [],
+              "minutes": 15,
+              "active_minutes": null,
+              "presence_minutes": null,
+              "skill": "cook",
+              "resource": null,
+              "capacity": 1,
+              "temperature": null,
+              "eligible": null,
+              "max_ahead_hours": null,
+              "evidence": "Planning allowance: 15-minute cleanup estimate",
+              "ingredients": [],
+              "guidance": null,
+              "phase": "cleanup",
+              "unattended": false
+            },
+            "interval": {
+              "start": "2026-10-31T18:25:00Z",
+              "end": "2026-10-31T18:40:00Z"
+            },
+            "person": "host"
+          },
+          {
+            "task": {
+              "id": "cleanup:3",
+              "title": "Cleanup",
+              "recipe_id": "",
+              "dependencies": [],
+              "minutes": 15,
+              "active_minutes": null,
+              "presence_minutes": null,
+              "skill": "cook",
+              "resource": null,
+              "capacity": 1,
+              "temperature": null,
+              "eligible": null,
+              "max_ahead_hours": null,
+              "evidence": "Planning allowance: 15-minute cleanup estimate",
+              "ingredients": [],
+              "guidance": null,
+              "phase": "cleanup",
+              "unattended": false
+            },
+            "interval": {
+              "start": "2026-11-01T21:25:00Z",
+              "end": "2026-11-01T21:40:00Z"
+            },
+            "person": "host"
+          }
+        ],
+        "shopping": [
+          {
+            "name": "ghee",
+            "quantity": 12.5,
+            "unit": "tbsp"
+          },
+          {
+            "name": "long-grain basmati rice",
+            "quantity": 2.5,
+            "unit": "cup"
+          },
+          {
+            "name": "water",
+            "quantity": 15.0,
+            "unit": "cup"
+          },
+          {
+            "name": "kosher salt",
+            "quantity": 17.8125,
+            "unit": "tsp"
+          },
+          {
+            "name": "shah jeera",
+            "quantity": 2.5,
+            "unit": "tsp"
+          },
+          {
+            "name": "1 Indian bay leaf",
+            "quantity": null,
+            "unit": null
+          },
+          {
+            "name": "6 cloves",
+            "quantity": 15.0,
+            "unit": "cloves"
+          },
+          {
+            "name": "12 black peppercorns",
+            "quantity": null,
+            "unit": null
+          },
+          {
+            "name": "3 green cardamom pods",
+            "quantity": null,
+            "unit": null
+          },
+          {
+            "name": "1 medium yellow onion (thinly sliced)",
+            "quantity": null,
+            "unit": null
+          },
+          {
+            "name": "cauliflower (cut into 1-inch florets)",
+            "quantity": 5.0,
+            "unit": "cup"
+          },
+          {
+            "name": "2 carrots (cut into 2-inch X \u00bc inch thin strips)",
+            "quantity": null,
+            "unit": null
+          },
+          {
+            "name": "green beans (diagonally cut into 1 inch pieces)",
+            "quantity": 2.5,
+            "unit": "cup"
+          },
+          {
+            "name": "frozen green peas",
+            "quantity": 1.25,
+            "unit": "cup"
+          },
+          {
+            "name": "frozen corn",
+            "quantity": 1.25,
+            "unit": "cup"
+          },
+          {
+            "name": "garam Masala",
+            "quantity": 7.291667,
+            "unit": "tsp"
+          },
+          {
+            "name": "16 cashews",
+            "quantity": null,
+            "unit": null
+          },
+          {
+            "name": "black gram beans ((adzuki beans or whole brown lentils) **)",
+            "quantity": 2.5,
+            "unit": "cup"
+          },
+          {
+            "name": "red kidney beans (**)",
+            "quantity": 0.833333,
+            "unit": "cup"
+          },
+          {
+            "name": "oil ((ghee or butter))",
+            "quantity": 2.5,
+            "unit": "tbsp"
+          },
+          {
+            "name": "cumin seeds",
+            "quantity": 2.5,
+            "unit": "tsp"
+          },
+          {
+            "name": "1 medium yellow onion (finely diced)",
+            "quantity": null,
+            "unit": null
+          },
+          {
+            "name": "ginger (paste)",
+            "quantity": 2.5,
+            "unit": "tbsp"
+          },
+          {
+            "name": "garlic (paste )",
+            "quantity": 2.5,
+            "unit": "tbsp"
+          },
+          {
+            "name": "ground turmeric",
+            "quantity": 2.395833,
+            "unit": "tsp"
+          },
+          {
+            "name": "Kashmiri red chili powder",
+            "quantity": 5.0,
+            "unit": "tsp"
+          },
+          {
+            "name": "tomatoes (diced )",
+            "quantity": 5.0,
+            "unit": "cup"
+          },
+          {
+            "name": "light cream (**)",
+            "quantity": 1.25,
+            "unit": "cup"
+          },
+          {
+            "name": "cilantro (chopped )",
+            "quantity": 0.625,
+            "unit": "cup"
+          },
+          {
+            "name": "kasoori methi (dried fenugreek leaves) (optional)",
+            "quantity": 2.5,
+            "unit": "tbsp"
+          },
+          {
+            "name": "brown rice (rinsed and drained )",
+            "quantity": 2.5,
+            "unit": "cup"
+          },
+          {
+            "name": "salt",
+            "quantity": 2.5,
+            "unit": "tsp"
+          },
+          {
+            "name": "boneless skinless chicken thighs (cut into 2-inch pieces)",
+            "quantity": 3.3333333333333335,
+            "unit": "lb"
+          },
+          {
+            "name": "ghee (or coconut oil)",
+            "quantity": 3.333333,
+            "unit": "tbsp"
+          },
+          {
+            "name": "1 large yellow onion (finely chopped)",
+            "quantity": null,
+            "unit": null
+          },
+          {
+            "name": "fresh ginger (grated)",
+            "quantity": 1.666667,
+            "unit": "tbsp"
+          },
+          {
+            "name": "fresh garlic (minced)",
+            "quantity": 1.666667,
+            "unit": "tbsp"
+          },
+          {
+            "name": "Kashmiri red chili powder",
+            "quantity": 3.541667,
+            "unit": "tbsp"
+          },
+          {
+            "name": "3 plum tomatoes (pureed)",
+            "quantity": null,
+            "unit": null
+          },
+          {
+            "name": "unsweetened full fat coconut milk (allow these to separate - DO NOT shake. Best if left in fridge overnight)",
+            "quantity": 1.6666666666666667,
+            "unit": "can"
+          },
+          {
+            "name": "tomato paste",
+            "quantity": 3.333333,
+            "unit": "tbsp"
+          },
+          {
+            "name": "kasoori methi (dried fenugreek leaves)",
+            "quantity": 5.208333,
+            "unit": "tbsp"
+          },
+          {
+            "name": "sugar (skip for paleo)",
+            "quantity": 3.333333,
+            "unit": "tsp"
+          },
+          {
+            "name": "cilantro (chopped, for garnish)",
+            "quantity": 0.833333,
+            "unit": "cup"
+          },
+          {
+            "name": "plain yogurt (full fat )",
+            "quantity": 0.9375,
+            "unit": "cup"
+          },
+          {
+            "name": "ginger paste",
+            "quantity": 0.9375,
+            "unit": "tbsp"
+          },
+          {
+            "name": "garlic paste",
+            "quantity": 0.9375,
+            "unit": "tbsp"
+          },
+          {
+            "name": "chat masala (optional)",
+            "quantity": 1.875,
+            "unit": "tsp"
+          },
+          {
+            "name": "1 lemon (juiced)",
+            "quantity": null,
+            "unit": null
+          },
+          {
+            "name": "smoked paprika (optional)",
+            "quantity": 1.875,
+            "unit": "tsp"
+          },
+          {
+            "name": "paneer (cut into 1-inch cubes)",
+            "quantity": 1.875,
+            "unit": "lb"
+          },
+          {
+            "name": "1 medium green pepper (cut into 1-inch cubes)",
+            "quantity": null,
+            "unit": null
+          },
+          {
+            "name": "1 medium red pepper (cut into 1-inch cubes)",
+            "quantity": null,
+            "unit": null
+          },
+          {
+            "name": "1 medium red onion (cut into 1-inch cubes)",
+            "quantity": null,
+            "unit": null
+          },
+          {
+            "name": "Prepared dessert",
+            "quantity": 15.0,
+            "unit": "servings"
+          },
+          {
+            "name": "Ready-to-serve drinks",
+            "quantity": 15.0,
+            "unit": "servings"
+          }
+        ],
+        "checklist": [
+          "Keep dishes warm as directed",
+          "Transfer to serving dishes",
+          "Check serving spoons",
+          "Finish drinks"
+        ],
+        "status": "conflict",
+        "violations": [
+          {
+            "code": "unscheduled",
+            "affected_ids": [
+              "4076c09a-c77f-81a0-8f19-f69b0348138d:1:notion-step-2",
+              "4076c09a-c77f-81a0-8f19-f69b0348138d:1:notion-step-3",
+              "4076c09a-c77f-81a0-8f19-f69b0348138d:1:notion-reheat",
+              "4076c09a-c77f-81ca-9869-d9565d1d4e21:0:notion-step-1",
+              "4076c09a-c77f-81ca-9869-d9565d1d4e21:0:notion-step-2",
+              "4076c09a-c77f-81ca-9869-d9565d1d4e21:0:notion-step-3",
+              "4076c09a-c77f-81ca-9869-d9565d1d4e21:1:notion-step-1",
+              "4076c09a-c77f-81ca-9869-d9565d1d4e21:1:notion-step-2",
+              "4076c09a-c77f-81ca-9869-d9565d1d4e21:1:notion-step-3"
+            ],
+            "explanation": "Some preparation tasks have no feasible slot",
+            "evidence": null
+          }
+        ],
+        "adjustments": []
+      }
+    },
+    {
+      "scenario": "bought paneer starter",
+      "status": "conflict",
+      "menu": [
+        "Vegetable Pulao Recipe | Veg Pulav",
+        "Instant Pot Dal Makhani with Brown Rice",
+        "Instant Pot Butter Chicken",
+        "Air Fryer Paneer Tikka",
+        "Prepared dessert",
+        "Ready-to-serve drinks"
+      ],
+      "daily_minutes": {
+        "2026-10-31": 130,
+        "2026-10-30": 65,
+        "2026-11-01": 135
+      },
+      "plan": {
+        "id": "79913db5-6830-421e-a9e0-76ed7df66f8d",
+        "gathering_id": "cf24d0e3-cf40-434b-b70d-b5b9dd4cab7b",
+        "revision": 1,
+        "input_hash": "384d0b8d311c342800ef1f012aec433db560dbde128a793eb013944422f2d8d3",
+        "content_hash": "f64628fb9c23c796620e011157b24c42c8bda8f3ae90a8372d86689443dd875e",
+        "assignments": [
+          {
+            "task": {
+              "id": "4076c09a-c77f-81d5-b19a-dde806211e86:0:notion-step-1",
+              "title": "Vegetable Pulao Recipe | Veg Pulav \u00b7 Chop vegetables and measure spices; rinse rice on cooking day (batch 1)",
+              "recipe_id": "4076c09a-c77f-81d5-b19a-dde806211e86",
+              "dependencies": [],
+              "minutes": 35,
+              "active_minutes": 25,
+              "presence_minutes": 25,
+              "skill": "cook",
+              "resource": null,
+              "capacity": 1,
+              "temperature": null,
+              "eligible": null,
+              "max_ahead_hours": 48.0,
+              "evidence": "Notion home-cook timing draft (estimate)",
+              "ingredients": [],
+              "guidance": "CHEF PROPOSAL \u2014 untested; not a publisher storage instruction. Wash/chop vegetables and measure spices 1 day ahead. Cook rice on party day, then hold hot or refrigerate promptly; rice quality drops if repeatedly warmed. Contains cashews in the listed recipe.",
+              "phase": "cooking",
+              "unattended": false
+            },
+            "interval": {
+              "start": "2026-10-30T22:25:00Z",
+              "end": "2026-10-30T23:00:00Z"
+            },
+            "person": "host"
+          },
+          {
+            "task": {
+              "id": "4076c09a-c77f-81d5-b19a-dde806211e86:0:notion-step-2",
+              "title": "Vegetable Pulao Recipe | Veg Pulav \u00b7 Saute vegetables and spices (batch 1)",
+              "recipe_id": "4076c09a-c77f-81d5-b19a-dde806211e86",
+              "dependencies": [
+                "4076c09a-c77f-81d5-b19a-dde806211e86:0:notion-step-1"
+              ],
+              "minutes": 10,
+              "active_minutes": 10,
+              "presence_minutes": 10,
+              "skill": "cook",
+              "resource": "stovetop",
+              "capacity": 1,
+              "temperature": null,
+              "eligible": null,
+              "max_ahead_hours": 8.0,
+              "evidence": "Notion home-cook timing draft (estimate)",
+              "ingredients": [],
+              "guidance": "CHEF PROPOSAL \u2014 untested; not a publisher storage instruction. Wash/chop vegetables and measure spices 1 day ahead. Cook rice on party day, then hold hot or refrigerate promptly; rice quality drops if repeatedly warmed. Contains cashews in the listed recipe.",
+              "phase": "cooking",
+              "unattended": false
+            },
+            "interval": {
+              "start": "2026-11-01T15:30:00Z",
+              "end": "2026-11-01T15:40:00Z"
+            },
+            "person": "host"
+          },
+          {
+            "task": {
+              "id": "4076c09a-c77f-81d5-b19a-dde806211e86:0:notion-step-3",
+              "title": "Vegetable Pulao Recipe | Veg Pulav \u00b7 Cook rice and rest (batch 1)",
+              "recipe_id": "4076c09a-c77f-81d5-b19a-dde806211e86",
+              "dependencies": [
+                "4076c09a-c77f-81d5-b19a-dde806211e86:0:notion-step-2"
+              ],
+              "minutes": 30,
+              "active_minutes": 5,
+              "presence_minutes": 5,
+              "skill": "cook",
+              "resource": "stovetop",
+              "capacity": 1,
+              "temperature": null,
+              "eligible": null,
+              "max_ahead_hours": 8.0,
+              "evidence": "Notion home-cook timing draft (estimate)",
+              "ingredients": [],
+              "guidance": "CHEF PROPOSAL \u2014 untested; not a publisher storage instruction. Wash/chop vegetables and measure spices 1 day ahead. Cook rice on party day, then hold hot or refrigerate promptly; rice quality drops if repeatedly warmed. Contains cashews in the listed recipe.",
+              "phase": "cooking",
+              "unattended": false
+            },
+            "interval": {
+              "start": "2026-11-01T15:40:00Z",
+              "end": "2026-11-01T16:10:00Z"
+            },
+            "person": "host"
+          },
+          {
+            "task": {
+              "id": "4076c09a-c77f-81d5-b19a-dde806211e86:1:notion-step-1",
+              "title": "Vegetable Pulao Recipe | Veg Pulav \u00b7 Chop vegetables and measure spices; rinse rice on cooking day (batch 2)",
+              "recipe_id": "4076c09a-c77f-81d5-b19a-dde806211e86",
+              "dependencies": [],
+              "minutes": 35,
+              "active_minutes": 25,
+              "presence_minutes": 25,
+              "skill": "cook",
+              "resource": null,
+              "capacity": 1,
+              "temperature": null,
+              "eligible": null,
+              "max_ahead_hours": 48.0,
+              "evidence": "Notion home-cook timing draft (estimate)",
+              "ingredients": [],
+              "guidance": "CHEF PROPOSAL \u2014 untested; not a publisher storage instruction. Wash/chop vegetables and measure spices 1 day ahead. Cook rice on party day, then hold hot or refrigerate promptly; rice quality drops if repeatedly warmed. Contains cashews in the listed recipe.",
+              "phase": "cooking",
+              "unattended": false
+            },
+            "interval": {
+              "start": "2026-10-30T22:50:00Z",
+              "end": "2026-10-30T23:25:00Z"
+            },
+            "person": "host"
+          },
+          {
+            "task": {
+              "id": "4076c09a-c77f-81d5-b19a-dde806211e86:1:notion-step-2",
+              "title": "Vegetable Pulao Recipe | Veg Pulav \u00b7 Saute vegetables and spices (batch 2)",
+              "recipe_id": "4076c09a-c77f-81d5-b19a-dde806211e86",
+              "dependencies": [
+                "4076c09a-c77f-81d5-b19a-dde806211e86:1:notion-step-1"
+              ],
+              "minutes": 10,
+              "active_minutes": 10,
+              "presence_minutes": 10,
+              "skill": "cook",
+              "resource": "stovetop",
+              "capacity": 1,
+              "temperature": null,
+              "eligible": null,
+              "max_ahead_hours": 8.0,
+              "evidence": "Notion home-cook timing draft (estimate)",
+              "ingredients": [],
+              "guidance": "CHEF PROPOSAL \u2014 untested; not a publisher storage instruction. Wash/chop vegetables and measure spices 1 day ahead. Cook rice on party day, then hold hot or refrigerate promptly; rice quality drops if repeatedly warmed. Contains cashews in the listed recipe.",
+              "phase": "cooking",
+              "unattended": false
+            },
+            "interval": {
+              "start": "2026-11-01T15:45:00Z",
+              "end": "2026-11-01T15:55:00Z"
+            },
+            "person": "host"
+          },
+          {
+            "task": {
+              "id": "4076c09a-c77f-81d5-b19a-dde806211e86:1:notion-step-3",
+              "title": "Vegetable Pulao Recipe | Veg Pulav \u00b7 Cook rice and rest (batch 2)",
+              "recipe_id": "4076c09a-c77f-81d5-b19a-dde806211e86",
+              "dependencies": [
+                "4076c09a-c77f-81d5-b19a-dde806211e86:1:notion-step-2"
+              ],
+              "minutes": 30,
+              "active_minutes": 5,
+              "presence_minutes": 5,
+              "skill": "cook",
+              "resource": "stovetop",
+              "capacity": 1,
+              "temperature": null,
+              "eligible": null,
+              "max_ahead_hours": 8.0,
+              "evidence": "Notion home-cook timing draft (estimate)",
+              "ingredients": [],
+              "guidance": "CHEF PROPOSAL \u2014 untested; not a publisher storage instruction. Wash/chop vegetables and measure spices 1 day ahead. Cook rice on party day, then hold hot or refrigerate promptly; rice quality drops if repeatedly warmed. Contains cashews in the listed recipe.",
+              "phase": "cooking",
+              "unattended": false
+            },
+            "interval": {
+              "start": "2026-11-01T15:55:00Z",
+              "end": "2026-11-01T16:25:00Z"
+            },
+            "person": "host"
+          },
+          {
+            "task": {
+              "id": "4076c09a-c77f-81d5-b19a-dde806211e86:2:notion-step-1",
+              "title": "Vegetable Pulao Recipe | Veg Pulav \u00b7 Chop vegetables and measure spices; rinse rice on cooking day (batch 3)",
+              "recipe_id": "4076c09a-c77f-81d5-b19a-dde806211e86",
+              "dependencies": [],
+              "minutes": 35,
+              "active_minutes": 25,
+              "presence_minutes": 25,
+              "skill": "cook",
+              "resource": null,
+              "capacity": 1,
+              "temperature": null,
+              "eligible": null,
+              "max_ahead_hours": 48.0,
+              "evidence": "Notion home-cook timing draft (estimate)",
+              "ingredients": [],
+              "guidance": "CHEF PROPOSAL \u2014 untested; not a publisher storage instruction. Wash/chop vegetables and measure spices 1 day ahead. Cook rice on party day, then hold hot or refrigerate promptly; rice quality drops if repeatedly warmed. Contains cashews in the listed recipe.",
+              "phase": "cooking",
+              "unattended": false
+            },
+            "interval": {
+              "start": "2026-10-31T14:30:00Z",
+              "end": "2026-10-31T15:05:00Z"
+            },
+            "person": "host"
+          },
+          {
+            "task": {
+              "id": "4076c09a-c77f-81d5-b19a-dde806211e86:2:notion-step-2",
+              "title": "Vegetable Pulao Recipe | Veg Pulav \u00b7 Saute vegetables and spices (batch 3)",
+              "recipe_id": "4076c09a-c77f-81d5-b19a-dde806211e86",
+              "dependencies": [
+                "4076c09a-c77f-81d5-b19a-dde806211e86:2:notion-step-1"
+              ],
+              "minutes": 10,
+              "active_minutes": 10,
+              "presence_minutes": 10,
+              "skill": "cook",
+              "resource": "stovetop",
+              "capacity": 1,
+              "temperature": null,
+              "eligible": null,
+              "max_ahead_hours": 8.0,
+              "evidence": "Notion home-cook timing draft (estimate)",
+              "ingredients": [],
+              "guidance": "CHEF PROPOSAL \u2014 untested; not a publisher storage instruction. Wash/chop vegetables and measure spices 1 day ahead. Cook rice on party day, then hold hot or refrigerate promptly; rice quality drops if repeatedly warmed. Contains cashews in the listed recipe.",
+              "phase": "cooking",
+              "unattended": false
+            },
+            "interval": {
+              "start": "2026-11-01T16:10:00Z",
+              "end": "2026-11-01T16:20:00Z"
+            },
+            "person": "host"
+          },
+          {
+            "task": {
+              "id": "4076c09a-c77f-81d5-b19a-dde806211e86:2:notion-step-3",
+              "title": "Vegetable Pulao Recipe | Veg Pulav \u00b7 Cook rice and rest (batch 3)",
+              "recipe_id": "4076c09a-c77f-81d5-b19a-dde806211e86",
+              "dependencies": [
+                "4076c09a-c77f-81d5-b19a-dde806211e86:2:notion-step-2"
+              ],
+              "minutes": 30,
+              "active_minutes": 5,
+              "presence_minutes": 5,
+              "skill": "cook",
+              "resource": "stovetop",
+              "capacity": 1,
+              "temperature": null,
+              "eligible": null,
+              "max_ahead_hours": 8.0,
+              "evidence": "Notion home-cook timing draft (estimate)",
+              "ingredients": [],
+              "guidance": "CHEF PROPOSAL \u2014 untested; not a publisher storage instruction. Wash/chop vegetables and measure spices 1 day ahead. Cook rice on party day, then hold hot or refrigerate promptly; rice quality drops if repeatedly warmed. Contains cashews in the listed recipe.",
+              "phase": "cooking",
+              "unattended": false
+            },
+            "interval": {
+              "start": "2026-11-01T16:20:00Z",
+              "end": "2026-11-01T16:50:00Z"
+            },
+            "person": "host"
+          },
+          {
+            "task": {
+              "id": "4076c09a-c77f-81ee-933a-d7fb512817dc:0:notion-step-1",
+              "title": "Instant Pot Dal Makhani with Brown Rice \u00b7 Rinse lentils and measure ingredients (batch 1)",
+              "recipe_id": "4076c09a-c77f-81ee-933a-d7fb512817dc",
+              "dependencies": [],
+              "minutes": 15,
+              "active_minutes": 15,
+              "presence_minutes": 15,
+              "skill": "cook",
+              "resource": null,
+              "capacity": 1,
+              "temperature": null,
+              "eligible": null,
+              "max_ahead_hours": 36.0,
+              "evidence": "Notion home-cook timing draft (estimate)",
+              "ingredients": [],
+              "guidance": "Day-before cooking proposal; refrigerate promptly and reheat thoroughly before serving. Main, vegetarian. Prepare ingredients: source prep 10 min. Pressure-cook: source cook 50 min with much of the time unattended; 10-15 min active/presence estimate. Cleanup: 10 min estimate. The author cooks it the night before parties and says refrigerated leftovers keep up to 5 days. If freezing, leave cream out until serving (author). Source: https://ministryofcurry.com/madras-lentils-daal-makhani-instant-pot/",
+              "phase": "cooking",
+              "unattended": false
+            },
+            "interval": {
+              "start": "2026-10-31T14:55:00Z",
+              "end": "2026-10-31T15:10:00Z"
+            },
+            "person": "host"
+          },
+          {
+            "task": {
+              "id": "4076c09a-c77f-81ee-933a-d7fb512817dc:0:notion-step-2",
+              "title": "Instant Pot Dal Makhani with Brown Rice \u00b7 Pressure cook and release (batch 1)",
+              "recipe_id": "4076c09a-c77f-81ee-933a-d7fb512817dc",
+              "dependencies": [
+                "4076c09a-c77f-81ee-933a-d7fb512817dc:0:notion-step-1"
+              ],
+              "minutes": 55,
+              "active_minutes": 5,
+              "presence_minutes": 5,
+              "skill": "cook",
+              "resource": "instant_pot",
+              "capacity": 1,
+              "temperature": null,
+              "eligible": null,
+              "max_ahead_hours": 36.0,
+              "evidence": "Notion home-cook timing draft (estimate)",
+              "ingredients": [],
+              "guidance": "Day-before cooking proposal; refrigerate promptly and reheat thoroughly before serving. Main, vegetarian. Prepare ingredients: source prep 10 min. Pressure-cook: source cook 50 min with much of the time unattended; 10-15 min active/presence estimate. Cleanup: 10 min estimate. The author cooks it the night before parties and says refrigerated leftovers keep up to 5 days. If freezing, leave cream out until serving (author). Source: https://ministryofcurry.com/madras-lentils-daal-makhani-instant-pot/",
+              "phase": "cooking",
+              "unattended": false
+            },
+            "interval": {
+              "start": "2026-10-31T15:10:00Z",
+              "end": "2026-10-31T16:05:00Z"
+            },
+            "person": "host"
+          },
+          {
+            "task": {
+              "id": "4076c09a-c77f-81ee-933a-d7fb512817dc:0:notion-step-3",
+              "title": "Instant Pot Dal Makhani with Brown Rice \u00b7 Finish with cream and seasoning (batch 1)",
+              "recipe_id": "4076c09a-c77f-81ee-933a-d7fb512817dc",
+              "dependencies": [
+                "4076c09a-c77f-81ee-933a-d7fb512817dc:0:notion-step-2"
+              ],
+              "minutes": 10,
+              "active_minutes": 10,
+              "presence_minutes": 10,
+              "skill": "cook",
+              "resource": null,
+              "capacity": 1,
+              "temperature": null,
+              "eligible": null,
+              "max_ahead_hours": 36.0,
+              "evidence": "Notion home-cook timing draft (estimate)",
+              "ingredients": [],
+              "guidance": "Day-before cooking proposal; refrigerate promptly and reheat thoroughly before serving. Main, vegetarian. Prepare ingredients: source prep 10 min. Pressure-cook: source cook 50 min with much of the time unattended; 10-15 min active/presence estimate. Cleanup: 10 min estimate. The author cooks it the night before parties and says refrigerated leftovers keep up to 5 days. If freezing, leave cream out until serving (author). Source: https://ministryofcurry.com/madras-lentils-daal-makhani-instant-pot/",
+              "phase": "cooking",
+              "unattended": false
+            },
+            "interval": {
+              "start": "2026-10-31T16:05:00Z",
+              "end": "2026-10-31T16:15:00Z"
+            },
+            "person": "host"
+          },
+          {
+            "task": {
+              "id": "4076c09a-c77f-81ee-933a-d7fb512817dc:0:notion-reheat",
+              "title": "Instant Pot Dal Makhani with Brown Rice \u00b7 Reheat thoroughly before serving (batch 1)",
+              "recipe_id": "4076c09a-c77f-81ee-933a-d7fb512817dc",
+              "dependencies": [
+                "4076c09a-c77f-81ee-933a-d7fb512817dc:0:notion-step-3"
+              ],
+              "minutes": 20,
+              "active_minutes": 5,
+              "presence_minutes": 20,
+              "skill": "cook",
+              "resource": "stovetop",
+              "capacity": 1,
+              "temperature": null,
+              "eligible": null,
+              "max_ahead_hours": 2.0,
+              "evidence": "Chef planning estimate; verify temperature and batch capacity",
+              "ingredients": [],
+              "guidance": null,
+              "phase": "cooking",
+              "unattended": false
+            },
+            "interval": {
+              "start": "2026-11-01T20:40:00Z",
+              "end": "2026-11-01T21:00:00Z"
+            },
+            "person": "host"
+          },
+          {
+            "task": {
+              "id": "4076c09a-c77f-81ee-933a-d7fb512817dc:1:notion-step-1",
+              "title": "Instant Pot Dal Makhani with Brown Rice \u00b7 Rinse lentils and measure ingredients (batch 2)",
+              "recipe_id": "4076c09a-c77f-81ee-933a-d7fb512817dc",
+              "dependencies": [],
+              "minutes": 15,
+              "active_minutes": 15,
+              "presence_minutes": 15,
+              "skill": "cook",
+              "resource": null,
+              "capacity": 1,
+              "temperature": null,
+              "eligible": null,
+              "max_ahead_hours": 36.0,
+              "evidence": "Notion home-cook timing draft (estimate)",
+              "ingredients": [],
+              "guidance": "Day-before cooking proposal; refrigerate promptly and reheat thoroughly before serving. Main, vegetarian. Prepare ingredients: source prep 10 min. Pressure-cook: source cook 50 min with much of the time unattended; 10-15 min active/presence estimate. Cleanup: 10 min estimate. The author cooks it the night before parties and says refrigerated leftovers keep up to 5 days. If freezing, leave cream out until serving (author). Source: https://ministryofcurry.com/madras-lentils-daal-makhani-instant-pot/",
+              "phase": "cooking",
+              "unattended": false
+            },
+            "interval": {
+              "start": "2026-10-31T15:15:00Z",
+              "end": "2026-10-31T15:30:00Z"
+            },
+            "person": "host"
+          },
+          {
+            "task": {
+              "id": "4076c09a-c77f-81ee-933a-d7fb512817dc:1:notion-step-2",
+              "title": "Instant Pot Dal Makhani with Brown Rice \u00b7 Pressure cook and release (batch 2)",
+              "recipe_id": "4076c09a-c77f-81ee-933a-d7fb512817dc",
+              "dependencies": [
+                "4076c09a-c77f-81ee-933a-d7fb512817dc:1:notion-step-1"
+              ],
+              "minutes": 55,
+              "active_minutes": 5,
+              "presence_minutes": 5,
+              "skill": "cook",
+              "resource": "instant_pot",
+              "capacity": 1,
+              "temperature": null,
+              "eligible": null,
+              "max_ahead_hours": 36.0,
+              "evidence": "Notion home-cook timing draft (estimate)",
+              "ingredients": [],
+              "guidance": "Day-before cooking proposal; refrigerate promptly and reheat thoroughly before serving. Main, vegetarian. Prepare ingredients: source prep 10 min. Pressure-cook: source cook 50 min with much of the time unattended; 10-15 min active/presence estimate. Cleanup: 10 min estimate. The author cooks it the night before parties and says refrigerated leftovers keep up to 5 days. If freezing, leave cream out until serving (author). Source: https://ministryofcurry.com/madras-lentils-daal-makhani-instant-pot/",
+              "phase": "cooking",
+              "unattended": false
+            },
+            "interval": {
+              "start": "2026-10-31T16:15:00Z",
+              "end": "2026-10-31T17:10:00Z"
+            },
+            "person": "host"
+          },
+          {
+            "task": {
+              "id": "4076c09a-c77f-81ee-933a-d7fb512817dc:1:notion-step-3",
+              "title": "Instant Pot Dal Makhani with Brown Rice \u00b7 Finish with cream and seasoning (batch 2)",
+              "recipe_id": "4076c09a-c77f-81ee-933a-d7fb512817dc",
+              "dependencies": [
+                "4076c09a-c77f-81ee-933a-d7fb512817dc:1:notion-step-2"
+              ],
+              "minutes": 10,
+              "active_minutes": 10,
+              "presence_minutes": 10,
+              "skill": "cook",
+              "resource": null,
+              "capacity": 1,
+              "temperature": null,
+              "eligible": null,
+              "max_ahead_hours": 36.0,
+              "evidence": "Notion home-cook timing draft (estimate)",
+              "ingredients": [],
+              "guidance": "Day-before cooking proposal; refrigerate promptly and reheat thoroughly before serving. Main, vegetarian. Prepare ingredients: source prep 10 min. Pressure-cook: source cook 50 min with much of the time unattended; 10-15 min active/presence estimate. Cleanup: 10 min estimate. The author cooks it the night before parties and says refrigerated leftovers keep up to 5 days. If freezing, leave cream out until serving (author). Source: https://ministryofcurry.com/madras-lentils-daal-makhani-instant-pot/",
+              "phase": "cooking",
+              "unattended": false
+            },
+            "interval": {
+              "start": "2026-10-31T17:10:00Z",
+              "end": "2026-10-31T17:20:00Z"
+            },
+            "person": "host"
+          },
+          {
+            "task": {
+              "id": "4076c09a-c77f-81ee-933a-d7fb512817dc:1:notion-reheat",
+              "title": "Instant Pot Dal Makhani with Brown Rice \u00b7 Reheat thoroughly before serving (batch 2)",
+              "recipe_id": "4076c09a-c77f-81ee-933a-d7fb512817dc",
+              "dependencies": [
+                "4076c09a-c77f-81ee-933a-d7fb512817dc:1:notion-step-3"
+              ],
+              "minutes": 20,
+              "active_minutes": 5,
+              "presence_minutes": 20,
+              "skill": "cook",
+              "resource": "stovetop",
+              "capacity": 1,
+              "temperature": null,
+              "eligible": null,
+              "max_ahead_hours": 2.0,
+              "evidence": "Chef planning estimate; verify temperature and batch capacity",
+              "ingredients": [],
+              "guidance": null,
+              "phase": "cooking",
+              "unattended": false
+            },
+            "interval": {
+              "start": "2026-11-01T20:45:00Z",
+              "end": "2026-11-01T21:05:00Z"
+            },
+            "person": "host"
+          },
+          {
+            "task": {
+              "id": "4076c09a-c77f-81ee-933a-d7fb512817dc:2:notion-step-1",
+              "title": "Instant Pot Dal Makhani with Brown Rice \u00b7 Rinse lentils and measure ingredients (batch 3)",
+              "recipe_id": "4076c09a-c77f-81ee-933a-d7fb512817dc",
+              "dependencies": [],
+              "minutes": 15,
+              "active_minutes": 15,
+              "presence_minutes": 15,
+              "skill": "cook",
+              "resource": null,
+              "capacity": 1,
+              "temperature": null,
+              "eligible": null,
+              "max_ahead_hours": 36.0,
+              "evidence": "Notion home-cook timing draft (estimate)",
+              "ingredients": [],
+              "guidance": "Day-before cooking proposal; refrigerate promptly and reheat thoroughly before serving. Main, vegetarian. Prepare ingredients: source prep 10 min. Pressure-cook: source cook 50 min with much of the time unattended; 10-15 min active/presence estimate. Cleanup: 10 min estimate. The author cooks it the night before parties and says refrigerated leftovers keep up to 5 days. If freezing, leave cream out until serving (author). Source: https://ministryofcurry.com/madras-lentils-daal-makhani-instant-pot/",
+              "phase": "cooking",
+              "unattended": false
+            },
+            "interval": {
+              "start": "2026-10-31T15:30:00Z",
+              "end": "2026-10-31T15:45:00Z"
+            },
+            "person": "host"
+          },
+          {
+            "task": {
+              "id": "4076c09a-c77f-81ee-933a-d7fb512817dc:2:notion-step-2",
+              "title": "Instant Pot Dal Makhani with Brown Rice \u00b7 Pressure cook and release (batch 3)",
+              "recipe_id": "4076c09a-c77f-81ee-933a-d7fb512817dc",
+              "dependencies": [
+                "4076c09a-c77f-81ee-933a-d7fb512817dc:2:notion-step-1"
+              ],
+              "minutes": 55,
+              "active_minutes": 5,
+              "presence_minutes": 5,
+              "skill": "cook",
+              "resource": "instant_pot",
+              "capacity": 1,
+              "temperature": null,
+              "eligible": null,
+              "max_ahead_hours": 36.0,
+              "evidence": "Notion home-cook timing draft (estimate)",
+              "ingredients": [],
+              "guidance": "Day-before cooking proposal; refrigerate promptly and reheat thoroughly before serving. Main, vegetarian. Prepare ingredients: source prep 10 min. Pressure-cook: source cook 50 min with much of the time unattended; 10-15 min active/presence estimate. Cleanup: 10 min estimate. The author cooks it the night before parties and says refrigerated leftovers keep up to 5 days. If freezing, leave cream out until serving (author). Source: https://ministryofcurry.com/madras-lentils-daal-makhani-instant-pot/",
+              "phase": "cooking",
+              "unattended": false
+            },
+            "interval": {
+              "start": "2026-10-31T17:20:00Z",
+              "end": "2026-10-31T18:15:00Z"
+            },
+            "person": "host"
+          },
+          {
+            "task": {
+              "id": "4076c09a-c77f-81ee-933a-d7fb512817dc:2:notion-step-3",
+              "title": "Instant Pot Dal Makhani with Brown Rice \u00b7 Finish with cream and seasoning (batch 3)",
+              "recipe_id": "4076c09a-c77f-81ee-933a-d7fb512817dc",
+              "dependencies": [
+                "4076c09a-c77f-81ee-933a-d7fb512817dc:2:notion-step-2"
+              ],
+              "minutes": 10,
+              "active_minutes": 10,
+              "presence_minutes": 10,
+              "skill": "cook",
+              "resource": null,
+              "capacity": 1,
+              "temperature": null,
+              "eligible": null,
+              "max_ahead_hours": 36.0,
+              "evidence": "Notion home-cook timing draft (estimate)",
+              "ingredients": [],
+              "guidance": "Day-before cooking proposal; refrigerate promptly and reheat thoroughly before serving. Main, vegetarian. Prepare ingredients: source prep 10 min. Pressure-cook: source cook 50 min with much of the time unattended; 10-15 min active/presence estimate. Cleanup: 10 min estimate. The author cooks it the night before parties and says refrigerated leftovers keep up to 5 days. If freezing, leave cream out until serving (author). Source: https://ministryofcurry.com/madras-lentils-daal-makhani-instant-pot/",
+              "phase": "cooking",
+              "unattended": false
+            },
+            "interval": {
+              "start": "2026-10-31T18:15:00Z",
+              "end": "2026-10-31T18:25:00Z"
+            },
+            "person": "host"
+          },
+          {
+            "task": {
+              "id": "4076c09a-c77f-81ee-933a-d7fb512817dc:2:notion-reheat",
+              "title": "Instant Pot Dal Makhani with Brown Rice \u00b7 Reheat thoroughly before serving (batch 3)",
+              "recipe_id": "4076c09a-c77f-81ee-933a-d7fb512817dc",
+              "dependencies": [
+                "4076c09a-c77f-81ee-933a-d7fb512817dc:2:notion-step-3"
+              ],
+              "minutes": 20,
+              "active_minutes": 5,
+              "presence_minutes": 20,
+              "skill": "cook",
+              "resource": "stovetop",
+              "capacity": 1,
+              "temperature": null,
+              "eligible": null,
+              "max_ahead_hours": 2.0,
+              "evidence": "Chef planning estimate; verify temperature and batch capacity",
+              "ingredients": [],
+              "guidance": null,
+              "phase": "cooking",
+              "unattended": false
+            },
+            "interval": {
+              "start": "2026-11-01T21:00:00Z",
+              "end": "2026-11-01T21:20:00Z"
+            },
+            "person": "host"
+          },
+          {
+            "task": {
+              "id": "4076c09a-c77f-81a0-8f19-f69b0348138d:0:notion-step-1",
+              "title": "Instant Pot Butter Chicken \u00b7 Cut chicken and measure sauce ingredients (batch 1)",
+              "recipe_id": "4076c09a-c77f-81a0-8f19-f69b0348138d",
+              "dependencies": [],
+              "minutes": 15,
+              "active_minutes": 15,
+              "presence_minutes": 15,
+              "skill": "cook",
+              "resource": null,
+              "capacity": 1,
+              "temperature": null,
+              "eligible": null,
+              "max_ahead_hours": 36.0,
+              "evidence": "Notion home-cook timing draft (estimate)",
+              "ingredients": [],
+              "guidance": "Day-before cooking proposal; refrigerate promptly and reheat thoroughly before serving. CHEF PROPOSAL \u2014 untested; not a publisher storage instruction. Cook fully 1 day ahead; divide into shallow containers and refrigerate promptly. Reheat thoroughly before serving; sauce usually tolerates this better than last-minute cooking.",
+              "phase": "cooking",
+              "unattended": false
+            },
+            "interval": {
+              "start": "2026-11-01T16:25:00Z",
+              "end": "2026-11-01T16:40:00Z"
+            },
+            "person": "host"
+          },
+          {
+            "task": {
+              "id": "4076c09a-c77f-81a0-8f19-f69b0348138d:0:notion-step-2",
+              "title": "Instant Pot Butter Chicken \u00b7 Pressure cook and release (batch 1)",
+              "recipe_id": "4076c09a-c77f-81a0-8f19-f69b0348138d",
+              "dependencies": [
+                "4076c09a-c77f-81a0-8f19-f69b0348138d:0:notion-step-1"
+              ],
+              "minutes": 30,
+              "active_minutes": 5,
+              "presence_minutes": 5,
+              "skill": "cook",
+              "resource": "instant_pot",
+              "capacity": 1,
+              "temperature": null,
+              "eligible": null,
+              "max_ahead_hours": 36.0,
+              "evidence": "Notion home-cook timing draft (estimate)",
+              "ingredients": [],
+              "guidance": "Day-before cooking proposal; refrigerate promptly and reheat thoroughly before serving. CHEF PROPOSAL \u2014 untested; not a publisher storage instruction. Cook fully 1 day ahead; divide into shallow containers and refrigerate promptly. Reheat thoroughly before serving; sauce usually tolerates this better than last-minute cooking.",
+              "phase": "cooking",
+              "unattended": false
+            },
+            "interval": {
+              "start": "2026-11-01T16:40:00Z",
+              "end": "2026-11-01T17:10:00Z"
+            },
+            "person": "host"
+          },
+          {
+            "task": {
+              "id": "4076c09a-c77f-81a0-8f19-f69b0348138d:0:notion-step-3",
+              "title": "Instant Pot Butter Chicken \u00b7 Finish sauce (batch 1)",
+              "recipe_id": "4076c09a-c77f-81a0-8f19-f69b0348138d",
+              "dependencies": [
+                "4076c09a-c77f-81a0-8f19-f69b0348138d:0:notion-step-2"
+              ],
+              "minutes": 10,
+              "active_minutes": 10,
+              "presence_minutes": 10,
+              "skill": "cook",
+              "resource": null,
+              "capacity": 1,
+              "temperature": null,
+              "eligible": null,
+              "max_ahead_hours": 36.0,
+              "evidence": "Notion home-cook timing draft (estimate)",
+              "ingredients": [],
+              "guidance": "Day-before cooking proposal; refrigerate promptly and reheat thoroughly before serving. CHEF PROPOSAL \u2014 untested; not a publisher storage instruction. Cook fully 1 day ahead; divide into shallow containers and refrigerate promptly. Reheat thoroughly before serving; sauce usually tolerates this better than last-minute cooking.",
+              "phase": "cooking",
+              "unattended": false
+            },
+            "interval": {
+              "start": "2026-11-01T17:10:00Z",
+              "end": "2026-11-01T17:20:00Z"
+            },
+            "person": "host"
+          },
+          {
+            "task": {
+              "id": "4076c09a-c77f-81a0-8f19-f69b0348138d:0:notion-reheat",
+              "title": "Instant Pot Butter Chicken \u00b7 Reheat thoroughly before serving (batch 1)",
+              "recipe_id": "4076c09a-c77f-81a0-8f19-f69b0348138d",
+              "dependencies": [
+                "4076c09a-c77f-81a0-8f19-f69b0348138d:0:notion-step-3"
+              ],
+              "minutes": 20,
+              "active_minutes": 5,
+              "presence_minutes": 20,
+              "skill": "cook",
+              "resource": "stovetop",
+              "capacity": 1,
+              "temperature": null,
+              "eligible": null,
+              "max_ahead_hours": 2.0,
+              "evidence": "Chef planning estimate; verify temperature and batch capacity",
+              "ingredients": [],
+              "guidance": null,
+              "phase": "cooking",
+              "unattended": false
+            },
+            "interval": {
+              "start": "2026-11-01T21:05:00Z",
+              "end": "2026-11-01T21:25:00Z"
+            },
+            "person": "host"
+          },
+          {
+            "task": {
+              "id": "4076c09a-c77f-81a0-8f19-f69b0348138d:1:notion-step-1",
+              "title": "Instant Pot Butter Chicken \u00b7 Cut chicken and measure sauce ingredients (batch 2)",
+              "recipe_id": "4076c09a-c77f-81a0-8f19-f69b0348138d",
+              "dependencies": [],
+              "minutes": 15,
+              "active_minutes": 15,
+              "presence_minutes": 15,
+              "skill": "cook",
+              "resource": null,
+              "capacity": 1,
+              "temperature": null,
+              "eligible": null,
+              "max_ahead_hours": 36.0,
+              "evidence": "Notion home-cook timing draft (estimate)",
+              "ingredients": [],
+              "guidance": "Day-before cooking proposal; refrigerate promptly and reheat thoroughly before serving. CHEF PROPOSAL \u2014 untested; not a publisher storage instruction. Cook fully 1 day ahead; divide into shallow containers and refrigerate promptly. Reheat thoroughly before serving; sauce usually tolerates this better than last-minute cooking.",
+              "phase": "cooking",
+              "unattended": false
+            },
+            "interval": {
+              "start": "2026-11-01T21:10:00Z",
+              "end": "2026-11-01T21:25:00Z"
+            },
+            "person": "host"
+          },
+          {
+            "task": {
+              "id": "cleanup:1",
+              "title": "Cleanup",
+              "recipe_id": "",
+              "dependencies": [],
+              "minutes": 15,
+              "active_minutes": null,
+              "presence_minutes": null,
+              "skill": "cook",
+              "resource": null,
+              "capacity": 1,
+              "temperature": null,
+              "eligible": null,
+              "max_ahead_hours": null,
+              "evidence": "Planning allowance: 15-minute cleanup estimate",
+              "ingredients": [],
+              "guidance": null,
+              "phase": "cleanup",
+              "unattended": false
+            },
+            "interval": {
+              "start": "2026-10-30T23:25:00Z",
+              "end": "2026-10-30T23:40:00Z"
+            },
+            "person": "host"
+          },
+          {
+            "task": {
+              "id": "cleanup:2",
+              "title": "Cleanup",
+              "recipe_id": "",
+              "dependencies": [],
+              "minutes": 15,
+              "active_minutes": null,
+              "presence_minutes": null,
+              "skill": "cook",
+              "resource": null,
+              "capacity": 1,
+              "temperature": null,
+              "eligible": null,
+              "max_ahead_hours": null,
+              "evidence": "Planning allowance: 15-minute cleanup estimate",
+              "ingredients": [],
+              "guidance": null,
+              "phase": "cleanup",
+              "unattended": false
+            },
+            "interval": {
+              "start": "2026-10-31T18:25:00Z",
+              "end": "2026-10-31T18:40:00Z"
+            },
+            "person": "host"
+          },
+          {
+            "task": {
+              "id": "cleanup:3",
+              "title": "Cleanup",
+              "recipe_id": "",
+              "dependencies": [],
+              "minutes": 15,
+              "active_minutes": null,
+              "presence_minutes": null,
+              "skill": "cook",
+              "resource": null,
+              "capacity": 1,
+              "temperature": null,
+              "eligible": null,
+              "max_ahead_hours": null,
+              "evidence": "Planning allowance: 15-minute cleanup estimate",
+              "ingredients": [],
+              "guidance": null,
+              "phase": "cleanup",
+              "unattended": false
+            },
+            "interval": {
+              "start": "2026-11-01T21:25:00Z",
+              "end": "2026-11-01T21:40:00Z"
+            },
+            "person": "host"
+          }
+        ],
+        "shopping": [
+          {
+            "name": "ghee",
+            "quantity": 12.5,
+            "unit": "tbsp"
+          },
+          {
+            "name": "long-grain basmati rice",
+            "quantity": 2.5,
+            "unit": "cup"
+          },
+          {
+            "name": "water",
+            "quantity": 15.0,
+            "unit": "cup"
+          },
+          {
+            "name": "kosher salt",
+            "quantity": 15.0,
+            "unit": "tsp"
+          },
+          {
+            "name": "shah jeera",
+            "quantity": 2.5,
+            "unit": "tsp"
+          },
+          {
+            "name": "1 Indian bay leaf",
+            "quantity": null,
+            "unit": null
+          },
+          {
+            "name": "6 cloves",
+            "quantity": 15.0,
+            "unit": "cloves"
+          },
+          {
+            "name": "12 black peppercorns",
+            "quantity": null,
+            "unit": null
+          },
+          {
+            "name": "3 green cardamom pods",
+            "quantity": null,
+            "unit": null
+          },
+          {
+            "name": "1 medium yellow onion (thinly sliced)",
+            "quantity": null,
+            "unit": null
+          },
+          {
+            "name": "cauliflower (cut into 1-inch florets)",
+            "quantity": 5.0,
+            "unit": "cup"
+          },
+          {
+            "name": "2 carrots (cut into 2-inch X \u00bc inch thin strips)",
+            "quantity": null,
+            "unit": null
+          },
+          {
+            "name": "green beans (diagonally cut into 1 inch pieces)",
+            "quantity": 2.5,
+            "unit": "cup"
+          },
+          {
+            "name": "frozen green peas",
+            "quantity": 1.25,
+            "unit": "cup"
+          },
+          {
+            "name": "frozen corn",
+            "quantity": 1.25,
+            "unit": "cup"
+          },
+          {
+            "name": "garam Masala",
+            "quantity": 5.416667,
+            "unit": "tsp"
+          },
+          {
+            "name": "16 cashews",
+            "quantity": null,
+            "unit": null
+          },
+          {
+            "name": "black gram beans ((adzuki beans or whole brown lentils) **)",
+            "quantity": 2.5,
+            "unit": "cup"
+          },
+          {
+            "name": "red kidney beans (**)",
+            "quantity": 0.833333,
+            "unit": "cup"
+          },
+          {
+            "name": "oil ((ghee or butter))",
+            "quantity": 2.5,
+            "unit": "tbsp"
+          },
+          {
+            "name": "cumin seeds",
+            "quantity": 2.5,
+            "unit": "tsp"
+          },
+          {
+            "name": "1 medium yellow onion (finely diced)",
+            "quantity": null,
+            "unit": null
+          },
+          {
+            "name": "ginger (paste)",
+            "quantity": 2.5,
+            "unit": "tbsp"
+          },
+          {
+            "name": "garlic (paste )",
+            "quantity": 2.5,
+            "unit": "tbsp"
+          },
+          {
+            "name": "ground turmeric",
+            "quantity": 1.458333,
+            "unit": "tsp"
+          },
+          {
+            "name": "Kashmiri red chili powder",
+            "quantity": 5.0,
+            "unit": "tsp"
+          },
+          {
+            "name": "tomatoes (diced )",
+            "quantity": 5.0,
+            "unit": "cup"
+          },
+          {
+            "name": "light cream (**)",
+            "quantity": 1.25,
+            "unit": "cup"
+          },
+          {
+            "name": "cilantro (chopped )",
+            "quantity": 0.625,
+            "unit": "cup"
+          },
+          {
+            "name": "kasoori methi (dried fenugreek leaves) (optional)",
+            "quantity": 2.5,
+            "unit": "tbsp"
+          },
+          {
+            "name": "brown rice (rinsed and drained )",
+            "quantity": 2.5,
+            "unit": "cup"
+          },
+          {
+            "name": "salt",
+            "quantity": 2.5,
+            "unit": "tsp"
+          },
+          {
+            "name": "boneless skinless chicken thighs (cut into 2-inch pieces)",
+            "quantity": 3.3333333333333335,
+            "unit": "lb"
+          },
+          {
+            "name": "ghee (or coconut oil)",
+            "quantity": 3.333333,
+            "unit": "tbsp"
+          },
+          {
+            "name": "1 large yellow onion (finely chopped)",
+            "quantity": null,
+            "unit": null
+          },
+          {
+            "name": "fresh ginger (grated)",
+            "quantity": 1.666667,
+            "unit": "tbsp"
+          },
+          {
+            "name": "fresh garlic (minced)",
+            "quantity": 1.666667,
+            "unit": "tbsp"
+          },
+          {
+            "name": "Kashmiri red chili powder",
+            "quantity": 1.666667,
+            "unit": "tbsp"
+          },
+          {
+            "name": "3 plum tomatoes (pureed)",
+            "quantity": null,
+            "unit": null
+          },
+          {
+            "name": "unsweetened full fat coconut milk (allow these to separate - DO NOT shake. Best if left in fridge overnight)",
+            "quantity": 1.6666666666666667,
+            "unit": "can"
+          },
+          {
+            "name": "tomato paste",
+            "quantity": 3.333333,
+            "unit": "tbsp"
+          },
+          {
+            "name": "kasoori methi (dried fenugreek leaves)",
+            "quantity": 3.333333,
+            "unit": "tbsp"
+          },
+          {
+            "name": "sugar (skip for paleo)",
+            "quantity": 3.333333,
+            "unit": "tsp"
+          },
+          {
+            "name": "cilantro (chopped, for garnish)",
+            "quantity": 0.833333,
+            "unit": "cup"
+          },
+          {
+            "name": "Air Fryer Paneer Tikka",
+            "quantity": 15.0,
+            "unit": "servings"
+          },
+          {
+            "name": "Prepared dessert",
+            "quantity": 15.0,
+            "unit": "servings"
+          },
+          {
+            "name": "Ready-to-serve drinks",
+            "quantity": 15.0,
+            "unit": "servings"
+          }
+        ],
+        "checklist": [
+          "Keep dishes warm as directed",
+          "Transfer to serving dishes",
+          "Check serving spoons",
+          "Finish drinks"
+        ],
+        "status": "conflict",
+        "violations": [
+          {
+            "code": "unscheduled",
+            "affected_ids": [
+              "4076c09a-c77f-81a0-8f19-f69b0348138d:1:notion-step-2",
+              "4076c09a-c77f-81a0-8f19-f69b0348138d:1:notion-step-3",
+              "4076c09a-c77f-81a0-8f19-f69b0348138d:1:notion-reheat"
+            ],
+            "explanation": "Some preparation tasks have no feasible slot",
+            "evidence": null
+          }
+        ],
+        "adjustments": []
+      }
+    }
+  ]
+}

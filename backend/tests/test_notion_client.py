@@ -36,3 +36,17 @@ def test_ingredient_parser_keeps_unrecognized_quantities_visible():
     assert ingredient('1/2 cup yogurt').quantity==.5
     assert ingredient('1 1/2 cups rice').quantity==1.5
     assert ingredient('a handful of mint').name=='a handful of mint'
+
+def test_import_reserves_return_attention_after_waiting():
+    from simmer.domain import Assignment,Interval
+    from simmer.scheduler import occupancy_windows
+    page={'id':'r','properties':{'Recipe':{'title':[{'plain_text':'Roast'}]}}}
+    blocks=[{'type':'paragraph','paragraph':{'rich_text':[{'plain_text':'Roast and briefly broil; check doneness: 10 min hands-on + 40 min waiting/cooking'}]}}]
+    t=from_notion_details(page,blocks).tasks[0]
+    a=Assignment(task=t,interval=Interval(start='2026-11-01T17:00:00-05:00',end='2026-11-01T17:50:00-05:00'))
+    assert any(w.end==a.interval.end for w in occupancy_windows(a,[],True))
+
+def test_changed_unparsed_notion_method_never_restores_seed():
+    page={'id':'r','properties':{'Recipe':{'title':[{'plain_text':'Paneer'}]},'Source URL':{'url':'https://ministryofcurry.com/paneer-tikka/'}}}
+    blocks=[{'type':'paragraph','paragraph':{'rich_text':[{'plain_text':'Saute paneer on stovetop instead of air-frying; omit skewers.'}]}}]
+    assert from_notion_details(page,blocks).tasks==[]

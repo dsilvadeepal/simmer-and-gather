@@ -66,3 +66,16 @@ def test_deleted_saved_page_is_not_claimed_saved_or_recreated(store,owner):
     n.pages=[]
     assert p.recipe(owner,r.id,r.version)['status']=='unavailable'
     assert n.pages==[]
+
+def test_changed_recipe_blocks_plan_export(store,owner):
+    from test_booking import ready
+    from simmer.domain import PlanInputs
+    p=ready(store,owner)
+    inputs=PlanInputs.model_validate(store.get(owner,'plan',p.id)[0]['inputs'])
+    r=next(s.recipe for s in inputs.selections if s.recipe)
+    r=r.model_copy(update={'version':'newer'})
+    store.put(owner,'recipe',r.id,r.model_dump(mode='json'))
+    n=Notion()
+    with pytest.raises(Conflict,match='Recipe collection changed'):
+        NotionPublisher(store,n).plan(owner,p.id,p.revision,p.content_hash)
+    assert not n.pages

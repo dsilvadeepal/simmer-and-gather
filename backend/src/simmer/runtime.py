@@ -26,4 +26,5 @@ def build_text_model(store,owner,config):
         if len(json.dumps(messages,ensure_ascii=False).encode('utf-8'))>120_000: raise ValueError('Input cap exceeded')
         # Byte-bounded text and 2k output fit this reservation at the verified rates.
         return client.complete(messages,str(uuid4()),max_tokens=2000)
+    complete.model_id=MODEL
     return complete

@@ -65,7 +65,10 @@ class NotionPublisher:
         current,_=self.store.get(owner,'gathering',p.gathering_id)
         if p.revision!=revision or current['revision']!=revision or p.content_hash!=hash or content_hash(p)!=hash:
             raise Conflict('Plan changed; review the current version before saving to Notion')
-        if p.status!='feasible' or validate_schedule(inputs,p) or validate_menu(inputs):
+        from .recipe_readiness import changed_recipes
+        from .recipes import RecipeService
+        if changed_recipes(inputs,RecipeService(self.store).list_recipes(owner)): raise Conflict('Recipe collection changed; refresh selections and regenerate before saving')
+        if p.status!='feasible' or validate_schedule(inputs,p) or any(v.code!='menu_category' for v in validate_menu(inputs)):
             raise Conflict('Resolve plan issues before saving the final plan to Notion')
         g=inputs.gathering
         lines=[g.title,f'Plan revision: {revision}',f'Guests: {g.guests}; vegetarian guests: {g.vegetarian_guests}',f'Arrival: {g.arrival}; timezone: {g.profile.timezone}', 'This is a reviewed plan snapshot. Saving it does not approve or book calendar events.','Menu']

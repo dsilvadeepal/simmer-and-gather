@@ -66,12 +66,20 @@ class PlanningService:
         if inputs.gathering.revision!=expected_revision: raise Conflict('Gathering changed; reload')
         if availability: inputs.availability=availability
         graph=StateGraph(State)
-        graph.add_node('schedule',lambda state:{'plan':schedule(state['inputs'])})
+        stage_times={}
+        def build_schedule(state):
+            start=perf_counter(); result=schedule(state['inputs']); stage_times['build_prep_schedule']=perf_counter()-start
+            return {'plan':result}
+        graph.add_node('schedule',build_schedule)
         def validate(state):
+            start=perf_counter()
             plan=state['plan']; issues=validate_menu(state['inputs'])
-            plan.violations.extend(issues)
-            if issues: plan.status='incomplete'
+            plan.advisories=[v for v in issues if v.code=='menu_category']
+            blockers=[v for v in issues if v.code!='menu_category']
+            plan.violations.extend(blockers)
+            if blockers: plan.status='incomplete'
             plan.content_hash=content_hash(plan)
+            stage_times['validate_hosting_plan']=perf_counter()-start
             return {'plan':plan}
         graph.add_node('validate',validate); graph.add_edge(START,'schedule'); graph.add_edge('schedule','validate'); graph.add_edge('validate',END)
         started=perf_counter()
@@ -85,6 +93,9 @@ class PlanningService:
             existing=s.get(Document,(owner,'plan',plan.id))
             if not existing: s.add(Document(owner=owner,kind='plan',id=plan.id,body={'plan':plan.model_dump(mode='json'),'inputs':inputs.model_dump(mode='json')},revision=1))
         if self.telemetry:
-            try: self.telemetry.record_run({'revision':plan.revision,'plan_id':plan.id,'mode':inputs.availability.status},{'status':plan.status,'task_count':len(plan.assignments),'violation_codes':[v.code for v in plan.violations],'latency_seconds':perf_counter()-started})
+            try:
+                parent=self.telemetry.record_run({'revision':plan.revision,'plan_id':plan.id,'mode':inputs.availability.status},{'status':plan.status,'task_count':len(plan.assignments),'violation_codes':[v.code for v in plan.violations],'latency_seconds':perf_counter()-started})
+                for name,duration in stage_times.items():
+                    self.telemetry.record_run({'revision':plan.revision,'plan_id':plan.id},{'status':plan.status,'task_count':len(plan.assignments),'violation_codes':[v.code for v in plan.violations],'latency_seconds':duration},parent_id=parent,name=name)
             except Exception: pass  # Trace availability must not discard a saved plan.
         return plan

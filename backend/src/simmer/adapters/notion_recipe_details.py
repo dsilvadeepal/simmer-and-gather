@@ -36,7 +36,7 @@ def ingredient(line):
 def resource_for(title,equipment):
     text=title.casefold()
     if 'air-fry' in text or 'air fry' in text: return 'air_fryer'
-    if 'pressure cook' in text: return 'instant_pot'
+    if 'pressure' in text: return 'instant_pot'
     if any(x in text for x in ('bake','roast','oven')) and 'Oven' in equipment: return 'oven'
     if any(x in text for x in ('fry','sauté','saute','simmer','boil','cook','temper','sear','reduce')) and 'Stovetop' in equipment: return 'stovetop'
     return None
@@ -61,13 +61,15 @@ def from_notion_details(page,blocks):
         match=STEP.match(line)
         if not match: continue
         name=match.group(1).strip(); active=int(match.group(2)); waiting=int(match.group(3) or 0)
+        name=re.sub(r'\s+and measure (?:sauce )?(?:ingredients|spices|milk/sugar)', '', name, flags=re.I)
         elapsed=active+waiting
         if not elapsed: continue
         number=len(tasks)+1
         fresh=any(x in name.casefold() for x in ('air-fry','fry','roast','bake','finish','assemble','sear'))
         tasks.append(PrepTask(id=f'notion-step-{number}',title=name,dependencies=[tasks[-1].id] if tasks else [],minutes=elapsed,
-            active_minutes=active,presence_minutes=active,unattended=active==0,resource=resource_for(name,equipment),
-            max_ahead_hours=2 if fresh else 24,evidence='Notion home-cook timing draft (estimate)',guidance=ahead[:1500]))
+            active_minutes=active,presence_minutes=elapsed if active and waiting else active,unattended=active==0,resource=resource_for(name,equipment),
+            scale_mode='combined' if number==1 and any(x in name.casefold() for x in ('chop','cut','rinse','mix marinade')) else 'batch',
+            max_ahead_hours=None,preparation_policy='same_day',evidence='Notion home-cook timing draft (estimate)',guidance=ahead[:1500]))
     dietary=property_text(page,'Dietary Notes').casefold()
     allergens=[]
     if 'gluten: no explicit' not in dietary and 'gluten:' in dietary: allergens.append('gluten')

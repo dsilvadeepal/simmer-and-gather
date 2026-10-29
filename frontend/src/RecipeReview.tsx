@@ -27,6 +27,8 @@ export function RecipeReview({recipe:r,onChange}:{recipe:Recipe;onChange:(r:Reci
    <div className="grid">
     {(['minutes','active_minutes','presence_minutes','max_ahead_hours'] as const).map((key,k)=><label key={key}>{['Elapsed minutes','Hands-on minutes','Minutes someone must be present','Maximum hours ahead for this plan'][k]}<input aria-label={`${['Elapsed minutes','Hands-on minutes','Presence minutes','Make-ahead hours'][k]} · ${t.title}`} type="number" min={key==='minutes'?1:0} value={t[key]??''} onChange={e=>task(i,{[key]:numberOrNull(e.target.value)})}/></label>)}
    </div>
+   <label>Preparation policy<select value={t.preparation_policy||'unknown'} onChange={e=>task(i,{preparation_policy:e.target.value as Task['preparation_policy']})}><option value="unknown">Advance timing not established</option><option value="same_day">Prepare on the serving day</option><option value="advance">Advance preparation with supported window</option></select></label>
+   <label>Storage window ends at<select value={t.storage_anchor||'serving'} onChange={e=>task(i,{storage_anchor:e.target.value as Task['storage_anchor']})}><option value="serving">Serving time</option><option value="next_step">Next preparation step</option></select></label>
    <label>Timing basis<textarea value={t.evidence||''} onChange={e=>task(i,{evidence:e.target.value||null})}/></label>
    <label>Storage / preparation notes<textarea value={t.guidance||''} onChange={e=>task(i,{guidance:e.target.value||null})}/></label>
    <label>Equipment<select value={t.resource||''} onChange={e=>task(i,{resource:e.target.value||null})}><option value="">None</option>{['oven','stovetop','air_fryer','instant_pot'].map(x=><option key={x}>{x}</option>)}</select></label>

@@ -1,0 +1,44 @@
+{
+  "status": "feasible",
+  "assignment_count": 22,
+  "violations": [],
+  "advisories": [
+    "Choose 1 more starters, or adjust the category count",
+    "Choose 2 more sides, or adjust the category count",
+    "Choose 1 more desserts, or adjust the category count"
+  ],
+  "fit_days": [
+    {
+      "day": "2026-10-29",
+      "presence_minutes": 0,
+      "cooking_minutes": 0,
+      "limit_minutes": 60,
+      "cleanup_allowance": 15
+    },
+    {
+      "day": "2026-10-30",
+      "presence_minutes": 45,
+      "cooking_minutes": 30,
+      "limit_minutes": 60,
+      "cleanup_allowance": 15
+    },
+    {
+      "day": "2026-10-31",
+      "presence_minutes": 90,
+      "cooking_minutes": 75,
+      "limit_minutes": 120,
+      "cleanup_allowance": 15
+    },
+    {
+      "day": "2026-11-01",
+      "presence_minutes": 115,
+      "cooking_minutes": 100,
+      "limit_minutes": 120,
+      "cleanup_allowance": 15
+    }
+  ],
+  "calendar_status": "fresh",
+  "calendar_writes": 0,
+  "buffer_minutes": 60,
+  "model_calls": 0
+}

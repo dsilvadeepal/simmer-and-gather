@@ -10,7 +10,7 @@ def test_defaults_overrides_and_revision_guard(store, owner):
     assert saved.profile.weekday_minutes == 60
     assert saved.profile.weekend_minutes == 120
     assert saved.relax_minutes == 60 and saved.finishing_minutes == 20
-    assert saved.allergies is None and saved.profile.equipment == {}
+    assert saved.allergies is None and saved.profile.equipment == {'oven':1,'stovetop':2,'air_fryer':1,'instant_pot':1}
     changed = saved.model_copy(deep=True)
     changed.daily_limits['2026-11-05'] = 90
     new = service.save_gathering(owner,changed,1)

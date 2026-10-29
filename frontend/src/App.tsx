@@ -27,7 +27,9 @@ import { RecipeDiscovery } from "./RecipeDiscovery";
 import { NotionCollection } from "./NotionCollection";
 import { RecipeReview } from "./RecipeReview";
 import { CalendarPicker } from "./CalendarPicker";
-import { TaskCard } from "./TaskCard";
+import { ShoppingList } from "./ShoppingList";
+import { HostingSummary } from "./HostingSummary";
+import { PrepOverview } from "./PrepOverview";
 const categories = ["starters", "mains", "sides", "desserts", "drinks"];
 function localDate(value?: string | null) {
   if (!value) return "";
@@ -54,7 +56,7 @@ function daysBetween(start: string, end: string) {
 export default function App() {
   const [ws, setWs] = useState<Workspace | null>(null),
     [g, setG] = useState<Gathering | null>(null),
-    [step, setStep] = useState(0),
+    [step, setStep] = useState(() => new URLSearchParams(window.location.search).get("view") === "plan" ? 2 : 0),
     [error, setError] = useState(""),
     [notice, setNotice] = useState(""),
     [loading, setLoading] = useState(false),
@@ -101,7 +103,8 @@ export default function App() {
         });
         gs = [created];
       }
-      await load(gs[0].id!);
+      const requested = new URLSearchParams(window.location.search).get("gathering");
+      await load(gs.find(item => item.id === requested)?.id || gs[0].id!);
       try { setCalendars(await api<{id:string;name:string}[]>("/calendars")); }
       catch { setCalendarError("Connect Google to choose your calendars. Sample mode uses illustrative availability."); }
     });
@@ -475,41 +478,8 @@ export default function App() {
             <section className="card">
               <h2>
                 <Flame />
-                Kitchen & helpers
+                Helpers
               </h2>
-              <div className="fields">
-                {["oven", "stovetop", "air fryer", "instant pot"].map(
-                  (name) => (
-                    <label key={name}>
-                      {name} capacity
-                      <input
-                        type="number"
-                        min="0"
-                        placeholder="Needs review"
-                        value={g.profile?.equipment?.[name] ?? ""}
-                        onChange={(e) =>
-                          change({
-                            profile: {
-                              ...profile,
-                              equipment: {
-                                ...g.profile?.equipment,
-                                [name]:
-                                  e.target.value === ""
-                                    ? null
-                                    : +e.target.value,
-                              },
-                            },
-                          })
-                        }
-                      />
-                    </label>
-                  ),
-                )}
-              </div>
-              <p className="meta">
-                Capacity means simultaneous batches or burners. Zero means
-                unavailable.
-              </p>
               {(g.profile?.helpers || []).map((h, i) => (
                 <div className="helper" key={h.id}>
                   <label>
@@ -945,7 +915,7 @@ export default function App() {
             <p>Fill gaps in your menu, then review additions before saving. Import recipes from Notion first if your collection is empty.</p>
             <button disabled={loading||dirty} className="secondary" onClick={()=>run(async()=>{
               const items=await api<Selection[]>("/menu/"+g.id+"/propose",{});
-              setProposal(items.filter(item=>!ws.inputs.selections.some(s=>s.id===item.id)));
+              setProposal(items.filter(item=>!(ws.inputs.selections||[]).some(s=>s.id===item.id)));
             })}>Suggest dishes</button>
             {proposal && <><ul>{proposal.map(item=><li key={item.id}>{item.title} · {item.category} · {item.servings} servings</li>)}</ul>
               {!proposal.length?<p>No additional reviewed recipes fit the open categories. Import more options or adjust your counts.</p>:<button disabled={loading||dirty} onClick={()=>run(async()=>{
@@ -1143,21 +1113,21 @@ export default function App() {
             <div className="actions">
               <button
                 className="secondary"
-                disabled={loading}
+                disabled={loading || dirty}
                 onClick={() =>
                   run(async () => {
                     const a = await api<Inputs["availability"]>(
                       "/availability/" + g.id,
                       {},
                     );
-                    setWs({ ...ws, inputs: { ...ws.inputs, availability: a } });
+                    await load(g.id!);
                     setApproval(null);
                     setNotice(
                       a?.status === "fixture"
                         ? "Sample calendar checked; no live Google connection."
-                        : "Calendar rechecked. Regenerate before approval.",
+                        : "Calendar rechecked against this proposal.",
                     );
-                    setPlan(null);
+
                   })
                 }
               >
@@ -1178,7 +1148,7 @@ export default function App() {
                   })
                 }
               >
-                Generate final plan
+                Generate proposed plan
               </button>
             </div>
           </section>
@@ -1197,6 +1167,11 @@ export default function App() {
               </p>
             </div>
           )}
+          {!!ws.recipe_updates?.length && <div className="alert">Updated recipes: {ws.recipe_updates.join(', ')}. Refresh these menu selections and regenerate before approval.
+            <button disabled={loading||dirty} onClick={()=>run(()=>edit((ws.inputs.selections||[]).filter(s=>s.recipe&&ws.recipe_updates?.includes(s.title)).map(s=>({action:'update',id:s.id,values:{recipe:ws.recipes.find(r=>r.id===s.recipe?.id)}}))))}>Refresh selected recipes</button>
+
+          </div>}
+          {ws.previous_plan && <details className="card"><summary>Previous proposal · revision {ws.previous_plan.revision} (not current)</summary><p>This earlier schedule has its own recipe and calendar snapshot. Regenerate to use your current choices.</p><PrepOverview assignments={ws.previous_plan.assignments||[]} timezone={g.profile?.timezone}/></details>}
           {plan && (
             <>
               <div
@@ -1216,12 +1191,13 @@ export default function App() {
                 </p>
               </div>
               {(plan.violations || []).length > 0 && (
-                <section className="card">
-                  <h2>Before we finalize</h2>
+                <details className="card plan-checks">
+                  <summary>ⓘ Plan checks · {new Set((plan.violations||[]).map(v => v.explanation)).size} to review</summary>
                   <ul>
-                    {plan.violations?.map((v, i) => (
-                      <li key={i}>{v.explanation}</li>
-                    ))}
+                    {Array.from(new Set((plan.violations||[]).map(v => v.explanation))).map(message => {
+                      const count = (plan.violations||[]).filter(v => v.explanation === message).length;
+                      return <li key={message}>{message}{count > 1 ? ` (${count} items)` : ''}</li>;
+                    })}
                   </ul>
                   {plan.adjustments?.map((a, i) => (
                     <div key={i} className="adjustment">
@@ -1246,34 +1222,15 @@ export default function App() {
                       </button>
                     </div>
                   ))}
-                </section>
+                </details>
               )}
+              <HostingSummary inputs={ws.inputs} plan={plan}/>
               <div className="grid">
                 <section>
                   <h2>Cooking & prep sessions</h2>
-                  {(plan.assignments || []).map((a) => (
-                    <div className="session" key={a.task.id}>
-                      <div className="session-meta">
-                        <CalendarDays size={16} />
-                        <strong>
-                          {new Date(a.interval.start).toLocaleDateString([], {
-                            weekday: "long",
-                            month: "short",
-                            day: "numeric",
-                          })}{" "}
-                          · {time(a.interval.start)}–{time(a.interval.end)}
-                        </strong>
-                        <span>
-                          {a.person === "host"
-                            ? "You"
-                            : g.profile?.helpers?.find((h) => h.id === a.person)
-                                ?.name || "Helper"}
-                          {a.task.resource ? " · " + a.task.resource : ""}
-                        </span>
-                      </div>
-                      <TaskCard task={a.task} />
-                    </div>
-                  ))}
+                  {plan.status !== "feasible" && <p>Review the plan checks above before approving this schedule.</p>}
+                  {!plan.assignments?.length && <p>No cooking sessions could be scheduled yet. Review the issues above and generate the proposed plan again.</p>}
+                  <PrepOverview assignments={plan.assignments || []} timezone={g.profile?.timezone} />
                 </section>
                 <aside>
                   <section className="card">
@@ -1281,16 +1238,7 @@ export default function App() {
                       <ShoppingBag />
                       Shopping list
                     </h2>
-                    {plan.shopping?.map((x, i) => (
-                      <div className="ingredient" key={i}>
-                        <span>{x.name}</span>
-                        <strong>
-                          {x.quantity == null
-                            ? "Review"
-                            : `${x.quantity} ${x.unit || ""}`}
-                        </strong>
-                      </div>
-                    ))}
+                    <ShoppingList items={plan.shopping||[]} selections={ws.inputs.selections||[]}/>
                   </section>
                   <section className="card">
                     <h2>Final small things</h2>
@@ -1303,7 +1251,7 @@ export default function App() {
                   {!ws.fixture_mode && <section className="card">
                     <h2>Keep this plan in Notion</h2>
                     <p>Save this reviewed menu and prep schedule. Calendar approval is separate.</p>
-                    <button disabled={loading || dirty || plan.status!=="feasible"} onClick={()=>run(async()=>{
+                    <button disabled={loading || dirty || !!ws.recipe_updates?.length || plan.status!=="feasible"} onClick={()=>run(async()=>{
                       const result=await api<{status:string}>("/notion/plans/"+plan.id,{revision:plan.revision,content_hash:plan.content_hash});
                       setNotice(result.status==='saved'?"Plan and prep tasks saved to Notion.":"Some saves are unconfirmed. Retry to reconcile; confirmed pages will not be duplicated.");
                     })}>Save reviewed plan to Notion</button>
@@ -1320,6 +1268,7 @@ export default function App() {
                     <button
                       disabled={
                         loading ||
+                        !!ws.recipe_updates?.length ||
                         plan.status !== "feasible" ||
                         dirty ||
                         !!ws.fixture_mode

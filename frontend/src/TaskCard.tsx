@@ -13,7 +13,7 @@ export function TaskCard({
   return (
     <article className={"task " + (task.phase === "cleanup" ? "compact" : "")}>
       <div className="row">
-        <h3>{task.title}</h3>
+        <h3>{task.title.replace(/\s+and measure (?:sauce )?(?:ingredients|spices|milk\/sugar)/gi, '')}</h3>
         <span className="meta">
           <Clock size={14} />
           {task.minutes ?? "Review"} min
@@ -31,7 +31,7 @@ export function TaskCard({
               </strong>
             </div>
           ))}
-          {task.guidance && <p className="guidance">{task.guidance}</p>}
+          {task.guidance && <details><summary>Preparation and storage notes</summary><p className="guidance">{task.guidance.replace(/CHEF PROPOSAL — untested; not a publisher storage instruction\.\s*/gi, '')}</p></details>}
           <button
             className="text-button"
             aria-expanded={open}

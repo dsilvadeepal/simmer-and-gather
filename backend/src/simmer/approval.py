@@ -2,11 +2,11 @@ from uuid import uuid5,NAMESPACE_URL
 from .domain import *
 from .db import Conflict,Missing,serialized
 from .profiles import HostingService
-from .scheduler import content_hash,validate_schedule,occupied,digest
+from .scheduler import content_hash,validate_schedule,occupancy_windows,digest
 from .menu import validate_menu
 
 def event_proposals(owner,plan,inputs):
-    windows=sorted([w for a in plan.assignments if (w:=occupied(a,inputs.gathering.profile.helpers))],key=lambda w:w.start)
+    windows=sorted([w for a in plan.assignments for w in occupancy_windows(a,inputs.gathering.profile.helpers)],key=lambda w:w.start)
     merged=[]
     for window in windows:
         if merged and window.start<=merged[-1].end:
@@ -21,7 +21,10 @@ class ApprovalService:
         p=PlanCandidate.model_validate(body['plan']); inputs=PlanInputs.model_validate(body['inputs'])
         current=HostingService(self.store).get_gathering(owner,p.gathering_id)
         if p.revision!=revision or current.revision!=revision or p.content_hash!=hash or content_hash(p)!=hash: raise Conflict('Plan changed; review and approve its current revision')
-        if p.status!='feasible' or validate_schedule(inputs,p) or validate_menu(inputs): raise Conflict('Only a validated feasible plan can be approved')
+        from .recipe_readiness import changed_recipes
+        from .recipes import RecipeService
+        if changed_recipes(inputs,RecipeService(self.store).list_recipes(owner)): raise Conflict('Recipe collection changed; refresh selected recipes and regenerate before approval')
+        if p.status!='feasible' or validate_schedule(inputs,p) or any(v.code!='menu_category' for v in validate_menu(inputs)): raise Conflict('Only a validated feasible plan can be approved')
         if inputs.availability.status!='fresh': raise Conflict('Live calendar verification required before approval')
         return p,inputs
     @serialized

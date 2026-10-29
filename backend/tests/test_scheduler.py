@@ -2,6 +2,18 @@ from datetime import datetime, timezone
 import pytest
 from simmer.domain import *
 from simmer.scheduler import schedule, validate_schedule, daily_presence
+from simmer.scheduler import tasks_for
+
+def test_combined_prep_feeds_each_cooking_batch():
+    i=inputs(); i.gathering.single_batch_kitchen=False; recipe=i.selections[0].recipe
+    recipe.servings=5
+    recipe.tasks=[PrepTask(id='prep',title='Chop',minutes=15,evidence='estimate',max_ahead_hours=24,scale_mode='combined'), PrepTask(id='cook',title='Cook',minutes=20,evidence='estimate',max_ahead_hours=8,dependencies=['prep'])]
+    tasks,issues=tasks_for(i)
+    assert not issues
+    assert len(tasks)==4
+    assert sum('Chop' in t.title for t in tasks)==1
+    assert next(t for t in tasks if 'Chop' in t.title).minutes==45
+    assert all(t.dependencies==['s:0:prep'] for t in tasks if 'Cook' in t.title)
 
 
 def inputs(minutes=(40,40),limit=60):

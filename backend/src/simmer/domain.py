@@ -1,5 +1,5 @@
 """Versioned API contracts. Missing evidence is represented explicitly."""
-from datetime import date, datetime
+from datetime import date, datetime, timezone
 from typing import Annotated, Literal
 from uuid import UUID, uuid4
 from zoneinfo import ZoneInfo
@@ -33,8 +33,13 @@ class HostProfile(Schema):
     weekday_minutes: int = Field(60, ge=0, le=1440)
     weekend_minutes: int = Field(120, ge=0, le=1440)
     protected: list[Interval] = []
-    equipment: dict[str, int | None] = {}
+    equipment: dict[str, int | None] = Field(default_factory=lambda: {'oven':1,'stovetop':2,'air_fryer':1,'instant_pot':1})
     helpers: list[Helper] = []
+    @field_validator('equipment', mode='before')
+    @classmethod
+    def standard_kitchen(cls, value):
+        defaults={'oven':1,'stovetop':2,'air_fryer':1,'instant_pot':1}
+        return defaults | (value or {})
     @field_validator('timezone')
     @classmethod
     def timezone_exists(cls,v): ZoneInfo(v); return v
@@ -65,6 +70,8 @@ class Gathering(Schema):
     preferences: list[str] = []
     relax_minutes: int = Field(60, ge=0, le=240)
     finishing_minutes: int = Field(20, ge=0, le=240)
+    cleanup_overrun_minutes: int = Field(15, ge=0, le=60)
+    single_batch_kitchen: bool = True
     profile: HostProfile = Field(default_factory=HostProfile)
     selected_calendars: list[str] = []
     contributions: list[Contribution] = []
@@ -81,12 +88,16 @@ class Ingredient(Schema):
     quantity: float | None = Field(None, ge=0, allow_inf_nan=False)
     unit: str | None = None
 
+class AttentionSegment(Schema):
+    offset_minutes: int = Field(ge=0)
+    minutes: int = Field(gt=0)
+
 class PrepTask(Schema):
     id: str
     title: str
     recipe_id: str = ''
     dependencies: list[str] = []
-    minutes: int | None = Field(None, ge=1, le=1440)
+    minutes: int | None = Field(None, ge=1, le=10080)
     active_minutes: int | None = Field(None, ge=0)
     presence_minutes: int | None = Field(None, ge=0)
     skill: str = 'cook'
@@ -100,6 +111,11 @@ class PrepTask(Schema):
     guidance: str | None = None
     phase: Literal['cooking','finishing','cleanup'] = 'cooking'
     unattended: bool = False
+    scale_mode: Literal['batch','combined'] = 'batch'
+    preparation_policy: Literal['unknown','same_day','advance'] = 'unknown'
+    storage_anchor: Literal['serving','next_step'] = 'serving'
+    attention_segments: list[AttentionSegment] = []
+    timing_basis: Literal['estimate','source'] = 'estimate'
 
 class RecipeSnapshot(Schema):
     id: str = Field(default_factory=identity)
@@ -117,6 +133,7 @@ class RecipeSnapshot(Schema):
     image_url: str | None = None
     image_credit: str | None = None
     uncertainties: list[str] = []
+    preparation_provenance: dict[str, str] = {}
 
 class MenuSelection(Schema):
     id: str = Field(default_factory=identity)
@@ -174,6 +191,9 @@ class PlanCandidate(Schema):
     assignments: list[Assignment] = []
     shopping: list[Ingredient] = []
     checklist: list[str] = []
+    generated_at: AwareDatetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+    advisories: list[ConstraintViolation] = []
+    fit_days: list[dict] = []
     status: Literal['feasible','incomplete','conflict'] = 'incomplete'
     violations: list[ConstraintViolation] = []
     adjustments: list[TimeAdjustment] = []

@@ -23,7 +23,7 @@ def test_recipe_preview_model_is_source_bounded_and_never_reviewed(store):
         calls.append(messages)
         return '{"tasks":[{"id":"mix","title":"Mix","minutes":5,"evidence":"Mix for 5 minutes"}]}'
     client=TestClient(create_app(store,Auth(),model=model))
-    r=client.post('/api/recipes/preview',headers={'Authorization':'Bearer test'},json={'source':'Simple dip\nMix for 5 minutes'})
+    r=client.post('/api/recipes/preview',headers={'Authorization':'Bearer test'},json={'source':'Simple dip '+__import__('uuid').uuid4().hex+'\nMix for 5 minutes'})
     assert r.status_code==200
     assert calls
     assert r.json()['tasks'][0]['minutes']==5

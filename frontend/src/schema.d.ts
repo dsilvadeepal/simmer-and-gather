@@ -239,7 +239,14 @@ export interface components {
              * Person
              * @default host
              */
-            person: string;
+            person?: string;
+        };
+        /** AttentionSegment */
+        AttentionSegment: {
+            /** Offset Minutes */
+            offset_minutes: number;
+            /** Minutes */
+            minutes: number;
         };
         /** AvailabilitySnapshot */
         AvailabilitySnapshot: {
@@ -247,7 +254,7 @@ export interface components {
              * Busy
              * @default []
              */
-            busy: components["schemas"]["Interval"][];
+            busy?: components["schemas"]["Interval"][];
             /** Checked At */
             checked_at?: string | null;
             /**
@@ -255,12 +262,12 @@ export interface components {
              * @default unavailable
              * @enum {string}
              */
-            status: "fresh" | "stale" | "unavailable" | "fixture";
+            status?: "fresh" | "stale" | "unavailable" | "fixture";
             /**
              * Errors
              * @default []
              */
-            errors: string[];
+            errors?: string[];
         };
         /** Body_upload_api_inventory__id__upload_post */
         Body_upload_api_inventory__id__upload_post: {
@@ -275,7 +282,7 @@ export interface components {
              * Affected Ids
              * @default []
              */
-            affected_ids: string[];
+            affected_ids?: string[];
             /** Explanation */
             explanation: string;
             /** Evidence */
@@ -291,14 +298,14 @@ export interface components {
              * Person
              * @default
              */
-            person: string;
+            person?: string;
             /** Servings */
             servings?: number | null;
             /**
              * Confirmed
              * @default false
              */
-            confirmed: boolean;
+            confirmed?: boolean;
             /** Arrival */
             arrival?: string | null;
             /** Warming Minutes */
@@ -314,17 +321,17 @@ export interface components {
              * Revision
              * @default 1
              */
-            revision: number;
+            revision?: number;
             /**
              * Title
              * @default Diwali gathering
              */
-            title: string;
+            title?: string;
             /**
              * Occasion
              * @default Diwali
              */
-            occasion: string;
+            occasion?: string;
             /** Arrival */
             arrival?: string | null;
             /** Earliest Prep */
@@ -333,68 +340,78 @@ export interface components {
              * Prep Days
              * @default []
              */
-            prep_days: string[];
+            prep_days?: string[];
             /**
              * Daily Limits
              * @default {}
              */
-            daily_limits: {
+            daily_limits?: {
                 [key: string]: number;
             };
             /**
              * Prep Windows
              * @default []
              */
-            prep_windows: components["schemas"]["Interval"][];
+            prep_windows?: components["schemas"]["Interval"][];
             /**
              * Guests
              * @default 15
              */
-            guests: number;
+            guests?: number;
             /**
              * Vegetarian Guests
              * @default 0
              */
-            vegetarian_guests: number;
+            vegetarian_guests?: number;
             /** Allergies */
             allergies?: string[] | null;
             /**
              * Preferences
              * @default []
              */
-            preferences: string[];
+            preferences?: string[];
             /**
              * Relax Minutes
              * @default 60
              */
-            relax_minutes: number;
+            relax_minutes?: number;
             /**
              * Finishing Minutes
              * @default 20
              */
-            finishing_minutes: number;
+            finishing_minutes?: number;
+            /**
+             * Cleanup Overrun Minutes
+             * @default 15
+             */
+            cleanup_overrun_minutes?: number;
+            /**
+             * Single Batch Kitchen
+             * @default true
+             */
+            single_batch_kitchen?: boolean;
             profile?: components["schemas"]["HostProfile"];
             /**
              * Selected Calendars
              * @default []
              */
-            selected_calendars: string[];
+            selected_calendars?: string[];
             /**
              * Contributions
              * @default []
              */
-            contributions: components["schemas"]["Contribution"][];
+            contributions?: components["schemas"]["Contribution"][];
             /**
              * Spread
              * @default manageable
              * @enum {string}
              */
-            spread: "manageable" | "generous" | "custom";
+            spread?: "manageable" | "generous" | "custom";
             /**
              * Category Counts
              * @default {}
              */
-            category_counts: {
+            category_counts?: {
                 [key: string]: number;
             };
         };
@@ -418,17 +435,17 @@ export interface components {
              * Skills
              * @default []
              */
-            skills: string[];
+            skills?: string[];
             /**
              * Available
              * @default []
              */
-            available: components["schemas"]["Interval"][];
+            available?: components["schemas"]["Interval"][];
             /**
              * Supervision
              * @default false
              */
-            supervision: boolean;
+            supervision?: boolean;
         };
         /** HostProfile */
         HostProfile: {
@@ -436,34 +453,31 @@ export interface components {
              * Timezone
              * @default America/New_York
              */
-            timezone: string;
+            timezone?: string;
             /**
              * Weekday Minutes
              * @default 60
              */
-            weekday_minutes: number;
+            weekday_minutes?: number;
             /**
              * Weekend Minutes
              * @default 120
              */
-            weekend_minutes: number;
+            weekend_minutes?: number;
             /**
              * Protected
              * @default []
              */
-            protected: components["schemas"]["Interval"][];
-            /**
-             * Equipment
-             * @default {}
-             */
-            equipment: {
+            protected?: components["schemas"]["Interval"][];
+            /** Equipment */
+            equipment?: {
                 [key: string]: number | null;
             };
             /**
              * Helpers
              * @default []
              */
-            helpers: components["schemas"]["Helper"][];
+            helpers?: components["schemas"]["Helper"][];
         };
         /** Ingredient */
         Ingredient: {
@@ -501,13 +515,13 @@ export interface components {
              * Confirmed
              * @default false
              */
-            confirmed: boolean;
+            confirmed?: boolean;
             /**
              * Source
              * @default manual
              * @enum {string}
              */
-            source: "manual" | "receipt" | "photo";
+            source?: "manual" | "receipt" | "photo";
         };
         /** MenuEdit */
         MenuEdit: {
@@ -528,29 +542,29 @@ export interface components {
              * Category
              * @default mains
              */
-            category: string;
+            category?: string;
             recipe?: components["schemas"]["RecipeSnapshot"] | null;
             /**
              * Mode
              * @default cook
              * @enum {string}
              */
-            mode: "cook" | "buy" | "semi" | "guest";
+            mode?: "cook" | "buy" | "semi" | "guest";
             /**
              * Servings
              * @default 1
              */
-            servings: number;
+            servings?: number;
             /**
              * Must Have
              * @default false
              */
-            must_have: boolean;
+            must_have?: boolean;
             /**
              * Preparation
              * @default []
              */
-            preparation: components["schemas"]["PrepTask"][];
+            preparation?: components["schemas"]["PrepTask"][];
             /** Vegetarian */
             vegetarian?: boolean | null;
             contribution?: components["schemas"]["Contribution"] | null;
@@ -569,38 +583,55 @@ export interface components {
              * Content Hash
              * @default
              */
-            content_hash: string;
+            content_hash?: string;
             /**
              * Assignments
              * @default []
              */
-            assignments: components["schemas"]["Assignment"][];
+            assignments?: components["schemas"]["Assignment"][];
             /**
              * Shopping
              * @default []
              */
-            shopping: components["schemas"]["Ingredient"][];
+            shopping?: components["schemas"]["Ingredient"][];
             /**
              * Checklist
              * @default []
              */
-            checklist: string[];
+            checklist?: string[];
+            /**
+             * Generated At
+             * Format: date-time
+             */
+            generated_at?: string;
+            /**
+             * Advisories
+             * @default []
+             */
+            advisories?: components["schemas"]["ConstraintViolation"][];
+            /**
+             * Fit Days
+             * @default []
+             */
+            fit_days?: {
+                [key: string]: unknown;
+            }[];
             /**
              * Status
              * @default incomplete
              * @enum {string}
              */
-            status: "feasible" | "incomplete" | "conflict";
+            status?: "feasible" | "incomplete" | "conflict";
             /**
              * Violations
              * @default []
              */
-            violations: components["schemas"]["ConstraintViolation"][];
+            violations?: components["schemas"]["ConstraintViolation"][];
             /**
              * Adjustments
              * @default []
              */
-            adjustments: components["schemas"]["TimeAdjustment"][];
+            adjustments?: components["schemas"]["TimeAdjustment"][];
         };
         /** PlanInputs */
         PlanInputs: {
@@ -609,12 +640,12 @@ export interface components {
              * Selections
              * @default []
              */
-            selections: components["schemas"]["MenuSelection"][];
+            selections?: components["schemas"]["MenuSelection"][];
             /**
              * Inventory
              * @default []
              */
-            inventory: components["schemas"]["InventoryItem"][];
+            inventory?: components["schemas"]["InventoryItem"][];
             availability?: components["schemas"]["AvailabilitySnapshot"];
         };
         /** PrepTask */
@@ -627,12 +658,12 @@ export interface components {
              * Recipe Id
              * @default
              */
-            recipe_id: string;
+            recipe_id?: string;
             /**
              * Dependencies
              * @default []
              */
-            dependencies: string[];
+            dependencies?: string[];
             /** Minutes */
             minutes?: number | null;
             /** Active Minutes */
@@ -643,14 +674,14 @@ export interface components {
              * Skill
              * @default cook
              */
-            skill: string;
+            skill?: string;
             /** Resource */
             resource?: string | null;
             /**
              * Capacity
              * @default 1
              */
-            capacity: number;
+            capacity?: number;
             /** Temperature */
             temperature?: number | null;
             eligible?: components["schemas"]["Interval"] | null;
@@ -662,7 +693,7 @@ export interface components {
              * Ingredients
              * @default []
              */
-            ingredients: components["schemas"]["Ingredient"][];
+            ingredients?: components["schemas"]["Ingredient"][];
             /** Guidance */
             guidance?: string | null;
             /**
@@ -670,12 +701,41 @@ export interface components {
              * @default cooking
              * @enum {string}
              */
-            phase: "cooking" | "finishing" | "cleanup";
+            phase?: "cooking" | "finishing" | "cleanup";
             /**
              * Unattended
              * @default false
              */
-            unattended: boolean;
+            unattended?: boolean;
+            /**
+             * Scale Mode
+             * @default batch
+             * @enum {string}
+             */
+            scale_mode?: "batch" | "combined";
+            /**
+             * Preparation Policy
+             * @default unknown
+             * @enum {string}
+             */
+            preparation_policy?: "unknown" | "same_day" | "advance";
+            /**
+             * Storage Anchor
+             * @default serving
+             * @enum {string}
+             */
+            storage_anchor?: "serving" | "next_step";
+            /**
+             * Attention Segments
+             * @default []
+             */
+            attention_segments?: components["schemas"]["AttentionSegment"][];
+            /**
+             * Timing Basis
+             * @default estimate
+             * @enum {string}
+             */
+            timing_basis?: "estimate" | "source";
         };
         /** Preview */
         Preview: {
@@ -690,7 +750,7 @@ export interface components {
              * Version
              * @default 1
              */
-            version: string;
+            version?: string;
             /** Title */
             title: string;
             /** Source */
@@ -702,7 +762,7 @@ export interface components {
              * @default mains
              * @enum {string}
              */
-            category: "starters" | "mains" | "sides" | "desserts" | "drinks";
+            category?: "starters" | "mains" | "sides" | "desserts" | "drinks";
             /** Vegetarian */
             vegetarian?: boolean | null;
             /** Allergens */
@@ -711,22 +771,22 @@ export interface components {
              * Ingredients
              * @default []
              */
-            ingredients: components["schemas"]["Ingredient"][];
+            ingredients?: components["schemas"]["Ingredient"][];
             /**
              * Tasks
              * @default []
              */
-            tasks: components["schemas"]["PrepTask"][];
+            tasks?: components["schemas"]["PrepTask"][];
             /**
              * Source Text
              * @default
              */
-            source_text: string;
+            source_text?: string;
             /**
              * Reviewed
              * @default false
              */
-            reviewed: boolean;
+            reviewed?: boolean;
             /** Image Url */
             image_url?: string | null;
             /** Image Credit */
@@ -735,7 +795,14 @@ export interface components {
              * Uncertainties
              * @default []
              */
-            uncertainties: string[];
+            uncertainties?: string[];
+            /**
+             * Preparation Provenance
+             * @default {}
+             */
+            preparation_provenance?: {
+                [key: string]: string;
+            };
         };
         /** SaveGathering */
         SaveGathering: {
@@ -783,6 +850,21 @@ export interface components {
             /** Recipes */
             recipes: components["schemas"]["RecipeSnapshot"][];
             plan?: components["schemas"]["PlanCandidate"] | null;
+            previous_plan?: components["schemas"]["PlanCandidate"] | null;
+            /**
+             * Recipe Updates
+             * @default []
+             */
+            recipe_updates?: string[];
+            /**
+             * Recipe Readiness
+             * @default {}
+             */
+            recipe_readiness?: {
+                [key: string]: {
+                    [key: string]: boolean;
+                };
+            };
             /** Fixture Mode */
             fixture_mode: boolean;
         };

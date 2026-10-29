@@ -27,10 +27,10 @@ import { RecipeDiscovery } from "./RecipeDiscovery";
 import { NotionCollection } from "./NotionCollection";
 import { RecipeReview } from "./RecipeReview";
 import { CalendarPicker } from "./CalendarPicker";
-import { ShoppingList } from "./ShoppingList";
-import { HostingSummary } from "./HostingSummary";
+
+import { PlanViews } from "./PlanViews";
 import { StepNavigation } from "./StepNavigation";
-import { PrepOverview } from "./PrepOverview";
+
 const categories = ["starters", "mains", "sides", "desserts", "drinks"];
 function localDate(value?: string | null) {
   if (!value) return "";
@@ -1084,23 +1084,8 @@ export default function App() {
       )}
       {step === 2 && (
         <>
-          <div className="intro">
-            <p className="eyebrow">YOUR TIME, PROTECTED</p>
-            <h1>A calmer path to hosting.</h1>
-            <p>
-              Review the cooking sessions, then decide what goes on your
-              calendar.
-            </p>
-          </div>
-          <section className="card row">
-            <span>
-              <strong>{g.title}</strong>
-              <br />
-              <span className="meta">
-                {selected.length} prep days · {g.guests} guests ·{" "}
-                {g.relax_minutes} minutes before arrival
-              </span>
-            </span>
+          <div className="intro plan-intro"><p className="eyebrow">YOUR HOSTING PLAN</p><h1>{g.title}</h1><p>{g.arrival ? new Date(g.arrival).toLocaleString('en-US',{weekday:'long',month:'short',day:'numeric',hour:'numeric',minute:'2-digit',timeZone:g.profile?.timezone||'America/New_York'}) : 'Set your arrival time'} · {g.guests} guests</p></div>
+          <section className="plan-actions">
             <div className="actions">
               <button
                 className="secondary"
@@ -1139,7 +1124,7 @@ export default function App() {
                   })
                 }
               >
-                Generate proposed plan
+                {plan ? "Update plan" : "Generate proposed plan"}
               </button>
             </div>
           </section>
@@ -1214,30 +1199,8 @@ export default function App() {
                   ))}
                 </details>
               )}
-              <HostingSummary inputs={ws.inputs} plan={plan}/>
-              <div className="grid">
-                <section>
-                  <h2>Cooking & prep sessions</h2>
-                  {plan.status !== "feasible" && <p>Review the plan checks above before approving this schedule.</p>}
-                  {!plan.assignments?.length && <p>No cooking sessions could be scheduled yet. Review the issues above and generate the proposed plan again.</p>}
-                  <PrepOverview assignments={plan.assignments || []} timezone={g.profile?.timezone} />
-                </section>
-                <aside>
-                  <section className="card">
-                    <h2>
-                      <ShoppingBag />
-                      Shopping list
-                    </h2>
-                    <ShoppingList items={plan.shopping||[]} selections={ws.inputs.selections||[]}/>
-                  </section>
-                  <section className="card">
-                    <h2>Final small things</h2>
-                    <ul>
-                      {plan.checklist?.map((x) => (
-                        <li key={x}>{x}</li>
-                      ))}
-                    </ul>
-                  </section>
+              <PlanViews inputs={ws.inputs} plan={plan}/>
+              <details className="card save-plan"><summary>Save plan & calendar options</summary><div className="grid">
                   {!ws.fixture_mode && <section className="card">
                     <h2>Keep this plan in Notion</h2>
                     <p>Save this reviewed menu and prep schedule. Calendar approval is separate.</p>
@@ -1305,8 +1268,7 @@ export default function App() {
                       </p>
                     ))}
                   </section>
-                </aside>
-              </div>
+              </div></details>
             </>
           )}
         </>

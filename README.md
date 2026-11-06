@@ -4,6 +4,12 @@ A hosting assistant that turns a recipe collection, your menu choices and calend
 
 Built as a personal agentic-AI course demo. The working implementation includes a React app, a LangGraph planning workflow, recipe preparation tools, deterministic scheduling, Notion persistence and approval-gated Google Calendar booking. Hosting deployment and multi-user access are separate from the local demo.
 
+## Demo walkthrough
+
+[▶ Watch the silent walkthrough (2 min 10 sec)](https://drive.google.com/file/d/12PDSjSkLR9ifBV-xXBWccVpl4ZFs9V5D/view)
+
+A captioned walkthrough assembled from actual app screenshots, covering gathering setup, menu choices, prep sessions, shopping and the mobile view. Uses generic sample data and a precomputed plan; no personal calendar events or saved plans are changed.
+
 ## A look inside
 
 The interface uses tomato-red actions, aubergine headings and sage accents, with expandable dish controls and a compact mobile prep view. Recipe photos retain publisher attribution.

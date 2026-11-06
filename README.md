@@ -10,6 +10,25 @@ Built as a personal agentic-AI course demo. The working implementation includes 
 
 A captioned walkthrough assembled from actual app screenshots, covering gathering setup, menu choices, prep sessions, shopping and the mobile view. Uses generic sample data and a precomputed plan; no personal calendar events or saved plans are changed.
 
+### Diwali use case: review clickpath
+
+**Scenario:** 15 people arriving November 1 at 6 pm, two hours of active prep per selected day, and major cooking finished by 5 pm. Menu: vegetable pulao, dal makhani, butter chicken, paneer tikka, bought dessert and ready-to-serve drinks.
+
+This is a review scenario, **not yet a passing end-to-end scheduling demo**. The November 6 rerun used updated recipe-library versions and an older calendar snapshot, not live availability. It scheduled 14 tasks but left work unscheduled, reported two storage/dependency conflicts, and retained three unresolved shopping amounts (medium yellow onion, large yellow onion and plum tomatoes). Do not treat the partial schedule as ready to cook from.
+
+| Step | Where to click | What to review |
+| --- | --- | --- |
+| 1 | **Gathering** | Check 15 guests, arrival time, prep days, daily allowance and one-hour buffer. Use a separate test gathering, not an existing saved plan. |
+| 2 | **Menu → Adjust dish** | Review the dishes above, servings and Cook/Buy choices. Servings follow recipe yield; they are not automatic buffet portions. |
+| 3 | **Prep plan → Regenerate prep plan** | Generate only in the separate test gathering. Check the result status before following any session. The default local seed is a different illustrative menu; it does not automatically load this Diwali review copy. |
+| 4 | **Plan checks** | Inspect unscheduled work and storage/dependency issues. A partial plan is a test finding, not evidence that the host must buy more dishes or allow more time. |
+| 5 | **Schedule → How to** | Review grouped sessions, active versus elapsed time, cutting instructions and cooking settings. |
+| 6 | **Shopping → category / Amounts to confirm** | Review scaled amounts and unresolved items. “About” denotes shopping rounding; use recipe amounts when cooking. |
+| 7 | **Menu / Finishing** within the plan | Review recipe links, quantities and menu-specific finishing notes. |
+| 8 | Stop before calendar approval | Reviewing the plan does not book events. Do not approve calendar blocks during this review. |
+
+The linked video above shows an earlier generic sample walkthrough; it does **not** demonstrate a successful run of this Diwali test. The isolated review copy is local and is not a publicly hosted app. Existing saved plans and calendar events were unchanged by the test.
+
 ## A look inside
 
 The interface uses tomato-red actions, aubergine headings and sage accents, with expandable dish controls and a compact mobile prep view. Recipe photos retain publisher attribution.

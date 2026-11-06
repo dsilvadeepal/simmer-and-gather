@@ -662,3 +662,58 @@ nav.step-navigation {gap:3px;justify-content:flex-start;padding:16px 0;}
 .prep-session .session-tasks > li {margin:0 0 16px;padding-left:4px;}
 .prep-session .session-tasks > li:last-child {margin-bottom:0;}
 @media(max-width:700px){.prep-overview-row.prep-session{grid-template-columns:1fr;gap:12px;}}
+
+/* Modern supper club: food-led menus, calm sage preparation surfaces. */
+:root{--tomato:#c92d19;--aubergine:#351329;--sage:#e5eddd;--saffron:#ffe09a;--paper:#fffefa;--line:#dddcd5;color:var(--aubergine);background:#fafbf7}
+button{background:var(--tomato)}
+input,select,textarea{color:var(--aubergine);background:white;border-color:var(--line)}
+input[type=checkbox]{accent-color:var(--tomato)}
+header{padding:24px 0;border-color:var(--line)}
+.brand{color:var(--aubergine)}
+.meta,.intro p:last-child{color:#62635d}
+.eyebrow{color:#68744c}
+h2 svg{color:#687b4e}
+.card,.prep-day,.task{background:white;border-color:var(--line);box-shadow:0 3px 14px #35132904}
+.secondary{background:white;color:var(--aubergine);border-color:#bdb4b9}
+.text-button{color:var(--aubergine)}
+nav.step-navigation{background:#fafbf7f5;border-color:var(--line)}
+.step-navigation button{background:var(--sage);color:var(--aubergine)}
+.step-navigation button.active,.plan-tabs button[aria-selected=true]{background:var(--tomato);color:white}
+.step-navigation button:hover{background:#d9e5cc;color:var(--aubergine)}
+.step-navigation button.active:hover{background:#a72111;color:white}
+.plan-tabs{border-color:var(--line)}
+.plan-tabs button{color:var(--aubergine)}
+.prep-day-chips label.chosen{background:var(--sage);border-color:#76865e}
+.notice,.plan-status.good{background:var(--sage);color:#29431f}
+.demo-banner,.plan-status:not(.good){background:#fff3d8;color:#674b12}
+.recipe-heading{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:12px;margin-bottom:16px}
+.recipe .food-icon{grid-column:1/-1;width:100%;height:170px;border-radius:12px;background:var(--sage)}
+.recipe .food-icon img{width:100%;height:100%;object-fit:cover}
+.recipe .food-icon:has(img[style*="none"]){background:var(--sage)}
+.recipe .food-icon svg{width:48px;height:48px;color:#6a7c4a}
+.recipe-heading h3{font-family:Lora,Georgia,serif;font-size:22px;color:var(--aubergine)}
+.recipe .eyebrow{display:inline-block;background:var(--sage);padding:3px 9px;border-radius:20px;letter-spacing:.6px}
+.star.selected{color:#795400;background:var(--saffron);border-radius:50%}
+.recipe .star{align-self:center;min-width:44px;min-height:44px}
+.menu-grid{align-items:start}
+.day-heading{background:var(--sage);border-radius:8px;padding:10px 12px;margin:-4px -8px 10px}
+.day-heading h2{font-family:Lora,Georgia,serif;color:var(--aubergine)}
+.task-time{color:var(--aubergine);font-weight:700}
+.prep-session .session-tasks>li{padding:0 0 12px;margin:0 0 12px;border-bottom:1px solid #eeeee8}
+.prep-session .session-tasks>li:last-child{padding-bottom:0;border:0}
+.prep-session .session-tasks>li>strong{font-weight:700}
+.prep-overview-row details{margin-top:0}
+.prep-overview-row summary{font-size:14px;padding:8px 0}
+.inline-ingredient{background:#f4f7ef;padding:5px 8px;border-radius:5px}
+.prep-overview>.meta{font-size:13px;margin:8px 0}
+@media(max-width:700px){
+ .brand{font-size:20px}.prep-day{padding:14px}.day-heading{display:block}
+ .day-heading .meta{display:block;font-size:13px;margin-top:5px}
+ .prep-overview-row.prep-session{padding:12px 0;gap:8px}
+ .prep-session .session-tasks{padding-left:18px}
+ .recipe .food-icon{height:180px}.recipe-heading h3{font-size:21px}
+}
+.recipe-options{margin:0}.recipe-options>summary{padding:8px 0;min-height:44px}
+.recipe .recipe-heading{margin-bottom:8px}.recipe>.meta{font-size:12px;margin-bottom:4px}
+.spread-options{margin-top:0;padding:12px 20px}.spread-options>summary{padding:4px 0;min-height:44px;align-content:center}.spread-options[open]>summary{margin-bottom:16px}
+.dish-mode{font-size:13px;background:var(--sage);display:inline-block;border-radius:20px;padding:4px 10px;margin:6px 0}

@@ -1,3 +1,4 @@
+import {recipeImages} from './recipeImages';
 import { useEffect, useState } from "react";
 import {
   CalendarDays,
@@ -143,7 +144,7 @@ export default function App() {
   if (!g || !ws)
     return (
       <main className="shell">
-        <p className="brand">♧ Simmer and Gather</p>
+        <p className="brand">🍅 Simmer and Gather</p>
         <h1>Your hosting plans, together.</h1>
         <p>{error || "Opening your saved gathering…"}</p>
         {error && <><a className="login-link" href="/api/google/start">Sign in with Google</a><button onClick={() => location.reload()}>Try again</button></>}
@@ -173,7 +174,7 @@ export default function App() {
     <div className="shell">
       <header>
         <a className="brand" href="#">
-          ♧{" "}
+          🍅{" "}
           <span>
             Simmer <i>and</i> Gather
           </span>
@@ -538,12 +539,12 @@ export default function App() {
       {step === 1 && (
         <>
           <div className="intro">
-            <h1>Your menu</h1>
+            <h1>What’s on the menu?</h1>
             <p>
               Choose what to cook, buy or ask guests to bring.
             </p>
           </div>
-          <section className="card">
+          <details className="card spread-options"><summary>Menu size · {g.spread === 'generous' ? 'More generous' : 'Manageable spread'}</summary>
             <div className="row">
               <h2>
                 <Utensils />
@@ -613,15 +614,15 @@ export default function App() {
             >
               Save menu preferences
             </button>
-          </section>
+          </details>
           <div className="menu-grid">
             {(ws.inputs.selections || []).map((s) => (
               <article className="card recipe" key={s.id}>
                 <div className="recipe-heading">
                   <div className="food-icon">
-                    {s.recipe?.image_url ? (
+                    {(s.recipe?.image_url || recipeImages[s.recipe?.source||'']) ? (
                       <img
-                        src={s.recipe.image_url}
+                        src={s.recipe?.image_url || recipeImages[s.recipe?.source||'']}
                         alt={s.title}
                         onError={(e) => {
                           e.currentTarget.style.display = "none";
@@ -646,10 +647,10 @@ export default function App() {
                     />
                   </button>
                 </div>
-                {s.recipe?.image_credit && (
-                  <p className="meta">{s.recipe.image_credit}</p>
+                {(s.recipe?.image_credit || recipeImages[s.recipe?.source||'']) && (
+                  <p className="meta">{s.recipe?.image_credit || 'Photo: Ministry of Curry'}</p>
                 )}
-                <div className="fields">
+                <p className="dish-mode">{s.mode === "buy" ? "Buy prepared" : s.mode === "guest" ? "Guest brings" : s.mode === "semi" ? "Semi-prepared" : "Cook"} · {s.servings} portions</p><details className="recipe-options"><summary>Adjust dish</summary><div className="fields">
                   <label>
                     Preparation
                     <select
@@ -756,6 +757,7 @@ export default function App() {
                     Remove
                   </button>
                 </div>
+                </details>
               </article>
             ))}
           </div>

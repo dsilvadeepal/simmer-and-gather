@@ -6,13 +6,17 @@ Built as a personal agentic-AI course demo. The working implementation includes 
 
 ## A look inside
 
+The interface uses tomato-red actions, aubergine headings and sage accents, with expandable dish controls and a compact mobile prep view. Recipe photos retain publisher attribution.
+
 These screenshots show the actual UI with isolated, illustrative test data. They do not display personal calendar events or account credentials.
 
-![Desktop preparation schedule](docs/images/desktop-plan.png)
+![Food-led menu planning](docs/images/desktop-menu.jpg)
+
+![Desktop preparation schedule](docs/images/desktop-plan.jpg)
 
 | Gathering setup | Phone preparation view |
 | --- | --- |
-| ![Gathering settings](docs/images/gathering-setup.png) | ![Mobile preparation schedule](docs/images/mobile-plan.png) |
+| ![Gathering settings](docs/images/gathering-setup.jpg) | ![Mobile preparation schedule](docs/images/mobile-plan.jpg) |
 
 ## How it works
 

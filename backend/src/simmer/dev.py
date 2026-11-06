@@ -26,7 +26,7 @@ def session(request:Request):
     return {'token':jwt.encode({'sub':OWNER,'iss':'simmer-local','aud':'simmer-local','exp':datetime.now(timezone.utc)+timedelta(hours=4)},KEY,algorithm='HS256'),'fixture_mode':True}
 
 def seed():
-    g=Gathering(id='00000000-0000-4000-8000-000000000015',title='Diwali with friends & family',arrival='2026-11-07T18:00:00-05:00',earliest_prep='2026-11-05',prep_days=['2026-11-05','2026-11-06','2026-11-07'],vegetarian_guests=6,allergies=[],profile=HostProfile(equipment={'stovetop':2,'oven':1,'air fryer':1,'instant pot':1}),prep_windows=[Interval(start='2026-11-05T18:00:00-05:00',end='2026-11-05T19:00:00-05:00'),Interval(start='2026-11-06T18:00:00-05:00',end='2026-11-06T19:00:00-05:00'),Interval(start='2026-11-07T14:00:00-05:00',end='2026-11-07T17:00:00-05:00')])
+    g=Gathering(id='00000000-0000-4000-8000-000000000015',title='Weekend gathering',arrival='2026-11-07T18:00:00-05:00',earliest_prep='2026-11-05',prep_days=['2026-11-05','2026-11-06','2026-11-07'],vegetarian_guests=6,allergies=[],profile=HostProfile(equipment={'stovetop':2,'oven':1,'air fryer':1,'instant pot':1}),prep_windows=[Interval(start='2026-11-05T18:00:00-05:00',end='2026-11-05T19:00:00-05:00'),Interval(start='2026-11-06T18:00:00-05:00',end='2026-11-06T19:00:00-05:00'),Interval(start='2026-11-07T14:00:00-05:00',end='2026-11-07T17:00:00-05:00')])
     try: HostingService(store).get_gathering(OWNER,g.id); return
     except Missing: pass
     HostingService(store).save_gathering(OWNER,g,None)

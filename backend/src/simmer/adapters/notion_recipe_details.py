@@ -2,7 +2,7 @@
 import re
 from ..domain import Ingredient, PrepTask, RecipeSnapshot
 
-UNIT=re.compile(r'^(\d+(?:[.,]\d+)?(?:\s+\d+/\d+|\s*[¼½¾⅓⅔⅛⅜⅝⅞])?|\d+/\d+|[¼½¾⅓⅔⅛⅜⅝⅞])\s*(cups?|tbsp|tablespoons?|tsp|teaspoons?|grams?|g|kg|ml|l|pounds?|lbs?|oz|cloves?|pieces?|cans?)\b\s*',re.I)
+UNIT=re.compile(r'^(\d+(?:[.,]\d+)?(?:\s+\d+/\d+|\s*[¼½¾⅓⅔⅛⅜⅝⅞])?|\d+/\d+|[¼½¾⅓⅔⅛⅜⅝⅞])\s*(cups?|tbsp|tablespoons?|tsp|teaspoons?|grams?|g|kg|ml|l|pounds?|lbs?|oz|cloves?|pieces?|cans?|count)\b\s*',re.I)
 FRACTIONS={'¼':.25,'½':.5,'¾':.75,'⅓':1/3,'⅔':2/3,'⅛':.125,'⅜':.375,'⅝':.625,'⅞':.875}
 STEP=re.compile(r'^(.+?):\s*(\d+)\s*min\s*(?:hands-on|active)(?:\s*\+\s*(\d+)\s*min\s*(?:waiting/cooking|waiting))?',re.I)
 COURSES={'Starter':'starters','Main':'mains','Side':'sides','Dessert':'desserts','Drink':'drinks'}
@@ -17,7 +17,11 @@ def property_text(page,name):
 def ingredient(line):
     line=line.strip(' •')
     match=UNIT.match(line)
-    if not match: return Ingredient(name=line)
+    if not match:
+        # Only parse explicit whole-item counts; do not treat unknown units as counts.
+        count=re.match(r'^(\d+)\s+((?:(?:small|medium|large|raw|black|green|Indian|Persian)\s+)*(?:lemons?|peppers?|onions?|cashews?|bay leaf|peppercorns?|cardamom pods|carrots?|cucumbers?|chili)\b.*)$',line,re.I)
+        if count: return Ingredient(name=count[2],quantity=float(count[1]),unit='count')
+        return Ingredient(name=line)
     raw=match.group(1).replace(',','.')
     try:
         amount=0
@@ -47,7 +51,7 @@ def from_notion_details(page,blocks):
     lines=[block_text(b) for b in blocks]
     ingredients=[]; collecting=False
     for line in lines:
-        if line.startswith('Ingredients (source facts'):
+        if line.startswith(('Ingredients (source facts','Ingredients (source quantities')):
             collecting=True; continue
         if collecting:
             if not line or line.startswith(('Cooking method','Home-cook timing','Source recipe:','Make-ahead:')): collecting=False

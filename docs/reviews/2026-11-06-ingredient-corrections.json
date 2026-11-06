@@ -1,0 +1,162 @@
+[
+  {
+    "recipe": "Air Fryer Paneer Tikka",
+    "source": "https://ministryofcurry.com/paneer-tikka/",
+    "original": "1 lemon (juiced)",
+    "corrected": {
+      "name": "lemon (juiced)",
+      "quantity": 1.0,
+      "unit": "count"
+    }
+  },
+  {
+    "recipe": "Air Fryer Paneer Tikka",
+    "source": "https://ministryofcurry.com/paneer-tikka/",
+    "original": "1 medium green pepper (cut into 1-inch cubes)",
+    "corrected": {
+      "name": "medium green pepper (cut into 1-inch cubes)",
+      "quantity": 1.0,
+      "unit": "count"
+    }
+  },
+  {
+    "recipe": "Air Fryer Paneer Tikka",
+    "source": "https://ministryofcurry.com/paneer-tikka/",
+    "original": "1 medium red pepper (cut into 1-inch cubes)",
+    "corrected": {
+      "name": "medium red pepper (cut into 1-inch cubes)",
+      "quantity": 1.0,
+      "unit": "count"
+    }
+  },
+  {
+    "recipe": "Air Fryer Paneer Tikka",
+    "source": "https://ministryofcurry.com/paneer-tikka/",
+    "original": "1 medium red onion (cut into 1-inch cubes)",
+    "corrected": {
+      "name": "medium red onion (cut into 1-inch cubes)",
+      "quantity": 1.0,
+      "unit": "count"
+    }
+  },
+  {
+    "recipe": "Instant Pot Palak Paneer",
+    "source": "https://ministryofcurry.com/palak-paneer-instant-pot/",
+    "original": "15 raw cashews (**)",
+    "corrected": {
+      "name": "raw cashews (**)",
+      "quantity": 15.0,
+      "unit": "count"
+    }
+  },
+  {
+    "recipe": "Instant Pot Palak Paneer",
+    "source": "https://ministryofcurry.com/palak-paneer-instant-pot/",
+    "original": "1 to 2 teaspoon hot green chili (minced)",
+    "corrected": {
+      "name": "hot green chili (minced) (to taste; shopping uses upper end)",
+      "quantity": 2.0,
+      "unit": "tsp"
+    }
+  },
+  {
+    "recipe": "Instant Pot Palak Paneer",
+    "source": "https://ministryofcurry.com/palak-paneer-instant-pot/",
+    "original": "1 medium yellow onion (chopped fine)",
+    "corrected": {
+      "name": "medium yellow onion (chopped fine)",
+      "quantity": 1.0,
+      "unit": "count"
+    }
+  },
+  {
+    "recipe": "Vegetable Pulao Recipe | Veg Pulav",
+    "source": "https://ministryofcurry.com/moms-veg-pulao/",
+    "original": "1 Indian bay leaf",
+    "corrected": {
+      "name": "Indian bay leaf",
+      "quantity": 1.0,
+      "unit": "count"
+    }
+  },
+  {
+    "recipe": "Vegetable Pulao Recipe | Veg Pulav",
+    "source": "https://ministryofcurry.com/moms-veg-pulao/",
+    "original": "12 black peppercorns",
+    "corrected": {
+      "name": "black peppercorns",
+      "quantity": 12.0,
+      "unit": "count"
+    }
+  },
+  {
+    "recipe": "Vegetable Pulao Recipe | Veg Pulav",
+    "source": "https://ministryofcurry.com/moms-veg-pulao/",
+    "original": "3 green cardamom pods",
+    "corrected": {
+      "name": "green cardamom pods",
+      "quantity": 3.0,
+      "unit": "count"
+    }
+  },
+  {
+    "recipe": "Vegetable Pulao Recipe | Veg Pulav",
+    "source": "https://ministryofcurry.com/moms-veg-pulao/",
+    "original": "1 medium yellow onion (thinly sliced)",
+    "corrected": {
+      "name": "medium yellow onion (thinly sliced)",
+      "quantity": 1.0,
+      "unit": "count"
+    }
+  },
+  {
+    "recipe": "Vegetable Pulao Recipe | Veg Pulav",
+    "source": "https://ministryofcurry.com/moms-veg-pulao/",
+    "original": "2 carrots (cut into 2-inch X \u00bc inch thin strips)",
+    "corrected": {
+      "name": "carrots (cut into 2-inch X \u00bc inch thin strips)",
+      "quantity": 2.0,
+      "unit": "count"
+    }
+  },
+  {
+    "recipe": "Vegetable Pulao Recipe | Veg Pulav",
+    "source": "https://ministryofcurry.com/moms-veg-pulao/",
+    "original": "16 cashews",
+    "corrected": {
+      "name": "cashews",
+      "quantity": 16.0,
+      "unit": "count"
+    }
+  },
+  {
+    "recipe": "Indian Cucumber Salad (Kakdi Koshimbir)",
+    "source": "https://ministryofcurry.com/indian-cucumber-salad/",
+    "original": "4 small Persian cucumbers",
+    "corrected": {
+      "name": "small Persian cucumbers",
+      "quantity": 4.0,
+      "unit": "count"
+    }
+  },
+  {
+    "recipe": "Indian Cucumber Salad (Kakdi Koshimbir)",
+    "source": "https://ministryofcurry.com/indian-cucumber-salad/",
+    "original": "1 small green chili (sliced lengthwise)",
+    "corrected": {
+      "name": "small green chili (sliced lengthwise)",
+      "quantity": 1.0,
+      "unit": "count"
+    }
+  },
+  {
+    "recipe": "Instant Pot Carrot Halwa Recipe",
+    "source": "https://ministryofcurry.com/carrot-halwa-instant-pot/",
+    "original": "10 carrots (peeled and grated (About 6 cups packed))",
+    "corrected": {
+      "name": "carrots (peeled and grated (About 6 cups packed))",
+      "quantity": 10.0,
+      "unit": "count"
+    }
+  }
+]

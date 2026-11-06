@@ -76,7 +76,7 @@ def refine(r,n,source):
  if n==23:
   r.reviewed=False
   r.uncertainties=list(dict.fromkeys(r.uncertainties+['Verify cookie baking temperature; pecan toasting temperature is not sufficient evidence.']))
- if n==1:r.tasks[3].resource='oven' 
+ if n==1:r.tasks[3].resource='oven'
  if n==7:r.title='Instant Pot Dal Makhani' # optional rice not actually planned
  # Separate setup from overnight waits without changing downstream dependency IDs.
  out=[]

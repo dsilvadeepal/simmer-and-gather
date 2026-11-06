@@ -7,5 +7,5 @@ test('simple choices retain daily overrides and hide editing controls',()=>{
  expect(screen.getByText(/5:00 PM/)).toBeVisible();
  expect(screen.getByLabelText('Daily minutes 2026-11-01')).not.toBeVisible();
  expect(screen.getByText(/Up to 1.5 hours per day/)).toBeVisible();
- fireEvent.click(screen.getByLabelText(/Sun/));expect(change).toHaveBeenCalledWith({prep_days:[]});
+ fireEvent.click(screen.getByRole('checkbox',{name:/Sun/}));expect(change).toHaveBeenCalledWith({prep_days:[]});
 });

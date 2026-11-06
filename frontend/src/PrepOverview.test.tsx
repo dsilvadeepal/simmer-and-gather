@@ -61,8 +61,8 @@ test('distinguishes counted time from elapsed blocks and passive cooking',()=>{
  render(<PrepOverview fitDays={[{day:'2026-12-25',presence_minutes:20,limit_minutes:180}]} assignments={[
  {task:{id:'a',title:'Cafreal · Cook chicken',minutes:45,active_minutes:20,presence_minutes:20,resource:'stovetop'},interval:{start:'2026-12-25T14:30:00-05:00',end:'2026-12-25T15:15:00-05:00'}}
  ]}/>);
- expect(screen.getByText(/20 min hands-on \/ 180 min available/)).toBeVisible();
- expect(screen.getByText('45 min elapsed')).toBeVisible();
+ expect(screen.getByText(/20 min active · 3 hr daily allowance/)).toBeVisible();
+ expect(screen.getByText('45 min start to finish')).toBeVisible();
  expect(screen.getByText(/20 min hands-on · 25 min cooking or waiting between check-ins/)).toBeVisible();
- expect(screen.getByText(/45 min total across prep sessions/)).toBeVisible();
+ expect(screen.getByText(/45 min start to finish across sessions/)).toBeVisible();
 });

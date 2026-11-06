@@ -17,3 +17,11 @@ def test_duplicate_inventory_requires_review():
 def test_guest_items_excluded_bought_items_included():
     i=PlanInputs(gathering=Gathering(),selections=[MenuSelection(title='Cake',mode='guest',servings=10),MenuSelection(title='Samosas',mode='buy',servings=15)])
     assert [x.name for x in shopping_for(i)]==['Samosas']
+
+def test_clean_names_combine_without_losing_unknown_amounts():
+    r=RecipeSnapshot(title='Vegetables',source='test',servings=4,ingredients=[Ingredient(name='cumin seeds (crushed)',quantity=1,unit='tsp'),Ingredient(name='cumin seeds',quantity=2,unit='tsp'),Ingredient(name='water',quantity=1,unit='cup'),Ingredient(name='6 cloves',quantity=6,unit='count'),Ingredient(name='cloves',quantity=None,unit='count')])
+    i=PlanInputs(gathering=Gathering(),selections=[MenuSelection(title='Vegetables',recipe=r,servings=8)])
+    rows={x.name:x for x in shopping_for(i)}
+    assert rows['cumin seeds'].quantity==6
+    assert rows['cloves'].quantity is None
+    assert 'water' not in rows

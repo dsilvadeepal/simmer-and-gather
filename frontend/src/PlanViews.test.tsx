@@ -7,10 +7,16 @@ const plan={gathering_id:'g',revision:1,input_hash:'h',assignments:[],shopping:[
 test('schedule is default and keyboard switches to secondary views',()=>{
  render(<PlanViews inputs={inputs} plan={plan}/>);
  expect(screen.getByRole('tab',{name:'Schedule'})).toHaveAttribute('aria-selected','true');
- expect(screen.queryByText('Finish drinks')).not.toBeVisible();
+ expect(screen.queryByText('Finish drinks')).toBeNull();
  fireEvent.keyDown(screen.getByRole('tab',{name:'Schedule'}),{key:'ArrowRight'});
  expect(screen.getByRole('tab',{name:'Menu'})).toHaveFocus();
  expect(screen.getByRole('tab',{name:'Menu'})).toHaveAttribute('aria-selected','true');
+ fireEvent.click(screen.getByRole('tab',{name:'Finishing'}));
+ expect(screen.getByText('No extra finishing tasks.')).toBeVisible();
+});
+
+test('shows drinks finishing only for a menu with drinks',()=>{
+ render(<PlanViews inputs={{...inputs,selections:[{id:'drink',title:'Lemonade',category:'drinks',mode:'buy',servings:15}]}} plan={plan}/>);
  fireEvent.click(screen.getByRole('tab',{name:'Finishing'}));
  expect(screen.getByText('Finish drinks')).toBeVisible();
 });

@@ -66,3 +66,16 @@ Cooking copy: task-specific guidance uses expandable “How to” bullets. Keep 
 Recipe preparation must distinguish source-supported storage from labelled culinary estimates. Cooking, cooling, packing, soaking setup and reheating are explicit linked steps; optional minimum/maximum dependency gaps prevent unsupported pauses and immediate cool/reheat cycles. The scheduler must try a bounded, local constraint search for supported solo-host cases before recommending extra time or bought dishes. Every candidate still passes the independent validator for dependencies, attention, equipment, calendar, daily limits, cleanup and the relaxation buffer. Failure to find a candidate is not a proof of infeasibility. Saved recipe snapshots in existing plans are never rewritten by a library audit.
 
 The five-menu regression rerun is documented in `docs/reviews/2026-10-29-five-menu-rerun.md`. All five schedules fit the unchanged test limits, including the previously approved flexible cleanup allowance. This is fixture-based evidence, not live-calendar or cooking validation. The vegetarian Thanksgiving stuffing adaptation exists only in the isolated draft.
+
+### UX clarity pass — November 6, 2026
+- Shopping groups: Produce, Dairy & proteins, Pantry & spices, Frozen. Exclude plain water; clean publisher formatting and combine equivalent names with matching units. Preserve unresolved amounts rather than infer scaled quantities.
+- Show practical shopping quantities with explicit “About” rounding; cooking quantities remain unchanged. Consolidate unresolved items under “Amounts to confirm,” with original recipe links available.
+- Daily summaries distinguish active time (including supervision and cleanup) from start-to-finish session duration. Feasible plans with an overrun must disclose the extra time.
+- Disable Save gathering when unchanged. Distinguish Check calendar conflicts from Regenerate prep plan; neither action books events. Colors and layout unchanged.
+
+### Cooking clarity follow-up — November 6, 2026
+- Use concise dish names in the schedule, remove repeated generic supervision reminders, and suppress instructions that simply repeat the task title. Preserve recipe-specific methods and existing task quantities; never invent missing cooking settings.
+- Explain recipe-yield servings versus buffet portions. Replace generic review prompts with recipe review status and the servings control.
+- Use plain scheduling language and readable dates; remove stale references to protected time.
+- Use Ingredient, Amount and Unit fields for pantry additions, preserving existing inventory and retaining input after a failed save.
+- Filter generic finishing items against the selected menu, omitting drinks when none are selected and vague unsupported warm-holding instructions. Do not rewrite saved plans.

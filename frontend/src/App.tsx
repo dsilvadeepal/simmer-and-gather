@@ -1,3 +1,4 @@
+import {PantryEntry} from './PantryEntry';
 import {recipeImages} from './recipeImages';
 import { useEffect, useState } from "react";
 import {
@@ -67,7 +68,6 @@ export default function App() {
     [plan, setPlan] = useState<Plan | null>(null),
     [source, setSource] = useState(""),
     [preview, setPreview] = useState<Recipe | null>(null),
-    [inventory, setInventory] = useState(""),
     [approval, setApproval] = useState<string | null>(null),
     [booking, setBooking] = useState<{
       outcomes: { status: string; title?: string }[];
@@ -276,7 +276,7 @@ export default function App() {
                 </label>
               </div>
               <label>
-                Allergies (comma separated; leave blank for none)
+                Allergies (for example, peanuts; leave blank for none)
                 <input
                   value={(g.allergies || []).join(", ")}
                   onChange={(e) =>
@@ -306,7 +306,7 @@ export default function App() {
             </section>
             <SchedulingChoices gathering={g} days={prepDays} change={change}/>
             <details className="card scheduling-extra"><summary>More scheduling options</summary>
-              <label>Light finishing allowance (minutes)<input type="number" min="0" value={g.finishing_minutes} onChange={e=>change({finishing_minutes:+e.target.value})}/></label>
+              <label>Time for finishing touches (minutes)<input type="number" min="0" value={g.finishing_minutes} onChange={e=>change({finishing_minutes:+e.target.value})}/></label>
               <h3>Choose specific times (optional)</h3>
               <p className="meta">These times replace the default 9 am–9 pm range. Remove all to use the default.</p>
 
@@ -371,7 +371,7 @@ export default function App() {
                 }}
               >
                 <Plus size={16} />
-                Add prep window
+                Choose a prep time
               </button>
             </details>
             <section className="card">
@@ -398,7 +398,7 @@ export default function App() {
                     />
                   </label>
                   <label>
-                    Capabilities (comma separated)
+                    Can help with (separate skills with commas)
                     <input
                       value={(h.skills || []).join(", ")}
                       onChange={(e) =>
@@ -525,9 +525,9 @@ export default function App() {
           </div>
           <div className="footer-actions">
             <span className="meta">
-              {dirty ? "Unsaved changes" : "Your choices are saved"}
+              {dirty ? "Unsaved changes" : "No unsaved gathering changes"}
             </span>
-            <button disabled={loading} onClick={() => run(save)}>
+            <button disabled={loading || !dirty} onClick={() => run(save)}>
               Save gathering
             </button>
             <button className="secondary" onClick={() => setStep(1)}>
@@ -541,7 +541,7 @@ export default function App() {
           <div className="intro">
             <h1>What’s on the menu?</h1>
             <p>
-              Choose what to cook, buy or ask guests to bring.
+              Choose what to cook, buy or ask guests to bring. Servings use each recipe’s stated yield—not automatically smaller buffet portions. Adjust each dish for your menu.
             </p>
           </div>
           <details className="card spread-options"><summary>Menu size · {g.spread === 'generous' ? 'More generous' : 'Manageable spread'}</summary>
@@ -650,7 +650,7 @@ export default function App() {
                 {(s.recipe?.image_credit || recipeImages[s.recipe?.source||'']) && (
                   <p className="meta">{s.recipe?.image_credit || 'Photo: Ministry of Curry'}</p>
                 )}
-                <p className="dish-mode">{s.mode === "buy" ? "Buy prepared" : s.mode === "guest" ? "Guest brings" : s.mode === "semi" ? "Semi-prepared" : "Cook"} · {s.servings} portions</p><details className="recipe-options"><summary>Adjust dish</summary><div className="fields">
+                <p className="dish-mode">{s.mode === "buy" ? "Buy prepared" : s.mode === "guest" ? "Guest brings" : s.mode === "semi" ? "Semi-prepared" : "Cook"} · {s.servings} servings</p><details className="recipe-options"><summary>Adjust dish</summary><div className="fields">
                   <label>
                     Preparation
                     <select
@@ -745,7 +745,7 @@ export default function App() {
                       ? "Must-have"
                       : s.mode === "buy"
                         ? "No cooking tasks"
-                        : "Review quantities & timing"}
+                        : s.recipe?.reviewed ? "Recipe reviewed · adjust servings above" : "Recipe needs review before scheduling"}
                   </span>
                   <button
                     className="text-button"
@@ -846,8 +846,7 @@ export default function App() {
                 })}>Save {r.title} to Notion</button>)}
               </div>}
               <p className="meta">
-                Paste a source URL or recipe text. Review missing timings and
-                make-ahead support before saving.
+                Paste a recipe link or text. We’ll extract the ingredients and steps, and flag any missing information for review.
               </p>
               <textarea
                 aria-label="Recipe source"
@@ -893,43 +892,7 @@ export default function App() {
               <ShoppingBag />
               What you already have
             </h2>
-            <p className="meta">
-              Optional: enter one item per line as name, quantity, unit. Confirmed amounts are subtracted from your shopping list.
-            </p>
-            <textarea
-              aria-label="Ingredients on hand"
-              placeholder="Rice, 500, g"
-              value={inventory}
-              onChange={(e) => setInventory(e.target.value)}
-            />
-            <button
-              className="secondary"
-              onClick={() =>
-                run(() =>
-                  edit([
-                    {
-                      action: "inventory",
-                      items: inventory
-                        .split("\n")
-                        .filter(Boolean)
-                        .map((line) => {
-                          const [name, quantity, unit] = line
-                            .split(",")
-                            .map((x) => x.trim());
-                          return {
-                            name,
-                            quantity: quantity ? +quantity : null,
-                            unit: unit || null,
-                            source: "manual",
-                          };
-                        }),
-                    },
-                  ]),
-                )
-              }
-            >
-              Confirm ingredients
-            </button>
+            <PantryEntry disabled={loading} onAdd={async item=>{let saved=false; await run(async()=>{await edit([{action:'inventory',items:[...(ws.inputs.inventory||[]),item]}]);saved=true;}); return saved;}}/>
             <p className="meta">
               {ws.inputs.inventory?.length || 0} confirmed items
             </p>
@@ -967,7 +930,7 @@ export default function App() {
                 }
               >
                 <RefreshCw size={16} />
-                Recheck my plan
+                Check calendar conflicts
               </button>
               <button
                 disabled={loading || dirty}
@@ -983,10 +946,11 @@ export default function App() {
                   })
                 }
               >
-                {plan ? "Update plan" : "Generate proposed plan"}
+                {plan ? "Regenerate prep plan" : "Generate proposed plan"}
               </button>
             </div>
           </section>
+          <p className="meta">Check conflicts to refresh calendar availability. Regenerate to rebuild the schedule after changing your menu or prep time. Neither books calendar events.</p>
           {dirty && (
             <p className="alert">
               Save your gathering changes before generating a plan.
@@ -1015,7 +979,7 @@ export default function App() {
               >
                 <strong>
                   {plan.status === "feasible"
-                    ? "Your plan fits your available time."
+                    ? ((plan.fit_days || []).some(d => Number(d.presence_minutes) > Number(d.limit_minutes)) ? "Fits with extra time: " + (plan.fit_days || []).filter(d => Number(d.presence_minutes) > Number(d.limit_minutes)).map(d => `${Number(d.presence_minutes) - Number(d.limit_minutes)} extra min on ${new Date(String(d.day)+"T12:00:00").toLocaleDateString("en-US",{weekday:"short",month:"short",day:"numeric"})}`).join("; ") + ". See the daily totals below." : "Your plan fits your available time.")
                     : "A few things need your attention."}
                 </strong>
                 <p className="meta">

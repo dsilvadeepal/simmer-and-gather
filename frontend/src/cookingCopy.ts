@@ -21,5 +21,9 @@ export function taskInstructions(text:string, title:string, repeated=false) {
  // Shared recipe-level guidance is not an instruction for every task.
  const steps=repeated?[]:copy.steps;
  if(/reheat/i.test(title)) return [...steps,...copy.storage.filter(s=>/^reheat/i.test(s))];
- return steps;
+ return steps.filter(s=>s.replace(/[.!]/g,'').toLowerCase()!==title.replace(/[.!]/g,'').toLowerCase());
+}
+
+export function shortDishName(title:string) {
+ return title.split('|')[0].replace(/\bRecipe\b/gi,'').replace(/^Instant Pot\s+/i,'').replace(/\s+/g,' ').trim();
 }

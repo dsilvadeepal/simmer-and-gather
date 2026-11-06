@@ -7,7 +7,7 @@ export function HostingSummary({inputs,plan,view='all'}:{inputs:Inputs;plan:Plan
  const fmt=amount;
  return <section className="card hosting-summary">
   {view!=='fit'&&<><h2>Your menu</h2>
-  <p className="meta">{g.guests} guests</p>
+  <p className="meta">{g.guests} guests · Servings follow the original recipe yield. Adjust each dish for buffet portions; the app does not automatically reduce every dish.</p>
   <div className="menu-summary" role="table" aria-label="Selected menu">
    <div role="row" className="menu-summary-head"><strong>Role / dish</strong><strong>Quantity to prepare</strong><strong>In your menu</strong></div>
    {(inputs.selections||[]).map(s=>{
@@ -15,7 +15,7 @@ export function HostingSummary({inputs,plan,view='all'}:{inputs:Inputs;plan:Plan
     const amounts=(r?.ingredients||[]).filter(i=>i.quantity!=null&&i.unit&&!/\b(butter|ghee|oil|spice|salt|pepper|paste)\b/i.test(i.name)&&i.name.toLowerCase().split(/\W+/).some(word=>word.length>3&&s.title.toLowerCase().includes(word))).slice(0,2);
     return <div role="row" key={s.id}>
      <div role="cell"><span className="meta">{s.category}</span><br/>{r?.source?.startsWith('https://')?<a href={r.source} target="_blank" rel="noreferrer">{s.title}</a>:s.title}</div>
-     <div role="cell">{s.servings} portions{factor!=null&&<span className="meta"> · {fmt(factor)}× recipe</span>}{factor!=null&&amounts.map((i,n)=><div className="meta" key={n}>{fmt(i.quantity!*factor)} {i.unit} {i.name}</div>)}{!!r?.ingredients?.length&&<details><summary>All ingredient quantities</summary>{r.ingredients.map((i,n)=><p key={n}>{i.quantity==null||factor==null?'Check amount':fmt(i.quantity*factor)} {i.unit} {i.name}</p>)}</details>}</div>
+     <div role="cell">{s.servings} recipe servings{factor!=null&&<span className="meta"> · {fmt(factor)}× recipe</span>}{factor!=null&&amounts.map((i,n)=><div className="meta" key={n}>{fmt(i.quantity!*factor)} {i.unit} {i.name}</div>)}{!!r?.ingredients?.length&&<details><summary>All ingredient quantities</summary>{r.ingredients.map((i,n)=><p key={n}>{i.quantity==null||factor==null?'Check amount':fmt(i.quantity*factor)} {i.unit} {i.name}</p>)}</details>}</div>
      <div role="cell">{s.must_have?'Your must-have':s.mode==='buy'?'Bought prepared':s.mode==='guest'?'Guest contribution':s.vegetarian||r?.vegetarian?'Vegetarian option':'Your selected dish'}</div>
     </div>;
    })}

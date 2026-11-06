@@ -115,3 +115,24 @@ def test_optional_windows_use_daytime_and_respect_busy_without_mutating_inputs()
     assert not validate_schedule(i,p)
     assert i.gathering.prep_windows==[]
     assert all(a.interval.start.hour>=17 for a in p.assignments)
+
+def test_dependency_gap_rejects_overnight_hot_food_pause():
+    i=inputs(minutes=(10,15),limit=120)
+    r=i.selections[0].recipe
+    r.tasks=[PrepTask(id='cook',title='Cook filling',minutes=10,evidence='reviewed',max_ahead_hours=48),PrepTask(id='store',title='Cool and refrigerate',minutes=10,evidence='reviewed',max_ahead_hours=48,dependencies=['cook'],max_dependency_gap_minutes=15)]
+    p=schedule(i)
+    assert p.status=='feasible'
+    store=next(a for a in p.assignments if a.task.id.endswith(':store'))
+    from datetime import timedelta
+    store.interval=Interval(start=store.interval.start+timedelta(minutes=30),end=store.interval.end+timedelta(minutes=30))
+    assert any(v.code=='dependency_gap' for v in validate_schedule(i,p))
+
+def test_constraint_search_preserves_final_dependency_validation():
+    from simmer.constraint_scheduler import solve_schedule
+    i=inputs(minutes=(15,15),limit=120)
+    r=i.selections[0].recipe
+    r.tasks=[PrepTask(id='prep',title='Prep',minutes=15,evidence='reviewed',max_ahead_hours=48),PrepTask(id='cook',title='Cook',minutes=15,evidence='reviewed',max_ahead_hours=48,dependencies=['prep'],max_dependency_gap_minutes=15)]
+    p=solve_schedule(i)
+    assert p.status=='feasible' and not validate_schedule(i,p)
+    p.assignments=[a for a in p.assignments if not a.task.id.endswith(':prep')]
+    assert any(v.code=='dependency' for v in validate_schedule(i,p))

@@ -171,6 +171,12 @@ def validate_schedule(inputs,candidate,partial=False):
             if any(minutes(window.end,target)>t.max_ahead_hours*60 for target in targets): fail('storage','Preparation exceeds its supported storage window',[t.id])
         for dep in t.dependencies:
             if dep not in by_id or by_id[dep].interval.end>window.start: fail('dependency','Prerequisite task must finish first',[t.id,dep])
+        known_dependencies=[by_id[d].interval.end for d in t.dependencies if d in by_id]
+        if known_dependencies and all(d in by_id for d in t.dependencies) and minutes(max(known_dependencies),window.start)<t.min_dependency_gap_minutes:
+            fail('dependency_gap','Allow the required storage/rest interval before this step',[t.id])
+        if t.max_dependency_gap_minutes is not None and known_dependencies and all(d in by_id for d in t.dependencies):
+            if minutes(max(known_dependencies),window.start)>t.max_dependency_gap_minutes:
+                fail('dependency_gap','Continue the next preparation step without an unsupported storage gap',[t.id])
         helper=next((h for h in helpers if h.id==a.person),None)
         if a.person!='host' and (not helper or t.skill not in helper.skills or not any(w.start<=window.start and w.end>=window.end for w in helper.available)): fail('helper','Helper lacks capability or full availability',[t.id])
         for presence in occupancy_windows(a,helpers):
@@ -223,7 +229,15 @@ def _schedule(inputs,priority=False):
         for task in ready:
             windows=prep_windows_for(g) if task.phase!='finishing' else [Interval(start=g.arrival-timedelta(minutes=g.relax_minutes),end=g.arrival)]
             for window in windows:
+                # Skip candidates that the validator would necessarily reject.
+                if task.preparation_policy=='same_day' and window.start.astimezone(ZoneInfo(g.profile.timezone)).date()!=g.arrival.astimezone(ZoneInfo(g.profile.timezone)).date():
+                    continue
                 start=window.start.astimezone(UTC)
+                dependency_ends=[a.interval.end.astimezone(UTC) for a in p.assignments if a.task.id in task.dependencies]
+                if dependency_ends: start=max(start,*dependency_ends)
+                if task.max_ahead_hours is not None and task.storage_anchor=='serving' and task.phase=='cooking':
+                    start=max(start,g.arrival.astimezone(UTC)-timedelta(hours=task.max_ahead_hours,minutes=task.minutes or 0))
+                if task.eligible: start=max(start,task.eligible.start.astimezone(UTC))
                 start+=timedelta(minutes=(-start.minute)%5,seconds=-start.second,microseconds=-start.microsecond)
                 elapsed_end=g.arrival-timedelta(minutes=g.relax_minutes) if task.unattended and task.presence_minutes==0 else window.end
                 while start<window.end and start+timedelta(minutes=task.minutes or 0)<=elapsed_end and attempts<20000:
@@ -265,6 +279,10 @@ def schedule(inputs):
     if plan.status=='conflict':
         alternative=_schedule(inputs,priority=True)
         if alternative.status=='feasible' or len(alternative.assignments)>len(plan.assignments): plan=alternative
+    if plan.status=='conflict':
+        from .constraint_scheduler import solve_schedule
+        complete=solve_schedule(inputs)
+        if complete is not None: plan=complete
     if plan.status=='conflict':
         # Validate each concrete +30-minute proposal; never silently apply it.
         for day in inputs.gathering.prep_days[:14]:

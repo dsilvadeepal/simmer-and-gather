@@ -114,8 +114,15 @@ class PrepTask(Schema):
     scale_mode: Literal['batch','combined'] = 'batch'
     preparation_policy: Literal['unknown','same_day','advance'] = 'unknown'
     storage_anchor: Literal['serving','next_step'] = 'serving'
+    max_dependency_gap_minutes: int | None = Field(None, ge=0, le=10080)
+    min_dependency_gap_minutes: int = Field(0, ge=0, le=10080)
     attention_segments: list[AttentionSegment] = []
     timing_basis: Literal['estimate','source'] = 'estimate'
+    @model_validator(mode='after')
+    def consistent_dependency_gap(self):
+        if self.max_dependency_gap_minutes is not None and self.min_dependency_gap_minutes>self.max_dependency_gap_minutes:
+            raise ValueError('Minimum dependency gap cannot exceed maximum gap')
+        return self
 
 class RecipeSnapshot(Schema):
     id: str = Field(default_factory=identity)

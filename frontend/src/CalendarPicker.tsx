@@ -2,10 +2,14 @@ export function CalendarPicker({calendars, selected, onChange, error}: {
   calendars: {id:string;name:string}[]; selected:string[];
   onChange:(ids:string[])=>void; error?:string;
 }) {
-  return <fieldset><legend>Calendars to check</legend>
-    {error && <p role="status">{error}</p>}
-    {calendars.map(c=><label key={c.id} className="check"><input type="checkbox"
-      checked={selected.includes(c.id)} onChange={e=>onChange(e.target.checked?[...selected,c.id]:selected.filter(id=>id!==c.id))}/>{c.name}</label>)}
-    {!calendars.length && !error && <p className="meta">No calendars available.</p>}
-  </fieldset>;
+  const matches = calendars.filter(c=>c.name.trim().toLowerCase()==='personal');
+  const personal = matches.length === 1 ? matches[0] : undefined;
+  const active = personal && selected.length === 1 && selected[0] === personal.id;
+  return <div>
+    {error ? <p role="status">{error}</p> : personal ? <>
+      <p><strong>Personal</strong> · {active ? 'Selected' : 'Available'}</p>
+      <p className="meta">Check this calendar for free prep time.</p>
+      {!active && <button className="secondary" onClick={()=>onChange([personal.id])}>Use Personal calendar</button>}
+    </> : <p role="status">{matches.length > 1 ? 'Multiple calendars are named Personal. Give your preferred calendar a unique name in Google Calendar.' : 'Personal calendar unavailable. Check your Google connection.'}</p>}
+  </div>;
 }

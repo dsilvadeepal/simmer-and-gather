@@ -1,0 +1,31 @@
+// Capture actual UI with isolated fixture responses; never reads app credentials.
+import { chromium } from '@playwright/test';
+import fs from 'node:fs/promises';
+import { fileURLToPath } from 'node:url';
+const root = new URL('../../', import.meta.url);
+const sample = JSON.parse(await fs.readFile(new URL('docs/reviews/2026-10-29-five-menu-rerun.json',root),'utf8'))[1];
+sample.inputs.gathering.title='Holiday gathering';
+sample.inputs.gathering.occasion='Christmas';
+const ws={inputs:sample.inputs,plan:sample.plan,recipes:sample.inputs.selections.map(s=>s.recipe),fixture_mode:true,previous_plan:null,recipe_updates:[],recipe_readiness:{}};
+const browser=await chromium.launch(process.env.CHROME_PATH?{executablePath:process.env.CHROME_PATH}:{});
+const page=await browser.newPage({viewport:{width:1440,height:1100},timezoneId:'America/New_York'});
+await page.route('**/api/**',async route=>{
+ const path=new URL(route.request().url()).pathname;
+ const body=path==='/api/dev-session'?{token:'illustrative-fixture'}:path==='/api/gatherings'?[sample.inputs.gathering]:path.startsWith('/api/workspace/')?ws:path==='/api/calendars'?[{id:'sample-personal',name:'Personal'}]:{};
+ await route.fulfill({json:body});
+});
+const url=process.env.SCREENSHOT_URL||'http://127.0.0.1:5178';
+await page.goto(url+'/?view=plan');
+await page.getByRole('tab',{name:'Schedule',exact:true}).waitFor();
+await page.screenshot({path:fileURLToPath(new URL('docs/images/desktop-plan.png',root))});
+await page.goto(url+'/');
+await page.getByLabel('Gathering name').waitFor();
+await page.screenshot({path:fileURLToPath(new URL('docs/images/gathering-setup.png',root))});
+await page.setViewportSize({width:390,height:844});
+await page.goto(url+'/?view=plan');
+await page.getByRole('tab',{name:'Schedule',exact:true}).waitFor();
+await page.getByRole('heading',{name:'Wednesday, Dec 23'}).scrollIntoViewIfNeeded();
+await page.screenshot({path:fileURLToPath(new URL('docs/images/mobile-plan.png',root))});
+if(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth))throw new Error('Mobile horizontal overflow');
+await browser.close();
+console.log('Captured three fixture screenshots.');

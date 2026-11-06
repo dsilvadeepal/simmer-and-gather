@@ -58,7 +58,7 @@ function daysBetween(start: string, end: string) {
 export default function App() {
   const [ws, setWs] = useState<Workspace | null>(null),
     [g, setG] = useState<Gathering | null>(null),
-    [step, setStep] = useState(() => new URLSearchParams(window.location.search).get("view") === "plan" ? 2 : 0),
+    [step, setStep] = useState(() => new URLSearchParams(window.location.search).get("view") === "plan" ? 2 : new URLSearchParams(window.location.search).get("view") === "menu" ? 1 : 0),
     [error, setError] = useState(""),
     [notice, setNotice] = useState(""),
     [loading, setLoading] = useState(false),
@@ -515,58 +515,11 @@ export default function App() {
             <section className="card full">
               <h2>
                 <CalendarDays />
-                Calendars
+                Calendar
               </h2>
               <CalendarPicker calendars={calendars} selected={g.selected_calendars || []}
                 onChange={ids=>change({selected_calendars:ids})} error={calendarError}/>
-              <details className="protected-options"><summary>Protected time · {(g.profile?.protected||[]).length} saved</summary><p className="meta">
-                Work, family and sleep remain protected even when a calendar
-                looks free.
-              </p>
-              {(g.profile?.protected || []).map((w, i) => (
-                <div className="row" key={i}>
-                  <span>
-                    {new Date(w.start).toLocaleString()} – {time(w.end)}
-                  </span>
-                  <button
-                    className="text-button"
-                    onClick={() =>
-                      change({
-                        profile: {
-                          ...profile,
-                          protected: g.profile!.protected!.filter(
-                            (_, j) => j !== i,
-                          ),
-                        },
-                      })
-                    }
-                  >
-                    Remove
-                  </button>
-                </div>
-              ))}
-              <button
-                className="secondary"
-                onClick={() => {
-                  const start = prompt(
-                    "Protected start (e.g. 2026-11-06T09:00)",
-                  );
-                  const end =
-                    start && prompt("Protected end (e.g. 2026-11-06T17:00)");
-                  if (start && end)
-                    change({
-                      profile: {
-                        ...profile,
-                        protected: [
-                          ...(g.profile?.protected || []),
-                          { start: iso(start), end: iso(end) },
-                        ],
-                      },
-                    });
-                }}
-              >
-                Add protected time
-              </button></details>
+
             </section>
           </div>
           <div className="footer-actions">

@@ -38,3 +38,10 @@ Stale input/recipe versions; missing storage versus same-day; attention after wa
 
 ## Verification evidence
 92 backend tests and 6 UI tests plus production build passed; see docs/architecture-refinement-ledger.md for actual runs. Current Diwali proposal regenerated with primary calendar, 22 assignments, no scheduling violations and 45/90/115 minutes Fri/Sat/Sun. Live LangSmith delivery is unverified because credentials are absent; no hosted cost or calendar-write acceptance is claimed. Previous approvals require revalidation after the schema change.
+
+### October 29: five-menu make-ahead regression pass
+- Implemented explicit dependency-gap limits and reviewed 18 recipe splits, including cooked-ahead storage and reheating.
+- Added a bounded OR-Tools fallback for solo-host plans after the greedy search fails. Uses no model tokens; unsupported helper/finishing cases retain the existing path. Independent final validation remains mandatory.
+- Added five complete-menu regression fixtures plus blocked-calendar and impossible-budget tests. All five draft schedules fit without buying dishes or increasing cooking limits; the existing cleanup allowance is retained.
+- Library changes are version-guarded and read back. All 45 non-recipe records remain unchanged; no calendar writes or saved-plan regeneration.
+- Remaining validation: live-calendar runs only when requested, physical cooking estimates/quantities, and hosted resource footprint of the added local solver. Do not describe fixture success as a live LangSmith evaluation.

@@ -1,0 +1,419 @@
+[
+  {
+    "title": "Air Fryer Paneer Tikka",
+    "id": "4076c09a-c77f-81ca-9869-d9565d1d4e21",
+    "changes": [
+      "Same-day default where advance storage is unverified",
+      "Step-specific instructions",
+      "Cooking temperature"
+    ],
+    "issues": [],
+    "source_steps": 12,
+    "reviewed": true
+  },
+  {
+    "title": "Aloo Chaat in Phyllo Shells",
+    "id": "4076c09a-c77f-81d6-8a28-de7c02ebb78a",
+    "changes": [
+      "Same-day default where advance storage is unverified",
+      "Step-specific instructions",
+      "Cooking temperature"
+    ],
+    "issues": [],
+    "source_steps": 6,
+    "reviewed": true
+  },
+  {
+    "title": "Tandoori chicken wings",
+    "id": "4076c09a-c77f-8104-851e-ee6cf15ebc64",
+    "changes": [
+      "Same-day default where advance storage is unverified",
+      "Cooking temperature",
+      "Step-specific instructions"
+    ],
+    "issues": [],
+    "source_steps": 10,
+    "reviewed": true
+  },
+  {
+    "title": "Masala Nuts",
+    "id": "4076c09a-c77f-8150-9503-da2a4ecc4066",
+    "changes": [
+      "Same-day default where advance storage is unverified",
+      "Step-specific instructions",
+      "Cooking temperature"
+    ],
+    "issues": [],
+    "source_steps": 6,
+    "reviewed": true
+  },
+  {
+    "title": "Instant Pot Butter Chicken",
+    "id": "4076c09a-c77f-81a0-8f19-f69b0348138d",
+    "changes": [
+      "Same-day default where advance storage is unverified",
+      "Step-specific instructions"
+    ],
+    "issues": [],
+    "source_steps": 7,
+    "reviewed": true
+  },
+  {
+    "title": "Butter Paneer {Paneer Makhani}",
+    "id": "4076c09a-c77f-81af-9670-d305238582ad",
+    "changes": [
+      "Same-day default where advance storage is unverified",
+      "Step-specific instructions"
+    ],
+    "issues": [],
+    "source_steps": 5,
+    "reviewed": true
+  },
+  {
+    "title": "Instant Pot Chana Masala (Punjabi Chole)",
+    "id": "4076c09a-c77f-817d-a371-fee0472f2d7e",
+    "changes": [
+      "Same-day default where advance storage is unverified",
+      "Step-specific instructions",
+      "Separated soaking setup and passive wait"
+    ],
+    "issues": [],
+    "source_steps": 6,
+    "reviewed": true
+  },
+  {
+    "title": "Instant Pot Dal Makhani",
+    "id": "4076c09a-c77f-81ee-933a-d7fb512817dc",
+    "changes": [
+      "Same-day default where advance storage is unverified",
+      "Step-specific instructions",
+      "Separated soaking setup and passive wait"
+    ],
+    "issues": [],
+    "source_steps": 6,
+    "reviewed": true
+  },
+  {
+    "title": "Instant Pot Palak Paneer",
+    "id": "4076c09a-c77f-81cd-b6b4-dbdb501378c5",
+    "changes": [
+      "Same-day default where advance storage is unverified",
+      "Step-specific instructions"
+    ],
+    "issues": [],
+    "source_steps": 8,
+    "reviewed": true
+  },
+  {
+    "title": "Vegetable Pulao Recipe | Veg Pulav",
+    "id": "4076c09a-c77f-81d5-b19a-dde806211e86",
+    "changes": [
+      "Same-day default where advance storage is unverified",
+      "Step-specific instructions"
+    ],
+    "issues": [],
+    "source_steps": 10,
+    "reviewed": true
+  },
+  {
+    "title": "Indian Cucumber Salad (Kakdi Koshimbir)",
+    "id": "4076c09a-c77f-8135-a8c4-c7da9dedac99",
+    "changes": [
+      "Same-day default where advance storage is unverified",
+      "Step-specific instructions"
+    ],
+    "issues": [],
+    "source_steps": 4,
+    "reviewed": true
+  },
+  {
+    "title": "Thanksgiving Turkey",
+    "id": "4076c09a-c77f-8172-b29e-ed8f82d03de0",
+    "changes": [
+      "Step-specific instructions",
+      "Cooking temperature"
+    ],
+    "issues": [],
+    "source_steps": 12,
+    "reviewed": true
+  },
+  {
+    "title": "Cilantro Mint Chutney",
+    "id": "4076c09a-c77f-818f-8205-c7c2466b6744",
+    "changes": [
+      "Same-day default where advance storage is unverified"
+    ],
+    "issues": [],
+    "source_steps": 2,
+    "reviewed": true
+  },
+  {
+    "title": "Instant Pot Rice Pudding",
+    "id": "4076c09a-c77f-8158-9074-f96abaaffee9",
+    "changes": [
+      "Same-day default where advance storage is unverified",
+      "Step-specific instructions"
+    ],
+    "issues": [],
+    "source_steps": 5,
+    "reviewed": true
+  },
+  {
+    "title": "Instant Pot Carrot Halwa Recipe",
+    "id": "4076c09a-c77f-81a1-ac5f-d887839630a5",
+    "changes": [
+      "Same-day default where advance storage is unverified",
+      "Step-specific instructions"
+    ],
+    "issues": [],
+    "source_steps": 5,
+    "reviewed": true
+  },
+  {
+    "title": "Quick & Easy Badam Burfi (30 Minutes)",
+    "id": "4076c09a-c77f-81c7-9ffb-c85b2d7fea33",
+    "changes": [
+      "Same-day default where advance storage is unverified"
+    ],
+    "issues": [],
+    "source_steps": 6,
+    "reviewed": true
+  },
+  {
+    "title": "Easy Tuna Croquettes",
+    "id": "4076c09a-c77f-81e2-b4ad-f8e9f81c5548",
+    "changes": [
+      "Same-day default where advance storage is unverified"
+    ],
+    "issues": [],
+    "source_steps": 0,
+    "reviewed": true
+  },
+  {
+    "title": "Goan Pork Vindaloo",
+    "id": "4076c09a-c77f-81a5-9d11-fdfb78e560a0",
+    "changes": [],
+    "issues": [],
+    "source_steps": 10,
+    "reviewed": true
+  },
+  {
+    "title": "Chicken Cafreal",
+    "id": "4076c09a-c77f-810c-b875-eaa47d415890",
+    "changes": [],
+    "issues": [],
+    "source_steps": 6,
+    "reviewed": true
+  },
+  {
+    "title": "The Ultimate Goan Caldin Curry",
+    "id": "4076c09a-c77f-8182-b8ce-c925f0900a7a",
+    "changes": [],
+    "issues": [],
+    "source_steps": 0,
+    "reviewed": true
+  },
+  {
+    "title": "Goan Sannas (yeast method)",
+    "id": "4076c09a-c77f-8185-9e3f-c6251e6be8a4",
+    "changes": [],
+    "issues": [],
+    "source_steps": 0,
+    "reviewed": true
+  },
+  {
+    "title": "The Best Doce",
+    "id": "4076c09a-c77f-8198-94ea-c95511c4fb8c",
+    "changes": [],
+    "issues": [],
+    "source_steps": 0,
+    "reviewed": true
+  },
+  {
+    "title": "Easy Christmas Fruit Cake Without Alcohol",
+    "id": "4076c09a-c77f-8145-8549-db01109726c6",
+    "changes": [
+      "Step-specific instructions",
+      "Cooking temperature"
+    ],
+    "issues": [],
+    "source_steps": 11,
+    "reviewed": true
+  },
+  {
+    "title": "Super Easy Snowball Cookies",
+    "id": "4076c09a-c77f-81f4-b38c-fc54e46be1af",
+    "changes": [
+      "Same-day default where advance storage is unverified"
+    ],
+    "issues": [
+      "Confirm the oven temperature: Shape cookies and preheat oven",
+      "Confirm the oven temperature: Bake one tray until lightly golden underneath"
+    ],
+    "source_steps": 0,
+    "reviewed": false
+  },
+  {
+    "title": "Baked Brie En Croute",
+    "id": "4076c09a-c77f-8158-87b7-e6050188aeb9",
+    "changes": [
+      "Same-day default where advance storage is unverified",
+      "Step-specific instructions",
+      "Cooking temperature"
+    ],
+    "issues": [],
+    "source_steps": 12,
+    "reviewed": true
+  },
+  {
+    "title": "Stuffed Dates (6 Ways!)",
+    "id": "4076c09a-c77f-816d-8cd0-cd016d00f544",
+    "changes": [
+      "Same-day default where advance storage is unverified"
+    ],
+    "issues": [],
+    "source_steps": 7,
+    "reviewed": false
+  },
+  {
+    "title": "Garlic Mashed Potatoes Recipe",
+    "id": "4076c09a-c77f-8144-87fc-e99031d47d6c",
+    "changes": [],
+    "issues": [],
+    "source_steps": 4,
+    "reviewed": true
+  },
+  {
+    "title": "Healthy Sweet Potato Casserole",
+    "id": "4076c09a-c77f-8135-afe6-ccc8b9e041a7",
+    "changes": [
+      "Same-day default where advance storage is unverified",
+      "Step-specific instructions",
+      "Cooking temperature"
+    ],
+    "issues": [],
+    "source_steps": 7,
+    "reviewed": true
+  },
+  {
+    "title": "Cornbread Stuffing Recipe",
+    "id": "4076c09a-c77f-8132-8ba1-da73f26af81a",
+    "changes": [
+      "Step-specific instructions",
+      "Cooking temperature"
+    ],
+    "issues": [],
+    "source_steps": 12,
+    "reviewed": true
+  },
+  {
+    "title": "Cranberry Orange Sauce",
+    "id": "4076c09a-c77f-8131-ad3b-c94b54361a57",
+    "changes": [
+      "Step-specific instructions"
+    ],
+    "issues": [],
+    "source_steps": 2,
+    "reviewed": true
+  },
+  {
+    "title": "Healthy Green Bean Casserole",
+    "id": "4076c09a-c77f-8181-8fe5-f812b97d63ac",
+    "changes": [
+      "Step-specific instructions"
+    ],
+    "issues": [],
+    "source_steps": 7,
+    "reviewed": true
+  },
+  {
+    "title": "Caramelized Brussels Sprouts",
+    "id": "4076c09a-c77f-81a6-839b-d023e56356d6",
+    "changes": [],
+    "issues": [],
+    "source_steps": 5,
+    "reviewed": true
+  },
+  {
+    "title": "Chocolate Pecan Pie",
+    "id": "4076c09a-c77f-8188-8d66-f08cb182f8ed",
+    "changes": [
+      "Step-specific instructions",
+      "Cooking temperature"
+    ],
+    "issues": [],
+    "source_steps": 8,
+    "reviewed": true
+  },
+  {
+    "title": "Sweet Potato Pie",
+    "id": "4076c09a-c77f-81cc-a84d-e4dbccf91b17",
+    "changes": [
+      "Same-day default where advance storage is unverified",
+      "Step-specific instructions",
+      "Cooking temperature"
+    ],
+    "issues": [],
+    "source_steps": 10,
+    "reviewed": true
+  },
+  {
+    "title": "Gluten Free Apple Crisp",
+    "id": "4076c09a-c77f-81ae-801e-c82f570fb892",
+    "changes": [
+      "Same-day default where advance storage is unverified",
+      "Step-specific instructions",
+      "Cooking temperature"
+    ],
+    "issues": [],
+    "source_steps": 7,
+    "reviewed": true
+  },
+  {
+    "title": "Mushroom Cutlets",
+    "id": "4076c09a-c77f-81af-83d2-e6a3aacf09a4",
+    "changes": [
+      "Replaced import placeholder with source ingredients",
+      "Same-day default where advance storage is unverified",
+      "Step-specific instructions",
+      "Continuous frying supervision"
+    ],
+    "issues": [],
+    "source_steps": 8,
+    "reviewed": true
+  },
+  {
+    "title": "Chicken Mince Cutlets",
+    "id": "4076c09a-c77f-8163-93fa-dc2f87917491",
+    "changes": [
+      "Continuous frying supervision"
+    ],
+    "issues": [],
+    "source_steps": 6,
+    "reviewed": true
+  },
+  {
+    "title": "Pork Bafat | Dukra Maas",
+    "id": "4076c09a-c77f-81bb-8f54-cd357b1a67d8",
+    "changes": [],
+    "issues": [],
+    "source_steps": 6,
+    "reviewed": true
+  },
+  {
+    "title": "Sonay Sukhe (Black Chana Sukka)",
+    "id": "4076c09a-c77f-8157-94e9-e01709e85fa9",
+    "changes": [],
+    "issues": [],
+    "source_steps": 0,
+    "reviewed": true
+  },
+  {
+    "title": "Coffee Fruit Cake",
+    "id": "4076c09a-c77f-810a-b6ce-e95717f9acda",
+    "changes": [],
+    "issues": [],
+    "source_steps": 5,
+    "reviewed": true
+  }
+]

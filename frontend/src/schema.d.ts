@@ -241,13 +241,6 @@ export interface components {
              */
             person?: string;
         };
-        /** AttentionSegment */
-        AttentionSegment: {
-            /** Offset Minutes */
-            offset_minutes: number;
-            /** Minutes */
-            minutes: number;
-        };
         /** AvailabilitySnapshot */
         AvailabilitySnapshot: {
             /**
@@ -255,7 +248,10 @@ export interface components {
              * @default []
              */
             busy?: components["schemas"]["Interval"][];
-            /** Checked At */
+            /**
+             * Checked At
+             * @default null
+             */
             checked_at?: string | null;
             /**
              * Status
@@ -285,7 +281,10 @@ export interface components {
             affected_ids?: string[];
             /** Explanation */
             explanation: string;
-            /** Evidence */
+            /**
+             * Evidence
+             * @default null
+             */
             evidence?: string | null;
         };
         /** Contribution */
@@ -299,18 +298,30 @@ export interface components {
              * @default
              */
             person?: string;
-            /** Servings */
+            /**
+             * Servings
+             * @default null
+             */
             servings?: number | null;
             /**
              * Confirmed
              * @default false
              */
             confirmed?: boolean;
-            /** Arrival */
+            /**
+             * Arrival
+             * @default null
+             */
             arrival?: string | null;
-            /** Warming Minutes */
+            /**
+             * Warming Minutes
+             * @default null
+             */
             warming_minutes?: number | null;
-            /** Equipment */
+            /**
+             * Equipment
+             * @default null
+             */
             equipment?: string | null;
         };
         /** Gathering */
@@ -332,9 +343,15 @@ export interface components {
              * @default Diwali
              */
             occasion?: string;
-            /** Arrival */
+            /**
+             * Arrival
+             * @default null
+             */
             arrival?: string | null;
-            /** Earliest Prep */
+            /**
+             * Earliest Prep
+             * @default null
+             */
             earliest_prep?: string | null;
             /**
              * Prep Days
@@ -363,7 +380,10 @@ export interface components {
              * @default 0
              */
             vegetarian_guests?: number;
-            /** Allergies */
+            /**
+             * Allergies
+             * @default null
+             */
             allergies?: string[] | null;
             /**
              * Preferences
@@ -483,10 +503,18 @@ export interface components {
         Ingredient: {
             /** Name */
             name: string;
-            /** Quantity */
+            /**
+             * Quantity
+             * @default null
+             */
             quantity?: number | null;
-            /** Unit */
+            /**
+             * Unit
+             * @default null
+             */
             unit?: string | null;
+            /** @default null */
+            amount_detail?: components["schemas"]["QuantityDetail"] | null;
         };
         /** Interval */
         Interval: {
@@ -505,10 +533,18 @@ export interface components {
         InventoryItem: {
             /** Name */
             name: string;
-            /** Quantity */
+            /**
+             * Quantity
+             * @default null
+             */
             quantity?: number | null;
-            /** Unit */
+            /**
+             * Unit
+             * @default null
+             */
             unit?: string | null;
+            /** @default null */
+            amount_detail?: components["schemas"]["QuantityDetail"] | null;
             /** Id */
             id?: string;
             /**
@@ -543,6 +579,7 @@ export interface components {
              * @default mains
              */
             category?: string;
+            /** @default null */
             recipe?: components["schemas"]["RecipeSnapshot"] | null;
             /**
              * Mode
@@ -565,8 +602,12 @@ export interface components {
              * @default []
              */
             preparation?: components["schemas"]["PrepTask"][];
-            /** Vegetarian */
+            /**
+             * Vegetarian
+             * @default null
+             */
             vegetarian?: boolean | null;
+            /** @default null */
             contribution?: components["schemas"]["Contribution"] | null;
         };
         /** PlanCandidate */
@@ -632,6 +673,8 @@ export interface components {
              * @default []
              */
             adjustments?: components["schemas"]["TimeAdjustment"][];
+            /** @default null */
+            outcome?: components["schemas"]["SchedulingOutcome"] | null;
         };
         /** PlanInputs */
         PlanInputs: {
@@ -664,44 +707,69 @@ export interface components {
              * @default []
              */
             dependencies?: string[];
-            /** Minutes */
+            /**
+             * Minutes
+             * @default null
+             */
             minutes?: number | null;
-            /** Active Minutes */
+            /**
+             * Active Minutes
+             * @default null
+             */
             active_minutes?: number | null;
-            /** Presence Minutes */
+            /**
+             * Presence Minutes
+             * @default null
+             */
             presence_minutes?: number | null;
             /**
              * Skill
              * @default cook
              */
             skill?: string;
-            /** Resource */
+            /**
+             * Resource
+             * @default null
+             */
             resource?: string | null;
             /**
              * Capacity
              * @default 1
              */
             capacity?: number;
-            /** Temperature */
+            /**
+             * Temperature
+             * @default null
+             */
             temperature?: number | null;
+            /** @default null */
             eligible?: components["schemas"]["Interval"] | null;
-            /** Max Ahead Hours */
+            /**
+             * Max Ahead Hours
+             * @default null
+             */
             max_ahead_hours?: number | null;
-            /** Evidence */
+            /**
+             * Evidence
+             * @default null
+             */
             evidence?: string | null;
             /**
              * Ingredients
              * @default []
              */
             ingredients?: components["schemas"]["Ingredient"][];
-            /** Guidance */
+            /**
+             * Guidance
+             * @default null
+             */
             guidance?: string | null;
             /**
              * Phase
              * @default cooking
              * @enum {string}
              */
-            phase?: "cooking" | "finishing" | "cleanup";
+            phase?: "cooking" | "finishing" | "cleanup" | "serving";
             /**
              * Unattended
              * @default false
@@ -725,6 +793,16 @@ export interface components {
              * @enum {string}
              */
             storage_anchor?: "serving" | "next_step";
+            /**
+             * Max Dependency Gap Minutes
+             * @default null
+             */
+            max_dependency_gap_minutes?: number | null;
+            /**
+             * Min Dependency Gap Minutes
+             * @default 0
+             */
+            min_dependency_gap_minutes?: number;
             /**
              * Attention Segments
              * @default []
@@ -755,7 +833,10 @@ export interface components {
             title: string;
             /** Source */
             source: string;
-            /** Servings */
+            /**
+             * Servings
+             * @default null
+             */
             servings?: number | null;
             /**
              * Category
@@ -763,9 +844,15 @@ export interface components {
              * @enum {string}
              */
             category?: "starters" | "mains" | "sides" | "desserts" | "drinks";
-            /** Vegetarian */
+            /**
+             * Vegetarian
+             * @default null
+             */
             vegetarian?: boolean | null;
-            /** Allergens */
+            /**
+             * Allergens
+             * @default null
+             */
             allergens?: string[] | null;
             /**
              * Ingredients
@@ -787,9 +874,15 @@ export interface components {
              * @default false
              */
             reviewed?: boolean;
-            /** Image Url */
+            /**
+             * Image Url
+             * @default null
+             */
             image_url?: string | null;
-            /** Image Credit */
+            /**
+             * Image Credit
+             * @default null
+             */
             image_credit?: string | null;
             /**
              * Uncertainties
@@ -827,6 +920,7 @@ export interface components {
             current_minutes: number;
             /** Proposed Minutes */
             proposed_minutes: number;
+            /** @default null */
             window?: components["schemas"]["Interval"] | null;
             /** Reason */
             reason: string;
@@ -849,7 +943,9 @@ export interface components {
             inputs: components["schemas"]["PlanInputs"];
             /** Recipes */
             recipes: components["schemas"]["RecipeSnapshot"][];
+            /** @default null */
             plan?: components["schemas"]["PlanCandidate"] | null;
+            /** @default null */
             previous_plan?: components["schemas"]["PlanCandidate"] | null;
             /**
              * Recipe Updates
@@ -867,6 +963,63 @@ export interface components {
             };
             /** Fixture Mode */
             fixture_mode: boolean;
+        };
+        /** AttentionSegment */
+        AttentionSegment: {
+            /** Offset Minutes */
+            offset_minutes: number;
+            /** Minutes */
+            minutes: number;
+        };
+        /** QuantityDetail */
+        QuantityDetail: {
+            /**
+             * Kind
+             * @default unknown
+             * @enum {string}
+             */
+            kind?: "exact" | "range" | "to_taste" | "unknown";
+            /**
+             * Minimum
+             * @default null
+             */
+            minimum?: number | null;
+            /**
+             * Maximum
+             * @default null
+             */
+            maximum?: number | null;
+            /**
+             * Optional
+             * @default false
+             */
+            optional?: boolean;
+            /**
+             * Source Text
+             * @default
+             */
+            source_text?: string;
+            /**
+             * Basis
+             * @default unverified
+             * @enum {string}
+             */
+            basis?: "source" | "estimate" | "unverified";
+        };
+        /** SchedulingOutcome */
+        SchedulingOutcome: {
+            /**
+             * Code
+             * @enum {string}
+             */
+            code: "complete" | "needs_input" | "search_exhausted" | "unsupported" | "no_fit_found" | "validation_failed";
+            /** Message */
+            message: string;
+            /**
+             * Solver Status
+             * @default null
+             */
+            solver_status?: string | null;
         };
     };
     responses: never;

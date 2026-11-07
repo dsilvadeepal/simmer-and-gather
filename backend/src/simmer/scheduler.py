@@ -3,7 +3,7 @@
 No optimality claim. Unknown evidence blocks feasibility. All elapsed arithmetic
 uses UTC; local dates only determine daily allowances and selected prep days.
 """
-import hashlib, json, math
+import hashlib, json, math, re
 from datetime import datetime, timedelta, timezone
 from zoneinfo import ZoneInfo
 from .domain import *
@@ -31,7 +31,12 @@ def prep_windows_for(g):
 
 def digest(value):
     if hasattr(value,'model_dump'): value=value.model_dump(mode='json')
-    return hashlib.sha256(json.dumps(value,sort_keys=True,separators=(',',':')).encode()).hexdigest()
+    def compatible(node):
+        if isinstance(node,dict):
+            return {k:compatible(v) for k,v in node.items() if not (k in ('amount_detail','outcome') and v is None)}
+        if isinstance(node,list): return [compatible(v) for v in node]
+        return node
+    return hashlib.sha256(json.dumps(compatible(value),sort_keys=True,separators=(',',':')).encode()).hexdigest()
 
 def minutes(a,b): return (b.astimezone(UTC)-a.astimezone(UTC)).total_seconds()/60
 
@@ -78,6 +83,19 @@ def daily_presence(assignments,zone,helpers):
         day=t.astimezone(tz).date().isoformat(); result[day]=result.get(day,0)+1
     return result
 
+# Compatibility for the existing imported turkey recipe; new recipes must use phase=serving.
+def serving_task(selection,task):
+    return task.phase=='serving' or bool(selection.recipe and selection.recipe.source.rstrip('/')=='https://www.wellplated.com/how-to-cook-a-turkey' and task.id=='hosting-7')
+
+def finishing_checklist(inputs):
+    result=['Transfer to serving dishes','Check serving spoons','Finish drinks']
+    for selection in inputs.selections:
+        if selection.mode!='cook' or not selection.recipe: continue
+        for task in selection.recipe.tasks:
+            if serving_task(selection,task) and not any(task.id in other.dependencies for other in selection.recipe.tasks):
+                result.insert(0,task.title+' (at dinner)')
+    return result
+
 def tasks_for(inputs):
     tasks=[]; issues=[]
     def issue(code,id,text): issues.append(ConstraintViolation(code=code,affected_ids=[id],explanation=text))
@@ -96,6 +114,22 @@ def tasks_for(inputs):
             if not r or not r.reviewed or not r.servings: issue('recipe',s.id,'Review recipe, servings and preparation tasks'); continue
             original=r.tasks; ratio=s.servings/r.servings
         if not original: issue('tasks',s.id,'Preparation tasks are missing'); continue
+        from .recipe_contracts import task_contract_errors
+        contract_errors=task_contract_errors(original)
+        if contract_errors:
+            for message in contract_errors: issue('recipe_contract',s.id,message)
+            continue
+        # Only move terminal serving steps; never drop a prerequisite.
+        original_all=original
+        deferred={t.id for t in original if serving_task(s,t) and not any(t.id in x.dependencies for x in original)}
+        for t in original:
+            if serving_task(s,t) and t.id not in deferred: issue('dependency',s.id,'A serving-time task cannot be a prerequisite for a prep task')
+        if deferred:
+            original=[t.model_copy(deep=True) for t in original if t.id not in deferred]
+            for t in original:
+                if t.storage_anchor=='next_step' and any(t.id in x.dependencies and x.id in deferred for x in original_all):
+                    t.storage_anchor='serving';t.max_ahead_hours=min(t.max_ahead_hours if t.max_ahead_hours is not None else 2,2)
+
         # Repeat complete cooking batches; partial batch retains full duration conservatively.
         single_batch=inputs.gathering.single_batch_kitchen
         for batch in range(1 if single_batch else math.ceil(ratio)):
@@ -108,7 +142,8 @@ def tasks_for(inputs):
                 t.dependencies=[f'{s.id}:{0 if d in combined_ids else batch}:'+d for d in t.dependencies]
                 t.title=f'{s.title} · {t.title}' + (f' (batch {batch+1})' if ratio>1 and t.scale_mode!='combined' and not single_batch else '')
                 fraction=ratio if t.scale_mode=='combined' or single_batch else min(1,ratio-batch)
-                t.ingredients=[x.model_copy(update={'quantity':x.quantity*fraction if x.quantity is not None else None}) for x in t.ingredients]
+                from .quantities import scale_amount
+                t.ingredients=[scale_amount(x,fraction) for x in t.ingredients]
                 # Shared preparation happens once, but larger quantities still
                 # require more hands-on work. Passive soaking time stays fixed.
                 if t.scale_mode=='combined' and ratio>1 and not single_batch and t.minutes is not None:
@@ -145,7 +180,13 @@ def validate_schedule(inputs,candidate,partial=False):
     if g.allergies is None and not partial: fail('dietary','Confirm allergies, including none')
     by_id={a.task.id:a for a in candidate.assignments}
     if len(by_id)!=len(candidate.assignments): fail('duplicate','Duplicate scheduled task')
-    if not partial and any(id not in by_id for id in expected): fail('unscheduled','Some preparation tasks have no feasible slot',[id for id in expected if id not in by_id])
+    if not partial:
+        missing=[task for id,task in expected.items() if id not in by_id]
+        if missing:
+            for task in missing:
+                missing_prerequisites=[expected[d].title for d in task.dependencies if d in expected and d not in by_id]
+                reason=('Waiting for: '+', '.join(missing_prerequisites)+'.') if missing_prerequisites else 'No suitable time was found within the current windows, dependencies and limits.'
+                fail('unscheduled',f'{task.title}: {reason}',[task.id])
     deadline=g.arrival.astimezone(UTC)-timedelta(minutes=g.relax_minutes)
     finishing=[]
     for a in candidate.assignments:
@@ -216,7 +257,7 @@ def overlaps_any(window,others): return any(overlaps(window,x) for x in others)
 
 def _schedule(inputs,priority=False):
     g=inputs.gathering
-    p=PlanCandidate(gathering_id=g.id,revision=g.revision,input_hash=digest(inputs),shopping=shopping_for(inputs),checklist=['Keep dishes warm as directed','Transfer to serving dishes','Check serving spoons','Finish drinks'])
+    p=PlanCandidate(gathering_id=g.id,revision=g.revision,input_hash=digest(inputs),shopping=shopping_for(inputs),checklist=finishing_checklist(inputs))
     tasks,issues=tasks_for(inputs)
     if issues or not g.arrival or not prep_windows_for(g):
         p.violations=issues or [ConstraintViolation(code='setup',explanation='Complete gathering times and prep windows')]; return p
@@ -276,12 +317,13 @@ def _schedule(inputs,priority=False):
 
 def schedule(inputs):
     plan=_schedule(inputs)
+    diagnostics={}
     if plan.status=='conflict':
         alternative=_schedule(inputs,priority=True)
         if alternative.status=='feasible' or len(alternative.assignments)>len(plan.assignments): plan=alternative
     if plan.status=='conflict':
         from .constraint_scheduler import solve_schedule
-        complete=solve_schedule(inputs)
+        complete=solve_schedule(inputs,diagnostics=diagnostics)
         if complete is not None: plan=complete
     if plan.status=='conflict':
         # Validate each concrete +30-minute proposal; never silently apply it.
@@ -292,6 +334,21 @@ def schedule(inputs):
             if candidate.status=='feasible':
                 window=next((w for w in prep_windows_for(trial.gathering) if w.start.astimezone(ZoneInfo(trial.gathering.profile.timezone)).date()==day),None)
                 plan.adjustments.append(TimeAdjustment(day=day,current_minutes=current,proposed_minutes=current+30,window=window,reason='This candidate fits with 30 additional minutes within your existing free window; it is not a minimum-time guarantee.'))
+    from .domain import SchedulingOutcome
+    solver_status=diagnostics.get('solver_status')
+    if plan.status=='feasible':
+        code,message='complete','All preparation tasks are scheduled and passed the schedule checks.'
+    elif plan.status=='incomplete':
+        code,message='needs_input','Some recipe or gathering details are missing. Review the plan checks before scheduling.'
+    elif diagnostics.get('validation'):
+        code,message='validation_failed','A proposed schedule failed the final checks. The plan is not ready yet.'
+    elif solver_status=='UNKNOWN':
+        code,message='search_exhausted','The search reached its limit without a complete plan. This does not mean you need more time.'
+    elif solver_status in ('UNSUPPORTED','MODEL_INVALID'):
+        code,message='unsupported','The full scheduling search could not handle this setup. The partial plan does not prove you need more time.'
+    else:
+        code,message='no_fit_found','No complete plan was found under the current scheduling rules. Review the task constraints before changing your time or menu.'
+    plan.outcome=SchedulingOutcome(code=code,message=message,solver_status=solver_status)
     plan.fit_days=fit_summary(inputs,plan)
     plan.content_hash=content_hash(plan)
     return plan

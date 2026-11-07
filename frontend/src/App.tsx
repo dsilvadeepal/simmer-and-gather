@@ -1,5 +1,4 @@
-import {PantryEntry} from './PantryEntry';
-import {recipeImages} from './recipeImages';
+import {RecipePhoto,recipePhoto} from './RecipePhoto';
 import { useEffect, useState } from "react";
 import {
   CalendarDays,
@@ -22,12 +21,8 @@ import {
   type Gathering,
   type Inputs,
   type Plan,
-  type Recipe,
   type Selection,
 } from "./api";
-import { RecipeDiscovery } from "./RecipeDiscovery";
-import { NotionCollection } from "./NotionCollection";
-import { RecipeReview } from "./RecipeReview";
 import { CalendarPicker } from "./CalendarPicker";
 
 import { PlanViews } from "./PlanViews";
@@ -66,8 +61,6 @@ export default function App() {
     [loading, setLoading] = useState(false),
     [dirty, setDirty] = useState(false),
     [plan, setPlan] = useState<Plan | null>(null),
-    [source, setSource] = useState(""),
-    [preview, setPreview] = useState<Recipe | null>(null),
     [approval, setApproval] = useState<string | null>(null),
     [booking, setBooking] = useState<{
       outcomes: { status: string; title?: string }[];
@@ -619,19 +612,7 @@ export default function App() {
             {(ws.inputs.selections || []).map((s) => (
               <article className="card recipe" key={s.id}>
                 <div className="recipe-heading">
-                  <div className="food-icon">
-                    {(s.recipe?.image_url || recipeImages[s.recipe?.source||'']) ? (
-                      <img
-                        src={s.recipe?.image_url || recipeImages[s.recipe?.source||'']}
-                        alt={s.title}
-                        onError={(e) => {
-                          e.currentTarget.style.display = "none";
-                        }}
-                      />
-                    ) : (
-                      <Leaf size={24} />
-                    )}
-                  </div>
+                  <RecipePhoto title={s.title} recipe={s.recipe} library={ws.recipes}/>
                   <div>
                     <p className="eyebrow">{s.category}</p>
                     <h3>{s.title}</h3>
@@ -647,9 +628,7 @@ export default function App() {
                     />
                   </button>
                 </div>
-                {(s.recipe?.image_credit || recipeImages[s.recipe?.source||'']) && (
-                  <p className="meta">{s.recipe?.image_credit || 'Photo: Ministry of Curry'}</p>
-                )}
+                {recipePhoto(s.recipe,ws.recipes).credit && <p className="meta">{recipePhoto(s.recipe,ws.recipes).credit}</p>}
                 <p className="dish-mode">{s.mode === "buy" ? "Buy prepared" : s.mode === "guest" ? "Guest brings" : s.mode === "semi" ? "Semi-prepared" : "Cook"} · {s.servings} servings</p><details className="recipe-options"><summary>Adjust dish</summary><div className="fields">
                   <label>
                     Preparation
@@ -769,7 +748,7 @@ export default function App() {
               setProposal(items.filter(item=>!(ws.inputs.selections||[]).some(s=>s.id===item.id)));
             })}>Suggest dishes</button>
             {proposal && <><ul>{proposal.map(item=><li key={item.id}>{item.title} · {item.category} · {item.servings} servings</li>)}</ul>
-              {!proposal.length?<p>No additional reviewed recipes fit the open categories. Import more options or adjust your counts.</p>:<button disabled={loading||dirty} onClick={()=>run(async()=>{
+              {!proposal.length?<p>No additional reviewed recipes fit the open categories. Add recipes to your Notion collection or adjust your counts.</p>:<button disabled={loading||dirty} onClick={()=>run(async()=>{
                 await edit(proposal.map(selection=>({action:"add",selection})));setProposal(null);
               })}>Add these suggestions</button>}</>}
           </section>
@@ -834,69 +813,9 @@ export default function App() {
                 Add prepared item
               </button>
             </div>
-            <details>
-              <summary>Import a recipe</summary>
-              {!ws.fixture_mode && <NotionCollection onSelect={setPreview}/>}
-              {!ws.fixture_mode && <RecipeDiscovery onSelect={setSource}/>}
-              {!ws.fixture_mode && ws.recipes.length>0 && <div>
-                <p className="meta">Save reviewed recipes to your Notion collection.</p>
-                {ws.recipes.filter(r=>r.reviewed).map(r=><button key={r.id} className="secondary" disabled={loading} onClick={()=>run(async()=>{
-                  const result=await api<{status:string;message?:string}>("/notion/recipes/"+r.id,{version:r.version});
-                  setNotice(result.status==='saved'?r.title+" saved to Notion.":result.message||"Save uncertain; retry to check Notion.");
-                })}>Save {r.title} to Notion</button>)}
-              </div>}
-              <p className="meta">
-                Paste a recipe link or text. We’ll extract the ingredients and steps, and flag any missing information for review.
-              </p>
-              <textarea
-                aria-label="Recipe source"
-                value={source}
-                onChange={(e) => setSource(e.target.value)}
-              />
-              <button
-                className="secondary"
-                onClick={() =>
-                  run(async () => {
-                    const r = await api<Recipe>("/recipes/preview", { source });
-                    setPreview(r);
-                  })
-                }
-              >
-                Preview recipe
-              </button>
-              {preview && (
-                <>
-                  <RecipeReview recipe={preview} onChange={setPreview}/>
-                  <button
-                    onClick={() =>
-                      run(async () => {
-                        await api("/recipes", {
-                          recipe: { ...preview, reviewed: true },
-                        });
-                        await load(g.id!);
-                        setPreview(null);
-                        setNotice(
-                          "Recipe saved to this app. Use Save to Notion above to publish this reviewed version.",
-                        );
-                      })
-                    }
-                  >
-                    Save reviewed recipe
-                  </button>
-                </>
-              )}
-            </details>
+
           </section>
-          <section className="card">
-            <h2>
-              <ShoppingBag />
-              What you already have
-            </h2>
-            <PantryEntry disabled={loading} onAdd={async item=>{let saved=false; await run(async()=>{await edit([{action:'inventory',items:[...(ws.inputs.inventory||[]),item]}]);saved=true;}); return saved;}}/>
-            <p className="meta">
-              {ws.inputs.inventory?.length || 0} confirmed items
-            </p>
-          </section>
+
           <div className="footer-actions">
             <button onClick={() => setStep(2)}>
               Review prep plan <ArrowRight size={16} />
@@ -980,7 +899,7 @@ export default function App() {
                 <strong>
                   {plan.status === "feasible"
                     ? ((plan.fit_days || []).some(d => Number(d.presence_minutes) > Number(d.limit_minutes)) ? "Fits with extra time: " + (plan.fit_days || []).filter(d => Number(d.presence_minutes) > Number(d.limit_minutes)).map(d => `${Number(d.presence_minutes) - Number(d.limit_minutes)} extra min on ${new Date(String(d.day)+"T12:00:00").toLocaleDateString("en-US",{weekday:"short",month:"short",day:"numeric"})}`).join("; ") + ". See the daily totals below." : "Your plan fits your available time.")
-                    : "A few things need your attention."}
+                    : (plan.outcome?.message || "A few things need your attention.")}
                 </strong>
                 <p className="meta">
                   {ws.fixture_mode
@@ -1022,6 +941,7 @@ export default function App() {
                   ))}
                 </details>
               )}
+              {(plan.advisories||[]).filter(a=>a.code==='buy_prepared').map(a=><section className="card" key={a.affected_ids?.[0]}><h2>Save cooking time</h2><p>{a.explanation}</p><button className="secondary" disabled={loading||dirty} onClick={()=>run(async()=>{await edit([{action:'update',id:a.affected_ids?.[0],values:{mode:'buy'}}]);setNotice('Menu updated. Regenerate the prep plan to review the change.');})}>Choose bought prepared</button></section>)}
               <PlanViews inputs={ws.inputs} plan={plan}/>
               <details className="card save-plan"><summary>Save plan & calendar options</summary><div className="grid">
                   {!ws.fixture_mode && <section className="card">

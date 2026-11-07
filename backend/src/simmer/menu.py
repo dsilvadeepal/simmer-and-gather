@@ -1,4 +1,5 @@
 import math
+import re
 from .domain import MenuSelection, ConstraintViolation
 
 def recommend_counts(g):
@@ -22,6 +23,27 @@ def propose_menu(inputs,recipes):
             result.append(MenuSelection(title=r.title,category=category,recipe=r,servings=portions,vegetarian=r.vegetarian))
     return result
 
+ALLERGEN_PATTERNS={
+    'nuts': r'\b(peanuts?|groundnuts?|cashews?|almonds?|walnuts?|pecans?|pistachios?|hazelnuts?|macadamia|brazil nuts?|pine nuts?|mixed nuts?|nut butter)\b',
+    'gluten': r'\b(wheat|barley|rye|malt|semolina|maida|phyllo|panko|breadcrumbs?|bread|naan|seitan|couscous|bulgur|all.purpose flour)\b',
+}
+def allergen_family(value):
+    v=value.casefold().strip()
+    if v in ('nut','nuts','tree nut','tree nuts','peanut','peanuts','groundnut','groundnuts'): return 'nuts'
+    if v in ('gluten','wheat','barley','rye'): return 'gluten'
+    return v
+
+def ingredient_allergen_hits(recipe,requested):
+    hits=[]
+    if not recipe: return hits
+    for ingredient in recipe.ingredients:
+        name=ingredient.name
+        for family in requested:
+            if family in ALLERGEN_PATTERNS and re.search(ALLERGEN_PATTERNS[family],name,re.I):
+                if family=='gluten' and re.search(r'gluten.free|almond flour|rice flour|corn flour|chickpea flour',name,re.I): continue
+                hits.append(name)
+    return list(dict.fromkeys(hits))
+
 def validate_menu(inputs):
     g=inputs.gathering; errors=[]
     def issue(code,text,ids=[]): errors.append(ConstraintViolation(code=code,explanation=text,affected_ids=ids))
@@ -32,8 +54,15 @@ def validate_menu(inputs):
     veg_mains=sum(s.servings for s in inputs.selections if s.category=='mains' and (s.vegetarian is True or s.recipe and s.recipe.vegetarian is True))
     if veg_mains<g.vegetarian_guests: issue('vegetarian','Vegetarian main portions do not cover the vegetarian guests')
     for s in inputs.selections:
-        if g.allergies and (not s.recipe or s.recipe.allergens is None): issue('allergy_unknown','Verify allergens for '+s.title,[s.id])
-        elif s.recipe and g.allergies and set(x.casefold() for x in g.allergies)&set(x.casefold() for x in s.recipe.allergens or []): issue('allergy','Selected recipe contains a declared allergen',[s.id])
+        if not g.allergies: continue
+        requested={allergen_family(x) for x in g.allergies}
+        declared={allergen_family(x) for x in (s.recipe.allergens or [])} if s.recipe else set()
+        hits=ingredient_allergen_hits(s.recipe,requested) if s.mode=='cook' else []
+        if hits or requested & declared:
+            detail=('; listed ingredients: '+', '.join(hits)) if hits else ''
+            issue('allergy','Possible allergen in '+s.title+detail+'. Check the recipe and labels before serving.',[s.id])
+        else:
+            issue('allergy_unknown','Check ingredients, product labels and cross-contact for '+s.title+'; this screening cannot confirm it is allergen-free.',[s.id])
     return errors
 
 def rank_recipes(gathering,recipes,model):

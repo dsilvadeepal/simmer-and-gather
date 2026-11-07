@@ -27,3 +27,13 @@ def test_model_suggestion_cannot_invent_recipe_ids_and_has_one_repair():
     def bad(messages): calls.append(1); return '{"recipe_ids":["invented"]}'
     assert rank_recipes(Gathering(),recipes,bad)==recipes
     assert len(calls)==2
+
+def test_ingredient_screen_detects_peanut_even_when_nuts_declared_empty():
+    r=RecipeSnapshot(title='Salad',source='test',allergens=[],ingredients=[Ingredient(name='roasted peanuts')])
+    i=PlanInputs(gathering=Gathering(allergies=['nuts']),selections=[MenuSelection(title='Salad',recipe=r)])
+    assert any(v.code=='allergy' and 'peanuts' in v.explanation for v in validate_menu(i))
+
+def test_absence_of_obvious_ingredient_does_not_claim_allergy_safe():
+    r=RecipeSnapshot(title='Rice',source='test',allergens=[],ingredients=[Ingredient(name='rice')])
+    i=PlanInputs(gathering=Gathering(allergies=['gluten']),selections=[MenuSelection(title='Rice',recipe=r)])
+    assert any(v.code=='allergy_unknown' for v in validate_menu(i))

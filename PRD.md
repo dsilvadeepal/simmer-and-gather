@@ -79,3 +79,12 @@ The five-menu regression rerun is documented in `docs/reviews/2026-10-29-five-me
 - Use plain scheduling language and readable dates; remove stale references to protected time.
 - Use Ingredient, Amount and Unit fields for pantry additions, preserving existing inventory and retaining input after a failed save.
 - Filter generic finishing items against the selected menu, omitting drinks when none are selected and vague unsupported warm-holding instructions. Do not rewrite saved plans.
+
+### Architecture checkpoint · November 7, 2026
+Recipe quantities must preserve original text and distinguish exact amounts, ranges, to-taste amounts and unknowns. Optional ingredients remain explicit. Scaling a range must retain both bounds. Unknowns must never become guessed numbers.
+Before scheduling, validate recipe dependencies and timing consistency. Present missing inputs, an exhausted search, unsupported configurations and validation failures distinctly; none proves the host needs more time.
+Remove the recipe-import panel from the hosting UI. Continue choosing from the existing recipe collection. Menu images should prefer current Notion/library image metadata without modifying saved cooking-plan snapshots.
+See docs/reviews/2026-11-07-architecture-implementation.md for implementation evidence and remaining production work.
+
+### Pantry walkthrough
+Remove the separate “What you already have” input panel. Shopping rows have “Have” checkboxes and remain visible with a strikethrough until “Show only what I need” is selected. “Show all ingredients” restores them for easy undo. Checks persist per gathering on this device, not across accounts or devices. Changed quantities require reconfirmation. Checking an item does not alter a recipe, cooking plan or calendar.

@@ -3,7 +3,7 @@ import asyncio,json,os,sys
 from mcp import ClientSession,StdioServerParameters
 from mcp.client.stdio import stdio_client
 from ..domain import RecipeSnapshot
-from .notion_recipe_details import from_notion_details
+from .notion_recipe_details import from_notion_details, notion_cover
 
 class NotionRecipes:
     def __init__(self,token,collections): self.token,self.collections=token,collections
@@ -50,5 +50,5 @@ def candidate_from_page(page):
     title=''.join(x.get('plain_text',x.get('text',{}).get('content','')) for p in props.values() if p.get('type')=='title' for x in p.get('title',[]))
     source=props.get('Source URL',{}).get('url') or page.get('url','notion:'+page['id'])
     return RecipeSnapshot(id=page['id'],version=page.get('last_edited_time','1'),title=title or 'Notion recipe',source=source,
-                          servings=props.get('Base Servings',{}).get('number'),reviewed=False,
+                          servings=props.get('Base Servings',{}).get('number'),image_url=notion_cover(page),reviewed=False,
                           uncertainties=['Import source and review task timings and storage before planning'])

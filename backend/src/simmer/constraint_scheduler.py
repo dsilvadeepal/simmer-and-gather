@@ -10,8 +10,9 @@ from ortools.sat.python import cp_model
 from .domain import Assignment,Interval,PrepTask,PlanCandidate
 
 def solve_schedule(inputs,time_limit=5,diagnostics=None):
-    from .scheduler import tasks_for,prep_windows_for,limit_for,digest,validate_schedule,content_hash,fit_summary
+    from .scheduler import tasks_for,prep_windows_for,limit_for,digest,validate_schedule,content_hash,fit_summary,finishing_checklist
     from .inventory import shopping_for
+    if diagnostics is not None: diagnostics['solver_status']='UNSUPPORTED'
     g=inputs.gathering
     tasks,issues=tasks_for(inputs);windows=prep_windows_for(g)
     if issues or not tasks or not g.arrival or not g.earliest_prep or not windows or g.profile.helpers or any(t.phase!='cooking' for t in tasks):return None
@@ -100,7 +101,7 @@ def solve_schedule(inputs,time_limit=5,diagnostics=None):
         if solver.value(used):
             start=origin+timedelta(minutes=solver.value(end))
             assignments.append(Assignment(task=PrepTask(id='cleanup:'+str(j),title='Cleanup',minutes=15,phase='cleanup',evidence='Planning allowance'),interval=Interval(start=start,end=start+timedelta(minutes=15))))
-    p=PlanCandidate(gathering_id=g.id,revision=g.revision,input_hash=digest(inputs),assignments=sorted(assignments,key=lambda a:a.interval.start),shopping=shopping_for(inputs),checklist=['Keep dishes warm as directed','Transfer to serving dishes','Check serving spoons','Finish drinks'])
+    p=PlanCandidate(gathering_id=g.id,revision=g.revision,input_hash=digest(inputs),assignments=sorted(assignments,key=lambda a:a.interval.start),shopping=shopping_for(inputs),checklist=finishing_checklist(inputs))
     p.violations=validate_schedule(inputs,p)
     if diagnostics is not None: diagnostics['validation']=[v.model_dump() for v in p.violations]
     if p.violations:return None

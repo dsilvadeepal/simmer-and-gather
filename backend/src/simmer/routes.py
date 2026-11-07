@@ -53,6 +53,7 @@ def install_routes(app,owner,store,availability=None,fixture_mode=False,model=No
             if current_issues:
                 plan=plan.model_copy(deep=True)
                 plan.status='conflict'
+                plan.outcome=SchedulingOutcome(code='validation_failed',message='This saved schedule no longer passes the current checks. Generate a new proposal before using it.')
                 plan.violations=current_issues
         library=recipes.list_recipes(o)
         from .recipe_readiness import changed_recipes,readiness

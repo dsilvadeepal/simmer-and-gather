@@ -22,7 +22,7 @@ export function NotionCollection({onSelect}:{onSelect:(recipe:Recipe)=>void}) {
   return <section aria-label="Notion recipe collection">
     <button className="secondary" disabled={loading} onClick={refresh}>{loading?'Loading collection…':'Browse my Notion recipes'}</button>
     {error && <p role="alert">{error}</p>}
-    {recipes?.length===0 && <p className="meta">Your Notion recipe library is connected and empty. Start by importing a recipe link below.</p>}
+    {recipes?.length===0 && <p className="meta">Your Notion recipe library is connected and empty. Add recipes in Notion to build your collection.</p>}
     {!!recipes?.length && <ul>{recipes.map(r=><li key={r.id}><button className="secondary" disabled={loading} onClick={()=>select(r)}>{r.title}</button></li>)}</ul>}
   </section>;
 }

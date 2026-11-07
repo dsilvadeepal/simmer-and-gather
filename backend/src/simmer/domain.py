@@ -83,10 +83,27 @@ class Gathering(Schema):
         if self.finishing_minutes > self.relax_minutes: raise ValueError('Finishing allowance exceeds final buffer')
         return self
 
+class QuantityDetail(Schema):
+    kind: Literal['exact','range','to_taste','unknown'] = 'unknown'
+    minimum: float | None = Field(None, ge=0, allow_inf_nan=False)
+    maximum: float | None = Field(None, ge=0, allow_inf_nan=False)
+    optional: bool = False
+    source_text: str = ''
+    basis: Literal['source','estimate','unverified'] = 'unverified'
+    @model_validator(mode='after')
+    def valid_range(self):
+        if self.kind == 'range':
+            if self.minimum is None or self.maximum is None or self.minimum > self.maximum:
+                raise ValueError('A range needs ordered minimum and maximum amounts')
+        elif self.minimum is not None or self.maximum is not None:
+            raise ValueError('Bounds are only valid for a range')
+        return self
+
 class Ingredient(Schema):
     name: str
     quantity: float | None = Field(None, ge=0, allow_inf_nan=False)
     unit: str | None = None
+    amount_detail: QuantityDetail | None = None
 
 class AttentionSegment(Schema):
     offset_minutes: int = Field(ge=0)
@@ -109,7 +126,7 @@ class PrepTask(Schema):
     evidence: str | None = None
     ingredients: list[Ingredient] = []
     guidance: str | None = None
-    phase: Literal['cooking','finishing','cleanup'] = 'cooking'
+    phase: Literal['cooking','finishing','cleanup','serving'] = 'cooking'
     unattended: bool = False
     scale_mode: Literal['batch','combined'] = 'batch'
     preparation_policy: Literal['unknown','same_day','advance'] = 'unknown'
@@ -189,6 +206,11 @@ class TimeAdjustment(Schema):
     window: Interval | None = None
     reason: str
 
+class SchedulingOutcome(Schema):
+    code: Literal['complete','needs_input','search_exhausted','unsupported','no_fit_found','validation_failed']
+    message: str
+    solver_status: str | None = None
+
 class PlanCandidate(Schema):
     id: str = Field(default_factory=identity)
     gathering_id: str
@@ -204,6 +226,7 @@ class PlanCandidate(Schema):
     status: Literal['feasible','incomplete','conflict'] = 'incomplete'
     violations: list[ConstraintViolation] = []
     adjustments: list[TimeAdjustment] = []
+    outcome: SchedulingOutcome | None = None
 
 class Approval(Schema):
     id: str = Field(default_factory=identity)

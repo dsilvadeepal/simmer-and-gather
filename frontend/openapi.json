@@ -1,1 +1,2230 @@
-{"openapi": "3.1.0", "info": {"title": "Simmer and Gather", "version": "0.1.0"}, "paths": {"/health": {"get": {"summary": "Health", "operationId": "health_health_get", "responses": {"200": {"description": "Successful Response", "content": {"application/json": {"schema": {}}}}}}}, "/api/profile": {"get": {"summary": "Profile", "operationId": "profile_api_profile_get", "responses": {"200": {"description": "Successful Response", "content": {"application/json": {"schema": {}}}}}, "security": [{"HTTPBearer": []}]}}, "/api/gatherings": {"get": {"summary": "Gatherings", "operationId": "gatherings_api_gatherings_get", "responses": {"200": {"description": "Successful Response", "content": {"application/json": {"schema": {}}}}}, "security": [{"HTTPBearer": []}]}, "post": {"summary": "Save", "operationId": "save_api_gatherings_post", "requestBody": {"content": {"application/json": {"schema": {"$ref": "#/components/schemas/SaveGathering"}}}, "required": true}, "responses": {"200": {"description": "Successful Response", "content": {"application/json": {"schema": {}}}}, "422": {"description": "Validation Error", "content": {"application/json": {"schema": {"$ref": "#/components/schemas/HTTPValidationError"}}}}}, "security": [{"HTTPBearer": []}]}}, "/api/gatherings/{id}": {"get": {"summary": "Get", "operationId": "get_api_gatherings__id__get", "security": [{"HTTPBearer": []}], "parameters": [{"name": "id", "in": "path", "required": true, "schema": {"type": "string", "title": "Id"}}], "responses": {"200": {"description": "Successful Response", "content": {"application/json": {"schema": {}}}}, "422": {"description": "Validation Error", "content": {"application/json": {"schema": {"$ref": "#/components/schemas/HTTPValidationError"}}}}}}}, "/api/workspace/{id}": {"get": {"summary": "Workspace", "operationId": "workspace_api_workspace__id__get", "security": [{"HTTPBearer": []}], "parameters": [{"name": "id", "in": "path", "required": true, "schema": {"type": "string", "title": "Id"}}], "responses": {"200": {"description": "Successful Response", "content": {"application/json": {"schema": {"$ref": "#/components/schemas/Workspace"}}}}, "422": {"description": "Validation Error", "content": {"application/json": {"schema": {"$ref": "#/components/schemas/HTTPValidationError"}}}}}}}, "/api/recipes": {"get": {"summary": "Recipe List", "operationId": "recipe_list_api_recipes_get", "responses": {"200": {"description": "Successful Response", "content": {"application/json": {"schema": {"items": {"$ref": "#/components/schemas/RecipeSnapshot"}, "type": "array", "title": "Response Recipe List Api Recipes Get"}}}}}, "security": [{"HTTPBearer": []}]}, "post": {"summary": "Recipe Save", "operationId": "recipe_save_api_recipes_post", "requestBody": {"content": {"application/json": {"schema": {"$ref": "#/components/schemas/SaveRecipe"}}}, "required": true}, "responses": {"200": {"description": "Successful Response", "content": {"application/json": {"schema": {"$ref": "#/components/schemas/RecipeSnapshot"}}}}, "422": {"description": "Validation Error", "content": {"application/json": {"schema": {"$ref": "#/components/schemas/HTTPValidationError"}}}}}, "security": [{"HTTPBearer": []}]}}, "/api/recipes/preview": {"post": {"summary": "Preview", "operationId": "preview_api_recipes_preview_post", "requestBody": {"content": {"application/json": {"schema": {"$ref": "#/components/schemas/Preview"}}}, "required": true}, "responses": {"200": {"description": "Successful Response", "content": {"application/json": {"schema": {"$ref": "#/components/schemas/RecipeSnapshot"}}}}, "422": {"description": "Validation Error", "content": {"application/json": {"schema": {"$ref": "#/components/schemas/HTTPValidationError"}}}}}, "security": [{"HTTPBearer": []}]}}, "/api/menu/{id}": {"post": {"summary": "Edit", "operationId": "edit_api_menu__id__post", "security": [{"HTTPBearer": []}], "parameters": [{"name": "id", "in": "path", "required": true, "schema": {"type": "string", "title": "Id"}}], "requestBody": {"required": true, "content": {"application/json": {"schema": {"$ref": "#/components/schemas/MenuEdit"}}}}, "responses": {"200": {"description": "Successful Response", "content": {"application/json": {"schema": {"$ref": "#/components/schemas/PlanInputs"}}}}, "422": {"description": "Validation Error", "content": {"application/json": {"schema": {"$ref": "#/components/schemas/HTTPValidationError"}}}}}}}, "/api/menu/{id}/propose": {"post": {"summary": "Propose", "operationId": "propose_api_menu__id__propose_post", "security": [{"HTTPBearer": []}], "parameters": [{"name": "id", "in": "path", "required": true, "schema": {"type": "string", "title": "Id"}}], "responses": {"200": {"description": "Successful Response", "content": {"application/json": {"schema": {"type": "array", "items": {"$ref": "#/components/schemas/MenuSelection"}, "title": "Response Propose Api Menu  Id  Propose Post"}}}}, "422": {"description": "Validation Error", "content": {"application/json": {"schema": {"$ref": "#/components/schemas/HTTPValidationError"}}}}}}}, "/api/availability/{id}": {"post": {"summary": "Recheck", "operationId": "recheck_api_availability__id__post", "security": [{"HTTPBearer": []}], "parameters": [{"name": "id", "in": "path", "required": true, "schema": {"type": "string", "title": "Id"}}], "responses": {"200": {"description": "Successful Response", "content": {"application/json": {"schema": {"$ref": "#/components/schemas/AvailabilitySnapshot"}}}}, "422": {"description": "Validation Error", "content": {"application/json": {"schema": {"$ref": "#/components/schemas/HTTPValidationError"}}}}}}}, "/api/plans/{id}/generate": {"post": {"summary": "Generate", "operationId": "generate_api_plans__id__generate_post", "security": [{"HTTPBearer": []}], "parameters": [{"name": "id", "in": "path", "required": true, "schema": {"type": "string", "title": "Id"}}], "requestBody": {"required": true, "content": {"application/json": {"schema": {"$ref": "#/components/schemas/Generate"}}}}, "responses": {"200": {"description": "Successful Response", "content": {"application/json": {"schema": {"$ref": "#/components/schemas/PlanCandidate"}}}}, "422": {"description": "Validation Error", "content": {"application/json": {"schema": {"$ref": "#/components/schemas/HTTPValidationError"}}}}}}}, "/api/inventory/{id}/upload": {"post": {"summary": "Upload", "operationId": "upload_api_inventory__id__upload_post", "security": [{"HTTPBearer": []}], "parameters": [{"name": "id", "in": "path", "required": true, "schema": {"type": "string", "title": "Id"}}], "requestBody": {"required": true, "content": {"multipart/form-data": {"schema": {"$ref": "#/components/schemas/Body_upload_api_inventory__id__upload_post"}}}}, "responses": {"200": {"description": "Successful Response", "content": {"application/json": {"schema": {}}}}, "422": {"description": "Validation Error", "content": {"application/json": {"schema": {"$ref": "#/components/schemas/HTTPValidationError"}}}}}}}, "/api/inventory/uploads/{id}": {"delete": {"summary": "Delete Upload", "operationId": "delete_upload_api_inventory_uploads__id__delete", "security": [{"HTTPBearer": []}], "parameters": [{"name": "id", "in": "path", "required": true, "schema": {"type": "string", "title": "Id"}}], "responses": {"200": {"description": "Successful Response", "content": {"application/json": {"schema": {}}}}, "422": {"description": "Validation Error", "content": {"application/json": {"schema": {"$ref": "#/components/schemas/HTTPValidationError"}}}}}}}}, "components": {"schemas": {"Assignment": {"properties": {"task": {"$ref": "#/components/schemas/PrepTask"}, "interval": {"$ref": "#/components/schemas/Interval"}, "person": {"type": "string", "title": "Person", "default": "host"}}, "additionalProperties": false, "type": "object", "required": ["task", "interval"], "title": "Assignment"}, "AvailabilitySnapshot": {"properties": {"busy": {"items": {"$ref": "#/components/schemas/Interval"}, "type": "array", "title": "Busy", "default": []}, "checked_at": {"anyOf": [{"type": "string", "format": "date-time"}, {"type": "null"}], "title": "Checked At"}, "status": {"type": "string", "enum": ["fresh", "stale", "unavailable", "fixture"], "title": "Status", "default": "unavailable"}, "errors": {"items": {"type": "string"}, "type": "array", "title": "Errors", "default": []}}, "additionalProperties": false, "type": "object", "title": "AvailabilitySnapshot"}, "Body_upload_api_inventory__id__upload_post": {"properties": {"file": {"type": "string", "contentMediaType": "application/octet-stream", "title": "File"}}, "type": "object", "required": ["file"], "title": "Body_upload_api_inventory__id__upload_post"}, "ConstraintViolation": {"properties": {"code": {"type": "string", "title": "Code"}, "affected_ids": {"items": {"type": "string"}, "type": "array", "title": "Affected Ids", "default": []}, "explanation": {"type": "string", "title": "Explanation"}, "evidence": {"anyOf": [{"type": "string"}, {"type": "null"}], "title": "Evidence"}}, "additionalProperties": false, "type": "object", "required": ["code", "explanation"], "title": "ConstraintViolation"}, "Contribution": {"properties": {"id": {"type": "string", "title": "Id"}, "name": {"type": "string", "title": "Name"}, "person": {"type": "string", "title": "Person", "default": ""}, "servings": {"anyOf": [{"type": "integer", "minimum": 1.0}, {"type": "null"}], "title": "Servings"}, "confirmed": {"type": "boolean", "title": "Confirmed", "default": false}, "arrival": {"anyOf": [{"type": "string", "format": "date-time"}, {"type": "null"}], "title": "Arrival"}, "warming_minutes": {"anyOf": [{"type": "integer", "minimum": 0.0}, {"type": "null"}], "title": "Warming Minutes"}, "equipment": {"anyOf": [{"type": "string"}, {"type": "null"}], "title": "Equipment"}}, "additionalProperties": false, "type": "object", "required": ["name"], "title": "Contribution"}, "Gathering": {"properties": {"id": {"type": "string", "title": "Id"}, "revision": {"type": "integer", "minimum": 1.0, "title": "Revision", "default": 1}, "title": {"type": "string", "title": "Title", "default": "Diwali gathering"}, "occasion": {"type": "string", "title": "Occasion", "default": "Diwali"}, "arrival": {"anyOf": [{"type": "string", "format": "date-time"}, {"type": "null"}], "title": "Arrival"}, "earliest_prep": {"anyOf": [{"type": "string", "format": "date"}, {"type": "null"}], "title": "Earliest Prep"}, "prep_days": {"items": {"type": "string", "format": "date"}, "type": "array", "title": "Prep Days", "default": []}, "daily_limits": {"additionalProperties": {"type": "integer", "maximum": 1440.0, "minimum": 0.0}, "type": "object", "title": "Daily Limits", "default": {}}, "prep_windows": {"items": {"$ref": "#/components/schemas/Interval"}, "type": "array", "title": "Prep Windows", "default": []}, "guests": {"type": "integer", "maximum": 100.0, "minimum": 1.0, "title": "Guests", "default": 15}, "vegetarian_guests": {"type": "integer", "minimum": 0.0, "title": "Vegetarian Guests", "default": 0}, "allergies": {"anyOf": [{"items": {"type": "string"}, "type": "array"}, {"type": "null"}], "title": "Allergies"}, "preferences": {"items": {"type": "string"}, "type": "array", "title": "Preferences", "default": []}, "relax_minutes": {"type": "integer", "maximum": 240.0, "minimum": 0.0, "title": "Relax Minutes", "default": 60}, "finishing_minutes": {"type": "integer", "maximum": 240.0, "minimum": 0.0, "title": "Finishing Minutes", "default": 20}, "profile": {"$ref": "#/components/schemas/HostProfile"}, "selected_calendars": {"items": {"type": "string"}, "type": "array", "title": "Selected Calendars", "default": []}, "contributions": {"items": {"$ref": "#/components/schemas/Contribution"}, "type": "array", "title": "Contributions", "default": []}, "spread": {"type": "string", "enum": ["manageable", "generous", "custom"], "title": "Spread", "default": "manageable"}, "category_counts": {"additionalProperties": {"type": "integer", "maximum": 12.0, "minimum": 0.0}, "type": "object", "title": "Category Counts", "default": {}}}, "additionalProperties": false, "type": "object", "title": "Gathering"}, "Generate": {"properties": {"expected_revision": {"type": "integer", "title": "Expected Revision"}}, "type": "object", "required": ["expected_revision"], "title": "Generate"}, "HTTPValidationError": {"properties": {"detail": {"items": {"$ref": "#/components/schemas/ValidationError"}, "type": "array", "title": "Detail"}}, "type": "object", "title": "HTTPValidationError"}, "Helper": {"properties": {"id": {"type": "string", "title": "Id"}, "name": {"type": "string", "title": "Name"}, "skills": {"items": {"type": "string"}, "type": "array", "title": "Skills", "default": []}, "available": {"items": {"$ref": "#/components/schemas/Interval"}, "type": "array", "title": "Available", "default": []}, "supervision": {"type": "boolean", "title": "Supervision", "default": false}}, "additionalProperties": false, "type": "object", "required": ["id", "name"], "title": "Helper"}, "HostProfile": {"properties": {"timezone": {"type": "string", "title": "Timezone", "default": "America/New_York"}, "weekday_minutes": {"type": "integer", "maximum": 1440.0, "minimum": 0.0, "title": "Weekday Minutes", "default": 60}, "weekend_minutes": {"type": "integer", "maximum": 1440.0, "minimum": 0.0, "title": "Weekend Minutes", "default": 120}, "protected": {"items": {"$ref": "#/components/schemas/Interval"}, "type": "array", "title": "Protected", "default": []}, "equipment": {"additionalProperties": {"anyOf": [{"type": "integer"}, {"type": "null"}]}, "type": "object", "title": "Equipment", "default": {}}, "helpers": {"items": {"$ref": "#/components/schemas/Helper"}, "type": "array", "title": "Helpers", "default": []}}, "additionalProperties": false, "type": "object", "title": "HostProfile"}, "Ingredient": {"properties": {"name": {"type": "string", "title": "Name"}, "quantity": {"anyOf": [{"type": "number", "minimum": 0.0}, {"type": "null"}], "title": "Quantity"}, "unit": {"anyOf": [{"type": "string"}, {"type": "null"}], "title": "Unit"}}, "additionalProperties": false, "type": "object", "required": ["name"], "title": "Ingredient"}, "Interval": {"properties": {"start": {"type": "string", "format": "date-time", "title": "Start"}, "end": {"type": "string", "format": "date-time", "title": "End"}}, "additionalProperties": false, "type": "object", "required": ["start", "end"], "title": "Interval"}, "InventoryItem": {"properties": {"name": {"type": "string", "title": "Name"}, "quantity": {"anyOf": [{"type": "number", "minimum": 0.0}, {"type": "null"}], "title": "Quantity"}, "unit": {"anyOf": [{"type": "string"}, {"type": "null"}], "title": "Unit"}, "id": {"type": "string", "title": "Id"}, "confirmed": {"type": "boolean", "title": "Confirmed", "default": false}, "source": {"type": "string", "enum": ["manual", "receipt", "photo"], "title": "Source", "default": "manual"}}, "additionalProperties": false, "type": "object", "required": ["name"], "title": "InventoryItem"}, "MenuEdit": {"properties": {"expected_revision": {"type": "integer", "title": "Expected Revision"}, "changes": {"items": {"additionalProperties": true, "type": "object"}, "type": "array", "title": "Changes"}}, "type": "object", "required": ["expected_revision", "changes"], "title": "MenuEdit"}, "MenuSelection": {"properties": {"id": {"type": "string", "title": "Id"}, "title": {"type": "string", "title": "Title"}, "category": {"type": "string", "title": "Category", "default": "mains"}, "recipe": {"anyOf": [{"$ref": "#/components/schemas/RecipeSnapshot"}, {"type": "null"}]}, "mode": {"type": "string", "enum": ["cook", "buy", "semi", "guest"], "title": "Mode", "default": "cook"}, "servings": {"type": "integer", "minimum": 1.0, "title": "Servings", "default": 1}, "must_have": {"type": "boolean", "title": "Must Have", "default": false}, "preparation": {"items": {"$ref": "#/components/schemas/PrepTask"}, "type": "array", "title": "Preparation", "default": []}, "vegetarian": {"anyOf": [{"type": "boolean"}, {"type": "null"}], "title": "Vegetarian"}, "contribution": {"anyOf": [{"$ref": "#/components/schemas/Contribution"}, {"type": "null"}]}}, "additionalProperties": false, "type": "object", "required": ["title"], "title": "MenuSelection"}, "PlanCandidate": {"properties": {"id": {"type": "string", "title": "Id"}, "gathering_id": {"type": "string", "title": "Gathering Id"}, "revision": {"type": "integer", "minimum": 1.0, "title": "Revision"}, "input_hash": {"type": "string", "title": "Input Hash"}, "content_hash": {"type": "string", "title": "Content Hash", "default": ""}, "assignments": {"items": {"$ref": "#/components/schemas/Assignment"}, "type": "array", "title": "Assignments", "default": []}, "shopping": {"items": {"$ref": "#/components/schemas/Ingredient"}, "type": "array", "title": "Shopping", "default": []}, "checklist": {"items": {"type": "string"}, "type": "array", "title": "Checklist", "default": []}, "status": {"type": "string", "enum": ["feasible", "incomplete", "conflict"], "title": "Status", "default": "incomplete"}, "violations": {"items": {"$ref": "#/components/schemas/ConstraintViolation"}, "type": "array", "title": "Violations", "default": []}, "adjustments": {"items": {"$ref": "#/components/schemas/TimeAdjustment"}, "type": "array", "title": "Adjustments", "default": []}}, "additionalProperties": false, "type": "object", "required": ["gathering_id", "revision", "input_hash"], "title": "PlanCandidate"}, "PlanInputs": {"properties": {"gathering": {"$ref": "#/components/schemas/Gathering"}, "selections": {"items": {"$ref": "#/components/schemas/MenuSelection"}, "type": "array", "title": "Selections", "default": []}, "inventory": {"items": {"$ref": "#/components/schemas/InventoryItem"}, "type": "array", "title": "Inventory", "default": []}, "availability": {"$ref": "#/components/schemas/AvailabilitySnapshot"}}, "additionalProperties": false, "type": "object", "required": ["gathering"], "title": "PlanInputs"}, "PrepTask": {"properties": {"id": {"type": "string", "title": "Id"}, "title": {"type": "string", "title": "Title"}, "recipe_id": {"type": "string", "title": "Recipe Id", "default": ""}, "dependencies": {"items": {"type": "string"}, "type": "array", "title": "Dependencies", "default": []}, "minutes": {"anyOf": [{"type": "integer", "maximum": 1440.0, "minimum": 1.0}, {"type": "null"}], "title": "Minutes"}, "active_minutes": {"anyOf": [{"type": "integer", "minimum": 0.0}, {"type": "null"}], "title": "Active Minutes"}, "presence_minutes": {"anyOf": [{"type": "integer", "minimum": 0.0}, {"type": "null"}], "title": "Presence Minutes"}, "skill": {"type": "string", "title": "Skill", "default": "cook"}, "resource": {"anyOf": [{"type": "string"}, {"type": "null"}], "title": "Resource"}, "capacity": {"type": "integer", "minimum": 1.0, "title": "Capacity", "default": 1}, "temperature": {"anyOf": [{"type": "integer"}, {"type": "null"}], "title": "Temperature"}, "eligible": {"anyOf": [{"$ref": "#/components/schemas/Interval"}, {"type": "null"}]}, "max_ahead_hours": {"anyOf": [{"type": "number", "minimum": 0.0}, {"type": "null"}], "title": "Max Ahead Hours"}, "evidence": {"anyOf": [{"type": "string"}, {"type": "null"}], "title": "Evidence"}, "ingredients": {"items": {"$ref": "#/components/schemas/Ingredient"}, "type": "array", "title": "Ingredients", "default": []}, "guidance": {"anyOf": [{"type": "string"}, {"type": "null"}], "title": "Guidance"}, "phase": {"type": "string", "enum": ["cooking", "finishing", "cleanup"], "title": "Phase", "default": "cooking"}, "unattended": {"type": "boolean", "title": "Unattended", "default": false}}, "additionalProperties": false, "type": "object", "required": ["id", "title"], "title": "PrepTask"}, "Preview": {"properties": {"source": {"type": "string", "title": "Source"}}, "type": "object", "required": ["source"], "title": "Preview"}, "RecipeSnapshot": {"properties": {"id": {"type": "string", "title": "Id"}, "version": {"type": "string", "title": "Version", "default": "1"}, "title": {"type": "string", "title": "Title"}, "source": {"type": "string", "title": "Source"}, "servings": {"anyOf": [{"type": "integer", "minimum": 1.0}, {"type": "null"}], "title": "Servings"}, "category": {"type": "string", "enum": ["starters", "mains", "sides", "desserts", "drinks"], "title": "Category", "default": "mains"}, "vegetarian": {"anyOf": [{"type": "boolean"}, {"type": "null"}], "title": "Vegetarian"}, "allergens": {"anyOf": [{"items": {"type": "string"}, "type": "array"}, {"type": "null"}], "title": "Allergens"}, "ingredients": {"items": {"$ref": "#/components/schemas/Ingredient"}, "type": "array", "title": "Ingredients", "default": []}, "tasks": {"items": {"$ref": "#/components/schemas/PrepTask"}, "type": "array", "title": "Tasks", "default": []}, "source_text": {"type": "string", "title": "Source Text", "default": ""}, "reviewed": {"type": "boolean", "title": "Reviewed", "default": false}, "image_url": {"anyOf": [{"type": "string"}, {"type": "null"}], "title": "Image Url"}, "image_credit": {"anyOf": [{"type": "string"}, {"type": "null"}], "title": "Image Credit"}, "uncertainties": {"items": {"type": "string"}, "type": "array", "title": "Uncertainties", "default": []}}, "additionalProperties": false, "type": "object", "required": ["title", "source"], "title": "RecipeSnapshot"}, "SaveGathering": {"properties": {"gathering": {"$ref": "#/components/schemas/Gathering"}, "expected_revision": {"anyOf": [{"type": "integer"}, {"type": "null"}], "title": "Expected Revision"}}, "type": "object", "required": ["gathering"], "title": "SaveGathering"}, "SaveRecipe": {"properties": {"recipe": {"$ref": "#/components/schemas/RecipeSnapshot"}, "expected_source_version": {"anyOf": [{"type": "string"}, {"type": "null"}], "title": "Expected Source Version"}}, "type": "object", "required": ["recipe"], "title": "SaveRecipe"}, "TimeAdjustment": {"properties": {"day": {"type": "string", "format": "date", "title": "Day"}, "current_minutes": {"type": "integer", "title": "Current Minutes"}, "proposed_minutes": {"type": "integer", "title": "Proposed Minutes"}, "window": {"anyOf": [{"$ref": "#/components/schemas/Interval"}, {"type": "null"}]}, "reason": {"type": "string", "title": "Reason"}}, "additionalProperties": false, "type": "object", "required": ["day", "current_minutes", "proposed_minutes", "reason"], "title": "TimeAdjustment"}, "ValidationError": {"properties": {"loc": {"items": {"anyOf": [{"type": "string"}, {"type": "integer"}]}, "type": "array", "title": "Location"}, "msg": {"type": "string", "title": "Message"}, "type": {"type": "string", "title": "Error Type"}, "input": {"title": "Input"}, "ctx": {"type": "object", "title": "Context"}}, "type": "object", "required": ["loc", "msg", "type"], "title": "ValidationError"}, "Workspace": {"properties": {"inputs": {"$ref": "#/components/schemas/PlanInputs"}, "recipes": {"items": {"$ref": "#/components/schemas/RecipeSnapshot"}, "type": "array", "title": "Recipes"}, "plan": {"anyOf": [{"$ref": "#/components/schemas/PlanCandidate"}, {"type": "null"}]}, "fixture_mode": {"type": "boolean", "title": "Fixture Mode"}}, "type": "object", "required": ["inputs", "recipes", "fixture_mode"], "title": "Workspace"}}, "securitySchemes": {"HTTPBearer": {"type": "http", "scheme": "bearer"}}}}
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "Simmer and Gather",
+    "version": "0.1.0"
+  },
+  "paths": {
+    "/health": {
+      "get": {
+        "summary": "Health",
+        "operationId": "health_health_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/profile": {
+      "get": {
+        "summary": "Profile",
+        "operationId": "profile_api_profile_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ]
+      }
+    },
+    "/api/gatherings": {
+      "get": {
+        "summary": "Gatherings",
+        "operationId": "gatherings_api_gatherings_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ]
+      },
+      "post": {
+        "summary": "Save",
+        "operationId": "save_api_gatherings_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SaveGathering"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ]
+      }
+    },
+    "/api/gatherings/{id}": {
+      "get": {
+        "summary": "Get",
+        "operationId": "get_api_gatherings__id__get",
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Id"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/workspace/{id}": {
+      "get": {
+        "summary": "Workspace",
+        "operationId": "workspace_api_workspace__id__get",
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Id"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Workspace"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/recipes": {
+      "get": {
+        "summary": "Recipe List",
+        "operationId": "recipe_list_api_recipes_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "items": {
+                    "$ref": "#/components/schemas/RecipeSnapshot"
+                  },
+                  "type": "array",
+                  "title": "Response Recipe List Api Recipes Get"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ]
+      },
+      "post": {
+        "summary": "Recipe Save",
+        "operationId": "recipe_save_api_recipes_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SaveRecipe"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RecipeSnapshot"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ]
+      }
+    },
+    "/api/recipes/preview": {
+      "post": {
+        "summary": "Preview",
+        "operationId": "preview_api_recipes_preview_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Preview"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RecipeSnapshot"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ]
+      }
+    },
+    "/api/menu/{id}": {
+      "post": {
+        "summary": "Edit",
+        "operationId": "edit_api_menu__id__post",
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Id"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/MenuEdit"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PlanInputs"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/menu/{id}/propose": {
+      "post": {
+        "summary": "Propose",
+        "operationId": "propose_api_menu__id__propose_post",
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Id"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/MenuSelection"
+                  },
+                  "title": "Response Propose Api Menu  Id  Propose Post"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/availability/{id}": {
+      "post": {
+        "summary": "Recheck",
+        "operationId": "recheck_api_availability__id__post",
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Id"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AvailabilitySnapshot"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/plans/{id}/generate": {
+      "post": {
+        "summary": "Generate",
+        "operationId": "generate_api_plans__id__generate_post",
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Id"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Generate"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PlanCandidate"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/inventory/{id}/upload": {
+      "post": {
+        "summary": "Upload",
+        "operationId": "upload_api_inventory__id__upload_post",
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Id"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "$ref": "#/components/schemas/Body_upload_api_inventory__id__upload_post"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/inventory/uploads/{id}": {
+      "delete": {
+        "summary": "Delete Upload",
+        "operationId": "delete_upload_api_inventory_uploads__id__delete",
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Id"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "Assignment": {
+        "additionalProperties": false,
+        "properties": {
+          "task": {
+            "$ref": "#/components/schemas/PrepTask"
+          },
+          "interval": {
+            "$ref": "#/components/schemas/Interval"
+          },
+          "person": {
+            "default": "host",
+            "title": "Person",
+            "type": "string"
+          }
+        },
+        "required": [
+          "task",
+          "interval"
+        ],
+        "title": "Assignment",
+        "type": "object"
+      },
+      "AvailabilitySnapshot": {
+        "additionalProperties": false,
+        "properties": {
+          "busy": {
+            "default": [],
+            "items": {
+              "$ref": "#/components/schemas/Interval"
+            },
+            "title": "Busy",
+            "type": "array"
+          },
+          "checked_at": {
+            "anyOf": [
+              {
+                "format": "date-time",
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "Checked At"
+          },
+          "status": {
+            "default": "unavailable",
+            "enum": [
+              "fresh",
+              "stale",
+              "unavailable",
+              "fixture"
+            ],
+            "title": "Status",
+            "type": "string"
+          },
+          "errors": {
+            "default": [],
+            "items": {
+              "type": "string"
+            },
+            "title": "Errors",
+            "type": "array"
+          }
+        },
+        "title": "AvailabilitySnapshot",
+        "type": "object"
+      },
+      "Body_upload_api_inventory__id__upload_post": {
+        "properties": {
+          "file": {
+            "type": "string",
+            "contentMediaType": "application/octet-stream",
+            "title": "File"
+          }
+        },
+        "type": "object",
+        "required": [
+          "file"
+        ],
+        "title": "Body_upload_api_inventory__id__upload_post"
+      },
+      "ConstraintViolation": {
+        "additionalProperties": false,
+        "properties": {
+          "code": {
+            "title": "Code",
+            "type": "string"
+          },
+          "affected_ids": {
+            "default": [],
+            "items": {
+              "type": "string"
+            },
+            "title": "Affected Ids",
+            "type": "array"
+          },
+          "explanation": {
+            "title": "Explanation",
+            "type": "string"
+          },
+          "evidence": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "Evidence"
+          }
+        },
+        "required": [
+          "code",
+          "explanation"
+        ],
+        "title": "ConstraintViolation",
+        "type": "object"
+      },
+      "Contribution": {
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "title": "Id",
+            "type": "string"
+          },
+          "name": {
+            "title": "Name",
+            "type": "string"
+          },
+          "person": {
+            "default": "",
+            "title": "Person",
+            "type": "string"
+          },
+          "servings": {
+            "anyOf": [
+              {
+                "minimum": 1,
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "Servings"
+          },
+          "confirmed": {
+            "default": false,
+            "title": "Confirmed",
+            "type": "boolean"
+          },
+          "arrival": {
+            "anyOf": [
+              {
+                "format": "date-time",
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "Arrival"
+          },
+          "warming_minutes": {
+            "anyOf": [
+              {
+                "minimum": 0,
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "Warming Minutes"
+          },
+          "equipment": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "Equipment"
+          }
+        },
+        "required": [
+          "name"
+        ],
+        "title": "Contribution",
+        "type": "object"
+      },
+      "Gathering": {
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "title": "Id",
+            "type": "string"
+          },
+          "revision": {
+            "default": 1,
+            "minimum": 1,
+            "title": "Revision",
+            "type": "integer"
+          },
+          "title": {
+            "default": "Diwali gathering",
+            "title": "Title",
+            "type": "string"
+          },
+          "occasion": {
+            "default": "Diwali",
+            "title": "Occasion",
+            "type": "string"
+          },
+          "arrival": {
+            "anyOf": [
+              {
+                "format": "date-time",
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "Arrival"
+          },
+          "earliest_prep": {
+            "anyOf": [
+              {
+                "format": "date",
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "Earliest Prep"
+          },
+          "prep_days": {
+            "default": [],
+            "items": {
+              "format": "date",
+              "type": "string"
+            },
+            "title": "Prep Days",
+            "type": "array"
+          },
+          "daily_limits": {
+            "additionalProperties": {
+              "maximum": 1440,
+              "minimum": 0,
+              "type": "integer"
+            },
+            "default": {},
+            "title": "Daily Limits",
+            "type": "object"
+          },
+          "prep_windows": {
+            "default": [],
+            "items": {
+              "$ref": "#/components/schemas/Interval"
+            },
+            "title": "Prep Windows",
+            "type": "array"
+          },
+          "guests": {
+            "default": 15,
+            "maximum": 100,
+            "minimum": 1,
+            "title": "Guests",
+            "type": "integer"
+          },
+          "vegetarian_guests": {
+            "default": 0,
+            "minimum": 0,
+            "title": "Vegetarian Guests",
+            "type": "integer"
+          },
+          "allergies": {
+            "anyOf": [
+              {
+                "items": {
+                  "type": "string"
+                },
+                "type": "array"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "Allergies"
+          },
+          "preferences": {
+            "default": [],
+            "items": {
+              "type": "string"
+            },
+            "title": "Preferences",
+            "type": "array"
+          },
+          "relax_minutes": {
+            "default": 60,
+            "maximum": 240,
+            "minimum": 0,
+            "title": "Relax Minutes",
+            "type": "integer"
+          },
+          "finishing_minutes": {
+            "default": 20,
+            "maximum": 240,
+            "minimum": 0,
+            "title": "Finishing Minutes",
+            "type": "integer"
+          },
+          "cleanup_overrun_minutes": {
+            "default": 15,
+            "maximum": 60,
+            "minimum": 0,
+            "title": "Cleanup Overrun Minutes",
+            "type": "integer"
+          },
+          "single_batch_kitchen": {
+            "default": true,
+            "title": "Single Batch Kitchen",
+            "type": "boolean"
+          },
+          "profile": {
+            "$ref": "#/components/schemas/HostProfile"
+          },
+          "selected_calendars": {
+            "default": [],
+            "items": {
+              "type": "string"
+            },
+            "title": "Selected Calendars",
+            "type": "array"
+          },
+          "contributions": {
+            "default": [],
+            "items": {
+              "$ref": "#/components/schemas/Contribution"
+            },
+            "title": "Contributions",
+            "type": "array"
+          },
+          "spread": {
+            "default": "manageable",
+            "enum": [
+              "manageable",
+              "generous",
+              "custom"
+            ],
+            "title": "Spread",
+            "type": "string"
+          },
+          "category_counts": {
+            "additionalProperties": {
+              "maximum": 12,
+              "minimum": 0,
+              "type": "integer"
+            },
+            "default": {},
+            "title": "Category Counts",
+            "type": "object"
+          }
+        },
+        "title": "Gathering",
+        "type": "object"
+      },
+      "Generate": {
+        "properties": {
+          "expected_revision": {
+            "type": "integer",
+            "title": "Expected Revision"
+          }
+        },
+        "type": "object",
+        "required": [
+          "expected_revision"
+        ],
+        "title": "Generate"
+      },
+      "HTTPValidationError": {
+        "properties": {
+          "detail": {
+            "items": {
+              "$ref": "#/components/schemas/ValidationError"
+            },
+            "type": "array",
+            "title": "Detail"
+          }
+        },
+        "type": "object",
+        "title": "HTTPValidationError"
+      },
+      "Helper": {
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "title": "Id",
+            "type": "string"
+          },
+          "name": {
+            "title": "Name",
+            "type": "string"
+          },
+          "skills": {
+            "default": [],
+            "items": {
+              "type": "string"
+            },
+            "title": "Skills",
+            "type": "array"
+          },
+          "available": {
+            "default": [],
+            "items": {
+              "$ref": "#/components/schemas/Interval"
+            },
+            "title": "Available",
+            "type": "array"
+          },
+          "supervision": {
+            "default": false,
+            "title": "Supervision",
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "id",
+          "name"
+        ],
+        "title": "Helper",
+        "type": "object"
+      },
+      "HostProfile": {
+        "additionalProperties": false,
+        "properties": {
+          "timezone": {
+            "default": "America/New_York",
+            "title": "Timezone",
+            "type": "string"
+          },
+          "weekday_minutes": {
+            "default": 120,
+            "maximum": 1440,
+            "minimum": 0,
+            "title": "Weekday Minutes",
+            "type": "integer"
+          },
+          "weekend_minutes": {
+            "default": 120,
+            "maximum": 1440,
+            "minimum": 0,
+            "title": "Weekend Minutes",
+            "type": "integer"
+          },
+          "protected": {
+            "default": [],
+            "items": {
+              "$ref": "#/components/schemas/Interval"
+            },
+            "title": "Protected",
+            "type": "array"
+          },
+          "equipment": {
+            "additionalProperties": {
+              "anyOf": [
+                {
+                  "type": "integer"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "title": "Equipment",
+            "type": "object"
+          },
+          "helpers": {
+            "default": [],
+            "items": {
+              "$ref": "#/components/schemas/Helper"
+            },
+            "title": "Helpers",
+            "type": "array"
+          }
+        },
+        "title": "HostProfile",
+        "type": "object"
+      },
+      "Ingredient": {
+        "additionalProperties": false,
+        "properties": {
+          "name": {
+            "title": "Name",
+            "type": "string"
+          },
+          "quantity": {
+            "anyOf": [
+              {
+                "minimum": 0,
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "Quantity"
+          },
+          "unit": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "Unit"
+          },
+          "amount_detail": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/QuantityDetail"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null
+          }
+        },
+        "required": [
+          "name"
+        ],
+        "title": "Ingredient",
+        "type": "object"
+      },
+      "Interval": {
+        "additionalProperties": false,
+        "properties": {
+          "start": {
+            "format": "date-time",
+            "title": "Start",
+            "type": "string"
+          },
+          "end": {
+            "format": "date-time",
+            "title": "End",
+            "type": "string"
+          }
+        },
+        "required": [
+          "start",
+          "end"
+        ],
+        "title": "Interval",
+        "type": "object"
+      },
+      "InventoryItem": {
+        "additionalProperties": false,
+        "properties": {
+          "name": {
+            "title": "Name",
+            "type": "string"
+          },
+          "quantity": {
+            "anyOf": [
+              {
+                "minimum": 0,
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "Quantity"
+          },
+          "unit": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "Unit"
+          },
+          "amount_detail": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/QuantityDetail"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null
+          },
+          "id": {
+            "title": "Id",
+            "type": "string"
+          },
+          "confirmed": {
+            "default": false,
+            "title": "Confirmed",
+            "type": "boolean"
+          },
+          "source": {
+            "default": "manual",
+            "enum": [
+              "manual",
+              "receipt",
+              "photo"
+            ],
+            "title": "Source",
+            "type": "string"
+          }
+        },
+        "required": [
+          "name"
+        ],
+        "title": "InventoryItem",
+        "type": "object"
+      },
+      "MenuEdit": {
+        "properties": {
+          "expected_revision": {
+            "type": "integer",
+            "title": "Expected Revision"
+          },
+          "changes": {
+            "items": {
+              "additionalProperties": true,
+              "type": "object"
+            },
+            "type": "array",
+            "title": "Changes"
+          }
+        },
+        "type": "object",
+        "required": [
+          "expected_revision",
+          "changes"
+        ],
+        "title": "MenuEdit"
+      },
+      "MenuSelection": {
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "title": "Id",
+            "type": "string"
+          },
+          "title": {
+            "title": "Title",
+            "type": "string"
+          },
+          "category": {
+            "default": "mains",
+            "title": "Category",
+            "type": "string"
+          },
+          "recipe": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/RecipeSnapshot"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null
+          },
+          "mode": {
+            "default": "cook",
+            "enum": [
+              "cook",
+              "buy",
+              "semi",
+              "guest"
+            ],
+            "title": "Mode",
+            "type": "string"
+          },
+          "servings": {
+            "default": 1,
+            "minimum": 1,
+            "title": "Servings",
+            "type": "integer"
+          },
+          "must_have": {
+            "default": false,
+            "title": "Must Have",
+            "type": "boolean"
+          },
+          "preparation": {
+            "default": [],
+            "items": {
+              "$ref": "#/components/schemas/PrepTask"
+            },
+            "title": "Preparation",
+            "type": "array"
+          },
+          "vegetarian": {
+            "anyOf": [
+              {
+                "type": "boolean"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "Vegetarian"
+          },
+          "contribution": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/Contribution"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null
+          }
+        },
+        "required": [
+          "title"
+        ],
+        "title": "MenuSelection",
+        "type": "object"
+      },
+      "PlanCandidate": {
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "title": "Id",
+            "type": "string"
+          },
+          "gathering_id": {
+            "title": "Gathering Id",
+            "type": "string"
+          },
+          "revision": {
+            "minimum": 1,
+            "title": "Revision",
+            "type": "integer"
+          },
+          "input_hash": {
+            "title": "Input Hash",
+            "type": "string"
+          },
+          "content_hash": {
+            "default": "",
+            "title": "Content Hash",
+            "type": "string"
+          },
+          "assignments": {
+            "default": [],
+            "items": {
+              "$ref": "#/components/schemas/Assignment"
+            },
+            "title": "Assignments",
+            "type": "array"
+          },
+          "shopping": {
+            "default": [],
+            "items": {
+              "$ref": "#/components/schemas/Ingredient"
+            },
+            "title": "Shopping",
+            "type": "array"
+          },
+          "checklist": {
+            "default": [],
+            "items": {
+              "type": "string"
+            },
+            "title": "Checklist",
+            "type": "array"
+          },
+          "generated_at": {
+            "format": "date-time",
+            "title": "Generated At",
+            "type": "string"
+          },
+          "advisories": {
+            "default": [],
+            "items": {
+              "$ref": "#/components/schemas/ConstraintViolation"
+            },
+            "title": "Advisories",
+            "type": "array"
+          },
+          "fit_days": {
+            "default": [],
+            "items": {
+              "additionalProperties": true,
+              "type": "object"
+            },
+            "title": "Fit Days",
+            "type": "array"
+          },
+          "status": {
+            "default": "incomplete",
+            "enum": [
+              "feasible",
+              "incomplete",
+              "conflict"
+            ],
+            "title": "Status",
+            "type": "string"
+          },
+          "violations": {
+            "default": [],
+            "items": {
+              "$ref": "#/components/schemas/ConstraintViolation"
+            },
+            "title": "Violations",
+            "type": "array"
+          },
+          "adjustments": {
+            "default": [],
+            "items": {
+              "$ref": "#/components/schemas/TimeAdjustment"
+            },
+            "title": "Adjustments",
+            "type": "array"
+          },
+          "outcome": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/SchedulingOutcome"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null
+          }
+        },
+        "required": [
+          "gathering_id",
+          "revision",
+          "input_hash"
+        ],
+        "title": "PlanCandidate",
+        "type": "object"
+      },
+      "PlanInputs": {
+        "additionalProperties": false,
+        "properties": {
+          "gathering": {
+            "$ref": "#/components/schemas/Gathering"
+          },
+          "selections": {
+            "default": [],
+            "items": {
+              "$ref": "#/components/schemas/MenuSelection"
+            },
+            "title": "Selections",
+            "type": "array"
+          },
+          "inventory": {
+            "default": [],
+            "items": {
+              "$ref": "#/components/schemas/InventoryItem"
+            },
+            "title": "Inventory",
+            "type": "array"
+          },
+          "availability": {
+            "$ref": "#/components/schemas/AvailabilitySnapshot"
+          }
+        },
+        "required": [
+          "gathering"
+        ],
+        "title": "PlanInputs",
+        "type": "object"
+      },
+      "PrepTask": {
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "title": "Id",
+            "type": "string"
+          },
+          "title": {
+            "title": "Title",
+            "type": "string"
+          },
+          "recipe_id": {
+            "default": "",
+            "title": "Recipe Id",
+            "type": "string"
+          },
+          "dependencies": {
+            "default": [],
+            "items": {
+              "type": "string"
+            },
+            "title": "Dependencies",
+            "type": "array"
+          },
+          "minutes": {
+            "anyOf": [
+              {
+                "maximum": 10080,
+                "minimum": 1,
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "Minutes"
+          },
+          "active_minutes": {
+            "anyOf": [
+              {
+                "minimum": 0,
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "Active Minutes"
+          },
+          "presence_minutes": {
+            "anyOf": [
+              {
+                "minimum": 0,
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "Presence Minutes"
+          },
+          "skill": {
+            "default": "cook",
+            "title": "Skill",
+            "type": "string"
+          },
+          "resource": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "Resource"
+          },
+          "capacity": {
+            "default": 1,
+            "minimum": 1,
+            "title": "Capacity",
+            "type": "integer"
+          },
+          "temperature": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "Temperature"
+          },
+          "eligible": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/Interval"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null
+          },
+          "max_ahead_hours": {
+            "anyOf": [
+              {
+                "minimum": 0,
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "Max Ahead Hours"
+          },
+          "evidence": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "Evidence"
+          },
+          "ingredients": {
+            "default": [],
+            "items": {
+              "$ref": "#/components/schemas/Ingredient"
+            },
+            "title": "Ingredients",
+            "type": "array"
+          },
+          "guidance": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "Guidance"
+          },
+          "phase": {
+            "default": "cooking",
+            "enum": [
+              "cooking",
+              "finishing",
+              "cleanup",
+              "serving"
+            ],
+            "title": "Phase",
+            "type": "string"
+          },
+          "unattended": {
+            "default": false,
+            "title": "Unattended",
+            "type": "boolean"
+          },
+          "scale_mode": {
+            "default": "batch",
+            "enum": [
+              "batch",
+              "combined"
+            ],
+            "title": "Scale Mode",
+            "type": "string"
+          },
+          "preparation_policy": {
+            "default": "unknown",
+            "enum": [
+              "unknown",
+              "same_day",
+              "advance"
+            ],
+            "title": "Preparation Policy",
+            "type": "string"
+          },
+          "storage_anchor": {
+            "default": "serving",
+            "enum": [
+              "serving",
+              "next_step"
+            ],
+            "title": "Storage Anchor",
+            "type": "string"
+          },
+          "max_dependency_gap_minutes": {
+            "anyOf": [
+              {
+                "maximum": 10080,
+                "minimum": 0,
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "Max Dependency Gap Minutes"
+          },
+          "min_dependency_gap_minutes": {
+            "default": 0,
+            "maximum": 10080,
+            "minimum": 0,
+            "title": "Min Dependency Gap Minutes",
+            "type": "integer"
+          },
+          "attention_segments": {
+            "default": [],
+            "items": {
+              "$ref": "#/components/schemas/AttentionSegment"
+            },
+            "title": "Attention Segments",
+            "type": "array"
+          },
+          "timing_basis": {
+            "default": "estimate",
+            "enum": [
+              "estimate",
+              "source"
+            ],
+            "title": "Timing Basis",
+            "type": "string"
+          }
+        },
+        "required": [
+          "id",
+          "title"
+        ],
+        "title": "PrepTask",
+        "type": "object"
+      },
+      "Preview": {
+        "properties": {
+          "source": {
+            "type": "string",
+            "title": "Source"
+          }
+        },
+        "type": "object",
+        "required": [
+          "source"
+        ],
+        "title": "Preview"
+      },
+      "RecipeSnapshot": {
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "title": "Id",
+            "type": "string"
+          },
+          "version": {
+            "default": "1",
+            "title": "Version",
+            "type": "string"
+          },
+          "title": {
+            "title": "Title",
+            "type": "string"
+          },
+          "source": {
+            "title": "Source",
+            "type": "string"
+          },
+          "servings": {
+            "anyOf": [
+              {
+                "minimum": 1,
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "Servings"
+          },
+          "category": {
+            "default": "mains",
+            "enum": [
+              "starters",
+              "mains",
+              "sides",
+              "desserts",
+              "drinks"
+            ],
+            "title": "Category",
+            "type": "string"
+          },
+          "vegetarian": {
+            "anyOf": [
+              {
+                "type": "boolean"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "Vegetarian"
+          },
+          "allergens": {
+            "anyOf": [
+              {
+                "items": {
+                  "type": "string"
+                },
+                "type": "array"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "Allergens"
+          },
+          "ingredients": {
+            "default": [],
+            "items": {
+              "$ref": "#/components/schemas/Ingredient"
+            },
+            "title": "Ingredients",
+            "type": "array"
+          },
+          "tasks": {
+            "default": [],
+            "items": {
+              "$ref": "#/components/schemas/PrepTask"
+            },
+            "title": "Tasks",
+            "type": "array"
+          },
+          "source_text": {
+            "default": "",
+            "title": "Source Text",
+            "type": "string"
+          },
+          "reviewed": {
+            "default": false,
+            "title": "Reviewed",
+            "type": "boolean"
+          },
+          "image_url": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "Image Url"
+          },
+          "image_credit": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "Image Credit"
+          },
+          "uncertainties": {
+            "default": [],
+            "items": {
+              "type": "string"
+            },
+            "title": "Uncertainties",
+            "type": "array"
+          },
+          "preparation_provenance": {
+            "additionalProperties": {
+              "type": "string"
+            },
+            "default": {},
+            "title": "Preparation Provenance",
+            "type": "object"
+          }
+        },
+        "required": [
+          "title",
+          "source"
+        ],
+        "title": "RecipeSnapshot",
+        "type": "object"
+      },
+      "SaveGathering": {
+        "properties": {
+          "gathering": {
+            "$ref": "#/components/schemas/Gathering"
+          },
+          "expected_revision": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Expected Revision"
+          }
+        },
+        "type": "object",
+        "required": [
+          "gathering"
+        ],
+        "title": "SaveGathering"
+      },
+      "SaveRecipe": {
+        "properties": {
+          "recipe": {
+            "$ref": "#/components/schemas/RecipeSnapshot"
+          },
+          "expected_source_version": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Expected Source Version"
+          }
+        },
+        "type": "object",
+        "required": [
+          "recipe"
+        ],
+        "title": "SaveRecipe"
+      },
+      "TimeAdjustment": {
+        "additionalProperties": false,
+        "properties": {
+          "day": {
+            "format": "date",
+            "title": "Day",
+            "type": "string"
+          },
+          "current_minutes": {
+            "title": "Current Minutes",
+            "type": "integer"
+          },
+          "proposed_minutes": {
+            "title": "Proposed Minutes",
+            "type": "integer"
+          },
+          "window": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/Interval"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null
+          },
+          "reason": {
+            "title": "Reason",
+            "type": "string"
+          }
+        },
+        "required": [
+          "day",
+          "current_minutes",
+          "proposed_minutes",
+          "reason"
+        ],
+        "title": "TimeAdjustment",
+        "type": "object"
+      },
+      "ValidationError": {
+        "properties": {
+          "loc": {
+            "items": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "integer"
+                }
+              ]
+            },
+            "type": "array",
+            "title": "Location"
+          },
+          "msg": {
+            "type": "string",
+            "title": "Message"
+          },
+          "type": {
+            "type": "string",
+            "title": "Error Type"
+          },
+          "input": {
+            "title": "Input"
+          },
+          "ctx": {
+            "type": "object",
+            "title": "Context"
+          }
+        },
+        "type": "object",
+        "required": [
+          "loc",
+          "msg",
+          "type"
+        ],
+        "title": "ValidationError"
+      },
+      "Workspace": {
+        "properties": {
+          "inputs": {
+            "$ref": "#/components/schemas/PlanInputs"
+          },
+          "recipes": {
+            "items": {
+              "$ref": "#/components/schemas/RecipeSnapshot"
+            },
+            "title": "Recipes",
+            "type": "array"
+          },
+          "plan": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/PlanCandidate"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null
+          },
+          "previous_plan": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/PlanCandidate"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null
+          },
+          "recipe_updates": {
+            "default": [],
+            "items": {
+              "type": "string"
+            },
+            "title": "Recipe Updates",
+            "type": "array"
+          },
+          "recipe_readiness": {
+            "additionalProperties": {
+              "additionalProperties": {
+                "type": "boolean"
+              },
+              "type": "object"
+            },
+            "default": {},
+            "title": "Recipe Readiness",
+            "type": "object"
+          },
+          "fixture_mode": {
+            "title": "Fixture Mode",
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "inputs",
+          "recipes",
+          "fixture_mode"
+        ],
+        "title": "Workspace",
+        "type": "object"
+      },
+      "AttentionSegment": {
+        "additionalProperties": false,
+        "properties": {
+          "offset_minutes": {
+            "minimum": 0,
+            "title": "Offset Minutes",
+            "type": "integer"
+          },
+          "minutes": {
+            "exclusiveMinimum": 0,
+            "title": "Minutes",
+            "type": "integer"
+          }
+        },
+        "required": [
+          "offset_minutes",
+          "minutes"
+        ],
+        "title": "AttentionSegment",
+        "type": "object"
+      },
+      "QuantityDetail": {
+        "additionalProperties": false,
+        "properties": {
+          "kind": {
+            "default": "unknown",
+            "enum": [
+              "exact",
+              "range",
+              "to_taste",
+              "unknown"
+            ],
+            "title": "Kind",
+            "type": "string"
+          },
+          "minimum": {
+            "anyOf": [
+              {
+                "minimum": 0,
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "Minimum"
+          },
+          "maximum": {
+            "anyOf": [
+              {
+                "minimum": 0,
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "Maximum"
+          },
+          "optional": {
+            "default": false,
+            "title": "Optional",
+            "type": "boolean"
+          },
+          "source_text": {
+            "default": "",
+            "title": "Source Text",
+            "type": "string"
+          },
+          "basis": {
+            "default": "unverified",
+            "enum": [
+              "source",
+              "estimate",
+              "unverified"
+            ],
+            "title": "Basis",
+            "type": "string"
+          }
+        },
+        "title": "QuantityDetail",
+        "type": "object"
+      },
+      "SchedulingOutcome": {
+        "additionalProperties": false,
+        "properties": {
+          "code": {
+            "enum": [
+              "complete",
+              "needs_input",
+              "search_exhausted",
+              "unsupported",
+              "no_fit_found",
+              "validation_failed"
+            ],
+            "title": "Code",
+            "type": "string"
+          },
+          "message": {
+            "title": "Message",
+            "type": "string"
+          },
+          "solver_status": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "Solver Status"
+          }
+        },
+        "required": [
+          "code",
+          "message"
+        ],
+        "title": "SchedulingOutcome",
+        "type": "object"
+      }
+    },
+    "securitySchemes": {
+      "HTTPBearer": {
+        "type": "http",
+        "scheme": "bearer"
+      }
+    }
+  }
+}

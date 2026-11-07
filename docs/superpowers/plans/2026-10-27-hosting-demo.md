@@ -45,3 +45,11 @@ Stale input/recipe versions; missing storage versus same-day; attention after wa
 - Added five complete-menu regression fixtures plus blocked-calendar and impossible-budget tests. All five draft schedules fit without buying dishes or increasing cooking limits; the existing cleanup allowance is retained.
 - Library changes are version-guarded and read back. All 45 non-recipe records remain unchanged; no calendar writes or saved-plan regeneration.
 - Remaining validation: live-calendar runs only when requested, physical cooking estimates/quantities, and hosted resource footprint of the added local solver. Do not describe fixture success as a live LangSmith evaluation.
+
+### November 7 architecture work
+Implemented additive quantity metadata, recipe graph checks, explicit scheduling outcomes, current library image rendering and removal of the import panel.
+Acceptance suite: scripts/evaluate_architecture.py (20 isolated controlled cases), backend/tests/test_architecture_contracts.py (including API generation/readback), and frontend/tests/architecture-audit.spec.ts (mocked desktop/phone flow).
+Use frontend/playwright.audit.config.ts for the isolated browser test; no real API writes.
+LangSmith export is explicit via scripts/export_architecture_evals.py with a privately configured key. Do not claim hosted reliability, live evaluation delivery, or current recipe completeness from fixture results. Remaining priorities are recorded in docs/reviews/2026-11-07-architecture-implementation.md.
+
+Pantry walkthrough implemented: per-gathering browser-local checks, strikethrough before filtering, reversible “Show only what I need,” and amount-change invalidation. Cross-device sync remains future work. Frontend build and 27 unit tests passed.

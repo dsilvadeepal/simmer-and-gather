@@ -11,7 +11,7 @@ export function PlanViews({inputs,plan}:{inputs:Inputs;plan:Plan}){
  {labels.map((label,i)=><section key={label} role="tabpanel" id={`${id}-panel-${i}`} aria-labelledby={`${id}-tab-${i}`} hidden={active!==i} tabIndex={0}>
  {i===0&&<><HostingSummary inputs={inputs} plan={plan} view="fit"/>{!plan.assignments?.length&&<p>No cooking sessions are scheduled yet. Review the plan checks and update your plan.</p>}<PrepOverview recipes={(inputs.selections||[]).flatMap(s=>s.recipe?[{...s.recipe,id:s.id}]:[])} assignments={plan.assignments||[]} timezone={inputs.gathering.profile?.timezone} fitDays={plan.fit_days}/></>}
  {i===1&&<HostingSummary inputs={inputs} plan={plan} view="menu"/>}
- {i===2&&<section className="card"><h2>Shopping list</h2><ShoppingList items={plan.shopping||[]} selections={inputs.selections||[]}/></section>}
+ {i===2&&<section className="card"><h2>Shopping list</h2><ShoppingList key={inputs.gathering.id} gatheringId={inputs.gathering.id} items={plan.shopping||[]} selections={inputs.selections||[]}/></section>}
  {i===3&&<section className="card"><h2>Finishing touches</h2><ul>{checklist.map((x,n)=><li key={n}>{x}</li>)}</ul>{!checklist.length&&<p>No extra finishing tasks.</p>}</section>}
  </section>)}
  </div>;

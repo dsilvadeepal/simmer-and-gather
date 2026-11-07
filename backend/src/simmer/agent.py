@@ -15,6 +15,34 @@ from .db import Missing, Conflict
 from .scheduler import schedule, digest, content_hash
 from .menu import propose_menu, validate_menu, rank_recipes
 
+def buy_prepared_suggestions(inputs,plan):
+    """Offer a verified single-dish alternative without mutating the current menu."""
+    if plan.status != 'conflict' or not any(v.code == 'unscheduled' for v in plan.violations): return []
+    from .scheduler import schedule
+    suggestions=[]
+    for item in inputs.selections:
+        if item.mode != 'cook' or item.must_have: continue
+        trial=inputs.model_copy(deep=True)
+        next(x for x in trial.selections if x.id==item.id).mode='buy'
+        if any(v.code!='menu_category' for v in validate_menu(trial)): continue
+        candidate=schedule(trial)
+        if candidate.status=='feasible':
+            suggestions.append(ConstraintViolation(code='buy_prepared',affected_ids=[item.id],explanation=f'Consider buying {item.title} prepared. This alternative fits the available time; check availability and ingredients before choosing it.'))
+            if len(suggestions)==3: break
+    return suggestions
+
+def apply_menu_validation(inputs,plan):
+    """A valid schedule is not a usable plan until menu requirements pass too."""
+    issues=validate_menu(inputs)
+    plan.advisories=[v for v in issues if v.code=='menu_category']
+    blockers=[v for v in issues if v.code!='menu_category']
+    plan.violations.extend(blockers)
+    if blockers:
+        plan.status='incomplete'
+        plan.outcome=SchedulingOutcome(code='needs_input',message='The schedule was checked, but menu details still need attention. Review the plan checks before using it.')
+    plan.content_hash=content_hash(plan)
+    return plan
+
 class State(TypedDict,total=False):
     inputs: PlanInputs
     recipes: list[RecipeSnapshot]
@@ -73,11 +101,8 @@ class PlanningService:
         graph.add_node('schedule',build_schedule)
         def validate(state):
             start=perf_counter()
-            plan=state['plan']; issues=validate_menu(state['inputs'])
-            plan.advisories=[v for v in issues if v.code=='menu_category']
-            blockers=[v for v in issues if v.code!='menu_category']
-            plan.violations.extend(blockers)
-            if blockers: plan.status='incomplete'
+            plan=apply_menu_validation(state['inputs'],state['plan'])
+            plan.advisories.extend(buy_prepared_suggestions(state['inputs'],plan))
             plan.content_hash=content_hash(plan)
             stage_times['validate_hosting_plan']=perf_counter()-start
             return {'plan':plan}

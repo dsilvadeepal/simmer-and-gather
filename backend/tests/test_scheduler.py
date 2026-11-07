@@ -136,3 +136,20 @@ def test_constraint_search_preserves_final_dependency_validation():
     assert p.status=='feasible' and not validate_schedule(i,p)
     p.assignments=[a for a in p.assignments if not a.task.id.endswith(':prep')]
     assert any(v.code=='dependency' for v in validate_schedule(i,p))
+
+def test_explicit_serving_task_is_deferred_without_title_guessing():
+    from simmer.scheduler import tasks_for, finishing_checklist
+    i=inputs(minutes=(10,),limit=120)
+    r=i.selections[0].recipe
+    r.tasks=[PrepTask(id='cook',title='Cook',minutes=10,evidence='source',max_ahead_hours=24),PrepTask(id='serve',title='Slice roast',minutes=10,evidence='source',phase='serving',dependencies=['cook'])]
+    tasks,issues=tasks_for(i)
+    assert not issues and len(tasks)==1 and 'Slice roast (at dinner)' in finishing_checklist(i)
+    r.tasks[0].title='Carve turkey from vegetables'
+    r.tasks[1].phase='cooking';r.tasks[1].max_ahead_hours=24
+    assert len(tasks_for(i)[0])==2
+
+def test_serving_task_cannot_hide_prerequisite_work():
+    from simmer.scheduler import tasks_for
+    i=inputs(minutes=(10,),limit=120)
+    i.selections[0].recipe.tasks=[PrepTask(id='serve',title='Serve',minutes=5,evidence='source',phase='serving'),PrepTask(id='prep',title='Cook',minutes=10,evidence='source',max_ahead_hours=24,dependencies=['serve'])]
+    assert any(v.code=='dependency' for v in tasks_for(i)[1])

@@ -128,3 +128,13 @@ def test_notion_structured_recipe_preserves_timing_but_requires_review():
     assert back.tasks==r.tasks
     assert back.reviewed is False
     assert back.id=='notion-page'
+
+def test_unknown_guest_allergies_need_input_before_solver(monkeypatch):
+    data=inputs(limit=90);data.gathering.allergies=None
+    def unexpected(*args,**kwargs):raise AssertionError('Do not run solver for missing confirmation')
+    monkeypatch.setattr('simmer.constraint_scheduler.solve_schedule',unexpected)
+    plan=schedule(data)
+    assert plan.outcome.code=='needs_input'
+    assert plan.status=='incomplete'
+    assert not plan.assignments
+    assert plan.violations[0].code=='dietary'

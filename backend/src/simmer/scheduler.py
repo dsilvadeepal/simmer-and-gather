@@ -316,6 +316,14 @@ def _schedule(inputs,priority=False):
     return p
 
 def schedule(inputs):
+    if inputs.gathering.allergies is None:
+        from .domain import SchedulingOutcome
+        plan=PlanCandidate(gathering_id=inputs.gathering.id,revision=inputs.gathering.revision,input_hash=digest(inputs),shopping=shopping_for(inputs),checklist=finishing_checklist(inputs))
+        plan.status='incomplete'
+        plan.violations=[ConstraintViolation(code='dietary',explanation='Confirm guest allergies, or select no known allergies.')]
+        plan.outcome=SchedulingOutcome(code='needs_input',message='Confirm guest allergies, or select no known allergies, before scheduling.')
+        plan.content_hash=content_hash(plan)
+        return plan
     plan=_schedule(inputs)
     diagnostics={}
     if plan.status=='conflict':

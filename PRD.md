@@ -88,3 +88,9 @@ See docs/reviews/2026-11-07-architecture-implementation.md for implementation ev
 
 ### Pantry walkthrough
 Remove the separate “What you already have” input panel. Shopping rows have “Have” checkboxes and remain visible with a strikethrough until “Show only what I need” is selected. “Show all ingredients” restores them for easy undo. Checks persist per gathering on this device, not across accounts or devices. Changed quantities require reconfirmation. Checking an item does not alter a recipe, cooking plan or calendar.
+
+### Checked menu alternatives (November 7, 2026)
+
+When a proposed menu has nut/gluten screening conflicts or insufficient vegetarian main portions, automatically offer up to three alternatives from the owner's reviewed saved recipe library. Preserve must-haves, contributions, gathering settings, prep limits and buffer. Prefer fewer substitutions and portions covering the vegetarian shortfall. Screen the entire candidate menu and run the scheduler plus independent validator before offering it. Unknown screening remains a blocker; ingredient screening is not allergen-free certification.
+
+Alternatives are unsaved previews with dish changes, servings and expandable prep schedules. Explicit approval rereads calendar availability and recipe versions, rejects stale or newly infeasible choices, and updates the menu only. Saved plans and calendar events are never changed by preview or approval; generating a new plan and adding events remain separate actions. Bound search to 12 schedule attempts, 256 combinations, five candidates per dish, three results. No result means the bounded search found none, not proof that no feasible alternative exists. Record aggregate search results in LangSmith when enabled; no new model calls.

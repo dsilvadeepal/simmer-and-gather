@@ -6,9 +6,12 @@ from simmer.domain import PlanInputs
 from evaluate_realistic_gatherings import evaluate
 ROOT=Path(__file__).resolve().parents[1]
 def main():
+ import sys
+ corrected="--corrected" in sys.argv
+ fixture=ROOT/("evals/heldout-gatherings-corrected.json" if corrected else "evals/heldout-gatherings-v1.json")
  values=dict(l.split('=',1) for l in (ROOT/'.env.langsmith-evals').read_text().splitlines() if '=' in l)
  client=Client(api_key=values['LANGSMITH_EVAL_API_KEY'])
- cases={c['id']:c for c in json.loads((ROOT/'evals/heldout-gatherings-v1.json').read_text())}
+ cases={c['id']:c for c in json.loads(fixture.read_text())}
  name='simmer-heldout-gatherings-v1'
  if client.has_dataset(dataset_name=name):dataset=client.read_dataset(dataset_name=name)
  else:
@@ -22,7 +25,7 @@ def main():
  def valid(outputs):return {'key':'valid_complete_only','score':int(outputs['status']!='feasible' or not outputs['validator_codes'])}
  def expected(outputs,reference_outputs):return {'key':'expected_outcome','score':int(outputs['outcome']['code']==reference_outputs['expected_outcome'])}
  def completion(outputs):return {'key':'complete_plan','score':int(outputs['outcome']['code']=='complete')}
- experiment=client.evaluate(target,data=dataset.name,evaluators=[valid,expected,completion],experiment_prefix='heldout-gatherings',max_concurrency=1,metadata={'fixture_sha256':hashlib.sha256((ROOT/'evals/heldout-gatherings-v1.json').read_bytes()).hexdigest()},description='Held-out batch 2. Expectations frozen before execution and retained on failure. Code evaluators, no LLM judge. Includes deliberately incomplete inputs.')
+ experiment=client.evaluate(target,data=dataset.name,evaluators=[valid,expected,completion],experiment_prefix='heldout-corrected' if corrected else 'heldout-gatherings',max_concurrency=1,metadata={'fixture_sha256':hashlib.sha256(fixture.read_bytes()).hexdigest()},description='Held-out batch 2. Expectations frozen before execution and retained on failure. Code evaluators, no LLM judge. Includes deliberately incomplete inputs.')
  rows=list(experiment)
  print(json.dumps({'experiment':experiment.experiment_name,'dataset_id':str(dataset.id),'cases':len(rows)}))
 if __name__=='__main__':main()

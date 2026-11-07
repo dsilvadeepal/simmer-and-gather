@@ -1,6 +1,6 @@
 from datetime import datetime, timezone
 from fastapi import Depends, HTTPException, UploadFile
-from pydantic import BaseModel
+from pydantic import BaseModel, Field
 from .domain import *
 from .agent import PlanningService
 from .recipes import RecipeService, extract_candidate
@@ -12,6 +12,16 @@ class MenuEdit(BaseModel):
     expected_revision: int
     changes: list[dict]
 class Generate(BaseModel): expected_revision: int
+class AlternativeSwap(BaseModel):
+    selection_id: str
+    recipe_id: str
+    version: str
+    servings: int = Field(gt=0)
+
+class AlternativeApproval(BaseModel):
+    expected_revision: int
+    swaps: list[AlternativeSwap] = Field(min_length=1,max_length=20)
+
 class Preview(BaseModel): source: str
 class SaveRecipe(BaseModel):
     recipe: RecipeSnapshot
@@ -78,6 +88,30 @@ def install_routes(app,owner,store,availability=None,fixture_mode=False,model=No
     def edit(id:str,body:MenuEdit,o=Depends(owner)): return planning.apply_menu_changes(o,id,body.changes,body.expected_revision)
     @app.post('/api/menu/{id}/propose',response_model=list[MenuSelection])
     def propose(id:str,o=Depends(owner)): return planning.propose(o,id)
+    @app.post('/api/menu/{id}/alternatives')
+    def alternatives(id:str,body:Generate,o=Depends(owner)):
+        from .alternatives import suggest_alternatives
+        from .db import Conflict
+        data=planning.load(o,id)
+        if data.gathering.revision!=body.expected_revision:raise Conflict('Gathering changed; reload')
+        data.availability=snapshot(o,data.gathering,True)
+        result=suggest_alternatives(data,recipes.list_recipes(o))
+        if telemetry:
+            try:telemetry.record_run({'revision':data.gathering.revision},{'checked_candidates':result['checked_candidates'],'valid_options':len(result['suggestions'])},name='suggest_checked_alternatives')
+            except Exception:pass
+        return result
+    @app.post('/api/menu/{id}/alternatives/approve',response_model=PlanInputs)
+    def approve_alternative(id:str,body:AlternativeApproval,o=Depends(owner)):
+        from .alternatives import trial_for,checked
+        from .db import Conflict
+        data=planning.load(o,id)
+        if data.gathering.revision!=body.expected_revision:raise Conflict('Gathering changed; find alternatives again')
+        data.availability=snapshot(o,data.gathering,True)
+        trial=trial_for(data,recipes.list_recipes(o),[s.model_dump() for s in body.swaps])
+        if checked(trial) is None:raise Conflict('This alternative no longer fits. Find alternatives again.')
+        ids={s.selection_id for s in body.swaps}
+        changes=[{'action':'update','id':s.id,'values':s.model_dump(mode='json')} for s in trial.selections if s.id in ids]
+        return planning.apply_menu_changes(o,id,changes,body.expected_revision)
     @app.post('/api/availability/{id}',response_model=AvailabilitySnapshot)
     def recheck(id:str,o=Depends(owner)): return snapshot(o,planning.load(o,id).gathering,True)
     @app.post('/api/plans/{id}/generate',response_model=PlanCandidate)

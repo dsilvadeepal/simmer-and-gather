@@ -58,12 +58,20 @@ def build():
  return cases
 
 def main():
+ import sys
+ corrected="--corrected" in sys.argv
  path=ROOT/'evals/heldout-gatherings-v1.json'
  if not path.exists():path.write_text(json.dumps(build(),indent=2)+'\n')
  cases=json.loads(path.read_text());rows=[]
+ if corrected:
+  from refine_heldout_recipes import refine
+  for case in cases:
+   for selection in case['inputs']['selections']:
+    if selection.get('recipe'):selection['recipe']=refine(RecipeSnapshot.model_validate(selection['recipe'])).model_dump(mode='json')
+  (ROOT/'evals/heldout-gatherings-corrected.json').write_text(json.dumps(cases,indent=2)+'\n')
  for c in cases:
   result=evaluate(PlanInputs.model_validate(c['inputs']))
   rows.append({'id':c['id'],'name':c['name'],'expected_outcome':c['expected_outcome'],'matches_expectation':c['expected_outcome']==result['outcome']['code'],**result})
-  (ROOT/'docs/reviews/2026-11-07-heldout-results.json').write_text(json.dumps(rows,indent=2)+'\n')
+  (ROOT/('docs/reviews/2026-11-07-heldout-corrected-results.json' if corrected else 'docs/reviews/2026-11-07-heldout-results.json')).write_text(json.dumps(rows,indent=2)+'\n')
   print(c['id'],c['name'],result['outcome']['code'],'expected',c['expected_outcome'],flush=True)
 if __name__=='__main__':main()

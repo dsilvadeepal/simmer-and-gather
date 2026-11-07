@@ -1,5 +1,5 @@
 """Update existing scoped Notion recipes; never create recipes or touch plans."""
-import json,os
+import json,os,hashlib
 from pathlib import Path
 from simmer.db import Store
 from simmer.domain import RecipeSnapshot
@@ -8,14 +8,14 @@ from simmer.adapters.notion_recipe_details import block_text,from_notion_details
 ROOT=Path(__file__).resolve().parents[1]
 def rich(text):return [{'type':'text','text':{'content':text[i:i+1800]}} for i in range(0,len(text),1800)]
 def block(kind,text):return {'object':'block','type':kind,kind:{'rich_text':rich(text)}}
-def main():
+def main(titles=None,marker="Current hosting preparation · 2026-11-07",report="2026-11-07-notion-recipe-sync.json"):
  cfg=dict(os.environ)
  for name in ('.env.google','.env.notion','.env.services'):
   for line in (ROOT/name).read_text().splitlines():
    if '=' in line and not line.startswith('#'):
     k,v=line.split('=',1);cfg[k]=v.strip().strip('"').strip("'")
  store=Store(cfg['DATABASE_URL']);a=ScopedNotion(NotionAPITransport(cfg['NOTION_TOKEN']),json.loads(cfg['NOTION_COLLECTIONS']))
- titles=json.loads((ROOT/'docs/reviews/2026-11-07-realistic-library-updates.json').read_text())['updated_recipes']
+ if titles is None:titles=json.loads((ROOT/'docs/reviews/2026-11-07-realistic-library-updates.json').read_text())['updated_recipes']
  pages=a.query('recipes');results=[]
  for raw in store.list(cfg['ALLOWED_OWNER_ID'],'recipe'):
   r=RecipeSnapshot.model_validate(raw)
@@ -25,9 +25,9 @@ def main():
   p=matches[0];pageid=p['id']
   existing=a.transport('GET','/blocks/'+pageid+'/children?page_size=100')
   if existing.get('has_more'):raise ValueError('Paginated page requires explicit handling')
-  marker='Current hosting preparation · 2026-11-07'
-  if not any(block_text(b)==marker for b in existing['results']):
-   children=[block('heading_3',marker)]
+  record_marker=marker+' · '+hashlib.sha256(r.model_dump_json().encode()).hexdigest()[:10]
+  if not any(block_text(b)==record_marker for b in existing['results']):
+   children=[block('heading_3',record_marker)]
    for t in r.tasks:
     text=f'{t.title} — {t.minutes} min elapsed; {t.presence_minutes if t.presence_minutes is not None else t.minutes} min attention.'
     if t.dependencies:text+=' After: '+', '.join(t.dependencies)+'.'
@@ -41,12 +41,16 @@ def main():
   if r.vegetarian:
    old=''.join(x.get('plain_text',x.get('text',{}).get('content','')) for x in p['properties'].get('Dietary Notes',{}).get('rich_text',[]))
    props['Dietary Notes']={'rich_text':rich('Vegetarian: yes (reviewed ingredients; dairy may be present). '+old) if not old.startswith('Vegetarian: yes') else rich(old)}
+  if r.preparation_provenance.get('allergen_review'):
+   existing_note=''.join(x.get('plain_text',x.get('text',{}).get('content','')) for x in p['properties'].get('Dietary Notes',{}).get('rich_text',[]))
+   note=r.preparation_provenance['allergen_review']
+   props['Dietary Notes']={'rich_text':rich(note+'\n'+existing_note if note not in existing_note else existing_note)}
   if r.preparation_provenance.get('realistic_review'):props['Make Ahead Notes']={'rich_text':rich(r.preparation_provenance['realistic_review'])}
   a.transport('PATCH','/pages/'+pageid,{'properties':props})
   blocks=a.transport('GET','/blocks/'+pageid+'/children?page_size=100')['results']
   page=a.transport('GET','/pages/'+pageid)
   back=from_notion_details(page,blocks)
-  assert back.tasks==r.tasks and back.ingredients==r.ingredients and back.vegetarian==r.vegetarian
-  results.append({'title':r.title,'url':page.get('url'),'verified':True});print('Verified',r.title,flush=True)
- (ROOT/'docs/reviews/2026-11-07-notion-recipe-sync.json').write_text(json.dumps(results,indent=2)+'\n')
+  assert back.tasks==r.tasks and back.ingredients==r.ingredients and back.vegetarian==r.vegetarian and back.allergens==r.allergens
+  results.append({'title':r.title,'verified':True});print('Verified',r.title,flush=True)
+ (ROOT/'docs/reviews'/report).write_text(json.dumps(results,indent=2)+'\n')
 if __name__=='__main__':main()

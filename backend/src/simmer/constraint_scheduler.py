@@ -1,7 +1,8 @@
 """Bounded deterministic fallback for a solo host; independent validation is mandatory.
 
 Models whole recipe chains together instead of committing to greedy early slots.
-Unsupported helper/finishing configurations fall back to the existing scheduler.
+Optional helpers do not prevent a host-only fallback; original inputs are validated.
+Unsupported finishing configurations fall back to the existing scheduler.
 """
 from datetime import datetime,timedelta,timezone
 from zoneinfo import ZoneInfo
@@ -15,7 +16,7 @@ def solve_schedule(inputs,time_limit=5,diagnostics=None):
     if diagnostics is not None: diagnostics['solver_status']='UNSUPPORTED'
     g=inputs.gathering
     tasks,issues=tasks_for(inputs);windows=prep_windows_for(g)
-    if issues or not tasks or not g.arrival or not g.earliest_prep or not windows or g.profile.helpers or any(t.phase!='cooking' for t in tasks):return None
+    if issues or not tasks or not g.arrival or not g.earliest_prep or not windows or any(t.phase!='cooking' for t in tasks):return None
     zone=ZoneInfo(g.profile.timezone)
     if len({w.start.astimezone(zone).date() for w in windows})!=len(windows):return None
     origin=datetime.combine(g.earliest_prep,datetime.min.time(),zone).astimezone(timezone.utc)

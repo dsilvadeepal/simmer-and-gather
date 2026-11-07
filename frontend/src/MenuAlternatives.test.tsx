@@ -1,0 +1,20 @@
+import {render,screen,fireEvent,waitFor} from '@testing-library/react';
+import {vi,test,expect} from 'vitest';
+import {MenuAlternatives} from './MenuAlternatives';
+import {api} from './api';
+vi.mock('./api',()=>({api:vi.fn()}));
+vi.mock('./PlanViews',()=>({PlanViews:()=> <p>Checked schedule</p>}));
+test('shows a checked preview and writes only on explicit approval',async()=>{
+ const inputs:any={gathering:{id:'dinner',revision:1}};
+ const plan:any={id:'p',violations:[{code:'vegetarian'}]};
+ const swaps=[{selection_id:'dish',recipe_id:'chana',version:'1',servings:5}];
+ vi.mocked(api).mockResolvedValueOnce({message:'Checked',suggestions:[{swaps,changes:[{from:'Wings',to:'Chana masala',servings:5}],inputs,plan}]}).mockResolvedValueOnce({});
+ const approved=vi.fn().mockResolvedValue(undefined);
+ render(<MenuAlternatives inputs={inputs} plan={plan} disabled={false} onApproved={approved}/>);
+ await screen.findByText('Chana masala');
+ expect(api).toHaveBeenCalledTimes(1);
+ expect(screen.getByText('Review checked prep schedule')).toBeInTheDocument();
+ fireEvent.click(screen.getByText('Approve these swaps'));
+ await waitFor(()=>expect(approved).toHaveBeenCalled());
+ expect(api).toHaveBeenLastCalledWith('/menu/dinner/alternatives/approve',{expected_revision:1,swaps});
+});

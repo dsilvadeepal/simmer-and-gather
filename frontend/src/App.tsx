@@ -25,6 +25,7 @@ import {
 } from "./api";
 import { CalendarPicker } from "./CalendarPicker";
 
+import { MenuAlternatives } from "./MenuAlternatives";
 import { PlanViews } from "./PlanViews";
 import { SchedulingChoices } from "./SchedulingChoices";
 import { StepNavigation } from "./StepNavigation";
@@ -942,6 +943,7 @@ export default function App() {
                 </details>
               )}
               {(plan.advisories||[]).filter(a=>a.code==='buy_prepared').map(a=><section className="card" key={a.affected_ids?.[0]}><h2>Save cooking time</h2><p>{a.explanation}</p><button className="secondary" disabled={loading||dirty} onClick={()=>run(async()=>{await edit([{action:'update',id:a.affected_ids?.[0],values:{mode:'buy'}}]);setNotice('Menu updated. Regenerate the prep plan to review the change.');})}>Choose bought prepared</button></section>)}
+              <MenuAlternatives inputs={ws.inputs} plan={plan} disabled={dirty} onApproved={async()=>{await load(g.id!);setNotice("Swaps approved. Generate a proposed plan for your updated menu.");}}/>
               <PlanViews inputs={ws.inputs} plan={plan}/>
               <details className="card save-plan"><summary>Save plan & calendar options</summary><div className="grid">
                   {!ws.fixture_mode && <section className="card">

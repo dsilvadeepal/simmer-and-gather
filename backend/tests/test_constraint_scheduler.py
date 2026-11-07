@@ -53,3 +53,16 @@ def test_cleanup_can_use_passive_cooking_time_without_eroding_buffer():
     cleanup=next(a for a in p.assignments if a.task.phase=='cleanup')
     assert cooking.interval.start<cleanup.interval.start<cleanup.interval.end<cooking.interval.end
     assert (data.gathering.arrival-cooking.interval.end).total_seconds()==data.gathering.relax_minutes*60
+
+def test_optional_short_helper_does_not_disable_host_only_fallback():
+    from simmer.domain import Helper
+    inputs=PlanInputs.model_validate(CASES[0]['inputs'])
+    from datetime import timedelta
+    start=inputs.gathering.arrival-timedelta(days=1)
+    inputs.gathering.profile.helpers=[Helper(id='short',name='Optional helper',skills=['cook'],available=[Interval(start=start,end=start+timedelta(minutes=30))])]
+    before=inputs.model_dump(mode='json')
+    result=solve_schedule(inputs)
+    assert result is not None
+    assert all(a.person=='host' for a in result.assignments)
+    assert not validate_schedule(inputs,result)
+    assert inputs.model_dump(mode='json')==before

@@ -1,0 +1,2691 @@
+[
+  {
+    "url": "https://ministryofcurry.com/paneer-tikka/",
+    "occasion": "Diwali / Indian hosting",
+    "category": "starters",
+    "title": "Air Fryer Paneer Tikka",
+    "rating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.7",
+      "ratingCount": "10",
+      "reviewCount": "2"
+    },
+    "yield_text": [
+      "8"
+    ],
+    "prep": "PT15M",
+    "cook": "PT10M",
+    "total": "PT53M",
+    "structured": true,
+    "status": "fetched",
+    "publisher": "Ministry of Curry",
+    "rating_display": "4.7/5 from 10 ratings",
+    "planning_ready": false,
+    "prep_evidence_status": "Source reviewed",
+    "prep_evidence_methods": "Tavily source-page extract",
+    "prep_summary": "Marinate the uncooked paneer, then refrigerate for up to 24 hours. Cook near serving; the author says it is best hot and fresh.",
+    "source_prep_minutes": 15,
+    "source_cook_minutes": 10,
+    "shortlist": "Diwali draft",
+    "chef_prep_draft": "Mix marinade and coat paneer: 10-15 min active (estimate). Refrigerate uncooked marinated paneer up to 24 h (author). Skewer and air-fry: 10 min per source batch, plus 5-10 min for each extra batch (estimate; air-fryer capacity unknown). Cleanup: 10 min (estimate). Serve soon after cooking; author says best hot and fresh.",
+    "pending_review": "Confirm actual air-fryer batches, allergens and amount for 15 guests.",
+    "ingredients": [
+      "\u00bd cup plain yogurt (full fat )",
+      "\u00bd tablespoon ginger paste",
+      "\u00bd tablespoon garlic paste",
+      "\u00bd teaspoon ground turmeric",
+      "1 \u00bd teaspoons kosher salt",
+      "1 tablespoon Kashmiri red chili powder",
+      "1 teaspoon garam masala",
+      "1 teaspoon chat masala (optional)",
+      "1 tablespoon kasoori methi (dried fenugreek leaves)",
+      "1 lemon (juiced)",
+      "1 teaspoon smoked paprika (optional)",
+      "1 pound paneer (cut into 1-inch cubes)",
+      "1 medium green pepper (cut into 1-inch cubes)",
+      "1 medium red pepper (cut into 1-inch cubes)",
+      "1 medium red onion (cut into 1-inch cubes)"
+    ],
+    "ingredient_source": "publisher structured data",
+    "gluten_screen": {
+      "status": "none explicitly listed",
+      "evidence": []
+    },
+    "nut_screen": {
+      "status": "none explicitly listed",
+      "evidence": []
+    },
+    "label_review": [
+      "1 tablespoon Kashmiri red chili powder",
+      "1 teaspoon garam masala",
+      "1 teaspoon chat masala (optional)"
+    ],
+    "estimated_base_servings": 8,
+    "base_servings_basis": "publisher recipe yield; confirm whether servings or individual pieces",
+    "equipment_assumption": [
+      "Air fryer",
+      "Refrigerator"
+    ],
+    "equipment_review": "Confirm usable capacity, pot/pan size, number of batches and overlap with other dishes.",
+    "chef_make_ahead_proposal": null,
+    "make_ahead_basis": "Publisher-specific note retained in prep_summary; confirm actual storage plan"
+  },
+  {
+    "url": "https://ministryofcurry.com/aloo-chaat-in-phyllo-cups/",
+    "occasion": "Diwali / Indian hosting",
+    "category": "starters",
+    "title": "Aloo Chaat in Phyllo Shells",
+    "rating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.67",
+      "ratingCount": "27",
+      "reviewCount": "2"
+    },
+    "yield_text": [
+      "8"
+    ],
+    "prep": "PT30M",
+    "cook": "PT15M",
+    "total": "PT55M",
+    "structured": true,
+    "status": "fetched",
+    "publisher": "Ministry of Curry",
+    "rating_display": "4.67/5 from 27 ratings",
+    "planning_ready": false,
+    "prep_evidence_status": "Source reviewed",
+    "prep_evidence_methods": "Tavily source-page extract",
+    "prep_summary": "Make the green and tamarind chutneys ahead; the author states they keep refrigerated for a week or can be frozen. Assembly timing still needs review.",
+    "source_prep_minutes": 30,
+    "source_cook_minutes": 15,
+    "shortlist": "Diwali draft",
+    "chef_prep_draft": "Make green/tamarind chutneys up to 1 week ahead (author). Steam/dice potatoes and cook filling: 30-40 min active (estimate); refrigerate prepared potatoes up to 1 day (author). Fill phyllo shells near serving: 10-15 min active (estimate). Cleanup: 10 min (estimate).",
+    "pending_review": "Confirm phyllo shell crispness, guest servings, allergens and assembly timing.",
+    "ingredients": [
+      "30 phyllo shells (2 boxes )",
+      "4 red potatoes (medium sized)",
+      "2 tablespoons olive oil",
+      "1 teaspoon cumin seeds",
+      "1 teaspoon fennel seeds",
+      "2 teaspoons ginger (grated)",
+      "\u00bd teaspoon ground turmeric",
+      "2 teaspoons Kashmiri red chili powder",
+      "2 teaspoons kosher salt",
+      "\u00bd cup yogurt (plain regular)",
+      "\u00bd teaspoon kosher salt",
+      "2 teaspoons sugar",
+      "\u00bd cup Cilantro Mint Chutney",
+      "\u00bd cup Tamarind Chutney",
+      "\u00bd cup sev",
+      "\u00bd cup pomegranate seeds",
+      "\u00bd cup cilantro (finely chopped)"
+    ],
+    "ingredient_source": "publisher structured data",
+    "gluten_screen": {
+      "status": "listed ingredient",
+      "evidence": [
+        "30 phyllo shells (2 boxes )"
+      ]
+    },
+    "nut_screen": {
+      "status": "none explicitly listed",
+      "evidence": []
+    },
+    "label_review": [
+      "2 tablespoons olive oil",
+      "2 teaspoons Kashmiri red chili powder",
+      "\u00bd cup Cilantro Mint Chutney",
+      "\u00bd cup Tamarind Chutney"
+    ],
+    "estimated_base_servings": 8,
+    "base_servings_basis": "publisher recipe yield; confirm whether servings or individual pieces",
+    "equipment_assumption": [
+      "Stovetop",
+      "Refrigerator"
+    ],
+    "equipment_review": "Confirm usable capacity, pot/pan size, number of batches and overlap with other dishes.",
+    "chef_make_ahead_proposal": null,
+    "make_ahead_basis": "Publisher-specific note retained in prep_summary; confirm actual storage plan"
+  },
+  {
+    "url": "https://ministryofcurry.com/tandoori-chicken-wings/",
+    "occasion": "Diwali / Indian hosting",
+    "category": "starters",
+    "title": "Tandoori chicken wings",
+    "rating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.57",
+      "ratingCount": "64",
+      "reviewCount": "2"
+    },
+    "yield_text": [
+      "6"
+    ],
+    "prep": "PT60M",
+    "cook": "PT30M",
+    "total": "PT90M",
+    "structured": true,
+    "status": "fetched",
+    "publisher": "Ministry of Curry",
+    "rating_display": "4.57/5 from 64 ratings",
+    "planning_ready": false,
+    "prep_evidence_status": "Needs details",
+    "prep_evidence_methods": "Tavily source-page extract",
+    "prep_summary": "No recipe-specific make-ahead or safe storage window confirmed from the extracted page. Review the original: https://ministryofcurry.com/tandoori-chicken-wings/",
+    "source_prep_minutes": 60,
+    "source_cook_minutes": 30,
+    "shortlist": null,
+    "ingredients": [
+      "2 pounds raw chicken wings (**)",
+      "\u00be cup plain yogurt",
+      "2 tablespoons lemon juice",
+      "1 to 2 teaspoons garam masala (**)",
+      "1 to 2 tablespoons Kashmiri red chili powder",
+      "1 tablespoon kasoori methi (dried fenugreek leaves) (optional )",
+      "1 tablespoon ginger paste",
+      "1 tablespoon garlic paste",
+      "\u00bd teaspoon ground turmeric",
+      "2 teaspoons kosher salt",
+      "2 tablespoons cilantro (chopped, optional for garnish )"
+    ],
+    "ingredient_source": "publisher structured data",
+    "gluten_screen": {
+      "status": "none explicitly listed",
+      "evidence": []
+    },
+    "nut_screen": {
+      "status": "none explicitly listed",
+      "evidence": []
+    },
+    "label_review": [
+      "1 to 2 teaspoons garam masala (**)",
+      "1 to 2 tablespoons Kashmiri red chili powder"
+    ],
+    "estimated_base_servings": 6,
+    "base_servings_basis": "publisher recipe yield; confirm whether servings or individual pieces",
+    "equipment_assumption": [
+      "Oven",
+      "Refrigerator"
+    ],
+    "equipment_review": "Confirm usable capacity, pot/pan size, number of batches and overlap with other dishes.",
+    "chef_make_ahead_proposal": "Mix yogurt marinade and coat wings the prior evening; refrigerate covered. Cook in batches near serving for crisp skin. Do not count unattended marination as active work.",
+    "make_ahead_basis": "Chef planning proposal, not publisher-confirmed storage window"
+  },
+  {
+    "url": "https://ministryofcurry.com/masala-nuts/",
+    "occasion": "Diwali / Indian hosting",
+    "category": "starters",
+    "title": "Masala Nuts",
+    "rating": {
+      "@type": "AggregateRating",
+      "ratingValue": "5",
+      "ratingCount": "2",
+      "reviewCount": "1"
+    },
+    "yield_text": [
+      "16"
+    ],
+    "prep": "PT5M",
+    "cook": "PT20M",
+    "total": "PT25M",
+    "structured": true,
+    "status": "fetched",
+    "publisher": "Ministry of Curry",
+    "rating_display": "5/5 from 2 ratings",
+    "planning_ready": false,
+    "prep_evidence_status": "Needs details",
+    "prep_evidence_methods": "Tavily source-page extract",
+    "prep_summary": "No recipe-specific make-ahead or safe storage window confirmed from the extracted page. Review the original: https://ministryofcurry.com/masala-nuts/",
+    "source_prep_minutes": 5,
+    "source_cook_minutes": 20,
+    "shortlist": null,
+    "ingredients": [
+      "1 cup almonds",
+      "1 cup walnuts",
+      "1 cup pistachios",
+      "1 cup cashews",
+      "3\u00bd tablespoons oil",
+      "2 teaspoons kosher salt",
+      "1 teaspoon black pepepr",
+      "1 teaspoon aamchur",
+      "1 teaspoon chaat masala",
+      "2 teaspoons Kashmiri red chili powder",
+      "\u00bd teaspoon turmeric",
+      "1 teaspoons sugar"
+    ],
+    "ingredient_source": "publisher structured data",
+    "gluten_screen": {
+      "status": "none explicitly listed",
+      "evidence": []
+    },
+    "nut_screen": {
+      "status": "listed ingredient",
+      "evidence": [
+        "1 cup almonds",
+        "1 cup walnuts",
+        "1 cup pistachios",
+        "1 cup cashews"
+      ]
+    },
+    "label_review": [
+      "3\u00bd tablespoons oil",
+      "1 teaspoon chaat masala",
+      "2 teaspoons Kashmiri red chili powder"
+    ],
+    "estimated_base_servings": 16,
+    "base_servings_basis": "publisher recipe yield; confirm whether servings or individual pieces",
+    "equipment_assumption": [
+      "Oven"
+    ],
+    "equipment_review": "Confirm usable capacity, pot/pan size, number of batches and overlap with other dishes.",
+    "chef_make_ahead_proposal": "Roast and cool completely 1-2 days ahead; seal airtight only after cooling. Check crunch before serving; nuts are an explicit allergen.",
+    "make_ahead_basis": "Chef planning proposal, not publisher-confirmed storage window"
+  },
+  {
+    "url": "https://ministryofcurry.com/instant-pot-butter-chicken/",
+    "occasion": "Diwali / Indian hosting",
+    "category": "mains",
+    "title": "Instant Pot Butter Chicken",
+    "rating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.73",
+      "ratingCount": "123",
+      "reviewCount": "10"
+    },
+    "yield_text": [
+      "6"
+    ],
+    "prep": "PT10M",
+    "cook": "PT25M",
+    "total": "PT35M",
+    "structured": true,
+    "status": "fetched",
+    "publisher": "Ministry of Curry",
+    "rating_display": "4.73/5 from 123 ratings",
+    "planning_ready": false,
+    "prep_evidence_status": "Needs details",
+    "prep_evidence_methods": "Tavily source-page extract",
+    "prep_summary": "No recipe-specific make-ahead or safe storage window confirmed from the extracted page. Review the original: https://ministryofcurry.com/instant-pot-butter-chicken/",
+    "source_prep_minutes": 10,
+    "source_cook_minutes": 25,
+    "shortlist": "Diwali draft",
+    "chef_prep_draft": "Prepare ingredients and sauce: 10-15 min active (estimate). Pressure-cook and thicken: source cook time 25 min, with 5 min final saut\u00e9 described on page. Cleanup: 10 min (estimate). Source says cooked leftovers keep refrigerated up to 5 days; for a party, propose cooking the day before and cooling/refrigerating promptly, then reheating fully. This day-before use is a chef proposal, not explicit author make-ahead timing.",
+    "pending_review": "Confirm raw chicken quantity for 15, allergen ingredients, Instant Pot size, cooling and reheat capacity.",
+    "ingredients": [
+      "2 pounds boneless skinless chicken thighs (cut into 2-inch pieces)",
+      "2 tablespoons ghee (or coconut oil)",
+      "1 large yellow onion (finely chopped)",
+      "1 tablespoon fresh ginger (grated)",
+      "1 tablespoon fresh garlic (minced)",
+      "\u00bd teaspoon ground turmeric",
+      "1 tablespoon Kashmiri red chili powder",
+      "3 plum tomatoes (pureed)",
+      "1 can unsweetened full fat coconut milk (allow these to separate - DO NOT shake. Best if left in fridge overnight)",
+      "2 tablespoons tomato paste",
+      "1 teaspoon garam masala",
+      "2 tablespoons kasoori methi (dried fenugreek leaves)",
+      "2 teaspoons sugar (skip for paleo)",
+      "1\u00bd teaspoon kosher salt",
+      "\u00bd cup cilantro (chopped, for garnish)"
+    ],
+    "ingredient_source": "publisher structured data",
+    "gluten_screen": {
+      "status": "none explicitly listed",
+      "evidence": []
+    },
+    "nut_screen": {
+      "status": "none explicitly listed",
+      "evidence": []
+    },
+    "label_review": [
+      "2 tablespoons ghee (or coconut oil)",
+      "1 tablespoon Kashmiri red chili powder",
+      "1 teaspoon garam masala"
+    ],
+    "estimated_base_servings": 6,
+    "base_servings_basis": "publisher recipe yield; confirm whether servings or individual pieces",
+    "equipment_assumption": [
+      "Pressure cooker",
+      "Refrigerator"
+    ],
+    "equipment_review": "Confirm usable capacity, pot/pan size, number of batches and overlap with other dishes.",
+    "chef_make_ahead_proposal": "Cook fully 1 day ahead; divide into shallow containers and refrigerate promptly. Reheat thoroughly before serving; sauce usually tolerates this better than last-minute cooking.",
+    "make_ahead_basis": "Chef planning proposal, not publisher-confirmed storage window"
+  },
+  {
+    "url": "https://ministryofcurry.com/paneer-butter-masala/",
+    "occasion": "Diwali / Indian hosting",
+    "category": "mains",
+    "title": "Butter Paneer {Paneer Makhani}",
+    "rating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.82",
+      "ratingCount": "80",
+      "reviewCount": "6"
+    },
+    "yield_text": [
+      "6"
+    ],
+    "prep": "PT10M",
+    "cook": "PT20M",
+    "total": "PT30M",
+    "structured": true,
+    "status": "fetched",
+    "publisher": "Ministry of Curry",
+    "rating_display": "4.82/5 from 80 ratings",
+    "planning_ready": false,
+    "prep_evidence_status": "Needs details",
+    "prep_evidence_methods": "Tavily source-page extract",
+    "prep_summary": "No recipe-specific make-ahead or safe storage window confirmed from the extracted page. Review the original: https://ministryofcurry.com/paneer-butter-masala/",
+    "source_prep_minutes": 10,
+    "source_cook_minutes": 20,
+    "shortlist": null,
+    "ingredients": [
+      "2 tablespoons ghee",
+      "1 large yellow onion (finely diced)",
+      "1 tablespoon ginger (grated)",
+      "1 tablespoon garlic (minced )",
+      "2 teaspoons kashmiri red chili powder (or another mild red chili powder)",
+      "1 \u00bd teaspoon kosher salt",
+      "\u00bd teaspoon ground turmeric",
+      "1 cup tomato puree (canned or 2 to 3 ripe tomatoes, pureed )",
+      "\u00bd cup water",
+      "1 pound paneer (cut into 1/2-inch cubes)",
+      "\u00bd cup heavy cream (**)",
+      "2 tablespoons tomato paste",
+      "2 tablespoons kasoori methi (dried fenugreek leaves) (optional)",
+      "2 teaspoons sugar",
+      "1 teaspoon garam masala",
+      "\u00bd cup chopped fresh cilantro",
+      "1 cup shredded mozzarella cheese",
+      "8 Naan"
+    ],
+    "ingredient_source": "publisher structured data",
+    "gluten_screen": {
+      "status": "listed ingredient",
+      "evidence": [
+        "8 Naan"
+      ]
+    },
+    "nut_screen": {
+      "status": "none explicitly listed",
+      "evidence": []
+    },
+    "label_review": [
+      "2 teaspoons kashmiri red chili powder (or another mild red chili powder)",
+      "1 teaspoon garam masala"
+    ],
+    "estimated_base_servings": 6,
+    "base_servings_basis": "publisher recipe yield; confirm whether servings or individual pieces",
+    "equipment_assumption": [
+      "Stovetop",
+      "Refrigerator"
+    ],
+    "equipment_review": "Confirm usable capacity, pot/pan size, number of batches and overlap with other dishes.",
+    "chef_make_ahead_proposal": "Cook sauce 1 day ahead and refrigerate promptly. Add or warm paneer close to serving to avoid rubbery texture; optional naan is separate and contains wheat unless a verified substitute is used.",
+    "make_ahead_basis": "Chef planning proposal, not publisher-confirmed storage window"
+  },
+  {
+    "url": "https://ministryofcurry.com/instant-pot-chana-masala-recipe/",
+    "occasion": "Diwali / Indian hosting",
+    "category": "mains",
+    "title": "Instant Pot Chana Masala (Punjabi Chole)",
+    "rating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.8",
+      "ratingCount": "67",
+      "reviewCount": "8"
+    },
+    "yield_text": [
+      "4"
+    ],
+    "prep": "PT10M",
+    "cook": "PT60M",
+    "total": "PT310M",
+    "structured": true,
+    "status": "fetched",
+    "publisher": "Ministry of Curry",
+    "rating_display": "4.8/5 from 67 ratings",
+    "planning_ready": false,
+    "prep_evidence_status": "Needs details",
+    "prep_evidence_methods": "Tavily source-page extract",
+    "prep_summary": "No recipe-specific make-ahead or safe storage window confirmed from the extracted page. Review the original: https://ministryofcurry.com/instant-pot-chana-masala-recipe/",
+    "source_prep_minutes": 10,
+    "source_cook_minutes": 60,
+    "shortlist": null,
+    "ingredients": [
+      "1 cup dried chickpeas (**)",
+      "3\u00bd cups water (divided )",
+      "2 tablespoons ghee (or oil)",
+      "1 teaspoon cumin seeds",
+      "1 yellow onion (finely diced)",
+      "1 teaspoon ginger (grated)",
+      "1 tablespoon garlic (minced)",
+      "1 tablespoon ground coriander",
+      "2 teaspoons kosher salt",
+      "1 to 2 teaspoons kashmiri red chili powder",
+      "\u00bc teaspoon ground turmeric",
+      "2 plum tomatoes (finely diced or 1 cup canned tomatoes with juice )",
+      "\u00bc teaspoon garam masala",
+      "\u00bd cup cilantro (chopped)"
+    ],
+    "ingredient_source": "publisher structured data",
+    "gluten_screen": {
+      "status": "none explicitly listed",
+      "evidence": []
+    },
+    "nut_screen": {
+      "status": "none explicitly listed",
+      "evidence": []
+    },
+    "label_review": [
+      "2 tablespoons ghee (or oil)",
+      "1 to 2 teaspoons kashmiri red chili powder",
+      "\u00bc teaspoon garam masala"
+    ],
+    "estimated_base_servings": 4,
+    "base_servings_basis": "publisher recipe yield; confirm whether servings or individual pieces",
+    "equipment_assumption": [
+      "Pressure cooker",
+      "Refrigerator"
+    ],
+    "equipment_review": "Confirm usable capacity, pot/pan size, number of batches and overlap with other dishes.",
+    "chef_make_ahead_proposal": "Soak dried chickpeas as the source method requires; cook curry 1 day ahead and refrigerate promptly. Reheat thoroughly; check bean tenderness before relying on the planned cook time.",
+    "make_ahead_basis": "Chef planning proposal, not publisher-confirmed storage window"
+  },
+  {
+    "url": "https://ministryofcurry.com/madras-lentils-daal-makhani-instant-pot/",
+    "occasion": "Diwali / Indian hosting",
+    "category": "mains",
+    "title": "Instant Pot Dal Makhani with Brown Rice",
+    "rating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.68",
+      "ratingCount": "134",
+      "reviewCount": "9"
+    },
+    "yield_text": [
+      "6"
+    ],
+    "prep": "PT10M",
+    "cook": "PT50M",
+    "total": "PT60M",
+    "structured": true,
+    "status": "fetched",
+    "publisher": "Ministry of Curry",
+    "rating_display": "4.68/5 from 134 ratings",
+    "planning_ready": false,
+    "prep_evidence_status": "Source reviewed",
+    "prep_evidence_methods": "Tavily source-page extract",
+    "prep_summary": "The author cooks this dal the night before entertaining. The page says leftovers keep refrigerated for up to five days.",
+    "source_prep_minutes": 10,
+    "source_cook_minutes": 50,
+    "shortlist": "Diwali draft",
+    "chef_prep_draft": "Prepare ingredients: source prep 10 min. Pressure-cook: source cook 50 min with much of the time unattended; 10-15 min active/presence estimate. Cleanup: 10 min estimate. The author cooks it the night before parties and says refrigerated leftovers keep up to 5 days. If freezing, leave cream out until serving (author).",
+    "pending_review": "Confirm Instant Pot batch capacity, final reheating, dairy allergens and portions.",
+    "ingredients": [
+      "1 cup black gram beans ((adzuki beans or whole brown lentils) **)",
+      "\u2153 cup red kidney beans (**)",
+      "1 tablespoon oil ((ghee or butter))",
+      "1 teaspoon cumin seeds",
+      "1 medium yellow onion (finely diced)",
+      "1 tablespoon ginger (paste)",
+      "1 tablespoon garlic (paste )",
+      "\u00bc teaspoon ground turmeric",
+      "2 teaspoons Kashmiri red chili powder",
+      "2 teaspoons kosher salt",
+      "2 cups tomatoes (diced )",
+      "2 cups water",
+      "\u00bd cup light cream (**)",
+      "1 teaspoon garam masala",
+      "\u00bc cup cilantro (chopped )",
+      "1 tablespoons kasoori methi (dried fenugreek leaves) (optional)",
+      "1 cup brown rice (rinsed and drained )",
+      "2 cups water",
+      "1 teaspoon salt"
+    ],
+    "ingredient_source": "publisher structured data",
+    "gluten_screen": {
+      "status": "none explicitly listed",
+      "evidence": []
+    },
+    "nut_screen": {
+      "status": "none explicitly listed",
+      "evidence": []
+    },
+    "label_review": [
+      "1 tablespoon oil ((ghee or butter))",
+      "2 teaspoons Kashmiri red chili powder",
+      "1 teaspoon garam masala"
+    ],
+    "estimated_base_servings": 6,
+    "base_servings_basis": "publisher recipe yield; confirm whether servings or individual pieces",
+    "equipment_assumption": [
+      "Pressure cooker",
+      "Refrigerator"
+    ],
+    "equipment_review": "Confirm usable capacity, pot/pan size, number of batches and overlap with other dishes.",
+    "chef_make_ahead_proposal": null,
+    "make_ahead_basis": "Publisher-specific note retained in prep_summary; confirm actual storage plan"
+  },
+  {
+    "url": "https://ministryofcurry.com/palak-paneer-instant-pot/",
+    "occasion": "Diwali / Indian hosting",
+    "category": "mains",
+    "title": "Instant Pot Palak Paneer",
+    "rating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.61",
+      "ratingCount": "97",
+      "reviewCount": "9"
+    },
+    "yield_text": [
+      "4"
+    ],
+    "prep": "PT5M",
+    "cook": "PT10M",
+    "total": "PT15M",
+    "structured": true,
+    "status": "fetched",
+    "publisher": "Ministry of Curry",
+    "rating_display": "4.61/5 from 97 ratings",
+    "planning_ready": false,
+    "prep_evidence_status": "Needs details",
+    "prep_evidence_methods": "Tavily source-page extract",
+    "prep_summary": "No recipe-specific make-ahead or safe storage window confirmed from the extracted page. Review the original: https://ministryofcurry.com/palak-paneer-instant-pot/",
+    "source_prep_minutes": 5,
+    "source_cook_minutes": 10,
+    "shortlist": null,
+    "ingredients": [
+      "15 raw cashews (**)",
+      "\u00bc cup milk",
+      "2 tablespoons ghee",
+      "1 teaspoon cumin seeds",
+      "1 teaspoon ginger grated",
+      "1 teaspoon garlic minced",
+      "1 to 2 teaspoon hot green chili (minced)",
+      "1 medium yellow onion (chopped fine)",
+      "1 lb spinach (baby spinach works the best, or use chopped frozen )",
+      "1 teaspoon kosher salt",
+      "1 cup water",
+      "2 cups paneer (cubed)",
+      "1 teaspoon garam masala"
+    ],
+    "ingredient_source": "publisher structured data",
+    "gluten_screen": {
+      "status": "none explicitly listed",
+      "evidence": []
+    },
+    "nut_screen": {
+      "status": "listed ingredient",
+      "evidence": [
+        "15 raw cashews (**)"
+      ]
+    },
+    "label_review": [
+      "1 teaspoon garam masala"
+    ],
+    "estimated_base_servings": 4,
+    "base_servings_basis": "publisher recipe yield; confirm whether servings or individual pieces",
+    "equipment_assumption": [
+      "Pressure cooker",
+      "Blender",
+      "Refrigerator"
+    ],
+    "equipment_review": "Confirm usable capacity, pot/pan size, number of batches and overlap with other dishes.",
+    "chef_make_ahead_proposal": "Wash spinach and prepare sauce base 1 day ahead; refrigerate promptly. Finish with paneer near serving to protect texture and color. Contains cashews in the listed recipe.",
+    "make_ahead_basis": "Chef planning proposal, not publisher-confirmed storage window"
+  },
+  {
+    "url": "https://ministryofcurry.com/moms-veg-pulao/",
+    "occasion": "Diwali / Indian hosting",
+    "category": "sides",
+    "title": "Vegetable Pulao Recipe | Veg Pulav",
+    "rating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.75",
+      "ratingCount": "4",
+      "reviewCount": "1"
+    },
+    "yield_text": [
+      "6"
+    ],
+    "prep": "PT20M",
+    "cook": "PT30M",
+    "total": "PT50M",
+    "structured": true,
+    "status": "fetched",
+    "publisher": "Ministry of Curry",
+    "rating_display": "4.75/5 from 4 ratings",
+    "planning_ready": false,
+    "prep_evidence_status": "Needs details",
+    "prep_evidence_methods": "Tavily source-page extract",
+    "prep_summary": "No recipe-specific make-ahead or safe storage window confirmed from the extracted page. Review the original: https://ministryofcurry.com/moms-veg-pulao/",
+    "source_prep_minutes": 20,
+    "source_cook_minutes": 30,
+    "shortlist": "Diwali draft",
+    "chef_prep_draft": "Chop and saut\u00e9 vegetables up to 2 days ahead (author): 20-25 min active estimate. Cook rice and combine on party day: source cook 30 min, 10-15 min active estimate. Cleanup: 10 min estimate. Source says leftover pulao can be refrigerated up to 3 days; use the author\u2019s separate 2-day vegetable prep window for this plan.",
+    "pending_review": "Confirm rice quantity, stove/Instant Pot resource and final cooking slot outside relaxation hour.",
+    "ingredients": [
+      "1 tablespoon ghee",
+      "1 cup long-grain basmati rice",
+      "2 cups water",
+      "1 teaspoon kosher salt",
+      "1 teaspoon shah jeera",
+      "1 Indian bay leaf",
+      "6 cloves",
+      "12 black peppercorns",
+      "3 green cardamom pods",
+      "4 tablespoons ghee",
+      "1 medium yellow onion (thinly sliced)",
+      "2 cups cauliflower (cut into 1-inch florets)",
+      "2 carrots (cut into 2-inch X \u00bc inch thin strips)",
+      "1 cup green beans (diagonally cut into 1 inch pieces)",
+      "\u00bd cup frozen green peas",
+      "\u00bd cup frozen corn",
+      "2 teaspoons kosher salt",
+      "\u00bd teaspoon garam Masala",
+      "16 cashews"
+    ],
+    "ingredient_source": "publisher structured data",
+    "gluten_screen": {
+      "status": "none explicitly listed",
+      "evidence": []
+    },
+    "nut_screen": {
+      "status": "listed ingredient",
+      "evidence": [
+        "16 cashews"
+      ]
+    },
+    "label_review": [
+      "\u00bd teaspoon garam Masala"
+    ],
+    "estimated_base_servings": 6,
+    "base_servings_basis": "publisher recipe yield; confirm whether servings or individual pieces",
+    "equipment_assumption": [
+      "Stovetop",
+      "Refrigerator"
+    ],
+    "equipment_review": "Confirm usable capacity, pot/pan size, number of batches and overlap with other dishes.",
+    "chef_make_ahead_proposal": "Wash/chop vegetables and measure spices 1 day ahead. Cook rice on party day, then hold hot or refrigerate promptly; rice quality drops if repeatedly warmed. Contains cashews in the listed recipe.",
+    "make_ahead_basis": "Chef planning proposal, not publisher-confirmed storage window"
+  },
+  {
+    "url": "https://ministryofcurry.com/indian-cucumber-salad/",
+    "occasion": "Diwali / Indian hosting",
+    "category": "sides",
+    "title": "Indian Cucumber Salad (Kakdi Koshimbir)",
+    "rating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.75",
+      "ratingCount": "12",
+      "reviewCount": "1"
+    },
+    "yield_text": [
+      "4"
+    ],
+    "prep": "PT5M",
+    "cook": "PT5M",
+    "total": "PT10M",
+    "structured": true,
+    "status": "fetched",
+    "publisher": "Ministry of Curry",
+    "rating_display": "4.75/5 from 12 ratings",
+    "planning_ready": false,
+    "prep_evidence_status": "Needs details",
+    "prep_evidence_methods": "Tavily source-page extract",
+    "prep_summary": "No recipe-specific make-ahead or safe storage window confirmed from the extracted page. Review the original: https://ministryofcurry.com/indian-cucumber-salad/",
+    "source_prep_minutes": 5,
+    "source_cook_minutes": 5,
+    "shortlist": null,
+    "ingredients": [
+      "4 small Persian cucumbers",
+      "1 tablespoon ghee",
+      "1 teaspoon cumin seeds (lightly crushed in the palm of your hand)",
+      "\u215b teaspoon asafetida ** (hing (optional))",
+      "1 small green chili (sliced lengthwise)",
+      "1 teaspoon kosher salt",
+      "1 teaspoon sugar",
+      "2 tablespoons peanuts (roasted and ground)",
+      "2 tablespoons cilantro (chopped finely for garnish)"
+    ],
+    "ingredient_source": "publisher structured data",
+    "gluten_screen": {
+      "status": "none explicitly listed",
+      "evidence": []
+    },
+    "nut_screen": {
+      "status": "listed ingredient",
+      "evidence": [
+        "2 tablespoons peanuts (roasted and ground)"
+      ]
+    },
+    "label_review": [],
+    "estimated_base_servings": 4,
+    "base_servings_basis": "publisher recipe yield; confirm whether servings or individual pieces",
+    "equipment_assumption": [
+      "Stovetop",
+      "Refrigerator"
+    ],
+    "equipment_review": "Confirm usable capacity, pot/pan size, number of batches and overlap with other dishes.",
+    "chef_make_ahead_proposal": "Wash cucumbers and prepare dressing components 1 day ahead, refrigerated separately. Chop/combine close to serving to avoid watery texture. Listed peanuts require allergy review.",
+    "make_ahead_basis": "Chef planning proposal, not publisher-confirmed storage window"
+  },
+  {
+    "url": "https://ministryofcurry.com/cilantro-mint-chutney/",
+    "occasion": "Diwali / Indian hosting",
+    "category": "sides",
+    "title": "Cilantro Mint Chutney",
+    "rating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.77",
+      "ratingCount": "34",
+      "reviewCount": "9"
+    },
+    "yield_text": [
+      "14"
+    ],
+    "prep": "PT15M",
+    "cook": null,
+    "total": "PT15M",
+    "structured": true,
+    "status": "fetched",
+    "publisher": "Ministry of Curry",
+    "rating_display": "4.77/5 from 34 ratings",
+    "planning_ready": false,
+    "prep_evidence_status": "Source reviewed",
+    "prep_evidence_methods": "Tavily source-page extract",
+    "prep_summary": "Store the chutney refrigerated in a glass jar for up to one week, or freeze in small portions. Thaw frozen portions in the refrigerator.",
+    "source_prep_minutes": 15,
+    "source_cook_minutes": null,
+    "shortlist": "Diwali draft",
+    "chef_prep_draft": "Blend chutney: source prep 15 min. Cleanup: 5 min estimate. Store refrigerated in a glass jar for up to one week (author); freeze small portions for longer storage and use thawed chutney within 1-2 days (author).",
+    "pending_review": "Confirm herb quantities, spice level and any guest-specific allergens.",
+    "ingredients": [
+      "2 cups cilantro (packed) (leaves &amp; stems, rinsed, pat dried and rough chopped )",
+      "1 cup mint leaves (discard stems )",
+      "\u00bd cup unsweetened coconut frozen or dry",
+      "4 garlic cloves (peeled )",
+      "2 teaspoons cumin seeds",
+      "4 to 8 small green chiles (or 1 to 2 jalape\u00f1os )",
+      "1 lemon (juiced)",
+      "1 to 3 teaspoons kosher salt (add as per taste)",
+      "2 to 4 teaspoons sugar (add as per taste )",
+      "\u00bd cup water"
+    ],
+    "ingredient_source": "publisher structured data",
+    "gluten_screen": {
+      "status": "none explicitly listed",
+      "evidence": []
+    },
+    "nut_screen": {
+      "status": "none explicitly listed",
+      "evidence": []
+    },
+    "label_review": [],
+    "estimated_base_servings": 14,
+    "base_servings_basis": "publisher recipe yield; confirm whether servings or individual pieces",
+    "equipment_assumption": [
+      "Blender",
+      "Refrigerator"
+    ],
+    "equipment_review": "Confirm usable capacity, pot/pan size, number of batches and overlap with other dishes.",
+    "chef_make_ahead_proposal": null,
+    "make_ahead_basis": "Publisher-specific note retained in prep_summary; confirm actual storage plan"
+  },
+  {
+    "url": "https://ministryofcurry.com/rice-pudding-instant-pot/",
+    "occasion": "Diwali / Indian hosting",
+    "category": "desserts",
+    "title": "Instant Pot Rice Pudding",
+    "rating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.43",
+      "ratingCount": "61",
+      "reviewCount": "9"
+    },
+    "yield_text": [
+      "6"
+    ],
+    "prep": "PT5M",
+    "cook": "PT40M",
+    "total": "PT45M",
+    "structured": true,
+    "status": "fetched",
+    "publisher": "Ministry of Curry",
+    "rating_display": "4.43/5 from 61 ratings",
+    "planning_ready": false,
+    "prep_evidence_status": "Needs details",
+    "prep_evidence_methods": "Tavily source-page extract",
+    "prep_summary": "No recipe-specific make-ahead or safe storage window confirmed from the extracted page. Review the original: https://ministryofcurry.com/rice-pudding-instant-pot/",
+    "source_prep_minutes": 5,
+    "source_cook_minutes": 40,
+    "shortlist": null,
+    "ingredients": [
+      "1 tablespoon ghee",
+      "\u00bd cup white rice (basmati or short grain amber mor, Rinsed and drained )",
+      "4 to 5 cups low fat milk (divided)",
+      "1 cup water",
+      "\u00bd cup sugar (more or less depending on taste)",
+      "1 teaspoon cardamom powder",
+      "4 tablespoons nuts (almonds, and walnuts coarsely chopped or sliced(optional))",
+      "\u00bd teaspoon saffron (optional)",
+      "2 tablespoons raisins (optional, rinsed and pat dried )",
+      "1 tablespoon shredded unsweetened coconut (optional)",
+      "\u215b teaspoon salt"
+    ],
+    "ingredient_source": "publisher structured data",
+    "gluten_screen": {
+      "status": "none explicitly listed",
+      "evidence": []
+    },
+    "nut_screen": {
+      "status": "listed ingredient",
+      "evidence": [
+        "4 tablespoons nuts (almonds, and walnuts coarsely chopped or sliced(optional))"
+      ]
+    },
+    "label_review": [
+      "1 teaspoon cardamom powder"
+    ],
+    "estimated_base_servings": 6,
+    "base_servings_basis": "publisher recipe yield; confirm whether servings or individual pieces",
+    "equipment_assumption": [
+      "Pressure cooker",
+      "Refrigerator"
+    ],
+    "equipment_review": "Confirm usable capacity, pot/pan size, number of batches and overlap with other dishes.",
+    "chef_make_ahead_proposal": "Cook fully 1 day ahead; cool promptly in shallow containers and refrigerate. Stir and adjust consistency before serving; serve chilled or reheat thoroughly if serving hot.",
+    "make_ahead_basis": "Chef planning proposal, not publisher-confirmed storage window"
+  },
+  {
+    "url": "https://ministryofcurry.com/carrot-halwa-instant-pot/",
+    "occasion": "Diwali / Indian hosting",
+    "category": "desserts",
+    "title": "Instant Pot Carrot Halwa Recipe",
+    "rating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.71",
+      "ratingCount": "44",
+      "reviewCount": "4"
+    },
+    "yield_text": [
+      "6"
+    ],
+    "prep": "PT10M",
+    "cook": "PT20M",
+    "total": "PT30M",
+    "structured": true,
+    "status": "fetched",
+    "publisher": "Ministry of Curry",
+    "rating_display": "4.71/5 from 44 ratings",
+    "planning_ready": false,
+    "prep_evidence_status": "Source reviewed",
+    "prep_evidence_methods": "Tavily source-page extract",
+    "prep_summary": "Make the halwa ahead; the author states it keeps refrigerated for up to one week and can also be frozen. Thaw frozen portions overnight in the refrigerator.",
+    "source_prep_minutes": 10,
+    "source_cook_minutes": 20,
+    "shortlist": "Diwali draft",
+    "chef_prep_draft": "Prepare ingredients: source prep 10 min. Pressure-cook and reduce: source cook 20 min, including a final 5-7 min saut\u00e9/stirring step. Cleanup: 10 min estimate. Make ahead and refrigerate up to one week (author); frozen portions may be thawed overnight in the refrigerator (author).",
+    "pending_review": "Confirm nuts and dairy allergens, Instant Pot capacity and portions.",
+    "ingredients": [
+      "2 tablespoons ghee ( or coconut oil or vegan butter)",
+      "10 carrots (peeled and grated (About 6 cups packed))",
+      "1 cup unsweetened almond milk",
+      "\u00be cup sugar",
+      "1 cup almond meal",
+      "2 teaspoons cardamom powder",
+      "2 tablespoons raisins",
+      "\u00bd teaspoon saffron",
+      "2 tablespoons sliced almonds or pistachios (for garnish)"
+    ],
+    "ingredient_source": "publisher structured data",
+    "gluten_screen": {
+      "status": "none explicitly listed",
+      "evidence": []
+    },
+    "nut_screen": {
+      "status": "listed ingredient",
+      "evidence": [
+        "1 cup unsweetened almond milk",
+        "1 cup almond meal",
+        "2 tablespoons sliced almonds or pistachios (for garnish)"
+      ]
+    },
+    "label_review": [
+      "2 tablespoons ghee ( or coconut oil or vegan butter)",
+      "2 teaspoons cardamom powder"
+    ],
+    "estimated_base_servings": 6,
+    "base_servings_basis": "publisher recipe yield; confirm whether servings or individual pieces",
+    "equipment_assumption": [
+      "Pressure cooker",
+      "Refrigerator"
+    ],
+    "equipment_review": "Confirm usable capacity, pot/pan size, number of batches and overlap with other dishes.",
+    "chef_make_ahead_proposal": null,
+    "make_ahead_basis": "Publisher-specific note retained in prep_summary; confirm actual storage plan"
+  },
+  {
+    "url": "https://ministryofcurry.com/badam-burfi/",
+    "occasion": "Diwali / Indian hosting",
+    "category": "desserts",
+    "title": "Quick & Easy Badam Burfi (30 Minutes)",
+    "rating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.81",
+      "ratingCount": "77",
+      "reviewCount": "9"
+    },
+    "yield_text": [
+      "10"
+    ],
+    "prep": "PT5M",
+    "cook": "PT5M",
+    "total": "PT30M",
+    "structured": true,
+    "status": "fetched",
+    "publisher": "Ministry of Curry",
+    "rating_display": "4.81/5 from 77 ratings",
+    "planning_ready": false,
+    "prep_evidence_status": "Source reviewed",
+    "prep_evidence_methods": "Tavily source-page extract",
+    "prep_summary": "Store airtight at room temperature for one to two days or refrigerated for up to two weeks.",
+    "source_prep_minutes": 5,
+    "source_cook_minutes": 5,
+    "shortlist": null,
+    "ingredients": [
+      "1 can condensed milk (14 oz can)",
+      "2 cups almond flour (blanched &amp; super fine)",
+      "2 tablespoons ghee",
+      "1 teaspoon ground cardamom",
+      "1 pinch saffron (lightly crushed)",
+      "\u00bd teaspoon ground cardamom",
+      "1 pinch saffron (lightly crushed)",
+      "1 tablespoon thinly sliced almonds"
+    ],
+    "ingredient_source": "publisher structured data",
+    "gluten_screen": {
+      "status": "none explicitly listed",
+      "evidence": []
+    },
+    "nut_screen": {
+      "status": "listed ingredient",
+      "evidence": [
+        "2 cups almond flour (blanched &amp; super fine)",
+        "1 tablespoon thinly sliced almonds"
+      ]
+    },
+    "label_review": [],
+    "estimated_base_servings": 10,
+    "base_servings_basis": "publisher recipe yield; confirm whether servings or individual pieces",
+    "equipment_assumption": [
+      "Stovetop",
+      "Refrigerator"
+    ],
+    "equipment_review": "Confirm usable capacity, pot/pan size, number of batches and overlap with other dishes.",
+    "chef_make_ahead_proposal": null,
+    "make_ahead_basis": "Publisher-specific note retained in prep_summary; confirm actual storage plan"
+  },
+  {
+    "url": "https://withwendyandshannon.com/blog/easy-tuna-croquettes/",
+    "occasion": "Christmas / Goan",
+    "category": "starters",
+    "status": "source link only \u2014 importer access restricted",
+    "title": "Easy Tuna Croquettes",
+    "structured": false,
+    "rating": null,
+    "publisher": "With Wendy and Shannon (formerly Platin\u2019 It With Wendy)",
+    "rating_display": "No rating verified",
+    "planning_ready": false,
+    "prep_evidence_status": "Needs details",
+    "prep_evidence_methods": "Tavily source-page extract",
+    "prep_summary": "No recipe-specific make-ahead or safe storage window confirmed from the extracted page. Review the original: https://withwendyandshannon.com/blog/easy-tuna-croquettes/",
+    "source_prep_minutes": null,
+    "source_cook_minutes": null,
+    "shortlist": null,
+    "ingredients": [
+      "2 cans Tuna, (130 grams each after draining the water)",
+      "1\u00bd -2 cups Fresh Bread Crumbs, (2 slices of fresh bread)",
+      "\u00bc cup Onion, finely diced",
+      "1 Green Chili, finely diced",
+      "2 Garlic Cloves, finely minced",
+      "\u00bc cup Tomato, finely diced",
+      "\u00bd tsp Dijon Mustard",
+      "\u00bc tbsp Lemon Juice",
+      "\u00bc cup Cilantro/Coriander, finely chopped",
+      "2 Eggs, large",
+      "Salt, to taste",
+      "Pepper, to taste",
+      "1 cup Bread Crumbs",
+      "2 Eggs",
+      "1 tbsp Oil",
+      "Oil as required for Shallow frying or Deep Frying"
+    ],
+    "ingredient_source": "Tavily excerpt of publisher page",
+    "gluten_screen": {
+      "status": "listed ingredient",
+      "evidence": [
+        "1\u00bd -2 cups Fresh Bread Crumbs, (2 slices of fresh bread)",
+        "1 cup Bread Crumbs"
+      ]
+    },
+    "nut_screen": {
+      "status": "none explicitly listed",
+      "evidence": []
+    },
+    "label_review": [
+      "1 tbsp Oil",
+      "Oil as required for Shallow frying or Deep Frying"
+    ],
+    "estimated_base_servings": 8,
+    "base_servings_basis": "chef estimate; 2 tuna cans, starter-size croquettes",
+    "equipment_assumption": [
+      "Stovetop",
+      "Refrigerator"
+    ],
+    "equipment_review": "Confirm usable capacity, pot/pan size, number of batches and overlap with other dishes.",
+    "chef_make_ahead_proposal": "Mix and shape up to 1 day ahead; refrigerate covered. Fry close to serving for crispness; avoid a long warm hold. Tuna and bread crumbs are in the listed ingredients.",
+    "make_ahead_basis": "Chef planning proposal, not publisher-confirmed storage window"
+  },
+  {
+    "url": "https://theaspiringhomecook.com/2019/10/goan-pork-vindaloo.html",
+    "occasion": "Christmas / Goan",
+    "category": "mains",
+    "status": "fetched",
+    "title": "Goan Pork Vindaloo",
+    "structured": true,
+    "rating": null,
+    "publisher": "The Aspiring Home Cook",
+    "rating_display": "No rating verified",
+    "planning_ready": false,
+    "prep_evidence_status": "Source reviewed",
+    "prep_evidence_methods": "Publisher recipe page",
+    "prep_summary": "Author says it can be made one or two days ahead; refrigerate promptly and reheat thoroughly.",
+    "source_prep_minutes": 20,
+    "source_cook_minutes": 60,
+    "shortlist": null,
+    "gluten_screen": {
+      "status": "none explicitly listed",
+      "evidence": []
+    },
+    "nut_screen": {
+      "status": "none explicitly listed",
+      "evidence": []
+    },
+    "label_review": [
+      "1-2 tbsp oil"
+    ],
+    "yield_text": [
+      "8",
+      "8 servings"
+    ],
+    "prep": "PT20M",
+    "cook": "PT1H",
+    "total": "PT1H20M",
+    "chef_prep_draft": "Cut pork and grind spice paste: 25 min active + 0 min waiting (estimate). Saute onions, paste and pork: 15 min active + 0 min waiting (estimate). Covered simmer; check tenderness: 10 min active + 60 min waiting (estimate). Cleanup: 10 min (estimate).",
+    "pending_review": "Confirm base servings, batch count, allergens and storage before scheduling.",
+    "ingredients": [
+      "1 kilo boneless pork (pick a slightly fatty cut)",
+      "1-2 tbsp oil",
+      "1 \u2013 1 1/2 onion, finely chopped",
+      "Salt, to taste",
+      "Vinegar, to taste",
+      "1 tsp sugar",
+      "12 Kashmiri chillies, deseeded",
+      "6 black peppercorns",
+      "5 cloves",
+      "3 green cardamom pods",
+      "2\u2033 cinnamon",
+      "6-8 large garlic cloves",
+      "1 1/2 inch ginger",
+      "Vinegar, to grind to a paste"
+    ],
+    "ingredient_source": "publisher structured data",
+    "estimated_base_servings": 8,
+    "base_servings_basis": "publisher recipe yield; confirm whether servings or individual pieces",
+    "equipment_assumption": [
+      "Stovetop",
+      "Blender",
+      "Refrigerator"
+    ],
+    "equipment_review": "Confirm usable capacity, pot/pan size, number of batches and overlap with other dishes.",
+    "chef_make_ahead_proposal": null,
+    "make_ahead_basis": "Publisher-specific note retained in prep_summary; confirm actual storage plan"
+  },
+  {
+    "url": "https://aromaticessence.co/chicken-cafreal/",
+    "occasion": "Christmas / Goan",
+    "category": "mains",
+    "status": "fetched",
+    "title": "Chicken Cafreal",
+    "structured": true,
+    "rating": {
+      "@type": "AggregateRating",
+      "ratingValue": "5",
+      "ratingCount": "9",
+      "reviewCount": "5"
+    },
+    "publisher": "Aromatic Essence",
+    "rating_display": "5/5 from 9 ratings",
+    "planning_ready": false,
+    "prep_evidence_status": "Source reviewed",
+    "prep_evidence_methods": "Publisher recipe page",
+    "prep_summary": "Author recommends marinating for 2\u20133 hours or overnight in the refrigerator; cook near serving or verify a safe cooked-ahead/reheat plan.",
+    "source_prep_minutes": 10,
+    "source_cook_minutes": 25,
+    "shortlist": null,
+    "gluten_screen": {
+      "status": "none explicitly listed",
+      "evidence": []
+    },
+    "nut_screen": {
+      "status": "none explicitly listed",
+      "evidence": []
+    },
+    "label_review": [
+      "1 tbsp lemon juice/vinegar",
+      "1/2 tsp turmeric powder",
+      "A small\u00a0ball of tamarind/Juice of half a lime",
+      "1 tbsp oil",
+      "1 tbsp lemon juice"
+    ],
+    "yield_text": [
+      "2",
+      "2 people"
+    ],
+    "prep": "PT10M",
+    "cook": "PT25M",
+    "total": "PT35M",
+    "chef_prep_draft": "Prepare chicken and blend cafreal paste: 25 min active + 0 min waiting (estimate). Marinate covered in refrigerator: 0 min active + 180 min waiting (estimate). Sear and finish chicken in sauce: 20 min active + 25 min waiting (estimate). Cleanup: 10 min (estimate).",
+    "pending_review": "Confirm base servings, batch count, allergens and storage before scheduling.",
+    "ingredients": [
+      "1.5 lbs chicken thighs",
+      "1/2 tbsp ginger garlic paste",
+      "1 tbsp lemon juice/vinegar",
+      "1 tsp salt",
+      "1 cup loosely packed cilantro/coriander leaves with \u00a0tender stalks, (about 30 stalks)",
+      "6-7  green chillies, (adjust as per desired heat)",
+      "6-7  large garlic cloves",
+      "1 & 1/2  inch  piece of ginger",
+      "4  cloves",
+      "8  peppercorns",
+      "1 inch of cinnamon",
+      "1 tsp cumin seeds",
+      "2 tsp\u00a0 poppy seeds",
+      "1/2 tsp turmeric powder",
+      "A small\u00a0ball of tamarind/Juice of half a lime",
+      "2 tbsp butter",
+      "1 tbsp oil",
+      "1 tbsp lemon juice"
+    ],
+    "ingredient_source": "publisher structured data",
+    "estimated_base_servings": 2,
+    "base_servings_basis": "publisher recipe yield; confirm whether servings or individual pieces",
+    "equipment_assumption": [
+      "Stovetop",
+      "Blender",
+      "Refrigerator"
+    ],
+    "equipment_review": "Confirm usable capacity, pot/pan size, number of batches and overlap with other dishes.",
+    "chef_make_ahead_proposal": null,
+    "make_ahead_basis": "Publisher-specific note retained in prep_summary; confirm actual storage plan"
+  },
+  {
+    "url": "https://withwendyandshannon.com/blog/the-ultimate-goan-caldin-curry/",
+    "occasion": "Christmas / Goan",
+    "category": "mains",
+    "status": "source link only \u2014 importer access restricted",
+    "title": "The Ultimate Goan Caldin Curry",
+    "structured": false,
+    "rating": null,
+    "publisher": "With Wendy and Shannon (formerly Platin\u2019 It With Wendy)",
+    "rating_display": "No rating verified",
+    "planning_ready": false,
+    "prep_evidence_status": "Needs details",
+    "prep_evidence_methods": "Tavily source-page extract",
+    "prep_summary": "No recipe-specific make-ahead or safe storage window confirmed from the extracted page. Review the original: https://withwendyandshannon.com/blog/the-ultimate-goan-caldin-curry/",
+    "source_prep_minutes": null,
+    "source_cook_minutes": null,
+    "shortlist": null,
+    "ingredients": [
+      "500 grams Pomfrets (cleaned, sliced)",
+      "1 tsp Salt",
+      "\u00bd tsp Turmeric Powder",
+      "1 tbsp (15 grams) Tamarind",
+      "\u00bc cup Hot Water",
+      "1 tbsp Coriander Seeds",
+      "1 tsp Cumin Seeds",
+      "\u00bd tsp (10) Cloves",
+      "\u00bd tsp (25-30) Peppercorns",
+      "1\u00bd tsp Turmeric Powder",
+      "6 Garlic Cloves",
+      "1\u201d Ginger",
+      "1 large Green Chili",
+      "1 cup (100 grams) Coconut, fresh grated",
+      "2\u00bd cups Water (1cup for first grind, 1 cup for the 2nd grind, \u00bd to swirl in the jar)",
+      "3-4 tbsp Oil",
+      "\u00bd (1 cup) Medium Red Onion, finely diced",
+      "\u00bd (\u00bd cup) Medium Tomato, skinned and finely chopped",
+      "1 cup Water",
+      "2 tbsp Vinegar",
+      "Tamarind Extract (from above)",
+      "2 tsp Sugar",
+      "1\u00bd tsp Salt",
+      "1 Green Chili",
+      "1 cup Coconut Cream"
+    ],
+    "ingredient_source": "Tavily excerpt of publisher page",
+    "gluten_screen": {
+      "status": "none explicitly listed",
+      "evidence": []
+    },
+    "nut_screen": {
+      "status": "none explicitly listed",
+      "evidence": []
+    },
+    "label_review": [
+      "\u00bd tsp Turmeric Powder",
+      "1\u00bd tsp Turmeric Powder",
+      "3-4 tbsp Oil",
+      "Tamarind Extract (from above)"
+    ],
+    "estimated_base_servings": 4,
+    "base_servings_basis": "chef estimate; 500 g fish",
+    "equipment_assumption": [
+      "Stovetop",
+      "Blender",
+      "Refrigerator"
+    ],
+    "equipment_review": "Confirm usable capacity, pot/pan size, number of batches and overlap with other dishes.",
+    "chef_make_ahead_proposal": "Make the spice/coconut curry base 1 day ahead and refrigerate. Add fish and finish cooking near serving to avoid overcooked fish; verify full cooking and seafood storage.",
+    "make_ahead_basis": "Chef planning proposal, not publisher-confirmed storage window"
+  },
+  {
+    "url": "https://withwendyandshannon.com/blog/easy-traditional-goan-sannas-recipe/",
+    "occasion": "Christmas / Goan",
+    "category": "sides",
+    "status": "source link only \u2014 importer access restricted",
+    "title": "Easy Traditional Goan Sannas",
+    "structured": false,
+    "rating": null,
+    "publisher": "With Wendy and Shannon (formerly Platin\u2019 It With Wendy)",
+    "rating_display": "No rating verified",
+    "planning_ready": false,
+    "prep_evidence_status": "Needs details",
+    "prep_evidence_methods": "Tavily source-page extract",
+    "prep_summary": "No recipe-specific make-ahead or safe storage window confirmed from the extracted page. Review the original: https://withwendyandshannon.com/blog/easy-traditional-goan-sannas-recipe/",
+    "source_prep_minutes": null,
+    "source_cook_minutes": null,
+    "shortlist": null,
+    "ingredients": [
+      "2 cups (430 grams) Idli Rice",
+      "3 cups (250 grams) Fresh Coconut, grated",
+      "2\u00a0 tbsp Sugar",
+      "1\u00bd cup Toddy (homemade)",
+      "1/2 \u2013 3/4 cup Coconut Water, room temperature (add as required to get the desired consistency)",
+      "1 tsp salt ( to be added after fermenting)",
+      "\u215b cup vegetable oil",
+      "3/4 cup Fresh Coconut, grated",
+      "3 tbsp Palm Jaggery, grated",
+      "3 tbsp Cane Jaggery, grated"
+    ],
+    "ingredient_source": "Tavily excerpt of publisher page",
+    "gluten_screen": {
+      "status": "none explicitly listed",
+      "evidence": []
+    },
+    "nut_screen": {
+      "status": "none explicitly listed",
+      "evidence": []
+    },
+    "label_review": [
+      "\u215b cup vegetable oil"
+    ],
+    "estimated_base_servings": 12,
+    "base_servings_basis": "chef estimate; count of individual steamed cakes varies by mold",
+    "equipment_assumption": [
+      "Stovetop",
+      "Blender",
+      "Refrigerator"
+    ],
+    "equipment_review": "Confirm usable capacity, pot/pan size, number of batches and overlap with other dishes.",
+    "chef_make_ahead_proposal": "Start rice preparation and fermentation according to the source well before the party; fermentation varies with temperature. Steam 1 day ahead if needed, cool/refrigerate promptly, and re-steam near serving; test texture first.",
+    "make_ahead_basis": "Chef planning proposal, not publisher-confirmed storage window"
+  },
+  {
+    "url": "https://withwendyandshannon.com/blog/the-best-doce/",
+    "occasion": "Christmas / Goan",
+    "category": "desserts",
+    "status": "source link only \u2014 importer access restricted",
+    "title": "The Best Doce",
+    "structured": false,
+    "rating": null,
+    "publisher": "With Wendy and Shannon (formerly Platin\u2019 It With Wendy)",
+    "rating_display": "No rating verified",
+    "planning_ready": false,
+    "prep_evidence_status": "Needs details",
+    "prep_evidence_methods": "Tavily source-page extract",
+    "prep_summary": "No recipe-specific make-ahead or safe storage window confirmed from the extracted page. Review the original: https://withwendyandshannon.com/blog/the-best-doce/",
+    "source_prep_minutes": null,
+    "source_cook_minutes": null,
+    "shortlist": null,
+    "ingredients": [
+      "1\u00bd cups (300 grams) Chana Dal / Bengal Gram / Split Chickpeas",
+      "3 cups (300 grams) Fresh Grated Coconut",
+      "3 cups (600 grams) White Granulated Sugar",
+      "1 tbsp (15 grams) Pure Ghee, clarified butter",
+      "1 tsp (10-12 pods) Cardamom Powder, freshly ground",
+      "1 tsp Salt"
+    ],
+    "ingredient_source": "Tavily excerpt of publisher page",
+    "gluten_screen": {
+      "status": "none explicitly listed",
+      "evidence": []
+    },
+    "nut_screen": {
+      "status": "none explicitly listed",
+      "evidence": []
+    },
+    "label_review": [
+      "1 tsp (10-12 pods) Cardamom Powder, freshly ground"
+    ],
+    "estimated_base_servings": 24,
+    "base_servings_basis": "chef estimate; small sweet pieces, cut size varies",
+    "equipment_assumption": [
+      "Stovetop",
+      "Refrigerator"
+    ],
+    "equipment_review": "Confirm usable capacity, pot/pan size, number of batches and overlap with other dishes.",
+    "chef_make_ahead_proposal": "Cook, shape and cool sweets 1 day ahead. Store covered according to ingredients and room conditions; choose refrigeration if uncertain. Large-batch stirring is hands-on and may exceed the current time estimate.",
+    "make_ahead_basis": "Chef planning proposal, not publisher-confirmed storage window"
+  },
+  {
+    "url": "https://www.ruchikrandhap.com/christmas-fruit-cake-without-alcohol/",
+    "occasion": "Christmas / Goan",
+    "category": "desserts",
+    "status": "fetched",
+    "title": "Easy Christmas Fruit Cake Without Alcohol",
+    "structured": true,
+    "rating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.92",
+      "ratingCount": "12"
+    },
+    "publisher": "Ruchik Randhap",
+    "rating_display": "4.92/5 from 12 ratings",
+    "planning_ready": false,
+    "prep_evidence_status": "Source reviewed",
+    "prep_evidence_methods": "Publisher recipe page",
+    "prep_summary": "Author specifies 6\u20138 hours or overnight fruit soak; bake 2\u00bd\u20133 hours and cool fully. Author says nonalcoholic cake has a short room-temperature shelf life; verify storage plan.",
+    "source_prep_minutes": 30,
+    "source_cook_minutes": 180,
+    "shortlist": null,
+    "gluten_screen": {
+      "status": "listed ingredient",
+      "evidence": [
+        "225 grams all purpose flour"
+      ]
+    },
+    "nut_screen": {
+      "status": "listed ingredient",
+      "evidence": [
+        "25 grams almonds, chopped",
+        "25 grams walnuts, chopped"
+      ]
+    },
+    "label_review": [
+      "1/2 teaspoon mixed spice",
+      "3/4 cup  (175ml) fresh orange juice",
+      "225 grams all purpose flour",
+      "1 teaspoon baking powder",
+      "1/2 teaspoon mixed spice"
+    ],
+    "yield_text": null,
+    "prep": "PT30M",
+    "cook": "PT180M",
+    "total": "PT210M",
+    "chef_prep_draft": "Chop and soak dried fruit in orange juice: 30 min active + 480 min waiting (estimate). Mix batter and prepare tin: 30 min active + 0 min waiting (estimate). Bake and cool completely: 10 min active + 240 min waiting (estimate). Cleanup: 15 min (estimate).",
+    "pending_review": "Confirm base servings, batch count, allergens and storage before scheduling.",
+    "ingredients": [
+      "125 grams seedless black raisins",
+      "125 grams golden raisins",
+      "125 grams seedless dates",
+      "125 grams candied/glace cherries (rinsed) * see notes",
+      "1/2 teaspoon mixed spice",
+      "3/4 cup  (175ml) fresh orange juice",
+      "225 grams unsalted butter, at room temperature",
+      "200 grams caster sugar, you may use soft brown/muscovado too",
+      "4  eggs, at room temperature",
+      "zest of 1 orange",
+      "zest of 1 lemon",
+      "2 tablespoons treacle/black caramel syrup",
+      "225 grams all purpose flour",
+      "1/2 teaspoon salt",
+      "1 teaspoon baking powder",
+      "1/2 teaspoon mixed spice",
+      "25 grams almonds, chopped",
+      "25 grams walnuts, chopped"
+    ],
+    "ingredient_source": "publisher structured data",
+    "estimated_base_servings": 12,
+    "base_servings_basis": "chef estimate; 8-inch cake cut into 12 slices",
+    "equipment_assumption": [
+      "Oven",
+      "Refrigerator"
+    ],
+    "equipment_review": "Confirm usable capacity, pot/pan size, number of batches and overlap with other dishes.",
+    "chef_make_ahead_proposal": null,
+    "make_ahead_basis": "Publisher-specific note retained in prep_summary; confirm actual storage plan"
+  },
+  {
+    "url": "https://withwendyandshannon.com/blog/super-easy-snowball-cookies/",
+    "occasion": "Christmas / Goan",
+    "category": "desserts",
+    "status": "source link only \u2014 importer access restricted",
+    "title": "Super Easy Snowball Cookies",
+    "structured": false,
+    "rating": null,
+    "publisher": "With Wendy and Shannon (formerly Platin\u2019 It With Wendy)",
+    "rating_display": "No rating verified",
+    "planning_ready": false,
+    "prep_evidence_status": "Needs details",
+    "prep_evidence_methods": "Tavily source-page extract",
+    "prep_summary": "No recipe-specific make-ahead or safe storage window confirmed from the extracted page. Review the original: https://withwendyandshannon.com/blog/super-easy-snowball-cookies/",
+    "source_prep_minutes": null,
+    "source_cook_minutes": null,
+    "shortlist": null,
+    "ingredients": [
+      "\u00bd cup (113 grams/1 stick) Unsalted Butter, room temperature",
+      "2 \u00bd tbsp (15 grams) Confectioners\u2019 Sugar (powdered sugar, icing sugar)",
+      "1 tsp Pure Vanilla Extract",
+      "1 cup (140 grams) All-Purpose Flour",
+      "\u215b tsp Salt",
+      "\u00bd cup (56 grams) Pecans, finely chopped (very lightly toasted for 7-8 minutes at 350F/180C)",
+      "\u00bd \u2013 1 cup Confectioners\u2019 Sugar (powdered sugar, icing sugar)"
+    ],
+    "ingredient_source": "Tavily excerpt of publisher page",
+    "gluten_screen": {
+      "status": "listed ingredient",
+      "evidence": [
+        "1 cup (140 grams) All-Purpose Flour"
+      ]
+    },
+    "nut_screen": {
+      "status": "listed ingredient",
+      "evidence": [
+        "\u00bd cup (56 grams) Pecans, finely chopped (very lightly toasted for 7-8 minutes at 350F/180C)"
+      ]
+    },
+    "label_review": [
+      "1 tsp Pure Vanilla Extract"
+    ],
+    "estimated_base_servings": 18,
+    "base_servings_basis": "chef estimate; cookie size varies",
+    "equipment_assumption": [
+      "Oven"
+    ],
+    "equipment_review": "Confirm usable capacity, pot/pan size, number of batches and overlap with other dishes.",
+    "chef_make_ahead_proposal": "Bake and cool 1-2 days ahead; store airtight. Roll/coating can be refreshed before serving if needed. Recipe lists wheat flour and pecans.",
+    "make_ahead_basis": "Chef planning proposal, not publisher-confirmed storage window"
+  },
+  {
+    "url": "https://www.wellplated.com/brie-en-croute/",
+    "occasion": "Thanksgiving / US Christmas",
+    "category": "starters",
+    "title": "Baked Brie En Croute",
+    "rating": {
+      "@type": "AggregateRating",
+      "ratingValue": "5",
+      "ratingCount": "7",
+      "reviewCount": "3"
+    },
+    "yield_text": [
+      "8",
+      "8 to 10 servings"
+    ],
+    "prep": "PT15M",
+    "cook": "PT45M",
+    "total": "PT75M",
+    "structured": true,
+    "status": "fetched",
+    "publisher": "Well Plated by Erin",
+    "rating_display": "5/5 from 7 ratings",
+    "planning_ready": false,
+    "prep_evidence_status": "Source reviewed",
+    "prep_evidence_methods": "Tavily source-page extract",
+    "prep_summary": "Assemble the brie and pastry ahead without egg wash, wrap and freeze. The source says preparation up to two weeks ahead; review freezing and final baking details on the original page.",
+    "source_prep_minutes": 15,
+    "source_cook_minutes": 45,
+    "shortlist": null,
+    "ingredients": [
+      "1 tablespoon unsalted butter",
+      "2 medium Gala apples (peeled and cut into 1/2-inch dice)",
+      "1 tablespoon raw honey (plus additional for drizzling)",
+      "1/4 teaspoon kosher salt",
+      "Pinch ground sage",
+      "1 (8-ounce) brie cheese round (cold from the refrigerator)",
+      "1 (8-ounce) can crescent roll dough",
+      "1 large egg (beaten with 2 teaspoons water to create an egg wash)",
+      "1/3 cup roughly chopped pecans",
+      "Crackers or baguette slices, toasted (for serving (or just eat it with a fork))"
+    ],
+    "ingredient_source": "publisher structured data",
+    "gluten_screen": {
+      "status": "listed ingredient",
+      "evidence": [
+        "1 (8-ounce) can crescent roll dough"
+      ]
+    },
+    "nut_screen": {
+      "status": "listed ingredient",
+      "evidence": [
+        "1/3 cup roughly chopped pecans"
+      ]
+    },
+    "label_review": [
+      "Crackers or baguette slices, toasted (for serving (or just eat it with a fork))"
+    ],
+    "estimated_base_servings": 8,
+    "base_servings_basis": "publisher recipe yield; confirm whether servings or individual pieces",
+    "equipment_assumption": [
+      "Oven",
+      "Refrigerator"
+    ],
+    "equipment_review": "Confirm usable capacity, pot/pan size, number of batches and overlap with other dishes.",
+    "chef_make_ahead_proposal": null,
+    "make_ahead_basis": "Publisher-specific note retained in prep_summary; confirm actual storage plan"
+  },
+  {
+    "url": "https://www.wellplated.com/stuffed-dates/",
+    "occasion": "Thanksgiving / US Christmas",
+    "category": "starters",
+    "title": "Stuffed Dates (6 Ways!)",
+    "rating": {
+      "@type": "AggregateRating",
+      "ratingValue": "5",
+      "ratingCount": "3",
+      "reviewCount": "3"
+    },
+    "yield_text": [
+      "12",
+      "12 dates"
+    ],
+    "prep": "PT5M",
+    "cook": null,
+    "total": "PT5M",
+    "structured": true,
+    "status": "fetched",
+    "publisher": "Well Plated by Erin",
+    "rating_display": "5/5 from 3 ratings",
+    "planning_ready": false,
+    "prep_evidence_status": "Source reviewed",
+    "prep_evidence_methods": "Tavily source-page extract",
+    "prep_summary": "The author says stuffed dates can be prepared up to one day ahead for a party; refrigerate. Longer snack storage is described separately, not assumed for the party.",
+    "source_prep_minutes": 5,
+    "source_cook_minutes": null,
+    "shortlist": null,
+    "ingredients": [
+      "12 soft Medjool dates (pitted)",
+      "Filling of choice (see below)",
+      "4 ounces goat cheese (softed (try Trader Joe's Caramelized Onion))",
+      "\u00bc cup chopped pistachios",
+      "3 tablespoons Hot Honey (or to taste)",
+      "4 ounces brie cheese (cut into 12 small pieces (about 1 teaspoon each))",
+      "12 pecan halves",
+      "Chopped fresh rosemary",
+      "4 ounces ricotta cheese",
+      "\u215b teaspoon kosher salt",
+      "\u00bd teaspoon lemon zest (optional)",
+      "12 oil-packed sun-dried tomato halves",
+      "12 fresh basil leaves",
+      "4 tablespoons creamy peanut butter",
+      "\u00bc cup roasted salted peanuts (finely chopped, divided)",
+      "\u00bd cup dark chocolate chips (melted)",
+      "6 tablespoons creamy almond butter",
+      "12 fresh raspberries",
+      "4 tablespoons creamy peanut butter",
+      "12 thin banana slices",
+      "\u00bc cup dark chocolate chips (melted)"
+    ],
+    "ingredient_source": "publisher structured data",
+    "gluten_screen": {
+      "status": "none explicitly listed",
+      "evidence": []
+    },
+    "nut_screen": {
+      "status": "listed ingredient",
+      "evidence": [
+        "\u00bc cup chopped pistachios",
+        "12 pecan halves",
+        "4 tablespoons creamy peanut butter",
+        "\u00bc cup roasted salted peanuts (finely chopped, divided)",
+        "6 tablespoons creamy almond butter",
+        "4 tablespoons creamy peanut butter"
+      ]
+    },
+    "label_review": [
+      "12 oil-packed sun-dried tomato halves",
+      "\u00bd cup dark chocolate chips (melted)",
+      "\u00bc cup dark chocolate chips (melted)"
+    ],
+    "estimated_base_servings": 12,
+    "base_servings_basis": "publisher count of 12 dates; assumes one date per guest",
+    "equipment_assumption": [
+      "Refrigerator"
+    ],
+    "equipment_review": "Confirm usable capacity, pot/pan size, number of batches and overlap with other dishes.",
+    "chef_make_ahead_proposal": null,
+    "make_ahead_basis": "Publisher-specific note retained in prep_summary; confirm actual storage plan"
+  },
+  {
+    "url": "https://www.wellplated.com/how-to-cook-a-turkey/",
+    "occasion": "Thanksgiving / US Christmas",
+    "category": "mains",
+    "title": "Thanksgiving Turkey",
+    "rating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.98",
+      "ratingCount": "302",
+      "reviewCount": "9"
+    },
+    "yield_text": [
+      "10",
+      "10 to 12 servings"
+    ],
+    "prep": "PT20M",
+    "cook": "PT135M",
+    "total": "PT210M",
+    "structured": true,
+    "status": "fetched",
+    "publisher": "Well Plated by Erin",
+    "rating_display": "4.98/5 from 302 ratings",
+    "planning_ready": false,
+    "prep_evidence_status": "Needs details",
+    "prep_evidence_methods": "Tavily source-page extract",
+    "prep_summary": "No recipe-specific make-ahead or safe storage window confirmed from the extracted page. Review the original: https://www.wellplated.com/how-to-cook-a-turkey/",
+    "source_prep_minutes": 20,
+    "source_cook_minutes": 135,
+    "shortlist": null,
+    "ingredients": [
+      "1 14- to 16-pound turkey (THAWED (see notes for other bird sizes, thawing, and be sure to plan ahead!!))",
+      "1 brine",
+      "3 medium carrots (scrubbed)",
+      "2 red apples",
+      "1 large yellow onion",
+      "1 lemon",
+      "1 head garlic",
+      "8 sprigs fresh thyme",
+      "4 tablespoons (1/2 stick) unsalted butter (melted)",
+      "Freshly ground black pepper",
+      "1 bottle of dry white wine (such as Sauvignon Blanc or Pinot Grigio)"
+    ],
+    "ingredient_source": "publisher structured data",
+    "gluten_screen": {
+      "status": "none explicitly listed",
+      "evidence": []
+    },
+    "nut_screen": {
+      "status": "none explicitly listed",
+      "evidence": []
+    },
+    "label_review": [],
+    "estimated_base_servings": 10,
+    "base_servings_basis": "publisher recipe yield; confirm whether servings or individual pieces",
+    "equipment_assumption": [
+      "Oven",
+      "Refrigerator"
+    ],
+    "equipment_review": "Confirm usable capacity, pot/pan size, number of batches and overlap with other dishes.",
+    "chef_make_ahead_proposal": "For a 14-16 lb frozen bird, plan refrigerator thawing 3-4 days ahead. Season/brine per source before roasting; roast and rest early enough to protect the final hour. A whole turkey may need a simplified or bought alternative if oven capacity or schedule is tight.",
+    "make_ahead_basis": "Chef planning proposal, not publisher-confirmed storage window"
+  },
+  {
+    "url": "https://www.wellplated.com/garlic-mashed-potatoes/",
+    "occasion": "Thanksgiving / US Christmas",
+    "category": "sides",
+    "title": "Garlic Mashed Potatoes Recipe",
+    "rating": {
+      "@type": "AggregateRating",
+      "ratingValue": "5",
+      "ratingCount": "6",
+      "reviewCount": "1"
+    },
+    "yield_text": [
+      "6",
+      "6 people"
+    ],
+    "prep": "PT10M",
+    "cook": "PT25M",
+    "total": "PT35M",
+    "structured": true,
+    "status": "fetched",
+    "publisher": "Well Plated by Erin",
+    "rating_display": "5/5 from 6 ratings",
+    "planning_ready": false,
+    "prep_evidence_status": "Source reviewed",
+    "prep_evidence_methods": "publisher page",
+    "prep_summary": "Make the potatoes one day ahead. The publisher describes gentle reheating over simmering water with warm milk or broth as needed. Source: https://www.wellplated.com/garlic-mashed-potatoes/",
+    "source_prep_minutes": 10,
+    "source_cook_minutes": 25,
+    "shortlist": null,
+    "ingredients": [
+      "3 pounds russet potatoes (peeled)",
+      "1 1/2 tablespoons kosher salt (plus additional to taste)",
+      "6 cloves garlic (smashed and peeled)",
+      "1 cup milk ((I used 1%))",
+      "1/4 cup sour cream (or full-fat plain Greek yogurt)",
+      "3 tablespoons unsalted butter (or olive oil)",
+      "chopped fresh herbs (such as thyme or chives (optional, for serving))"
+    ],
+    "ingredient_source": "publisher structured data",
+    "gluten_screen": {
+      "status": "none explicitly listed",
+      "evidence": []
+    },
+    "nut_screen": {
+      "status": "none explicitly listed",
+      "evidence": []
+    },
+    "label_review": [
+      "3 tablespoons unsalted butter (or olive oil)"
+    ],
+    "estimated_base_servings": 6,
+    "base_servings_basis": "publisher recipe yield; confirm whether servings or individual pieces",
+    "equipment_assumption": [
+      "Stovetop",
+      "Refrigerator"
+    ],
+    "equipment_review": "Confirm usable capacity, pot/pan size, number of batches and overlap with other dishes.",
+    "chef_make_ahead_proposal": null,
+    "make_ahead_basis": "Publisher-specific note retained in prep_summary; confirm actual storage plan"
+  },
+  {
+    "url": "https://www.wellplated.com/healthy-sweet-potato-casserole/",
+    "occasion": "Thanksgiving / US Christmas",
+    "category": "sides",
+    "title": "Healthy Sweet Potato Casserole",
+    "rating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.95",
+      "ratingCount": "35",
+      "reviewCount": "10"
+    },
+    "yield_text": [
+      "10",
+      "10 servings (1 9x13-inch casserole)"
+    ],
+    "prep": "PT15M",
+    "cook": "PT80M",
+    "total": "PT90M",
+    "structured": true,
+    "status": "fetched",
+    "publisher": "Well Plated by Erin",
+    "rating_display": "4.95/5 from 35 ratings",
+    "planning_ready": false,
+    "prep_evidence_status": "Source reviewed",
+    "prep_evidence_methods": "Tavily source-page extract",
+    "prep_summary": "Prepare through the recipe\u2019s Step 5 one day ahead and refrigerate covered. Let it come to room temperature before baking, as directed by the source.",
+    "source_prep_minutes": 15,
+    "source_cook_minutes": 80,
+    "shortlist": null,
+    "ingredients": [
+      "4 \u00bd pounds sweet potatoes (scrubbed (about 4\u20135 very large sweet potatoes))",
+      "1 cup unsweetened vanilla almond milk",
+      "2 vanilla beans (or 2 tablespoons vanilla bean paste*)",
+      "2 tablespoons virgin coconut oil (melted)",
+      "\u00be teaspoon ground cinnamon",
+      "\u00be teaspoon kosher salt",
+      "\u00bd teaspoon freshly grated nutmeg",
+      "\u00bc teaspoon white pepper",
+      "1 \u2153 cups old-fashioned rolled oats",
+      "1 cup roughly chopped pecans (untoasted)",
+      "\u00bd cup almond meal**",
+      "\u00bc teaspoon ground cinnamon",
+      "\u00bc teaspoon kosher salt",
+      "5 tablespoons melted coconut oil",
+      "1 tablespoon pure maple syrup"
+    ],
+    "ingredient_source": "publisher structured data",
+    "gluten_screen": {
+      "status": "none explicitly listed",
+      "evidence": []
+    },
+    "nut_screen": {
+      "status": "listed ingredient",
+      "evidence": [
+        "1 cup unsweetened vanilla almond milk",
+        "1 cup roughly chopped pecans (untoasted)",
+        "\u00bd cup almond meal**"
+      ]
+    },
+    "label_review": [
+      "2 tablespoons virgin coconut oil (melted)",
+      "1 \u2153 cups old-fashioned rolled oats",
+      "5 tablespoons melted coconut oil"
+    ],
+    "estimated_base_servings": 10,
+    "base_servings_basis": "publisher recipe yield; confirm whether servings or individual pieces",
+    "equipment_assumption": [
+      "Oven",
+      "Stovetop",
+      "Refrigerator"
+    ],
+    "equipment_review": "Confirm usable capacity, pot/pan size, number of batches and overlap with other dishes.",
+    "chef_make_ahead_proposal": null,
+    "make_ahead_basis": "Publisher-specific note retained in prep_summary; confirm actual storage plan"
+  },
+  {
+    "url": "https://www.wellplated.com/cornbread-sausage-stuffing/",
+    "occasion": "Thanksgiving / US Christmas",
+    "category": "sides",
+    "title": "Cornbread Stuffing Recipe",
+    "rating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.99",
+      "ratingCount": "51",
+      "reviewCount": "8"
+    },
+    "yield_text": [
+      "10",
+      "10 servings"
+    ],
+    "prep": "PT60M",
+    "cook": "PT40M",
+    "total": "PT100M",
+    "structured": true,
+    "status": "fetched",
+    "publisher": "Well Plated by Erin",
+    "rating_display": "4.99/5 from 51 ratings",
+    "planning_ready": false,
+    "prep_evidence_status": "Source reviewed",
+    "prep_evidence_methods": "Tavily source-page extract",
+    "prep_summary": "Make cornbread up to two days ahead; toast cubes up to one day ahead, keeping them at room temperature. The source also describes preparing mix-ins ahead; verify the exact window before scheduling them.",
+    "source_prep_minutes": 60,
+    "source_cook_minutes": 40,
+    "shortlist": null,
+    "ingredients": [
+      "6 tablespoons unsalted butter",
+      "1 cup nonfat milk (at room temperature)",
+      "1 tablespoons white vinegar or lemon juice",
+      "1 cup yellow cornmeal ((I use medium grind))",
+      "1 cup white whole wheat flour (or all-purpose flour)",
+      "2 teaspoons baking powder",
+      "1/2 teaspoon baking soda",
+      "1/2 teaspoon kosher salt",
+      "1/4 cup honey",
+      "2 large eggs (at room temperature)",
+      "2 1/2 cups reduced sodium chicken broth",
+      "2 large eggs",
+      "1 pound sweet Italian sausage (I use chicken or turkey sausage)",
+      "2 tablespoons unsalted butter",
+      "1 medium yellow onion (finely chopped)",
+      "4 stalks celery (cut in small dice)",
+      "1/2 teaspoon kosher salt",
+      "1/4 teaspoon ground black pepper",
+      "3 garlic cloves (minced (about 1 tablespoon))",
+      "1 Granny smith apple (peeled and 1/4- to 1/2-inch diced)",
+      "1/2 cup dried cranberries",
+      "2 tablespoons chopped fresh sage or 2 teaspoons rubbed sage",
+      "1 tablespoon fresh thyme leaves or 1 teaspoon dried thyme",
+      "1 tablespoon parsley flakes or 1/4 cup finely chopped flat-leaf parsley"
+    ],
+    "ingredient_source": "publisher structured data",
+    "gluten_screen": {
+      "status": "listed ingredient",
+      "evidence": [
+        "1 cup white whole wheat flour (or all-purpose flour)"
+      ]
+    },
+    "nut_screen": {
+      "status": "none explicitly listed",
+      "evidence": []
+    },
+    "label_review": [
+      "2 teaspoons baking powder",
+      "2 1/2 cups reduced sodium chicken broth"
+    ],
+    "estimated_base_servings": 10,
+    "base_servings_basis": "publisher recipe yield; confirm whether servings or individual pieces",
+    "equipment_assumption": [
+      "Oven",
+      "Stovetop"
+    ],
+    "equipment_review": "Confirm usable capacity, pot/pan size, number of batches and overlap with other dishes.",
+    "chef_make_ahead_proposal": null,
+    "make_ahead_basis": "Publisher-specific note retained in prep_summary; confirm actual storage plan"
+  },
+  {
+    "url": "https://www.wellplated.com/homemade-cranberry-sauce/",
+    "occasion": "Thanksgiving / US Christmas",
+    "category": "sides",
+    "title": "Cranberry Orange Sauce",
+    "rating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.96",
+      "ratingCount": "42",
+      "reviewCount": "9"
+    },
+    "yield_text": [
+      "2",
+      "2 cups, approx."
+    ],
+    "prep": "PT5M",
+    "cook": "PT15M",
+    "total": "PT20M",
+    "structured": true,
+    "status": "fetched",
+    "publisher": "Well Plated by Erin",
+    "rating_display": "4.96/5 from 42 ratings",
+    "planning_ready": false,
+    "prep_evidence_status": "Needs details",
+    "prep_evidence_methods": "Tavily source-page extract",
+    "prep_summary": "No recipe-specific make-ahead or safe storage window confirmed from the extracted page. Review the original: https://www.wellplated.com/homemade-cranberry-sauce/",
+    "source_prep_minutes": 5,
+    "source_cook_minutes": 15,
+    "shortlist": null,
+    "ingredients": [
+      "12 ounces fresh cranberries (thawed if frozen)",
+      "Zest of 1 orange",
+      "\u00be cup fresh orange juice",
+      "\u00bc cup honey (plus 2 tablespoons (plus additional 1 to 2 tablespoons to taste))",
+      "\u00bc cup water",
+      "\u00bc teaspoon ground cinnamon",
+      "\u215b teaspoon cloves",
+      "\u215b teaspoon kosher salt"
+    ],
+    "ingredient_source": "publisher structured data",
+    "gluten_screen": {
+      "status": "none explicitly listed",
+      "evidence": []
+    },
+    "nut_screen": {
+      "status": "none explicitly listed",
+      "evidence": []
+    },
+    "label_review": [],
+    "estimated_base_servings": 16,
+    "base_servings_basis": "chef estimate; approximately 2 cups at 2 tablespoons per condiment portion",
+    "equipment_assumption": [
+      "Stovetop",
+      "Refrigerator"
+    ],
+    "equipment_review": "Confirm usable capacity, pot/pan size, number of batches and overlap with other dishes.",
+    "chef_make_ahead_proposal": "Cook 1-2 days ahead; cool promptly and refrigerate covered. Serve chilled or bring to serving temperature as preferred.",
+    "make_ahead_basis": "Chef planning proposal, not publisher-confirmed storage window"
+  },
+  {
+    "url": "https://www.wellplated.com/healthy-green-bean-casserole/",
+    "occasion": "Thanksgiving / US Christmas",
+    "category": "sides",
+    "title": "Healthy Green Bean Casserole",
+    "rating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.92",
+      "ratingCount": "45",
+      "reviewCount": "7"
+    },
+    "yield_text": [
+      "10",
+      "10 servings"
+    ],
+    "prep": "PT15M",
+    "cook": "PT35M",
+    "total": "PT55M",
+    "structured": true,
+    "status": "fetched",
+    "publisher": "Well Plated by Erin",
+    "rating_display": "4.92/5 from 45 ratings",
+    "planning_ready": false,
+    "prep_evidence_status": "Needs details",
+    "prep_evidence_methods": "Tavily source-page extract",
+    "prep_summary": "No recipe-specific make-ahead or safe storage window confirmed from the extracted page. Review the original: https://www.wellplated.com/healthy-green-bean-casserole/",
+    "source_prep_minutes": 15,
+    "source_cook_minutes": 35,
+    "shortlist": null,
+    "ingredients": [
+      "1/2 cup whole wheat panko breadcrumbs",
+      "1/4 cup freshly grated Parmesan cheese",
+      "2 tablespoons chopped fresh parsley (plus additional for garnish)",
+      "4 tablespoons extra-virgin olive oil (divided)",
+      "2 1/2 pounds green beans (trimmed)",
+      "1 medium onion (very thinly sliced)",
+      "8 ounces baby bella (cremini) mushrooms (sliced (do not use plain white mushrooms, as they do not have much flavor))",
+      "3 tablespoons all-purpose flour",
+      "2 cups 2% milk",
+      "1 teaspoon kosher salt",
+      "1/2 teaspoon ground black pepper",
+      "1/8 teaspoon ground nutmeg",
+      "7 ounces 2% Greek yogurt"
+    ],
+    "ingredient_source": "publisher structured data",
+    "gluten_screen": {
+      "status": "listed ingredient",
+      "evidence": [
+        "1/2 cup whole wheat panko breadcrumbs",
+        "3 tablespoons all-purpose flour"
+      ]
+    },
+    "nut_screen": {
+      "status": "none explicitly listed",
+      "evidence": []
+    },
+    "label_review": [
+      "4 tablespoons extra-virgin olive oil (divided)"
+    ],
+    "estimated_base_servings": 10,
+    "base_servings_basis": "publisher recipe yield; confirm whether servings or individual pieces",
+    "equipment_assumption": [
+      "Oven",
+      "Stovetop",
+      "Refrigerator"
+    ],
+    "equipment_review": "Confirm usable capacity, pot/pan size, number of batches and overlap with other dishes.",
+    "chef_make_ahead_proposal": "Trim/blanch beans and prepare sauce 1 day ahead; refrigerate separately. Assemble/bake on party day and keep crumb topping separate until near baking for texture.",
+    "make_ahead_basis": "Chef planning proposal, not publisher-confirmed storage window"
+  },
+  {
+    "url": "https://www.wellplated.com/caramelized-brussels-sprouts/",
+    "occasion": "Thanksgiving / US Christmas",
+    "category": "sides",
+    "title": "Caramelized Brussels Sprouts",
+    "rating": {
+      "@type": "AggregateRating",
+      "ratingValue": "5",
+      "ratingCount": "4",
+      "reviewCount": "4"
+    },
+    "yield_text": [
+      "4",
+      "4 servings"
+    ],
+    "prep": "PT10M",
+    "cook": "PT25M",
+    "total": "PT35M",
+    "structured": true,
+    "status": "fetched",
+    "publisher": "Well Plated by Erin",
+    "rating_display": "5/5 from 4 ratings",
+    "planning_ready": false,
+    "prep_evidence_status": "Needs details",
+    "prep_evidence_methods": "Tavily source-page extract",
+    "prep_summary": "No recipe-specific make-ahead or safe storage window confirmed from the extracted page. Review the original: https://www.wellplated.com/caramelized-brussels-sprouts/",
+    "source_prep_minutes": 10,
+    "source_cook_minutes": 25,
+    "shortlist": null,
+    "ingredients": [
+      "2 pounds Brussels sprouts (trimmed and halved)",
+      "3 tablespoons honey or pure maple syrup",
+      "1 tablespoon Balsamic vinegar",
+      "1 tablespoon Dijon mustard",
+      "2 tablespoons extra virgin olive oil",
+      "1 teaspoon kosher salt (plus additional to taste)",
+      "\u00bc teaspoon ground black pepper (plus additional to taste)"
+    ],
+    "ingredient_source": "publisher structured data",
+    "gluten_screen": {
+      "status": "none explicitly listed",
+      "evidence": []
+    },
+    "nut_screen": {
+      "status": "none explicitly listed",
+      "evidence": []
+    },
+    "label_review": [
+      "2 tablespoons extra virgin olive oil"
+    ],
+    "estimated_base_servings": 4,
+    "base_servings_basis": "publisher recipe yield; confirm whether servings or individual pieces",
+    "equipment_assumption": [
+      "Oven",
+      "Refrigerator"
+    ],
+    "equipment_review": "Confirm usable capacity, pot/pan size, number of batches and overlap with other dishes.",
+    "chef_make_ahead_proposal": "Trim/halve sprouts and mix glaze 1 day ahead; refrigerate separately. Roast near serving for caramelization; reheating softens them.",
+    "make_ahead_basis": "Chef planning proposal, not publisher-confirmed storage window"
+  },
+  {
+    "url": "https://www.wellplated.com/chocolate-pecan-pie/",
+    "occasion": "Thanksgiving / US Christmas",
+    "category": "desserts",
+    "title": "Chocolate Pecan Pie",
+    "rating": {
+      "@type": "AggregateRating",
+      "ratingValue": "5",
+      "ratingCount": "14",
+      "reviewCount": "7"
+    },
+    "yield_text": [
+      "10",
+      "10 servings"
+    ],
+    "prep": "PT25M",
+    "cook": "PT85M",
+    "total": "PT140M",
+    "structured": true,
+    "status": "fetched",
+    "publisher": "Well Plated by Erin",
+    "rating_display": "5/5 from 14 ratings",
+    "planning_ready": false,
+    "prep_evidence_status": "Source reviewed",
+    "prep_evidence_methods": "Tavily source-page extract",
+    "prep_summary": "Prepare, roll and crimp the pie crust up to three days ahead; wrap and refrigerate. Filling/baking timing still needs review.",
+    "source_prep_minutes": 25,
+    "source_cook_minutes": 85,
+    "shortlist": null,
+    "ingredients": [
+      "2 cups chopped raw pecans or pecan halves (about 8 ounces, divided)",
+      "1 unbaked pie crust",
+      "6 tablespoons unsalted butter",
+      "\u2153 cup bittersweet chocolate chips ((I used 60% dark))",
+      "3 large eggs (at room temperature)",
+      "1 cup pure maple syrup",
+      "\u00bd cup light brown sugar",
+      "1 \u00bd teaspoons pure vanilla extract",
+      "\u00bc teaspoon kosher salt",
+      "2 tablespoons all-purpose flour",
+      "Flaky salt (such as Maldon or fleur de sel)"
+    ],
+    "ingredient_source": "publisher structured data",
+    "gluten_screen": {
+      "status": "listed ingredient",
+      "evidence": [
+        "1 unbaked pie crust",
+        "2 tablespoons all-purpose flour"
+      ]
+    },
+    "nut_screen": {
+      "status": "listed ingredient",
+      "evidence": [
+        "2 cups chopped raw pecans or pecan halves (about 8 ounces, divided)"
+      ]
+    },
+    "label_review": [
+      "\u2153 cup bittersweet chocolate chips ((I used 60% dark))",
+      "1 \u00bd teaspoons pure vanilla extract"
+    ],
+    "estimated_base_servings": 10,
+    "base_servings_basis": "publisher recipe yield; confirm whether servings or individual pieces",
+    "equipment_assumption": [
+      "Oven",
+      "Refrigerator"
+    ],
+    "equipment_review": "Confirm usable capacity, pot/pan size, number of batches and overlap with other dishes.",
+    "chef_make_ahead_proposal": null,
+    "make_ahead_basis": "Publisher-specific note retained in prep_summary; confirm actual storage plan"
+  },
+  {
+    "url": "https://www.wellplated.com/old-fashioned-sweet-potato-pie/",
+    "occasion": "Thanksgiving / US Christmas",
+    "category": "desserts",
+    "title": "Sweet Potato Pie",
+    "rating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.99",
+      "ratingCount": "64",
+      "reviewCount": "7"
+    },
+    "yield_text": [
+      "10",
+      "10 slices; 1 (9-inch) pie"
+    ],
+    "prep": "PT45M",
+    "cook": "PT60M",
+    "total": "PT120M",
+    "structured": true,
+    "status": "fetched",
+    "publisher": "Well Plated by Erin",
+    "rating_display": "4.99/5 from 64 ratings",
+    "planning_ready": false,
+    "prep_evidence_status": "Source reviewed",
+    "prep_evidence_methods": "Tavily source-page extract",
+    "prep_summary": "Cook and mash the sweet potatoes up to three days ahead, then measure the required amount. The full pie assembly window still needs review.",
+    "source_prep_minutes": 45,
+    "source_cook_minutes": 60,
+    "shortlist": null,
+    "ingredients": [
+      "1 9-inch pie crust",
+      "2 large sweet potatoes",
+      "\u00be cup light brown sugar (packed)",
+      "2 teaspoons ground cinnamon",
+      "1 teaspoon ground ginger",
+      "\u00bd teaspoon allspice",
+      "\u00bc teaspoon kosher salt",
+      "\u00bc cup unsalted butter ((about 1/2 stick))",
+      "1 \u00bc cups 2% evaporated milk, divided ((about 10 ounces))",
+      "\u2153 cup granulated sugar",
+      "3 large eggs",
+      "1 tablespoon bourbon (or 2 additional teaspoons pure vanilla extract)",
+      "1 teaspoon pure vanilla extract",
+      "\u00bd cup unsweetened coconut flakes (optional, for serving)",
+      "1 cup cold heavy whipping cream",
+      "1 teaspoon pure vanilla extract",
+      "1 (7-ounce) jar marshmallow cream (for marshmallow variation only)"
+    ],
+    "ingredient_source": "publisher structured data",
+    "gluten_screen": {
+      "status": "listed ingredient",
+      "evidence": [
+        "1 9-inch pie crust"
+      ]
+    },
+    "nut_screen": {
+      "status": "none explicitly listed",
+      "evidence": []
+    },
+    "label_review": [
+      "1 tablespoon bourbon (or 2 additional teaspoons pure vanilla extract)",
+      "1 teaspoon pure vanilla extract",
+      "1 teaspoon pure vanilla extract"
+    ],
+    "estimated_base_servings": 10,
+    "base_servings_basis": "publisher recipe yield; confirm whether servings or individual pieces",
+    "equipment_assumption": [
+      "Oven",
+      "Stovetop",
+      "Refrigerator"
+    ],
+    "equipment_review": "Confirm usable capacity, pot/pan size, number of batches and overlap with other dishes.",
+    "chef_make_ahead_proposal": null,
+    "make_ahead_basis": "Publisher-specific note retained in prep_summary; confirm actual storage plan"
+  },
+  {
+    "url": "https://www.wellplated.com/gluten-free-apple-crisp/",
+    "occasion": "Thanksgiving / US Christmas",
+    "category": "desserts",
+    "title": "Gluten Free Apple Crisp",
+    "rating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.87",
+      "ratingCount": "23",
+      "reviewCount": "8"
+    },
+    "yield_text": [
+      "6",
+      "6 servings (1 9x9-inch pan)"
+    ],
+    "prep": "PT15M",
+    "cook": "PT55M",
+    "total": "PT70M",
+    "structured": true,
+    "status": "fetched",
+    "publisher": "Well Plated by Erin",
+    "rating_display": "4.87/5 from 23 ratings",
+    "planning_ready": false,
+    "prep_evidence_status": "Source reviewed",
+    "prep_evidence_methods": "Tavily source-page extract",
+    "prep_summary": "Assemble before baking, cover tightly and freeze flat for up to three months. Thaw overnight in the refrigerator before baking.",
+    "source_prep_minutes": 15,
+    "source_cook_minutes": 55,
+    "shortlist": null,
+    "ingredients": [
+      "1 cup old fashioned rolled oats",
+      "\u2154 cup almond flour",
+      "\u2154 cup brown sugar",
+      "\u2154 cup pecan halves (chopped)",
+      "\u00bd teaspoon kosher salt",
+      "6 tablespoons unsalted butter",
+      "2 \u00bd pounds mixed apples",
+      "\u00bc cup pure maple syrup or honey",
+      "2 tablespoons bourbon (or rum or water)",
+      "1 \u00bd teaspoons ground cinnamon",
+      "1 tablespoon freshly squeezed lemon juice",
+      "\u00bd tablespoon cornstarch",
+      "Vanilla ice cream (frozen yogurt, or Greek yogurt, for serving)"
+    ],
+    "ingredient_source": "publisher structured data",
+    "gluten_screen": {
+      "status": "none explicitly listed",
+      "evidence": []
+    },
+    "nut_screen": {
+      "status": "listed ingredient",
+      "evidence": [
+        "\u2154 cup almond flour",
+        "\u2154 cup pecan halves (chopped)"
+      ]
+    },
+    "label_review": [
+      "1 cup old fashioned rolled oats"
+    ],
+    "estimated_base_servings": 6,
+    "base_servings_basis": "publisher recipe yield; confirm whether servings or individual pieces",
+    "equipment_assumption": [
+      "Oven",
+      "Refrigerator"
+    ],
+    "equipment_review": "Confirm usable capacity, pot/pan size, number of batches and overlap with other dishes.",
+    "chef_make_ahead_proposal": null,
+    "make_ahead_basis": "Publisher-specific note retained in prep_summary; confirm actual storage plan"
+  },
+  {
+    "url": "https://www.ruchikrandhap.com/mushroom-cutlets/",
+    "category": "starters",
+    "occasion": "Christmas / Mangalorean",
+    "title": "Mushroom Cutlets",
+    "rating": null,
+    "yield_text": [
+      "8",
+      "8 medium sized cutlets"
+    ],
+    "prep": "PT25M",
+    "cook": "PT15M",
+    "total": "PT40M",
+    "structured": true,
+    "status": "fetched",
+    "publisher": "Ruchik Randhap \u2014 Shireen",
+    "rating_display": "No rating verified",
+    "planning_ready": false,
+    "prep_evidence_status": "Needs details",
+    "prep_evidence_methods": "Tavily source-page extract",
+    "prep_summary": "No recipe-specific make-ahead or safe storage window confirmed from the extracted page. Review the original: https://www.ruchikrandhap.com/mushroom-cutlets/",
+    "source_prep_minutes": 25,
+    "source_cook_minutes": 15,
+    "shortlist": null,
+    "ingredients": [
+      "250 grams mushrooms, about 10 medium-big sized",
+      "1-2  small green chillies, minced (adjust to taste)",
+      "1 inch fresh ginger, minced",
+      "1  medium-big onion, approx 100 grams, finely chopped",
+      "3/4 cup loosely packed, fresh coriander and mint leaves, finely chopped",
+      "1/4 teaspoon or to taste pepper powder",
+      "1/4 teaspoon cumin, jeera powder",
+      "1/4 teaspoon turmeric powder",
+      "1/4 teaspoon garam masala powder",
+      "1/2 teaspoon amchur (dry mango powder) or few drops of lime juice",
+      "175-200 grams 1 medium sized potato",
+      "1/2 cup bread crumbs (store bought powder or homemade using stale bread)",
+      "salt to taste",
+      "oil for shallow frying",
+      "breadcrumbs or pre-roasted semolina (rava) for coating"
+    ],
+    "ingredient_source": "publisher structured data",
+    "gluten_screen": {
+      "status": "listed ingredient",
+      "evidence": [
+        "1/2 cup bread crumbs (store bought powder or homemade using stale bread)",
+        "breadcrumbs or pre-roasted semolina (rava) for coating"
+      ]
+    },
+    "nut_screen": {
+      "status": "none explicitly listed",
+      "evidence": []
+    },
+    "label_review": [
+      "1/4 teaspoon or to taste pepper powder",
+      "1/4 teaspoon cumin, jeera powder",
+      "1/4 teaspoon turmeric powder",
+      "1/4 teaspoon garam masala powder",
+      "1/2 teaspoon amchur (dry mango powder) or few drops of lime juice",
+      "oil for shallow frying"
+    ],
+    "estimated_base_servings": 8,
+    "base_servings_basis": "source yield, 8 medium cutlets",
+    "equipment_assumption": [
+      "Stovetop",
+      "Refrigerator"
+    ],
+    "equipment_review": "Confirm usable capacity, pot/pan size, number of batches and overlap with other dishes.",
+    "chef_make_ahead_proposal": "Cook mushroom filling and shape cutlets up to 1 day ahead; refrigerate covered. Fry near serving for crispness and verify filling moisture.",
+    "make_ahead_basis": "Chef planning proposal, not publisher-confirmed storage window"
+  },
+  {
+    "url": "https://www.ruchikrandhap.com/mince-meat-cutlets/",
+    "category": "starters",
+    "occasion": "Christmas / Mangalorean",
+    "title": "Mince Meat Cutlets",
+    "rating": {
+      "@type": "AggregateRating",
+      "ratingValue": "5",
+      "ratingCount": "2",
+      "reviewCount": "2"
+    },
+    "yield_text": [
+      "8",
+      "8 servings"
+    ],
+    "prep": "PT25M",
+    "cook": "PT25M",
+    "total": "PT50M",
+    "structured": true,
+    "status": "fetched",
+    "publisher": "Ruchik Randhap \u2014 Shireen",
+    "rating_display": "5/5 from 2 ratings",
+    "planning_ready": false,
+    "prep_evidence_status": "Needs details",
+    "prep_evidence_methods": "Tavily source-page extract",
+    "prep_summary": "No recipe-specific make-ahead or safe storage window confirmed from the extracted page. Review the original: https://www.ruchikrandhap.com/mince-meat-cutlets/",
+    "source_prep_minutes": 25,
+    "source_cook_minutes": 25,
+    "shortlist": null,
+    "ingredients": [
+      "500 grams chicken or beef mince",
+      "2  medium sized onions, finely minced",
+      "2  small green chillies finely minced (adjust to taste)",
+      "1 inch ginger finely minced",
+      "5  small cloves of garlic, finely minced",
+      "3/4 cup coriander leaves finely chopped",
+      "1/2 cup mint leaves",
+      "3/4 teaspoon pepper powder (adjust to taste)",
+      "1/4 teaspoon cinnamon powder",
+      "1/4 teaspoon cumin powder",
+      "1 teaspoon garam masala powder",
+      "1/4 teaspoon turmeric",
+      "juice of a small lime (or 1 tsp vinegar)",
+      "1  medium sized potato boiled",
+      "Salt to taste",
+      "Oil for frying",
+      "1 slice bread (optional)",
+      "Bread crumbs or fine rawa",
+      "2  egg whites"
+    ],
+    "ingredient_source": "publisher structured data",
+    "gluten_screen": {
+      "status": "listed ingredient",
+      "evidence": [
+        "1 slice bread (optional)",
+        "Bread crumbs or fine rawa"
+      ]
+    },
+    "nut_screen": {
+      "status": "none explicitly listed",
+      "evidence": []
+    },
+    "label_review": [
+      "3/4 teaspoon pepper powder (adjust to taste)",
+      "1/4 teaspoon cinnamon powder",
+      "1/4 teaspoon cumin powder",
+      "1 teaspoon garam masala powder",
+      "Oil for frying"
+    ],
+    "estimated_base_servings": 8,
+    "base_servings_basis": "source yield, 8 servings",
+    "equipment_assumption": [
+      "Stovetop",
+      "Refrigerator"
+    ],
+    "equipment_review": "Confirm usable capacity, pot/pan size, number of batches and overlap with other dishes.",
+    "chef_make_ahead_proposal": "Cook meat filling fully and shape cutlets up to 1 day ahead; cool/refrigerate promptly. Fry near serving; verify the center is hot and the meat was safely cooked.",
+    "make_ahead_basis": "Chef planning proposal, not publisher-confirmed storage window"
+  },
+  {
+    "url": "https://www.ruchikrandhap.com/pork-bafa/",
+    "category": "mains",
+    "occasion": "Christmas / Mangalorean",
+    "title": "Pork Bafat | Dukra Maas",
+    "rating": {
+      "@type": "AggregateRating",
+      "ratingValue": "5",
+      "ratingCount": "10",
+      "reviewCount": "5"
+    },
+    "yield_text": [
+      "4",
+      "4 people"
+    ],
+    "prep": "PT25M",
+    "cook": "PT40M",
+    "total": "PT65M",
+    "structured": true,
+    "status": "fetched",
+    "publisher": "Ruchik Randhap \u2014 Shireen",
+    "rating_display": "5/5 from 10 ratings",
+    "planning_ready": false,
+    "prep_evidence_status": "Needs details",
+    "prep_evidence_methods": "Tavily source-page extract",
+    "prep_summary": "No recipe-specific make-ahead or safe storage window confirmed from the extracted page. Review the original: https://www.ruchikrandhap.com/pork-bafa/",
+    "source_prep_minutes": 25,
+    "source_cook_minutes": 40,
+    "shortlist": null,
+    "ingredients": [
+      "1 kg pork, with fat",
+      "3-4 large onions",
+      "2-3  green chillies (adjust to taste)",
+      "10-12 cloves garlic",
+      "2 inches ginger",
+      "2 inches cinnamon or cassia bark",
+      "4  cloves",
+      "2  bay leaves",
+      "2-3 tablespoons bafat powder",
+      "2-3 teaspoons thick tamarind extract",
+      "1/2 teaspoon vinegar",
+      "salt to taste"
+    ],
+    "ingredient_source": "publisher structured data",
+    "gluten_screen": {
+      "status": "none explicitly listed",
+      "evidence": []
+    },
+    "nut_screen": {
+      "status": "none explicitly listed",
+      "evidence": []
+    },
+    "label_review": [
+      "2-3 tablespoons bafat powder",
+      "2-3 teaspoons thick tamarind extract"
+    ],
+    "estimated_base_servings": 4,
+    "base_servings_basis": "source yield, 4 people",
+    "equipment_assumption": [
+      "Stovetop",
+      "Refrigerator"
+    ],
+    "equipment_review": "Confirm usable capacity, pot/pan size, number of batches and overlap with other dishes.",
+    "chef_make_ahead_proposal": "Cook fully 1 day ahead; cool promptly in shallow containers and refrigerate. Reheat thoroughly. Flavor may deepen, but actual pork tenderness and batch size need checking.",
+    "make_ahead_basis": "Chef planning proposal, not publisher-confirmed storage window"
+  },
+  {
+    "url": "https://www.ruchikrandhap.com/sonay-sukhe-black-chana-fugadsukka/",
+    "category": "sides",
+    "occasion": "Christmas / Mangalorean",
+    "title": "Sonay Sukhe (Black Chana Sukka)",
+    "structured": false,
+    "rating": null,
+    "status": "source page reviewed",
+    "publisher": "Ruchik Randhap",
+    "rating_display": "No rating verified",
+    "planning_ready": false,
+    "prep_evidence_status": "Source reviewed",
+    "prep_evidence_methods": "Publisher visible recipe card",
+    "prep_summary": "Source calls for soaking black chana 10-12 hours or overnight before pressure cooking. No cooked make-ahead or storage window stated.",
+    "source_prep_minutes": 10,
+    "source_cook_minutes": 25,
+    "shortlist": null,
+    "gluten_screen": {
+      "status": "none explicitly listed",
+      "evidence": []
+    },
+    "nut_screen": {
+      "status": "none explicitly listed",
+      "evidence": []
+    },
+    "label_review": [
+      "1 tsp bafat powder"
+    ],
+    "yield_text": [
+      "2-3 servings"
+    ],
+    "prep": "PT10M",
+    "cook": "PT25M",
+    "total": null,
+    "chef_prep_draft": "Rinse and soak chana: 5 min active plus 10-12 hours waiting. Slice onion and prepare spices: 10 min. Pressure cook beans: 10 min setup plus about 35 min cooking/release estimate. Temper, combine and finish: 15 min active plus 10 min simmer estimate. Cleanup: 10 min.",
+    "pending_review": "Confirm beans are fully tender, dry seasoning product label, base serving size, pressure cooker capacity and storage plan.",
+    "ingredients": [
+      "1/2 cup kala chana / black chickpeas, soaked 10-12 hours or overnight",
+      "1/2 tsp mustard seeds",
+      "1 sprig curry leaves",
+      "3-4 garlic cloves, crushed",
+      "1 medium onion, sliced",
+      "About 3/4 cup grated coconut",
+      "1 tsp bafat powder",
+      "3/4 tsp tamarind paste or a small ball of tamarind",
+      "Oil",
+      "Salt to taste"
+    ],
+    "ingredient_source": "publisher visible recipe card",
+    "estimated_base_servings": 2,
+    "base_servings_basis": "publisher recipe yield; confirm whether servings or individual pieces",
+    "equipment_assumption": [
+      "Pressure cooker",
+      "Stovetop",
+      "Refrigerator"
+    ],
+    "equipment_review": "Confirm usable capacity, pot/pan size, number of batches and overlap with other dishes.",
+    "chef_make_ahead_proposal": null,
+    "make_ahead_basis": "Publisher-specific note retained in prep_summary; confirm actual storage plan"
+  },
+  {
+    "url": "https://www.ruchikrandhap.com/coffee-fruit-cake-no-alcohol-las/",
+    "category": "desserts",
+    "occasion": "Christmas / Mangalorean",
+    "title": "Coffee Fruit Cake",
+    "rating": null,
+    "yield_text": null,
+    "prep": "PT45M",
+    "cook": "PT60M",
+    "total": "PT105M",
+    "structured": true,
+    "status": "fetched",
+    "publisher": "Ruchik Randhap \u2014 Shireen",
+    "rating_display": "No rating verified",
+    "planning_ready": false,
+    "prep_evidence_status": "Needs details",
+    "prep_evidence_methods": "Tavily source-page extract",
+    "prep_summary": "No recipe-specific make-ahead or safe storage window confirmed from the extracted page. Review the original: https://www.ruchikrandhap.com/coffee-fruit-cake-no-alcohol-las/",
+    "source_prep_minutes": 45,
+    "source_cook_minutes": 60,
+    "shortlist": null,
+    "ingredients": [
+      "300 grams / 10-1/2 oz (approx 2 packed cups mixed dried fruit, finely chopped * see notes)",
+      "150 grams / 5-1/2 oz (approx 3/4th cup, packed soft brown sugar)",
+      "150 grams / 5-1/2 oz butter (plus extra for greasing)",
+      "200 ml / 7 fl oz strong black coffee * see notes",
+      "1/4 - 1/2 cup milk (optional * see notes)",
+      "280 grams / 10 oz self raising flour * see notes",
+      "2 teaspoons mixed spice * see notes",
+      "1  large egg (beaten)"
+    ],
+    "ingredient_source": "publisher structured data",
+    "gluten_screen": {
+      "status": "listed ingredient",
+      "evidence": [
+        "280 grams / 10 oz self raising flour * see notes"
+      ]
+    },
+    "nut_screen": {
+      "status": "none explicitly listed",
+      "evidence": []
+    },
+    "label_review": [],
+    "estimated_base_servings": 10,
+    "base_servings_basis": "chef estimate; loaf/cake slice size varies",
+    "equipment_assumption": [
+      "Oven",
+      "Stovetop",
+      "Refrigerator"
+    ],
+    "equipment_review": "Confirm usable capacity, pot/pan size, number of batches and overlap with other dishes.",
+    "chef_make_ahead_proposal": "Bake 1-2 days ahead, cool completely before wrapping. Confirm the publisher storage advice and choose refrigeration/freezing if storing longer; nonalcoholic fruit cake is not a shelf-stable preserve.",
+    "make_ahead_basis": "Chef planning proposal, not publisher-confirmed storage window"
+  }
+]

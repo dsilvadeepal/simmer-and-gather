@@ -1,0 +1,5 @@
+import {useState} from 'react';
+export function PantryEntry({onAdd,disabled=false}:{onAdd:(item:{name:string;quantity:number;unit:string;source:string})=>Promise<boolean>;disabled?:boolean}){
+ const [name,setName]=useState(''),[quantity,setQuantity]=useState(''),[unit,setUnit]=useState('g');
+ return <><p className="meta">Add an ingredient and the amount you have. We subtract confirmed amounts from your shopping list.</p><div className="fields"><label>Ingredient<input value={name} placeholder="Rice" onChange={e=>setName(e.target.value)}/></label><label>Amount<input type="number" min="0.01" step="any" value={quantity} onChange={e=>setQuantity(e.target.value)}/></label><label>Unit<select value={unit} onChange={e=>setUnit(e.target.value)}>{['g','kg','ml','l','cup','tbsp','tsp','count'].map(u=><option key={u}>{u}</option>)}</select></label></div><button className="secondary" disabled={disabled||!name.trim()||!(Number(quantity)>0)} onClick={async()=>{const saved=await onAdd({name:name.trim(),quantity:Number(quantity),unit,source:'manual'});if(!saved)return;setName('');setQuantity('');}}>Add ingredient</button></>;
+}

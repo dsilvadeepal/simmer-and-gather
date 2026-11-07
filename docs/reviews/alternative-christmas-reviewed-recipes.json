@@ -1,0 +1,1141 @@
+[
+  {
+    "id": "4076c09a-c77f-81a6-839b-d023e56356d6",
+    "version": "2",
+    "title": "Caramelized Brussels Sprouts",
+    "source": "https://www.wellplated.com/caramelized-brussels-sprouts/",
+    "servings": 4,
+    "category": "sides",
+    "vegetarian": null,
+    "allergens": [],
+    "ingredients": [
+      {
+        "name": "Brussels sprouts (trimmed and halved)",
+        "quantity": 2.0,
+        "unit": "lb"
+      },
+      {
+        "name": "honey or pure maple syrup",
+        "quantity": 3.0,
+        "unit": "tbsp"
+      },
+      {
+        "name": "Balsamic vinegar",
+        "quantity": 1.0,
+        "unit": "tbsp"
+      },
+      {
+        "name": "Dijon mustard",
+        "quantity": 1.0,
+        "unit": "tbsp"
+      },
+      {
+        "name": "extra virgin olive oil",
+        "quantity": 2.0,
+        "unit": "tbsp"
+      },
+      {
+        "name": "kosher salt (plus additional to taste)",
+        "quantity": 1.0,
+        "unit": "tsp"
+      },
+      {
+        "name": "ground black pepper (plus additional to taste)",
+        "quantity": 0.25,
+        "unit": "tsp"
+      }
+    ],
+    "tasks": [
+      {
+        "id": "prep",
+        "title": "Trim sprouts and mix the glaze",
+        "recipe_id": "",
+        "dependencies": [],
+        "minutes": 20,
+        "active_minutes": 20,
+        "presence_minutes": 20,
+        "skill": "cook",
+        "resource": null,
+        "capacity": 1,
+        "temperature": null,
+        "eligible": {
+          "start": "2026-12-24T18:00:00-05:00",
+          "end": "2026-12-24T21:00:00-05:00"
+        },
+        "max_ahead_hours": 24.0,
+        "evidence": "Publisher method; task minutes and check-in placement are planning estimates. Make-ahead allowance is a planning estimate; follow storage notes.",
+        "ingredients": [],
+        "guidance": "Halve sprouts. Mix honey or maple syrup, balsamic vinegar, Dijon and oil; refrigerate separately from the sprouts.",
+        "phase": "cooking",
+        "unattended": false,
+        "scale_mode": "combined",
+        "preparation_policy": "advance",
+        "storage_anchor": "serving",
+        "attention_segments": [],
+        "timing_basis": "estimate"
+      },
+      {
+        "id": "roast",
+        "title": "Coat sprouts and roast, turning halfway",
+        "recipe_id": "",
+        "dependencies": [
+          "prep"
+        ],
+        "minutes": 40,
+        "active_minutes": 15,
+        "presence_minutes": 15,
+        "skill": "cook",
+        "resource": "oven",
+        "capacity": 1,
+        "temperature": 400,
+        "eligible": {
+          "start": "2026-12-25T16:30:00-05:00",
+          "end": "2026-12-25T17:15:00-05:00"
+        },
+        "max_ahead_hours": null,
+        "evidence": "Publisher method; task minutes and check-in placement are planning estimates. Same-day preparation.",
+        "ingredients": [],
+        "guidance": "Preheat to 400\u00b0F. Coat sprouts, spread cut-side down and roast until browned and tender, turning halfway. Season before serving. Best fresh from the oven; the pre-party buffer means they will be less crisp at serving.",
+        "phase": "cooking",
+        "unattended": false,
+        "scale_mode": "combined",
+        "preparation_policy": "same_day",
+        "storage_anchor": "serving",
+        "attention_segments": [
+          {
+            "offset_minutes": 0,
+            "minutes": 5
+          },
+          {
+            "offset_minutes": 20,
+            "minutes": 5
+          },
+          {
+            "offset_minutes": 35,
+            "minutes": 5
+          }
+        ],
+        "timing_basis": "estimate"
+      }
+    ],
+    "source_text": "Collection: Thanksgiving / US Christmas\nSource: https://www.wellplated.com/caramelized-brussels-sprouts/\nPublisher: Well Plated by Erin\nPublisher rating snapshot, October 28, 2026: 5/5 from 4 ratings\nImport: fetched\nCandidate only. Not personally tested or planning-ready. A selection option, not a recommendation to cook every item.\nSource yield: ['4', '4 servings']\nSource timing: prep PT10M; cook PT25M; total PT35M. Source prep time is not total active work.\nIngredients (source facts; quantities need confirmation before scaling)\n2 pounds Brussels sprouts (trimmed and halved)\n3 tablespoons honey or pure maple syrup\n1 tablespoon Balsamic vinegar\n1 tablespoon Dijon mustard\n2 tablespoons extra virgin olive oil\n1 teaspoon kosher salt (plus additional to taste)\n\u00bc teaspoon ground black pepper (plus additional to taste)\nCooking method and recipe notes: open the original source link. Task-level timing, make-ahead windows and storage guidance still need review.\nHome-cook timing draft (untested)\nTrim and halve sprouts: 15 min hands-on\nRoast or saute in batches: 10 min hands-on + 25 min waiting/cooking\nCleanup: 10 min. Active total including cleanup: 35 min; unattended: 25 min. Base recipe only; confirm servings, equipment batches, and real pace before scheduling.\nPreparation review \u00b7 2026-10-28-logical-steps-v1\nTrim and halve sprouts \u2014 15 min hands-on; 0 min waiting.\nCoat and spread in a single layer \u2014 5 min hands-on; 0 min waiting.\nRoast, turning halfway; season \u2014 5 min hands-on; 30 min waiting.\nEstimated make-ahead approach: Trim/halve sprouts and mix glaze 1 day ahead; refrigerate separately. Roast near serving for caramelization; reheating softens them.\nTiming and scaling notes: Hands-on and waiting times are estimates for the base recipe; waiting includes soaking, chilling and cooling where listed. Measure ingredients while cooking. Cleanup is a separate flexible allowance. Increase chopping and shaping time with quantity; repeat only appliance-limited cooking steps. Recipe yield does not establish appliance capacity. Use source doneness cues. Pressure-cooker whistles are not a verified Instant Pot conversion.",
+    "reviewed": true,
+    "image_url": null,
+    "image_credit": null,
+    "uncertainties": [
+      "Hands-on, elapsed and make-ahead allowances are planning estimates unless explicitly supported by the source. Check doneness and ingredient labels, including nut cross-contact."
+    ],
+    "preparation_provenance": {
+      "alternative_christmas_review": "2026-10-29 source method review; independent prep, explicit waits and reheating, estimated attention segments."
+    }
+  },
+  {
+    "id": "4076c09a-c77f-8163-93fa-dc2f87917491",
+    "version": "2",
+    "title": "Chicken Mince Cutlets",
+    "source": "https://www.ruchikrandhap.com/mince-meat-cutlets/",
+    "servings": 8,
+    "category": "starters",
+    "vegetarian": false,
+    "allergens": [
+      "gluten",
+      "eggs"
+    ],
+    "ingredients": [
+      {
+        "name": "chicken mince",
+        "quantity": 500.0,
+        "unit": "g"
+      },
+      {
+        "name": "2  medium sized onions, finely minced",
+        "quantity": null,
+        "unit": null
+      },
+      {
+        "name": "2  small green chillies finely minced (adjust to taste)",
+        "quantity": null,
+        "unit": null
+      },
+      {
+        "name": "1 inch ginger finely minced",
+        "quantity": null,
+        "unit": null
+      },
+      {
+        "name": "5  small cloves of garlic, finely minced",
+        "quantity": null,
+        "unit": null
+      },
+      {
+        "name": "coriander leaves finely chopped",
+        "quantity": 0.75,
+        "unit": "cup"
+      },
+      {
+        "name": "mint leaves",
+        "quantity": 0.5,
+        "unit": "cup"
+      },
+      {
+        "name": "pepper powder (adjust to taste)",
+        "quantity": 0.75,
+        "unit": "tsp"
+      },
+      {
+        "name": "cinnamon powder",
+        "quantity": 0.25,
+        "unit": "tsp"
+      },
+      {
+        "name": "cumin powder",
+        "quantity": 0.25,
+        "unit": "tsp"
+      },
+      {
+        "name": "garam masala powder",
+        "quantity": 1.0,
+        "unit": "tsp"
+      },
+      {
+        "name": "turmeric",
+        "quantity": 0.25,
+        "unit": "tsp"
+      },
+      {
+        "name": "juice of a small lime (or 1 tsp vinegar)",
+        "quantity": null,
+        "unit": null
+      },
+      {
+        "name": "1  medium sized potato boiled",
+        "quantity": null,
+        "unit": null
+      },
+      {
+        "name": "Salt to taste",
+        "quantity": null,
+        "unit": null
+      },
+      {
+        "name": "Oil for frying",
+        "quantity": null,
+        "unit": null
+      },
+      {
+        "name": "1 slice bread (optional)",
+        "quantity": null,
+        "unit": null
+      },
+      {
+        "name": "Bread crumbs or fine rawa",
+        "quantity": null,
+        "unit": null
+      },
+      {
+        "name": "2  egg whites",
+        "quantity": null,
+        "unit": null
+      }
+    ],
+    "tasks": [
+      {
+        "id": "potato",
+        "title": "Boil potato and mash",
+        "recipe_id": "",
+        "dependencies": [],
+        "minutes": 35,
+        "active_minutes": 10,
+        "presence_minutes": 10,
+        "skill": "cook",
+        "resource": "stovetop",
+        "capacity": 1,
+        "temperature": null,
+        "eligible": {
+          "start": "2026-12-24T18:00:00-05:00",
+          "end": "2026-12-24T21:00:00-05:00"
+        },
+        "max_ahead_hours": 24.0,
+        "evidence": "Publisher method; task minutes and check-in placement are planning estimates. Make-ahead allowance is a planning estimate; follow storage notes.",
+        "ingredients": [],
+        "guidance": "Cook potato until tender, drain and mash.",
+        "phase": "cooking",
+        "unattended": false,
+        "scale_mode": "combined",
+        "preparation_policy": "advance",
+        "storage_anchor": "serving",
+        "attention_segments": [
+          {
+            "offset_minutes": 0,
+            "minutes": 5
+          },
+          {
+            "offset_minutes": 30,
+            "minutes": 5
+          }
+        ],
+        "timing_basis": "estimate"
+      },
+      {
+        "id": "filling",
+        "title": "Cook chicken mince and saut\u00e9 aromatics",
+        "recipe_id": "",
+        "dependencies": [],
+        "minutes": 40,
+        "active_minutes": 35,
+        "presence_minutes": 35,
+        "skill": "cook",
+        "resource": "stovetop",
+        "capacity": 1,
+        "temperature": null,
+        "eligible": {
+          "start": "2026-12-24T18:00:00-05:00",
+          "end": "2026-12-24T21:00:00-05:00"
+        },
+        "max_ahead_hours": 24.0,
+        "evidence": "Publisher method; task minutes and check-in placement are planning estimates. Make-ahead allowance is a planning estimate; follow storage notes.",
+        "ingredients": [],
+        "guidance": "Cook chicken mince with salt and lime until cooked through. In another pan, soften onion, add ginger, garlic, chilli and herbs, then the spices. Refrigerate promptly if preparing ahead.",
+        "phase": "cooking",
+        "unattended": false,
+        "scale_mode": "combined",
+        "preparation_policy": "advance",
+        "storage_anchor": "serving",
+        "attention_segments": [
+          {
+            "offset_minutes": 0,
+            "minutes": 30
+          },
+          {
+            "offset_minutes": 35,
+            "minutes": 5
+          }
+        ],
+        "timing_basis": "estimate"
+      },
+      {
+        "id": "cool",
+        "title": "Let filling cool enough to handle",
+        "recipe_id": "",
+        "dependencies": [
+          "filling"
+        ],
+        "minutes": 20,
+        "active_minutes": 0,
+        "presence_minutes": 0,
+        "skill": "cook",
+        "resource": null,
+        "capacity": 1,
+        "temperature": null,
+        "eligible": {
+          "start": "2026-12-24T18:00:00-05:00",
+          "end": "2026-12-24T21:00:00-05:00"
+        },
+        "max_ahead_hours": 24.0,
+        "evidence": "Publisher method; task minutes and check-in placement are planning estimates. Make-ahead allowance is a planning estimate; follow storage notes.",
+        "ingredients": [],
+        "guidance": "Cool briefly before mixing and shaping; do not leave it out for extended periods.",
+        "phase": "cooking",
+        "unattended": true,
+        "scale_mode": "combined",
+        "preparation_policy": "advance",
+        "storage_anchor": "serving",
+        "attention_segments": [],
+        "timing_basis": "estimate"
+      },
+      {
+        "id": "shape",
+        "title": "Combine filling with potato and shape cutlets",
+        "recipe_id": "",
+        "dependencies": [
+          "potato",
+          "cool"
+        ],
+        "minutes": 25,
+        "active_minutes": 25,
+        "presence_minutes": 25,
+        "skill": "cook",
+        "resource": null,
+        "capacity": 1,
+        "temperature": null,
+        "eligible": {
+          "start": "2026-12-24T18:00:00-05:00",
+          "end": "2026-12-24T21:00:00-05:00"
+        },
+        "max_ahead_hours": 24.0,
+        "evidence": "Publisher method; task minutes and check-in placement are planning estimates. Make-ahead allowance is a planning estimate; follow storage notes.",
+        "ingredients": [],
+        "guidance": "Combine cooked mince, aromatics and mashed potato. Shape into patties and refrigerate covered. Add a little bread only if the mixture is too wet.",
+        "phase": "cooking",
+        "unattended": false,
+        "scale_mode": "combined",
+        "preparation_policy": "advance",
+        "storage_anchor": "serving",
+        "attention_segments": [],
+        "timing_basis": "estimate"
+      },
+      {
+        "id": "fry",
+        "title": "Coat and pan-fry cutlets",
+        "recipe_id": "",
+        "dependencies": [
+          "shape"
+        ],
+        "minutes": 35,
+        "active_minutes": 35,
+        "presence_minutes": 35,
+        "skill": "cook",
+        "resource": "stovetop",
+        "capacity": 1,
+        "temperature": null,
+        "eligible": {
+          "start": "2026-12-25T15:45:00-05:00",
+          "end": "2026-12-25T17:15:00-05:00"
+        },
+        "max_ahead_hours": null,
+        "evidence": "Publisher method; task minutes and check-in placement are planning estimates. Same-day preparation.",
+        "ingredients": [],
+        "guidance": "Dip patties in beaten egg white, coat in crumbs and fry on medium heat, turning until golden and hot throughout. Stay at the pan; use a non-nut oil. Hold hot at 140\u00b0F or above until serving; the coating may soften while held.",
+        "phase": "cooking",
+        "unattended": false,
+        "scale_mode": "combined",
+        "preparation_policy": "same_day",
+        "storage_anchor": "serving",
+        "attention_segments": [],
+        "timing_basis": "estimate"
+      }
+    ],
+    "source_text": "Collection: Christmas / Mangalorean; source: https://www.ruchikrandhap.com/mince-meat-cutlets/\nPublisher rating snapshot, October 28, 2026: 5/5 from 2 ratings\nCandidate only. Not personally tested or planning-ready.\nSource yield: ['8', '8 servings']\nSource time: prep PT25M; cook PT25M; total PT50M.\nIngredients (source facts, confirm before scaling)\n500 grams chicken or beef mince\n2  medium sized onions, finely minced\n2  small green chillies finely minced (adjust to taste)\n1 inch ginger finely minced\n5  small cloves of garlic, finely minced\n3/4 cup coriander leaves finely chopped\n1/2 cup mint leaves\n3/4 teaspoon pepper powder (adjust to taste)\n1/4 teaspoon cinnamon powder\n1/4 teaspoon cumin powder\n1 teaspoon garam masala powder\n1/4 teaspoon turmeric\njuice of a small lime (or 1 tsp vinegar)\n1  medium sized potato boiled\nSalt to taste\nOil for frying\n1 slice bread (optional)\nBread crumbs or fine rawa\n2  egg whites\nFor cooking instructions and notes, open the original source. Task timing and make-ahead evidence still need review.\nHome-cook timing draft (untested)\nCook/season filling and prepare binder: 30 min hands-on + 15 min waiting/cooking\nShape and coat cutlets: 20 min hands-on\nFry in batches: 20 min hands-on + 20 min waiting/cooking\nCleanup: 15 min. Active total including cleanup: 85 min; unattended: 35 min. Base recipe only; confirm servings, equipment batches, and real pace before scheduling.\nPreparation review \u00b7 2026-10-28-logical-steps-v1\nCook potato for binder and mash \u2014 10 min hands-on; 25 min waiting.\nCook mince and aromatics; cool \u2014 25 min hands-on; 20 min waiting.\nCombine, shape and coat cutlets \u2014 20 min hands-on; 0 min waiting.\nPan-fry in uncrowded batches \u2014 15 min hands-on; 10 min waiting.\nEstimated make-ahead approach: Cook meat filling fully and shape cutlets up to 1 day ahead; cool/refrigerate promptly. Fry near serving; verify the center is hot and the meat was safely cooked.\nTiming and scaling notes: Hands-on and waiting times are estimates for the base recipe; waiting includes soaking, chilling and cooling where listed. Measure ingredients while cooking. Cleanup is a separate flexible allowance. Increase chopping and shaping time with quantity; repeat only appliance-limited cooking steps. Recipe yield does not establish appliance capacity. Use source doneness cues. Pressure-cooker whistles are not a verified Instant Pot conversion.",
+    "reviewed": true,
+    "image_url": null,
+    "image_credit": null,
+    "uncertainties": [
+      "Hands-on, elapsed and make-ahead allowances are planning estimates unless explicitly supported by the source. Check doneness and ingredient labels, including nut cross-contact."
+    ],
+    "preparation_provenance": {
+      "alternative_christmas_review": "2026-10-29 source method review; independent prep, explicit waits and reheating, estimated attention segments."
+    }
+  },
+  {
+    "id": "4076c09a-c77f-81bb-8f54-cd357b1a67d8",
+    "version": "2",
+    "title": "Pork Bafat | Dukra Maas",
+    "source": "https://www.ruchikrandhap.com/pork-bafa/",
+    "servings": 4,
+    "category": "mains",
+    "vegetarian": false,
+    "allergens": [],
+    "ingredients": [
+      {
+        "name": "pork, with fat",
+        "quantity": 1.0,
+        "unit": "kg"
+      },
+      {
+        "name": "3-4 large onions",
+        "quantity": null,
+        "unit": null
+      },
+      {
+        "name": "2-3  green chillies (adjust to taste)",
+        "quantity": null,
+        "unit": null
+      },
+      {
+        "name": "10-12 cloves garlic",
+        "quantity": null,
+        "unit": null
+      },
+      {
+        "name": "2 inches ginger",
+        "quantity": null,
+        "unit": null
+      },
+      {
+        "name": "2 inches cinnamon or cassia bark",
+        "quantity": null,
+        "unit": null
+      },
+      {
+        "name": "4  cloves",
+        "quantity": 4.0,
+        "unit": "cloves"
+      },
+      {
+        "name": "2  bay leaves",
+        "quantity": null,
+        "unit": null
+      },
+      {
+        "name": "2-3 tablespoons bafat powder",
+        "quantity": null,
+        "unit": null
+      },
+      {
+        "name": "2-3 teaspoons thick tamarind extract",
+        "quantity": null,
+        "unit": null
+      },
+      {
+        "name": "vinegar",
+        "quantity": 0.5,
+        "unit": "tsp"
+      },
+      {
+        "name": "salt to taste",
+        "quantity": null,
+        "unit": null
+      }
+    ],
+    "tasks": [
+      {
+        "id": "prep",
+        "title": "Cut pork, onions and aromatics",
+        "recipe_id": "",
+        "dependencies": [],
+        "minutes": 25,
+        "active_minutes": 25,
+        "presence_minutes": 25,
+        "skill": "cook",
+        "resource": null,
+        "capacity": 1,
+        "temperature": null,
+        "eligible": {
+          "start": "2026-12-23T15:00:00-05:00",
+          "end": "2026-12-23T21:00:00-05:00"
+        },
+        "max_ahead_hours": 72.0,
+        "evidence": "Publisher method; task minutes and check-in placement are planning estimates. Make-ahead allowance is a planning estimate; follow storage notes.",
+        "ingredients": [],
+        "guidance": "Cut pork into even pieces. Chop ginger and chillies; keep onions and peeled garlic separate for adding later.",
+        "phase": "cooking",
+        "unattended": false,
+        "scale_mode": "combined",
+        "preparation_policy": "advance",
+        "storage_anchor": "serving",
+        "attention_segments": [],
+        "timing_basis": "estimate"
+      },
+      {
+        "id": "cook",
+        "title": "Simmer pork; add onions and garlic toward the end",
+        "recipe_id": "",
+        "dependencies": [
+          "prep"
+        ],
+        "minutes": 110,
+        "active_minutes": 25,
+        "presence_minutes": 25,
+        "skill": "cook",
+        "resource": "stovetop",
+        "capacity": 1,
+        "temperature": null,
+        "eligible": {
+          "start": "2026-12-23T15:00:00-05:00",
+          "end": "2026-12-23T21:00:00-05:00"
+        },
+        "max_ahead_hours": 48.0,
+        "evidence": "Publisher method; task minutes and check-in placement are planning estimates. Make-ahead allowance is a planning estimate; follow storage notes.",
+        "ingredients": [],
+        "guidance": "Start pork with spices, ginger, chillies and tamarind. Simmer gently, checking regularly. Add onions and garlic when nearly tender; finish cooking. Cool promptly in shallow containers and refrigerate.",
+        "phase": "cooking",
+        "unattended": false,
+        "scale_mode": "combined",
+        "preparation_policy": "advance",
+        "storage_anchor": "serving",
+        "attention_segments": [
+          {
+            "offset_minutes": 0,
+            "minutes": 5
+          },
+          {
+            "offset_minutes": 30,
+            "minutes": 5
+          },
+          {
+            "offset_minutes": 60,
+            "minutes": 5
+          },
+          {
+            "offset_minutes": 85,
+            "minutes": 5
+          },
+          {
+            "offset_minutes": 105,
+            "minutes": 5
+          }
+        ],
+        "timing_basis": "estimate"
+      },
+      {
+        "id": "reheat",
+        "title": "Reheat pork bafat",
+        "recipe_id": "",
+        "dependencies": [
+          "cook"
+        ],
+        "minutes": 30,
+        "active_minutes": 10,
+        "presence_minutes": 10,
+        "skill": "cook",
+        "resource": "stovetop",
+        "capacity": 1,
+        "temperature": null,
+        "eligible": {
+          "start": "2026-12-25T16:30:00-05:00",
+          "end": "2026-12-25T17:15:00-05:00"
+        },
+        "max_ahead_hours": null,
+        "evidence": "Publisher method; task minutes and check-in placement are planning estimates. Same-day preparation.",
+        "ingredients": [],
+        "guidance": "Reheat to 165\u00b0F, stirring and adding a splash of water if needed. Keep hot at 140\u00b0F or above until serving.",
+        "phase": "cooking",
+        "unattended": false,
+        "scale_mode": "combined",
+        "preparation_policy": "same_day",
+        "storage_anchor": "serving",
+        "attention_segments": [
+          {
+            "offset_minutes": 0,
+            "minutes": 5
+          },
+          {
+            "offset_minutes": 25,
+            "minutes": 5
+          }
+        ],
+        "timing_basis": "estimate"
+      }
+    ],
+    "source_text": "Collection: Christmas / Mangalorean; source: https://www.ruchikrandhap.com/pork-bafa/\nPublisher rating snapshot, October 28, 2026: 5/5 from 10 ratings\nCandidate only. Not personally tested or planning-ready.\nSource yield: ['4', '4 people']\nSource time: prep PT25M; cook PT40M; total PT65M.\nIngredients (source facts, confirm before scaling)\n1 kg pork, with fat\n3-4 large onions\n2-3  green chillies (adjust to taste)\n10-12 cloves garlic\n2 inches ginger\n2 inches cinnamon or cassia bark\n4  cloves\n2  bay leaves\n2-3 tablespoons bafat powder\n2-3 teaspoons thick tamarind extract\n1/2 teaspoon vinegar\nsalt to taste\nFor cooking instructions and notes, open the original source. Task timing and make-ahead evidence still need review.\nHome-cook timing draft (untested)\nCut pork and prepare spice blend: 30 min hands-on\nCook and stir bafat: 15 min hands-on + 40 min waiting/cooking\nCleanup: 15 min. Active total including cleanup: 60 min; unattended: 40 min. Base recipe only; confirm servings, equipment batches, and real pace before scheduling.\nPreparation review \u00b7 2026-10-28-logical-steps-v1\nCut pork, onions and aromatics \u2014 25 min hands-on; 0 min waiting.\nSlow-cook pork with spices, stirring periodically \u2014 10 min hands-on; 60 min waiting.\nAdd onions and garlic; finish until pork is tender \u2014 10 min hands-on; 30 min waiting.\nEstimated make-ahead approach: Cook fully 1 day ahead; cool promptly in shallow containers and refrigerate. Reheat thoroughly. Flavor may deepen, but actual pork tenderness and batch size need checking.\nTiming and scaling notes: Hands-on and waiting times are estimates for the base recipe; waiting includes soaking, chilling and cooling where listed. Measure ingredients while cooking. Cleanup is a separate flexible allowance. Increase chopping and shaping time with quantity; repeat only appliance-limited cooking steps. Recipe yield does not establish appliance capacity. Use source doneness cues. Pressure-cooker whistles are not a verified Instant Pot conversion.",
+    "reviewed": true,
+    "image_url": null,
+    "image_credit": null,
+    "uncertainties": [
+      "Hands-on, elapsed and make-ahead allowances are planning estimates unless explicitly supported by the source. Check doneness and ingredient labels, including nut cross-contact."
+    ],
+    "preparation_provenance": {
+      "alternative_christmas_review": "2026-10-29 source method review; independent prep, explicit waits and reheating, estimated attention segments."
+    }
+  },
+  {
+    "id": "4076c09a-c77f-8157-94e9-e01709e85fa9",
+    "version": "2",
+    "title": "Sonay Sukhe (Black Chana Sukka)",
+    "source": "https://www.ruchikrandhap.com/sonay-sukhe-black-chana-fugadsukka/",
+    "servings": 2,
+    "category": "sides",
+    "vegetarian": null,
+    "allergens": [],
+    "ingredients": [
+      {
+        "name": "kala chana / black chickpeas, soaked 10-12 hours or overnight",
+        "quantity": 0.5,
+        "unit": "cup"
+      },
+      {
+        "name": "mustard seeds",
+        "quantity": 0.5,
+        "unit": "tsp"
+      },
+      {
+        "name": "1 sprig curry leaves",
+        "quantity": null,
+        "unit": null
+      },
+      {
+        "name": "3-4 garlic cloves, crushed",
+        "quantity": null,
+        "unit": null
+      },
+      {
+        "name": "1 medium onion, sliced",
+        "quantity": null,
+        "unit": null
+      },
+      {
+        "name": "About 3/4 cup grated coconut",
+        "quantity": null,
+        "unit": null
+      },
+      {
+        "name": "bafat powder",
+        "quantity": 1.0,
+        "unit": "tsp"
+      },
+      {
+        "name": "tamarind paste or a small ball of tamarind",
+        "quantity": 0.75,
+        "unit": "tsp"
+      },
+      {
+        "name": "Oil",
+        "quantity": null,
+        "unit": null
+      },
+      {
+        "name": "Salt to taste",
+        "quantity": null,
+        "unit": null
+      }
+    ],
+    "tasks": [
+      {
+        "id": "rinse",
+        "title": "Rinse black chana and cover with water",
+        "recipe_id": "",
+        "dependencies": [],
+        "minutes": 5,
+        "active_minutes": 5,
+        "presence_minutes": 5,
+        "skill": "cook",
+        "resource": null,
+        "capacity": 1,
+        "temperature": null,
+        "eligible": {
+          "start": "2026-12-24T18:00:00-05:00",
+          "end": "2026-12-24T20:00:00-05:00"
+        },
+        "max_ahead_hours": 24.0,
+        "evidence": "Publisher method; task minutes and check-in placement are planning estimates. Make-ahead allowance is a planning estimate; follow storage notes.",
+        "ingredients": [],
+        "guidance": "Rinse and cover generously with water.",
+        "phase": "cooking",
+        "unattended": false,
+        "scale_mode": "combined",
+        "preparation_policy": "advance",
+        "storage_anchor": "serving",
+        "attention_segments": [],
+        "timing_basis": "estimate"
+      },
+      {
+        "id": "soak",
+        "title": "Soak black chana overnight",
+        "recipe_id": "",
+        "dependencies": [
+          "rinse"
+        ],
+        "minutes": 720,
+        "active_minutes": 0,
+        "presence_minutes": 0,
+        "skill": "cook",
+        "resource": null,
+        "capacity": 1,
+        "temperature": null,
+        "eligible": null,
+        "max_ahead_hours": 24.0,
+        "evidence": "Publisher method; task minutes and check-in placement are planning estimates. Make-ahead allowance is a planning estimate; follow storage notes.",
+        "ingredients": [],
+        "guidance": "Allow 10\u201312 hours or overnight; drain before cooking.",
+        "phase": "cooking",
+        "unattended": true,
+        "scale_mode": "combined",
+        "preparation_policy": "advance",
+        "storage_anchor": "serving",
+        "attention_segments": [],
+        "timing_basis": "estimate"
+      },
+      {
+        "id": "pressure",
+        "title": "Pressure-cook chana and release pressure",
+        "recipe_id": "",
+        "dependencies": [
+          "soak"
+        ],
+        "minutes": 60,
+        "active_minutes": 10,
+        "presence_minutes": 10,
+        "skill": "cook",
+        "resource": "instant_pot",
+        "capacity": 1,
+        "temperature": null,
+        "eligible": {
+          "start": "2026-12-25T13:00:00-05:00",
+          "end": "2026-12-25T17:15:00-05:00"
+        },
+        "max_ahead_hours": null,
+        "evidence": "Publisher method; task minutes and check-in placement are planning estimates. Same-day preparation.",
+        "ingredients": [],
+        "guidance": "Cook soaked chana until tender, then let pressure release before opening. Use your cooker\u2019s instructions; source whistles are not an Instant Pot setting.",
+        "phase": "cooking",
+        "unattended": false,
+        "scale_mode": "combined",
+        "preparation_policy": "same_day",
+        "storage_anchor": "serving",
+        "attention_segments": [
+          {
+            "offset_minutes": 0,
+            "minutes": 5
+          },
+          {
+            "offset_minutes": 55,
+            "minutes": 5
+          }
+        ],
+        "timing_basis": "estimate"
+      },
+      {
+        "id": "aromatics",
+        "title": "Slice onion and prepare garlic and coconut",
+        "recipe_id": "",
+        "dependencies": [],
+        "minutes": 15,
+        "active_minutes": 15,
+        "presence_minutes": 15,
+        "skill": "cook",
+        "resource": null,
+        "capacity": 1,
+        "temperature": null,
+        "eligible": {
+          "start": "2026-12-25T13:00:00-05:00",
+          "end": "2026-12-25T17:15:00-05:00"
+        },
+        "max_ahead_hours": null,
+        "evidence": "Publisher method; task minutes and check-in placement are planning estimates. Same-day preparation.",
+        "ingredients": [],
+        "guidance": "Slice onion, crush garlic and have grated coconut ready.",
+        "phase": "cooking",
+        "unattended": false,
+        "scale_mode": "combined",
+        "preparation_policy": "same_day",
+        "storage_anchor": "serving",
+        "attention_segments": [],
+        "timing_basis": "estimate"
+      },
+      {
+        "id": "finish",
+        "title": "Temper aromatics and finish the chana sukka",
+        "recipe_id": "",
+        "dependencies": [
+          "pressure",
+          "aromatics"
+        ],
+        "minutes": 30,
+        "active_minutes": 30,
+        "presence_minutes": 30,
+        "skill": "cook",
+        "resource": "stovetop",
+        "capacity": 1,
+        "temperature": null,
+        "eligible": {
+          "start": "2026-12-25T13:00:00-05:00",
+          "end": "2026-12-25T17:15:00-05:00"
+        },
+        "max_ahead_hours": null,
+        "evidence": "Publisher method; task minutes and check-in placement are planning estimates. Same-day preparation.",
+        "ingredients": [],
+        "guidance": "Temper mustard and curry leaves, add garlic and onion, then coconut and spices. Add tender chana, tamarind and a little cooking liquid. Simmer until absorbed. Keep hot at 140\u00b0F or above until serving.",
+        "phase": "cooking",
+        "unattended": false,
+        "scale_mode": "combined",
+        "preparation_policy": "same_day",
+        "storage_anchor": "serving",
+        "attention_segments": [],
+        "timing_basis": "estimate"
+      }
+    ],
+    "source_text": "Source recipe: https://www.ruchikrandhap.com/sonay-sukhe-black-chana-fugadsukka/\nSource calls for soaking black chana 10-12 hours or overnight before pressure cooking. No cooked make-ahead or storage window stated.\nHome-cook timing draft (untested):\nRinse and soak black chana: 5 min active + 660 min waiting (estimate).\nSlice onion and prepare spices: 10 min active + 0 min waiting (estimate).\nPressure cook beans and allow release: 10 min active + 35 min waiting (estimate).\nTemper, combine and simmer: 15 min active + 10 min waiting (estimate).\nCleanup: 10 min. Source calls for 10\u201312 hour or overnight soak. Base recipe serves about 2\u20133; scaling and pressure-cooker batches need review. Cook until beans are tender, not by time alone.\nSource ingredients: 1/2 cup kala chana / black chickpeas, soaked 10-12 hours or overnight; 1/2 tsp mustard seeds; 1 sprig curry leaves; 3-4 garlic cloves, crushed; 1 medium onion, sliced; About 3/4 cup grated coconut; 1 tsp bafat powder; 3/4 tsp tamarind paste or a small ball of tamarind; Oil; Salt to taste\nPreparation review \u00b7 2026-10-28-logical-steps-v1\nRinse and soak black chana overnight \u2014 5 min hands-on; 720 min waiting.\nPressure-cook until tender; allow pressure to release \u2014 5 min hands-on; 45 min waiting.\nSlice onion and crush garlic \u2014 10 min hands-on; 0 min waiting.\nTemper aromatics; cook coconut and spices \u2014 10 min hands-on; 0 min waiting.\nAdd chana and tamarind; simmer until liquid is absorbed \u2014 5 min hands-on; 10 min waiting.\nPublisher make-ahead guidance: Source calls for soaking black chana 10-12 hours or overnight before pressure cooking. No cooked make-ahead or storage window stated.\nTiming and scaling notes: Hands-on and waiting times are estimates for the base recipe; waiting includes soaking, chilling and cooling where listed. Measure ingredients while cooking. Cleanup is a separate flexible allowance. Increase chopping and shaping time with quantity; repeat only appliance-limited cooking steps. Recipe yield does not establish appliance capacity. Use source doneness cues. Pressure-cooker whistles are not a verified Instant Pot conversion. Method recovered from visible publisher HTML, rather than structured recipe metadata.",
+    "reviewed": true,
+    "image_url": null,
+    "image_credit": null,
+    "uncertainties": [
+      "Hands-on, elapsed and make-ahead allowances are planning estimates unless explicitly supported by the source. Check doneness and ingredient labels, including nut cross-contact.",
+      "Pressure-cooker timing depends on appliance and bean age; no verified whistles-to-Instant-Pot conversion."
+    ],
+    "preparation_provenance": {
+      "alternative_christmas_review": "2026-10-29 source method review; independent prep, explicit waits and reheating, estimated attention segments."
+    }
+  },
+  {
+    "id": "4076c09a-c77f-810a-b6ce-e95717f9acda",
+    "version": "2",
+    "title": "Coffee Fruit Cake",
+    "source": "https://www.ruchikrandhap.com/coffee-fruit-cake-no-alcohol-las/",
+    "servings": 10,
+    "category": "desserts",
+    "vegetarian": null,
+    "allergens": [
+      "gluten",
+      "milk",
+      "eggs"
+    ],
+    "ingredients": [
+      {
+        "name": "Mixed dried fruit",
+        "quantity": 300.0,
+        "unit": "g"
+      },
+      {
+        "name": "Soft brown sugar",
+        "quantity": 150.0,
+        "unit": "g"
+      },
+      {
+        "name": "Butter",
+        "quantity": 150.0,
+        "unit": "g"
+      },
+      {
+        "name": "Strong black coffee",
+        "quantity": 200.0,
+        "unit": "ml"
+      },
+      {
+        "name": "Milk (optional, as needed)",
+        "quantity": 0.5,
+        "unit": "cup"
+      },
+      {
+        "name": "Self-raising flour",
+        "quantity": 280.0,
+        "unit": "g"
+      },
+      {
+        "name": "Mixed spice",
+        "quantity": 2.0,
+        "unit": "tsp"
+      },
+      {
+        "name": "Egg",
+        "quantity": 1.0,
+        "unit": "whole"
+      }
+    ],
+    "tasks": [
+      {
+        "id": "fruit",
+        "title": "Chop fruit and simmer with coffee, butter and sugar",
+        "recipe_id": "",
+        "dependencies": [],
+        "minutes": 25,
+        "active_minutes": 20,
+        "presence_minutes": 20,
+        "skill": "cook",
+        "resource": "stovetop",
+        "capacity": 1,
+        "temperature": null,
+        "eligible": {
+          "start": "2026-12-23T09:00:00-05:00",
+          "end": "2026-12-23T21:00:00-05:00"
+        },
+        "max_ahead_hours": 72.0,
+        "evidence": "Publisher method; task minutes and check-in placement are planning estimates. Make-ahead allowance is a planning estimate; follow storage notes.",
+        "ingredients": [],
+        "guidance": "Chop fruit evenly. Simmer with coffee, butter and sugar until melted and dissolved.",
+        "phase": "cooking",
+        "unattended": false,
+        "scale_mode": "combined",
+        "preparation_policy": "advance",
+        "storage_anchor": "serving",
+        "attention_segments": [
+          {
+            "offset_minutes": 0,
+            "minutes": 15
+          },
+          {
+            "offset_minutes": 20,
+            "minutes": 5
+          }
+        ],
+        "timing_basis": "estimate"
+      },
+      {
+        "id": "cool",
+        "title": "Cool the fruit mixture before adding egg",
+        "recipe_id": "",
+        "dependencies": [
+          "fruit"
+        ],
+        "minutes": 40,
+        "active_minutes": 0,
+        "presence_minutes": 0,
+        "skill": "cook",
+        "resource": null,
+        "capacity": 1,
+        "temperature": null,
+        "eligible": {
+          "start": "2026-12-23T09:00:00-05:00",
+          "end": "2026-12-23T21:00:00-05:00"
+        },
+        "max_ahead_hours": 72.0,
+        "evidence": "Publisher method; task minutes and check-in placement are planning estimates. Make-ahead allowance is a planning estimate; follow storage notes.",
+        "ingredients": [],
+        "guidance": "Allow the mixture to cool before mixing with egg.",
+        "phase": "cooking",
+        "unattended": true,
+        "scale_mode": "combined",
+        "preparation_policy": "advance",
+        "storage_anchor": "serving",
+        "attention_segments": [],
+        "timing_basis": "estimate"
+      },
+      {
+        "id": "bake",
+        "title": "Mix batter and bake the coffee fruit cake",
+        "recipe_id": "",
+        "dependencies": [
+          "cool"
+        ],
+        "minutes": 80,
+        "active_minutes": 25,
+        "presence_minutes": 25,
+        "skill": "cook",
+        "resource": "oven",
+        "capacity": 1,
+        "temperature": 350,
+        "eligible": {
+          "start": "2026-12-23T09:00:00-05:00",
+          "end": "2026-12-23T21:00:00-05:00"
+        },
+        "max_ahead_hours": 72.0,
+        "evidence": "Publisher method; task minutes and check-in placement are planning estimates. Make-ahead allowance is a planning estimate; follow storage notes.",
+        "ingredients": [],
+        "guidance": "Preheat to 350\u00b0F and line the loaf tin. Mix flour and spice with egg and cooled fruit mixture. Add milk only if stiff. Bake about an hour; check browning after 45 minutes and tent with foil if needed. Test with a skewer.",
+        "phase": "cooking",
+        "unattended": false,
+        "scale_mode": "combined",
+        "preparation_policy": "advance",
+        "storage_anchor": "serving",
+        "attention_segments": [
+          {
+            "offset_minutes": 0,
+            "minutes": 15
+          },
+          {
+            "offset_minutes": 60,
+            "minutes": 5
+          },
+          {
+            "offset_minutes": 75,
+            "minutes": 5
+          }
+        ],
+        "timing_basis": "estimate"
+      },
+      {
+        "id": "tin",
+        "title": "Rest cake in the tin",
+        "recipe_id": "",
+        "dependencies": [
+          "bake"
+        ],
+        "minutes": 10,
+        "active_minutes": 0,
+        "presence_minutes": 0,
+        "skill": "cook",
+        "resource": null,
+        "capacity": 1,
+        "temperature": null,
+        "eligible": {
+          "start": "2026-12-23T09:00:00-05:00",
+          "end": "2026-12-23T21:00:00-05:00"
+        },
+        "max_ahead_hours": 72.0,
+        "evidence": "Publisher method; task minutes and check-in placement are planning estimates. Make-ahead allowance is a planning estimate; follow storage notes.",
+        "ingredients": [],
+        "guidance": "Let the baked cake settle before unmolding.",
+        "phase": "cooking",
+        "unattended": true,
+        "scale_mode": "combined",
+        "preparation_policy": "advance",
+        "storage_anchor": "serving",
+        "attention_segments": [],
+        "timing_basis": "estimate"
+      },
+      {
+        "id": "unmold",
+        "title": "Turn cake onto a cooling rack",
+        "recipe_id": "",
+        "dependencies": [
+          "tin"
+        ],
+        "minutes": 5,
+        "active_minutes": 5,
+        "presence_minutes": 5,
+        "skill": "cook",
+        "resource": null,
+        "capacity": 1,
+        "temperature": null,
+        "eligible": {
+          "start": "2026-12-23T09:00:00-05:00",
+          "end": "2026-12-23T21:00:00-05:00"
+        },
+        "max_ahead_hours": 72.0,
+        "evidence": "Publisher method; task minutes and check-in placement are planning estimates. Make-ahead allowance is a planning estimate; follow storage notes.",
+        "ingredients": [],
+        "guidance": "Turn out carefully and leave to cool completely.",
+        "phase": "cooking",
+        "unattended": false,
+        "scale_mode": "combined",
+        "preparation_policy": "advance",
+        "storage_anchor": "serving",
+        "attention_segments": [],
+        "timing_basis": "estimate"
+      },
+      {
+        "id": "rack",
+        "title": "Cool cake completely",
+        "recipe_id": "",
+        "dependencies": [
+          "unmold"
+        ],
+        "minutes": 90,
+        "active_minutes": 0,
+        "presence_minutes": 0,
+        "skill": "cook",
+        "resource": null,
+        "capacity": 1,
+        "temperature": null,
+        "eligible": null,
+        "max_ahead_hours": 72.0,
+        "evidence": "Publisher method; task minutes and check-in placement are planning estimates. Make-ahead allowance is a planning estimate; follow storage notes.",
+        "ingredients": [],
+        "guidance": "Wait until fully cool before packing.",
+        "phase": "cooking",
+        "unattended": true,
+        "scale_mode": "combined",
+        "preparation_policy": "advance",
+        "storage_anchor": "serving",
+        "attention_segments": [],
+        "timing_basis": "estimate"
+      },
+      {
+        "id": "pack",
+        "title": "Pack cooled cake airtight",
+        "recipe_id": "",
+        "dependencies": [
+          "rack"
+        ],
+        "minutes": 5,
+        "active_minutes": 5,
+        "presence_minutes": 5,
+        "skill": "cook",
+        "resource": null,
+        "capacity": 1,
+        "temperature": null,
+        "eligible": null,
+        "max_ahead_hours": 72.0,
+        "evidence": "Publisher method; task minutes and check-in placement are planning estimates. Make-ahead allowance is a planning estimate; follow storage notes.",
+        "ingredients": [],
+        "guidance": "Pack only when completely cool. The source allows 3\u20134 days at room temperature in an airtight container.",
+        "phase": "cooking",
+        "unattended": false,
+        "scale_mode": "combined",
+        "preparation_policy": "advance",
+        "storage_anchor": "serving",
+        "attention_segments": [],
+        "timing_basis": "estimate"
+      }
+    ],
+    "source_text": "Collection: Christmas / Mangalorean; source: https://www.ruchikrandhap.com/coffee-fruit-cake-no-alcohol-las/\nPublisher rating snapshot, October 28, 2026: No rating verified\nCandidate only. Not personally tested or planning-ready.\nSource yield: Not verified\nSource time: prep PT45M; cook PT60M; total PT105M.\nIngredients (source facts, confirm before scaling)\n300 grams / 10-1/2 oz (approx 2 packed cups mixed dried fruit, finely chopped * see notes)\n150 grams / 5-1/2 oz (approx 3/4th cup, packed soft brown sugar)\n150 grams / 5-1/2 oz butter (plus extra for greasing)\n200 ml / 7 fl oz strong black coffee * see notes\n1/4 - 1/2 cup milk (optional * see notes)\n280 grams / 10 oz self raising flour * see notes\n2 teaspoons mixed spice * see notes\n1  large egg (beaten)\nFor cooking instructions and notes, open the original source. Task timing and make-ahead evidence still need review.\nHome-cook timing draft (untested)\nChop/soak fruit and measure cake ingredients: 45 min hands-on\nMix batter and prepare pan: 15 min hands-on\nBake and cool before slicing: 5 min hands-on + 60 min waiting/cooking\nCleanup: 15 min. Active total including cleanup: 80 min; unattended: 60 min. Base recipe only; confirm servings, equipment batches, and real pace before scheduling.\nPreparation review \u00b7 2026-10-28-logical-steps-v1\nChop fruit; simmer with coffee, butter and sugar \u2014 15 min hands-on; 10 min waiting.\nCool fruit mixture \u2014 0 min hands-on; 40 min waiting.\nLine tin and mix batter \u2014 15 min hands-on; 0 min waiting.\nBake and check for doneness \u2014 5 min hands-on; 60 min waiting.\nCool in tin then on rack \u2014 5 min hands-on; 90 min waiting.\nEstimated make-ahead approach: Bake 1-2 days ahead, cool completely before wrapping. Confirm the publisher storage advice and choose refrigeration/freezing if storing longer; nonalcoholic fruit cake is not a shelf-stable preserve.\nTiming and scaling notes: Hands-on and waiting times are estimates for the base recipe; waiting includes soaking, chilling and cooling where listed. Measure ingredients while cooking. Cleanup is a separate flexible allowance. Increase chopping and shaping time with quantity; repeat only appliance-limited cooking steps. Recipe yield does not establish appliance capacity. Use source doneness cues. Pressure-cooker whistles are not a verified Instant Pot conversion.",
+    "reviewed": true,
+    "image_url": null,
+    "image_credit": null,
+    "uncertainties": [
+      "Hands-on, elapsed and make-ahead allowances are planning estimates unless explicitly supported by the source. Check doneness and ingredient labels, including nut cross-contact."
+    ],
+    "preparation_provenance": {
+      "alternative_christmas_review": "2026-10-29 source method review; independent prep, explicit waits and reheating, estimated attention segments."
+    }
+  }
+]

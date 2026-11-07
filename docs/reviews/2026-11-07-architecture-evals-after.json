@@ -1,0 +1,1327 @@
+{
+  "scope": "Offline historical fixtures; no live integrations or cooking validation",
+  "results": [
+    {
+      "menu": "Indian supper",
+      "condition": "baseline",
+      "status": "feasible",
+      "outcome": {
+        "code": "complete",
+        "message": "All preparation tasks are scheduled and passed the schedule checks.",
+        "solver_status": "OPTIMAL"
+      },
+      "expected_outcome": "complete",
+      "validation_passed": true,
+      "menu_blockers": [],
+      "usable": true,
+      "violations": [],
+      "seconds": 7.48
+    },
+    {
+      "menu": "Indian supper",
+      "condition": "more_time",
+      "status": "feasible",
+      "outcome": {
+        "code": "complete",
+        "message": "All preparation tasks are scheduled and passed the schedule checks.",
+        "solver_status": "OPTIMAL"
+      },
+      "expected_outcome": "complete",
+      "validation_passed": true,
+      "menu_blockers": [],
+      "usable": true,
+      "violations": [],
+      "seconds": 2.74
+    },
+    {
+      "menu": "Indian supper",
+      "condition": "busy_calendar",
+      "status": "conflict",
+      "outcome": {
+        "code": "no_fit_found",
+        "message": "No complete plan was found under the current scheduling rules. Review the task constraints before changing your time or menu.",
+        "solver_status": "INFEASIBLE"
+      },
+      "expected_outcome": "no_fit_found",
+      "validation_passed": true,
+      "menu_blockers": [],
+      "usable": false,
+      "violations": [
+        {
+          "code": "unscheduled",
+          "affected_ids": [
+            "be90d59e-6802-4755-a87f-53a65ac38712:0:potato"
+          ],
+          "explanation": "Aloo Chaat in Phyllo Shells \u00b7 Steam potatoes: No suitable time was found within the current windows, dependencies and limits.",
+          "evidence": null
+        },
+        {
+          "code": "unscheduled",
+          "affected_ids": [
+            "be90d59e-6802-4755-a87f-53a65ac38712:0:filling"
+          ],
+          "explanation": "Aloo Chaat in Phyllo Shells \u00b7 Cool briefly, dice potatoes and saut\u00e9 the filling: Waiting for: Aloo Chaat in Phyllo Shells \u00b7 Steam potatoes.",
+          "evidence": null
+        },
+        {
+          "code": "unscheduled",
+          "affected_ids": [
+            "be90d59e-6802-4755-a87f-53a65ac38712:0:store"
+          ],
+          "explanation": "Aloo Chaat in Phyllo Shells \u00b7 Portion, cool promptly and refrigerate: Waiting for: Aloo Chaat in Phyllo Shells \u00b7 Cool briefly, dice potatoes and saut\u00e9 the filling.",
+          "evidence": null
+        },
+        {
+          "code": "unscheduled",
+          "affected_ids": [
+            "be90d59e-6802-4755-a87f-53a65ac38712:0:toppings"
+          ],
+          "explanation": "Aloo Chaat in Phyllo Shells \u00b7 Prepare yogurt and chutneys; refrigerate separately: No suitable time was found within the current windows, dependencies and limits.",
+          "evidence": null
+        },
+        {
+          "code": "unscheduled",
+          "affected_ids": [
+            "be90d59e-6802-4755-a87f-53a65ac38712:0:bake"
+          ],
+          "explanation": "Aloo Chaat in Phyllo Shells \u00b7 Fill phyllo shells and bake: Waiting for: Aloo Chaat in Phyllo Shells \u00b7 Portion, cool promptly and refrigerate.",
+          "evidence": null
+        },
+        {
+          "code": "unscheduled",
+          "affected_ids": [
+            "be90d59e-6802-4755-a87f-53a65ac38712:0:finish"
+          ],
+          "explanation": "Aloo Chaat in Phyllo Shells \u00b7 Add chilled sauces and garnish the chaat cups: Waiting for: Aloo Chaat in Phyllo Shells \u00b7 Fill phyllo shells and bake, Aloo Chaat in Phyllo Shells \u00b7 Prepare yogurt and chutneys; refrigerate separately.",
+          "evidence": null
+        },
+        {
+          "code": "unscheduled",
+          "affected_ids": [
+            "388b9c62-deea-4437-ac7d-48f1ae0815d0:0:prep"
+          ],
+          "explanation": "Instant Pot Butter Chicken \u00b7 Cut chicken and chop aromatics: No suitable time was found within the current windows, dependencies and limits.",
+          "evidence": null
+        },
+        {
+          "code": "unscheduled",
+          "affected_ids": [
+            "388b9c62-deea-4437-ac7d-48f1ae0815d0:0:saute"
+          ],
+          "explanation": "Instant Pot Butter Chicken \u00b7 Saut\u00e9 aromatics; add tomato and chicken: Waiting for: Instant Pot Butter Chicken \u00b7 Cut chicken and chop aromatics.",
+          "evidence": null
+        },
+        {
+          "code": "unscheduled",
+          "affected_ids": [
+            "388b9c62-deea-4437-ac7d-48f1ae0815d0:0:pressure"
+          ],
+          "explanation": "Instant Pot Butter Chicken \u00b7 Pressure-cook and release safely: Waiting for: Instant Pot Butter Chicken \u00b7 Saut\u00e9 aromatics; add tomato and chicken.",
+          "evidence": null
+        },
+        {
+          "code": "unscheduled",
+          "affected_ids": [
+            "388b9c62-deea-4437-ac7d-48f1ae0815d0:0:finish"
+          ],
+          "explanation": "Instant Pot Butter Chicken \u00b7 Stir in coconut cream and finish sauce: Waiting for: Instant Pot Butter Chicken \u00b7 Pressure-cook and release safely.",
+          "evidence": null
+        },
+        {
+          "code": "unscheduled",
+          "affected_ids": [
+            "388b9c62-deea-4437-ac7d-48f1ae0815d0:0:store"
+          ],
+          "explanation": "Instant Pot Butter Chicken \u00b7 Portion, cool promptly and refrigerate: Waiting for: Instant Pot Butter Chicken \u00b7 Stir in coconut cream and finish sauce.",
+          "evidence": null
+        },
+        {
+          "code": "unscheduled",
+          "affected_ids": [
+            "388b9c62-deea-4437-ac7d-48f1ae0815d0:0:reheat"
+          ],
+          "explanation": "Instant Pot Butter Chicken \u00b7 Reheat gently and keep hot: Waiting for: Instant Pot Butter Chicken \u00b7 Portion, cool promptly and refrigerate.",
+          "evidence": null
+        },
+        {
+          "code": "unscheduled",
+          "affected_ids": [
+            "c33ac4b6-3b97-47fa-b737-77baaf751e55:0:prep"
+          ],
+          "explanation": "Instant Pot Palak Paneer \u00b7 Wash spinach, chop aromatics and blend cashew paste: No suitable time was found within the current windows, dependencies and limits.",
+          "evidence": null
+        },
+        {
+          "code": "unscheduled",
+          "affected_ids": [
+            "c33ac4b6-3b97-47fa-b737-77baaf751e55:0:base"
+          ],
+          "explanation": "Instant Pot Palak Paneer \u00b7 Saut\u00e9 aromatics and pressure-cook spinach: Waiting for: Instant Pot Palak Paneer \u00b7 Wash spinach, chop aromatics and blend cashew paste.",
+          "evidence": null
+        },
+        {
+          "code": "unscheduled",
+          "affected_ids": [
+            "c33ac4b6-3b97-47fa-b737-77baaf751e55:0:blend"
+          ],
+          "explanation": "Instant Pot Palak Paneer \u00b7 Blend spinach sauce and stir in cashew paste: Waiting for: Instant Pot Palak Paneer \u00b7 Saut\u00e9 aromatics and pressure-cook spinach.",
+          "evidence": null
+        },
+        {
+          "code": "unscheduled",
+          "affected_ids": [
+            "c33ac4b6-3b97-47fa-b737-77baaf751e55:0:store"
+          ],
+          "explanation": "Instant Pot Palak Paneer \u00b7 Portion, cool promptly and refrigerate: Waiting for: Instant Pot Palak Paneer \u00b7 Blend spinach sauce and stir in cashew paste.",
+          "evidence": null
+        },
+        {
+          "code": "unscheduled",
+          "affected_ids": [
+            "c33ac4b6-3b97-47fa-b737-77baaf751e55:0:finish"
+          ],
+          "explanation": "Instant Pot Palak Paneer \u00b7 Reheat spinach sauce; add paneer and season: Waiting for: Instant Pot Palak Paneer \u00b7 Portion, cool promptly and refrigerate.",
+          "evidence": null
+        },
+        {
+          "code": "unscheduled",
+          "affected_ids": [
+            "3d93bf1e-baee-46c8-8715-22384e7b89c5:0:chop"
+          ],
+          "explanation": "Vegetable Pulao Recipe | Veg Pulav \u00b7 Chop the pulao vegetables: No suitable time was found within the current windows, dependencies and limits.",
+          "evidence": null
+        },
+        {
+          "code": "unscheduled",
+          "affected_ids": [
+            "3d93bf1e-baee-46c8-8715-22384e7b89c5:0:vegetables"
+          ],
+          "explanation": "Vegetable Pulao Recipe | Veg Pulav \u00b7 Fry cashews and saut\u00e9 vegetables in stages: Waiting for: Vegetable Pulao Recipe | Veg Pulav \u00b7 Chop the pulao vegetables.",
+          "evidence": null
+        },
+        {
+          "code": "unscheduled",
+          "affected_ids": [
+            "3d93bf1e-baee-46c8-8715-22384e7b89c5:0:store"
+          ],
+          "explanation": "Vegetable Pulao Recipe | Veg Pulav \u00b7 Portion, cool promptly and refrigerate: Waiting for: Vegetable Pulao Recipe | Veg Pulav \u00b7 Fry cashews and saut\u00e9 vegetables in stages.",
+          "evidence": null
+        },
+        {
+          "code": "unscheduled",
+          "affected_ids": [
+            "3d93bf1e-baee-46c8-8715-22384e7b89c5:0:rice"
+          ],
+          "explanation": "Vegetable Pulao Recipe | Veg Pulav \u00b7 Cook rice with whole spices: No suitable time was found within the current windows, dependencies and limits.",
+          "evidence": null
+        },
+        {
+          "code": "unscheduled",
+          "affected_ids": [
+            "3d93bf1e-baee-46c8-8715-22384e7b89c5:0:combine"
+          ],
+          "explanation": "Vegetable Pulao Recipe | Veg Pulav \u00b7 Reheat vegetables and fold into fresh rice: Waiting for: Vegetable Pulao Recipe | Veg Pulav \u00b7 Cook rice with whole spices, Vegetable Pulao Recipe | Veg Pulav \u00b7 Portion, cool promptly and refrigerate.",
+          "evidence": null
+        },
+        {
+          "code": "unscheduled",
+          "affected_ids": [
+            "d4d2265d-07e7-4cc1-aba4-48f455849992:0:grate"
+          ],
+          "explanation": "Instant Pot Carrot Halwa Recipe \u00b7 Peel and grate carrots: No suitable time was found within the current windows, dependencies and limits.",
+          "evidence": null
+        },
+        {
+          "code": "unscheduled",
+          "affected_ids": [
+            "d4d2265d-07e7-4cc1-aba4-48f455849992:0:pressure"
+          ],
+          "explanation": "Instant Pot Carrot Halwa Recipe \u00b7 Saut\u00e9 carrots and pressure-cook with almond milk: Waiting for: Instant Pot Carrot Halwa Recipe \u00b7 Peel and grate carrots.",
+          "evidence": null
+        },
+        {
+          "code": "unscheduled",
+          "affected_ids": [
+            "d4d2265d-07e7-4cc1-aba4-48f455849992:0:reduce"
+          ],
+          "explanation": "Instant Pot Carrot Halwa Recipe \u00b7 Add sugar and almond meal; stir until thick: Waiting for: Instant Pot Carrot Halwa Recipe \u00b7 Saut\u00e9 carrots and pressure-cook with almond milk.",
+          "evidence": null
+        },
+        {
+          "code": "unscheduled",
+          "affected_ids": [
+            "d4d2265d-07e7-4cc1-aba4-48f455849992:0:store"
+          ],
+          "explanation": "Instant Pot Carrot Halwa Recipe \u00b7 Portion, cool promptly and refrigerate: Waiting for: Instant Pot Carrot Halwa Recipe \u00b7 Add sugar and almond meal; stir until thick.",
+          "evidence": null
+        },
+        {
+          "code": "unscheduled",
+          "affected_ids": [
+            "d4d2265d-07e7-4cc1-aba4-48f455849992:0:serve"
+          ],
+          "explanation": "Instant Pot Carrot Halwa Recipe \u00b7 Portion chilled halwa and refrigerate: Waiting for: Instant Pot Carrot Halwa Recipe \u00b7 Portion, cool promptly and refrigerate.",
+          "evidence": null
+        }
+      ],
+      "seconds": 4.72
+    },
+    {
+      "menu": "Indian supper",
+      "condition": "missing_dependency",
+      "status": "incomplete",
+      "outcome": {
+        "code": "needs_input",
+        "message": "Some recipe or gathering details are missing. Review the plan checks before scheduling.",
+        "solver_status": null
+      },
+      "expected_outcome": "needs_input",
+      "validation_passed": true,
+      "menu_blockers": [],
+      "usable": false,
+      "violations": [
+        {
+          "code": "recipe_contract",
+          "affected_ids": [
+            "be90d59e-6802-4755-a87f-53a65ac38712"
+          ],
+          "explanation": "Steam potatoes: prerequisite steps are missing: missing-step.",
+          "evidence": null
+        }
+      ],
+      "seconds": 0.0
+    },
+    {
+      "menu": "Indian vegetarian",
+      "condition": "baseline",
+      "status": "feasible",
+      "outcome": {
+        "code": "complete",
+        "message": "All preparation tasks are scheduled and passed the schedule checks.",
+        "solver_status": "OPTIMAL"
+      },
+      "expected_outcome": "complete",
+      "validation_passed": true,
+      "menu_blockers": [],
+      "usable": true,
+      "violations": [],
+      "seconds": 0.88
+    },
+    {
+      "menu": "Indian vegetarian",
+      "condition": "more_time",
+      "status": "feasible",
+      "outcome": {
+        "code": "complete",
+        "message": "All preparation tasks are scheduled and passed the schedule checks.",
+        "solver_status": "OPTIMAL"
+      },
+      "expected_outcome": "complete",
+      "validation_passed": true,
+      "menu_blockers": [],
+      "usable": true,
+      "violations": [],
+      "seconds": 0.73
+    },
+    {
+      "menu": "Indian vegetarian",
+      "condition": "busy_calendar",
+      "status": "conflict",
+      "outcome": {
+        "code": "no_fit_found",
+        "message": "No complete plan was found under the current scheduling rules. Review the task constraints before changing your time or menu.",
+        "solver_status": "INFEASIBLE"
+      },
+      "expected_outcome": "no_fit_found",
+      "validation_passed": true,
+      "menu_blockers": [],
+      "usable": false,
+      "violations": [
+        {
+          "code": "unscheduled",
+          "affected_ids": [
+            "bca8ffc6-f026-47dc-998f-95330a1b3093:0:coat"
+          ],
+          "explanation": "Air Fryer Paneer Tikka \u00b7 Cut paneer and vegetables; coat in marinade: No suitable time was found within the current windows, dependencies and limits.",
+          "evidence": null
+        },
+        {
+          "code": "unscheduled",
+          "affected_ids": [
+            "bca8ffc6-f026-47dc-998f-95330a1b3093:0:marinate"
+          ],
+          "explanation": "Air Fryer Paneer Tikka \u00b7 Refrigerate to marinate: Waiting for: Air Fryer Paneer Tikka \u00b7 Cut paneer and vegetables; coat in marinade.",
+          "evidence": null
+        },
+        {
+          "code": "unscheduled",
+          "affected_ids": [
+            "bca8ffc6-f026-47dc-998f-95330a1b3093:0:cook"
+          ],
+          "explanation": "Air Fryer Paneer Tikka \u00b7 Thread skewers, preheat and air-fry paneer tikka: Waiting for: Air Fryer Paneer Tikka \u00b7 Refrigerate to marinate.",
+          "evidence": null
+        },
+        {
+          "code": "unscheduled",
+          "affected_ids": [
+            "e0689b3f-1e56-43e1-8231-730109b5a3be:0:prep"
+          ],
+          "explanation": "Instant Pot Palak Paneer \u00b7 Wash spinach, chop aromatics and blend cashew paste: No suitable time was found within the current windows, dependencies and limits.",
+          "evidence": null
+        },
+        {
+          "code": "unscheduled",
+          "affected_ids": [
+            "e0689b3f-1e56-43e1-8231-730109b5a3be:0:base"
+          ],
+          "explanation": "Instant Pot Palak Paneer \u00b7 Saut\u00e9 aromatics and pressure-cook spinach: Waiting for: Instant Pot Palak Paneer \u00b7 Wash spinach, chop aromatics and blend cashew paste.",
+          "evidence": null
+        },
+        {
+          "code": "unscheduled",
+          "affected_ids": [
+            "e0689b3f-1e56-43e1-8231-730109b5a3be:0:blend"
+          ],
+          "explanation": "Instant Pot Palak Paneer \u00b7 Blend spinach sauce and stir in cashew paste: Waiting for: Instant Pot Palak Paneer \u00b7 Saut\u00e9 aromatics and pressure-cook spinach.",
+          "evidence": null
+        },
+        {
+          "code": "unscheduled",
+          "affected_ids": [
+            "e0689b3f-1e56-43e1-8231-730109b5a3be:0:store"
+          ],
+          "explanation": "Instant Pot Palak Paneer \u00b7 Portion, cool promptly and refrigerate: Waiting for: Instant Pot Palak Paneer \u00b7 Blend spinach sauce and stir in cashew paste.",
+          "evidence": null
+        },
+        {
+          "code": "unscheduled",
+          "affected_ids": [
+            "e0689b3f-1e56-43e1-8231-730109b5a3be:0:finish"
+          ],
+          "explanation": "Instant Pot Palak Paneer \u00b7 Reheat spinach sauce; add paneer and season: Waiting for: Instant Pot Palak Paneer \u00b7 Portion, cool promptly and refrigerate.",
+          "evidence": null
+        },
+        {
+          "code": "unscheduled",
+          "affected_ids": [
+            "a1809129-d945-438b-b733-6dbade695457:0:chop"
+          ],
+          "explanation": "Vegetable Pulao Recipe | Veg Pulav \u00b7 Chop the pulao vegetables: No suitable time was found within the current windows, dependencies and limits.",
+          "evidence": null
+        },
+        {
+          "code": "unscheduled",
+          "affected_ids": [
+            "a1809129-d945-438b-b733-6dbade695457:0:vegetables"
+          ],
+          "explanation": "Vegetable Pulao Recipe | Veg Pulav \u00b7 Fry cashews and saut\u00e9 vegetables in stages: Waiting for: Vegetable Pulao Recipe | Veg Pulav \u00b7 Chop the pulao vegetables.",
+          "evidence": null
+        },
+        {
+          "code": "unscheduled",
+          "affected_ids": [
+            "a1809129-d945-438b-b733-6dbade695457:0:store"
+          ],
+          "explanation": "Vegetable Pulao Recipe | Veg Pulav \u00b7 Portion, cool promptly and refrigerate: Waiting for: Vegetable Pulao Recipe | Veg Pulav \u00b7 Fry cashews and saut\u00e9 vegetables in stages.",
+          "evidence": null
+        },
+        {
+          "code": "unscheduled",
+          "affected_ids": [
+            "a1809129-d945-438b-b733-6dbade695457:0:rice"
+          ],
+          "explanation": "Vegetable Pulao Recipe | Veg Pulav \u00b7 Cook rice with whole spices: No suitable time was found within the current windows, dependencies and limits.",
+          "evidence": null
+        },
+        {
+          "code": "unscheduled",
+          "affected_ids": [
+            "a1809129-d945-438b-b733-6dbade695457:0:combine"
+          ],
+          "explanation": "Vegetable Pulao Recipe | Veg Pulav \u00b7 Reheat vegetables and fold into fresh rice: Waiting for: Vegetable Pulao Recipe | Veg Pulav \u00b7 Cook rice with whole spices, Vegetable Pulao Recipe | Veg Pulav \u00b7 Portion, cool promptly and refrigerate.",
+          "evidence": null
+        },
+        {
+          "code": "unscheduled",
+          "affected_ids": [
+            "ec1c49f1-0a85-45e5-a995-849f4bd24aab:0:chop"
+          ],
+          "explanation": "Indian Cucumber Salad (Kakdi Koshimbir) \u00b7 Dice cucumber and chop cilantro; refrigerate: No suitable time was found within the current windows, dependencies and limits.",
+          "evidence": null
+        },
+        {
+          "code": "unscheduled",
+          "affected_ids": [
+            "ec1c49f1-0a85-45e5-a995-849f4bd24aab:0:temper"
+          ],
+          "explanation": "Indian Cucumber Salad (Kakdi Koshimbir) \u00b7 Sizzle spices for the cucumber salad: No suitable time was found within the current windows, dependencies and limits.",
+          "evidence": null
+        },
+        {
+          "code": "unscheduled",
+          "affected_ids": [
+            "ec1c49f1-0a85-45e5-a995-849f4bd24aab:0:finish"
+          ],
+          "explanation": "Indian Cucumber Salad (Kakdi Koshimbir) \u00b7 Toss cucumber salad with tempering and seasoning: Waiting for: Indian Cucumber Salad (Kakdi Koshimbir) \u00b7 Dice cucumber and chop cilantro; refrigerate, Indian Cucumber Salad (Kakdi Koshimbir) \u00b7 Sizzle spices for the cucumber salad.",
+          "evidence": null
+        },
+        {
+          "code": "unscheduled",
+          "affected_ids": [
+            "9b645a3d-15c8-42fd-91ee-9de113c09d69:0:grate"
+          ],
+          "explanation": "Instant Pot Carrot Halwa Recipe \u00b7 Peel and grate carrots: No suitable time was found within the current windows, dependencies and limits.",
+          "evidence": null
+        },
+        {
+          "code": "unscheduled",
+          "affected_ids": [
+            "9b645a3d-15c8-42fd-91ee-9de113c09d69:0:pressure"
+          ],
+          "explanation": "Instant Pot Carrot Halwa Recipe \u00b7 Saut\u00e9 carrots and pressure-cook with almond milk: Waiting for: Instant Pot Carrot Halwa Recipe \u00b7 Peel and grate carrots.",
+          "evidence": null
+        },
+        {
+          "code": "unscheduled",
+          "affected_ids": [
+            "9b645a3d-15c8-42fd-91ee-9de113c09d69:0:reduce"
+          ],
+          "explanation": "Instant Pot Carrot Halwa Recipe \u00b7 Add sugar and almond meal; stir until thick: Waiting for: Instant Pot Carrot Halwa Recipe \u00b7 Saut\u00e9 carrots and pressure-cook with almond milk.",
+          "evidence": null
+        },
+        {
+          "code": "unscheduled",
+          "affected_ids": [
+            "9b645a3d-15c8-42fd-91ee-9de113c09d69:0:store"
+          ],
+          "explanation": "Instant Pot Carrot Halwa Recipe \u00b7 Portion, cool promptly and refrigerate: Waiting for: Instant Pot Carrot Halwa Recipe \u00b7 Add sugar and almond meal; stir until thick.",
+          "evidence": null
+        },
+        {
+          "code": "unscheduled",
+          "affected_ids": [
+            "9b645a3d-15c8-42fd-91ee-9de113c09d69:0:serve"
+          ],
+          "explanation": "Instant Pot Carrot Halwa Recipe \u00b7 Portion chilled halwa and refrigerate: Waiting for: Instant Pot Carrot Halwa Recipe \u00b7 Portion, cool promptly and refrigerate.",
+          "evidence": null
+        }
+      ],
+      "seconds": 3.79
+    },
+    {
+      "menu": "Indian vegetarian",
+      "condition": "missing_dependency",
+      "status": "incomplete",
+      "outcome": {
+        "code": "needs_input",
+        "message": "Some recipe or gathering details are missing. Review the plan checks before scheduling.",
+        "solver_status": null
+      },
+      "expected_outcome": "needs_input",
+      "validation_passed": true,
+      "menu_blockers": [],
+      "usable": false,
+      "violations": [
+        {
+          "code": "recipe_contract",
+          "affected_ids": [
+            "bca8ffc6-f026-47dc-998f-95330a1b3093"
+          ],
+          "explanation": "Cut paneer and vegetables; coat in marinade: prerequisite steps are missing: missing-step.",
+          "evidence": null
+        }
+      ],
+      "seconds": 0.0
+    },
+    {
+      "menu": "Thanksgiving",
+      "condition": "baseline",
+      "status": "feasible",
+      "outcome": {
+        "code": "complete",
+        "message": "All preparation tasks are scheduled and passed the schedule checks.",
+        "solver_status": null
+      },
+      "expected_outcome": "complete",
+      "validation_passed": true,
+      "menu_blockers": [],
+      "usable": true,
+      "violations": [],
+      "seconds": 0.38
+    },
+    {
+      "menu": "Thanksgiving",
+      "condition": "more_time",
+      "status": "feasible",
+      "outcome": {
+        "code": "complete",
+        "message": "All preparation tasks are scheduled and passed the schedule checks.",
+        "solver_status": "OPTIMAL"
+      },
+      "expected_outcome": "complete",
+      "validation_passed": true,
+      "menu_blockers": [],
+      "usable": true,
+      "violations": [],
+      "seconds": 2.42
+    },
+    {
+      "menu": "Thanksgiving",
+      "condition": "busy_calendar",
+      "status": "conflict",
+      "outcome": {
+        "code": "no_fit_found",
+        "message": "No complete plan was found under the current scheduling rules. Review the task constraints before changing your time or menu.",
+        "solver_status": "INFEASIBLE"
+      },
+      "expected_outcome": "no_fit_found",
+      "validation_passed": true,
+      "menu_blockers": [],
+      "usable": false,
+      "violations": [
+        {
+          "code": "unscheduled",
+          "affected_ids": [
+            "689dbe3a-f7d5-48f0-862c-c8e0831101e6:0:hosting-1"
+          ],
+          "explanation": "Thanksgiving Turkey \u00b7 Season thawed turkey for dry brining: No suitable time was found within the current windows, dependencies and limits.",
+          "evidence": null
+        },
+        {
+          "code": "unscheduled",
+          "affected_ids": [
+            "689dbe3a-f7d5-48f0-862c-c8e0831101e6:0:hosting-2"
+          ],
+          "explanation": "Thanksgiving Turkey \u00b7 Leave turkey dry-brining in refrigerator: Waiting for: Thanksgiving Turkey \u00b7 Season thawed turkey for dry brining.",
+          "evidence": null
+        },
+        {
+          "code": "unscheduled",
+          "affected_ids": [
+            "689dbe3a-f7d5-48f0-862c-c8e0831101e6:0:hosting-3"
+          ],
+          "explanation": "Thanksgiving Turkey \u00b7 Uncover turkey to dry the skin: Waiting for: Thanksgiving Turkey \u00b7 Leave turkey dry-brining in refrigerator.",
+          "evidence": null
+        },
+        {
+          "code": "unscheduled",
+          "affected_ids": [
+            "689dbe3a-f7d5-48f0-862c-c8e0831101e6:0:hosting-4"
+          ],
+          "explanation": "Thanksgiving Turkey \u00b7 Prepare turkey and roasting pan; preheat oven: Waiting for: Thanksgiving Turkey \u00b7 Uncover turkey to dry the skin.",
+          "evidence": null
+        },
+        {
+          "code": "unscheduled",
+          "affected_ids": [
+            "689dbe3a-f7d5-48f0-862c-c8e0831101e6:0:hosting-5"
+          ],
+          "explanation": "Thanksgiving Turkey \u00b7 Roast turkey, reduce heat and check doneness: Waiting for: Thanksgiving Turkey \u00b7 Prepare turkey and roasting pan; preheat oven.",
+          "evidence": null
+        },
+        {
+          "code": "unscheduled",
+          "affected_ids": [
+            "689dbe3a-f7d5-48f0-862c-c8e0831101e6:0:hosting-6"
+          ],
+          "explanation": "Thanksgiving Turkey \u00b7 Rest turkey before carving: Waiting for: Thanksgiving Turkey \u00b7 Roast turkey, reduce heat and check doneness.",
+          "evidence": null
+        },
+        {
+          "code": "unscheduled",
+          "affected_ids": [
+            "750f9783-8f96-4d36-ad76-bf2ef2440fa2:0:hosting-1"
+          ],
+          "explanation": "Garlic Mashed Potatoes Recipe \u00b7 Peel and cut potatoes; prepare garlic: No suitable time was found within the current windows, dependencies and limits.",
+          "evidence": null
+        },
+        {
+          "code": "unscheduled",
+          "affected_ids": [
+            "750f9783-8f96-4d36-ad76-bf2ef2440fa2:0:hosting-2"
+          ],
+          "explanation": "Garlic Mashed Potatoes Recipe \u00b7 Boil potatoes and garlic until tender: Waiting for: Garlic Mashed Potatoes Recipe \u00b7 Peel and cut potatoes; prepare garlic.",
+          "evidence": null
+        },
+        {
+          "code": "unscheduled",
+          "affected_ids": [
+            "750f9783-8f96-4d36-ad76-bf2ef2440fa2:0:hosting-3"
+          ],
+          "explanation": "Garlic Mashed Potatoes Recipe \u00b7 Drain and mash with butter and warm milk: Waiting for: Garlic Mashed Potatoes Recipe \u00b7 Boil potatoes and garlic until tender.",
+          "evidence": null
+        },
+        {
+          "code": "unscheduled",
+          "affected_ids": [
+            "750f9783-8f96-4d36-ad76-bf2ef2440fa2:0:store"
+          ],
+          "explanation": "Garlic Mashed Potatoes Recipe \u00b7 Portion, cool promptly and refrigerate: Waiting for: Garlic Mashed Potatoes Recipe \u00b7 Drain and mash with butter and warm milk.",
+          "evidence": null
+        },
+        {
+          "code": "unscheduled",
+          "affected_ids": [
+            "750f9783-8f96-4d36-ad76-bf2ef2440fa2:0:hosting-4"
+          ],
+          "explanation": "Garlic Mashed Potatoes Recipe \u00b7 Reheat mashed potatoes gently: Waiting for: Garlic Mashed Potatoes Recipe \u00b7 Portion, cool promptly and refrigerate.",
+          "evidence": null
+        },
+        {
+          "code": "unscheduled",
+          "affected_ids": [
+            "949e6c96-6ddd-4143-a51a-0e57f5fd5cbb:0:hosting-1"
+          ],
+          "explanation": "Vegetarian Cornbread and White Bean Stuffing \u00b7 Mix and bake cornbread: No suitable time was found within the current windows, dependencies and limits.",
+          "evidence": null
+        },
+        {
+          "code": "unscheduled",
+          "affected_ids": [
+            "949e6c96-6ddd-4143-a51a-0e57f5fd5cbb:0:cornbread-cool"
+          ],
+          "explanation": "Vegetarian Cornbread and White Bean Stuffing \u00b7 Cool cornbread on a rack: Waiting for: Vegetarian Cornbread and White Bean Stuffing \u00b7 Mix and bake cornbread.",
+          "evidence": null
+        },
+        {
+          "code": "unscheduled",
+          "affected_ids": [
+            "949e6c96-6ddd-4143-a51a-0e57f5fd5cbb:0:cornbread-pack"
+          ],
+          "explanation": "Vegetarian Cornbread and White Bean Stuffing \u00b7 Pack cooled cornbread airtight: Waiting for: Vegetarian Cornbread and White Bean Stuffing \u00b7 Cool cornbread on a rack.",
+          "evidence": null
+        },
+        {
+          "code": "unscheduled",
+          "affected_ids": [
+            "949e6c96-6ddd-4143-a51a-0e57f5fd5cbb:0:hosting-2"
+          ],
+          "explanation": "Vegetarian Cornbread and White Bean Stuffing \u00b7 Cube and toast the cornbread: Waiting for: Vegetarian Cornbread and White Bean Stuffing \u00b7 Pack cooled cornbread airtight.",
+          "evidence": null
+        },
+        {
+          "code": "unscheduled",
+          "affected_ids": [
+            "949e6c96-6ddd-4143-a51a-0e57f5fd5cbb:0:hosting-3"
+          ],
+          "explanation": "Vegetarian Cornbread and White Bean Stuffing \u00b7 Cook white beans, vegetables and apple: Waiting for: Vegetarian Cornbread and White Bean Stuffing \u00b7 Cube and toast the cornbread.",
+          "evidence": null
+        },
+        {
+          "code": "unscheduled",
+          "affected_ids": [
+            "949e6c96-6ddd-4143-a51a-0e57f5fd5cbb:0:hosting-4"
+          ],
+          "explanation": "Vegetarian Cornbread and White Bean Stuffing \u00b7 Mix and bake stuffing: Waiting for: Vegetarian Cornbread and White Bean Stuffing \u00b7 Cook white beans, vegetables and apple.",
+          "evidence": null
+        },
+        {
+          "code": "unscheduled",
+          "affected_ids": [
+            "949e6c96-6ddd-4143-a51a-0e57f5fd5cbb:0:store"
+          ],
+          "explanation": "Vegetarian Cornbread and White Bean Stuffing \u00b7 Portion, cool promptly and refrigerate: Waiting for: Vegetarian Cornbread and White Bean Stuffing \u00b7 Mix and bake stuffing.",
+          "evidence": null
+        },
+        {
+          "code": "unscheduled",
+          "affected_ids": [
+            "949e6c96-6ddd-4143-a51a-0e57f5fd5cbb:0:hosting-5"
+          ],
+          "explanation": "Vegetarian Cornbread and White Bean Stuffing \u00b7 Reheat stuffing and crisp the top: Waiting for: Vegetarian Cornbread and White Bean Stuffing \u00b7 Portion, cool promptly and refrigerate.",
+          "evidence": null
+        },
+        {
+          "code": "unscheduled",
+          "affected_ids": [
+            "1751109c-e64d-4707-a6a0-bde27e986614:0:hosting-1"
+          ],
+          "explanation": "Cranberry Orange Sauce \u00b7 Wash cranberries and zest orange: No suitable time was found within the current windows, dependencies and limits.",
+          "evidence": null
+        },
+        {
+          "code": "unscheduled",
+          "affected_ids": [
+            "1751109c-e64d-4707-a6a0-bde27e986614:0:hosting-2"
+          ],
+          "explanation": "Cranberry Orange Sauce \u00b7 Simmer cranberry sauce: Waiting for: Cranberry Orange Sauce \u00b7 Wash cranberries and zest orange.",
+          "evidence": null
+        },
+        {
+          "code": "unscheduled",
+          "affected_ids": [
+            "1751109c-e64d-4707-a6a0-bde27e986614:0:hosting-3"
+          ],
+          "explanation": "Cranberry Orange Sauce \u00b7 Transfer sauce to a container and refrigerate: Waiting for: Cranberry Orange Sauce \u00b7 Simmer cranberry sauce.",
+          "evidence": null
+        },
+        {
+          "code": "unscheduled",
+          "affected_ids": [
+            "a4c435e1-356a-4cc5-be04-07083383f8a1:0:assemble"
+          ],
+          "explanation": "Gluten Free Apple Crisp \u00b7 Slice apples, mix topping and assemble crisp: No suitable time was found within the current windows, dependencies and limits.",
+          "evidence": null
+        },
+        {
+          "code": "unscheduled",
+          "affected_ids": [
+            "a4c435e1-356a-4cc5-be04-07083383f8a1:0:bake"
+          ],
+          "explanation": "Gluten Free Apple Crisp \u00b7 Bake apple crisp until tender and golden: Waiting for: Gluten Free Apple Crisp \u00b7 Slice apples, mix topping and assemble crisp.",
+          "evidence": null
+        },
+        {
+          "code": "unscheduled",
+          "affected_ids": [
+            "a4c435e1-356a-4cc5-be04-07083383f8a1:0:cool"
+          ],
+          "explanation": "Gluten Free Apple Crisp \u00b7 Cool the apple crisp: Waiting for: Gluten Free Apple Crisp \u00b7 Bake apple crisp until tender and golden.",
+          "evidence": null
+        },
+        {
+          "code": "unscheduled",
+          "affected_ids": [
+            "a4c435e1-356a-4cc5-be04-07083383f8a1:0:store"
+          ],
+          "explanation": "Gluten Free Apple Crisp \u00b7 Cover and refrigerate the crisp: Waiting for: Gluten Free Apple Crisp \u00b7 Cool the apple crisp.",
+          "evidence": null
+        },
+        {
+          "code": "unscheduled",
+          "affected_ids": [
+            "a4c435e1-356a-4cc5-be04-07083383f8a1:0:reheat"
+          ],
+          "explanation": "Gluten Free Apple Crisp \u00b7 Rewarm the apple crisp: Waiting for: Gluten Free Apple Crisp \u00b7 Cover and refrigerate the crisp.",
+          "evidence": null
+        }
+      ],
+      "seconds": 5.77
+    },
+    {
+      "menu": "Thanksgiving",
+      "condition": "missing_dependency",
+      "status": "incomplete",
+      "outcome": {
+        "code": "needs_input",
+        "message": "Some recipe or gathering details are missing. Review the plan checks before scheduling.",
+        "solver_status": null
+      },
+      "expected_outcome": "needs_input",
+      "validation_passed": true,
+      "menu_blockers": [],
+      "usable": false,
+      "violations": [
+        {
+          "code": "recipe_contract",
+          "affected_ids": [
+            "689dbe3a-f7d5-48f0-862c-c8e0831101e6"
+          ],
+          "explanation": "Season thawed turkey for dry brining: prerequisite steps are missing: missing-step.",
+          "evidence": null
+        }
+      ],
+      "seconds": 0.0
+    },
+    {
+      "menu": "Goan Christmas",
+      "condition": "baseline",
+      "status": "feasible",
+      "outcome": {
+        "code": "complete",
+        "message": "All preparation tasks are scheduled and passed the schedule checks.",
+        "solver_status": "OPTIMAL"
+      },
+      "expected_outcome": "complete",
+      "validation_passed": true,
+      "menu_blockers": [],
+      "usable": true,
+      "violations": [],
+      "seconds": 4.31
+    },
+    {
+      "menu": "Goan Christmas",
+      "condition": "more_time",
+      "status": "feasible",
+      "outcome": {
+        "code": "complete",
+        "message": "All preparation tasks are scheduled and passed the schedule checks.",
+        "solver_status": "OPTIMAL"
+      },
+      "expected_outcome": "complete",
+      "validation_passed": true,
+      "menu_blockers": [],
+      "usable": true,
+      "violations": [],
+      "seconds": 4.41
+    },
+    {
+      "menu": "Goan Christmas",
+      "condition": "busy_calendar",
+      "status": "conflict",
+      "outcome": {
+        "code": "no_fit_found",
+        "message": "No complete plan was found under the current scheduling rules. Review the task constraints before changing your time or menu.",
+        "solver_status": "INFEASIBLE"
+      },
+      "expected_outcome": "no_fit_found",
+      "validation_passed": true,
+      "menu_blockers": [],
+      "usable": false,
+      "violations": [
+        {
+          "code": "unscheduled",
+          "affected_ids": [
+            "1bc066e5-6205-45ef-9c63-7f066b3595c2:0:mix"
+          ],
+          "explanation": "Easy Tuna Croquettes \u00b7 Mix tuna filling: No suitable time was found within the current windows, dependencies and limits.",
+          "evidence": null
+        },
+        {
+          "code": "unscheduled",
+          "affected_ids": [
+            "1bc066e5-6205-45ef-9c63-7f066b3595c2:0:shape"
+          ],
+          "explanation": "Easy Tuna Croquettes \u00b7 Shape, coat and refrigerate croquettes: Waiting for: Easy Tuna Croquettes \u00b7 Mix tuna filling.",
+          "evidence": null
+        },
+        {
+          "code": "unscheduled",
+          "affected_ids": [
+            "1bc066e5-6205-45ef-9c63-7f066b3595c2:0:cook"
+          ],
+          "explanation": "Easy Tuna Croquettes \u00b7 Air-fry croquettes, turning halfway: Waiting for: Easy Tuna Croquettes \u00b7 Shape, coat and refrigerate croquettes.",
+          "evidence": null
+        },
+        {
+          "code": "unscheduled",
+          "affected_ids": [
+            "4e1099fa-c4e0-4853-b37b-cb5fda338740:0:paste"
+          ],
+          "explanation": "Chicken Cafreal \u00b7 Prepare chicken and blend cafreal paste: No suitable time was found within the current windows, dependencies and limits.",
+          "evidence": null
+        },
+        {
+          "code": "unscheduled",
+          "affected_ids": [
+            "4e1099fa-c4e0-4853-b37b-cb5fda338740:0:marinate"
+          ],
+          "explanation": "Chicken Cafreal \u00b7 Refrigerate chicken in its marinade: Waiting for: Chicken Cafreal \u00b7 Prepare chicken and blend cafreal paste.",
+          "evidence": null
+        },
+        {
+          "code": "unscheduled",
+          "affected_ids": [
+            "4e1099fa-c4e0-4853-b37b-cb5fda338740:0:cook"
+          ],
+          "explanation": "Chicken Cafreal \u00b7 Sear chicken, then cook in cafreal paste: Waiting for: Chicken Cafreal \u00b7 Refrigerate chicken in its marinade.",
+          "evidence": null
+        },
+        {
+          "code": "unscheduled",
+          "affected_ids": [
+            "168399aa-f9ea-4bc6-9eb2-13c2da4a825a:0:rinse"
+          ],
+          "explanation": "Goan Sannas (yeast method) \u00b7 Rinse rice and cover with water: No suitable time was found within the current windows, dependencies and limits.",
+          "evidence": null
+        },
+        {
+          "code": "unscheduled",
+          "affected_ids": [
+            "168399aa-f9ea-4bc6-9eb2-13c2da4a825a:0:soak"
+          ],
+          "explanation": "Goan Sannas (yeast method) \u00b7 Soak rice overnight: Waiting for: Goan Sannas (yeast method) \u00b7 Rinse rice and cover with water.",
+          "evidence": null
+        },
+        {
+          "code": "unscheduled",
+          "affected_ids": [
+            "168399aa-f9ea-4bc6-9eb2-13c2da4a825a:0:drain"
+          ],
+          "explanation": "Goan Sannas (yeast method) \u00b7 Drain soaked rice and refrigerate until grinding: Waiting for: Goan Sannas (yeast method) \u00b7 Soak rice overnight.",
+          "evidence": null
+        },
+        {
+          "code": "unscheduled",
+          "affected_ids": [
+            "168399aa-f9ea-4bc6-9eb2-13c2da4a825a:0:batter"
+          ],
+          "explanation": "Goan Sannas (yeast method) \u00b7 Grind rice and coconut; mix in yeast and sugar: Waiting for: Goan Sannas (yeast method) \u00b7 Drain soaked rice and refrigerate until grinding.",
+          "evidence": null
+        },
+        {
+          "code": "unscheduled",
+          "affected_ids": [
+            "168399aa-f9ea-4bc6-9eb2-13c2da4a825a:0:rise"
+          ],
+          "explanation": "Goan Sannas (yeast method) \u00b7 Let batter rise until bubbly: Waiting for: Goan Sannas (yeast method) \u00b7 Grind rice and coconut; mix in yeast and sugar.",
+          "evidence": null
+        },
+        {
+          "code": "unscheduled",
+          "affected_ids": [
+            "168399aa-f9ea-4bc6-9eb2-13c2da4a825a:0:steam"
+          ],
+          "explanation": "Goan Sannas (yeast method) \u00b7 Fill molds, steam and unmold sannas: Waiting for: Goan Sannas (yeast method) \u00b7 Let batter rise until bubbly.",
+          "evidence": null
+        },
+        {
+          "code": "unscheduled",
+          "affected_ids": [
+            "e674a0b6-34db-4e07-93bf-34f090b2194f:0:rinse"
+          ],
+          "explanation": "Sonay Sukhe (Black Chana Sukka) \u00b7 Rinse chana and cover with water: No suitable time was found within the current windows, dependencies and limits.",
+          "evidence": null
+        },
+        {
+          "code": "unscheduled",
+          "affected_ids": [
+            "e674a0b6-34db-4e07-93bf-34f090b2194f:0:soak"
+          ],
+          "explanation": "Sonay Sukhe (Black Chana Sukka) \u00b7 Soak chana overnight: Waiting for: Sonay Sukhe (Black Chana Sukka) \u00b7 Rinse chana and cover with water.",
+          "evidence": null
+        },
+        {
+          "code": "unscheduled",
+          "affected_ids": [
+            "e674a0b6-34db-4e07-93bf-34f090b2194f:0:pressure"
+          ],
+          "explanation": "Sonay Sukhe (Black Chana Sukka) \u00b7 Pressure-cook chana until tender: Waiting for: Sonay Sukhe (Black Chana Sukka) \u00b7 Soak chana overnight.",
+          "evidence": null
+        },
+        {
+          "code": "unscheduled",
+          "affected_ids": [
+            "e674a0b6-34db-4e07-93bf-34f090b2194f:0:finish"
+          ],
+          "explanation": "Sonay Sukhe (Black Chana Sukka) \u00b7 Temper aromatics and finish chana sukka: Waiting for: Sonay Sukhe (Black Chana Sukka) \u00b7 Pressure-cook chana until tender.",
+          "evidence": null
+        },
+        {
+          "code": "unscheduled",
+          "affected_ids": [
+            "e674a0b6-34db-4e07-93bf-34f090b2194f:0:store"
+          ],
+          "explanation": "Sonay Sukhe (Black Chana Sukka) \u00b7 Portion, cool promptly and refrigerate: Waiting for: Sonay Sukhe (Black Chana Sukka) \u00b7 Temper aromatics and finish chana sukka.",
+          "evidence": null
+        },
+        {
+          "code": "unscheduled",
+          "affected_ids": [
+            "e674a0b6-34db-4e07-93bf-34f090b2194f:0:reheat"
+          ],
+          "explanation": "Sonay Sukhe (Black Chana Sukka) \u00b7 Reheat gently and keep hot: Waiting for: Sonay Sukhe (Black Chana Sukka) \u00b7 Portion, cool promptly and refrigerate.",
+          "evidence": null
+        },
+        {
+          "code": "unscheduled",
+          "affected_ids": [
+            "e2f5743d-4db5-4e93-888c-e69e654bcddf:0:rinse"
+          ],
+          "explanation": "The Best Doce \u00b7 Rinse chana dal and cover with water: No suitable time was found within the current windows, dependencies and limits.",
+          "evidence": null
+        },
+        {
+          "code": "unscheduled",
+          "affected_ids": [
+            "e2f5743d-4db5-4e93-888c-e69e654bcddf:0:soak"
+          ],
+          "explanation": "The Best Doce \u00b7 Soak chana dal: Waiting for: The Best Doce \u00b7 Rinse chana dal and cover with water.",
+          "evidence": null
+        },
+        {
+          "code": "unscheduled",
+          "affected_ids": [
+            "e2f5743d-4db5-4e93-888c-e69e654bcddf:0:cook"
+          ],
+          "explanation": "The Best Doce \u00b7 Cook dal until soft; cool and blend with coconut: Waiting for: The Best Doce \u00b7 Soak chana dal.",
+          "evidence": null
+        },
+        {
+          "code": "unscheduled",
+          "affected_ids": [
+            "e2f5743d-4db5-4e93-888c-e69e654bcddf:0:stir"
+          ],
+          "explanation": "The Best Doce \u00b7 Stir the doce until thick, then shape and cut: Waiting for: The Best Doce \u00b7 Cook dal until soft; cool and blend with coconut.",
+          "evidence": null
+        },
+        {
+          "code": "unscheduled",
+          "affected_ids": [
+            "e2f5743d-4db5-4e93-888c-e69e654bcddf:0:cool"
+          ],
+          "explanation": "The Best Doce \u00b7 Let doce cool fully: Waiting for: The Best Doce \u00b7 Stir the doce until thick, then shape and cut.",
+          "evidence": null
+        }
+      ],
+      "seconds": 5.58
+    },
+    {
+      "menu": "Goan Christmas",
+      "condition": "missing_dependency",
+      "status": "incomplete",
+      "outcome": {
+        "code": "needs_input",
+        "message": "Some recipe or gathering details are missing. Review the plan checks before scheduling.",
+        "solver_status": null
+      },
+      "expected_outcome": "needs_input",
+      "validation_passed": true,
+      "menu_blockers": [],
+      "usable": false,
+      "violations": [
+        {
+          "code": "recipe_contract",
+          "affected_ids": [
+            "1bc066e5-6205-45ef-9c63-7f066b3595c2"
+          ],
+          "explanation": "Mix tuna filling: prerequisite steps are missing: missing-step.",
+          "evidence": null
+        }
+      ],
+      "seconds": 0.0
+    },
+    {
+      "menu": "Christmas mixed table",
+      "condition": "baseline",
+      "status": "feasible",
+      "outcome": {
+        "code": "complete",
+        "message": "All preparation tasks are scheduled and passed the schedule checks.",
+        "solver_status": "OPTIMAL"
+      },
+      "expected_outcome": "complete",
+      "validation_passed": true,
+      "menu_blockers": [],
+      "usable": true,
+      "violations": [],
+      "seconds": 7.5
+    },
+    {
+      "menu": "Christmas mixed table",
+      "condition": "more_time",
+      "status": "feasible",
+      "outcome": {
+        "code": "complete",
+        "message": "All preparation tasks are scheduled and passed the schedule checks.",
+        "solver_status": "OPTIMAL"
+      },
+      "expected_outcome": "complete",
+      "validation_passed": true,
+      "menu_blockers": [],
+      "usable": true,
+      "violations": [],
+      "seconds": 7.19
+    },
+    {
+      "menu": "Christmas mixed table",
+      "condition": "busy_calendar",
+      "status": "conflict",
+      "outcome": {
+        "code": "no_fit_found",
+        "message": "No complete plan was found under the current scheduling rules. Review the task constraints before changing your time or menu.",
+        "solver_status": "INFEASIBLE"
+      },
+      "expected_outcome": "no_fit_found",
+      "validation_passed": true,
+      "menu_blockers": [],
+      "usable": false,
+      "violations": [
+        {
+          "code": "unscheduled",
+          "affected_ids": [
+            "e9a99e22-0be4-41f4-bdd9-250f69d4aa3a:0:potato"
+          ],
+          "explanation": "Mushroom Cutlets \u00b7 Boil and mash potato: No suitable time was found within the current windows, dependencies and limits.",
+          "evidence": null
+        },
+        {
+          "code": "unscheduled",
+          "affected_ids": [
+            "e9a99e22-0be4-41f4-bdd9-250f69d4aa3a:0:filling"
+          ],
+          "explanation": "Mushroom Cutlets \u00b7 Cook mushrooms dry and saut\u00e9 aromatics: No suitable time was found within the current windows, dependencies and limits.",
+          "evidence": null
+        },
+        {
+          "code": "unscheduled",
+          "affected_ids": [
+            "e9a99e22-0be4-41f4-bdd9-250f69d4aa3a:0:cool"
+          ],
+          "explanation": "Mushroom Cutlets \u00b7 Let filling cool enough to handle: Waiting for: Mushroom Cutlets \u00b7 Cook mushrooms dry and saut\u00e9 aromatics.",
+          "evidence": null
+        },
+        {
+          "code": "unscheduled",
+          "affected_ids": [
+            "e9a99e22-0be4-41f4-bdd9-250f69d4aa3a:0:shape"
+          ],
+          "explanation": "Mushroom Cutlets \u00b7 Mix, shape cutlets and refrigerate: Waiting for: Mushroom Cutlets \u00b7 Boil and mash potato, Mushroom Cutlets \u00b7 Let filling cool enough to handle.",
+          "evidence": null
+        },
+        {
+          "code": "unscheduled",
+          "affected_ids": [
+            "e9a99e22-0be4-41f4-bdd9-250f69d4aa3a:0:fry"
+          ],
+          "explanation": "Mushroom Cutlets \u00b7 Coat and pan-fry cutlets: Waiting for: Mushroom Cutlets \u00b7 Mix, shape cutlets and refrigerate.",
+          "evidence": null
+        },
+        {
+          "code": "unscheduled",
+          "affected_ids": [
+            "c1b08136-dcdf-4c6e-8f27-7864f56aab88:0:prep"
+          ],
+          "explanation": "Pork Bafat | Dukra Maas \u00b7 Cut pork, onions and aromatics: No suitable time was found within the current windows, dependencies and limits.",
+          "evidence": null
+        },
+        {
+          "code": "unscheduled",
+          "affected_ids": [
+            "c1b08136-dcdf-4c6e-8f27-7864f56aab88:0:cook"
+          ],
+          "explanation": "Pork Bafat | Dukra Maas \u00b7 Simmer pork; add onions and garlic toward the end: Waiting for: Pork Bafat | Dukra Maas \u00b7 Cut pork, onions and aromatics.",
+          "evidence": null
+        },
+        {
+          "code": "unscheduled",
+          "affected_ids": [
+            "c1b08136-dcdf-4c6e-8f27-7864f56aab88:0:reheat"
+          ],
+          "explanation": "Pork Bafat | Dukra Maas \u00b7 Reheat pork bafat: Waiting for: Pork Bafat | Dukra Maas \u00b7 Simmer pork; add onions and garlic toward the end.",
+          "evidence": null
+        },
+        {
+          "code": "unscheduled",
+          "affected_ids": [
+            "7021efc0-4556-4a24-8bd3-26f66b594f17:0:rinse"
+          ],
+          "explanation": "Sonay Sukhe (Black Chana Sukka) \u00b7 Rinse chana and cover with water: No suitable time was found within the current windows, dependencies and limits.",
+          "evidence": null
+        },
+        {
+          "code": "unscheduled",
+          "affected_ids": [
+            "7021efc0-4556-4a24-8bd3-26f66b594f17:0:soak"
+          ],
+          "explanation": "Sonay Sukhe (Black Chana Sukka) \u00b7 Soak chana overnight: Waiting for: Sonay Sukhe (Black Chana Sukka) \u00b7 Rinse chana and cover with water.",
+          "evidence": null
+        },
+        {
+          "code": "unscheduled",
+          "affected_ids": [
+            "7021efc0-4556-4a24-8bd3-26f66b594f17:0:pressure"
+          ],
+          "explanation": "Sonay Sukhe (Black Chana Sukka) \u00b7 Pressure-cook chana until tender: Waiting for: Sonay Sukhe (Black Chana Sukka) \u00b7 Soak chana overnight.",
+          "evidence": null
+        },
+        {
+          "code": "unscheduled",
+          "affected_ids": [
+            "7021efc0-4556-4a24-8bd3-26f66b594f17:0:finish"
+          ],
+          "explanation": "Sonay Sukhe (Black Chana Sukka) \u00b7 Temper aromatics and finish chana sukka: Waiting for: Sonay Sukhe (Black Chana Sukka) \u00b7 Pressure-cook chana until tender.",
+          "evidence": null
+        },
+        {
+          "code": "unscheduled",
+          "affected_ids": [
+            "7021efc0-4556-4a24-8bd3-26f66b594f17:0:store"
+          ],
+          "explanation": "Sonay Sukhe (Black Chana Sukka) \u00b7 Portion, cool promptly and refrigerate: Waiting for: Sonay Sukhe (Black Chana Sukka) \u00b7 Temper aromatics and finish chana sukka.",
+          "evidence": null
+        },
+        {
+          "code": "unscheduled",
+          "affected_ids": [
+            "7021efc0-4556-4a24-8bd3-26f66b594f17:0:reheat"
+          ],
+          "explanation": "Sonay Sukhe (Black Chana Sukka) \u00b7 Reheat gently and keep hot: Waiting for: Sonay Sukhe (Black Chana Sukka) \u00b7 Portion, cool promptly and refrigerate.",
+          "evidence": null
+        },
+        {
+          "code": "unscheduled",
+          "affected_ids": [
+            "67093f90-94fe-472c-b27a-5d73a11d54c1:0:prep"
+          ],
+          "explanation": "Caramelized Brussels Sprouts \u00b7 Trim sprouts and mix the glaze: No suitable time was found within the current windows, dependencies and limits.",
+          "evidence": null
+        },
+        {
+          "code": "unscheduled",
+          "affected_ids": [
+            "67093f90-94fe-472c-b27a-5d73a11d54c1:0:roast"
+          ],
+          "explanation": "Caramelized Brussels Sprouts \u00b7 Coat sprouts and roast, turning halfway: Waiting for: Caramelized Brussels Sprouts \u00b7 Trim sprouts and mix the glaze.",
+          "evidence": null
+        },
+        {
+          "code": "unscheduled",
+          "affected_ids": [
+            "9a06a9ef-288b-4d93-b367-4c66993b5490:0:rinse"
+          ],
+          "explanation": "The Best Doce \u00b7 Rinse chana dal and cover with water: No suitable time was found within the current windows, dependencies and limits.",
+          "evidence": null
+        },
+        {
+          "code": "unscheduled",
+          "affected_ids": [
+            "9a06a9ef-288b-4d93-b367-4c66993b5490:0:soak"
+          ],
+          "explanation": "The Best Doce \u00b7 Soak chana dal: Waiting for: The Best Doce \u00b7 Rinse chana dal and cover with water.",
+          "evidence": null
+        },
+        {
+          "code": "unscheduled",
+          "affected_ids": [
+            "9a06a9ef-288b-4d93-b367-4c66993b5490:0:cook"
+          ],
+          "explanation": "The Best Doce \u00b7 Cook dal until soft; cool and blend with coconut: Waiting for: The Best Doce \u00b7 Soak chana dal.",
+          "evidence": null
+        },
+        {
+          "code": "unscheduled",
+          "affected_ids": [
+            "9a06a9ef-288b-4d93-b367-4c66993b5490:0:stir"
+          ],
+          "explanation": "The Best Doce \u00b7 Stir the doce until thick, then shape and cut: Waiting for: The Best Doce \u00b7 Cook dal until soft; cool and blend with coconut.",
+          "evidence": null
+        },
+        {
+          "code": "unscheduled",
+          "affected_ids": [
+            "9a06a9ef-288b-4d93-b367-4c66993b5490:0:cool"
+          ],
+          "explanation": "The Best Doce \u00b7 Let doce cool fully: Waiting for: The Best Doce \u00b7 Stir the doce until thick, then shape and cut.",
+          "evidence": null
+        }
+      ],
+      "seconds": 4.91
+    },
+    {
+      "menu": "Christmas mixed table",
+      "condition": "missing_dependency",
+      "status": "incomplete",
+      "outcome": {
+        "code": "needs_input",
+        "message": "Some recipe or gathering details are missing. Review the plan checks before scheduling.",
+        "solver_status": null
+      },
+      "expected_outcome": "needs_input",
+      "validation_passed": true,
+      "menu_blockers": [],
+      "usable": false,
+      "violations": [
+        {
+          "code": "recipe_contract",
+          "affected_ids": [
+            "e9a99e22-0be4-41f4-bdd9-250f69d4aa3a"
+          ],
+          "explanation": "Boil and mash potato: prerequisite steps are missing: missing-step.",
+          "evidence": null
+        }
+      ],
+      "seconds": 0.0
+    }
+  ]
+}

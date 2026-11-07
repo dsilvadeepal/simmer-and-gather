@@ -1,0 +1,21 @@
+# Google sign-in and Calendar setup
+
+Use a separate **Simmer and Gather** project. No paid services or billing linkage needed for this setup. Created with explicit user approval on October 28, 2026: project ID `keen-autumn-513015-c5`, project number `139534566656`. No billing was linked. Google Calendar API enabled and its Enabled status verified on October 28, 2026, after explicit user approval of the API terms. The web OAuth client has been created; calendar access has been granted.
+
+1. In Google Cloud Console, create/select the app project. Enable **Google Calendar API**.
+2. Open Google Auth Platform → Branding. App name: Simmer and Gather. Use your own support/contact email. Review the Google API User Data Policy yourself before accepting it.
+3. Audience: **External**, testing mode. Add your own Google account as a test user. This keeps the demo private. Testing refresh tokens for Calendar scopes can expire after seven days; reconnect near demo day.
+4. Data Access: `openid`, `email`, `calendar.calendarlist.readonly`, `calendar.events.readonly`, `calendar.app.created` (Calendar scopes use prefix `https://www.googleapis.com/auth/`). This permits reading selected calendars in application code and creating/managing secondary app calendars; it does not request editing all primary-calendar events. Google grants read scope broadly, so the app's selected-calendar allowlist still matters.
+5. Clients → Create client → **Web application**, named Simmer and Gather web. Register `http://localhost:8000/api/google/callback` for local testing. Once hosting is selected, add exactly `https://YOUR_APP_HOST/api/google/callback`. Do not use a Desktop client for this hosted web app.
+6. Download client JSON into a private local directory or paste fields directly into the host's secrets manager. Never paste client secrets in chat, Notion, GitHub or browser URLs. Configure the names in `.env.example`. Generate SESSION_SECRET and a Fernet CREDENTIAL_ENCRYPTION_KEY locally; keep them stable across restarts.
+7. Start production entrypoint with `uv run uvicorn simmer.server:build_app --factory --host 127.0.0.1 --port 8000` after migration/frontend build. Sign in yourself, review permissions, and grant consent. Verify calendar listing/read first. Only then review/approve a real prep plan and Apply.
+
+The callback uses single-use browser-bound state, PKCE, verified Google ID token email and a one-owner allowlist. Refresh tokens stay encrypted server-side. Production startup fails closed without required configuration. The separate `simmer.dev` entrypoint is synthetic loopback demo only.
+
+Sources: https://developers.google.com/identity/protocols/oauth2/web-server ; https://developers.google.com/workspace/calendar/api/auth . Live OAuth exchange and calendar listing are verified; live booking remains unverified.
+
+Setup progress: OAuth app information is filled as Simmer and Gather, using the project owner Gmail for support/contact and External / Testing audience. The User Data Policy was accepted with explicit approval and Google confirmed OAuth configuration created. The Web application client form is prepared as Simmer and Gather web with callback http://localhost:8000/api/google/callback; client creation was explicitly approved and completed on October 28, 2026. Credentials are stored in the Git-ignored `.env.google` with owner-only (0600) permissions. Test-user configuration and live user consent remain pending.
+
+October 28 connection setup: owner Gmail added and verified as the sole test user; publishing remains Testing. The real OAuth server is running locally on localhost:8000 with encrypted credential storage and a separate owner ID from synthetic demo data. Google accepted the authorization request and displayed the account chooser. User sign-in/consent and live Calendar read verification remain pending. No calendar events created.
+
+Verified October 28: the signed-in owner successfully authorized Google, and the app credential retrieved 11 calendars. No events were created or modified. Earlier pending-consent entries above describe setup history.

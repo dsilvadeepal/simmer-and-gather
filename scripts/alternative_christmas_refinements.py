@@ -1,0 +1,31 @@
+"""Reviewed alternative Christmas task proposals. No external I/O on import."""
+from christmas_recipe_refinements import step
+from simmer.domain import Ingredient
+
+def refine(recipe):
+ r=recipe.model_copy(deep=True)
+ r.ingredients=[i for i in r.ingredients if 'cooking instructions' not in i.name.lower()]
+ if 'Brussels' in r.title:
+  r.tasks=[step('prep','Trim sprouts and mix the glaze',20,'Halve sprouts. Mix honey or maple syrup, balsamic vinegar, Dijon and oil; refrigerate separately from the sprouts.',ahead=24),step('roast','Coat sprouts and roast, turning halfway',40,'Preheat to 400°F. Coat sprouts, spread cut-side down and roast until browned and tender, turning halfway. Season before serving.',deps=['prep'],active=15,resource='oven',ahead=None,segments=[(0,5),(20,5),(35,5)])]
+  r.tasks[-1].temperature=400;r.allergens=[]
+ elif r.id=='4076c09a-c77f-8163-93fa-dc2f87917491':
+  r.title='Chicken Mince Cutlets'
+  r.ingredients=[i.model_copy(update={'name':i.name.replace('chicken or beef mince','chicken mince')}) for i in r.ingredients]
+  r.tasks=[step('potato','Boil potato and mash',35,'Cook potato until tender, drain and mash.',active=10,resource='stovetop',ahead=24,segments=[(0,5),(30,5)]),step('filling','Cook chicken mince and sauté aromatics',40,'Cook chicken mince with salt and lime until cooked through. In another pan, soften onion, add ginger, garlic, chilli and herbs, then the spices. Refrigerate promptly if preparing ahead.',active=35,resource='stovetop',ahead=24,segments=[(0,30),(35,5)]),step('cool','Let filling cool enough to handle',20,'Cool briefly before mixing and shaping; do not leave it out for extended periods.',deps=['filling'],active=0,ahead=24),step('shape','Combine filling with potato and shape cutlets',25,'Combine cooked mince, aromatics and mashed potato. Shape into patties and refrigerate covered. Add a little bread only if the mixture is too wet.',deps=['potato','cool'],ahead=24),step('fry','Coat and pan-fry cutlets',35,'Dip patties in beaten egg white, coat in crumbs and fry on medium heat, turning until golden and hot throughout. Stay at the pan; use a non-nut oil.',deps=['shape'],resource='stovetop',ahead=None)]
+  r.allergens=['gluten','eggs']
+ elif 'Pork Bafat' in r.title:
+  r.tasks=[step('prep','Cut pork, onions and aromatics',25,'Cut pork into even pieces. Chop ginger and chillies; keep onions and peeled garlic separate for adding later.',ahead=24),step('cook','Simmer pork; add onions and garlic toward the end',110,'Start pork with spices, ginger, chillies and tamarind. Simmer gently, checking regularly. Add onions and garlic when nearly tender; finish cooking. Cool promptly in shallow containers and refrigerate.',deps=['prep'],active=25,resource='stovetop',ahead=24,segments=[(0,5),(30,5),(60,5),(85,5),(105,5)]),step('reheat','Reheat pork bafat',30,'Reheat to 165°F, stirring and adding a splash of water if needed. Keep hot at 140°F or above until serving.',deps=['cook'],active=10,resource='stovetop',ahead=None,segments=[(0,5),(25,5)])]
+  r.allergens=[]
+ elif 'Black Chana' in r.title:
+  r.tasks=[step('rinse','Rinse black chana and cover with water',5,'Rinse and cover generously with water.',ahead=24),step('soak','Soak black chana overnight',720,'Allow 10–12 hours or overnight; drain before cooking.',deps=['rinse'],active=0,ahead=24),step('pressure','Pressure-cook chana and release pressure',60,'Cook soaked chana until tender, then let pressure release before opening. Use your cooker’s instructions; source whistles are not an Instant Pot setting.',deps=['soak'],active=10,resource='instant_pot',ahead=None,segments=[(0,5),(55,5)]),step('aromatics','Slice onion and prepare garlic and coconut',15,'Slice onion, crush garlic and have grated coconut ready.',ahead=None),step('finish','Temper aromatics and finish the chana sukka',30,'Temper mustard and curry leaves, add garlic and onion, then coconut and spices. Add tender chana, tamarind and a little cooking liquid. Simmer until absorbed. Keep hot for serving.',deps=['pressure','aromatics'],resource='stovetop',ahead=None)]
+  r.allergens=[]
+ elif 'Coffee Fruit' in r.title:
+  r.ingredients=[Ingredient(name=n,quantity=q,unit=u) for n,q,u in [('Mixed dried fruit',300,'g'),('Soft brown sugar',150,'g'),('Butter',150,'g'),('Strong black coffee',200,'ml'),('Milk (optional, as needed)',.5,'cup'),('Self-raising flour',280,'g'),('Mixed spice',2,'tsp'),('Egg',1,'whole')]]
+  r.tasks=[step('fruit','Chop fruit and simmer with coffee, butter and sugar',25,'Chop fruit evenly. Simmer with coffee, butter and sugar until melted and dissolved.',active=20,resource='stovetop',ahead=48,segments=[(0,15),(20,5)]),step('cool','Cool the fruit mixture before adding egg',40,'Allow the mixture to cool before mixing with egg.',deps=['fruit'],active=0,ahead=48),step('bake','Mix batter and bake the coffee fruit cake',80,'Preheat to 350°F and line the loaf tin. Mix flour and spice with egg and cooled fruit mixture. Add milk only if stiff. Bake about an hour; check browning after 45 minutes and tent with foil if needed. Test with a skewer.',deps=['cool'],active=25,resource='oven',ahead=48,segments=[(0,15),(60,5),(75,5)]),step('tin','Rest cake in the tin',10,'Let the baked cake settle before unmolding.',deps=['bake'],active=0,ahead=48),step('unmold','Turn cake onto a cooling rack',5,'Turn out carefully and leave to cool completely.',deps=['tin'],ahead=48),step('rack','Cool cake completely',90,'Wait until fully cool before packing.',deps=['unmold'],active=0,ahead=48),step('pack','Pack cooled cake airtight',5,'Pack only when completely cool. The source allows 3–4 days at room temperature in an airtight container.',deps=['rack'],ahead=48)]
+  r.tasks[2].temperature=350;r.allergens=['gluten','milk','eggs']
+ else:return None
+ r.reviewed=True
+ r.uncertainties=['Hands-on, elapsed and make-ahead allowances are planning estimates unless explicitly supported by the source. Check doneness and ingredient labels, including nut cross-contact.']
+ if 'Black Chana' in r.title:r.uncertainties.append('Pressure-cooker timing depends on appliance and bean age; no verified whistles-to-Instant-Pot conversion.')
+ r.preparation_provenance['alternative_christmas_review']='2026-10-29 source method review; independent prep, explicit waits and reheating, estimated attention segments.'
+ return r

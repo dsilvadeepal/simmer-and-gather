@@ -1,0 +1,1424 @@
+[
+  {
+    "id": "4076c09a-c77f-81a5-9d11-fdfb78e560a0",
+    "version": "2",
+    "title": "Goan Pork Vindaloo",
+    "source": "https://theaspiringhomecook.com/2019/10/goan-pork-vindaloo.html",
+    "servings": 8,
+    "category": "mains",
+    "vegetarian": false,
+    "allergens": [],
+    "ingredients": [
+      {
+        "name": "1 kilo boneless pork (pick a slightly fatty cut)",
+        "quantity": null,
+        "unit": null
+      },
+      {
+        "name": "1-2 tbsp oil (olive or sunflower; check label)",
+        "quantity": null,
+        "unit": null
+      },
+      {
+        "name": "1 \u2013 1 1/2 onion, finely chopped",
+        "quantity": null,
+        "unit": null
+      },
+      {
+        "name": "Salt, to taste",
+        "quantity": null,
+        "unit": null
+      },
+      {
+        "name": "Vinegar, to taste",
+        "quantity": null,
+        "unit": null
+      },
+      {
+        "name": "sugar",
+        "quantity": 1.0,
+        "unit": "tsp"
+      },
+      {
+        "name": "12 Kashmiri chillies, deseeded",
+        "quantity": null,
+        "unit": null
+      },
+      {
+        "name": "6 black peppercorns",
+        "quantity": null,
+        "unit": null
+      },
+      {
+        "name": "5 cloves",
+        "quantity": 5.0,
+        "unit": "cloves"
+      },
+      {
+        "name": "3 green cardamom pods",
+        "quantity": null,
+        "unit": null
+      },
+      {
+        "name": "2\u2033 cinnamon",
+        "quantity": null,
+        "unit": null
+      },
+      {
+        "name": "6-8 large garlic cloves",
+        "quantity": null,
+        "unit": null
+      },
+      {
+        "name": "1 1/2 inch ginger",
+        "quantity": null,
+        "unit": null
+      },
+      {
+        "name": "Vinegar, to grind to a paste",
+        "quantity": null,
+        "unit": null
+      }
+    ],
+    "tasks": [
+      {
+        "id": "prepare",
+        "title": "Cut pork, blend spice paste and chop onions",
+        "recipe_id": "",
+        "dependencies": [],
+        "minutes": 30,
+        "active_minutes": 30,
+        "presence_minutes": 30,
+        "skill": "cook",
+        "resource": null,
+        "capacity": 1,
+        "temperature": null,
+        "eligible": {
+          "start": "2026-12-24T09:00:00-05:00",
+          "end": "2026-12-24T17:00:00-05:00"
+        },
+        "max_ahead_hours": 48.0,
+        "evidence": "Publisher method; task minutes and check-in placement are planning estimates. Make-ahead allowance is a planning estimate; follow storage notes.",
+        "ingredients": [],
+        "guidance": "Cut pork into even pieces. Blend the spices with vinegar; chop the onions.",
+        "phase": "cooking",
+        "unattended": false,
+        "scale_mode": "combined",
+        "preparation_policy": "advance",
+        "storage_anchor": "serving",
+        "attention_segments": [],
+        "timing_basis": "estimate"
+      },
+      {
+        "id": "cook",
+        "title": "Cook the vindaloo until the pork is tender",
+        "recipe_id": "",
+        "dependencies": [
+          "prepare"
+        ],
+        "minutes": 105,
+        "active_minutes": 40,
+        "presence_minutes": 40,
+        "skill": "cook",
+        "resource": "stovetop",
+        "capacity": 1,
+        "temperature": null,
+        "eligible": {
+          "start": "2026-12-24T09:00:00-05:00",
+          "end": "2026-12-24T17:00:00-05:00"
+        },
+        "max_ahead_hours": 48.0,
+        "evidence": "Publisher method; task minutes and check-in placement are planning estimates. Make-ahead allowance is a planning estimate; follow storage notes.",
+        "ingredients": [],
+        "guidance": "Soften onions, fry the spice paste, then coat the pork. Add water and simmer covered; check liquid and tenderness. Cool promptly in shallow containers and refrigerate.",
+        "phase": "cooking",
+        "unattended": false,
+        "scale_mode": "combined",
+        "preparation_policy": "advance",
+        "storage_anchor": "serving",
+        "attention_segments": [
+          {
+            "offset_minutes": 0,
+            "minutes": 25
+          },
+          {
+            "offset_minutes": 45,
+            "minutes": 5
+          },
+          {
+            "offset_minutes": 75,
+            "minutes": 5
+          },
+          {
+            "offset_minutes": 100,
+            "minutes": 5
+          }
+        ],
+        "timing_basis": "estimate"
+      },
+      {
+        "id": "reheat",
+        "title": "Reheat vindaloo",
+        "recipe_id": "",
+        "dependencies": [
+          "cook"
+        ],
+        "minutes": 30,
+        "active_minutes": 10,
+        "presence_minutes": 10,
+        "skill": "cook",
+        "resource": "stovetop",
+        "capacity": 1,
+        "temperature": null,
+        "eligible": {
+          "start": "2026-12-25T15:15:00-05:00",
+          "end": "2026-12-25T15:45:00-05:00"
+        },
+        "max_ahead_hours": null,
+        "evidence": "Publisher method; task minutes and check-in placement are planning estimates. Same-day preparation.",
+        "ingredients": [],
+        "guidance": "Reheat until 165\u00b0F throughout, stirring and adding a splash of water if needed. Keep hot at 140\u00b0F or above until serving.",
+        "phase": "cooking",
+        "unattended": false,
+        "scale_mode": "combined",
+        "preparation_policy": "same_day",
+        "storage_anchor": "serving",
+        "attention_segments": [
+          {
+            "offset_minutes": 0,
+            "minutes": 5
+          },
+          {
+            "offset_minutes": 25,
+            "minutes": 5
+          }
+        ],
+        "timing_basis": "estimate"
+      }
+    ],
+    "source_text": "Source recipe: https://theaspiringhomecook.com/2019/10/goan-pork-vindaloo.html\nPublisher prep/cook: 20 / 60 minutes; chef task estimates below are separate.\nMake-ahead: Author says it can be made one or two days ahead; refrigerate promptly and reheat thoroughly.\nHome-cook timing draft (untested):\nCut pork and grind spice paste: 25 min hands-on + 0 min waiting/cooking (estimate).\nSaute onions, paste and pork: 15 min hands-on + 0 min waiting/cooking (estimate).\nCovered simmer; check tenderness: 10 min hands-on + 60 min waiting/cooking (estimate).\nCleanup: 10 min. Total active including cleanup: 60 min. Waiting/cooking: 60 min. Base recipe only; confirm servings, equipment batches and real pace before scheduling. Author says it can be made one or two days ahead; refrigerate promptly and reheat thoroughly.\nIngredients: 1 kilo boneless pork (pick a slightly fatty cut); 1-2 tbsp oil; 1 \u2013 1 1/2 onion, finely chopped; Salt, to taste; Vinegar, to taste; 1 tsp sugar; 12 Kashmiri chillies, deseeded; 6 black peppercorns; 5 cloves; 3 green cardamom pods; 2\u2033 cinnamon; 6-8 large garlic cloves; 1 1/2 inch ginger; Vinegar, to grind to a paste\nPreparation review \u00b7 2026-10-28-logical-steps-v1\nCut pork; grind spice paste and chop onions \u2014 25 min hands-on; 0 min waiting.\nSaut\u00e9 onions, spice paste and pork \u2014 20 min hands-on; 0 min waiting.\nSimmer covered, checking tenderness and liquid \u2014 10 min hands-on; 75 min waiting.\nPublisher make-ahead guidance: Author says it can be made one or two days ahead; refrigerate promptly and reheat thoroughly.\nTiming and scaling notes: Hands-on and waiting times are estimates for the base recipe; waiting includes soaking, chilling and cooling where listed. Measure ingredients while cooking. Cleanup is a separate flexible allowance. Increase chopping and shaping time with quantity; repeat only appliance-limited cooking steps. Recipe yield does not establish appliance capacity. Use source doneness cues. Pressure-cooker whistles are not a verified Instant Pot conversion.",
+    "reviewed": true,
+    "image_url": null,
+    "image_credit": null,
+    "uncertainties": [
+      "Task durations are estimates; use doneness cues.",
+      "Ingredient review found no listed peanuts or tree nuts in this version. Use non-nut oil and check package labels/cross-contact. Coconut is retained."
+    ],
+    "preparation_provenance": {
+      "christmas_review": "2026-10-29: task-specific instructions, explicit prerequisites, waiting separated, no standalone measuring tasks. https://theaspiringhomecook.com/2019/10/goan-pork-vindaloo.html"
+    }
+  },
+  {
+    "id": "4076c09a-c77f-810c-b875-eaa47d415890",
+    "version": "2",
+    "title": "Chicken Cafreal",
+    "source": "https://aromaticessence.co/chicken-cafreal/",
+    "servings": 2,
+    "category": "mains",
+    "vegetarian": false,
+    "allergens": [
+      "milk"
+    ],
+    "ingredients": [
+      {
+        "name": "chicken thighs",
+        "quantity": 1.5,
+        "unit": "lb"
+      },
+      {
+        "name": "ginger garlic paste",
+        "quantity": 0.5,
+        "unit": "tbsp"
+      },
+      {
+        "name": "lemon juice/vinegar",
+        "quantity": 1.0,
+        "unit": "tbsp"
+      },
+      {
+        "name": "salt",
+        "quantity": 1.0,
+        "unit": "tsp"
+      },
+      {
+        "name": "loosely packed cilantro/coriander leaves with \u00a0tender stalks, (about 30 stalks)",
+        "quantity": 1.0,
+        "unit": "cup"
+      },
+      {
+        "name": "6-7  green chillies, (adjust as per desired heat)",
+        "quantity": null,
+        "unit": null
+      },
+      {
+        "name": "6-7  large garlic cloves",
+        "quantity": null,
+        "unit": null
+      },
+      {
+        "name": "1 & 1/2  inch  piece of ginger",
+        "quantity": null,
+        "unit": null
+      },
+      {
+        "name": "4  cloves",
+        "quantity": 4.0,
+        "unit": "cloves"
+      },
+      {
+        "name": "8  peppercorns",
+        "quantity": null,
+        "unit": null
+      },
+      {
+        "name": "1 inch of cinnamon",
+        "quantity": null,
+        "unit": null
+      },
+      {
+        "name": "cumin seeds",
+        "quantity": 1.0,
+        "unit": "tsp"
+      },
+      {
+        "name": "poppy seeds",
+        "quantity": 2.0,
+        "unit": "tsp"
+      },
+      {
+        "name": "turmeric powder",
+        "quantity": 0.5,
+        "unit": "tsp"
+      },
+      {
+        "name": "A small\u00a0ball of tamarind/Juice of half a lime",
+        "quantity": null,
+        "unit": null
+      },
+      {
+        "name": "butter",
+        "quantity": 2.0,
+        "unit": "tbsp"
+      },
+      {
+        "name": "oil (olive or sunflower; check label)",
+        "quantity": 1.0,
+        "unit": "tbsp"
+      },
+      {
+        "name": "lemon juice",
+        "quantity": 1.0,
+        "unit": "tbsp"
+      }
+    ],
+    "tasks": [
+      {
+        "id": "paste",
+        "title": "Prepare chicken and blend cafreal paste",
+        "recipe_id": "",
+        "dependencies": [],
+        "minutes": 35,
+        "active_minutes": 35,
+        "presence_minutes": 35,
+        "skill": "cook",
+        "resource": null,
+        "capacity": 1,
+        "temperature": null,
+        "eligible": {
+          "start": "2026-12-24T16:00:00-05:00",
+          "end": "2026-12-24T21:00:00-05:00"
+        },
+        "max_ahead_hours": 24.0,
+        "evidence": "Publisher method; task minutes and check-in placement are planning estimates. Make-ahead allowance is a planning estimate; follow storage notes.",
+        "ingredients": [],
+        "guidance": "Score chicken and season with lemon, ginger, garlic and salt. Blend the green paste. Coat chicken with half; keep the unused paste separately covered in the fridge.",
+        "phase": "cooking",
+        "unattended": false,
+        "scale_mode": "combined",
+        "preparation_policy": "advance",
+        "storage_anchor": "serving",
+        "attention_segments": [],
+        "timing_basis": "estimate"
+      },
+      {
+        "id": "marinate",
+        "title": "Refrigerate chicken in its marinade",
+        "recipe_id": "",
+        "dependencies": [
+          "paste"
+        ],
+        "minutes": 180,
+        "active_minutes": 0,
+        "presence_minutes": 0,
+        "skill": "cook",
+        "resource": null,
+        "capacity": 1,
+        "temperature": null,
+        "eligible": {
+          "start": "2026-12-24T16:00:00-05:00",
+          "end": "2026-12-24T21:00:00-05:00"
+        },
+        "max_ahead_hours": 24.0,
+        "evidence": "Publisher method; task minutes and check-in placement are planning estimates. Make-ahead allowance is a planning estimate; follow storage notes.",
+        "ingredients": [],
+        "guidance": "Leave covered in the fridge for at least 2\u20133 hours, or overnight. Keep reserved paste separate from raw chicken.",
+        "phase": "cooking",
+        "unattended": true,
+        "scale_mode": "combined",
+        "preparation_policy": "advance",
+        "storage_anchor": "serving",
+        "attention_segments": [],
+        "timing_basis": "estimate"
+      },
+      {
+        "id": "cook",
+        "title": "Sear chicken, then cook in cafreal paste",
+        "recipe_id": "",
+        "dependencies": [
+          "marinate"
+        ],
+        "minutes": 45,
+        "active_minutes": 25,
+        "presence_minutes": 25,
+        "skill": "cook",
+        "resource": "stovetop",
+        "capacity": 1,
+        "temperature": null,
+        "eligible": {
+          "start": "2026-12-25T14:30:00-05:00",
+          "end": "2026-12-25T15:30:00-05:00"
+        },
+        "max_ahead_hours": null,
+        "evidence": "Publisher method; task minutes and check-in placement are planning estimates. Same-day preparation.",
+        "ingredients": [],
+        "guidance": "Brown both sides in butter and oil. Add reserved paste and a little water; cover and cook, then uncover to reduce the sauce. Check the thickest pieces are cooked through. Keep hot at 140\u00b0F or above until serving; check with a thermometer.",
+        "phase": "cooking",
+        "unattended": false,
+        "scale_mode": "combined",
+        "preparation_policy": "same_day",
+        "storage_anchor": "serving",
+        "attention_segments": [
+          {
+            "offset_minutes": 0,
+            "minutes": 15
+          },
+          {
+            "offset_minutes": 25,
+            "minutes": 5
+          },
+          {
+            "offset_minutes": 40,
+            "minutes": 5
+          }
+        ],
+        "timing_basis": "estimate"
+      }
+    ],
+    "source_text": "Source recipe: https://aromaticessence.co/chicken-cafreal/\nPublisher prep/cook: 10 / 25 minutes; chef task estimates below are separate.\nMake-ahead: Author recommends marinating for 2\u20133 hours or overnight in the refrigerator; cook near serving or verify a safe cooked-ahead/reheat plan.\nHome-cook timing draft (untested):\nPrepare chicken and blend cafreal paste: 25 min hands-on + 0 min waiting/cooking (estimate).\nMarinate covered in refrigerator: 0 min hands-on + 180 min waiting/cooking (estimate).\nSear and finish chicken in sauce: 20 min hands-on + 25 min waiting/cooking (estimate).\nCleanup: 10 min. Total active including cleanup: 55 min. Waiting/cooking: 205 min. Base recipe only; confirm servings, equipment batches and real pace before scheduling. Author recommends marinating for 2\u20133 hours or overnight in the refrigerator; cook near serving or verify a safe cooked-ahead/reheat plan.\nIngredients: 1.5 lbs chicken thighs; 1/2 tbsp ginger garlic paste; 1 tbsp lemon juice/vinegar; 1 tsp salt; 1 cup loosely packed cilantro/coriander leaves with \u00a0tender stalks, (about 30 stalks); 6-7  green chillies, (adjust as per desired heat); 6-7  large garlic cloves; 1 & 1/2  inch  piece of ginger; 4  cloves; 8  peppercorns; 1 inch of cinnamon; 1 tsp cumin seeds; 2 tsp\u00a0 poppy seeds; 1/2 tsp turmeric powder; A small\u00a0ball of tamarind/Juice of half a lime; 2 tbsp butter; 1 tbsp oil; 1 tbsp lemon juice\nPreparation review \u00b7 2026-10-28-logical-steps-v1\nPrepare chicken and blend cafreal paste \u2014 25 min hands-on; 0 min waiting.\nRefrigerate chicken in marinade; reserve unused paste separately \u2014 0 min hands-on; 180 min waiting.\nSear chicken on both sides \u2014 10 min hands-on; 0 min waiting.\nAdd reserved paste; cook covered and reduce \u2014 10 min hands-on; 20 min waiting.\nPublisher make-ahead guidance: Author recommends marinating for 2\u20133 hours or overnight in the refrigerator; cook near serving or verify a safe cooked-ahead/reheat plan.\nTiming and scaling notes: Hands-on and waiting times are estimates for the base recipe; waiting includes soaking, chilling and cooling where listed. Measure ingredients while cooking. Cleanup is a separate flexible allowance. Increase chopping and shaping time with quantity; repeat only appliance-limited cooking steps. Recipe yield does not establish appliance capacity. Use source doneness cues. Pressure-cooker whistles are not a verified Instant Pot conversion.",
+    "reviewed": true,
+    "image_url": null,
+    "image_credit": null,
+    "uncertainties": [
+      "Task durations are estimates; use doneness cues.",
+      "Ingredient review found no listed peanuts or tree nuts in this version. Use non-nut oil and check package labels/cross-contact. Coconut is retained."
+    ],
+    "preparation_provenance": {
+      "christmas_review": "2026-10-29: task-specific instructions, explicit prerequisites, waiting separated, no standalone measuring tasks. https://aromaticessence.co/chicken-cafreal/"
+    }
+  },
+  {
+    "id": "4076c09a-c77f-8182-b8ce-c925f0900a7a",
+    "version": "2",
+    "title": "The Ultimate Goan Caldin Curry",
+    "source": "https://withwendyandshannon.com/blog/the-ultimate-goan-caldin-curry/",
+    "servings": 4,
+    "category": "mains",
+    "vegetarian": null,
+    "allergens": [
+      "fish"
+    ],
+    "ingredients": [
+      {
+        "name": "Pomfrets (cleaned, sliced)",
+        "quantity": 500.0,
+        "unit": "g"
+      },
+      {
+        "name": "Salt",
+        "quantity": 1.0,
+        "unit": "tsp"
+      },
+      {
+        "name": "Turmeric Powder",
+        "quantity": 0.5,
+        "unit": "tsp"
+      },
+      {
+        "name": "(15 grams) Tamarind",
+        "quantity": 1.0,
+        "unit": "tbsp"
+      },
+      {
+        "name": "Hot Water",
+        "quantity": 0.25,
+        "unit": "cup"
+      },
+      {
+        "name": "Coriander Seeds",
+        "quantity": 1.0,
+        "unit": "tbsp"
+      },
+      {
+        "name": "Cumin Seeds",
+        "quantity": 1.0,
+        "unit": "tsp"
+      },
+      {
+        "name": "(10) Cloves",
+        "quantity": 0.5,
+        "unit": "tsp"
+      },
+      {
+        "name": "(25-30) Peppercorns",
+        "quantity": 0.5,
+        "unit": "tsp"
+      },
+      {
+        "name": "Turmeric Powder",
+        "quantity": 1.5,
+        "unit": "tsp"
+      },
+      {
+        "name": "6 Garlic Cloves",
+        "quantity": null,
+        "unit": null
+      },
+      {
+        "name": "1\u201d Ginger",
+        "quantity": null,
+        "unit": null
+      },
+      {
+        "name": "1 large Green Chili",
+        "quantity": null,
+        "unit": null
+      },
+      {
+        "name": "(100 grams) Coconut, fresh grated",
+        "quantity": 1.0,
+        "unit": "cup"
+      },
+      {
+        "name": "Water (1cup for first grind, 1 cup for the 2nd grind, \u00bd to swirl in the jar)",
+        "quantity": 2.5,
+        "unit": "cup"
+      },
+      {
+        "name": "3-4 tbsp Oil (olive or sunflower; check label)",
+        "quantity": null,
+        "unit": null
+      },
+      {
+        "name": "\u00bd (1 cup) Medium Red Onion, finely diced",
+        "quantity": null,
+        "unit": null
+      },
+      {
+        "name": "\u00bd (\u00bd cup) Medium Tomato, skinned and finely chopped",
+        "quantity": null,
+        "unit": null
+      },
+      {
+        "name": "Water",
+        "quantity": 1.0,
+        "unit": "cup"
+      },
+      {
+        "name": "Vinegar",
+        "quantity": 2.0,
+        "unit": "tbsp"
+      },
+      {
+        "name": "Tamarind Extract (from above)",
+        "quantity": null,
+        "unit": null
+      },
+      {
+        "name": "Sugar",
+        "quantity": 2.0,
+        "unit": "tsp"
+      },
+      {
+        "name": "Salt",
+        "quantity": 1.5,
+        "unit": "tsp"
+      },
+      {
+        "name": "1 Green Chili",
+        "quantity": null,
+        "unit": null
+      },
+      {
+        "name": "Coconut Cream",
+        "quantity": 1.0,
+        "unit": "cup"
+      }
+    ],
+    "tasks": [
+      {
+        "id": "base",
+        "title": "Blend coconut extract and cook the caldin base",
+        "recipe_id": "",
+        "dependencies": [],
+        "minutes": 50,
+        "active_minutes": 50,
+        "presence_minutes": 50,
+        "skill": "cook",
+        "resource": "stovetop",
+        "capacity": 1,
+        "temperature": null,
+        "eligible": {
+          "start": "2026-12-25T15:45:00-05:00",
+          "end": "2026-12-25T17:15:00-05:00"
+        },
+        "max_ahead_hours": null,
+        "evidence": "Publisher method; task minutes and check-in placement are planning estimates. Same-day preparation.",
+        "ingredients": [],
+        "guidance": "Grind spices, ginger, garlic, chilli and coconut with water; strain, then extract a second time. Soften onion and tomato. Add the extract, tamarind and seasoning; simmer gently.",
+        "phase": "cooking",
+        "unattended": false,
+        "scale_mode": "combined",
+        "preparation_policy": "same_day",
+        "storage_anchor": "serving",
+        "attention_segments": [],
+        "timing_basis": "estimate"
+      },
+      {
+        "id": "fish",
+        "title": "Season fish and finish the caldin",
+        "recipe_id": "",
+        "dependencies": [
+          "base"
+        ],
+        "minutes": 20,
+        "active_minutes": 20,
+        "presence_minutes": 20,
+        "skill": "cook",
+        "resource": "stovetop",
+        "capacity": 1,
+        "temperature": null,
+        "eligible": {
+          "start": "2026-12-25T16:35:00-05:00",
+          "end": "2026-12-25T17:15:00-05:00"
+        },
+        "max_ahead_hours": null,
+        "evidence": "Publisher method; task minutes and check-in placement are planning estimates. Same-day preparation.",
+        "ingredients": [],
+        "guidance": "Season fish with salt and turmeric. Gently cook it in the simmering curry; add chilli and coconut cream toward the end. Stop when the fish is opaque and flakes easily. Keep hot at 140\u00b0F or above until serving.",
+        "phase": "cooking",
+        "unattended": false,
+        "scale_mode": "combined",
+        "preparation_policy": "same_day",
+        "storage_anchor": "serving",
+        "attention_segments": [],
+        "timing_basis": "estimate"
+      }
+    ],
+    "source_text": "Collection: Christmas / Goan\nSource: https://withwendyandshannon.com/blog/the-ultimate-goan-caldin-curry/\nPublisher: With Wendy and Shannon (formerly Platin\u2019 It With Wendy)\nPublisher rating snapshot, October 28, 2026: No rating verified\nImport: source link only \u2014 importer access restricted\nCandidate only. Not personally tested or planning-ready. A selection option, not a recommendation to cook every item.\nSource yield: Not verified\nSource timing: prep unknown; cook unknown; total unknown. Source prep time is not total active work.\nIngredients (source facts; quantities need confirmation before scaling)\nCooking method and recipe notes: open the original source link. Task-level timing, make-ahead windows and storage guidance still need review.\nHome-cook timing draft (untested)\nMeasure and grind curry paste: 25 min hands-on\nPrepare protein/vegetables: 15 min hands-on\nCook curry and adjust seasoning: 15 min hands-on + 30 min waiting/cooking\nCleanup: 15 min. Active total including cleanup: 70 min; unattended: 30 min. Base recipe only; confirm servings, equipment batches, and real pace before scheduling.\nSource ingredients: 500 grams Pomfrets (cleaned, sliced); 1 tsp Salt; \u00bd tsp Turmeric Powder; 1 tbsp (15 grams) Tamarind; \u00bc cup Hot Water; 1 tbsp Coriander Seeds; 1 tsp Cumin Seeds; \u00bd tsp (10) Cloves; \u00bd tsp (25-30) Peppercorns; 1\u00bd tsp Turmeric Powder; 6 Garlic Cloves; 1\u201d Ginger; 1 large Green Chili; 1 cup (100 grams) Coconut, fresh grated; 2\u00bd cups Water (1cup for first grind, 1 cup for the 2nd grind, \u00bd to swirl in the jar); 3-4 tbsp Oil; \u00bd (1 cup) Medium Red Onion, finely diced; \u00bd (\u00bd cup) Medium Tomato, skinned and finely chopped; 1 cup Water; 2 tbsp Vinegar; Tamarind Extract (from above); 2 tsp Sugar; 1\u00bd tsp Salt; 1 Green Chili; 1 cup Coconut Cream\nPreparation review \u00b7 2026-10-28-logical-steps-v1\nPrepare and season fish \u2014 10 min hands-on; 0 min waiting.\nSoak tamarind; grind spices and coconut, then strain twice \u2014 25 min hands-on; 0 min waiting.\nSaut\u00e9 onion and tomato; simmer curry base \u2014 15 min hands-on; 10 min waiting.\nCook fish gently; finish with coconut cream \u2014 5 min hands-on; 8 min waiting.\nEstimated make-ahead approach: Make the spice/coconut curry base 1 day ahead and refrigerate. Add fish and finish cooking near serving to avoid overcooked fish; verify full cooking and seafood storage.\nTiming and scaling notes: Hands-on and waiting times are estimates for the base recipe; waiting includes soaking, chilling and cooling where listed. Measure ingredients while cooking. Cleanup is a separate flexible allowance. Increase chopping and shaping time with quantity; repeat only appliance-limited cooking steps. Recipe yield does not establish appliance capacity. Use source doneness cues. Pressure-cooker whistles are not a verified Instant Pot conversion. Method recovered from visible publisher HTML, rather than structured recipe metadata.",
+    "reviewed": true,
+    "image_url": null,
+    "image_credit": null,
+    "uncertainties": [
+      "Task durations are estimates; use doneness cues.",
+      "Ingredient review found no listed peanuts or tree nuts in this version. Use non-nut oil and check package labels/cross-contact. Coconut is retained."
+    ],
+    "preparation_provenance": {
+      "christmas_review": "2026-10-29: task-specific instructions, explicit prerequisites, waiting separated, no standalone measuring tasks. https://withwendyandshannon.com/blog/the-ultimate-goan-caldin-curry/"
+    }
+  },
+  {
+    "id": "4076c09a-c77f-8185-9e3f-c6251e6be8a4",
+    "version": "2",
+    "title": "Goan Sannas (yeast method)",
+    "source": "https://xantilicious.com/recipe/sanna/",
+    "servings": 10,
+    "category": "sides",
+    "vegetarian": null,
+    "allergens": [],
+    "ingredients": [
+      {
+        "name": "Parboiled rice",
+        "quantity": 2.0,
+        "unit": "cups"
+      },
+      {
+        "name": "Grated coconut",
+        "quantity": 0.5,
+        "unit": "cup"
+      },
+      {
+        "name": "Sugar",
+        "quantity": 3.0,
+        "unit": "tbsp"
+      },
+      {
+        "name": "Yeast",
+        "quantity": 1.0,
+        "unit": "tsp"
+      },
+      {
+        "name": "Salt",
+        "quantity": 1.0,
+        "unit": "tsp"
+      },
+      {
+        "name": "Coconut water or water",
+        "quantity": null,
+        "unit": null
+      },
+      {
+        "name": "Oil for molds (olive or sunflower; check label)",
+        "quantity": null,
+        "unit": null
+      }
+    ],
+    "tasks": [
+      {
+        "id": "rinse",
+        "title": "Rinse rice and cover with water",
+        "recipe_id": "",
+        "dependencies": [],
+        "minutes": 5,
+        "active_minutes": 5,
+        "presence_minutes": 5,
+        "skill": "cook",
+        "resource": null,
+        "capacity": 1,
+        "temperature": null,
+        "eligible": {
+          "start": "2026-12-24T18:00:00-05:00",
+          "end": "2026-12-24T21:00:00-05:00"
+        },
+        "max_ahead_hours": 24.0,
+        "evidence": "Publisher method; task minutes and check-in placement are planning estimates. Make-ahead allowance is a planning estimate; follow storage notes.",
+        "ingredients": [],
+        "guidance": "Rinse parboiled rice and cover generously with water for the overnight soak.",
+        "phase": "cooking",
+        "unattended": false,
+        "scale_mode": "combined",
+        "preparation_policy": "advance",
+        "storage_anchor": "serving",
+        "attention_segments": [],
+        "timing_basis": "estimate"
+      },
+      {
+        "id": "soak",
+        "title": "Soak rice overnight",
+        "recipe_id": "",
+        "dependencies": [
+          "rinse"
+        ],
+        "minutes": 720,
+        "active_minutes": 0,
+        "presence_minutes": 0,
+        "skill": "cook",
+        "resource": null,
+        "capacity": 1,
+        "temperature": null,
+        "eligible": null,
+        "max_ahead_hours": 24.0,
+        "evidence": "Publisher method; task minutes and check-in placement are planning estimates. Make-ahead allowance is a planning estimate; follow storage notes.",
+        "ingredients": [],
+        "guidance": "Leave the rice soaking overnight; drain before grinding.",
+        "phase": "cooking",
+        "unattended": true,
+        "scale_mode": "combined",
+        "preparation_policy": "advance",
+        "storage_anchor": "serving",
+        "attention_segments": [],
+        "timing_basis": "estimate"
+      },
+      {
+        "id": "batter",
+        "title": "Grind rice and coconut; mix in yeast and sugar",
+        "recipe_id": "",
+        "dependencies": [
+          "soak"
+        ],
+        "minutes": 25,
+        "active_minutes": 25,
+        "presence_minutes": 25,
+        "skill": "cook",
+        "resource": null,
+        "capacity": 1,
+        "temperature": null,
+        "eligible": {
+          "start": "2026-12-25T09:00:00-05:00",
+          "end": "2026-12-25T15:00:00-05:00"
+        },
+        "max_ahead_hours": null,
+        "evidence": "Publisher method; task minutes and check-in placement are planning estimates. Same-day preparation.",
+        "ingredients": [],
+        "guidance": "Drain rice. Grind rice and coconut finely with enough coconut water for a thick batter, then stir in yeast and sugar.",
+        "phase": "cooking",
+        "unattended": false,
+        "scale_mode": "combined",
+        "preparation_policy": "same_day",
+        "storage_anchor": "serving",
+        "attention_segments": [],
+        "timing_basis": "estimate"
+      },
+      {
+        "id": "rise",
+        "title": "Let batter rise until bubbly",
+        "recipe_id": "",
+        "dependencies": [
+          "batter"
+        ],
+        "minutes": 180,
+        "active_minutes": 0,
+        "presence_minutes": 0,
+        "skill": "cook",
+        "resource": null,
+        "capacity": 1,
+        "temperature": null,
+        "eligible": {
+          "start": "2026-12-25T09:00:00-05:00",
+          "end": "2026-12-25T15:00:00-05:00"
+        },
+        "max_ahead_hours": null,
+        "evidence": "Publisher method; task minutes and check-in placement are planning estimates. Same-day preparation.",
+        "ingredients": [],
+        "guidance": "Allow about 3 hours in a warm spot. Continue when visibly risen and bubbly; use the batter once ready.",
+        "phase": "cooking",
+        "unattended": true,
+        "scale_mode": "combined",
+        "preparation_policy": "same_day",
+        "storage_anchor": "serving",
+        "attention_segments": [],
+        "timing_basis": "estimate"
+      },
+      {
+        "id": "steam",
+        "title": "Fill molds, steam and unmold sannas",
+        "recipe_id": "",
+        "dependencies": [
+          "rise"
+        ],
+        "minutes": 40,
+        "active_minutes": 25,
+        "presence_minutes": 25,
+        "skill": "cook",
+        "resource": "stovetop",
+        "capacity": 1,
+        "temperature": null,
+        "eligible": {
+          "start": "2026-12-25T09:00:00-05:00",
+          "end": "2026-12-25T15:00:00-05:00"
+        },
+        "max_ahead_hours": null,
+        "evidence": "Publisher method; task minutes and check-in placement are planning estimates. Same-day preparation.",
+        "ingredients": [],
+        "guidance": "Fold salt into risen batter. Half-fill greased molds and steam until set; the source gives 12\u201315 minutes. Let them firm briefly before unmolding. Refrigerate promptly after cooling; re-steam before serving.",
+        "phase": "cooking",
+        "unattended": false,
+        "scale_mode": "combined",
+        "preparation_policy": "same_day",
+        "storage_anchor": "serving",
+        "attention_segments": [
+          {
+            "offset_minutes": 0,
+            "minutes": 15
+          },
+          {
+            "offset_minutes": 30,
+            "minutes": 10
+          }
+        ],
+        "timing_basis": "estimate"
+      },
+      {
+        "id": "reheat",
+        "title": "Re-steam sannas before serving",
+        "recipe_id": "",
+        "dependencies": [
+          "steam"
+        ],
+        "minutes": 15,
+        "active_minutes": 5,
+        "presence_minutes": 5,
+        "skill": "cook",
+        "resource": "stovetop",
+        "capacity": 1,
+        "temperature": null,
+        "eligible": {
+          "start": "2026-12-25T16:55:00-05:00",
+          "end": "2026-12-25T17:15:00-05:00"
+        },
+        "max_ahead_hours": null,
+        "evidence": "Publisher method; task minutes and check-in placement are planning estimates. Same-day preparation.",
+        "ingredients": [],
+        "guidance": "Steam chilled sannas until hot throughout. Keep covered and hot until serving.",
+        "phase": "cooking",
+        "unattended": false,
+        "scale_mode": "combined",
+        "preparation_policy": "same_day",
+        "storage_anchor": "serving",
+        "attention_segments": [
+          {
+            "offset_minutes": 0,
+            "minutes": 2
+          },
+          {
+            "offset_minutes": 12,
+            "minutes": 3
+          }
+        ],
+        "timing_basis": "estimate"
+      }
+    ],
+    "source_text": "Xantilicious yeast sannas: source yield 18\u201320 pieces. Soak rice overnight, grind with coconut, add yeast and sugar, ferment about 3 hours until risen, salt, fill greased molds halfway and steam 12\u201315 minutes. Estimated serving basis: two pieces per person.",
+    "reviewed": true,
+    "image_url": null,
+    "image_credit": null,
+    "uncertainties": [
+      "Task durations are estimates; use doneness cues.",
+      "Ingredient review found no listed peanuts or tree nuts in this version. Use non-nut oil and check package labels/cross-contact. Coconut is retained."
+    ],
+    "preparation_provenance": {
+      "christmas_review": "2026-10-29: task-specific instructions, explicit prerequisites, waiting separated, no standalone measuring tasks. https://xantilicious.com/recipe/sanna/"
+    }
+  },
+  {
+    "id": "4076c09a-c77f-8198-94ea-c95511c4fb8c",
+    "version": "2",
+    "title": "The Best Doce",
+    "source": "https://withwendyandshannon.com/blog/the-best-doce/",
+    "servings": 24,
+    "category": "desserts",
+    "vegetarian": null,
+    "allergens": [
+      "milk"
+    ],
+    "ingredients": [
+      {
+        "name": "(300 grams) Chana Dal / Bengal Gram / Split Chickpeas",
+        "quantity": 1.5,
+        "unit": "cup"
+      },
+      {
+        "name": "(300 grams) Fresh Grated Coconut",
+        "quantity": 3.0,
+        "unit": "cup"
+      },
+      {
+        "name": "(600 grams) White Granulated Sugar",
+        "quantity": 3.0,
+        "unit": "cup"
+      },
+      {
+        "name": "(15 grams) Pure Ghee, clarified butter",
+        "quantity": 1.0,
+        "unit": "tbsp"
+      },
+      {
+        "name": "(10-12 pods) Cardamom Powder, freshly ground",
+        "quantity": 1.0,
+        "unit": "tsp"
+      },
+      {
+        "name": "Salt",
+        "quantity": 1.0,
+        "unit": "tsp"
+      }
+    ],
+    "tasks": [
+      {
+        "id": "rinse",
+        "title": "Rinse chana dal and cover with water",
+        "recipe_id": "",
+        "dependencies": [],
+        "minutes": 5,
+        "active_minutes": 5,
+        "presence_minutes": 5,
+        "skill": "cook",
+        "resource": null,
+        "capacity": 1,
+        "temperature": null,
+        "eligible": {
+          "start": "2026-12-22T17:00:00-05:00",
+          "end": "2026-12-22T18:00:00-05:00"
+        },
+        "max_ahead_hours": 96.0,
+        "evidence": "Publisher method; task minutes and check-in placement are planning estimates. Make-ahead allowance is a planning estimate; follow storage notes.",
+        "ingredients": [],
+        "guidance": "Rinse the dal thoroughly and cover with plenty of water.",
+        "phase": "cooking",
+        "unattended": false,
+        "scale_mode": "combined",
+        "preparation_policy": "advance",
+        "storage_anchor": "serving",
+        "attention_segments": [],
+        "timing_basis": "estimate"
+      },
+      {
+        "id": "soak",
+        "title": "Soak chana dal",
+        "recipe_id": "",
+        "dependencies": [
+          "rinse"
+        ],
+        "minutes": 360,
+        "active_minutes": 0,
+        "presence_minutes": 0,
+        "skill": "cook",
+        "resource": null,
+        "capacity": 1,
+        "temperature": null,
+        "eligible": null,
+        "max_ahead_hours": 96.0,
+        "evidence": "Publisher method; task minutes and check-in placement are planning estimates. Make-ahead allowance is a planning estimate; follow storage notes.",
+        "ingredients": [],
+        "guidance": "Soak for 5\u20136 hours or overnight, then drain.",
+        "phase": "cooking",
+        "unattended": true,
+        "scale_mode": "combined",
+        "preparation_policy": "advance",
+        "storage_anchor": "serving",
+        "attention_segments": [],
+        "timing_basis": "estimate"
+      },
+      {
+        "id": "cook",
+        "title": "Cook dal until soft; cool and blend with coconut",
+        "recipe_id": "",
+        "dependencies": [
+          "soak"
+        ],
+        "minutes": 85,
+        "active_minutes": 30,
+        "presence_minutes": 30,
+        "skill": "cook",
+        "resource": "instant_pot",
+        "capacity": 1,
+        "temperature": null,
+        "eligible": {
+          "start": "2026-12-23T09:00:00-05:00",
+          "end": "2026-12-23T21:00:00-05:00"
+        },
+        "max_ahead_hours": 72.0,
+        "evidence": "Publisher method; task minutes and check-in placement are planning estimates. Make-ahead allowance is a planning estimate; follow storage notes.",
+        "ingredients": [],
+        "guidance": "Pressure-cook dal until soft using your cooker instructions; let pressure release before opening. Drain and reserve the liquid. Cool enough for your blender, then blend dal and coconut separately using minimal reserved liquid.",
+        "phase": "cooking",
+        "unattended": false,
+        "scale_mode": "combined",
+        "preparation_policy": "advance",
+        "storage_anchor": "serving",
+        "attention_segments": [
+          {
+            "offset_minutes": 0,
+            "minutes": 5
+          },
+          {
+            "offset_minutes": 45,
+            "minutes": 5
+          },
+          {
+            "offset_minutes": 65,
+            "minutes": 20
+          }
+        ],
+        "timing_basis": "estimate"
+      },
+      {
+        "id": "stir",
+        "title": "Stir the doce until thick, then shape and cut",
+        "recipe_id": "",
+        "dependencies": [
+          "cook"
+        ],
+        "minutes": 65,
+        "active_minutes": 65,
+        "presence_minutes": 65,
+        "skill": "cook",
+        "resource": "stovetop",
+        "capacity": 1,
+        "temperature": null,
+        "eligible": {
+          "start": "2026-12-23T09:00:00-05:00",
+          "end": "2026-12-23T21:00:00-05:00"
+        },
+        "max_ahead_hours": 72.0,
+        "evidence": "Publisher method; task minutes and check-in placement are planning estimates. Make-ahead allowance is a planning estimate; follow storage notes.",
+        "ingredients": [],
+        "guidance": "Stir dal, coconut and sugar continuously as it thickens. Add cardamom and ghee. When it forms a nonsticky dough, spread on a greased surface, mark a pattern, cool briefly and cut.",
+        "phase": "cooking",
+        "unattended": false,
+        "scale_mode": "combined",
+        "preparation_policy": "advance",
+        "storage_anchor": "serving",
+        "attention_segments": [],
+        "timing_basis": "estimate"
+      },
+      {
+        "id": "cool",
+        "title": "Let doce cool fully",
+        "recipe_id": "",
+        "dependencies": [
+          "stir"
+        ],
+        "minutes": 120,
+        "active_minutes": 0,
+        "presence_minutes": 0,
+        "skill": "cook",
+        "resource": null,
+        "capacity": 1,
+        "temperature": null,
+        "eligible": {
+          "start": "2026-12-23T09:00:00-05:00",
+          "end": "2026-12-23T21:00:00-05:00"
+        },
+        "max_ahead_hours": 72.0,
+        "evidence": "Publisher method; task minutes and check-in placement are planning estimates. Make-ahead allowance is a planning estimate; follow storage notes.",
+        "ingredients": [],
+        "guidance": "Leave pieces to cool before separating and packing. For this ahead-of-time plan, refrigerate in a covered container once cool.",
+        "phase": "cooking",
+        "unattended": true,
+        "scale_mode": "combined",
+        "preparation_policy": "advance",
+        "storage_anchor": "serving",
+        "attention_segments": [],
+        "timing_basis": "estimate"
+      }
+    ],
+    "source_text": "Collection: Christmas / Goan\nSource: https://withwendyandshannon.com/blog/the-best-doce/\nPublisher: With Wendy and Shannon (formerly Platin\u2019 It With Wendy)\nPublisher rating snapshot, October 28, 2026: No rating verified\nImport: source link only \u2014 importer access restricted\nCandidate only. Not personally tested or planning-ready. A selection option, not a recommendation to cook every item.\nSource yield: Not verified\nSource timing: prep unknown; cook unknown; total unknown. Source prep time is not total active work.\nIngredients (source facts; quantities need confirmation before scaling)\nCooking method and recipe notes: open the original source link. Task-level timing, make-ahead windows and storage guidance still need review.\nHome-cook timing draft (untested)\nMeasure and cook coconut/lentil mixture: 25 min hands-on + 25 min waiting/cooking\nStir, shape and cool sweets: 25 min hands-on + 30 min waiting/cooking\nCleanup: 15 min. Active total including cleanup: 65 min; unattended: 55 min. Base recipe only; confirm servings, equipment batches, and real pace before scheduling.\nSource ingredients: 1\u00bd cups (300 grams) Chana Dal / Bengal Gram / Split Chickpeas; 3 cups (300 grams) Fresh Grated Coconut; 3 cups (600 grams) White Granulated Sugar; 1 tbsp (15 grams) Pure Ghee, clarified butter; 1 tsp (10-12 pods) Cardamom Powder, freshly ground; 1 tsp Salt\nPreparation review \u00b7 2026-10-28-logical-steps-v1\nRinse and soak chana dal \u2014 5 min hands-on; 360 min waiting.\nPressure-cook dal; release pressure and drain \u2014 10 min hands-on; 35 min waiting.\nCool dal; grind coconut and dal separately \u2014 20 min hands-on; 20 min waiting.\nCook with sugar, stirring continuously until thick \u2014 45 min hands-on; 0 min waiting.\nShape and score; cut after initial cooling \u2014 10 min hands-on; 10 min waiting.\nCool completely before separating pieces \u2014 0 min hands-on; 120 min waiting.\nEstimated make-ahead approach: Cook, shape and cool sweets 1 day ahead. Store covered according to ingredients and room conditions; choose refrigeration if uncertain. Large-batch stirring is hands-on and may exceed the current time estimate.\nTiming and scaling notes: Hands-on and waiting times are estimates for the base recipe; waiting includes soaking, chilling and cooling where listed. Measure ingredients while cooking. Cleanup is a separate flexible allowance. Increase chopping and shaping time with quantity; repeat only appliance-limited cooking steps. Recipe yield does not establish appliance capacity. Use source doneness cues. Pressure-cooker whistles are not a verified Instant Pot conversion. Method recovered from visible publisher HTML, rather than structured recipe metadata.",
+    "reviewed": true,
+    "image_url": null,
+    "image_credit": null,
+    "uncertainties": [
+      "Task durations and make-ahead allowances are estimates; use doneness cues.",
+      "Doce refrigeration for this plan is a conservative planning choice, not a publisher shelf-life claim.",
+      "Ingredient review found no listed peanuts or tree nuts in this version. Use non-nut oil and check package labels/cross-contact. Coconut is retained."
+    ],
+    "preparation_provenance": {
+      "christmas_review": "2026-10-29: task-specific instructions, explicit prerequisites, waiting separated, no standalone measuring tasks. https://withwendyandshannon.com/blog/the-best-doce/"
+    }
+  },
+  {
+    "id": "4076c09a-c77f-8145-8549-db01109726c6",
+    "version": "2",
+    "title": "Christmas Fruit Cake (without nuts or alcohol)",
+    "source": "https://www.ruchikrandhap.com/christmas-fruit-cake-without-alcohol/",
+    "servings": 12,
+    "category": "desserts",
+    "vegetarian": null,
+    "allergens": [
+      "gluten",
+      "milk",
+      "eggs"
+    ],
+    "ingredients": [
+      {
+        "name": "seedless black raisins",
+        "quantity": 125.0,
+        "unit": "g"
+      },
+      {
+        "name": "golden raisins",
+        "quantity": 125.0,
+        "unit": "g"
+      },
+      {
+        "name": "seedless dates",
+        "quantity": 125.0,
+        "unit": "g"
+      },
+      {
+        "name": "candied/glace cherries (rinsed) * see notes",
+        "quantity": 125.0,
+        "unit": "g"
+      },
+      {
+        "name": "mixed spice",
+        "quantity": 0.5,
+        "unit": "tsp"
+      },
+      {
+        "name": "(175ml) fresh orange juice",
+        "quantity": 0.75,
+        "unit": "cup"
+      },
+      {
+        "name": "unsalted butter, at room temperature",
+        "quantity": 225.0,
+        "unit": "g"
+      },
+      {
+        "name": "caster sugar, you may use soft brown/muscovado too",
+        "quantity": 200.0,
+        "unit": "g"
+      },
+      {
+        "name": "4  eggs, at room temperature",
+        "quantity": null,
+        "unit": null
+      },
+      {
+        "name": "zest of 1 orange",
+        "quantity": null,
+        "unit": null
+      },
+      {
+        "name": "zest of 1 lemon",
+        "quantity": null,
+        "unit": null
+      },
+      {
+        "name": "treacle/black caramel syrup",
+        "quantity": 2.0,
+        "unit": "tbsp"
+      },
+      {
+        "name": "all purpose flour",
+        "quantity": 225.0,
+        "unit": "g"
+      },
+      {
+        "name": "salt",
+        "quantity": 0.5,
+        "unit": "tsp"
+      },
+      {
+        "name": "baking powder",
+        "quantity": 1.0,
+        "unit": "tsp"
+      },
+      {
+        "name": "mixed spice",
+        "quantity": 0.5,
+        "unit": "tsp"
+      }
+    ],
+    "tasks": [
+      {
+        "id": "fruit",
+        "title": "Chop dried fruit and add orange juice",
+        "recipe_id": "",
+        "dependencies": [],
+        "minutes": 15,
+        "active_minutes": 15,
+        "presence_minutes": 15,
+        "skill": "cook",
+        "resource": null,
+        "capacity": 1,
+        "temperature": null,
+        "eligible": {
+          "start": "2026-12-22T09:00:00-05:00",
+          "end": "2026-12-22T10:00:00-05:00"
+        },
+        "max_ahead_hours": 84.0,
+        "evidence": "Publisher method; task minutes and check-in placement are planning estimates. Make-ahead allowance is a planning estimate; follow storage notes.",
+        "ingredients": [],
+        "guidance": "Chop the dried fruit, mix with orange juice and mixed spice, and cover.",
+        "phase": "cooking",
+        "unattended": false,
+        "scale_mode": "combined",
+        "preparation_policy": "advance",
+        "storage_anchor": "serving",
+        "attention_segments": [],
+        "timing_basis": "estimate"
+      },
+      {
+        "id": "soak",
+        "title": "Soak fruit for 6\u20138 hours or overnight",
+        "recipe_id": "",
+        "dependencies": [
+          "fruit"
+        ],
+        "minutes": 360,
+        "active_minutes": 0,
+        "presence_minutes": 0,
+        "skill": "cook",
+        "resource": null,
+        "capacity": 1,
+        "temperature": null,
+        "eligible": null,
+        "max_ahead_hours": 84.0,
+        "evidence": "Publisher method; task minutes and check-in placement are planning estimates. Make-ahead allowance is a planning estimate; follow storage notes.",
+        "ingredients": [],
+        "guidance": "Leave covered until the fruit has absorbed the juice.",
+        "phase": "cooking",
+        "unattended": true,
+        "scale_mode": "combined",
+        "preparation_policy": "advance",
+        "storage_anchor": "serving",
+        "attention_segments": [],
+        "timing_basis": "estimate"
+      },
+      {
+        "id": "bake",
+        "title": "Mix fruit cake batter and bake",
+        "recipe_id": "",
+        "dependencies": [
+          "soak"
+        ],
+        "minutes": 210,
+        "active_minutes": 40,
+        "presence_minutes": 40,
+        "skill": "cook",
+        "resource": "oven",
+        "capacity": 1,
+        "temperature": null,
+        "eligible": {
+          "start": "2026-12-22T15:15:00-05:00",
+          "end": "2026-12-22T19:00:00-05:00"
+        },
+        "max_ahead_hours": 72.0,
+        "evidence": "Publisher method; task minutes and check-in placement are planning estimates. Make-ahead allowance is a planning estimate; follow storage notes.",
+        "ingredients": [],
+        "guidance": "Line the tin and preheat to 120\u00b0C. Mix butter, sugar, eggs and remaining ingredients; fold in fruit with its juice ; omit almonds and walnuts. Bake 2\u00bd\u20133 hours, checking for browning after 1\u00bd hours. A skewer should come out clean.",
+        "phase": "cooking",
+        "unattended": false,
+        "scale_mode": "combined",
+        "preparation_policy": "advance",
+        "storage_anchor": "serving",
+        "attention_segments": [
+          {
+            "offset_minutes": 0,
+            "minutes": 30
+          },
+          {
+            "offset_minutes": 120,
+            "minutes": 5
+          },
+          {
+            "offset_minutes": 205,
+            "minutes": 5
+          }
+        ],
+        "timing_basis": "estimate"
+      },
+      {
+        "id": "cool-tin",
+        "title": "Cool cake in the tin",
+        "recipe_id": "",
+        "dependencies": [
+          "bake"
+        ],
+        "minutes": 20,
+        "active_minutes": 0,
+        "presence_minutes": 0,
+        "skill": "cook",
+        "resource": null,
+        "capacity": 1,
+        "temperature": null,
+        "eligible": null,
+        "max_ahead_hours": 72.0,
+        "evidence": "Publisher method; task minutes and check-in placement are planning estimates. Make-ahead allowance is a planning estimate; follow storage notes.",
+        "ingredients": [],
+        "guidance": "Let the cake settle in its tin before unmolding.",
+        "phase": "cooking",
+        "unattended": true,
+        "scale_mode": "combined",
+        "preparation_policy": "advance",
+        "storage_anchor": "serving",
+        "attention_segments": [],
+        "timing_basis": "estimate"
+      },
+      {
+        "id": "unmold",
+        "title": "Move cake to a cooling rack",
+        "recipe_id": "",
+        "dependencies": [
+          "cool-tin"
+        ],
+        "minutes": 5,
+        "active_minutes": 5,
+        "presence_minutes": 5,
+        "skill": "cook",
+        "resource": null,
+        "capacity": 1,
+        "temperature": null,
+        "eligible": null,
+        "max_ahead_hours": 72.0,
+        "evidence": "Publisher method; task minutes and check-in placement are planning estimates. Make-ahead allowance is a planning estimate; follow storage notes.",
+        "ingredients": [],
+        "guidance": "Carefully unmold the cake and leave uncovered on a rack until completely cool.",
+        "phase": "cooking",
+        "unattended": false,
+        "scale_mode": "combined",
+        "preparation_policy": "advance",
+        "storage_anchor": "serving",
+        "attention_segments": [],
+        "timing_basis": "estimate"
+      },
+      {
+        "id": "cool-rack",
+        "title": "Let cake cool completely",
+        "recipe_id": "",
+        "dependencies": [
+          "unmold"
+        ],
+        "minutes": 120,
+        "active_minutes": 0,
+        "presence_minutes": 0,
+        "skill": "cook",
+        "resource": null,
+        "capacity": 1,
+        "temperature": null,
+        "eligible": null,
+        "max_ahead_hours": 72.0,
+        "evidence": "Publisher method; task minutes and check-in placement are planning estimates. Make-ahead allowance is a planning estimate; follow storage notes.",
+        "ingredients": [],
+        "guidance": "Wait until completely cool before wrapping; allow longer if still warm.",
+        "phase": "cooking",
+        "unattended": true,
+        "scale_mode": "combined",
+        "preparation_policy": "advance",
+        "storage_anchor": "serving",
+        "attention_segments": [],
+        "timing_basis": "estimate"
+      },
+      {
+        "id": "wrap",
+        "title": "Wrap the cooled fruit cake",
+        "recipe_id": "",
+        "dependencies": [
+          "cool-rack"
+        ],
+        "minutes": 5,
+        "active_minutes": 5,
+        "presence_minutes": 5,
+        "skill": "cook",
+        "resource": null,
+        "capacity": 1,
+        "temperature": null,
+        "eligible": null,
+        "max_ahead_hours": 72.0,
+        "evidence": "Publisher method; task minutes and check-in placement are planning estimates. Make-ahead allowance is a planning estimate; follow storage notes.",
+        "ingredients": [],
+        "guidance": "Wrap the completely cooled cake airtight. This nonalcoholic cake is planned within three days of serving.",
+        "phase": "cooking",
+        "unattended": false,
+        "scale_mode": "combined",
+        "preparation_policy": "advance",
+        "storage_anchor": "serving",
+        "attention_segments": [],
+        "timing_basis": "estimate"
+      }
+    ],
+    "source_text": "Source recipe: https://www.ruchikrandhap.com/christmas-fruit-cake-without-alcohol/\nPublisher prep/cook: 30 / 180 minutes; chef task estimates below are separate.\nMake-ahead: Author specifies 6\u20138 hours or overnight fruit soak; bake 2\u00bd\u20133 hours and cool fully. Author says nonalcoholic cake has a short room-temperature shelf life; verify storage plan.\nHome-cook timing draft (untested):\nChop and soak dried fruit in orange juice: 30 min hands-on + 480 min waiting/cooking (estimate).\nMix batter and prepare tin: 30 min hands-on + 0 min waiting/cooking (estimate).\nBake and cool completely: 10 min hands-on + 240 min waiting/cooking (estimate).\nCleanup: 15 min. Total active including cleanup: 85 min. Waiting/cooking: 720 min. Base recipe only; confirm servings, equipment batches and real pace before scheduling. Author specifies 6\u20138 hours or overnight fruit soak; bake 2\u00bd\u20133 hours and cool fully. Author says nonalcoholic cake has a short room-temperature shelf life; verify storage plan.\nIngredients: 125 grams seedless black raisins; 125 grams golden raisins; 125 grams seedless dates; 125 grams candied/glace cherries (rinsed) * see notes; 1/2 teaspoon mixed spice; 3/4 cup  (175ml) fresh orange juice; 225 grams unsalted butter, at room temperature; 200 grams caster sugar, you may use soft brown/muscovado too; 4  eggs, at room temperature; zest of 1 orange; zest of 1 lemon; 2 tablespoons treacle/black caramel syrup; 225 grams all purpose flour; 1/2 teaspoon salt; 1 teaspoon baking powder; 1/2 teaspoon mixed spice; 25 grams almonds, chopped; 25 grams walnuts, chopped\nPreparation review \u00b7 2026-10-28-logical-steps-v1\nChop dried fruit; soak in orange juice \u2014 15 min hands-on; 480 min waiting.\nLine tin and mix batter \u2014 25 min hands-on; 0 min waiting.\nBake at the source temperature; check with skewer \u2014 5 min hands-on; 180 min waiting.\nCool in tin then on rack \u2014 5 min hands-on; 120 min waiting.\nPublisher make-ahead guidance: Author specifies 6\u20138 hours or overnight fruit soak; bake 2\u00bd\u20133 hours and cool fully. Author says nonalcoholic cake has a short room-temperature shelf life; verify storage plan.\nTiming and scaling notes: Hands-on and waiting times are estimates for the base recipe; waiting includes soaking, chilling and cooling where listed. Measure ingredients while cooking. Cleanup is a separate flexible allowance. Increase chopping and shaping time with quantity; repeat only appliance-limited cooking steps. Recipe yield does not establish appliance capacity. Use source doneness cues. Pressure-cooker whistles are not a verified Instant Pot conversion.",
+    "reviewed": true,
+    "image_url": null,
+    "image_credit": null,
+    "uncertainties": [
+      "Task durations are estimates; use doneness cues.",
+      "Nut omission is a hosting adaptation. Check dried fruit and other packaged ingredients for nut cross-contact.",
+      "Ingredient review found no listed peanuts or tree nuts in this version. Use non-nut oil and check package labels/cross-contact. Coconut is retained."
+    ],
+    "preparation_provenance": {
+      "christmas_review": "2026-10-29: task-specific instructions, explicit prerequisites, waiting separated, no standalone measuring tasks. https://www.ruchikrandhap.com/christmas-fruit-cake-without-alcohol/"
+    }
+  }
+]

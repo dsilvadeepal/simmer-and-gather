@@ -1,0 +1,19 @@
+{
+  "dataset_version": "hosting-architecture-v1",
+  "mode": "offline-regression",
+  "cases": [
+    {"id":"same-day-without-storage-invention","test":"test_explicit_same_day_does_not_require_invented_storage"},
+    {"id":"return-attention-calendar-conflict","test":"test_end_attention_counts_and_cannot_overlap_calendar"},
+    {"id":"component-storage-next-step","test":"test_storage_can_be_anchored_to_next_step"},
+    {"id":"ingredients-not-batches","test":"test_single_batch_default_preserves_scaled_ingredients"},
+    {"id":"optional-menu-advisory","test":"test_optional_menu_counts_do_not_block_schedule"},
+    {"id":"failed-current-not-old-plan","test":"test_failed_current_plan_never_substitutes_old_assignments"},
+    {"id":"calendar-reserves-return-work","test":"test_attention_end_is_in_calendar_proposal"},
+    {"id":"presence-not-elapsed","test":"test_fit_summary_uses_presence_not_sum_of_elapsed"},
+    {"id":"safe-linked-traces","test":"test_planning_links_safe_schedule_and_validation_traces"},
+    {"id":"recipe-change-invalidates-approval","test":"test_changed_recipe_blocks_approval_even_when_gathering_revision_unchanged"},
+    {"id":"granular-readiness","test":"test_readiness_distinguishes_same_day_from_advance"},
+    {"id":"rearrange-before-more-time","test":"test_bounded_rearrangement_tries_tight_task_first"}
+  ],
+  "limitations": "Deterministic regression cases with simulated external services. Not a live model quality experiment. LangSmith delivery requires private configuration; model-based judges remain disabled."
+}

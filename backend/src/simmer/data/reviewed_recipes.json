@@ -1,0 +1,1812 @@
+[
+  {
+    "title": "Air Fryer Paneer Tikka",
+    "url": "https://ministryofcurry.com/paneer-tikka/",
+    "basis": "chef estimate, untested",
+    "phases": [
+      {
+        "task": "Cut paneer and vegetables; mix and coat with marinade",
+        "active_minutes": 20,
+        "unattended_minutes": 0
+      },
+      {
+        "task": "Refrigerate to marinate",
+        "active_minutes": 0,
+        "unattended_minutes": 30
+      },
+      {
+        "task": "Thread skewers and preheat air fryer",
+        "active_minutes": 10,
+        "unattended_minutes": 5
+      },
+      {
+        "task": "Air-fry a single layer, turning halfway",
+        "active_minutes": 5,
+        "unattended_minutes": 8
+      }
+    ],
+    "cleanup_minutes": 10,
+    "active_minutes": 45,
+    "unattended_minutes": 43,
+    "elapsed_minutes": 88,
+    "review": "Base recipe only; confirm servings, equipment batches, and real pace before scheduling.",
+    "review_status": "reviewed for planning; estimated timings",
+    "review_notes": [
+      "Hands-on and waiting times are estimates for the base recipe; waiting includes soaking, chilling and cooling where listed.",
+      "Measure ingredients while cooking. Cleanup is a separate flexible allowance.",
+      "Increase chopping and shaping time with quantity; repeat only appliance-limited cooking steps. Recipe yield does not establish appliance capacity.",
+      "Use source doneness cues. Pressure-cooker whistles are not a verified Instant Pot conversion."
+    ],
+    "make_ahead": {
+      "source_guidance": "Marinate the uncooked paneer, then refrigerate for up to 24 hours. Cook near serving; the author says it is best hot and fresh.",
+      "planning_estimate": null,
+      "basis": "Publisher-specific note retained in prep_summary; confirm actual storage plan"
+    },
+    "review_version": "2026-10-28-logical-steps-v1"
+  },
+  {
+    "title": "Aloo Chaat in Phyllo Shells",
+    "url": "https://ministryofcurry.com/aloo-chaat-in-phyllo-cups/",
+    "basis": "chef estimate, untested",
+    "phases": [
+      {
+        "task": "Steam potatoes and release pressure",
+        "active_minutes": 5,
+        "unattended_minutes": 30
+      },
+      {
+        "task": "Cool potatoes; peel, dice and season filling",
+        "active_minutes": 20,
+        "unattended_minutes": 20
+      },
+      {
+        "task": "Whisk yogurt; prepare or use bought chutneys",
+        "active_minutes": 10,
+        "unattended_minutes": 0
+      },
+      {
+        "task": "Fill shells and bake until crisp",
+        "active_minutes": 10,
+        "unattended_minutes": 15
+      },
+      {
+        "task": "Add chutneys, yogurt and toppings just before serving",
+        "active_minutes": 10,
+        "unattended_minutes": 0
+      }
+    ],
+    "cleanup_minutes": 10,
+    "active_minutes": 65,
+    "unattended_minutes": 65,
+    "elapsed_minutes": 130,
+    "review": "Base recipe only; confirm servings, equipment batches, and real pace before scheduling.",
+    "review_status": "reviewed for planning; estimated timings",
+    "review_notes": [
+      "Hands-on and waiting times are estimates for the base recipe; waiting includes soaking, chilling and cooling where listed.",
+      "Measure ingredients while cooking. Cleanup is a separate flexible allowance.",
+      "Increase chopping and shaping time with quantity; repeat only appliance-limited cooking steps. Recipe yield does not establish appliance capacity.",
+      "Use source doneness cues. Pressure-cooker whistles are not a verified Instant Pot conversion."
+    ],
+    "make_ahead": {
+      "source_guidance": "Make the green and tamarind chutneys ahead; the author states they keep refrigerated for a week or can be frozen. Assembly timing still needs review.",
+      "planning_estimate": null,
+      "basis": "Publisher-specific note retained in prep_summary; confirm actual storage plan"
+    },
+    "review_version": "2026-10-28-logical-steps-v1"
+  },
+  {
+    "title": "Tandoori chicken wings",
+    "url": "https://ministryofcurry.com/tandoori-chicken-wings/",
+    "basis": "chef estimate, untested",
+    "phases": [
+      {
+        "task": "Trim wings; mix marinade and coat",
+        "active_minutes": 20,
+        "unattended_minutes": 0
+      },
+      {
+        "task": "Refrigerate to marinate",
+        "active_minutes": 0,
+        "unattended_minutes": 60
+      },
+      {
+        "task": "Arrange wings and preheat oven",
+        "active_minutes": 10,
+        "unattended_minutes": 20
+      },
+      {
+        "task": "Roast and briefly broil; check doneness",
+        "active_minutes": 10,
+        "unattended_minutes": 40
+      }
+    ],
+    "cleanup_minutes": 10,
+    "active_minutes": 50,
+    "unattended_minutes": 120,
+    "elapsed_minutes": 170,
+    "review": "Base recipe only; confirm servings, equipment batches, and real pace before scheduling.",
+    "review_status": "reviewed for planning; estimated timings",
+    "review_notes": [
+      "Hands-on and waiting times are estimates for the base recipe; waiting includes soaking, chilling and cooling where listed.",
+      "Measure ingredients while cooking. Cleanup is a separate flexible allowance.",
+      "Increase chopping and shaping time with quantity; repeat only appliance-limited cooking steps. Recipe yield does not establish appliance capacity.",
+      "Use source doneness cues. Pressure-cooker whistles are not a verified Instant Pot conversion."
+    ],
+    "make_ahead": {
+      "source_guidance": null,
+      "planning_estimate": "Mix yogurt marinade and coat wings the prior evening; refrigerate covered. Cook in batches near serving for crisp skin. Do not count unattended marination as active work.",
+      "basis": "Chef planning proposal, not publisher-confirmed storage window"
+    },
+    "review_version": "2026-10-28-logical-steps-v1"
+  },
+  {
+    "title": "Masala Nuts",
+    "url": "https://ministryofcurry.com/masala-nuts/",
+    "basis": "chef estimate, untested",
+    "phases": [
+      {
+        "task": "Season nuts and spread on tray",
+        "active_minutes": 10,
+        "unattended_minutes": 0
+      },
+      {
+        "task": "Roast, stirring periodically",
+        "active_minutes": 5,
+        "unattended_minutes": 20
+      },
+      {
+        "task": "Cool completely before sealing",
+        "active_minutes": 2,
+        "unattended_minutes": 30
+      }
+    ],
+    "cleanup_minutes": 5,
+    "active_minutes": 22,
+    "unattended_minutes": 50,
+    "elapsed_minutes": 72,
+    "review": "Base recipe only; confirm servings, equipment batches, and real pace before scheduling.",
+    "review_status": "reviewed for planning; estimated timings",
+    "review_notes": [
+      "Hands-on and waiting times are estimates for the base recipe; waiting includes soaking, chilling and cooling where listed.",
+      "Measure ingredients while cooking. Cleanup is a separate flexible allowance.",
+      "Increase chopping and shaping time with quantity; repeat only appliance-limited cooking steps. Recipe yield does not establish appliance capacity.",
+      "Use source doneness cues. Pressure-cooker whistles are not a verified Instant Pot conversion."
+    ],
+    "make_ahead": {
+      "source_guidance": null,
+      "planning_estimate": "Roast and cool completely 1-2 days ahead; seal airtight only after cooling. Check crunch before serving; nuts are an explicit allergen.",
+      "basis": "Chef planning proposal, not publisher-confirmed storage window"
+    },
+    "review_version": "2026-10-28-logical-steps-v1"
+  },
+  {
+    "title": "Instant Pot Butter Chicken",
+    "url": "https://ministryofcurry.com/instant-pot-butter-chicken/",
+    "basis": "chef estimate, untested",
+    "phases": [
+      {
+        "task": "Cut chicken and chop onion",
+        "active_minutes": 20,
+        "unattended_minutes": 0
+      },
+      {
+        "task": "Sauté onion and spices; add tomato, liquid and chicken",
+        "active_minutes": 10,
+        "unattended_minutes": 0
+      },
+      {
+        "task": "Bring to pressure, cook and release",
+        "active_minutes": 5,
+        "unattended_minutes": 25
+      },
+      {
+        "task": "Stir in coconut cream and reduce sauce",
+        "active_minutes": 10,
+        "unattended_minutes": 0
+      }
+    ],
+    "cleanup_minutes": 10,
+    "active_minutes": 55,
+    "unattended_minutes": 25,
+    "elapsed_minutes": 80,
+    "review": "Base recipe only; confirm servings, equipment batches, and real pace before scheduling.",
+    "review_status": "reviewed for planning; estimated timings",
+    "review_notes": [
+      "Hands-on and waiting times are estimates for the base recipe; waiting includes soaking, chilling and cooling where listed.",
+      "Measure ingredients while cooking. Cleanup is a separate flexible allowance.",
+      "Increase chopping and shaping time with quantity; repeat only appliance-limited cooking steps. Recipe yield does not establish appliance capacity.",
+      "Use source doneness cues. Pressure-cooker whistles are not a verified Instant Pot conversion."
+    ],
+    "make_ahead": {
+      "source_guidance": null,
+      "planning_estimate": "Cook fully 1 day ahead; divide into shallow containers and refrigerate promptly. Reheat thoroughly before serving; sauce usually tolerates this better than last-minute cooking.",
+      "basis": "Chef planning proposal, not publisher-confirmed storage window"
+    },
+    "review_version": "2026-10-28-logical-steps-v1"
+  },
+  {
+    "title": "Butter Paneer {Paneer Makhani}",
+    "url": "https://ministryofcurry.com/paneer-butter-masala/",
+    "basis": "chef estimate, untested",
+    "phases": [
+      {
+        "task": "Chop onion and prepare paneer",
+        "active_minutes": 15,
+        "unattended_minutes": 0
+      },
+      {
+        "task": "Sauté aromatics; add tomato and pressure-cook sauce",
+        "active_minutes": 5,
+        "unattended_minutes": 20
+      },
+      {
+        "task": "Release and blend sauce",
+        "active_minutes": 5,
+        "unattended_minutes": 0
+      },
+      {
+        "task": "Add paneer and cream; heat gently",
+        "active_minutes": 5,
+        "unattended_minutes": 5
+      }
+    ],
+    "cleanup_minutes": 10,
+    "active_minutes": 40,
+    "unattended_minutes": 25,
+    "elapsed_minutes": 65,
+    "review": "Base recipe only; confirm servings, equipment batches, and real pace before scheduling.",
+    "review_status": "reviewed for planning; estimated timings",
+    "review_notes": [
+      "Hands-on and waiting times are estimates for the base recipe; waiting includes soaking, chilling and cooling where listed.",
+      "Measure ingredients while cooking. Cleanup is a separate flexible allowance.",
+      "Increase chopping and shaping time with quantity; repeat only appliance-limited cooking steps. Recipe yield does not establish appliance capacity.",
+      "Use source doneness cues. Pressure-cooker whistles are not a verified Instant Pot conversion."
+    ],
+    "make_ahead": {
+      "source_guidance": null,
+      "planning_estimate": "Cook sauce 1 day ahead and refrigerate promptly. Add or warm paneer close to serving to avoid rubbery texture; optional naan is separate and contains wheat unless a verified substitute is used.",
+      "basis": "Chef planning proposal, not publisher-confirmed storage window"
+    },
+    "review_version": "2026-10-28-logical-steps-v1"
+  },
+  {
+    "title": "Instant Pot Chana Masala (Punjabi Chole)",
+    "url": "https://ministryofcurry.com/instant-pot-chana-masala-recipe/",
+    "basis": "chef estimate, untested",
+    "phases": [
+      {
+        "task": "Rinse and soak dried chickpeas",
+        "active_minutes": 5,
+        "unattended_minutes": 480
+      },
+      {
+        "task": "Chop aromatics and sauté",
+        "active_minutes": 15,
+        "unattended_minutes": 0
+      },
+      {
+        "task": "Add chickpeas and liquid; pressure-cook and release",
+        "active_minutes": 5,
+        "unattended_minutes": 60
+      },
+      {
+        "task": "Add tomato and finish curry",
+        "active_minutes": 10,
+        "unattended_minutes": 0
+      }
+    ],
+    "cleanup_minutes": 10,
+    "active_minutes": 45,
+    "unattended_minutes": 540,
+    "elapsed_minutes": 585,
+    "review": "Base recipe only; confirm servings, equipment batches, and real pace before scheduling.",
+    "review_status": "reviewed for planning; estimated timings",
+    "review_notes": [
+      "Hands-on and waiting times are estimates for the base recipe; waiting includes soaking, chilling and cooling where listed.",
+      "Measure ingredients while cooking. Cleanup is a separate flexible allowance.",
+      "Increase chopping and shaping time with quantity; repeat only appliance-limited cooking steps. Recipe yield does not establish appliance capacity.",
+      "Use source doneness cues. Pressure-cooker whistles are not a verified Instant Pot conversion."
+    ],
+    "make_ahead": {
+      "source_guidance": null,
+      "planning_estimate": "Soak dried chickpeas as the source method requires; cook curry 1 day ahead and refrigerate promptly. Reheat thoroughly; check bean tenderness before relying on the planned cook time.",
+      "basis": "Chef planning proposal, not publisher-confirmed storage window"
+    },
+    "review_version": "2026-10-28-logical-steps-v1"
+  },
+  {
+    "title": "Instant Pot Dal Makhani with Brown Rice",
+    "url": "https://ministryofcurry.com/madras-lentils-daal-makhani-instant-pot/",
+    "basis": "chef estimate, untested",
+    "phases": [
+      {
+        "task": "Rinse and soak beans overnight",
+        "active_minutes": 5,
+        "unattended_minutes": 480
+      },
+      {
+        "task": "Chop onion and sauté aromatics",
+        "active_minutes": 15,
+        "unattended_minutes": 0
+      },
+      {
+        "task": "Add beans and liquid; pressure-cook and release",
+        "active_minutes": 5,
+        "unattended_minutes": 55
+      },
+      {
+        "task": "Finish with cream and seasoning",
+        "active_minutes": 10,
+        "unattended_minutes": 0
+      }
+    ],
+    "cleanup_minutes": 10,
+    "active_minutes": 45,
+    "unattended_minutes": 535,
+    "elapsed_minutes": 580,
+    "review": "Base recipe only; confirm servings, equipment batches, and real pace before scheduling.",
+    "review_status": "reviewed for planning; estimated timings",
+    "review_notes": [
+      "Hands-on and waiting times are estimates for the base recipe; waiting includes soaking, chilling and cooling where listed.",
+      "Measure ingredients while cooking. Cleanup is a separate flexible allowance.",
+      "Increase chopping and shaping time with quantity; repeat only appliance-limited cooking steps. Recipe yield does not establish appliance capacity.",
+      "Use source doneness cues. Pressure-cooker whistles are not a verified Instant Pot conversion.",
+      "Optional pot-in-pot brown rice is omitted when another rice dish is on the menu; add its preparation if serving it."
+    ],
+    "make_ahead": {
+      "source_guidance": "The author cooks this dal the night before entertaining. The page says leftovers keep refrigerated for up to five days.",
+      "planning_estimate": null,
+      "basis": "Publisher-specific note retained in prep_summary; confirm actual storage plan"
+    },
+    "review_version": "2026-10-28-logical-steps-v1"
+  },
+  {
+    "title": "Instant Pot Palak Paneer",
+    "url": "https://ministryofcurry.com/palak-paneer-instant-pot/",
+    "basis": "chef estimate, untested",
+    "phases": [
+      {
+        "task": "Wash spinach; prepare cashew paste and paneer",
+        "active_minutes": 20,
+        "unattended_minutes": 0
+      },
+      {
+        "task": "Sauté aromatics; pressure-cook spinach and release",
+        "active_minutes": 5,
+        "unattended_minutes": 15
+      },
+      {
+        "task": "Blend sauce; add cashew paste and paneer",
+        "active_minutes": 10,
+        "unattended_minutes": 0
+      }
+    ],
+    "cleanup_minutes": 10,
+    "active_minutes": 45,
+    "unattended_minutes": 15,
+    "elapsed_minutes": 60,
+    "review": "Base recipe only; confirm servings, equipment batches, and real pace before scheduling.",
+    "review_status": "reviewed for planning; estimated timings",
+    "review_notes": [
+      "Hands-on and waiting times are estimates for the base recipe; waiting includes soaking, chilling and cooling where listed.",
+      "Measure ingredients while cooking. Cleanup is a separate flexible allowance.",
+      "Increase chopping and shaping time with quantity; repeat only appliance-limited cooking steps. Recipe yield does not establish appliance capacity.",
+      "Use source doneness cues. Pressure-cooker whistles are not a verified Instant Pot conversion."
+    ],
+    "make_ahead": {
+      "source_guidance": null,
+      "planning_estimate": "Wash spinach and prepare sauce base 1 day ahead; refrigerate promptly. Finish with paneer near serving to protect texture and color. Contains cashews in the listed recipe.",
+      "basis": "Chef planning proposal, not publisher-confirmed storage window"
+    },
+    "review_version": "2026-10-28-logical-steps-v1"
+  },
+  {
+    "title": "Vegetable Pulao Recipe | Veg Pulav",
+    "url": "https://ministryofcurry.com/moms-veg-pulao/",
+    "basis": "chef estimate, untested",
+    "phases": [
+      {
+        "task": "Chop vegetables",
+        "active_minutes": 25,
+        "unattended_minutes": 0
+      },
+      {
+        "task": "Rinse rice; cook with whole spices and let steam escape",
+        "active_minutes": 10,
+        "unattended_minutes": 20
+      },
+      {
+        "task": "Fry cashews and onion; sauté vegetables in stages",
+        "active_minutes": 25,
+        "unattended_minutes": 0
+      },
+      {
+        "task": "Combine vegetables and rice; warm gently",
+        "active_minutes": 5,
+        "unattended_minutes": 10
+      }
+    ],
+    "cleanup_minutes": 10,
+    "active_minutes": 75,
+    "unattended_minutes": 30,
+    "elapsed_minutes": 105,
+    "review": "Base recipe only; confirm servings, equipment batches, and real pace before scheduling.",
+    "review_status": "reviewed for planning; estimated timings",
+    "review_notes": [
+      "Hands-on and waiting times are estimates for the base recipe; waiting includes soaking, chilling and cooling where listed.",
+      "Measure ingredients while cooking. Cleanup is a separate flexible allowance.",
+      "Increase chopping and shaping time with quantity; repeat only appliance-limited cooking steps. Recipe yield does not establish appliance capacity.",
+      "Use source doneness cues. Pressure-cooker whistles are not a verified Instant Pot conversion."
+    ],
+    "make_ahead": {
+      "source_guidance": null,
+      "planning_estimate": "Wash/chop vegetables and measure spices 1 day ahead. Cook rice on party day, then hold hot or refrigerate promptly; rice quality drops if repeatedly warmed. Contains cashews in the listed recipe.",
+      "basis": "Chef planning proposal, not publisher-confirmed storage window"
+    },
+    "review_version": "2026-10-28-logical-steps-v1"
+  },
+  {
+    "title": "Indian Cucumber Salad (Kakdi Koshimbir)",
+    "url": "https://ministryofcurry.com/indian-cucumber-salad/",
+    "basis": "chef estimate, untested",
+    "phases": [
+      {
+        "task": "Peel and chop cucumber and herbs",
+        "active_minutes": 15,
+        "unattended_minutes": 0
+      },
+      {
+        "task": "Temper cumin, hing and chili",
+        "active_minutes": 5,
+        "unattended_minutes": 0
+      },
+      {
+        "task": "Combine; add salt and sugar just before serving",
+        "active_minutes": 5,
+        "unattended_minutes": 0
+      }
+    ],
+    "cleanup_minutes": 5,
+    "active_minutes": 30,
+    "unattended_minutes": 0,
+    "elapsed_minutes": 30,
+    "review": "Base recipe only; confirm servings, equipment batches, and real pace before scheduling.",
+    "review_status": "reviewed for planning; estimated timings",
+    "review_notes": [
+      "Hands-on and waiting times are estimates for the base recipe; waiting includes soaking, chilling and cooling where listed.",
+      "Measure ingredients while cooking. Cleanup is a separate flexible allowance.",
+      "Increase chopping and shaping time with quantity; repeat only appliance-limited cooking steps. Recipe yield does not establish appliance capacity.",
+      "Use source doneness cues. Pressure-cooker whistles are not a verified Instant Pot conversion."
+    ],
+    "make_ahead": {
+      "source_guidance": null,
+      "planning_estimate": "Wash cucumbers and prepare dressing components 1 day ahead, refrigerated separately. Chop/combine close to serving to avoid watery texture. Listed peanuts require allergy review.",
+      "basis": "Chef planning proposal, not publisher-confirmed storage window"
+    },
+    "review_version": "2026-10-28-logical-steps-v1"
+  },
+  {
+    "title": "Cilantro Mint Chutney",
+    "url": "https://ministryofcurry.com/cilantro-mint-chutney/",
+    "basis": "chef estimate, untested",
+    "phases": [
+      {
+        "task": "Wash herbs and prepare chilies",
+        "active_minutes": 10,
+        "unattended_minutes": 0
+      },
+      {
+        "task": "Blend and adjust seasoning",
+        "active_minutes": 5,
+        "unattended_minutes": 0
+      }
+    ],
+    "cleanup_minutes": 5,
+    "active_minutes": 20,
+    "unattended_minutes": 0,
+    "elapsed_minutes": 20,
+    "review": "Base recipe only; confirm servings, equipment batches, and real pace before scheduling.",
+    "review_status": "reviewed for planning; estimated timings",
+    "review_notes": [
+      "Hands-on and waiting times are estimates for the base recipe; waiting includes soaking, chilling and cooling where listed.",
+      "Measure ingredients while cooking. Cleanup is a separate flexible allowance.",
+      "Increase chopping and shaping time with quantity; repeat only appliance-limited cooking steps. Recipe yield does not establish appliance capacity.",
+      "Use source doneness cues. Pressure-cooker whistles are not a verified Instant Pot conversion."
+    ],
+    "make_ahead": {
+      "source_guidance": "Store the chutney refrigerated in a glass jar for up to one week, or freeze in small portions. Thaw frozen portions in the refrigerator.",
+      "planning_estimate": null,
+      "basis": "Publisher-specific note retained in prep_summary; confirm actual storage plan"
+    },
+    "review_version": "2026-10-28-logical-steps-v1"
+  },
+  {
+    "title": "Instant Pot Rice Pudding",
+    "url": "https://ministryofcurry.com/rice-pudding-instant-pot/",
+    "basis": "chef estimate, untested",
+    "phases": [
+      {
+        "task": "Rinse and briefly sauté rice; add milk and other ingredients",
+        "active_minutes": 10,
+        "unattended_minutes": 0
+      },
+      {
+        "task": "Pressure-cook and allow natural release",
+        "active_minutes": 5,
+        "unattended_minutes": 40
+      },
+      {
+        "task": "Stir and adjust consistency",
+        "active_minutes": 10,
+        "unattended_minutes": 0
+      },
+      {
+        "task": "Cool and refrigerate if serving chilled",
+        "active_minutes": 5,
+        "unattended_minutes": 30
+      }
+    ],
+    "cleanup_minutes": 10,
+    "active_minutes": 40,
+    "unattended_minutes": 70,
+    "elapsed_minutes": 110,
+    "review": "Base recipe only; confirm servings, equipment batches, and real pace before scheduling.",
+    "review_status": "reviewed for planning; estimated timings",
+    "review_notes": [
+      "Hands-on and waiting times are estimates for the base recipe; waiting includes soaking, chilling and cooling where listed.",
+      "Measure ingredients while cooking. Cleanup is a separate flexible allowance.",
+      "Increase chopping and shaping time with quantity; repeat only appliance-limited cooking steps. Recipe yield does not establish appliance capacity.",
+      "Use source doneness cues. Pressure-cooker whistles are not a verified Instant Pot conversion."
+    ],
+    "make_ahead": {
+      "source_guidance": null,
+      "planning_estimate": "Cook fully 1 day ahead; cool promptly in shallow containers and refrigerate. Stir and adjust consistency before serving; serve chilled or reheat thoroughly if serving hot.",
+      "basis": "Chef planning proposal, not publisher-confirmed storage window"
+    },
+    "review_version": "2026-10-28-logical-steps-v1"
+  },
+  {
+    "title": "Instant Pot Carrot Halwa Recipe",
+    "url": "https://ministryofcurry.com/carrot-halwa-instant-pot/",
+    "basis": "chef estimate, untested",
+    "phases": [
+      {
+        "task": "Grate carrots",
+        "active_minutes": 20,
+        "unattended_minutes": 0
+      },
+      {
+        "task": "Sauté carrots; add milk and pressure-cook",
+        "active_minutes": 5,
+        "unattended_minutes": 15
+      },
+      {
+        "task": "Release; add remaining ingredients and reduce while stirring",
+        "active_minutes": 10,
+        "unattended_minutes": 0
+      }
+    ],
+    "cleanup_minutes": 10,
+    "active_minutes": 45,
+    "unattended_minutes": 15,
+    "elapsed_minutes": 60,
+    "review": "Base recipe only; confirm servings, equipment batches, and real pace before scheduling.",
+    "review_status": "reviewed for planning; estimated timings",
+    "review_notes": [
+      "Hands-on and waiting times are estimates for the base recipe; waiting includes soaking, chilling and cooling where listed.",
+      "Measure ingredients while cooking. Cleanup is a separate flexible allowance.",
+      "Increase chopping and shaping time with quantity; repeat only appliance-limited cooking steps. Recipe yield does not establish appliance capacity.",
+      "Use source doneness cues. Pressure-cooker whistles are not a verified Instant Pot conversion."
+    ],
+    "make_ahead": {
+      "source_guidance": "Make the halwa ahead; the author states it keeps refrigerated for up to one week and can also be frozen. Thaw frozen portions overnight in the refrigerator.",
+      "planning_estimate": null,
+      "basis": "Publisher-specific note retained in prep_summary; confirm actual storage plan"
+    },
+    "review_version": "2026-10-28-logical-steps-v1"
+  },
+  {
+    "title": "Quick & Easy Badam Burfi (30 Minutes)",
+    "url": "https://ministryofcurry.com/badam-burfi/",
+    "basis": "chef estimate, untested",
+    "phases": [
+      {
+        "task": "Break up almond flour; cook mixture until it comes together",
+        "active_minutes": 10,
+        "unattended_minutes": 0
+      },
+      {
+        "task": "Prepare pan and spread mixture",
+        "active_minutes": 10,
+        "unattended_minutes": 0
+      },
+      {
+        "task": "Chill until set; cut into pieces",
+        "active_minutes": 5,
+        "unattended_minutes": 20
+      }
+    ],
+    "cleanup_minutes": 10,
+    "active_minutes": 35,
+    "unattended_minutes": 20,
+    "elapsed_minutes": 55,
+    "review": "Base recipe only; confirm servings, equipment batches, and real pace before scheduling.",
+    "review_status": "reviewed for planning; estimated timings",
+    "review_notes": [
+      "Hands-on and waiting times are estimates for the base recipe; waiting includes soaking, chilling and cooling where listed.",
+      "Measure ingredients while cooking. Cleanup is a separate flexible allowance.",
+      "Increase chopping and shaping time with quantity; repeat only appliance-limited cooking steps. Recipe yield does not establish appliance capacity.",
+      "Use source doneness cues. Pressure-cooker whistles are not a verified Instant Pot conversion."
+    ],
+    "make_ahead": {
+      "source_guidance": "Store airtight at room temperature for one to two days or refrigerated for up to two weeks.",
+      "planning_estimate": null,
+      "basis": "Publisher-specific note retained in prep_summary; confirm actual storage plan"
+    },
+    "review_version": "2026-10-28-logical-steps-v1"
+  },
+  {
+    "title": "Easy Tuna Croquettes",
+    "url": "https://withwendyandshannon.com/blog/easy-tuna-croquettes/",
+    "basis": "chef estimate, untested",
+    "phases": [
+      {
+        "task": "Mix tuna filling",
+        "active_minutes": 15,
+        "unattended_minutes": 0
+      },
+      {
+        "task": "Shape and coat croquettes",
+        "active_minutes": 20,
+        "unattended_minutes": 0
+      },
+      {
+        "task": "Air-fry one batch at 180°C",
+        "active_minutes": 5,
+        "unattended_minutes": 10
+      }
+    ],
+    "cleanup_minutes": 15,
+    "active_minutes": 55,
+    "unattended_minutes": 10,
+    "elapsed_minutes": 65,
+    "review": "Base recipe only; confirm servings, equipment batches, and real pace before scheduling.",
+    "review_status": "reviewed for planning; estimated timings",
+    "review_notes": [
+      "Hands-on and waiting times are estimates for the base recipe; waiting includes soaking, chilling and cooling where listed.",
+      "Measure ingredients while cooking. Cleanup is a separate flexible allowance.",
+      "Increase chopping and shaping time with quantity; repeat only appliance-limited cooking steps. Recipe yield does not establish appliance capacity.",
+      "Use source doneness cues. Pressure-cooker whistles are not a verified Instant Pot conversion.",
+      "Method recovered from visible publisher HTML, rather than structured recipe metadata."
+    ],
+    "make_ahead": {
+      "source_guidance": null,
+      "planning_estimate": "Mix and shape up to 1 day ahead; refrigerate covered. Fry close to serving for crispness; avoid a long warm hold. Tuna and bread crumbs are in the listed ingredients.",
+      "basis": "Chef planning proposal, not publisher-confirmed storage window"
+    },
+    "review_version": "2026-10-28-logical-steps-v1"
+  },
+  {
+    "title": "Goan Pork Vindaloo",
+    "url": "https://theaspiringhomecook.com/2019/10/goan-pork-vindaloo.html",
+    "basis": "chef estimate, untested",
+    "phases": [
+      {
+        "task": "Cut pork; grind spice paste and chop onions",
+        "active_minutes": 25,
+        "unattended_minutes": 0
+      },
+      {
+        "task": "Sauté onions, spice paste and pork",
+        "active_minutes": 20,
+        "unattended_minutes": 0
+      },
+      {
+        "task": "Simmer covered, checking tenderness and liquid",
+        "active_minutes": 10,
+        "unattended_minutes": 75
+      }
+    ],
+    "cleanup_minutes": 10,
+    "active_minutes": 65,
+    "unattended_minutes": 75,
+    "elapsed_minutes": 140,
+    "review": "Base recipe only; confirm servings, equipment batches and real pace before scheduling. Author says it can be made one or two days ahead; refrigerate promptly and reheat thoroughly.",
+    "review_status": "reviewed for planning; estimated timings",
+    "review_notes": [
+      "Hands-on and waiting times are estimates for the base recipe; waiting includes soaking, chilling and cooling where listed.",
+      "Measure ingredients while cooking. Cleanup is a separate flexible allowance.",
+      "Increase chopping and shaping time with quantity; repeat only appliance-limited cooking steps. Recipe yield does not establish appliance capacity.",
+      "Use source doneness cues. Pressure-cooker whistles are not a verified Instant Pot conversion."
+    ],
+    "make_ahead": {
+      "source_guidance": "Author says it can be made one or two days ahead; refrigerate promptly and reheat thoroughly.",
+      "planning_estimate": null,
+      "basis": "Publisher-specific note retained in prep_summary; confirm actual storage plan"
+    },
+    "review_version": "2026-10-28-logical-steps-v1"
+  },
+  {
+    "title": "Chicken Cafreal",
+    "url": "https://aromaticessence.co/chicken-cafreal/",
+    "basis": "chef estimate, untested",
+    "phases": [
+      {
+        "task": "Prepare chicken and blend cafreal paste",
+        "active_minutes": 25,
+        "unattended_minutes": 0
+      },
+      {
+        "task": "Refrigerate chicken in marinade; reserve unused paste separately",
+        "active_minutes": 0,
+        "unattended_minutes": 180
+      },
+      {
+        "task": "Sear chicken on both sides",
+        "active_minutes": 10,
+        "unattended_minutes": 0
+      },
+      {
+        "task": "Add reserved paste; cook covered and reduce",
+        "active_minutes": 10,
+        "unattended_minutes": 20
+      }
+    ],
+    "cleanup_minutes": 10,
+    "active_minutes": 55,
+    "unattended_minutes": 200,
+    "elapsed_minutes": 255,
+    "review": "Base recipe only; confirm servings, equipment batches and real pace before scheduling. Author recommends marinating for 2–3 hours or overnight in the refrigerator; cook near serving or verify a safe cooked-ahead/reheat plan.",
+    "review_status": "reviewed for planning; estimated timings",
+    "review_notes": [
+      "Hands-on and waiting times are estimates for the base recipe; waiting includes soaking, chilling and cooling where listed.",
+      "Measure ingredients while cooking. Cleanup is a separate flexible allowance.",
+      "Increase chopping and shaping time with quantity; repeat only appliance-limited cooking steps. Recipe yield does not establish appliance capacity.",
+      "Use source doneness cues. Pressure-cooker whistles are not a verified Instant Pot conversion."
+    ],
+    "make_ahead": {
+      "source_guidance": "Author recommends marinating for 2–3 hours or overnight in the refrigerator; cook near serving or verify a safe cooked-ahead/reheat plan.",
+      "planning_estimate": null,
+      "basis": "Publisher-specific note retained in prep_summary; confirm actual storage plan"
+    },
+    "review_version": "2026-10-28-logical-steps-v1"
+  },
+  {
+    "title": "The Ultimate Goan Caldin Curry",
+    "url": "https://withwendyandshannon.com/blog/the-ultimate-goan-caldin-curry/",
+    "basis": "chef estimate, untested",
+    "phases": [
+      {
+        "task": "Prepare and season fish",
+        "active_minutes": 10,
+        "unattended_minutes": 0
+      },
+      {
+        "task": "Soak tamarind; grind spices and coconut, then strain twice",
+        "active_minutes": 25,
+        "unattended_minutes": 0
+      },
+      {
+        "task": "Sauté onion and tomato; simmer curry base",
+        "active_minutes": 15,
+        "unattended_minutes": 10
+      },
+      {
+        "task": "Cook fish gently; finish with coconut cream",
+        "active_minutes": 5,
+        "unattended_minutes": 8
+      }
+    ],
+    "cleanup_minutes": 15,
+    "active_minutes": 70,
+    "unattended_minutes": 18,
+    "elapsed_minutes": 88,
+    "review": "Base recipe only; confirm servings, equipment batches, and real pace before scheduling.",
+    "review_status": "reviewed for planning; estimated timings",
+    "review_notes": [
+      "Hands-on and waiting times are estimates for the base recipe; waiting includes soaking, chilling and cooling where listed.",
+      "Measure ingredients while cooking. Cleanup is a separate flexible allowance.",
+      "Increase chopping and shaping time with quantity; repeat only appliance-limited cooking steps. Recipe yield does not establish appliance capacity.",
+      "Use source doneness cues. Pressure-cooker whistles are not a verified Instant Pot conversion.",
+      "Method recovered from visible publisher HTML, rather than structured recipe metadata."
+    ],
+    "make_ahead": {
+      "source_guidance": null,
+      "planning_estimate": "Make the spice/coconut curry base 1 day ahead and refrigerate. Add fish and finish cooking near serving to avoid overcooked fish; verify full cooking and seafood storage.",
+      "basis": "Chef planning proposal, not publisher-confirmed storage window"
+    },
+    "review_version": "2026-10-28-logical-steps-v1"
+  },
+  {
+    "title": "Easy Traditional Goan Sannas",
+    "url": "https://withwendyandshannon.com/blog/easy-traditional-goan-sannas-recipe/",
+    "basis": "chef estimate, untested",
+    "phases": [
+      {
+        "task": "Grind rice batter using prepared toddy",
+        "active_minutes": 10,
+        "unattended_minutes": 0
+      },
+      {
+        "task": "Let batter ferment until risen",
+        "active_minutes": 0,
+        "unattended_minutes": 240
+      },
+      {
+        "task": "Salt batter; grease and fill molds",
+        "active_minutes": 10,
+        "unattended_minutes": 0
+      },
+      {
+        "task": "Steam one batch until set",
+        "active_minutes": 5,
+        "unattended_minutes": 30
+      },
+      {
+        "task": "Cool and unmold",
+        "active_minutes": 5,
+        "unattended_minutes": 15
+      }
+    ],
+    "cleanup_minutes": 10,
+    "active_minutes": 40,
+    "unattended_minutes": 285,
+    "elapsed_minutes": 325,
+    "review": "Base recipe only; confirm servings, equipment batches, and real pace before scheduling. Fermentation time is highly variable.",
+    "review_status": "reviewed for planning; estimated timings",
+    "review_notes": [
+      "Hands-on and waiting times are estimates for the base recipe; waiting includes soaking, chilling and cooling where listed.",
+      "Measure ingredients while cooking. Cleanup is a separate flexible allowance.",
+      "Increase chopping and shaping time with quantity; repeat only appliance-limited cooking steps. Recipe yield does not establish appliance capacity.",
+      "Use source doneness cues. Pressure-cooker whistles are not a verified Instant Pot conversion.",
+      "Prepared toddy and soaked rice must be available; starter preparation is a separate prerequisite. Fermentation depends on conditions.",
+      "Method recovered from visible publisher HTML, rather than structured recipe metadata."
+    ],
+    "make_ahead": {
+      "source_guidance": null,
+      "planning_estimate": "Start rice preparation and fermentation according to the source well before the party; fermentation varies with temperature. Steam 1 day ahead if needed, cool/refrigerate promptly, and re-steam near serving; test texture first.",
+      "basis": "Chef planning proposal, not publisher-confirmed storage window"
+    },
+    "review_version": "2026-10-28-logical-steps-v1"
+  },
+  {
+    "title": "The Best Doce",
+    "url": "https://withwendyandshannon.com/blog/the-best-doce/",
+    "basis": "chef estimate, untested",
+    "phases": [
+      {
+        "task": "Rinse and soak chana dal",
+        "active_minutes": 5,
+        "unattended_minutes": 360
+      },
+      {
+        "task": "Pressure-cook dal; release pressure and drain",
+        "active_minutes": 10,
+        "unattended_minutes": 35
+      },
+      {
+        "task": "Cool dal; grind coconut and dal separately",
+        "active_minutes": 20,
+        "unattended_minutes": 20
+      },
+      {
+        "task": "Cook with sugar, stirring continuously until thick",
+        "active_minutes": 45,
+        "unattended_minutes": 0
+      },
+      {
+        "task": "Shape and score; cut after initial cooling",
+        "active_minutes": 10,
+        "unattended_minutes": 10
+      },
+      {
+        "task": "Cool completely before separating pieces",
+        "active_minutes": 0,
+        "unattended_minutes": 120
+      }
+    ],
+    "cleanup_minutes": 15,
+    "active_minutes": 105,
+    "unattended_minutes": 545,
+    "elapsed_minutes": 650,
+    "review": "Base recipe only; confirm servings, equipment batches, and real pace before scheduling.",
+    "review_status": "reviewed for planning; estimated timings",
+    "review_notes": [
+      "Hands-on and waiting times are estimates for the base recipe; waiting includes soaking, chilling and cooling where listed.",
+      "Measure ingredients while cooking. Cleanup is a separate flexible allowance.",
+      "Increase chopping and shaping time with quantity; repeat only appliance-limited cooking steps. Recipe yield does not establish appliance capacity.",
+      "Use source doneness cues. Pressure-cooker whistles are not a verified Instant Pot conversion.",
+      "Method recovered from visible publisher HTML, rather than structured recipe metadata."
+    ],
+    "make_ahead": {
+      "source_guidance": null,
+      "planning_estimate": "Cook, shape and cool sweets 1 day ahead. Store covered according to ingredients and room conditions; choose refrigeration if uncertain. Large-batch stirring is hands-on and may exceed the current time estimate.",
+      "basis": "Chef planning proposal, not publisher-confirmed storage window"
+    },
+    "review_version": "2026-10-28-logical-steps-v1"
+  },
+  {
+    "title": "Easy Christmas Fruit Cake Without Alcohol",
+    "url": "https://www.ruchikrandhap.com/christmas-fruit-cake-without-alcohol/",
+    "basis": "chef estimate, untested",
+    "phases": [
+      {
+        "task": "Chop dried fruit; soak in orange juice",
+        "active_minutes": 15,
+        "unattended_minutes": 480
+      },
+      {
+        "task": "Line tin and mix batter",
+        "active_minutes": 25,
+        "unattended_minutes": 0
+      },
+      {
+        "task": "Bake at the source temperature; check with skewer",
+        "active_minutes": 5,
+        "unattended_minutes": 180
+      },
+      {
+        "task": "Cool in tin then on rack",
+        "active_minutes": 5,
+        "unattended_minutes": 120
+      }
+    ],
+    "cleanup_minutes": 15,
+    "active_minutes": 65,
+    "unattended_minutes": 780,
+    "elapsed_minutes": 845,
+    "review": "Base recipe only; confirm servings, equipment batches and real pace before scheduling. Author specifies 6–8 hours or overnight fruit soak; bake 2½–3 hours and cool fully. Author says nonalcoholic cake has a short room-temperature shelf life; verify storage plan.",
+    "review_status": "reviewed for planning; estimated timings",
+    "review_notes": [
+      "Hands-on and waiting times are estimates for the base recipe; waiting includes soaking, chilling and cooling where listed.",
+      "Measure ingredients while cooking. Cleanup is a separate flexible allowance.",
+      "Increase chopping and shaping time with quantity; repeat only appliance-limited cooking steps. Recipe yield does not establish appliance capacity.",
+      "Use source doneness cues. Pressure-cooker whistles are not a verified Instant Pot conversion."
+    ],
+    "make_ahead": {
+      "source_guidance": "Author specifies 6–8 hours or overnight fruit soak; bake 2½–3 hours and cool fully. Author says nonalcoholic cake has a short room-temperature shelf life; verify storage plan.",
+      "planning_estimate": null,
+      "basis": "Publisher-specific note retained in prep_summary; confirm actual storage plan"
+    },
+    "review_version": "2026-10-28-logical-steps-v1"
+  },
+  {
+    "title": "Super Easy Snowball Cookies",
+    "url": "https://withwendyandshannon.com/blog/super-easy-snowball-cookies/",
+    "basis": "chef estimate, untested",
+    "phases": [
+      {
+        "task": "Toast and chop pecans; mix dough",
+        "active_minutes": 20,
+        "unattended_minutes": 10
+      },
+      {
+        "task": "Chill dough",
+        "active_minutes": 0,
+        "unattended_minutes": 30
+      },
+      {
+        "task": "Shape cookies and preheat oven",
+        "active_minutes": 15,
+        "unattended_minutes": 0
+      },
+      {
+        "task": "Bake one tray until lightly golden underneath",
+        "active_minutes": 3,
+        "unattended_minutes": 18
+      },
+      {
+        "task": "Coat warm cookies; cool and coat again",
+        "active_minutes": 10,
+        "unattended_minutes": 30
+      }
+    ],
+    "cleanup_minutes": 10,
+    "active_minutes": 58,
+    "unattended_minutes": 88,
+    "elapsed_minutes": 146,
+    "review": "Base recipe only; confirm servings, equipment batches, and real pace before scheduling.",
+    "review_status": "reviewed for planning; estimated timings",
+    "review_notes": [
+      "Hands-on and waiting times are estimates for the base recipe; waiting includes soaking, chilling and cooling where listed.",
+      "Measure ingredients while cooking. Cleanup is a separate flexible allowance.",
+      "Increase chopping and shaping time with quantity; repeat only appliance-limited cooking steps. Recipe yield does not establish appliance capacity.",
+      "Use source doneness cues. Pressure-cooker whistles are not a verified Instant Pot conversion.",
+      "Method recovered from visible publisher HTML, rather than structured recipe metadata."
+    ],
+    "make_ahead": {
+      "source_guidance": null,
+      "planning_estimate": "Bake and cool 1-2 days ahead; store airtight. Roll/coating can be refreshed before serving if needed. Recipe lists wheat flour and pecans.",
+      "basis": "Chef planning proposal, not publisher-confirmed storage window"
+    },
+    "review_version": "2026-10-28-logical-steps-v1"
+  },
+  {
+    "title": "Baked Brie En Croute",
+    "url": "https://www.wellplated.com/brie-en-croute/",
+    "basis": "chef estimate, untested",
+    "phases": [
+      {
+        "task": "Cook apple filling and cool",
+        "active_minutes": 15,
+        "unattended_minutes": 15
+      },
+      {
+        "task": "Toast pecans and cool",
+        "active_minutes": 5,
+        "unattended_minutes": 10
+      },
+      {
+        "task": "Fill and wrap brie in pastry",
+        "active_minutes": 15,
+        "unattended_minutes": 0
+      },
+      {
+        "task": "Brush with egg; bake until golden",
+        "active_minutes": 5,
+        "unattended_minutes": 25
+      },
+      {
+        "task": "Rest before slicing and topping",
+        "active_minutes": 5,
+        "unattended_minutes": 10
+      }
+    ],
+    "cleanup_minutes": 10,
+    "active_minutes": 55,
+    "unattended_minutes": 60,
+    "elapsed_minutes": 115,
+    "review": "Base recipe only; confirm servings, equipment batches, and real pace before scheduling.",
+    "review_status": "reviewed for planning; estimated timings",
+    "review_notes": [
+      "Hands-on and waiting times are estimates for the base recipe; waiting includes soaking, chilling and cooling where listed.",
+      "Measure ingredients while cooking. Cleanup is a separate flexible allowance.",
+      "Increase chopping and shaping time with quantity; repeat only appliance-limited cooking steps. Recipe yield does not establish appliance capacity.",
+      "Use source doneness cues. Pressure-cooker whistles are not a verified Instant Pot conversion."
+    ],
+    "make_ahead": {
+      "source_guidance": "Assemble the brie and pastry ahead without egg wash, wrap and freeze. The source says preparation up to two weeks ahead; review freezing and final baking details on the original page.",
+      "planning_estimate": null,
+      "basis": "Publisher-specific note retained in prep_summary; confirm actual storage plan"
+    },
+    "review_version": "2026-10-28-logical-steps-v1"
+  },
+  {
+    "title": "Stuffed Dates (6 Ways!)",
+    "url": "https://www.wellplated.com/stuffed-dates/",
+    "basis": "chef estimate, untested",
+    "phases": [
+      {
+        "task": "Pit dates and prepare chosen filling",
+        "active_minutes": 10,
+        "unattended_minutes": 0
+      },
+      {
+        "task": "Stuff and garnish dates",
+        "active_minutes": 15,
+        "unattended_minutes": 0
+      }
+    ],
+    "cleanup_minutes": 5,
+    "active_minutes": 30,
+    "unattended_minutes": 0,
+    "elapsed_minutes": 30,
+    "review": "Base recipe only; confirm servings, equipment batches, and real pace before scheduling.",
+    "review_status": "reviewed for planning; estimated timings",
+    "review_notes": [
+      "Hands-on and waiting times are estimates for the base recipe; waiting includes soaking, chilling and cooling where listed.",
+      "Measure ingredients while cooking. Cleanup is a separate flexible allowance.",
+      "Increase chopping and shaping time with quantity; repeat only appliance-limited cooking steps. Recipe yield does not establish appliance capacity.",
+      "Use source doneness cues. Pressure-cooker whistles are not a verified Instant Pot conversion.",
+      "Choose one filling variant; do not combine all six ingredient variants into the shopping list."
+    ],
+    "make_ahead": {
+      "source_guidance": "The author says stuffed dates can be prepared up to one day ahead for a party; refrigerate. Longer snack storage is described separately, not assumed for the party.",
+      "planning_estimate": null,
+      "basis": "Publisher-specific note retained in prep_summary; confirm actual storage plan"
+    },
+    "review_version": "2026-10-28-logical-steps-v1"
+  },
+  {
+    "title": "Thanksgiving Turkey",
+    "url": "https://www.wellplated.com/how-to-cook-a-turkey/",
+    "basis": "chef estimate, untested",
+    "phases": [
+      {
+        "task": "Check thawed turkey; begin chosen brine",
+        "active_minutes": 20,
+        "unattended_minutes": 2160
+      },
+      {
+        "task": "Uncover and dry skin in refrigerator",
+        "active_minutes": 5,
+        "unattended_minutes": 720
+      },
+      {
+        "task": "Prepare aromatics, roasting pan and turkey; preheat oven",
+        "active_minutes": 35,
+        "unattended_minutes": 20
+      },
+      {
+        "task": "Roast at initial high temperature",
+        "active_minutes": 5,
+        "unattended_minutes": 45
+      },
+      {
+        "task": "Reduce oven temperature; roast and check temperature",
+        "active_minutes": 15,
+        "unattended_minutes": 105
+      },
+      {
+        "task": "Rest turkey",
+        "active_minutes": 0,
+        "unattended_minutes": 30
+      },
+      {
+        "task": "Carve and transfer to serving dish",
+        "active_minutes": 20,
+        "unattended_minutes": 0
+      }
+    ],
+    "cleanup_minutes": 20,
+    "active_minutes": 120,
+    "unattended_minutes": 3080,
+    "elapsed_minutes": 3200,
+    "review": "Base recipe only; confirm servings, equipment batches, and real pace before scheduling. The listed bird is 14–16 lb; roast duration is a size-based planning allowance, not a doneness target. Cook to a measured safe internal temperature.",
+    "review_status": "reviewed for planning; estimated timings",
+    "review_notes": [
+      "Hands-on and waiting times are estimates for the base recipe; waiting includes soaking, chilling and cooling where listed.",
+      "Measure ingredients while cooking. Cleanup is a separate flexible allowance.",
+      "Increase chopping and shaping time with quantity; repeat only appliance-limited cooking steps. Recipe yield does not establish appliance capacity.",
+      "Use source doneness cues. Pressure-cooker whistles are not a verified Instant Pot conversion.",
+      "Frozen turkey requires a separate refrigerator-thawing prerequisite; brining duration and roasting depend on bird size. Never schedule from minutes alone."
+    ],
+    "make_ahead": {
+      "source_guidance": null,
+      "planning_estimate": "For a 14-16 lb frozen bird, plan refrigerator thawing 3-4 days ahead. Season/brine per source before roasting; roast and rest early enough to protect the final hour. A whole turkey may need a simplified or bought alternative if oven capacity or schedule is tight.",
+      "basis": "Chef planning proposal, not publisher-confirmed storage window"
+    },
+    "review_version": "2026-10-28-logical-steps-v1"
+  },
+  {
+    "title": "Garlic Mashed Potatoes Recipe",
+    "url": "https://www.wellplated.com/garlic-mashed-potatoes/",
+    "basis": "chef estimate, untested",
+    "phases": [
+      {
+        "task": "Peel if desired and cut potatoes; prepare garlic",
+        "active_minutes": 20,
+        "unattended_minutes": 0
+      },
+      {
+        "task": "Bring to boil and simmer until tender",
+        "active_minutes": 5,
+        "unattended_minutes": 25
+      },
+      {
+        "task": "Drain, mash and add warmed milk and butter",
+        "active_minutes": 15,
+        "unattended_minutes": 0
+      }
+    ],
+    "cleanup_minutes": 10,
+    "active_minutes": 50,
+    "unattended_minutes": 25,
+    "elapsed_minutes": 75,
+    "review": "Base recipe only; confirm servings, equipment batches, and real pace before scheduling.",
+    "review_status": "reviewed for planning; estimated timings",
+    "review_notes": [
+      "Hands-on and waiting times are estimates for the base recipe; waiting includes soaking, chilling and cooling where listed.",
+      "Measure ingredients while cooking. Cleanup is a separate flexible allowance.",
+      "Increase chopping and shaping time with quantity; repeat only appliance-limited cooking steps. Recipe yield does not establish appliance capacity.",
+      "Use source doneness cues. Pressure-cooker whistles are not a verified Instant Pot conversion."
+    ],
+    "make_ahead": {
+      "source_guidance": "Make the potatoes one day ahead. The publisher describes gentle reheating over simmering water with warm milk or broth as needed. Source: https://www.wellplated.com/garlic-mashed-potatoes/",
+      "planning_estimate": null,
+      "basis": "Publisher-specific note retained in prep_summary; confirm actual storage plan"
+    },
+    "review_version": "2026-10-28-logical-steps-v1"
+  },
+  {
+    "title": "Healthy Sweet Potato Casserole",
+    "url": "https://www.wellplated.com/healthy-sweet-potato-casserole/",
+    "basis": "chef estimate, untested",
+    "phases": [
+      {
+        "task": "Prepare sweet potatoes and roast until tender",
+        "active_minutes": 5,
+        "unattended_minutes": 60
+      },
+      {
+        "task": "Warm vanilla milk; peel and mash cooked potatoes",
+        "active_minutes": 20,
+        "unattended_minutes": 5
+      },
+      {
+        "task": "Spread in dish and mix topping",
+        "active_minutes": 10,
+        "unattended_minutes": 0
+      },
+      {
+        "task": "Add topping and bake until warmed through",
+        "active_minutes": 5,
+        "unattended_minutes": 20
+      }
+    ],
+    "cleanup_minutes": 15,
+    "active_minutes": 55,
+    "unattended_minutes": 85,
+    "elapsed_minutes": 140,
+    "review": "Base recipe only; confirm servings, equipment batches, and real pace before scheduling.",
+    "review_status": "reviewed for planning; estimated timings",
+    "review_notes": [
+      "Hands-on and waiting times are estimates for the base recipe; waiting includes soaking, chilling and cooling where listed.",
+      "Measure ingredients while cooking. Cleanup is a separate flexible allowance.",
+      "Increase chopping and shaping time with quantity; repeat only appliance-limited cooking steps. Recipe yield does not establish appliance capacity.",
+      "Use source doneness cues. Pressure-cooker whistles are not a verified Instant Pot conversion."
+    ],
+    "make_ahead": {
+      "source_guidance": "Prepare through the recipe’s Step 5 one day ahead and refrigerate covered. Let it come to room temperature before baking, as directed by the source.",
+      "planning_estimate": null,
+      "basis": "Publisher-specific note retained in prep_summary; confirm actual storage plan"
+    },
+    "review_version": "2026-10-28-logical-steps-v1"
+  },
+  {
+    "title": "Cornbread Stuffing Recipe",
+    "url": "https://www.wellplated.com/cornbread-sausage-stuffing/",
+    "basis": "chef estimate, untested",
+    "phases": [
+      {
+        "task": "Mix and bake cornbread",
+        "active_minutes": 15,
+        "unattended_minutes": 20
+      },
+      {
+        "task": "Cool, cube and toast cornbread",
+        "active_minutes": 10,
+        "unattended_minutes": 45
+      },
+      {
+        "task": "Chop vegetables; sauté aromatics and sausage",
+        "active_minutes": 25,
+        "unattended_minutes": 0
+      },
+      {
+        "task": "Combine with broth, eggs and cornbread",
+        "active_minutes": 10,
+        "unattended_minutes": 0
+      },
+      {
+        "task": "Bake stuffing until cooked through",
+        "active_minutes": 5,
+        "unattended_minutes": 40
+      }
+    ],
+    "cleanup_minutes": 15,
+    "active_minutes": 80,
+    "unattended_minutes": 105,
+    "elapsed_minutes": 185,
+    "review": "Base recipe only; confirm servings, equipment batches, and real pace before scheduling.",
+    "review_status": "reviewed for planning; estimated timings",
+    "review_notes": [
+      "Hands-on and waiting times are estimates for the base recipe; waiting includes soaking, chilling and cooling where listed.",
+      "Measure ingredients while cooking. Cleanup is a separate flexible allowance.",
+      "Increase chopping and shaping time with quantity; repeat only appliance-limited cooking steps. Recipe yield does not establish appliance capacity.",
+      "Use source doneness cues. Pressure-cooker whistles are not a verified Instant Pot conversion."
+    ],
+    "make_ahead": {
+      "source_guidance": "Make cornbread up to two days ahead; toast cubes up to one day ahead, keeping them at room temperature. The source also describes preparing mix-ins ahead; verify the exact window before scheduling them.",
+      "planning_estimate": null,
+      "basis": "Publisher-specific note retained in prep_summary; confirm actual storage plan"
+    },
+    "review_version": "2026-10-28-logical-steps-v1"
+  },
+  {
+    "title": "Cranberry Orange Sauce",
+    "url": "https://www.wellplated.com/homemade-cranberry-sauce/",
+    "basis": "chef estimate, untested",
+    "phases": [
+      {
+        "task": "Wash cranberries and zest orange",
+        "active_minutes": 10,
+        "unattended_minutes": 0
+      },
+      {
+        "task": "Simmer and stir until thickened",
+        "active_minutes": 15,
+        "unattended_minutes": 0
+      },
+      {
+        "task": "Cool and refrigerate",
+        "active_minutes": 5,
+        "unattended_minutes": 30
+      }
+    ],
+    "cleanup_minutes": 5,
+    "active_minutes": 35,
+    "unattended_minutes": 30,
+    "elapsed_minutes": 65,
+    "review": "Base recipe only; confirm servings, equipment batches, and real pace before scheduling.",
+    "review_status": "reviewed for planning; estimated timings",
+    "review_notes": [
+      "Hands-on and waiting times are estimates for the base recipe; waiting includes soaking, chilling and cooling where listed.",
+      "Measure ingredients while cooking. Cleanup is a separate flexible allowance.",
+      "Increase chopping and shaping time with quantity; repeat only appliance-limited cooking steps. Recipe yield does not establish appliance capacity.",
+      "Use source doneness cues. Pressure-cooker whistles are not a verified Instant Pot conversion."
+    ],
+    "make_ahead": {
+      "source_guidance": null,
+      "planning_estimate": "Cook 1-2 days ahead; cool promptly and refrigerate covered. Serve chilled or bring to serving temperature as preferred.",
+      "basis": "Chef planning proposal, not publisher-confirmed storage window"
+    },
+    "review_version": "2026-10-28-logical-steps-v1"
+  },
+  {
+    "title": "Healthy Green Bean Casserole",
+    "url": "https://www.wellplated.com/healthy-green-bean-casserole/",
+    "basis": "chef estimate, untested",
+    "phases": [
+      {
+        "task": "Trim and blanch beans; chill and drain",
+        "active_minutes": 15,
+        "unattended_minutes": 10
+      },
+      {
+        "task": "Chop vegetables; cook mushroom sauce",
+        "active_minutes": 30,
+        "unattended_minutes": 0
+      },
+      {
+        "task": "Mix topping and layer casserole",
+        "active_minutes": 10,
+        "unattended_minutes": 0
+      },
+      {
+        "task": "Broil while watching closely; rest",
+        "active_minutes": 3,
+        "unattended_minutes": 10
+      }
+    ],
+    "cleanup_minutes": 15,
+    "active_minutes": 73,
+    "unattended_minutes": 20,
+    "elapsed_minutes": 93,
+    "review": "Base recipe only; confirm servings, equipment batches, and real pace before scheduling.",
+    "review_status": "reviewed for planning; estimated timings",
+    "review_notes": [
+      "Hands-on and waiting times are estimates for the base recipe; waiting includes soaking, chilling and cooling where listed.",
+      "Measure ingredients while cooking. Cleanup is a separate flexible allowance.",
+      "Increase chopping and shaping time with quantity; repeat only appliance-limited cooking steps. Recipe yield does not establish appliance capacity.",
+      "Use source doneness cues. Pressure-cooker whistles are not a verified Instant Pot conversion."
+    ],
+    "make_ahead": {
+      "source_guidance": null,
+      "planning_estimate": "Trim/blanch beans and prepare sauce 1 day ahead; refrigerate separately. Assemble/bake on party day and keep crumb topping separate until near baking for texture.",
+      "basis": "Chef planning proposal, not publisher-confirmed storage window"
+    },
+    "review_version": "2026-10-28-logical-steps-v1"
+  },
+  {
+    "title": "Caramelized Brussels Sprouts",
+    "url": "https://www.wellplated.com/caramelized-brussels-sprouts/",
+    "basis": "chef estimate, untested",
+    "phases": [
+      {
+        "task": "Trim and halve sprouts",
+        "active_minutes": 15,
+        "unattended_minutes": 0
+      },
+      {
+        "task": "Coat and spread in a single layer",
+        "active_minutes": 5,
+        "unattended_minutes": 0
+      },
+      {
+        "task": "Roast, turning halfway; season",
+        "active_minutes": 5,
+        "unattended_minutes": 30
+      }
+    ],
+    "cleanup_minutes": 10,
+    "active_minutes": 35,
+    "unattended_minutes": 30,
+    "elapsed_minutes": 65,
+    "review": "Base recipe only; confirm servings, equipment batches, and real pace before scheduling.",
+    "review_status": "reviewed for planning; estimated timings",
+    "review_notes": [
+      "Hands-on and waiting times are estimates for the base recipe; waiting includes soaking, chilling and cooling where listed.",
+      "Measure ingredients while cooking. Cleanup is a separate flexible allowance.",
+      "Increase chopping and shaping time with quantity; repeat only appliance-limited cooking steps. Recipe yield does not establish appliance capacity.",
+      "Use source doneness cues. Pressure-cooker whistles are not a verified Instant Pot conversion."
+    ],
+    "make_ahead": {
+      "source_guidance": null,
+      "planning_estimate": "Trim/halve sprouts and mix glaze 1 day ahead; refrigerate separately. Roast near serving for caramelization; reheating softens them.",
+      "basis": "Chef planning proposal, not publisher-confirmed storage window"
+    },
+    "review_version": "2026-10-28-logical-steps-v1"
+  },
+  {
+    "title": "Chocolate Pecan Pie",
+    "url": "https://www.wellplated.com/chocolate-pecan-pie/",
+    "basis": "chef estimate, untested",
+    "phases": [
+      {
+        "task": "Toast pecans; roll and crimp crust",
+        "active_minutes": 20,
+        "unattended_minutes": 0
+      },
+      {
+        "task": "Chill crust",
+        "active_minutes": 0,
+        "unattended_minutes": 30
+      },
+      {
+        "task": "Blind-bake crust and cool",
+        "active_minutes": 5,
+        "unattended_minutes": 45
+      },
+      {
+        "task": "Melt chocolate; mix filling and fill crust",
+        "active_minutes": 20,
+        "unattended_minutes": 0
+      },
+      {
+        "task": "Bake until filling is set",
+        "active_minutes": 5,
+        "unattended_minutes": 50
+      },
+      {
+        "task": "Cool completely before slicing",
+        "active_minutes": 0,
+        "unattended_minutes": 120
+      }
+    ],
+    "cleanup_minutes": 15,
+    "active_minutes": 65,
+    "unattended_minutes": 245,
+    "elapsed_minutes": 310,
+    "review": "Base recipe only; confirm servings, equipment batches, and real pace before scheduling.",
+    "review_status": "reviewed for planning; estimated timings",
+    "review_notes": [
+      "Hands-on and waiting times are estimates for the base recipe; waiting includes soaking, chilling and cooling where listed.",
+      "Measure ingredients while cooking. Cleanup is a separate flexible allowance.",
+      "Increase chopping and shaping time with quantity; repeat only appliance-limited cooking steps. Recipe yield does not establish appliance capacity.",
+      "Use source doneness cues. Pressure-cooker whistles are not a verified Instant Pot conversion."
+    ],
+    "make_ahead": {
+      "source_guidance": "Prepare, roll and crimp the pie crust up to three days ahead; wrap and refrigerate. Filling/baking timing still needs review.",
+      "planning_estimate": null,
+      "basis": "Publisher-specific note retained in prep_summary; confirm actual storage plan"
+    },
+    "review_version": "2026-10-28-logical-steps-v1"
+  },
+  {
+    "title": "Sweet Potato Pie",
+    "url": "https://www.wellplated.com/old-fashioned-sweet-potato-pie/",
+    "basis": "chef estimate, untested",
+    "phases": [
+      {
+        "task": "Prepare and chill crust",
+        "active_minutes": 15,
+        "unattended_minutes": 30
+      },
+      {
+        "task": "Peel, cut and boil sweet potatoes",
+        "active_minutes": 15,
+        "unattended_minutes": 25
+      },
+      {
+        "task": "Mash and cook filling base; cool before adding eggs",
+        "active_minutes": 15,
+        "unattended_minutes": 20
+      },
+      {
+        "task": "Mix egg mixture and fill crust",
+        "active_minutes": 10,
+        "unattended_minutes": 0
+      },
+      {
+        "task": "Bake, lowering temperature as directed",
+        "active_minutes": 5,
+        "unattended_minutes": 60
+      },
+      {
+        "task": "Cool completely; prepare whipped cream if using",
+        "active_minutes": 10,
+        "unattended_minutes": 120
+      }
+    ],
+    "cleanup_minutes": 15,
+    "active_minutes": 85,
+    "unattended_minutes": 255,
+    "elapsed_minutes": 340,
+    "review": "Base recipe only; confirm servings, equipment batches, and real pace before scheduling.",
+    "review_status": "reviewed for planning; estimated timings",
+    "review_notes": [
+      "Hands-on and waiting times are estimates for the base recipe; waiting includes soaking, chilling and cooling where listed.",
+      "Measure ingredients while cooking. Cleanup is a separate flexible allowance.",
+      "Increase chopping and shaping time with quantity; repeat only appliance-limited cooking steps. Recipe yield does not establish appliance capacity.",
+      "Use source doneness cues. Pressure-cooker whistles are not a verified Instant Pot conversion."
+    ],
+    "make_ahead": {
+      "source_guidance": "Cook and mash the sweet potatoes up to three days ahead, then measure the required amount. The full pie assembly window still needs review.",
+      "planning_estimate": null,
+      "basis": "Publisher-specific note retained in prep_summary; confirm actual storage plan"
+    },
+    "review_version": "2026-10-28-logical-steps-v1"
+  },
+  {
+    "title": "Gluten Free Apple Crisp",
+    "url": "https://www.wellplated.com/gluten-free-apple-crisp/",
+    "basis": "chef estimate, untested",
+    "phases": [
+      {
+        "task": "Peel and slice apples; mix topping",
+        "active_minutes": 25,
+        "unattended_minutes": 0
+      },
+      {
+        "task": "Assemble filling and topping",
+        "active_minutes": 10,
+        "unattended_minutes": 0
+      },
+      {
+        "task": "Bake until apples are tender; rest",
+        "active_minutes": 5,
+        "unattended_minutes": 65
+      }
+    ],
+    "cleanup_minutes": 10,
+    "active_minutes": 50,
+    "unattended_minutes": 65,
+    "elapsed_minutes": 115,
+    "review": "Base recipe only; confirm servings, equipment batches, and real pace before scheduling.",
+    "review_status": "reviewed for planning; estimated timings",
+    "review_notes": [
+      "Hands-on and waiting times are estimates for the base recipe; waiting includes soaking, chilling and cooling where listed.",
+      "Measure ingredients while cooking. Cleanup is a separate flexible allowance.",
+      "Increase chopping and shaping time with quantity; repeat only appliance-limited cooking steps. Recipe yield does not establish appliance capacity.",
+      "Use source doneness cues. Pressure-cooker whistles are not a verified Instant Pot conversion."
+    ],
+    "make_ahead": {
+      "source_guidance": "Assemble before baking, cover tightly and freeze flat for up to three months. Thaw overnight in the refrigerator before baking.",
+      "planning_estimate": null,
+      "basis": "Publisher-specific note retained in prep_summary; confirm actual storage plan"
+    },
+    "review_version": "2026-10-28-logical-steps-v1"
+  },
+  {
+    "title": "Mushroom Cutlets",
+    "url": "https://www.ruchikrandhap.com/mushroom-cutlets/",
+    "basis": "chef estimate, untested",
+    "phases": [
+      {
+        "task": "Cook potato, release pressure and mash",
+        "active_minutes": 10,
+        "unattended_minutes": 30
+      },
+      {
+        "task": "Chop and cook mushrooms and aromatics until dry",
+        "active_minutes": 25,
+        "unattended_minutes": 0
+      },
+      {
+        "task": "Cool, combine and shape cutlets",
+        "active_minutes": 20,
+        "unattended_minutes": 20
+      },
+      {
+        "task": "Coat and pan-fry in uncrowded batches",
+        "active_minutes": 15,
+        "unattended_minutes": 10
+      }
+    ],
+    "cleanup_minutes": 15,
+    "active_minutes": 85,
+    "unattended_minutes": 60,
+    "elapsed_minutes": 145,
+    "review": "Base recipe only; confirm servings, equipment batches, and real pace before scheduling.",
+    "review_status": "reviewed for planning; estimated timings",
+    "review_notes": [
+      "Hands-on and waiting times are estimates for the base recipe; waiting includes soaking, chilling and cooling where listed.",
+      "Measure ingredients while cooking. Cleanup is a separate flexible allowance.",
+      "Increase chopping and shaping time with quantity; repeat only appliance-limited cooking steps. Recipe yield does not establish appliance capacity.",
+      "Use source doneness cues. Pressure-cooker whistles are not a verified Instant Pot conversion."
+    ],
+    "make_ahead": {
+      "source_guidance": null,
+      "planning_estimate": "Cook mushroom filling and shape cutlets up to 1 day ahead; refrigerate covered. Fry near serving for crispness and verify filling moisture.",
+      "basis": "Chef planning proposal, not publisher-confirmed storage window"
+    },
+    "review_version": "2026-10-28-logical-steps-v1"
+  },
+  {
+    "title": "Mince Meat Cutlets",
+    "url": "https://www.ruchikrandhap.com/mince-meat-cutlets/",
+    "basis": "chef estimate, untested",
+    "phases": [
+      {
+        "task": "Cook potato for binder and mash",
+        "active_minutes": 10,
+        "unattended_minutes": 25
+      },
+      {
+        "task": "Cook mince and aromatics; cool",
+        "active_minutes": 25,
+        "unattended_minutes": 20
+      },
+      {
+        "task": "Combine, shape and coat cutlets",
+        "active_minutes": 20,
+        "unattended_minutes": 0
+      },
+      {
+        "task": "Pan-fry in uncrowded batches",
+        "active_minutes": 15,
+        "unattended_minutes": 10
+      }
+    ],
+    "cleanup_minutes": 15,
+    "active_minutes": 85,
+    "unattended_minutes": 55,
+    "elapsed_minutes": 140,
+    "review": "Base recipe only; confirm servings, equipment batches, and real pace before scheduling.",
+    "review_status": "reviewed for planning; estimated timings",
+    "review_notes": [
+      "Hands-on and waiting times are estimates for the base recipe; waiting includes soaking, chilling and cooling where listed.",
+      "Measure ingredients while cooking. Cleanup is a separate flexible allowance.",
+      "Increase chopping and shaping time with quantity; repeat only appliance-limited cooking steps. Recipe yield does not establish appliance capacity.",
+      "Use source doneness cues. Pressure-cooker whistles are not a verified Instant Pot conversion."
+    ],
+    "make_ahead": {
+      "source_guidance": null,
+      "planning_estimate": "Cook meat filling fully and shape cutlets up to 1 day ahead; cool/refrigerate promptly. Fry near serving; verify the center is hot and the meat was safely cooked.",
+      "basis": "Chef planning proposal, not publisher-confirmed storage window"
+    },
+    "review_version": "2026-10-28-logical-steps-v1"
+  },
+  {
+    "title": "Pork Bafat | Dukra Maas",
+    "url": "https://www.ruchikrandhap.com/pork-bafa/",
+    "basis": "chef estimate, untested",
+    "phases": [
+      {
+        "task": "Cut pork, onions and aromatics",
+        "active_minutes": 25,
+        "unattended_minutes": 0
+      },
+      {
+        "task": "Slow-cook pork with spices, stirring periodically",
+        "active_minutes": 10,
+        "unattended_minutes": 60
+      },
+      {
+        "task": "Add onions and garlic; finish until pork is tender",
+        "active_minutes": 10,
+        "unattended_minutes": 30
+      }
+    ],
+    "cleanup_minutes": 15,
+    "active_minutes": 60,
+    "unattended_minutes": 90,
+    "elapsed_minutes": 150,
+    "review": "Base recipe only; confirm servings, equipment batches, and real pace before scheduling.",
+    "review_status": "reviewed for planning; estimated timings",
+    "review_notes": [
+      "Hands-on and waiting times are estimates for the base recipe; waiting includes soaking, chilling and cooling where listed.",
+      "Measure ingredients while cooking. Cleanup is a separate flexible allowance.",
+      "Increase chopping and shaping time with quantity; repeat only appliance-limited cooking steps. Recipe yield does not establish appliance capacity.",
+      "Use source doneness cues. Pressure-cooker whistles are not a verified Instant Pot conversion."
+    ],
+    "make_ahead": {
+      "source_guidance": null,
+      "planning_estimate": "Cook fully 1 day ahead; cool promptly in shallow containers and refrigerate. Reheat thoroughly. Flavor may deepen, but actual pork tenderness and batch size need checking.",
+      "basis": "Chef planning proposal, not publisher-confirmed storage window"
+    },
+    "review_version": "2026-10-28-logical-steps-v1"
+  },
+  {
+    "title": "Sonay Sukhe (Black Chana Sukka)",
+    "url": "https://www.ruchikrandhap.com/sonay-sukhe-black-chana-fugadsukka/",
+    "basis": "chef estimate, untested",
+    "phases": [
+      {
+        "task": "Rinse and soak black chana overnight",
+        "active_minutes": 5,
+        "unattended_minutes": 720
+      },
+      {
+        "task": "Pressure-cook until tender; allow pressure to release",
+        "active_minutes": 5,
+        "unattended_minutes": 45
+      },
+      {
+        "task": "Slice onion and crush garlic",
+        "active_minutes": 10,
+        "unattended_minutes": 0
+      },
+      {
+        "task": "Temper aromatics; cook coconut and spices",
+        "active_minutes": 10,
+        "unattended_minutes": 0
+      },
+      {
+        "task": "Add chana and tamarind; simmer until liquid is absorbed",
+        "active_minutes": 5,
+        "unattended_minutes": 10
+      }
+    ],
+    "cleanup_minutes": 10,
+    "active_minutes": 45,
+    "unattended_minutes": 775,
+    "elapsed_minutes": 820,
+    "review": "Source calls for 10–12 hour or overnight soak. Base recipe serves about 2–3; scaling and pressure-cooker batches need review. Cook until beans are tender, not by time alone.",
+    "review_status": "reviewed for planning; estimated timings",
+    "review_notes": [
+      "Hands-on and waiting times are estimates for the base recipe; waiting includes soaking, chilling and cooling where listed.",
+      "Measure ingredients while cooking. Cleanup is a separate flexible allowance.",
+      "Increase chopping and shaping time with quantity; repeat only appliance-limited cooking steps. Recipe yield does not establish appliance capacity.",
+      "Use source doneness cues. Pressure-cooker whistles are not a verified Instant Pot conversion.",
+      "Method recovered from visible publisher HTML, rather than structured recipe metadata."
+    ],
+    "make_ahead": {
+      "source_guidance": "Source calls for soaking black chana 10-12 hours or overnight before pressure cooking. No cooked make-ahead or storage window stated.",
+      "planning_estimate": null,
+      "basis": "Publisher-specific note retained in prep_summary; confirm actual storage plan"
+    },
+    "review_version": "2026-10-28-logical-steps-v1"
+  },
+  {
+    "title": "Coffee Fruit Cake",
+    "url": "https://www.ruchikrandhap.com/coffee-fruit-cake-no-alcohol-las/",
+    "basis": "chef estimate, untested",
+    "phases": [
+      {
+        "task": "Chop fruit; simmer with coffee, butter and sugar",
+        "active_minutes": 15,
+        "unattended_minutes": 10
+      },
+      {
+        "task": "Cool fruit mixture",
+        "active_minutes": 0,
+        "unattended_minutes": 40
+      },
+      {
+        "task": "Line tin and mix batter",
+        "active_minutes": 15,
+        "unattended_minutes": 0
+      },
+      {
+        "task": "Bake and check for doneness",
+        "active_minutes": 5,
+        "unattended_minutes": 60
+      },
+      {
+        "task": "Cool in tin then on rack",
+        "active_minutes": 5,
+        "unattended_minutes": 90
+      }
+    ],
+    "cleanup_minutes": 15,
+    "active_minutes": 55,
+    "unattended_minutes": 200,
+    "elapsed_minutes": 255,
+    "review": "Base recipe only; confirm servings, equipment batches, and real pace before scheduling.",
+    "review_status": "reviewed for planning; estimated timings",
+    "review_notes": [
+      "Hands-on and waiting times are estimates for the base recipe; waiting includes soaking, chilling and cooling where listed.",
+      "Measure ingredients while cooking. Cleanup is a separate flexible allowance.",
+      "Increase chopping and shaping time with quantity; repeat only appliance-limited cooking steps. Recipe yield does not establish appliance capacity.",
+      "Use source doneness cues. Pressure-cooker whistles are not a verified Instant Pot conversion."
+    ],
+    "make_ahead": {
+      "source_guidance": null,
+      "planning_estimate": "Bake 1-2 days ahead, cool completely before wrapping. Confirm the publisher storage advice and choose refrigeration/freezing if storing longer; nonalcoholic fruit cake is not a shelf-stable preserve.",
+      "basis": "Chef planning proposal, not publisher-confirmed storage window"
+    },
+    "review_version": "2026-10-28-logical-steps-v1"
+  }
+]

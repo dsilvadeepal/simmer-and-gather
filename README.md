@@ -33,7 +33,7 @@ The linked video above shows an earlier generic sample walkthrough; it does **no
 
 The interface uses tomato-red actions, aubergine headings and sage accents, with expandable dish controls and a compact mobile prep view. Recipe photos retain publisher attribution.
 
-These screenshots show the actual UI with isolated, illustrative test data. They do not display personal calendar events or account credentials.
+Refreshed November 7, 2026. These screenshots show the current UI—including explicit allergy confirmation—with isolated, illustrative test data. They do not display personal calendar events or account credentials.
 
 ![Food-led menu planning](docs/images/desktop-menu.jpg)
 

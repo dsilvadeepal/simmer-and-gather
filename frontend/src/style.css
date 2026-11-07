@@ -718,8 +718,18 @@ nav.step-navigation{background:#fafbf7f5;border-color:var(--line)}
 .spread-options{margin-top:0;padding:12px 20px}.spread-options>summary{padding:4px 0;min-height:44px;align-content:center}.spread-options[open]>summary{margin-bottom:16px}
 .dish-mode{font-size:13px;background:var(--sage);display:inline-block;border-radius:20px;padding:4px 10px;margin:6px 0}
 
-.shopping-check-row {list-style:none; padding:4px 0;}
-.shopping-check-row label {display:flex; align-items:center; gap:12px; min-height:44px; cursor:pointer;}
-.shopping-check-row input[type="checkbox"] {width:22px; height:22px; flex-shrink:0;}
+.shopping-check-row {list-style:none; padding:0; margin:0; border-bottom:1px solid #e5e9df;}
+.shopping-check-row label {display:flex; align-items:center; gap:10px; min-height:44px; margin:0; padding:4px 0; cursor:pointer; font-weight:400; line-height:1.35;}
+.shopping-check-row input[type="checkbox"] {width:22px; height:22px; flex-shrink:0; margin:0;}
 .shopping-check-row .shopping-have {text-decoration:line-through; opacity:.6;}
 .shopping-check-row small {display:block; margin-left:34px;}
+
+.shopping-list > details {margin-top:12px;}
+.shopping-list > details > summary {padding:8px 0;}
+.shopping-list > details > ul {padding:0; margin:0;}
+.shopping-check-row label > span {flex:1; min-width:0;}
+.shopping-quantity {flex-shrink:0; max-width:45%; text-align:right; font-size:13px;}
+.shopping-list > .meta {font-size:13px; margin-bottom:8px;}
+@media(min-width:800px) {
+ .shopping-list > details > ul {display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); column-gap:32px;}
+}

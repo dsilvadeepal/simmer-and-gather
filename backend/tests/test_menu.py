@@ -37,3 +37,33 @@ def test_absence_of_obvious_ingredient_does_not_claim_allergy_safe():
     r=RecipeSnapshot(title='Rice',source='test',allergens=[],ingredients=[Ingredient(name='rice')])
     i=PlanInputs(gathering=Gathering(allergies=['gluten']),selections=[MenuSelection(title='Rice',recipe=r)])
     assert any(v.code=='allergy_unknown' for v in validate_menu(i))
+
+
+def test_reviewed_ingredient_screen_is_reminder_not_safety_certification():
+    from simmer.menu import menu_blockers
+    r=RecipeSnapshot(title='Rice',source='test',reviewed=True,allergens=[],ingredients=[Ingredient(name='rice')])
+    i=PlanInputs(gathering=Gathering(allergies=['nuts']),selections=[MenuSelection(title='Rice',recipe=r)])
+    issues=validate_menu(i)
+    assert not menu_blockers(issues)
+    assert any(v.code=='allergy_label_check' and 'not an allergen-free guarantee' in v.explanation for v in issues)
+
+
+@pytest.mark.parametrize('mode,reviewed,ingredients,allergens,allergy',[
+    ('cook',False,['rice'],[],'nuts'),
+    ('cook',True,[],[],'nuts'),
+    ('cook',True,['rice'],None,'nuts'),
+    ('buy',True,['rice'],[],'nuts'),
+    ('cook',True,['rice'],[],'sesame'),
+])
+def test_insufficient_or_unsupported_screen_remains_blocking(mode,reviewed,ingredients,allergens,allergy):
+    from simmer.menu import menu_blockers
+    r=RecipeSnapshot(title='Rice',source='test',reviewed=reviewed,allergens=allergens,ingredients=[Ingredient(name=n) for n in ingredients])
+    i=PlanInputs(gathering=Gathering(allergies=[allergy]),selections=[MenuSelection(title='Rice',mode=mode,recipe=r)])
+    assert any(v.code=='allergy_unknown' for v in menu_blockers(validate_menu(i)))
+
+
+def test_reviewed_recipe_with_nuts_remains_blocking():
+    from simmer.menu import menu_blockers
+    r=RecipeSnapshot(title='Rice',source='test',reviewed=True,allergens=[],ingredients=[Ingredient(name='cashews')])
+    i=PlanInputs(gathering=Gathering(allergies=['nuts']),selections=[MenuSelection(title='Rice',recipe=r)])
+    assert any(v.code=='allergy' for v in menu_blockers(validate_menu(i)))

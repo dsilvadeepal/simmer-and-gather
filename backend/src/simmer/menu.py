@@ -44,6 +44,11 @@ def ingredient_allergen_hits(recipe,requested):
                 hits.append(name)
     return list(dict.fromkeys(hits))
 
+MENU_ADVISORY_CODES = frozenset({'menu_category', 'allergy_label_check'})
+
+def menu_blockers(issues):
+    return [issue for issue in issues if issue.code not in MENU_ADVISORY_CODES]
+
 def validate_menu(inputs):
     g=inputs.gathering; errors=[]
     def issue(code,text,ids=[]): errors.append(ConstraintViolation(code=code,explanation=text,affected_ids=ids))
@@ -61,6 +66,11 @@ def validate_menu(inputs):
         if hits or requested & declared:
             detail=('; listed ingredients: '+', '.join(hits)) if hits else ''
             issue('allergy','Possible allergen in '+s.title+detail+'. Check the recipe and labels before serving.',[s.id])
+        elif (s.mode == 'cook' and s.recipe and s.recipe.reviewed
+              and s.recipe.ingredients and all(i.name.strip() for i in s.recipe.ingredients)
+              and s.recipe.allergens is not None and requested <= ALLERGEN_PATTERNS.keys()):
+            families = ', '.join(sorted(requested))
+            issue('allergy_label_check', f'{s.title}: no {families} detected in the reviewed ingredient list. Check packaged ingredients and avoid cross-contact before serving; this is not an allergen-free guarantee.', [s.id])
         else:
             issue('allergy_unknown','Check ingredients, product labels and cross-contact for '+s.title+'; this screening cannot confirm it is allergen-free.',[s.id])
     return errors

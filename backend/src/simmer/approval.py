@@ -3,7 +3,7 @@ from .domain import *
 from .db import Conflict,Missing,serialized
 from .profiles import HostingService
 from .scheduler import content_hash,validate_schedule,occupancy_windows,digest
-from .menu import validate_menu
+from .menu import menu_blockers, MENU_ADVISORY_CODES, validate_menu
 
 def event_proposals(owner,plan,inputs):
     windows=sorted([w for a in plan.assignments for w in occupancy_windows(a,inputs.gathering.profile.helpers)],key=lambda w:w.start)
@@ -24,7 +24,7 @@ class ApprovalService:
         from .recipe_readiness import changed_recipes
         from .recipes import RecipeService
         if changed_recipes(inputs,RecipeService(self.store).list_recipes(owner)): raise Conflict('Recipe collection changed; refresh selected recipes and regenerate before approval')
-        if p.status!='feasible' or validate_schedule(inputs,p) or any(v.code!='menu_category' for v in validate_menu(inputs)): raise Conflict('Only a validated feasible plan can be approved')
+        if p.status!='feasible' or validate_schedule(inputs,p) or menu_blockers(validate_menu(inputs)): raise Conflict('Only a validated feasible plan can be approved')
         if inputs.availability.status!='fresh': raise Conflict('Live calendar verification required before approval')
         return p,inputs
     @serialized

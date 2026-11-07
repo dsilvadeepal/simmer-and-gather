@@ -42,7 +42,7 @@ def solve_schedule(inputs,time_limit=5,diagnostics=None):
             for j,w in enumerate(windows):
                 flag=model.new_bool_var(f'day:{t.id}:{j}');chosen[t.id,j]=flag;flags.append(flag)
                 model.add(starts[t.id]>=tick(w.start)).only_enforce_if(flag)
-                model.add(ends[t.id]<=tick(w.end)-15).only_enforce_if(flag)
+                model.add(ends[t.id]<=tick(w.end)).only_enforce_if(flag)
                 if t.preparation_policy=='same_day' and w.start.astimezone(zone).date()!=g.arrival.astimezone(zone).date():model.add(flag==0)
             model.add_exactly_one(flags)
         elif t.preparation_policy=='same_day':
@@ -70,11 +70,16 @@ def solve_schedule(inputs,time_limit=5,diagnostics=None):
         first=model.new_int_var(0,deadline,'first:'+str(j));model.add_min_equality(first,start_vars)
         end=model.new_int_var(0,deadline,'cleanup-start:'+str(j));model.add_max_equality(end,end_vars)
         span=model.new_int_var(0,deadline,'span:'+str(j));model.add(span==end-first).only_enforce_if(used);model.add(span==0).only_enforce_if(used.Not());objective.append(5*span)
-        cleanup=model.new_optional_interval_var(end,15,end+15,used,'cleanup:'+str(j));human.append(cleanup)
-        model.add(end+15<=tick(w.end)).only_enforce_if(used)
+        cleanup_start=model.new_int_var(0,deadline,'cleanup-flex:'+str(j))
+        # Clean during a passive cooking gap, not necessarily after the last dish.
+        # Retain the full allowance and host-attention/calendar constraints.
+        model.add(cleanup_start>=first+5).only_enforce_if(used)
+        model.add(cleanup_start+15<=tick(w.end)).only_enforce_if(used)
+        model.add(cleanup_start+15<=deadline).only_enforce_if(used)
+        cleanup=model.new_optional_interval_var(cleanup_start,15,cleanup_start+15,used,'cleanup:'+str(j));human.append(cleanup)
         allowance=min(15,g.cleanup_overrun_minutes)
         model.add(sum(weights[t.id]*flag for t,flag in pairs)+(15-allowance)*used<=limit_for(g,w.start.astimezone(zone).date()))
-        cleanups.append((j,end,used))
+        cleanups.append((j,cleanup_start,used))
     # Busy windows may overlap each other: merge before adding fixed exclusions.
     busy=sorted((max(0,tick(w.start)),min(deadline,tick(w.end))) for w in inputs.availability.busy+g.profile.protected if tick(w.end)>0 and tick(w.start)<deadline)
     merged=[]

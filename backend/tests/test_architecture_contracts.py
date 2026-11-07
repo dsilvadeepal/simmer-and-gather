@@ -104,3 +104,27 @@ def test_menu_unknowns_override_complete_schedule():
     plan=apply_menu_validation(data,plan)
     assert plan.status=='incomplete'
     assert plan.outcome.code=='needs_input'
+
+
+def test_menu_review_does_not_erase_schedule_failure():
+    from simmer.agent import apply_menu_validation
+    from simmer.domain import PlanCandidate, SchedulingOutcome
+    data=inputs()
+    data.gathering.allergies=['nuts']
+    plan=PlanCandidate(gathering_id=data.gathering.id,revision=1,input_hash='test',status='conflict',outcome=SchedulingOutcome(code='no_fit_found',message='No available time',solver_status='INFEASIBLE'))
+    result=apply_menu_validation(data,plan)
+    assert result.outcome.code=='no_fit_found'
+    assert result.outcome.solver_status=='INFEASIBLE'
+    assert any(v.code=='allergy_unknown' for v in result.violations)
+
+
+def test_notion_structured_recipe_preserves_timing_but_requires_review():
+    import json
+    from simmer.adapters.notion_recipe_details import from_notion_details
+    r=inputs(minutes=(20,),limit=90).selections[0].recipe
+    page={'id':'notion-page','last_edited_time':'today','properties':{'Source URL':{'url':r.source}}}
+    data={'type':'code','code':{'caption':[{'text':{'content':'Simmer and Gather recipe data v1'}}],'rich_text':[{'text':{'content':r.model_dump_json()}}]}}
+    back=from_notion_details(page,[data])
+    assert back.tasks==r.tasks
+    assert back.reviewed is False
+    assert back.id=='notion-page'

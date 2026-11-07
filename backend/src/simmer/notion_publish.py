@@ -8,7 +8,7 @@ from .adapters.notion import BeforeWriteError
 from .db import Conflict, Missing, serialized
 from .domain import RecipeSnapshot, PlanCandidate, PlanInputs
 from .scheduler import content_hash
-from .menu import validate_menu
+from .menu import menu_blockers, MENU_ADVISORY_CODES, validate_menu
 from .scheduler import validate_schedule
 
 class NotionPublisher:
@@ -68,7 +68,7 @@ class NotionPublisher:
         from .recipe_readiness import changed_recipes
         from .recipes import RecipeService
         if changed_recipes(inputs,RecipeService(self.store).list_recipes(owner)): raise Conflict('Recipe collection changed; refresh selections and regenerate before saving')
-        if p.status!='feasible' or validate_schedule(inputs,p) or any(v.code!='menu_category' for v in validate_menu(inputs)):
+        if p.status!='feasible' or validate_schedule(inputs,p) or menu_blockers(validate_menu(inputs)):
             raise Conflict('Resolve plan issues before saving the final plan to Notion')
         g=inputs.gathering
         lines=[g.title,f'Plan revision: {revision}',f'Guests: {g.guests}; vegetarian guests: {g.vegetarian_guests}',f'Arrival: {g.arrival}; timezone: {g.profile.timezone}', 'This is a reviewed plan snapshot. Saving it does not approve or book calendar events.','Menu']

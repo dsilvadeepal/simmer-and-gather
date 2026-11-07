@@ -1,0 +1,3303 @@
+{
+  "change": "Replace aloo chaat with paneer tikka; same 18 guests, three 180-minute prep days and 60-minute buffer",
+  "inputs": {
+    "gathering": {
+      "id": "realistic-05",
+      "revision": 1,
+      "title": "Indian buffet",
+      "occasion": "Indian buffet",
+      "arrival": "2026-11-15T18:00:00-05:00",
+      "earliest_prep": "2026-11-13",
+      "prep_days": [
+        "2026-11-13",
+        "2026-11-14",
+        "2026-11-15"
+      ],
+      "daily_limits": {
+        "2026-11-13": 180,
+        "2026-11-14": 180,
+        "2026-11-15": 180
+      },
+      "prep_windows": [],
+      "guests": 18,
+      "vegetarian_guests": 5,
+      "allergies": [],
+      "preferences": [],
+      "relax_minutes": 60,
+      "finishing_minutes": 0,
+      "cleanup_overrun_minutes": 15,
+      "single_batch_kitchen": true,
+      "profile": {
+        "timezone": "America/New_York",
+        "weekday_minutes": 120,
+        "weekend_minutes": 120,
+        "protected": [],
+        "equipment": {
+          "oven": 1,
+          "stovetop": 2,
+          "air_fryer": 1,
+          "instant_pot": 1
+        },
+        "helpers": []
+      },
+      "selected_calendars": [],
+      "contributions": [],
+      "spread": "manageable",
+      "category_counts": {
+        "starters": 0,
+        "mains": 0,
+        "sides": 0,
+        "desserts": 0,
+        "drinks": 0
+      }
+    },
+    "selections": [
+      {
+        "id": "dish-0",
+        "title": "Air Fryer Paneer Tikka",
+        "category": "starters",
+        "recipe": {
+          "id": "4076c09a-c77f-81ca-9869-d9565d1d4e21",
+          "version": "3-source-details-2026-11-06",
+          "title": "Air Fryer Paneer Tikka",
+          "source": "https://ministryofcurry.com/paneer-tikka/",
+          "servings": 8,
+          "category": "starters",
+          "vegetarian": null,
+          "allergens": null,
+          "ingredients": [
+            {
+              "name": "plain yogurt (full fat )",
+              "quantity": 0.5,
+              "unit": "cup",
+              "amount_detail": null
+            },
+            {
+              "name": "ginger paste",
+              "quantity": 0.5,
+              "unit": "tbsp",
+              "amount_detail": null
+            },
+            {
+              "name": "garlic paste",
+              "quantity": 0.5,
+              "unit": "tbsp",
+              "amount_detail": null
+            },
+            {
+              "name": "ground turmeric",
+              "quantity": 0.5,
+              "unit": "tsp",
+              "amount_detail": null
+            },
+            {
+              "name": "kosher salt",
+              "quantity": 1.5,
+              "unit": "tsp",
+              "amount_detail": null
+            },
+            {
+              "name": "Kashmiri red chili powder",
+              "quantity": 1.0,
+              "unit": "tbsp",
+              "amount_detail": null
+            },
+            {
+              "name": "garam masala",
+              "quantity": 1.0,
+              "unit": "tsp",
+              "amount_detail": null
+            },
+            {
+              "name": "chat masala (optional)",
+              "quantity": 1.0,
+              "unit": "tsp",
+              "amount_detail": null
+            },
+            {
+              "name": "kasoori methi (dried fenugreek leaves)",
+              "quantity": 1.0,
+              "unit": "tbsp",
+              "amount_detail": null
+            },
+            {
+              "name": "lemon (juiced)",
+              "quantity": 1.0,
+              "unit": "count",
+              "amount_detail": null
+            },
+            {
+              "name": "smoked paprika (optional)",
+              "quantity": 1.0,
+              "unit": "tsp",
+              "amount_detail": null
+            },
+            {
+              "name": "paneer (cut into 1-inch cubes)",
+              "quantity": 1.0,
+              "unit": "lb",
+              "amount_detail": null
+            },
+            {
+              "name": "medium green pepper (cut into 1-inch cubes)",
+              "quantity": 1.0,
+              "unit": "count",
+              "amount_detail": null
+            },
+            {
+              "name": "medium red pepper (cut into 1-inch cubes)",
+              "quantity": 1.0,
+              "unit": "count",
+              "amount_detail": null
+            },
+            {
+              "name": "medium red onion (cut into 1-inch cubes)",
+              "quantity": 1.0,
+              "unit": "count",
+              "amount_detail": null
+            }
+          ],
+          "tasks": [
+            {
+              "id": "coat",
+              "title": "Cut paneer and vegetables; coat in marinade",
+              "recipe_id": "",
+              "dependencies": [],
+              "minutes": 20,
+              "active_minutes": 20,
+              "presence_minutes": 20,
+              "skill": "cook",
+              "resource": null,
+              "capacity": 1,
+              "temperature": null,
+              "eligible": null,
+              "max_ahead_hours": 24.0,
+              "evidence": "Reviewed publisher method; timing/check-ins are home-cook estimates. See recipe preparation provenance.",
+              "ingredients": [],
+              "guidance": "Cut paneer, peppers and onion into 1-inch pieces. Mix yogurt, spices, ginger, garlic and lemon juice; coat the pieces evenly.",
+              "phase": "cooking",
+              "unattended": false,
+              "scale_mode": "combined",
+              "preparation_policy": "advance",
+              "storage_anchor": "next_step",
+              "max_dependency_gap_minutes": null,
+              "min_dependency_gap_minutes": 0,
+              "attention_segments": [],
+              "timing_basis": "estimate"
+            },
+            {
+              "id": "marinate",
+              "title": "Refrigerate to marinate",
+              "recipe_id": "",
+              "dependencies": [
+                "coat"
+              ],
+              "minutes": 30,
+              "active_minutes": 0,
+              "presence_minutes": 0,
+              "skill": "cook",
+              "resource": null,
+              "capacity": 1,
+              "temperature": null,
+              "eligible": null,
+              "max_ahead_hours": 24.0,
+              "evidence": "Reviewed publisher method; timing/check-ins are home-cook estimates. See recipe preparation provenance.",
+              "ingredients": [],
+              "guidance": "At least 30 minutes; the publisher permits up to 24 hours refrigerated.",
+              "phase": "cooking",
+              "unattended": true,
+              "scale_mode": "combined",
+              "preparation_policy": "advance",
+              "storage_anchor": "next_step",
+              "max_dependency_gap_minutes": 0,
+              "min_dependency_gap_minutes": 0,
+              "attention_segments": [],
+              "timing_basis": "estimate"
+            },
+            {
+              "id": "cook",
+              "title": "Thread skewers, preheat and air-fry paneer tikka",
+              "recipe_id": "",
+              "dependencies": [
+                "marinate"
+              ],
+              "minutes": 30,
+              "active_minutes": 15,
+              "presence_minutes": 15,
+              "skill": "cook",
+              "resource": "air_fryer",
+              "capacity": 1,
+              "temperature": 360,
+              "eligible": null,
+              "max_ahead_hours": 1.0,
+              "evidence": "Reviewed publisher method; timing/check-ins are home-cook estimates. See recipe preparation provenance.",
+              "ingredients": [],
+              "guidance": "Soak wooden skewers for 10 minutes. Alternate paneer and vegetables. Preheat at 400\u00b0F for 5 minutes; cook at 360\u00b0F for 5 minutes, turn, then cook 2\u20133 minutes more. Leave space between skewers; do not crowd the basket.",
+              "phase": "cooking",
+              "unattended": false,
+              "scale_mode": "combined",
+              "preparation_policy": "advance",
+              "storage_anchor": "serving",
+              "max_dependency_gap_minutes": null,
+              "min_dependency_gap_minutes": 0,
+              "attention_segments": [
+                {
+                  "offset_minutes": 0,
+                  "minutes": 10
+                },
+                {
+                  "offset_minutes": 20,
+                  "minutes": 5
+                }
+              ],
+              "timing_basis": "estimate"
+            }
+          ],
+          "source_text": "Collection: Diwali / Indian hosting\nSource: https://ministryofcurry.com/paneer-tikka/\nPublisher: Ministry of Curry\nPublisher rating snapshot, October 28, 2026: 4.7/5 from 10 ratings\nImport: fetched\nCandidate only. Not personally tested or planning-ready. A selection option, not a recommendation to cook every item.\nSource yield: ['8']\nSource timing: prep PT15M; cook PT10M; total PT53M. Source prep time is not total active work.\nIngredients (source facts; quantities need confirmation before scaling)\n\u00bd cup plain yogurt (full fat )\n\u00bd tablespoon ginger paste\n\u00bd tablespoon garlic paste\n\u00bd teaspoon ground turmeric\n1 \u00bd teaspoons kosher salt\n1 tablespoon Kashmiri red chili powder\n1 teaspoon garam masala\n1 teaspoon chat masala (optional)\n1 tablespoon kasoori methi (dried fenugreek leaves)\n1 lemon (juiced)\n1 teaspoon smoked paprika (optional)\n1 pound paneer (cut into 1-inch cubes)\n1 medium green pepper (cut into 1-inch cubes)\n1 medium red pepper (cut into 1-inch cubes)\n1 medium red onion (cut into 1-inch cubes)\nCooking method and recipe notes: open the original source link. Task-level timing, make-ahead windows and storage guidance still need review.\nHome-cook timing draft (untested)\nCut paneer and vegetables; mix marinade: 20 min hands-on\nMarinate in refrigerator: 0 min hands-on + 30 min waiting/cooking\nSkewer and air-fry one batch: 10 min hands-on + 10 min waiting/cooking\nCleanup: 10 min. Active total including cleanup: 40 min; unattended: 40 min. Base recipe only; confirm servings, equipment batches, and real pace before scheduling.\nPreparation review \u00b7 2026-10-28-logical-steps-v1\nCut paneer and vegetables; mix and coat with marinade \u2014 20 min hands-on; 0 min waiting.\nRefrigerate to marinate \u2014 0 min hands-on; 30 min waiting.\nThread skewers and preheat air fryer \u2014 10 min hands-on; 5 min waiting.\nAir-fry a single layer, turning halfway \u2014 5 min hands-on; 8 min waiting.\nPublisher make-ahead guidance: Marinate the uncooked paneer, then refrigerate for up to 24 hours. Cook near serving; the author says it is best hot and fresh.\nTiming and scaling notes: Hands-on and waiting times are estimates for the base recipe; waiting includes soaking, chilling and cooling where listed. Measure ingredients while cooking. Cleanup is a separate flexible allowance. Increase chopping and shaping time with quantity; repeat only appliance-limited cooking steps. Recipe yield does not establish appliance capacity. Use source doneness cues. Pressure-cooker whistles are not a verified Instant Pot conversion.",
+          "reviewed": true,
+          "image_url": "https://ministryofcurry.com/wp-content/uploads/2021/01/Paneer-Tikka_-4.jpg",
+          "image_credit": "Photo: ministryofcurry.com",
+          "uncertainties": [
+            "Hands-on and waiting times are estimates for the base recipe; waiting includes soaking, chilling and cooling where listed.",
+            "Measure ingredients while cooking. Cleanup is a separate flexible allowance.",
+            "Increase chopping and shaping time with quantity; repeat only appliance-limited cooking steps. Recipe yield does not establish appliance capacity.",
+            "Use source doneness cues. Pressure-cooker whistles are not a verified Instant Pot conversion.",
+            "Method and timing review complete; numeric task storage windows remain unset where not established."
+          ],
+          "preparation_provenance": {
+            "library_audit": "2026-10-29; source methods checked; unverified advance windows default to same day; no saved-plan updates",
+            "make_ahead_rerun": "2026-10-29: Conservative 24\u201348 hour refrigerated component allowance is a culinary planning estimate, not a publisher-tested claim.",
+            "source_method_text": "In a medium-sized bowl add yogurt, ginger, garlic, turmeric, salt, red chili powder, garam masala, and chat masala. Crush the dried fenugreek leaves on the palm of your hands and add them to the bowl. Add lemon juice and mix all the ingredients to make the marinade.\nAdd paneer, peppers, and onions to the marinade and mix everything together coating the paneer and veggies well with the marinade.\nCover the bowl and allow it to marinate for 30 minutes at room temperature or refrigerate for up to 24 hours. If using wooden skewers, soak them in water for 10 minutes which prevents them from burning.\nThread the Paneer and peppers into the skewers alternating the paneer, peppers, and onions. Note: If you do not have skewers you can also cook the paneer and veggies directly in the air fryer, oven or grill.\nPreheat the air fryer at 400 F for 5 minutes.\nLightly spray or brush the air fryer basket with oil. Line 4 to 5 skewers and spray over lightly with oil. Cook for 5 minutes at 360\u00b0F (180\u00b0 C). Turn the skewers, spray lightly with oil and cook for another 2 to 3 minutes.\nPreheat the oven to 400\u00b0F.\nLine the skewers on a baking rack and place the rack on a baking tray. Spray over lightly with oil. Bake for 10 minutes. For slightly charred edges, finish the cooking by broiling the skewers on high for 2 minutes.\u00a0\nPreheat outdoor grill or stovetop griddle. Line the outdoor grill with aluminum foil to prevent the paneer from sticking.\nBrush the griddle (or aluminum foil on the grill) with oil. Place the skewers on the grill and cook for 10 to 12 minutes, turning halfway through\u00a0\nAs an appetizer, squeeze fresh lemon juice over the hot skewers and serve immediately with spicy green chutney and chilled ginger lemonade.\nFor a complete meal, serve over fragrant jeera rice with a crunchy cucumber salad on the side or tuck the cooked paneer and peppers into warm homemade parathas or pillowy naan.For a lighter low carb option, serve over cumin cauliflower rice.",
+            "source_quantity_review": "2026-11-06: whole-item source counts restored; chili shopping upper bound 2 tsp per 4 servings, cook to taste; instruction details checked against original source."
+          }
+        },
+        "mode": "cook",
+        "servings": 18,
+        "must_have": false,
+        "preparation": [],
+        "vegetarian": true,
+        "contribution": null
+      },
+      {
+        "id": "dish-1",
+        "title": "Instant Pot Butter Chicken",
+        "category": "mains",
+        "recipe": {
+          "id": "4076c09a-c77f-81a0-8f19-f69b0348138d",
+          "version": "3",
+          "title": "Instant Pot Butter Chicken",
+          "source": "https://ministryofcurry.com/instant-pot-butter-chicken/",
+          "servings": 6,
+          "category": "mains",
+          "vegetarian": false,
+          "allergens": null,
+          "ingredients": [
+            {
+              "name": "boneless skinless chicken thighs (cut into 2-inch pieces)",
+              "quantity": 2.0,
+              "unit": "lb",
+              "amount_detail": null
+            },
+            {
+              "name": "ghee (or coconut oil)",
+              "quantity": 2.0,
+              "unit": "tbsp",
+              "amount_detail": null
+            },
+            {
+              "name": "1 large yellow onion (finely chopped)",
+              "quantity": null,
+              "unit": null,
+              "amount_detail": null
+            },
+            {
+              "name": "fresh ginger (grated)",
+              "quantity": 1.0,
+              "unit": "tbsp",
+              "amount_detail": null
+            },
+            {
+              "name": "fresh garlic (minced)",
+              "quantity": 1.0,
+              "unit": "tbsp",
+              "amount_detail": null
+            },
+            {
+              "name": "ground turmeric",
+              "quantity": 0.5,
+              "unit": "tsp",
+              "amount_detail": null
+            },
+            {
+              "name": "Kashmiri red chili powder",
+              "quantity": 1.0,
+              "unit": "tbsp",
+              "amount_detail": null
+            },
+            {
+              "name": "3 plum tomatoes (pureed)",
+              "quantity": null,
+              "unit": null,
+              "amount_detail": null
+            },
+            {
+              "name": "unsweetened full fat coconut milk (allow these to separate - DO NOT shake. Best if left in fridge overnight)",
+              "quantity": 1.0,
+              "unit": "can",
+              "amount_detail": null
+            },
+            {
+              "name": "tomato paste",
+              "quantity": 2.0,
+              "unit": "tbsp",
+              "amount_detail": null
+            },
+            {
+              "name": "garam masala",
+              "quantity": 1.0,
+              "unit": "tsp",
+              "amount_detail": null
+            },
+            {
+              "name": "kasoori methi (dried fenugreek leaves)",
+              "quantity": 2.0,
+              "unit": "tbsp",
+              "amount_detail": null
+            },
+            {
+              "name": "sugar (skip for paleo)",
+              "quantity": 2.0,
+              "unit": "tsp",
+              "amount_detail": null
+            },
+            {
+              "name": "kosher salt",
+              "quantity": 1.5,
+              "unit": "tsp",
+              "amount_detail": null
+            },
+            {
+              "name": "cilantro (chopped, for garnish)",
+              "quantity": 0.5,
+              "unit": "cup",
+              "amount_detail": null
+            }
+          ],
+          "tasks": [
+            {
+              "id": "prep",
+              "title": "Cut chicken and chop aromatics",
+              "recipe_id": "",
+              "dependencies": [],
+              "minutes": 20,
+              "active_minutes": 20,
+              "presence_minutes": 20,
+              "skill": "cook",
+              "resource": null,
+              "capacity": 1,
+              "temperature": null,
+              "eligible": null,
+              "max_ahead_hours": 48.0,
+              "evidence": "Reviewed publisher method; timing/check-ins are home-cook estimates. See recipe preparation provenance.",
+              "ingredients": [],
+              "guidance": "Cut chicken evenly; chop onion, ginger and garlic. Separate coconut cream from its watery portion.",
+              "phase": "cooking",
+              "unattended": false,
+              "scale_mode": "combined",
+              "preparation_policy": "advance",
+              "storage_anchor": "serving",
+              "max_dependency_gap_minutes": null,
+              "min_dependency_gap_minutes": 0,
+              "attention_segments": [],
+              "timing_basis": "estimate"
+            },
+            {
+              "id": "saute",
+              "title": "Saut\u00e9 aromatics; add tomato and chicken",
+              "recipe_id": "",
+              "dependencies": [
+                "prep"
+              ],
+              "minutes": 15,
+              "active_minutes": 15,
+              "presence_minutes": 15,
+              "skill": "cook",
+              "resource": "instant_pot",
+              "capacity": 1,
+              "temperature": null,
+              "eligible": null,
+              "max_ahead_hours": 48.0,
+              "evidence": "Reviewed publisher method; timing/check-ins are home-cook estimates. See recipe preparation provenance.",
+              "ingredients": [],
+              "guidance": "Soften onion, cook spices, then add tomato, coconut water and chicken.",
+              "phase": "cooking",
+              "unattended": false,
+              "scale_mode": "combined",
+              "preparation_policy": "advance",
+              "storage_anchor": "serving",
+              "max_dependency_gap_minutes": null,
+              "min_dependency_gap_minutes": 0,
+              "attention_segments": [],
+              "timing_basis": "estimate"
+            },
+            {
+              "id": "pressure",
+              "title": "Pressure-cook and release safely",
+              "recipe_id": "",
+              "dependencies": [
+                "saute"
+              ],
+              "minutes": 30,
+              "active_minutes": 5,
+              "presence_minutes": 5,
+              "skill": "cook",
+              "resource": "instant_pot",
+              "capacity": 1,
+              "temperature": null,
+              "eligible": null,
+              "max_ahead_hours": 48.0,
+              "evidence": "Reviewed publisher method; timing/check-ins are home-cook estimates. See recipe preparation provenance.",
+              "ingredients": [],
+              "guidance": "For thighs, pressure-cook on high for 8 minutes then quick-release. Allow time to reach pressure; check chicken is cooked through.",
+              "phase": "cooking",
+              "unattended": false,
+              "scale_mode": "combined",
+              "preparation_policy": "advance",
+              "storage_anchor": "serving",
+              "max_dependency_gap_minutes": 15,
+              "min_dependency_gap_minutes": 0,
+              "attention_segments": [
+                {
+                  "offset_minutes": 25,
+                  "minutes": 5
+                }
+              ],
+              "timing_basis": "estimate"
+            },
+            {
+              "id": "finish",
+              "title": "Stir in coconut cream and finish sauce",
+              "recipe_id": "",
+              "dependencies": [
+                "pressure"
+              ],
+              "minutes": 10,
+              "active_minutes": 10,
+              "presence_minutes": 10,
+              "skill": "cook",
+              "resource": "instant_pot",
+              "capacity": 1,
+              "temperature": null,
+              "eligible": null,
+              "max_ahead_hours": 48.0,
+              "evidence": "Reviewed publisher method; timing/check-ins are home-cook estimates. See recipe preparation provenance.",
+              "ingredients": [],
+              "guidance": "Add reserved cream and finishing spices; simmer to thicken.",
+              "phase": "cooking",
+              "unattended": false,
+              "scale_mode": "combined",
+              "preparation_policy": "advance",
+              "storage_anchor": "serving",
+              "max_dependency_gap_minutes": 15,
+              "min_dependency_gap_minutes": 0,
+              "attention_segments": [],
+              "timing_basis": "estimate"
+            },
+            {
+              "id": "store",
+              "title": "Portion, cool promptly and refrigerate",
+              "recipe_id": "",
+              "dependencies": [
+                "finish"
+              ],
+              "minutes": 10,
+              "active_minutes": 10,
+              "presence_minutes": 10,
+              "skill": "cook",
+              "resource": null,
+              "capacity": 1,
+              "temperature": null,
+              "eligible": null,
+              "max_ahead_hours": 48.0,
+              "evidence": "Reviewed publisher method; timing/check-ins are home-cook estimates. See recipe preparation provenance.",
+              "ingredients": [],
+              "guidance": "Transfer to shallow containers and refrigerate promptly. Do not wait for the whole pot to cool on the counter.",
+              "phase": "cooking",
+              "unattended": false,
+              "scale_mode": "combined",
+              "preparation_policy": "advance",
+              "storage_anchor": "serving",
+              "max_dependency_gap_minutes": 15,
+              "min_dependency_gap_minutes": 0,
+              "attention_segments": [],
+              "timing_basis": "estimate"
+            },
+            {
+              "id": "reheat",
+              "title": "Reheat gently and keep hot",
+              "recipe_id": "",
+              "dependencies": [
+                "store"
+              ],
+              "minutes": 25,
+              "active_minutes": 10,
+              "presence_minutes": 10,
+              "skill": "cook",
+              "resource": "stovetop",
+              "capacity": 1,
+              "temperature": null,
+              "eligible": null,
+              "max_ahead_hours": 2.5,
+              "evidence": "Reviewed publisher method; timing/check-ins are home-cook estimates. See recipe preparation provenance.",
+              "ingredients": [],
+              "guidance": "Stir and heat through to 165\u00b0F; add a splash of water if needed. Keep at 140\u00b0F or above until serving. Stay nearby for checks.",
+              "phase": "cooking",
+              "unattended": false,
+              "scale_mode": "combined",
+              "preparation_policy": "advance",
+              "storage_anchor": "serving",
+              "max_dependency_gap_minutes": null,
+              "min_dependency_gap_minutes": 180,
+              "attention_segments": [
+                {
+                  "offset_minutes": 0,
+                  "minutes": 5
+                },
+                {
+                  "offset_minutes": 20,
+                  "minutes": 5
+                }
+              ],
+              "timing_basis": "estimate"
+            }
+          ],
+          "source_text": "Collection: Diwali / Indian hosting\nSource: https://ministryofcurry.com/instant-pot-butter-chicken/\nPublisher: Ministry of Curry\nPublisher rating snapshot, October 28, 2026: 4.73/5 from 123 ratings\nImport: fetched\nCandidate only. Not personally tested or planning-ready. A selection option, not a recommendation to cook every item.\nSource yield: ['6']\nSource timing: prep PT10M; cook PT25M; total PT35M. Source prep time is not total active work.\nIngredients (source facts; quantities need confirmation before scaling)\n2 pounds boneless skinless chicken thighs (cut into 2-inch pieces)\n2 tablespoons ghee (or coconut oil)\n1 large yellow onion (finely chopped)\n1 tablespoon fresh ginger (grated)\n1 tablespoon fresh garlic (minced)\n\u00bd teaspoon ground turmeric\n1 tablespoon Kashmiri red chili powder\n3 plum tomatoes (pureed)\n1 can unsweetened full fat coconut milk (allow these to separate - DO NOT shake. Best if left in fridge overnight)\n2 tablespoons tomato paste\n1 teaspoon garam masala\n2 tablespoons kasoori methi (dried fenugreek leaves)\n2 teaspoons sugar (skip for paleo)\n1\u00bd teaspoon kosher salt\n\u00bd cup cilantro (chopped, for garnish)\nCooking method and recipe notes: open the original source link. Task-level timing, make-ahead windows and storage guidance still need review.\nHome-cook timing draft (untested)\nCut chicken and measure sauce ingredients: 15 min hands-on\nPressure cook and release: 5 min hands-on + 25 min waiting/cooking\nFinish sauce: 10 min hands-on\nCleanup: 10 min. Active total including cleanup: 40 min; unattended: 25 min. Base recipe only; confirm servings, equipment batches, and real pace before scheduling.\nPreparation review \u00b7 2026-10-28-logical-steps-v1\nCut chicken and chop onion \u2014 20 min hands-on; 0 min waiting.\nSaut\u00e9 onion and spices; add tomato, liquid and chicken \u2014 10 min hands-on; 0 min waiting.\nBring to pressure, cook and release \u2014 5 min hands-on; 25 min waiting.\nStir in coconut cream and reduce sauce \u2014 10 min hands-on; 0 min waiting.\nEstimated make-ahead approach: Cook fully 1 day ahead; divide into shallow containers and refrigerate promptly. Reheat thoroughly before serving; sauce usually tolerates this better than last-minute cooking.\nTiming and scaling notes: Hands-on and waiting times are estimates for the base recipe; waiting includes soaking, chilling and cooling where listed. Measure ingredients while cooking. Cleanup is a separate flexible allowance. Increase chopping and shaping time with quantity; repeat only appliance-limited cooking steps. Recipe yield does not establish appliance capacity. Use source doneness cues. Pressure-cooker whistles are not a verified Instant Pot conversion.",
+          "reviewed": true,
+          "image_url": "https://ministryofcurry.com/wp-content/uploads/2017/01/butter-chicken-1.jpg",
+          "image_credit": "Photo: ministryofcurry.com",
+          "uncertainties": [
+            "Hands-on and waiting times are estimates for the base recipe; waiting includes soaking, chilling and cooling where listed.",
+            "Measure ingredients while cooking. Cleanup is a separate flexible allowance.",
+            "Increase chopping and shaping time with quantity; repeat only appliance-limited cooking steps. Recipe yield does not establish appliance capacity.",
+            "Use source doneness cues. Pressure-cooker whistles are not a verified Instant Pot conversion.",
+            "Method and timing review complete; numeric task storage windows remain unset where not established."
+          ],
+          "preparation_provenance": {
+            "library_audit": "2026-10-29; source methods checked; unverified advance windows default to same day; no saved-plan updates",
+            "make_ahead_rerun": "2026-10-29: Publisher permits refrigerated leftovers up to five days; plan uses a shorter 48-hour cooked storage allowance, explicit cooling and reheating.",
+            "source_method_text": "Set Instant Pot to Saute mode and heat ghee.\u00a0Add onions and salt. Cook until onions are soft and translucent for 2-3 minutes (with a glass lid on to speed this process)\nAdd ginger, garlic, turmeric, and red chili powder. Mix well and cook until fragrant for 2 minutes.\nSeparate the coconut cream and water. Keep the coconut cream aside.\u00a0Add half a cup of the watery portion of coconut milk and pureed tomatoes mixing with spices. Add chicken and stir well.\nClose the Instant Pot lid with steam release handle to sealing. Pressure cook for 8 minutes followed by quick release. (Note: If using chicken breasts, pressure cook for 5 minutes followed by 5 minutes of natural pressure release)\nOpen the Instant Pot, stir in coconut cream, tomato paste, garam masala, fenugreek leaves, sugar, and half of the cilantro. Add more salt if needed.\nTurn the Instant Pot to Saut\u00e9 mode. Cook without the lid to allow the curry to thicken for 5 minutes. If the sauce starts to splutter, adjust to Saute(Less).\nGarnish with remaining cilantro. Serve the butter chicken with\u00a0Homemade Parathas\u00a0and\u00a0Basmati Rice\u00a0or\u00a0Cumin Rice\u00a0and \u00a0Cucumber Raita. For a low-carb meal serve with Cauliflower Cumin Rice."
+          }
+        },
+        "mode": "cook",
+        "servings": 18,
+        "must_have": false,
+        "preparation": [],
+        "vegetarian": false,
+        "contribution": null
+      },
+      {
+        "id": "dish-2",
+        "title": "Instant Pot Dal Makhani",
+        "category": "mains",
+        "recipe": {
+          "id": "4076c09a-c77f-81ee-933a-d7fb512817dc",
+          "version": "2",
+          "title": "Instant Pot Dal Makhani",
+          "source": "https://ministryofcurry.com/madras-lentils-daal-makhani-instant-pot/",
+          "servings": 6,
+          "category": "mains",
+          "vegetarian": true,
+          "allergens": null,
+          "ingredients": [
+            {
+              "name": "black gram beans ((adzuki beans or whole brown lentils) **)",
+              "quantity": 1.0,
+              "unit": "cup",
+              "amount_detail": null
+            },
+            {
+              "name": "red kidney beans (**)",
+              "quantity": 0.3333333333333333,
+              "unit": "cup",
+              "amount_detail": null
+            },
+            {
+              "name": "oil ((ghee or butter))",
+              "quantity": 1.0,
+              "unit": "tbsp",
+              "amount_detail": null
+            },
+            {
+              "name": "cumin seeds",
+              "quantity": 1.0,
+              "unit": "tsp",
+              "amount_detail": null
+            },
+            {
+              "name": "1 medium yellow onion (finely diced)",
+              "quantity": null,
+              "unit": null,
+              "amount_detail": null
+            },
+            {
+              "name": "ginger (paste)",
+              "quantity": 1.0,
+              "unit": "tbsp",
+              "amount_detail": null
+            },
+            {
+              "name": "garlic (paste )",
+              "quantity": 1.0,
+              "unit": "tbsp",
+              "amount_detail": null
+            },
+            {
+              "name": "ground turmeric",
+              "quantity": 0.25,
+              "unit": "tsp",
+              "amount_detail": null
+            },
+            {
+              "name": "Kashmiri red chili powder",
+              "quantity": 2.0,
+              "unit": "tsp",
+              "amount_detail": null
+            },
+            {
+              "name": "kosher salt",
+              "quantity": 2.0,
+              "unit": "tsp",
+              "amount_detail": null
+            },
+            {
+              "name": "tomatoes (diced )",
+              "quantity": 2.0,
+              "unit": "cup",
+              "amount_detail": null
+            },
+            {
+              "name": "water",
+              "quantity": 2.0,
+              "unit": "cup",
+              "amount_detail": null
+            },
+            {
+              "name": "light cream (**)",
+              "quantity": 0.5,
+              "unit": "cup",
+              "amount_detail": null
+            },
+            {
+              "name": "garam masala",
+              "quantity": 1.0,
+              "unit": "tsp",
+              "amount_detail": null
+            },
+            {
+              "name": "cilantro (chopped )",
+              "quantity": 0.25,
+              "unit": "cup",
+              "amount_detail": null
+            },
+            {
+              "name": "kasoori methi (dried fenugreek leaves) (optional)",
+              "quantity": 1.0,
+              "unit": "tbsp",
+              "amount_detail": null
+            },
+            {
+              "name": "brown rice (rinsed and drained )",
+              "quantity": 1.0,
+              "unit": "cup",
+              "amount_detail": null
+            },
+            {
+              "name": "water",
+              "quantity": 2.0,
+              "unit": "cup",
+              "amount_detail": null
+            },
+            {
+              "name": "salt",
+              "quantity": 1.0,
+              "unit": "tsp",
+              "amount_detail": null
+            }
+          ],
+          "tasks": [
+            {
+              "id": "reviewed-step-1-setup",
+              "title": "Rinse beans and cover with water",
+              "recipe_id": "",
+              "dependencies": [],
+              "minutes": 5,
+              "active_minutes": 5,
+              "presence_minutes": 5,
+              "skill": "cook",
+              "resource": null,
+              "capacity": 1,
+              "temperature": null,
+              "eligible": null,
+              "max_ahead_hours": 24.0,
+              "evidence": "Method reviewed against publisher; hands-on and waiting times are planning estimates",
+              "ingredients": [],
+              "guidance": "Rinse beans and cover generously with water. Drain after soaking.",
+              "phase": "cooking",
+              "unattended": false,
+              "scale_mode": "combined",
+              "preparation_policy": "advance",
+              "storage_anchor": "next_step",
+              "max_dependency_gap_minutes": null,
+              "min_dependency_gap_minutes": 0,
+              "attention_segments": [],
+              "timing_basis": "estimate"
+            },
+            {
+              "id": "reviewed-step-1",
+              "title": "Soak beans overnight",
+              "recipe_id": "",
+              "dependencies": [
+                "reviewed-step-1-setup"
+              ],
+              "minutes": 480,
+              "active_minutes": 0,
+              "presence_minutes": 0,
+              "skill": "cook",
+              "resource": null,
+              "capacity": 1,
+              "temperature": null,
+              "eligible": null,
+              "max_ahead_hours": 24.0,
+              "evidence": "Method reviewed against publisher; hands-on and waiting times are planning estimates",
+              "ingredients": [],
+              "guidance": "The author cooks this dal the night before entertaining. The page says leftovers keep refrigerated for up to five days.",
+              "phase": "cooking",
+              "unattended": true,
+              "scale_mode": "combined",
+              "preparation_policy": "advance",
+              "storage_anchor": "next_step",
+              "max_dependency_gap_minutes": null,
+              "min_dependency_gap_minutes": 0,
+              "attention_segments": [],
+              "timing_basis": "estimate"
+            },
+            {
+              "id": "reviewed-step-2",
+              "title": "Chop onion and saut\u00e9 aromatics",
+              "recipe_id": "",
+              "dependencies": [
+                "reviewed-step-1"
+              ],
+              "minutes": 15,
+              "active_minutes": 15,
+              "presence_minutes": 15,
+              "skill": "cook",
+              "resource": null,
+              "capacity": 1,
+              "temperature": null,
+              "eligible": null,
+              "max_ahead_hours": null,
+              "evidence": "Method reviewed against publisher; hands-on and waiting times are planning estimates",
+              "ingredients": [],
+              "guidance": "The author cooks this dal the night before entertaining. The page says leftovers keep refrigerated for up to five days.",
+              "phase": "cooking",
+              "unattended": false,
+              "scale_mode": "batch",
+              "preparation_policy": "same_day",
+              "storage_anchor": "serving",
+              "max_dependency_gap_minutes": null,
+              "min_dependency_gap_minutes": 0,
+              "attention_segments": [],
+              "timing_basis": "estimate"
+            },
+            {
+              "id": "reviewed-step-3",
+              "title": "Add beans and liquid; pressure-cook and release",
+              "recipe_id": "",
+              "dependencies": [
+                "reviewed-step-2"
+              ],
+              "minutes": 60,
+              "active_minutes": 5,
+              "presence_minutes": 60,
+              "skill": "cook",
+              "resource": "instant_pot",
+              "capacity": 1,
+              "temperature": null,
+              "eligible": null,
+              "max_ahead_hours": null,
+              "evidence": "Method reviewed against publisher; hands-on and waiting times are planning estimates",
+              "ingredients": [],
+              "guidance": "Add drained soaked beans, tomato, spices and water. Pressure-cook on high for 30 minutes, followed by natural release. Check beans are tender.",
+              "phase": "cooking",
+              "unattended": false,
+              "scale_mode": "batch",
+              "preparation_policy": "same_day",
+              "storage_anchor": "serving",
+              "max_dependency_gap_minutes": null,
+              "min_dependency_gap_minutes": 0,
+              "attention_segments": [],
+              "timing_basis": "estimate"
+            },
+            {
+              "id": "reviewed-step-4",
+              "title": "Finish with cream and seasoning",
+              "recipe_id": "",
+              "dependencies": [
+                "reviewed-step-3"
+              ],
+              "minutes": 10,
+              "active_minutes": 10,
+              "presence_minutes": 10,
+              "skill": "cook",
+              "resource": null,
+              "capacity": 1,
+              "temperature": null,
+              "eligible": null,
+              "max_ahead_hours": null,
+              "evidence": "Method reviewed against publisher; hands-on and waiting times are planning estimates",
+              "ingredients": [],
+              "guidance": "Stir in cream and garam masala; garnish. The optional pot-in-pot brown rice is not included in these dal-only tasks.",
+              "phase": "cooking",
+              "unattended": false,
+              "scale_mode": "batch",
+              "preparation_policy": "same_day",
+              "storage_anchor": "serving",
+              "max_dependency_gap_minutes": null,
+              "min_dependency_gap_minutes": 0,
+              "attention_segments": [],
+              "timing_basis": "estimate"
+            }
+          ],
+          "source_text": "Collection: Diwali / Indian hosting\nSource: https://ministryofcurry.com/madras-lentils-daal-makhani-instant-pot/\nPublisher: Ministry of Curry\nPublisher rating snapshot, October 28, 2026: 4.68/5 from 134 ratings\nImport: fetched\nCandidate only. Not personally tested or planning-ready. A selection option, not a recommendation to cook every item.\nSource yield: ['6']\nSource timing: prep PT10M; cook PT50M; total PT60M. Source prep time is not total active work.\nIngredients (source facts; quantities need confirmation before scaling)\n1 cup black gram beans ((adzuki beans or whole brown lentils) **)\n\u2153 cup red kidney beans (**)\n1 tablespoon oil ((ghee or butter))\n1 teaspoon cumin seeds\n1 medium yellow onion (finely diced)\n1 tablespoon ginger (paste)\n1 tablespoon garlic (paste )\n\u00bc teaspoon ground turmeric\n2 teaspoons Kashmiri red chili powder\n2 teaspoons kosher salt\n2 cups tomatoes (diced )\n2 cups water\n\u00bd cup light cream (**)\n1 teaspoon garam masala\n\u00bc cup cilantro (chopped )\n1 tablespoons kasoori methi (dried fenugreek leaves) (optional)\n1 cup brown rice (rinsed and drained )\n2 cups water\n1 teaspoon salt\nCooking method and recipe notes: open the original source link. Task-level timing, make-ahead windows and storage guidance still need review.\nHome-cook timing draft (untested)\nRinse lentils and measure ingredients: 15 min hands-on\nPressure cook and release: 5 min hands-on + 50 min waiting/cooking\nFinish with cream and seasoning: 10 min hands-on\nCleanup: 10 min. Active total including cleanup: 40 min; unattended: 50 min. Base recipe only; confirm servings, equipment batches, and real pace before scheduling.\nPreparation review \u00b7 2026-10-28-logical-steps-v1\nRinse and soak beans overnight \u2014 5 min hands-on; 480 min waiting.\nChop onion and saut\u00e9 aromatics \u2014 15 min hands-on; 0 min waiting.\nAdd beans and liquid; pressure-cook and release \u2014 5 min hands-on; 55 min waiting.\nFinish with cream and seasoning \u2014 10 min hands-on; 0 min waiting.\nPublisher make-ahead guidance: The author cooks this dal the night before entertaining. The page says leftovers keep refrigerated for up to five days.\nTiming and scaling notes: Hands-on and waiting times are estimates for the base recipe; waiting includes soaking, chilling and cooling where listed. Measure ingredients while cooking. Cleanup is a separate flexible allowance. Increase chopping and shaping time with quantity; repeat only appliance-limited cooking steps. Recipe yield does not establish appliance capacity. Use source doneness cues. Pressure-cooker whistles are not a verified Instant Pot conversion. Optional pot-in-pot brown rice is omitted when another rice dish is on the menu; add its preparation if serving it.",
+          "reviewed": true,
+          "image_url": "https://ministryofcurry.com/wp-content/uploads/2017/10/daal-makhani-1-copy.jpg",
+          "image_credit": "Photo: ministryofcurry.com",
+          "uncertainties": [
+            "Hands-on and waiting times are estimates for the base recipe; waiting includes soaking, chilling and cooling where listed.",
+            "Measure ingredients while cooking. Cleanup is a separate flexible allowance.",
+            "Increase chopping and shaping time with quantity; repeat only appliance-limited cooking steps. Recipe yield does not establish appliance capacity.",
+            "Use source doneness cues. Pressure-cooker whistles are not a verified Instant Pot conversion.",
+            "Optional pot-in-pot brown rice is omitted when another rice dish is on the menu; add its preparation if serving it.",
+            "Method and timing review complete; numeric task storage windows remain unset where not established."
+          ],
+          "preparation_provenance": {
+            "library_audit": "2026-10-29; source methods checked; unverified advance windows default to same day; no saved-plan updates",
+            "source_method_text": "Rinse and soak black gram beans and red kidney beans in 3 cups of water. Overnight or 6-8 hours. Drain the water after soaking and keep the beans aside.\nSet Instant Pot to saut\u00e9 mode and heat oil. Add cumin seeds to the oil and allow them to sizzle. Add onions and mix well.\nAdd ginger, garlic, turmeric, red chili powder, salt, tomatoes and beans. Add water and mix well.\u00a0\nTo make pot-in-pot brown rice (optional step)-  Add rice, water, and salt to a stainless steel container.\u00a0Put a tall trivet over the beans.\u00a0Place the rice container on the trivet.\nClose Instant Pot with pressure valve to sealing. Pressure Cook (Hi) for 30 minutes followed by Natural Pressure Release. See notes for stove top method.\nOpen Instant Pot and set to saut\u00e9 mode.\u00a0Carefully take out the Rice container and the trivet.\u00a0Stir in cream, add garam masala and garnish with cilantro and dried fenugreek leaves."
+          }
+        },
+        "mode": "cook",
+        "servings": 18,
+        "must_have": false,
+        "preparation": [],
+        "vegetarian": true,
+        "contribution": null
+      },
+      {
+        "id": "dish-3",
+        "title": "Vegetable Pulao Recipe | Veg Pulav",
+        "category": "sides",
+        "recipe": {
+          "id": "4076c09a-c77f-81d5-b19a-dde806211e86",
+          "version": "3-source-details-2026-11-06",
+          "title": "Vegetable Pulao Recipe | Veg Pulav",
+          "source": "https://ministryofcurry.com/moms-veg-pulao/",
+          "servings": 6,
+          "category": "sides",
+          "vegetarian": true,
+          "allergens": [
+            "nuts"
+          ],
+          "ingredients": [
+            {
+              "name": "ghee",
+              "quantity": 1.0,
+              "unit": "tbsp",
+              "amount_detail": null
+            },
+            {
+              "name": "long-grain basmati rice",
+              "quantity": 1.0,
+              "unit": "cup",
+              "amount_detail": null
+            },
+            {
+              "name": "water",
+              "quantity": 2.0,
+              "unit": "cup",
+              "amount_detail": null
+            },
+            {
+              "name": "kosher salt",
+              "quantity": 1.0,
+              "unit": "tsp",
+              "amount_detail": null
+            },
+            {
+              "name": "shah jeera",
+              "quantity": 1.0,
+              "unit": "tsp",
+              "amount_detail": null
+            },
+            {
+              "name": "Indian bay leaf",
+              "quantity": 1.0,
+              "unit": "count",
+              "amount_detail": null
+            },
+            {
+              "name": "6 cloves",
+              "quantity": 6.0,
+              "unit": "cloves",
+              "amount_detail": null
+            },
+            {
+              "name": "black peppercorns",
+              "quantity": 12.0,
+              "unit": "count",
+              "amount_detail": null
+            },
+            {
+              "name": "green cardamom pods",
+              "quantity": 3.0,
+              "unit": "count",
+              "amount_detail": null
+            },
+            {
+              "name": "ghee",
+              "quantity": 4.0,
+              "unit": "tbsp",
+              "amount_detail": null
+            },
+            {
+              "name": "medium yellow onion (thinly sliced)",
+              "quantity": 1.0,
+              "unit": "count",
+              "amount_detail": null
+            },
+            {
+              "name": "cauliflower (cut into 1-inch florets)",
+              "quantity": 2.0,
+              "unit": "cup",
+              "amount_detail": null
+            },
+            {
+              "name": "carrots (cut into 2-inch X \u00bc inch thin strips)",
+              "quantity": 2.0,
+              "unit": "count",
+              "amount_detail": null
+            },
+            {
+              "name": "green beans (diagonally cut into 1 inch pieces)",
+              "quantity": 1.0,
+              "unit": "cup",
+              "amount_detail": null
+            },
+            {
+              "name": "frozen green peas",
+              "quantity": 0.5,
+              "unit": "cup",
+              "amount_detail": null
+            },
+            {
+              "name": "frozen corn",
+              "quantity": 0.5,
+              "unit": "cup",
+              "amount_detail": null
+            },
+            {
+              "name": "kosher salt",
+              "quantity": 2.0,
+              "unit": "tsp",
+              "amount_detail": null
+            },
+            {
+              "name": "garam Masala",
+              "quantity": 0.5,
+              "unit": "tsp",
+              "amount_detail": null
+            },
+            {
+              "name": "cashews",
+              "quantity": 16.0,
+              "unit": "count",
+              "amount_detail": null
+            }
+          ],
+          "tasks": [
+            {
+              "id": "chop",
+              "title": "Chop the pulao vegetables",
+              "recipe_id": "",
+              "dependencies": [],
+              "minutes": 25,
+              "active_minutes": 25,
+              "presence_minutes": 25,
+              "skill": "cook",
+              "resource": null,
+              "capacity": 1,
+              "temperature": null,
+              "eligible": null,
+              "max_ahead_hours": 48.0,
+              "evidence": "Reviewed publisher method; timing/check-ins are home-cook estimates. See recipe preparation provenance.",
+              "ingredients": [],
+              "guidance": "Slice onion thinly. Cut cauliflower into 1-inch florets, carrots into strips about 2 inches long and \u00bc inch thick, and beans into diagonal 1-inch pieces.",
+              "phase": "cooking",
+              "unattended": false,
+              "scale_mode": "combined",
+              "preparation_policy": "advance",
+              "storage_anchor": "serving",
+              "max_dependency_gap_minutes": null,
+              "min_dependency_gap_minutes": 0,
+              "attention_segments": [],
+              "timing_basis": "estimate"
+            },
+            {
+              "id": "vegetables",
+              "title": "Fry cashews and saut\u00e9 vegetables in stages",
+              "recipe_id": "",
+              "dependencies": [
+                "chop"
+              ],
+              "minutes": 25,
+              "active_minutes": 25,
+              "presence_minutes": 25,
+              "skill": "cook",
+              "resource": "stovetop",
+              "capacity": 1,
+              "temperature": null,
+              "eligible": null,
+              "max_ahead_hours": 48.0,
+              "evidence": "Reviewed publisher method; timing/check-ins are home-cook estimates. See recipe preparation provenance.",
+              "ingredients": [],
+              "guidance": "Fry cashews until lightly golden and set aside. Cook onions until translucent. Saut\u00e9 cauliflower until tender, then carrots and beans; add peas and corn last. Keep the fried cashews for garnishing.",
+              "phase": "cooking",
+              "unattended": false,
+              "scale_mode": "combined",
+              "preparation_policy": "advance",
+              "storage_anchor": "serving",
+              "max_dependency_gap_minutes": null,
+              "min_dependency_gap_minutes": 0,
+              "attention_segments": [],
+              "timing_basis": "estimate"
+            },
+            {
+              "id": "store",
+              "title": "Portion, cool promptly and refrigerate",
+              "recipe_id": "",
+              "dependencies": [
+                "vegetables"
+              ],
+              "minutes": 10,
+              "active_minutes": 10,
+              "presence_minutes": 10,
+              "skill": "cook",
+              "resource": null,
+              "capacity": 1,
+              "temperature": null,
+              "eligible": null,
+              "max_ahead_hours": 48.0,
+              "evidence": "Reviewed publisher method; timing/check-ins are home-cook estimates. See recipe preparation provenance.",
+              "ingredients": [],
+              "guidance": "Transfer to shallow containers and refrigerate promptly. Do not wait for the whole pot to cool on the counter.",
+              "phase": "cooking",
+              "unattended": false,
+              "scale_mode": "combined",
+              "preparation_policy": "advance",
+              "storage_anchor": "serving",
+              "max_dependency_gap_minutes": 15,
+              "min_dependency_gap_minutes": 0,
+              "attention_segments": [],
+              "timing_basis": "estimate"
+            },
+            {
+              "id": "rice",
+              "title": "Cook rice with whole spices",
+              "recipe_id": "",
+              "dependencies": [],
+              "minutes": 30,
+              "active_minutes": 10,
+              "presence_minutes": 10,
+              "skill": "cook",
+              "resource": "stovetop",
+              "capacity": 1,
+              "temperature": null,
+              "eligible": null,
+              "max_ahead_hours": 1.5,
+              "evidence": "Reviewed publisher method; timing/check-ins are home-cook estimates. See recipe preparation provenance.",
+              "ingredients": [],
+              "guidance": "Rinse and drain rice. Saut\u00e9 whole spices in ghee, add rice and water, and bring to a boil. Cover and simmer on low for 10 minutes; uncover off the heat to let steam escape.",
+              "phase": "cooking",
+              "unattended": false,
+              "scale_mode": "combined",
+              "preparation_policy": "advance",
+              "storage_anchor": "serving",
+              "max_dependency_gap_minutes": null,
+              "min_dependency_gap_minutes": 0,
+              "attention_segments": [
+                {
+                  "offset_minutes": 0,
+                  "minutes": 5
+                },
+                {
+                  "offset_minutes": 25,
+                  "minutes": 5
+                }
+              ],
+              "timing_basis": "estimate"
+            },
+            {
+              "id": "combine",
+              "title": "Reheat vegetables and fold into fresh rice",
+              "recipe_id": "",
+              "dependencies": [
+                "rice",
+                "store"
+              ],
+              "minutes": 15,
+              "active_minutes": 10,
+              "presence_minutes": 10,
+              "skill": "cook",
+              "resource": "stovetop",
+              "capacity": 1,
+              "temperature": null,
+              "eligible": null,
+              "max_ahead_hours": 1.0,
+              "evidence": "Reviewed publisher method; timing/check-ins are home-cook estimates. See recipe preparation provenance.",
+              "ingredients": [],
+              "guidance": "Fold hot vegetables gently into cooked rice so grains stay intact. Cover on low heat until hot throughout; finish with the reserved cashews.",
+              "phase": "cooking",
+              "unattended": false,
+              "scale_mode": "combined",
+              "preparation_policy": "advance",
+              "storage_anchor": "serving",
+              "max_dependency_gap_minutes": null,
+              "min_dependency_gap_minutes": 0,
+              "attention_segments": [
+                {
+                  "offset_minutes": 0,
+                  "minutes": 5
+                },
+                {
+                  "offset_minutes": 10,
+                  "minutes": 5
+                }
+              ],
+              "timing_basis": "estimate"
+            }
+          ],
+          "source_text": "Collection: Diwali / Indian hosting\nSource: https://ministryofcurry.com/moms-veg-pulao/\nPublisher: Ministry of Curry\nPublisher rating snapshot, October 28, 2026: 4.75/5 from 4 ratings\nImport: fetched\nCandidate only. Not personally tested or planning-ready. A selection option, not a recommendation to cook every item.\nSource yield: ['6']\nSource timing: prep PT20M; cook PT30M; total PT50M. Source prep time is not total active work.\nIngredients (source facts; quantities need confirmation before scaling)\n1 tablespoon ghee\n1 cup long-grain basmati rice\n2 cups water\n1 teaspoon kosher salt\n1 teaspoon shah jeera\n1 Indian bay leaf\n6 cloves\n12 black peppercorns\n3 green cardamom pods\n4 tablespoons ghee\n1 medium yellow onion (thinly sliced)\n2 cups cauliflower (cut into 1-inch florets)\n2 carrots (cut into 2-inch X \u00bc inch thin strips)\n1 cup green beans (diagonally cut into 1 inch pieces)\n\u00bd cup frozen green peas\n\u00bd cup frozen corn\n2 teaspoons kosher salt\n\u00bd teaspoon garam Masala\n16 cashews\nCooking method and recipe notes: open the original source link. Task-level timing, make-ahead windows and storage guidance still need review.\nHome-cook timing draft (untested)\nRinse rice and chop vegetables: 25 min hands-on + 10 min waiting/cooking\nSaute vegetables and spices: 10 min hands-on\nCook rice and rest: 5 min hands-on + 25 min waiting/cooking\nCleanup: 10 min. Active total including cleanup: 50 min; unattended: 35 min. Base recipe only; confirm servings, equipment batches, and real pace before scheduling.\nPreparation review \u00b7 2026-10-28-logical-steps-v1\nChop vegetables \u2014 25 min hands-on; 0 min waiting.\nRinse rice; cook with whole spices and let steam escape \u2014 10 min hands-on; 20 min waiting.\nFry cashews and onion; saut\u00e9 vegetables in stages \u2014 25 min hands-on; 0 min waiting.\nCombine vegetables and rice; warm gently \u2014 5 min hands-on; 10 min waiting.\nEstimated make-ahead approach: Wash/chop vegetables and measure spices 1 day ahead. Cook rice on party day, then hold hot or refrigerate promptly; rice quality drops if repeatedly warmed. Contains cashews in the listed recipe.\nTiming and scaling notes: Hands-on and waiting times are estimates for the base recipe; waiting includes soaking, chilling and cooling where listed. Measure ingredients while cooking. Cleanup is a separate flexible allowance. Increase chopping and shaping time with quantity; repeat only appliance-limited cooking steps. Recipe yield does not establish appliance capacity. Use source doneness cues. Pressure-cooker whistles are not a verified Instant Pot conversion.",
+          "reviewed": true,
+          "image_url": "https://ministryofcurry.com/wp-content/uploads/2022/10/Vegetable-Pulao.jpg",
+          "image_credit": "Photo: ministryofcurry.com",
+          "uncertainties": [
+            "Hands-on and waiting times are estimates for the base recipe; waiting includes soaking, chilling and cooling where listed.",
+            "Measure ingredients while cooking. Cleanup is a separate flexible allowance.",
+            "Increase chopping and shaping time with quantity; repeat only appliance-limited cooking steps. Recipe yield does not establish appliance capacity.",
+            "Use source doneness cues. Pressure-cooker whistles are not a verified Instant Pot conversion.",
+            "Method and timing review complete; numeric task storage windows remain unset where not established."
+          ],
+          "preparation_provenance": {
+            "library_audit": "2026-10-29; source methods checked; unverified advance windows default to same day; no saved-plan updates",
+            "make_ahead_rerun": "2026-10-29: Publisher explicitly supports chopping and saut\u00e9ing vegetables up to two days ahead, cooking rice on serving day.",
+            "source_method_text": "Rinse rice 2 to 3 times and drain all the water out.\nIn a medium pan, heat the ghee. Add shah jeera, bay leaf, cloves, peppercorn, and cardamom, and saute for a minute on medium heat.\nAdd drained rice, water, and salt. Give a quick stir and bring to a full boil on medium-high heat. Once the rice comes to a full boil, lower the heat and cook covered for 10 minutes. Turn the heat off and remove the lid allowing the rice to cool down as you cook the veggies.\nIn a medium frying pan heat 1 tablespoon of ghee. Add cashews and fry until lightly browned. Take out the cashews, keep excess ghee in the pan, and reserve.\nAdd sliced onions to the pan and cook until translucent and lightly golden. Take out the onions and reserve.\nAdd \u00bd tablespoon of ghee and add cauliflower to the pan. Cook until the veggies are tender, about 5 minutes. Take out and reserve keeping any excess ghee in the pan.\nAdd green beans and carrots and fry for 5 minutes until tender adding more ghee as needed. Add peas and corn and cook for 2 minutes or until fully heated through.\nAdd the reserved cauliflower along with salt and garam masala and mix well\nAdd the veggies to the cooled rice and mix lightly with a silicone spatula. You can also use a large bowl to mix the rice and the veggies. Return the mixed pulao to the pot and garnish with fried cashews.\nCook covered on low heat for 5 to 10 minutes or until the rice is heated through.",
+            "source_quantity_review": "2026-11-06: whole-item source counts restored; chili shopping upper bound 2 tsp per 4 servings, cook to taste; instruction details checked against original source."
+          }
+        },
+        "mode": "cook",
+        "servings": 18,
+        "must_have": false,
+        "preparation": [],
+        "vegetarian": true,
+        "contribution": null
+      },
+      {
+        "id": "dish-4",
+        "title": "Instant Pot Carrot Halwa Recipe",
+        "category": "desserts",
+        "recipe": {
+          "id": "4076c09a-c77f-81a1-ac5f-d887839630a5",
+          "version": "3-source-details-2026-11-06",
+          "title": "Instant Pot Carrot Halwa Recipe",
+          "source": "https://ministryofcurry.com/carrot-halwa-instant-pot/",
+          "servings": 6,
+          "category": "desserts",
+          "vegetarian": true,
+          "allergens": [
+            "nuts"
+          ],
+          "ingredients": [
+            {
+              "name": "ghee ( or coconut oil or vegan butter)",
+              "quantity": 2.0,
+              "unit": "tbsp",
+              "amount_detail": null
+            },
+            {
+              "name": "carrots (peeled and grated (About 6 cups packed))",
+              "quantity": 10.0,
+              "unit": "count",
+              "amount_detail": null
+            },
+            {
+              "name": "unsweetened almond milk",
+              "quantity": 1.0,
+              "unit": "cup",
+              "amount_detail": null
+            },
+            {
+              "name": "sugar",
+              "quantity": 0.75,
+              "unit": "cup",
+              "amount_detail": null
+            },
+            {
+              "name": "almond meal",
+              "quantity": 1.0,
+              "unit": "cup",
+              "amount_detail": null
+            },
+            {
+              "name": "cardamom powder",
+              "quantity": 2.0,
+              "unit": "tsp",
+              "amount_detail": null
+            },
+            {
+              "name": "raisins",
+              "quantity": 2.0,
+              "unit": "tbsp",
+              "amount_detail": null
+            },
+            {
+              "name": "saffron",
+              "quantity": 0.5,
+              "unit": "tsp",
+              "amount_detail": null
+            },
+            {
+              "name": "sliced almonds or pistachios (for garnish)",
+              "quantity": 2.0,
+              "unit": "tbsp",
+              "amount_detail": null
+            }
+          ],
+          "tasks": [
+            {
+              "id": "grate",
+              "title": "Peel and grate carrots",
+              "recipe_id": "",
+              "dependencies": [],
+              "minutes": 20,
+              "active_minutes": 20,
+              "presence_minutes": 20,
+              "skill": "cook",
+              "resource": null,
+              "capacity": 1,
+              "temperature": null,
+              "eligible": null,
+              "max_ahead_hours": 48.0,
+              "evidence": "Reviewed publisher method; timing/check-ins are home-cook estimates. See recipe preparation provenance.",
+              "ingredients": [],
+              "guidance": "Peel and grate carrots; the original six-serving recipe uses about 6 packed cups.",
+              "phase": "cooking",
+              "unattended": false,
+              "scale_mode": "combined",
+              "preparation_policy": "advance",
+              "storage_anchor": "serving",
+              "max_dependency_gap_minutes": null,
+              "min_dependency_gap_minutes": 0,
+              "attention_segments": [],
+              "timing_basis": "estimate"
+            },
+            {
+              "id": "pressure",
+              "title": "Saut\u00e9 carrots and pressure-cook with almond milk",
+              "recipe_id": "",
+              "dependencies": [
+                "grate"
+              ],
+              "minutes": 25,
+              "active_minutes": 10,
+              "presence_minutes": 10,
+              "skill": "cook",
+              "resource": "instant_pot",
+              "capacity": 1,
+              "temperature": null,
+              "eligible": null,
+              "max_ahead_hours": 48.0,
+              "evidence": "Reviewed publisher method; timing/check-ins are home-cook estimates. See recipe preparation provenance.",
+              "ingredients": [],
+              "guidance": "Saut\u00e9 grated carrots in ghee for 2\u20133 minutes. Add almond milk; pressure-cook on high for 5 minutes, then quick-release.",
+              "phase": "cooking",
+              "unattended": false,
+              "scale_mode": "combined",
+              "preparation_policy": "advance",
+              "storage_anchor": "serving",
+              "max_dependency_gap_minutes": 15,
+              "min_dependency_gap_minutes": 0,
+              "attention_segments": [
+                {
+                  "offset_minutes": 0,
+                  "minutes": 5
+                },
+                {
+                  "offset_minutes": 20,
+                  "minutes": 5
+                }
+              ],
+              "timing_basis": "estimate"
+            },
+            {
+              "id": "reduce",
+              "title": "Add sugar and almond meal; stir until thick",
+              "recipe_id": "",
+              "dependencies": [
+                "pressure"
+              ],
+              "minutes": 15,
+              "active_minutes": 15,
+              "presence_minutes": 15,
+              "skill": "cook",
+              "resource": "instant_pot",
+              "capacity": 1,
+              "temperature": null,
+              "eligible": null,
+              "max_ahead_hours": 48.0,
+              "evidence": "Reviewed publisher method; timing/check-ins are home-cook estimates. See recipe preparation provenance.",
+              "ingredients": [],
+              "guidance": "Stir in sugar, almond meal, cardamom, raisins and saffron. Saut\u00e9 5\u20137 minutes, stirring frequently, until most liquid evaporates. It thickens further as it cools.",
+              "phase": "cooking",
+              "unattended": false,
+              "scale_mode": "combined",
+              "preparation_policy": "advance",
+              "storage_anchor": "serving",
+              "max_dependency_gap_minutes": null,
+              "min_dependency_gap_minutes": 0,
+              "attention_segments": [],
+              "timing_basis": "estimate"
+            },
+            {
+              "id": "store",
+              "title": "Portion, cool promptly and refrigerate",
+              "recipe_id": "",
+              "dependencies": [
+                "reduce"
+              ],
+              "minutes": 10,
+              "active_minutes": 10,
+              "presence_minutes": 10,
+              "skill": "cook",
+              "resource": null,
+              "capacity": 1,
+              "temperature": null,
+              "eligible": null,
+              "max_ahead_hours": 48.0,
+              "evidence": "Reviewed publisher method; timing/check-ins are home-cook estimates. See recipe preparation provenance.",
+              "ingredients": [],
+              "guidance": "Transfer to shallow containers and refrigerate promptly. Do not wait for the whole pot to cool on the counter.",
+              "phase": "cooking",
+              "unattended": false,
+              "scale_mode": "combined",
+              "preparation_policy": "advance",
+              "storage_anchor": "serving",
+              "max_dependency_gap_minutes": 15,
+              "min_dependency_gap_minutes": 0,
+              "attention_segments": [],
+              "timing_basis": "estimate"
+            },
+            {
+              "id": "serve",
+              "title": "Portion chilled halwa and refrigerate",
+              "recipe_id": "",
+              "dependencies": [
+                "store"
+              ],
+              "minutes": 10,
+              "active_minutes": 10,
+              "presence_minutes": 10,
+              "skill": "cook",
+              "resource": null,
+              "capacity": 1,
+              "temperature": null,
+              "eligible": null,
+              "max_ahead_hours": 48.0,
+              "evidence": "Reviewed publisher method; timing/check-ins are home-cook estimates. See recipe preparation provenance.",
+              "ingredients": [],
+              "guidance": "Garnish with sliced almonds or pistachios. Serve chilled or warm, as preferred.",
+              "phase": "cooking",
+              "unattended": false,
+              "scale_mode": "combined",
+              "preparation_policy": "advance",
+              "storage_anchor": "serving",
+              "max_dependency_gap_minutes": null,
+              "min_dependency_gap_minutes": 0,
+              "attention_segments": [],
+              "timing_basis": "estimate"
+            }
+          ],
+          "source_text": "Collection: Diwali / Indian hosting\nSource: https://ministryofcurry.com/carrot-halwa-instant-pot/\nPublisher: Ministry of Curry\nPublisher rating snapshot, October 28, 2026: 4.71/5 from 44 ratings\nImport: fetched\nCandidate only. Not personally tested or planning-ready. A selection option, not a recommendation to cook every item.\nSource yield: ['6']\nSource timing: prep PT10M; cook PT20M; total PT30M. Source prep time is not total active work.\nIngredients (source facts; quantities need confirmation before scaling)\n2 tablespoons ghee ( or coconut oil or vegan butter)\n10 carrots (peeled and grated (About 6 cups packed))\n1 cup unsweetened almond milk\n\u00be cup sugar\n1 cup almond meal\n2 teaspoons cardamom powder\n2 tablespoons raisins\n\u00bd teaspoon saffron\n2 tablespoons sliced almonds or pistachios (for garnish)\nCooking method and recipe notes: open the original source link. Task-level timing, make-ahead windows and storage guidance still need review.\nHome-cook timing draft (untested)\nGrate carrots and measure ingredients: 25 min hands-on\nPressure cook and release: 5 min hands-on + 15 min waiting/cooking\nReduce while stirring: 10 min hands-on + 10 min waiting/cooking\nCleanup: 10 min. Active total including cleanup: 50 min; unattended: 25 min. Base recipe only; confirm servings, equipment batches, and real pace before scheduling.\nPreparation review \u00b7 2026-10-28-logical-steps-v1\nGrate carrots \u2014 20 min hands-on; 0 min waiting.\nSaut\u00e9 carrots; add milk and pressure-cook \u2014 5 min hands-on; 15 min waiting.\nRelease; add remaining ingredients and reduce while stirring \u2014 10 min hands-on; 0 min waiting.\nPublisher make-ahead guidance: Make the halwa ahead; the author states it keeps refrigerated for up to one week and can also be frozen. Thaw frozen portions overnight in the refrigerator.\nTiming and scaling notes: Hands-on and waiting times are estimates for the base recipe; waiting includes soaking, chilling and cooling where listed. Measure ingredients while cooking. Cleanup is a separate flexible allowance. Increase chopping and shaping time with quantity; repeat only appliance-limited cooking steps. Recipe yield does not establish appliance capacity. Use source doneness cues. Pressure-cooker whistles are not a verified Instant Pot conversion.",
+          "reviewed": true,
+          "image_url": "https://ministryofcurry.com/wp-content/uploads/2017/05/Carrot-Halwa.jpg",
+          "image_credit": "Photo: ministryofcurry.com",
+          "uncertainties": [
+            "Hands-on and waiting times are estimates for the base recipe; waiting includes soaking, chilling and cooling where listed.",
+            "Measure ingredients while cooking. Cleanup is a separate flexible allowance.",
+            "Increase chopping and shaping time with quantity; repeat only appliance-limited cooking steps. Recipe yield does not establish appliance capacity.",
+            "Use source doneness cues. Pressure-cooker whistles are not a verified Instant Pot conversion.",
+            "Method and timing review complete; numeric task storage windows remain unset where not established."
+          ],
+          "preparation_provenance": {
+            "library_audit": "2026-10-29; source methods checked; unverified advance windows default to same day; no saved-plan updates",
+            "make_ahead_rerun": "2026-10-29: Conservative 24\u201348 hour refrigerated component allowance is a culinary planning estimate, not a publisher-tested claim.",
+            "source_method_text": "Turn the Instant Pot to Saut\u00e9(Hi) mode. Add ghee (or vegan butter) and grated carrots. Cook for 2-3 minutes with the glass lid on.\nAdd almond milk and close the lid with the pressure value set to sealing. Set Instant Pot to Pressure Cook/Manual(Hi) for 5 minutes. Quick-release.\nAdd sugar, almond meal, cardamom powder, raisins, and saffron. Mix well.\nTurn the Instant Pot to Saut\u00e9(Hi) and cook for 5-7 mins until most of the liquids are evaporated. Stir frequently, making sure that the halwa does not stick to the bottom of the pot. Note: The halwa will continue to thicken as it cools down.\nGarnish with sliced almonds or pistachios.\u00a0Serve warm or chilled.",
+            "source_quantity_review": "2026-11-06: whole-item source counts restored; chili shopping upper bound 2 tsp per 4 servings, cook to taste; instruction details checked against original source."
+          }
+        },
+        "mode": "cook",
+        "servings": 18,
+        "must_have": false,
+        "preparation": [],
+        "vegetarian": true,
+        "contribution": null
+      }
+    ],
+    "inventory": [],
+    "availability": {
+      "busy": [],
+      "checked_at": null,
+      "status": "fixture",
+      "errors": []
+    }
+  },
+  "result": {
+    "status": "feasible",
+    "outcome": {
+      "code": "complete",
+      "message": "All preparation tasks are scheduled and passed the schedule checks.",
+      "solver_status": "OPTIMAL"
+    },
+    "violations": [],
+    "validator_codes": [],
+    "assignment_count": 27,
+    "fit_days": [
+      {
+        "day": "2026-11-13",
+        "presence_minutes": 190,
+        "cooking_minutes": 175,
+        "limit_minutes": 180,
+        "cleanup_allowance": 15
+      },
+      {
+        "day": "2026-11-14",
+        "presence_minutes": 30,
+        "cooking_minutes": 15,
+        "limit_minutes": 180,
+        "cleanup_allowance": 15
+      },
+      {
+        "day": "2026-11-15",
+        "presence_minutes": 165,
+        "cooking_minutes": 150,
+        "limit_minutes": 180,
+        "cleanup_allowance": 15
+      }
+    ],
+    "seconds": 6.38,
+    "plan": {
+      "id": "70cc1ff5-30e6-4300-8d3a-83eec78f819b",
+      "gathering_id": "realistic-05",
+      "revision": 1,
+      "input_hash": "7ca3a92d2dbc5e6e3cd07960516b303dba47d0e03f83146c9b903849291ec808",
+      "content_hash": "c96a3eb9f930cf805bc4024b1a2a8a2b05335b6b0aa5e569b562440523323a51",
+      "assignments": [
+        {
+          "task": {
+            "id": "dish-1:0:prep",
+            "title": "Instant Pot Butter Chicken \u00b7 Cut chicken and chop aromatics",
+            "recipe_id": "dish-1",
+            "dependencies": [],
+            "minutes": 20,
+            "active_minutes": 20,
+            "presence_minutes": 20,
+            "skill": "cook",
+            "resource": null,
+            "capacity": 1,
+            "temperature": null,
+            "eligible": null,
+            "max_ahead_hours": 48.0,
+            "evidence": "Reviewed publisher method; timing/check-ins are home-cook estimates. See recipe preparation provenance.",
+            "ingredients": [],
+            "guidance": "Cut chicken evenly; chop onion, ginger and garlic. Separate coconut cream from its watery portion.",
+            "phase": "cooking",
+            "unattended": false,
+            "scale_mode": "combined",
+            "preparation_policy": "advance",
+            "storage_anchor": "serving",
+            "max_dependency_gap_minutes": null,
+            "min_dependency_gap_minutes": 0,
+            "attention_segments": [],
+            "timing_basis": "estimate"
+          },
+          "interval": {
+            "start": "2026-11-13T22:40:00Z",
+            "end": "2026-11-13T23:00:00Z"
+          },
+          "person": "host"
+        },
+        {
+          "task": {
+            "id": "dish-1:0:saute",
+            "title": "Instant Pot Butter Chicken \u00b7 Saut\u00e9 aromatics; add tomato and chicken",
+            "recipe_id": "dish-1",
+            "dependencies": [
+              "dish-1:0:prep"
+            ],
+            "minutes": 15,
+            "active_minutes": 15,
+            "presence_minutes": 15,
+            "skill": "cook",
+            "resource": "instant_pot",
+            "capacity": 1,
+            "temperature": null,
+            "eligible": null,
+            "max_ahead_hours": 48.0,
+            "evidence": "Reviewed publisher method; timing/check-ins are home-cook estimates. See recipe preparation provenance.",
+            "ingredients": [],
+            "guidance": "Soften onion, cook spices, then add tomato, coconut water and chicken.",
+            "phase": "cooking",
+            "unattended": false,
+            "scale_mode": "combined",
+            "preparation_policy": "advance",
+            "storage_anchor": "serving",
+            "max_dependency_gap_minutes": null,
+            "min_dependency_gap_minutes": 0,
+            "attention_segments": [],
+            "timing_basis": "estimate"
+          },
+          "interval": {
+            "start": "2026-11-13T23:00:00Z",
+            "end": "2026-11-13T23:15:00Z"
+          },
+          "person": "host"
+        },
+        {
+          "task": {
+            "id": "dish-1:0:pressure",
+            "title": "Instant Pot Butter Chicken \u00b7 Pressure-cook and release safely",
+            "recipe_id": "dish-1",
+            "dependencies": [
+              "dish-1:0:saute"
+            ],
+            "minutes": 30,
+            "active_minutes": 5,
+            "presence_minutes": 5,
+            "skill": "cook",
+            "resource": "instant_pot",
+            "capacity": 1,
+            "temperature": null,
+            "eligible": null,
+            "max_ahead_hours": 48.0,
+            "evidence": "Reviewed publisher method; timing/check-ins are home-cook estimates. See recipe preparation provenance.",
+            "ingredients": [],
+            "guidance": "For thighs, pressure-cook on high for 8 minutes then quick-release. Allow time to reach pressure; check chicken is cooked through.",
+            "phase": "cooking",
+            "unattended": false,
+            "scale_mode": "combined",
+            "preparation_policy": "advance",
+            "storage_anchor": "serving",
+            "max_dependency_gap_minutes": 15,
+            "min_dependency_gap_minutes": 0,
+            "attention_segments": [
+              {
+                "offset_minutes": 25,
+                "minutes": 5
+              }
+            ],
+            "timing_basis": "estimate"
+          },
+          "interval": {
+            "start": "2026-11-13T23:15:00Z",
+            "end": "2026-11-13T23:45:00Z"
+          },
+          "person": "host"
+        },
+        {
+          "task": {
+            "id": "dish-4:0:grate",
+            "title": "Instant Pot Carrot Halwa Recipe \u00b7 Peel and grate carrots",
+            "recipe_id": "dish-4",
+            "dependencies": [],
+            "minutes": 20,
+            "active_minutes": 20,
+            "presence_minutes": 20,
+            "skill": "cook",
+            "resource": null,
+            "capacity": 1,
+            "temperature": null,
+            "eligible": null,
+            "max_ahead_hours": 48.0,
+            "evidence": "Reviewed publisher method; timing/check-ins are home-cook estimates. See recipe preparation provenance.",
+            "ingredients": [],
+            "guidance": "Peel and grate carrots; the original six-serving recipe uses about 6 packed cups.",
+            "phase": "cooking",
+            "unattended": false,
+            "scale_mode": "combined",
+            "preparation_policy": "advance",
+            "storage_anchor": "serving",
+            "max_dependency_gap_minutes": null,
+            "min_dependency_gap_minutes": 0,
+            "attention_segments": [],
+            "timing_basis": "estimate"
+          },
+          "interval": {
+            "start": "2026-11-13T23:20:00Z",
+            "end": "2026-11-13T23:40:00Z"
+          },
+          "person": "host"
+        },
+        {
+          "task": {
+            "id": "dish-1:0:finish",
+            "title": "Instant Pot Butter Chicken \u00b7 Stir in coconut cream and finish sauce",
+            "recipe_id": "dish-1",
+            "dependencies": [
+              "dish-1:0:pressure"
+            ],
+            "minutes": 10,
+            "active_minutes": 10,
+            "presence_minutes": 10,
+            "skill": "cook",
+            "resource": "instant_pot",
+            "capacity": 1,
+            "temperature": null,
+            "eligible": null,
+            "max_ahead_hours": 48.0,
+            "evidence": "Reviewed publisher method; timing/check-ins are home-cook estimates. See recipe preparation provenance.",
+            "ingredients": [],
+            "guidance": "Add reserved cream and finishing spices; simmer to thicken.",
+            "phase": "cooking",
+            "unattended": false,
+            "scale_mode": "combined",
+            "preparation_policy": "advance",
+            "storage_anchor": "serving",
+            "max_dependency_gap_minutes": 15,
+            "min_dependency_gap_minutes": 0,
+            "attention_segments": [],
+            "timing_basis": "estimate"
+          },
+          "interval": {
+            "start": "2026-11-13T23:45:00Z",
+            "end": "2026-11-13T23:55:00Z"
+          },
+          "person": "host"
+        },
+        {
+          "task": {
+            "id": "dish-4:0:pressure",
+            "title": "Instant Pot Carrot Halwa Recipe \u00b7 Saut\u00e9 carrots and pressure-cook with almond milk",
+            "recipe_id": "dish-4",
+            "dependencies": [
+              "dish-4:0:grate"
+            ],
+            "minutes": 25,
+            "active_minutes": 10,
+            "presence_minutes": 10,
+            "skill": "cook",
+            "resource": "instant_pot",
+            "capacity": 1,
+            "temperature": null,
+            "eligible": null,
+            "max_ahead_hours": 48.0,
+            "evidence": "Reviewed publisher method; timing/check-ins are home-cook estimates. See recipe preparation provenance.",
+            "ingredients": [],
+            "guidance": "Saut\u00e9 grated carrots in ghee for 2\u20133 minutes. Add almond milk; pressure-cook on high for 5 minutes, then quick-release.",
+            "phase": "cooking",
+            "unattended": false,
+            "scale_mode": "combined",
+            "preparation_policy": "advance",
+            "storage_anchor": "serving",
+            "max_dependency_gap_minutes": 15,
+            "min_dependency_gap_minutes": 0,
+            "attention_segments": [
+              {
+                "offset_minutes": 0,
+                "minutes": 5
+              },
+              {
+                "offset_minutes": 20,
+                "minutes": 5
+              }
+            ],
+            "timing_basis": "estimate"
+          },
+          "interval": {
+            "start": "2026-11-13T23:55:00Z",
+            "end": "2026-11-14T00:20:00Z"
+          },
+          "person": "host"
+        },
+        {
+          "task": {
+            "id": "dish-1:0:store",
+            "title": "Instant Pot Butter Chicken \u00b7 Portion, cool promptly and refrigerate",
+            "recipe_id": "dish-1",
+            "dependencies": [
+              "dish-1:0:finish"
+            ],
+            "minutes": 10,
+            "active_minutes": 10,
+            "presence_minutes": 10,
+            "skill": "cook",
+            "resource": null,
+            "capacity": 1,
+            "temperature": null,
+            "eligible": null,
+            "max_ahead_hours": 48.0,
+            "evidence": "Reviewed publisher method; timing/check-ins are home-cook estimates. See recipe preparation provenance.",
+            "ingredients": [],
+            "guidance": "Transfer to shallow containers and refrigerate promptly. Do not wait for the whole pot to cool on the counter.",
+            "phase": "cooking",
+            "unattended": false,
+            "scale_mode": "combined",
+            "preparation_policy": "advance",
+            "storage_anchor": "serving",
+            "max_dependency_gap_minutes": 15,
+            "min_dependency_gap_minutes": 0,
+            "attention_segments": [],
+            "timing_basis": "estimate"
+          },
+          "interval": {
+            "start": "2026-11-14T00:00:00Z",
+            "end": "2026-11-14T00:10:00Z"
+          },
+          "person": "host"
+        },
+        {
+          "task": {
+            "id": "dish-4:0:reduce",
+            "title": "Instant Pot Carrot Halwa Recipe \u00b7 Add sugar and almond meal; stir until thick",
+            "recipe_id": "dish-4",
+            "dependencies": [
+              "dish-4:0:pressure"
+            ],
+            "minutes": 15,
+            "active_minutes": 15,
+            "presence_minutes": 15,
+            "skill": "cook",
+            "resource": "instant_pot",
+            "capacity": 1,
+            "temperature": null,
+            "eligible": null,
+            "max_ahead_hours": 48.0,
+            "evidence": "Reviewed publisher method; timing/check-ins are home-cook estimates. See recipe preparation provenance.",
+            "ingredients": [],
+            "guidance": "Stir in sugar, almond meal, cardamom, raisins and saffron. Saut\u00e9 5\u20137 minutes, stirring frequently, until most liquid evaporates. It thickens further as it cools.",
+            "phase": "cooking",
+            "unattended": false,
+            "scale_mode": "combined",
+            "preparation_policy": "advance",
+            "storage_anchor": "serving",
+            "max_dependency_gap_minutes": null,
+            "min_dependency_gap_minutes": 0,
+            "attention_segments": [],
+            "timing_basis": "estimate"
+          },
+          "interval": {
+            "start": "2026-11-14T00:20:00Z",
+            "end": "2026-11-14T00:35:00Z"
+          },
+          "person": "host"
+        },
+        {
+          "task": {
+            "id": "dish-4:0:store",
+            "title": "Instant Pot Carrot Halwa Recipe \u00b7 Portion, cool promptly and refrigerate",
+            "recipe_id": "dish-4",
+            "dependencies": [
+              "dish-4:0:reduce"
+            ],
+            "minutes": 10,
+            "active_minutes": 10,
+            "presence_minutes": 10,
+            "skill": "cook",
+            "resource": null,
+            "capacity": 1,
+            "temperature": null,
+            "eligible": null,
+            "max_ahead_hours": 48.0,
+            "evidence": "Reviewed publisher method; timing/check-ins are home-cook estimates. See recipe preparation provenance.",
+            "ingredients": [],
+            "guidance": "Transfer to shallow containers and refrigerate promptly. Do not wait for the whole pot to cool on the counter.",
+            "phase": "cooking",
+            "unattended": false,
+            "scale_mode": "combined",
+            "preparation_policy": "advance",
+            "storage_anchor": "serving",
+            "max_dependency_gap_minutes": 15,
+            "min_dependency_gap_minutes": 0,
+            "attention_segments": [],
+            "timing_basis": "estimate"
+          },
+          "interval": {
+            "start": "2026-11-14T00:35:00Z",
+            "end": "2026-11-14T00:45:00Z"
+          },
+          "person": "host"
+        },
+        {
+          "task": {
+            "id": "dish-3:0:chop",
+            "title": "Vegetable Pulao Recipe | Veg Pulav \u00b7 Chop the pulao vegetables",
+            "recipe_id": "dish-3",
+            "dependencies": [],
+            "minutes": 25,
+            "active_minutes": 25,
+            "presence_minutes": 25,
+            "skill": "cook",
+            "resource": null,
+            "capacity": 1,
+            "temperature": null,
+            "eligible": null,
+            "max_ahead_hours": 48.0,
+            "evidence": "Reviewed publisher method; timing/check-ins are home-cook estimates. See recipe preparation provenance.",
+            "ingredients": [],
+            "guidance": "Slice onion thinly. Cut cauliflower into 1-inch florets, carrots into strips about 2 inches long and \u00bc inch thick, and beans into diagonal 1-inch pieces.",
+            "phase": "cooking",
+            "unattended": false,
+            "scale_mode": "combined",
+            "preparation_policy": "advance",
+            "storage_anchor": "serving",
+            "max_dependency_gap_minutes": null,
+            "min_dependency_gap_minutes": 0,
+            "attention_segments": [],
+            "timing_basis": "estimate"
+          },
+          "interval": {
+            "start": "2026-11-14T00:45:00Z",
+            "end": "2026-11-14T01:10:00Z"
+          },
+          "person": "host"
+        },
+        {
+          "task": {
+            "id": "dish-3:0:vegetables",
+            "title": "Vegetable Pulao Recipe | Veg Pulav \u00b7 Fry cashews and saut\u00e9 vegetables in stages",
+            "recipe_id": "dish-3",
+            "dependencies": [
+              "dish-3:0:chop"
+            ],
+            "minutes": 25,
+            "active_minutes": 25,
+            "presence_minutes": 25,
+            "skill": "cook",
+            "resource": "stovetop",
+            "capacity": 1,
+            "temperature": null,
+            "eligible": null,
+            "max_ahead_hours": 48.0,
+            "evidence": "Reviewed publisher method; timing/check-ins are home-cook estimates. See recipe preparation provenance.",
+            "ingredients": [],
+            "guidance": "Fry cashews until lightly golden and set aside. Cook onions until translucent. Saut\u00e9 cauliflower until tender, then carrots and beans; add peas and corn last. Keep the fried cashews for garnishing.",
+            "phase": "cooking",
+            "unattended": false,
+            "scale_mode": "combined",
+            "preparation_policy": "advance",
+            "storage_anchor": "serving",
+            "max_dependency_gap_minutes": null,
+            "min_dependency_gap_minutes": 0,
+            "attention_segments": [],
+            "timing_basis": "estimate"
+          },
+          "interval": {
+            "start": "2026-11-14T01:10:00Z",
+            "end": "2026-11-14T01:35:00Z"
+          },
+          "person": "host"
+        },
+        {
+          "task": {
+            "id": "dish-3:0:store",
+            "title": "Vegetable Pulao Recipe | Veg Pulav \u00b7 Portion, cool promptly and refrigerate",
+            "recipe_id": "dish-3",
+            "dependencies": [
+              "dish-3:0:vegetables"
+            ],
+            "minutes": 10,
+            "active_minutes": 10,
+            "presence_minutes": 10,
+            "skill": "cook",
+            "resource": null,
+            "capacity": 1,
+            "temperature": null,
+            "eligible": null,
+            "max_ahead_hours": 48.0,
+            "evidence": "Reviewed publisher method; timing/check-ins are home-cook estimates. See recipe preparation provenance.",
+            "ingredients": [],
+            "guidance": "Transfer to shallow containers and refrigerate promptly. Do not wait for the whole pot to cool on the counter.",
+            "phase": "cooking",
+            "unattended": false,
+            "scale_mode": "combined",
+            "preparation_policy": "advance",
+            "storage_anchor": "serving",
+            "max_dependency_gap_minutes": 15,
+            "min_dependency_gap_minutes": 0,
+            "attention_segments": [],
+            "timing_basis": "estimate"
+          },
+          "interval": {
+            "start": "2026-11-14T01:35:00Z",
+            "end": "2026-11-14T01:45:00Z"
+          },
+          "person": "host"
+        },
+        {
+          "task": {
+            "id": "cleanup:0",
+            "title": "Cleanup",
+            "recipe_id": "",
+            "dependencies": [],
+            "minutes": 15,
+            "active_minutes": null,
+            "presence_minutes": null,
+            "skill": "cook",
+            "resource": null,
+            "capacity": 1,
+            "temperature": null,
+            "eligible": null,
+            "max_ahead_hours": null,
+            "evidence": "Planning allowance",
+            "ingredients": [],
+            "guidance": null,
+            "phase": "cleanup",
+            "unattended": false,
+            "scale_mode": "batch",
+            "preparation_policy": "unknown",
+            "storage_anchor": "serving",
+            "max_dependency_gap_minutes": null,
+            "min_dependency_gap_minutes": 0,
+            "attention_segments": [],
+            "timing_basis": "estimate"
+          },
+          "interval": {
+            "start": "2026-11-14T01:45:00Z",
+            "end": "2026-11-14T02:00:00Z"
+          },
+          "person": "host"
+        },
+        {
+          "task": {
+            "id": "dish-4:0:serve",
+            "title": "Instant Pot Carrot Halwa Recipe \u00b7 Portion chilled halwa and refrigerate",
+            "recipe_id": "dish-4",
+            "dependencies": [
+              "dish-4:0:store"
+            ],
+            "minutes": 10,
+            "active_minutes": 10,
+            "presence_minutes": 10,
+            "skill": "cook",
+            "resource": null,
+            "capacity": 1,
+            "temperature": null,
+            "eligible": null,
+            "max_ahead_hours": 48.0,
+            "evidence": "Reviewed publisher method; timing/check-ins are home-cook estimates. See recipe preparation provenance.",
+            "ingredients": [],
+            "guidance": "Garnish with sliced almonds or pistachios. Serve chilled or warm, as preferred.",
+            "phase": "cooking",
+            "unattended": false,
+            "scale_mode": "combined",
+            "preparation_policy": "advance",
+            "storage_anchor": "serving",
+            "max_dependency_gap_minutes": null,
+            "min_dependency_gap_minutes": 0,
+            "attention_segments": [],
+            "timing_basis": "estimate"
+          },
+          "interval": {
+            "start": "2026-11-15T01:30:00Z",
+            "end": "2026-11-15T01:40:00Z"
+          },
+          "person": "host"
+        },
+        {
+          "task": {
+            "id": "dish-2:0:reviewed-step-1-setup",
+            "title": "Instant Pot Dal Makhani \u00b7 Rinse beans and cover with water",
+            "recipe_id": "dish-2",
+            "dependencies": [],
+            "minutes": 5,
+            "active_minutes": 5,
+            "presence_minutes": 5,
+            "skill": "cook",
+            "resource": null,
+            "capacity": 1,
+            "temperature": null,
+            "eligible": null,
+            "max_ahead_hours": 24.0,
+            "evidence": "Method reviewed against publisher; hands-on and waiting times are planning estimates",
+            "ingredients": [],
+            "guidance": "Rinse beans and cover generously with water. Drain after soaking.",
+            "phase": "cooking",
+            "unattended": false,
+            "scale_mode": "combined",
+            "preparation_policy": "advance",
+            "storage_anchor": "next_step",
+            "max_dependency_gap_minutes": null,
+            "min_dependency_gap_minutes": 0,
+            "attention_segments": [],
+            "timing_basis": "estimate"
+          },
+          "interval": {
+            "start": "2026-11-15T01:40:00Z",
+            "end": "2026-11-15T01:45:00Z"
+          },
+          "person": "host"
+        },
+        {
+          "task": {
+            "id": "cleanup:1",
+            "title": "Cleanup",
+            "recipe_id": "",
+            "dependencies": [],
+            "minutes": 15,
+            "active_minutes": null,
+            "presence_minutes": null,
+            "skill": "cook",
+            "resource": null,
+            "capacity": 1,
+            "temperature": null,
+            "eligible": null,
+            "max_ahead_hours": null,
+            "evidence": "Planning allowance",
+            "ingredients": [],
+            "guidance": null,
+            "phase": "cleanup",
+            "unattended": false,
+            "scale_mode": "batch",
+            "preparation_policy": "unknown",
+            "storage_anchor": "serving",
+            "max_dependency_gap_minutes": null,
+            "min_dependency_gap_minutes": 0,
+            "attention_segments": [],
+            "timing_basis": "estimate"
+          },
+          "interval": {
+            "start": "2026-11-15T01:45:00Z",
+            "end": "2026-11-15T02:00:00Z"
+          },
+          "person": "host"
+        },
+        {
+          "task": {
+            "id": "dish-2:0:reviewed-step-1",
+            "title": "Instant Pot Dal Makhani \u00b7 Soak beans overnight",
+            "recipe_id": "dish-2",
+            "dependencies": [
+              "dish-2:0:reviewed-step-1-setup"
+            ],
+            "minutes": 480,
+            "active_minutes": 0,
+            "presence_minutes": 0,
+            "skill": "cook",
+            "resource": null,
+            "capacity": 1,
+            "temperature": null,
+            "eligible": null,
+            "max_ahead_hours": 24.0,
+            "evidence": "Method reviewed against publisher; hands-on and waiting times are planning estimates",
+            "ingredients": [],
+            "guidance": "The author cooks this dal the night before entertaining. The page says leftovers keep refrigerated for up to five days.",
+            "phase": "cooking",
+            "unattended": true,
+            "scale_mode": "combined",
+            "preparation_policy": "advance",
+            "storage_anchor": "next_step",
+            "max_dependency_gap_minutes": null,
+            "min_dependency_gap_minutes": 0,
+            "attention_segments": [],
+            "timing_basis": "estimate"
+          },
+          "interval": {
+            "start": "2026-11-15T11:10:00Z",
+            "end": "2026-11-15T19:10:00Z"
+          },
+          "person": "host"
+        },
+        {
+          "task": {
+            "id": "dish-2:0:reviewed-step-2",
+            "title": "Instant Pot Dal Makhani \u00b7 Chop onion and saut\u00e9 aromatics",
+            "recipe_id": "dish-2",
+            "dependencies": [
+              "dish-2:0:reviewed-step-1"
+            ],
+            "minutes": 15,
+            "active_minutes": 15,
+            "presence_minutes": 15,
+            "skill": "cook",
+            "resource": null,
+            "capacity": 1,
+            "temperature": null,
+            "eligible": null,
+            "max_ahead_hours": null,
+            "evidence": "Method reviewed against publisher; hands-on and waiting times are planning estimates",
+            "ingredients": [],
+            "guidance": "The author cooks this dal the night before entertaining. The page says leftovers keep refrigerated for up to five days.",
+            "phase": "cooking",
+            "unattended": false,
+            "scale_mode": "batch",
+            "preparation_policy": "same_day",
+            "storage_anchor": "serving",
+            "max_dependency_gap_minutes": null,
+            "min_dependency_gap_minutes": 0,
+            "attention_segments": [],
+            "timing_basis": "estimate"
+          },
+          "interval": {
+            "start": "2026-11-15T19:10:00Z",
+            "end": "2026-11-15T19:25:00Z"
+          },
+          "person": "host"
+        },
+        {
+          "task": {
+            "id": "cleanup:2",
+            "title": "Cleanup",
+            "recipe_id": "",
+            "dependencies": [],
+            "minutes": 15,
+            "active_minutes": null,
+            "presence_minutes": null,
+            "skill": "cook",
+            "resource": null,
+            "capacity": 1,
+            "temperature": null,
+            "eligible": null,
+            "max_ahead_hours": null,
+            "evidence": "Planning allowance",
+            "ingredients": [],
+            "guidance": null,
+            "phase": "cleanup",
+            "unattended": false,
+            "scale_mode": "batch",
+            "preparation_policy": "unknown",
+            "storage_anchor": "serving",
+            "max_dependency_gap_minutes": null,
+            "min_dependency_gap_minutes": 0,
+            "attention_segments": [],
+            "timing_basis": "estimate"
+          },
+          "interval": {
+            "start": "2026-11-15T19:25:00Z",
+            "end": "2026-11-15T19:40:00Z"
+          },
+          "person": "host"
+        },
+        {
+          "task": {
+            "id": "dish-2:0:reviewed-step-3",
+            "title": "Instant Pot Dal Makhani \u00b7 Add beans and liquid; pressure-cook and release",
+            "recipe_id": "dish-2",
+            "dependencies": [
+              "dish-2:0:reviewed-step-2"
+            ],
+            "minutes": 60,
+            "active_minutes": 5,
+            "presence_minutes": 60,
+            "skill": "cook",
+            "resource": "instant_pot",
+            "capacity": 1,
+            "temperature": null,
+            "eligible": null,
+            "max_ahead_hours": null,
+            "evidence": "Method reviewed against publisher; hands-on and waiting times are planning estimates",
+            "ingredients": [],
+            "guidance": "Add drained soaked beans, tomato, spices and water. Pressure-cook on high for 30 minutes, followed by natural release. Check beans are tender.",
+            "phase": "cooking",
+            "unattended": false,
+            "scale_mode": "batch",
+            "preparation_policy": "same_day",
+            "storage_anchor": "serving",
+            "max_dependency_gap_minutes": null,
+            "min_dependency_gap_minutes": 0,
+            "attention_segments": [],
+            "timing_basis": "estimate"
+          },
+          "interval": {
+            "start": "2026-11-15T19:40:00Z",
+            "end": "2026-11-15T20:40:00Z"
+          },
+          "person": "host"
+        },
+        {
+          "task": {
+            "id": "dish-0:0:coat",
+            "title": "Air Fryer Paneer Tikka \u00b7 Cut paneer and vegetables; coat in marinade",
+            "recipe_id": "dish-0",
+            "dependencies": [],
+            "minutes": 20,
+            "active_minutes": 20,
+            "presence_minutes": 20,
+            "skill": "cook",
+            "resource": null,
+            "capacity": 1,
+            "temperature": null,
+            "eligible": null,
+            "max_ahead_hours": 24.0,
+            "evidence": "Reviewed publisher method; timing/check-ins are home-cook estimates. See recipe preparation provenance.",
+            "ingredients": [],
+            "guidance": "Cut paneer, peppers and onion into 1-inch pieces. Mix yogurt, spices, ginger, garlic and lemon juice; coat the pieces evenly.",
+            "phase": "cooking",
+            "unattended": false,
+            "scale_mode": "combined",
+            "preparation_policy": "advance",
+            "storage_anchor": "next_step",
+            "max_dependency_gap_minutes": null,
+            "min_dependency_gap_minutes": 0,
+            "attention_segments": [],
+            "timing_basis": "estimate"
+          },
+          "interval": {
+            "start": "2026-11-15T20:40:00Z",
+            "end": "2026-11-15T21:00:00Z"
+          },
+          "person": "host"
+        },
+        {
+          "task": {
+            "id": "dish-0:0:marinate",
+            "title": "Air Fryer Paneer Tikka \u00b7 Refrigerate to marinate",
+            "recipe_id": "dish-0",
+            "dependencies": [
+              "dish-0:0:coat"
+            ],
+            "minutes": 30,
+            "active_minutes": 0,
+            "presence_minutes": 0,
+            "skill": "cook",
+            "resource": null,
+            "capacity": 1,
+            "temperature": null,
+            "eligible": null,
+            "max_ahead_hours": 24.0,
+            "evidence": "Reviewed publisher method; timing/check-ins are home-cook estimates. See recipe preparation provenance.",
+            "ingredients": [],
+            "guidance": "At least 30 minutes; the publisher permits up to 24 hours refrigerated.",
+            "phase": "cooking",
+            "unattended": true,
+            "scale_mode": "combined",
+            "preparation_policy": "advance",
+            "storage_anchor": "next_step",
+            "max_dependency_gap_minutes": 0,
+            "min_dependency_gap_minutes": 0,
+            "attention_segments": [],
+            "timing_basis": "estimate"
+          },
+          "interval": {
+            "start": "2026-11-15T21:00:00Z",
+            "end": "2026-11-15T21:30:00Z"
+          },
+          "person": "host"
+        },
+        {
+          "task": {
+            "id": "dish-3:0:rice",
+            "title": "Vegetable Pulao Recipe | Veg Pulav \u00b7 Cook rice with whole spices",
+            "recipe_id": "dish-3",
+            "dependencies": [],
+            "minutes": 30,
+            "active_minutes": 10,
+            "presence_minutes": 10,
+            "skill": "cook",
+            "resource": "stovetop",
+            "capacity": 1,
+            "temperature": null,
+            "eligible": null,
+            "max_ahead_hours": 1.5,
+            "evidence": "Reviewed publisher method; timing/check-ins are home-cook estimates. See recipe preparation provenance.",
+            "ingredients": [],
+            "guidance": "Rinse and drain rice. Saut\u00e9 whole spices in ghee, add rice and water, and bring to a boil. Cover and simmer on low for 10 minutes; uncover off the heat to let steam escape.",
+            "phase": "cooking",
+            "unattended": false,
+            "scale_mode": "combined",
+            "preparation_policy": "advance",
+            "storage_anchor": "serving",
+            "max_dependency_gap_minutes": null,
+            "min_dependency_gap_minutes": 0,
+            "attention_segments": [
+              {
+                "offset_minutes": 0,
+                "minutes": 5
+              },
+              {
+                "offset_minutes": 25,
+                "minutes": 5
+              }
+            ],
+            "timing_basis": "estimate"
+          },
+          "interval": {
+            "start": "2026-11-15T21:00:00Z",
+            "end": "2026-11-15T21:30:00Z"
+          },
+          "person": "host"
+        },
+        {
+          "task": {
+            "id": "dish-2:0:reviewed-step-4",
+            "title": "Instant Pot Dal Makhani \u00b7 Finish with cream and seasoning",
+            "recipe_id": "dish-2",
+            "dependencies": [
+              "dish-2:0:reviewed-step-3"
+            ],
+            "minutes": 10,
+            "active_minutes": 10,
+            "presence_minutes": 10,
+            "skill": "cook",
+            "resource": null,
+            "capacity": 1,
+            "temperature": null,
+            "eligible": null,
+            "max_ahead_hours": null,
+            "evidence": "Method reviewed against publisher; hands-on and waiting times are planning estimates",
+            "ingredients": [],
+            "guidance": "Stir in cream and garam masala; garnish. The optional pot-in-pot brown rice is not included in these dal-only tasks.",
+            "phase": "cooking",
+            "unattended": false,
+            "scale_mode": "batch",
+            "preparation_policy": "same_day",
+            "storage_anchor": "serving",
+            "max_dependency_gap_minutes": null,
+            "min_dependency_gap_minutes": 0,
+            "attention_segments": [],
+            "timing_basis": "estimate"
+          },
+          "interval": {
+            "start": "2026-11-15T21:10:00Z",
+            "end": "2026-11-15T21:20:00Z"
+          },
+          "person": "host"
+        },
+        {
+          "task": {
+            "id": "dish-1:0:reheat",
+            "title": "Instant Pot Butter Chicken \u00b7 Reheat gently and keep hot",
+            "recipe_id": "dish-1",
+            "dependencies": [
+              "dish-1:0:store"
+            ],
+            "minutes": 25,
+            "active_minutes": 10,
+            "presence_minutes": 10,
+            "skill": "cook",
+            "resource": "stovetop",
+            "capacity": 1,
+            "temperature": null,
+            "eligible": null,
+            "max_ahead_hours": 2.5,
+            "evidence": "Reviewed publisher method; timing/check-ins are home-cook estimates. See recipe preparation provenance.",
+            "ingredients": [],
+            "guidance": "Stir and heat through to 165\u00b0F; add a splash of water if needed. Keep at 140\u00b0F or above until serving. Stay nearby for checks.",
+            "phase": "cooking",
+            "unattended": false,
+            "scale_mode": "combined",
+            "preparation_policy": "advance",
+            "storage_anchor": "serving",
+            "max_dependency_gap_minutes": null,
+            "min_dependency_gap_minutes": 180,
+            "attention_segments": [
+              {
+                "offset_minutes": 0,
+                "minutes": 5
+              },
+              {
+                "offset_minutes": 20,
+                "minutes": 5
+              }
+            ],
+            "timing_basis": "estimate"
+          },
+          "interval": {
+            "start": "2026-11-15T21:20:00Z",
+            "end": "2026-11-15T21:45:00Z"
+          },
+          "person": "host"
+        },
+        {
+          "task": {
+            "id": "dish-0:0:cook",
+            "title": "Air Fryer Paneer Tikka \u00b7 Thread skewers, preheat and air-fry paneer tikka",
+            "recipe_id": "dish-0",
+            "dependencies": [
+              "dish-0:0:marinate"
+            ],
+            "minutes": 30,
+            "active_minutes": 15,
+            "presence_minutes": 15,
+            "skill": "cook",
+            "resource": "air_fryer",
+            "capacity": 1,
+            "temperature": 360,
+            "eligible": null,
+            "max_ahead_hours": 1.0,
+            "evidence": "Reviewed publisher method; timing/check-ins are home-cook estimates. See recipe preparation provenance.",
+            "ingredients": [],
+            "guidance": "Soak wooden skewers for 10 minutes. Alternate paneer and vegetables. Preheat at 400\u00b0F for 5 minutes; cook at 360\u00b0F for 5 minutes, turn, then cook 2\u20133 minutes more. Leave space between skewers; do not crowd the basket.",
+            "phase": "cooking",
+            "unattended": false,
+            "scale_mode": "combined",
+            "preparation_policy": "advance",
+            "storage_anchor": "serving",
+            "max_dependency_gap_minutes": null,
+            "min_dependency_gap_minutes": 0,
+            "attention_segments": [
+              {
+                "offset_minutes": 0,
+                "minutes": 10
+              },
+              {
+                "offset_minutes": 20,
+                "minutes": 5
+              }
+            ],
+            "timing_basis": "estimate"
+          },
+          "interval": {
+            "start": "2026-11-15T21:30:00Z",
+            "end": "2026-11-15T22:00:00Z"
+          },
+          "person": "host"
+        },
+        {
+          "task": {
+            "id": "dish-3:0:combine",
+            "title": "Vegetable Pulao Recipe | Veg Pulav \u00b7 Reheat vegetables and fold into fresh rice",
+            "recipe_id": "dish-3",
+            "dependencies": [
+              "dish-3:0:rice",
+              "dish-3:0:store"
+            ],
+            "minutes": 15,
+            "active_minutes": 10,
+            "presence_minutes": 10,
+            "skill": "cook",
+            "resource": "stovetop",
+            "capacity": 1,
+            "temperature": null,
+            "eligible": null,
+            "max_ahead_hours": 1.0,
+            "evidence": "Reviewed publisher method; timing/check-ins are home-cook estimates. See recipe preparation provenance.",
+            "ingredients": [],
+            "guidance": "Fold hot vegetables gently into cooked rice so grains stay intact. Cover on low heat until hot throughout; finish with the reserved cashews.",
+            "phase": "cooking",
+            "unattended": false,
+            "scale_mode": "combined",
+            "preparation_policy": "advance",
+            "storage_anchor": "serving",
+            "max_dependency_gap_minutes": null,
+            "min_dependency_gap_minutes": 0,
+            "attention_segments": [
+              {
+                "offset_minutes": 0,
+                "minutes": 5
+              },
+              {
+                "offset_minutes": 10,
+                "minutes": 5
+              }
+            ],
+            "timing_basis": "estimate"
+          },
+          "interval": {
+            "start": "2026-11-15T21:45:00Z",
+            "end": "2026-11-15T22:00:00Z"
+          },
+          "person": "host"
+        }
+      ],
+      "shopping": [
+        {
+          "name": "plain yogurt",
+          "quantity": 1.125,
+          "unit": "cup",
+          "amount_detail": {
+            "kind": "exact",
+            "minimum": null,
+            "maximum": null,
+            "optional": false,
+            "source_text": "plain yogurt (full fat )",
+            "basis": "unverified"
+          }
+        },
+        {
+          "name": "ginger paste",
+          "quantity": 1.125,
+          "unit": "tbsp",
+          "amount_detail": {
+            "kind": "exact",
+            "minimum": null,
+            "maximum": null,
+            "optional": false,
+            "source_text": "ginger paste",
+            "basis": "unverified"
+          }
+        },
+        {
+          "name": "garlic paste",
+          "quantity": 1.125,
+          "unit": "tbsp",
+          "amount_detail": {
+            "kind": "exact",
+            "minimum": null,
+            "maximum": null,
+            "optional": false,
+            "source_text": "garlic paste",
+            "basis": "unverified"
+          }
+        },
+        {
+          "name": "ground turmeric",
+          "quantity": 3.375,
+          "unit": "tsp",
+          "amount_detail": {
+            "kind": "exact",
+            "minimum": null,
+            "maximum": null,
+            "optional": false,
+            "source_text": "ground turmeric",
+            "basis": "unverified"
+          }
+        },
+        {
+          "name": "kosher salt",
+          "quantity": 22.875,
+          "unit": "tsp",
+          "amount_detail": {
+            "kind": "exact",
+            "minimum": null,
+            "maximum": null,
+            "optional": false,
+            "source_text": "kosher salt",
+            "basis": "unverified"
+          }
+        },
+        {
+          "name": "kashmiri red chili powder",
+          "quantity": 5.25,
+          "unit": "tbsp",
+          "amount_detail": {
+            "kind": "exact",
+            "minimum": null,
+            "maximum": null,
+            "optional": false,
+            "source_text": "Kashmiri red chili powder",
+            "basis": "unverified"
+          }
+        },
+        {
+          "name": "garam masala",
+          "quantity": 9.75,
+          "unit": "tsp",
+          "amount_detail": {
+            "kind": "exact",
+            "minimum": null,
+            "maximum": null,
+            "optional": false,
+            "source_text": "garam masala",
+            "basis": "unverified"
+          }
+        },
+        {
+          "name": "chat masala",
+          "quantity": 2.25,
+          "unit": "tsp",
+          "amount_detail": {
+            "kind": "exact",
+            "minimum": null,
+            "maximum": null,
+            "optional": true,
+            "source_text": "chat masala (optional)",
+            "basis": "unverified"
+          }
+        },
+        {
+          "name": "kasoori methi",
+          "quantity": 11.25,
+          "unit": "tbsp",
+          "amount_detail": {
+            "kind": "exact",
+            "minimum": null,
+            "maximum": null,
+            "optional": false,
+            "source_text": "kasoori methi (dried fenugreek leaves)",
+            "basis": "unverified"
+          }
+        },
+        {
+          "name": "lemon",
+          "quantity": 2.25,
+          "unit": "count",
+          "amount_detail": {
+            "kind": "exact",
+            "minimum": null,
+            "maximum": null,
+            "optional": false,
+            "source_text": "lemon (juiced)",
+            "basis": "unverified"
+          }
+        },
+        {
+          "name": "smoked paprika",
+          "quantity": 2.25,
+          "unit": "tsp",
+          "amount_detail": {
+            "kind": "exact",
+            "minimum": null,
+            "maximum": null,
+            "optional": true,
+            "source_text": "smoked paprika (optional)",
+            "basis": "unverified"
+          }
+        },
+        {
+          "name": "paneer",
+          "quantity": 2.25,
+          "unit": "lb",
+          "amount_detail": {
+            "kind": "exact",
+            "minimum": null,
+            "maximum": null,
+            "optional": false,
+            "source_text": "paneer (cut into 1-inch cubes)",
+            "basis": "unverified"
+          }
+        },
+        {
+          "name": "medium green pepper",
+          "quantity": 2.25,
+          "unit": "count",
+          "amount_detail": {
+            "kind": "exact",
+            "minimum": null,
+            "maximum": null,
+            "optional": false,
+            "source_text": "medium green pepper (cut into 1-inch cubes)",
+            "basis": "unverified"
+          }
+        },
+        {
+          "name": "medium red pepper",
+          "quantity": 2.25,
+          "unit": "count",
+          "amount_detail": {
+            "kind": "exact",
+            "minimum": null,
+            "maximum": null,
+            "optional": false,
+            "source_text": "medium red pepper (cut into 1-inch cubes)",
+            "basis": "unverified"
+          }
+        },
+        {
+          "name": "medium red onion",
+          "quantity": 2.25,
+          "unit": "count",
+          "amount_detail": {
+            "kind": "exact",
+            "minimum": null,
+            "maximum": null,
+            "optional": false,
+            "source_text": "medium red onion (cut into 1-inch cubes)",
+            "basis": "unverified"
+          }
+        },
+        {
+          "name": "boneless skinless chicken thighs",
+          "quantity": 6.0,
+          "unit": "lb",
+          "amount_detail": {
+            "kind": "exact",
+            "minimum": null,
+            "maximum": null,
+            "optional": false,
+            "source_text": "boneless skinless chicken thighs (cut into 2-inch pieces)",
+            "basis": "unverified"
+          }
+        },
+        {
+          "name": "ghee",
+          "quantity": 27.0,
+          "unit": "tbsp",
+          "amount_detail": {
+            "kind": "exact",
+            "minimum": null,
+            "maximum": null,
+            "optional": false,
+            "source_text": "ghee (or coconut oil)",
+            "basis": "unverified"
+          }
+        },
+        {
+          "name": "large yellow onion",
+          "quantity": 3.0,
+          "unit": "count",
+          "amount_detail": {
+            "kind": "exact",
+            "minimum": null,
+            "maximum": null,
+            "optional": false,
+            "source_text": "1 large yellow onion (finely chopped)",
+            "basis": "unverified"
+          }
+        },
+        {
+          "name": "fresh ginger",
+          "quantity": 3.0,
+          "unit": "tbsp",
+          "amount_detail": {
+            "kind": "exact",
+            "minimum": null,
+            "maximum": null,
+            "optional": false,
+            "source_text": "fresh ginger (grated)",
+            "basis": "unverified"
+          }
+        },
+        {
+          "name": "fresh garlic",
+          "quantity": 3.0,
+          "unit": "tbsp",
+          "amount_detail": {
+            "kind": "exact",
+            "minimum": null,
+            "maximum": null,
+            "optional": false,
+            "source_text": "fresh garlic (minced)",
+            "basis": "unverified"
+          }
+        },
+        {
+          "name": "plum tomatoes",
+          "quantity": 9.0,
+          "unit": "count",
+          "amount_detail": {
+            "kind": "exact",
+            "minimum": null,
+            "maximum": null,
+            "optional": false,
+            "source_text": "3 plum tomatoes (pureed)",
+            "basis": "unverified"
+          }
+        },
+        {
+          "name": "unsweetened full fat coconut milk",
+          "quantity": 3.0,
+          "unit": "can",
+          "amount_detail": {
+            "kind": "exact",
+            "minimum": null,
+            "maximum": null,
+            "optional": false,
+            "source_text": "unsweetened full fat coconut milk (allow these to separate - DO NOT shake. Best if left in fridge overnight)",
+            "basis": "unverified"
+          }
+        },
+        {
+          "name": "tomato paste",
+          "quantity": 6.0,
+          "unit": "tbsp",
+          "amount_detail": {
+            "kind": "exact",
+            "minimum": null,
+            "maximum": null,
+            "optional": false,
+            "source_text": "tomato paste",
+            "basis": "unverified"
+          }
+        },
+        {
+          "name": "sugar",
+          "quantity": 6.0,
+          "unit": "tsp",
+          "amount_detail": {
+            "kind": "exact",
+            "minimum": null,
+            "maximum": null,
+            "optional": false,
+            "source_text": "sugar (skip for paleo)",
+            "basis": "unverified"
+          }
+        },
+        {
+          "name": "cilantro",
+          "quantity": 2.25,
+          "unit": "cup",
+          "amount_detail": {
+            "kind": "exact",
+            "minimum": null,
+            "maximum": null,
+            "optional": false,
+            "source_text": "cilantro (chopped, for garnish)",
+            "basis": "unverified"
+          }
+        },
+        {
+          "name": "black gram beans )",
+          "quantity": 3.0,
+          "unit": "cup",
+          "amount_detail": {
+            "kind": "exact",
+            "minimum": null,
+            "maximum": null,
+            "optional": false,
+            "source_text": "black gram beans ((adzuki beans or whole brown lentils) **)",
+            "basis": "unverified"
+          }
+        },
+        {
+          "name": "red kidney beans",
+          "quantity": 1.0,
+          "unit": "cup",
+          "amount_detail": {
+            "kind": "exact",
+            "minimum": null,
+            "maximum": null,
+            "optional": false,
+            "source_text": "red kidney beans (**)",
+            "basis": "unverified"
+          }
+        },
+        {
+          "name": "oil )",
+          "quantity": 3.0,
+          "unit": "tbsp",
+          "amount_detail": {
+            "kind": "exact",
+            "minimum": null,
+            "maximum": null,
+            "optional": false,
+            "source_text": "oil ((ghee or butter))",
+            "basis": "unverified"
+          }
+        },
+        {
+          "name": "cumin seeds",
+          "quantity": 3.0,
+          "unit": "tsp",
+          "amount_detail": {
+            "kind": "exact",
+            "minimum": null,
+            "maximum": null,
+            "optional": false,
+            "source_text": "cumin seeds",
+            "basis": "unverified"
+          }
+        },
+        {
+          "name": "medium yellow onion",
+          "quantity": 6.0,
+          "unit": "count",
+          "amount_detail": {
+            "kind": "exact",
+            "minimum": null,
+            "maximum": null,
+            "optional": false,
+            "source_text": "1 medium yellow onion (finely diced)",
+            "basis": "unverified"
+          }
+        },
+        {
+          "name": "ginger",
+          "quantity": 3.0,
+          "unit": "tbsp",
+          "amount_detail": {
+            "kind": "exact",
+            "minimum": null,
+            "maximum": null,
+            "optional": false,
+            "source_text": "ginger (paste)",
+            "basis": "unverified"
+          }
+        },
+        {
+          "name": "garlic",
+          "quantity": 3.0,
+          "unit": "tbsp",
+          "amount_detail": {
+            "kind": "exact",
+            "minimum": null,
+            "maximum": null,
+            "optional": false,
+            "source_text": "garlic (paste )",
+            "basis": "unverified"
+          }
+        },
+        {
+          "name": "kashmiri red chili powder",
+          "quantity": 6.0,
+          "unit": "tsp",
+          "amount_detail": {
+            "kind": "exact",
+            "minimum": null,
+            "maximum": null,
+            "optional": false,
+            "source_text": "Kashmiri red chili powder",
+            "basis": "unverified"
+          }
+        },
+        {
+          "name": "tomatoes",
+          "quantity": 6.0,
+          "unit": "cup",
+          "amount_detail": {
+            "kind": "exact",
+            "minimum": null,
+            "maximum": null,
+            "optional": false,
+            "source_text": "tomatoes (diced )",
+            "basis": "unverified"
+          }
+        },
+        {
+          "name": "light cream",
+          "quantity": 1.5,
+          "unit": "cup",
+          "amount_detail": {
+            "kind": "exact",
+            "minimum": null,
+            "maximum": null,
+            "optional": false,
+            "source_text": "light cream (**)",
+            "basis": "unverified"
+          }
+        },
+        {
+          "name": "brown rice",
+          "quantity": 3.0,
+          "unit": "cup",
+          "amount_detail": {
+            "kind": "exact",
+            "minimum": null,
+            "maximum": null,
+            "optional": false,
+            "source_text": "brown rice (rinsed and drained )",
+            "basis": "unverified"
+          }
+        },
+        {
+          "name": "salt",
+          "quantity": 3.0,
+          "unit": "tsp",
+          "amount_detail": {
+            "kind": "exact",
+            "minimum": null,
+            "maximum": null,
+            "optional": false,
+            "source_text": "salt",
+            "basis": "unverified"
+          }
+        },
+        {
+          "name": "long-grain basmati rice",
+          "quantity": 3.0,
+          "unit": "cup",
+          "amount_detail": {
+            "kind": "exact",
+            "minimum": null,
+            "maximum": null,
+            "optional": false,
+            "source_text": "long-grain basmati rice",
+            "basis": "unverified"
+          }
+        },
+        {
+          "name": "shah jeera",
+          "quantity": 3.0,
+          "unit": "tsp",
+          "amount_detail": {
+            "kind": "exact",
+            "minimum": null,
+            "maximum": null,
+            "optional": false,
+            "source_text": "shah jeera",
+            "basis": "unverified"
+          }
+        },
+        {
+          "name": "indian bay leaf",
+          "quantity": 3.0,
+          "unit": "count",
+          "amount_detail": {
+            "kind": "exact",
+            "minimum": null,
+            "maximum": null,
+            "optional": false,
+            "source_text": "Indian bay leaf",
+            "basis": "unverified"
+          }
+        },
+        {
+          "name": "cloves",
+          "quantity": 18.0,
+          "unit": "cloves",
+          "amount_detail": {
+            "kind": "exact",
+            "minimum": null,
+            "maximum": null,
+            "optional": false,
+            "source_text": "6 cloves",
+            "basis": "unverified"
+          }
+        },
+        {
+          "name": "black peppercorns",
+          "quantity": 36.0,
+          "unit": "count",
+          "amount_detail": {
+            "kind": "exact",
+            "minimum": null,
+            "maximum": null,
+            "optional": false,
+            "source_text": "black peppercorns",
+            "basis": "unverified"
+          }
+        },
+        {
+          "name": "green cardamom pods",
+          "quantity": 9.0,
+          "unit": "count",
+          "amount_detail": {
+            "kind": "exact",
+            "minimum": null,
+            "maximum": null,
+            "optional": false,
+            "source_text": "green cardamom pods",
+            "basis": "unverified"
+          }
+        },
+        {
+          "name": "cauliflower",
+          "quantity": 6.0,
+          "unit": "cup",
+          "amount_detail": {
+            "kind": "exact",
+            "minimum": null,
+            "maximum": null,
+            "optional": false,
+            "source_text": "cauliflower (cut into 1-inch florets)",
+            "basis": "unverified"
+          }
+        },
+        {
+          "name": "carrots",
+          "quantity": 6.0,
+          "unit": "count",
+          "amount_detail": {
+            "kind": "exact",
+            "minimum": null,
+            "maximum": null,
+            "optional": false,
+            "source_text": "carrots (cut into 2-inch X \u00bc inch thin strips)",
+            "basis": "unverified"
+          }
+        },
+        {
+          "name": "green beans",
+          "quantity": 3.0,
+          "unit": "cup",
+          "amount_detail": {
+            "kind": "exact",
+            "minimum": null,
+            "maximum": null,
+            "optional": false,
+            "source_text": "green beans (diagonally cut into 1 inch pieces)",
+            "basis": "unverified"
+          }
+        },
+        {
+          "name": "frozen green peas",
+          "quantity": 1.5,
+          "unit": "cup",
+          "amount_detail": {
+            "kind": "exact",
+            "minimum": null,
+            "maximum": null,
+            "optional": false,
+            "source_text": "frozen green peas",
+            "basis": "unverified"
+          }
+        },
+        {
+          "name": "frozen corn",
+          "quantity": 1.5,
+          "unit": "cup",
+          "amount_detail": {
+            "kind": "exact",
+            "minimum": null,
+            "maximum": null,
+            "optional": false,
+            "source_text": "frozen corn",
+            "basis": "unverified"
+          }
+        },
+        {
+          "name": "cashews",
+          "quantity": 48.0,
+          "unit": "count",
+          "amount_detail": {
+            "kind": "exact",
+            "minimum": null,
+            "maximum": null,
+            "optional": false,
+            "source_text": "cashews",
+            "basis": "unverified"
+          }
+        },
+        {
+          "name": "carrots )",
+          "quantity": 30.0,
+          "unit": "count",
+          "amount_detail": {
+            "kind": "exact",
+            "minimum": null,
+            "maximum": null,
+            "optional": false,
+            "source_text": "carrots (peeled and grated (About 6 cups packed))",
+            "basis": "unverified"
+          }
+        },
+        {
+          "name": "unsweetened almond milk",
+          "quantity": 3.0,
+          "unit": "cup",
+          "amount_detail": {
+            "kind": "exact",
+            "minimum": null,
+            "maximum": null,
+            "optional": false,
+            "source_text": "unsweetened almond milk",
+            "basis": "unverified"
+          }
+        },
+        {
+          "name": "sugar",
+          "quantity": 2.25,
+          "unit": "cup",
+          "amount_detail": {
+            "kind": "exact",
+            "minimum": null,
+            "maximum": null,
+            "optional": false,
+            "source_text": "sugar",
+            "basis": "unverified"
+          }
+        },
+        {
+          "name": "almond meal",
+          "quantity": 3.0,
+          "unit": "cup",
+          "amount_detail": {
+            "kind": "exact",
+            "minimum": null,
+            "maximum": null,
+            "optional": false,
+            "source_text": "almond meal",
+            "basis": "unverified"
+          }
+        },
+        {
+          "name": "cardamom powder",
+          "quantity": 6.0,
+          "unit": "tsp",
+          "amount_detail": {
+            "kind": "exact",
+            "minimum": null,
+            "maximum": null,
+            "optional": false,
+            "source_text": "cardamom powder",
+            "basis": "unverified"
+          }
+        },
+        {
+          "name": "raisins",
+          "quantity": 6.0,
+          "unit": "tbsp",
+          "amount_detail": {
+            "kind": "exact",
+            "minimum": null,
+            "maximum": null,
+            "optional": false,
+            "source_text": "raisins",
+            "basis": "unverified"
+          }
+        },
+        {
+          "name": "saffron",
+          "quantity": 1.5,
+          "unit": "tsp",
+          "amount_detail": {
+            "kind": "exact",
+            "minimum": null,
+            "maximum": null,
+            "optional": false,
+            "source_text": "saffron",
+            "basis": "unverified"
+          }
+        },
+        {
+          "name": "sliced almonds or pistachios",
+          "quantity": 6.0,
+          "unit": "tbsp",
+          "amount_detail": {
+            "kind": "exact",
+            "minimum": null,
+            "maximum": null,
+            "optional": false,
+            "source_text": "sliced almonds or pistachios (for garnish)",
+            "basis": "unverified"
+          }
+        }
+      ],
+      "checklist": [
+        "Transfer to serving dishes",
+        "Check serving spoons",
+        "Finish drinks"
+      ],
+      "generated_at": "2026-11-07T14:46:47.079836Z",
+      "advisories": [],
+      "fit_days": [
+        {
+          "day": "2026-11-13",
+          "presence_minutes": 190,
+          "cooking_minutes": 175,
+          "limit_minutes": 180,
+          "cleanup_allowance": 15
+        },
+        {
+          "day": "2026-11-14",
+          "presence_minutes": 30,
+          "cooking_minutes": 15,
+          "limit_minutes": 180,
+          "cleanup_allowance": 15
+        },
+        {
+          "day": "2026-11-15",
+          "presence_minutes": 165,
+          "cooking_minutes": 150,
+          "limit_minutes": 180,
+          "cleanup_allowance": 15
+        }
+      ],
+      "status": "feasible",
+      "violations": [],
+      "adjustments": [],
+      "outcome": {
+        "code": "complete",
+        "message": "All preparation tasks are scheduled and passed the schedule checks.",
+        "solver_status": "OPTIMAL"
+      }
+    }
+  }
+}

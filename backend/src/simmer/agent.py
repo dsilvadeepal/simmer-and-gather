@@ -13,7 +13,7 @@ from .profiles import HostingService
 from .recipes import RecipeService
 from .db import Missing, Conflict
 from .scheduler import schedule, digest, content_hash
-from .menu import propose_menu, validate_menu, rank_recipes
+from .menu import menu_blockers, MENU_ADVISORY_CODES, propose_menu, validate_menu, rank_recipes
 
 def buy_prepared_suggestions(inputs,plan):
     """Offer a verified single-dish alternative without mutating the current menu."""
@@ -24,7 +24,7 @@ def buy_prepared_suggestions(inputs,plan):
         if item.mode != 'cook' or item.must_have: continue
         trial=inputs.model_copy(deep=True)
         next(x for x in trial.selections if x.id==item.id).mode='buy'
-        if any(v.code!='menu_category' for v in validate_menu(trial)): continue
+        if menu_blockers(validate_menu(trial)): continue
         candidate=schedule(trial)
         if candidate.status=='feasible':
             suggestions.append(ConstraintViolation(code='buy_prepared',affected_ids=[item.id],explanation=f'Consider buying {item.title} prepared. This alternative fits the available time; check availability and ingredients before choosing it.'))
@@ -34,10 +34,10 @@ def buy_prepared_suggestions(inputs,plan):
 def apply_menu_validation(inputs,plan):
     """A valid schedule is not a usable plan until menu requirements pass too."""
     issues=validate_menu(inputs)
-    plan.advisories=[v for v in issues if v.code=='menu_category']
-    blockers=[v for v in issues if v.code!='menu_category']
+    plan.advisories=[v for v in issues if v.code in MENU_ADVISORY_CODES]
+    blockers=menu_blockers(issues)
     plan.violations.extend(blockers)
-    if blockers:
+    if blockers and plan.status == 'feasible':
         plan.status='incomplete'
         plan.outcome=SchedulingOutcome(code='needs_input',message='The schedule was checked, but menu details still need attention. Review the plan checks before using it.')
     plan.content_hash=content_hash(plan)

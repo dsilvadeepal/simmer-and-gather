@@ -239,8 +239,8 @@ def validate_schedule(inputs,candidate,partial=False):
         for session in prep_windows_for(g):
             cooking=[a for a in candidate.assignments if a.task.phase=='cooking' and not (a.task.unattended and a.task.presence_minutes==0) and session.start<=a.interval.start<session.end]
             cleanup=[a for a in candidate.assignments if a.task.phase=='cleanup' and session.start<=a.interval.start and a.interval.end<=session.end]
-            if cooking and not any(c.task.minutes and c.task.minutes>=15 and c.interval.start>=max(a.interval.end for a in cooking) for c in cleanup):
-                fail('cleanup','Reserve at least 15 minutes of cleanup after each prep session')
+            if cooking and not any(c.task.minutes and c.task.minutes>=15 and c.interval.start>=min(a.interval.start for a in cooking)+timedelta(minutes=5) for c in cleanup):
+                fail('cleanup','Reserve at least 15 minutes of cleanup during or after each prep session')
     assignments=candidate.assignments
     for index,a in enumerate(assignments):
         for b in assignments[index+1:]:

@@ -15,7 +15,7 @@ def test_five_menus_fit_without_expanding_limits(row):
     assert result is not None and result.status=='feasible'
     assert not validate_schedule(inputs,result)
     # Dietary screening must not certify that products are allergen-free.
-    assert all(v.code == "allergy_unknown" for v in validate_menu(inputs))
+    assert all(v.code in ("allergy_unknown", "allergy_label_check") for v in validate_menu(inputs))
     assert inputs.model_dump(mode='json')==before
     assert all(a.interval.end<=inputs.gathering.arrival.replace(hour=17,minute=30) for a in result.assignments)
 
@@ -40,3 +40,16 @@ def test_turkey_carving_is_dinner_checklist_not_prep_work():
     turkey=next(s for s in inputs.selections if 'Turkey' in s.title)
     turkey.mode='buy'
     assert 'Carve turkey into serving portions (at dinner)' not in finishing_checklist(inputs)
+
+def test_cleanup_can_use_passive_cooking_time_without_eroding_buffer():
+    from test_scheduler import inputs as make_inputs
+    from simmer.domain import PrepTask, AttentionSegment
+    data=make_inputs(minutes=(30,),limit=90)
+    data.selections[0].recipe.tasks=[PrepTask(id='fresh',title='Cook fresh dish',minutes=30,active_minutes=10,presence_minutes=10,attention_segments=[AttentionSegment(offset_minutes=0,minutes=5),AttentionSegment(offset_minutes=25,minutes=5)],max_ahead_hours=data.gathering.relax_minutes/60,evidence='Fixture: finish exactly at buffer',preparation_policy='same_day')]
+    p=solve_schedule(data)
+    assert p is not None
+    assert not validate_schedule(data,p)
+    cooking=next(a for a in p.assignments if a.task.id.endswith(':fresh'))
+    cleanup=next(a for a in p.assignments if a.task.phase=='cleanup')
+    assert cooking.interval.start<cleanup.interval.start<cleanup.interval.end<cooking.interval.end
+    assert (data.gathering.arrival-cooking.interval.end).total_seconds()==data.gathering.relax_minutes*60

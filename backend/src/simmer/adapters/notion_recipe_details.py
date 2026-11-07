@@ -1,5 +1,6 @@
 """Turn scoped Notion recipe notes into an editable, unreviewed planning draft."""
 import re
+import json
 from ..domain import Ingredient, PrepTask, RecipeSnapshot
 
 UNIT=re.compile(r'^(\d+(?:[.,]\d+)?(?:\s+\d+/\d+|\s*[¼½¾⅓⅔⅛⅜⅝⅞])?|\d+/\d+|[¼½¾⅓⅔⅛⅜⅝⅞])\s*(cups?|tbsp|tablespoons?|tsp|teaspoons?|grams?|g|kg|kilos?|ml|l|pounds?|lbs?|ounces?|oz|inch(?:es)?|pinch(?:es)?|sprigs?|slices?|cloves?|pieces?|cans?|count)\b\s*',re.I)
@@ -82,6 +83,17 @@ def notion_cover(page):
 
 def from_notion_details(page,blocks):
     props=page.get('properties',{})
+    for block in reversed(blocks):
+        if block.get('type') != 'code': continue
+        caption=''.join(x.get('plain_text',x.get('text',{}).get('content','')) for x in block['code'].get('caption',[]))
+        if caption != 'Simmer and Gather recipe data v1': continue
+        saved=RecipeSnapshot.model_validate(json.loads(block_text(block)))
+        source=props.get('Source URL',{}).get('url')
+        if source and saved.source.rstrip('/') != source.rstrip('/'):
+            raise ValueError('Structured recipe source does not match this Notion page')
+        saved.id=page['id']; saved.version=page.get('last_edited_time','1'); saved.reviewed=False
+        saved.image_url=notion_cover(page) or saved.image_url
+        return saved
     title=''.join(x.get('plain_text',x.get('text',{}).get('content','')) for x in props.get('Recipe',{}).get('title',[])) or 'Notion recipe'
     lines=[block_text(b) for b in blocks]
     ingredients=[]; collecting=False

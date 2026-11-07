@@ -4,7 +4,7 @@ from pathlib import Path
 from time import perf_counter
 from simmer.domain import PlanInputs,Interval
 from simmer.scheduler import schedule,validate_schedule
-from simmer.menu import validate_menu
+from simmer.menu import validate_menu, menu_blockers
 from simmer.agent import apply_menu_validation
 
 def run():
@@ -25,16 +25,17 @@ def run():
             start=perf_counter()
             plan=apply_menu_validation(data,schedule(data))
             violations=validate_schedule(data,plan)
-            menu_issues=[v for v in validate_menu(data) if v.code!='menu_category']
-            passed=(plan.status!='feasible' or not violations)
+            menu_issues=menu_blockers(validate_menu(data))
+            expected={'baseline':'complete','more_time':'complete','busy_calendar':'no_fit_found','missing_dependency':'needs_input'}[condition]
+            passed=plan.outcome.code==expected and (plan.status!='feasible' or not violations)
             if condition=='missing_dependency':
                 passed=passed and plan.outcome.code=='needs_input'
             if condition=='busy_calendar':
                 passed=passed and plan.status!='feasible'
-            result={'menu':fixture['name'],'condition':condition,'status':plan.status,'outcome':plan.outcome.model_dump(),'validation_passed':passed,'menu_blockers':[v.code for v in menu_issues],'usable':plan.status=='feasible' and not menu_issues,'violations':[v.model_dump() for v in plan.violations],'seconds':round(perf_counter()-start,2)}
+            result={'menu':fixture['name'],'condition':condition,'status':plan.status,'outcome':plan.outcome.model_dump(),'expected_outcome':expected,'validation_passed':passed,'menu_blockers':[v.code for v in menu_issues],'usable':plan.status=='feasible' and not menu_issues,'violations':[v.model_dump() for v in plan.violations],'seconds':round(perf_counter()-start,2)}
             results.append(result)
             print(f"{fixture['name']} / {condition}: {plan.outcome.code}; checks={passed}",flush=True)
-    output=root/'docs/reviews/2026-11-07-architecture-evals.json'
+    output=root/'docs/reviews/2026-11-07-architecture-evals-after.json'
     output.write_text(json.dumps({'scope':'Offline historical fixtures; no live integrations or cooking validation','results':results},indent=2)+'\n')
     return all(r['validation_passed'] for r in results)
 

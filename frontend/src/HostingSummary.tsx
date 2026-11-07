@@ -5,6 +5,8 @@ export function HostingSummary({inputs,plan,view='all'}:{inputs:Inputs;plan:Plan
  const zone=g.profile?.timezone||'America/New_York';
  const deadline=g.arrival?new Date(Date.parse(g.arrival)-(g.relax_minutes??60)*60000):null;
  const fmt=amount;
+ const allergyChecks=(plan.advisories||[]).filter(a=>a.code==='allergy_label_check');
+ const suggestions=(plan.advisories||[]).filter(a=>a.code!=='allergy_label_check');
  return <section className="card hosting-summary">
   {view!=='fit'&&<><h2>Your menu</h2>
   <p className="meta">{g.guests} guests · Servings follow the original recipe yield. Adjust each dish for buffet portions; the app does not automatically reduce every dish.</p>
@@ -24,6 +26,7 @@ export function HostingSummary({inputs,plan,view='all'}:{inputs:Inputs;plan:Plan
   {deadline&&<p>Major cooking ends by <strong>{deadline.toLocaleTimeString('en-US',{hour:'numeric',minute:'2-digit',timeZone:zone})}</strong> · {g.relax_minutes??60}-minute buffer before guests arrive.</p>}
   <p className="meta">Calendar: {({fresh:'up to date',stale:'needs rechecking',unavailable:'unavailable',fixture:'sample data',unknown:'not checked'} as Record<string,string>)[inputs.availability?.status||'unknown']||'not checked'}{inputs.availability?.checked_at?' · checked '+new Date(inputs.availability.checked_at).toLocaleString('en-US',{month:'short',day:'numeric',hour:'numeric',minute:'2-digit',timeZone:zone}):''}. </p>
   {(plan.fit_days||[]).map((d:any)=><p className="fit-day" key={d.day}><strong>{d.day}</strong> · {d.presence_minutes} min of {d.limit_minutes} min{d.presence_minutes>d.limit_minutes?` + up to ${d.cleanup_allowance} min cleanup`:''}</p>)}
-  {!!plan.advisories?.length&&<details><summary>Optional menu suggestions · {plan.advisories.length}</summary><ul>{plan.advisories.map((a,i)=><li key={i}>{a.explanation}</li>)}</ul></details>}
+  {!!allergyChecks.length&&<section aria-label="Ingredient checks"><h3>Before serving: check ingredient labels</h3><p className="meta">Ingredient screening does not guarantee an allergen-free meal.</p><details><summary>Ingredient checks · {allergyChecks.length}</summary><ul>{allergyChecks.map((a,i)=><li key={i}>{a.explanation}</li>)}</ul></details></section>}
+  {!!suggestions.length&&<details><summary>Optional menu suggestions · {suggestions.length}</summary><ul>{suggestions.map((a,i)=><li key={i}>{a.explanation}</li>)}</ul></details>}
  </>}</section>;
 }

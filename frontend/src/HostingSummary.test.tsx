@@ -16,3 +16,9 @@ test('menu prioritizes chicken over butter and retains full quantities',()=>{
  expect(screen.getByText('4 lb chicken',{selector:'.meta'})).toBeVisible();
  expect(screen.getByText('All ingredient quantities')).toBeVisible();
 });
+
+test('ingredient checks are not presented as optional menu suggestions',()=>{
+ render(<HostingSummary view="fit" inputs={{gathering:{guests:15},selections:[]}} plan={{gathering_id:'g',revision:1,input_hash:'h',advisories:[{code:'allergy_label_check',explanation:'Check packaged ingredients before serving.'}]}}/>);
+ expect(screen.getByRole('heading',{name:'Before serving: check ingredient labels'})).toBeVisible();
+ expect(screen.queryByText(/Optional menu suggestions/)).not.toBeInTheDocument();
+});

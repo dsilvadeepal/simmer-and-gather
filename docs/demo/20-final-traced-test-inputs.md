@@ -201,4 +201,3 @@ Seed: 20261108. Run date: November 7, 2026. Calendar availability is simulated; 
 - Helpers: [].
 - Simulated busy windows: [].
 - Desired outcome: needs_input.
-

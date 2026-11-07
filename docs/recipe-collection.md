@@ -1,48 +1,50 @@
-# Starter recipe collection
+# Recipe collection
 
-Current curated collection, October 28, 2026: 40 candidates—15 Diwali/Indian hosting and 25 Thanksgiving/Christmas options. They are menu options, not one suggested spread. Four incomplete entries were replaced with source-complete candidates; see [replacement record](recipe-replacements.md).
+Updated November 7, 2026 from a read-only application-library query: **40 recipes, 38 marked reviewed**. This is the app snapshot, not a fresh Notion inventory audit or a certification of recipe completeness. Removed/replaced starter candidates are not current menu options.
 
-All 40 now have ingredient lists, approximate home-cook task timing drafts, a base portion estimate and equipment needs. Source-backed make-ahead notes are retained where available; 22 remaining recipes have clearly labeled chef proposals. The timing estimates include cleanup. Scaling, equipment batches, safe storage and exact product labels remain gathering-specific checks. All Notion recipes remain `Planning Ready=false`. See [planning enrichment](recipe-planning-enrichment.md), [timing draft](recipe-chef-timing.md) and [gluten/nut screen](recipe-allergen-audit.md).
+Notion remains the editable recipe source. Imports create versioned app snapshots; historical plans retain their own recipe versions. Readiness covers ingredients, tasks, timing and advance-preparation separately. Unknown quantities, product labels and unsupported storage remain explicit. Images use current library metadata with source attribution and a fallback.
 
-| Occasion | Recipe | Category | Publisher rating snapshot |
-|---|---|---|---|
-| Diwali / Indian hosting | [Air Fryer Paneer Tikka](https://ministryofcurry.com/paneer-tikka/) | starters | 4.7/5 from 10 ratings |
-| Diwali / Indian hosting | [Aloo Chaat in Phyllo Shells](https://ministryofcurry.com/aloo-chaat-in-phyllo-cups/) | starters | 4.67/5 from 27 ratings |
-| Diwali / Indian hosting | [Tandoori chicken wings](https://ministryofcurry.com/tandoori-chicken-wings/) | starters | 4.57/5 from 64 ratings |
-| Diwali / Indian hosting | [Masala Nuts](https://ministryofcurry.com/masala-nuts/) | starters | 5/5 from 2 ratings |
-| Diwali / Indian hosting | [Instant Pot Butter Chicken](https://ministryofcurry.com/instant-pot-butter-chicken/) | mains | 4.73/5 from 123 ratings |
-| Diwali / Indian hosting | [Butter Paneer {Paneer Makhani}](https://ministryofcurry.com/paneer-butter-masala/) | mains | 4.82/5 from 80 ratings |
-| Diwali / Indian hosting | [Instant Pot Chana Masala (Punjabi Chole)](https://ministryofcurry.com/instant-pot-chana-masala-recipe/) | mains | 4.8/5 from 67 ratings |
-| Diwali / Indian hosting | [Instant Pot Dal Makhani with Brown Rice](https://ministryofcurry.com/madras-lentils-daal-makhani-instant-pot/) | mains | 4.68/5 from 134 ratings |
-| Diwali / Indian hosting | [Instant Pot Palak Paneer](https://ministryofcurry.com/palak-paneer-instant-pot/) | mains | 4.61/5 from 97 ratings |
-| Diwali / Indian hosting | [Vegetable Pulao Recipe | Veg Pulav](https://ministryofcurry.com/moms-veg-pulao/) | sides | 4.75/5 from 4 ratings |
-| Diwali / Indian hosting | [Indian Cucumber Salad (Kakdi Koshimbir)](https://ministryofcurry.com/indian-cucumber-salad/) | sides | 4.75/5 from 12 ratings |
-| Diwali / Indian hosting | [Cilantro Mint Chutney](https://ministryofcurry.com/cilantro-mint-chutney/) | sides | 4.77/5 from 34 ratings |
-| Diwali / Indian hosting | [Instant Pot Rice Pudding](https://ministryofcurry.com/rice-pudding-instant-pot/) | desserts | 4.43/5 from 61 ratings |
-| Diwali / Indian hosting | [Instant Pot Carrot Halwa Recipe](https://ministryofcurry.com/carrot-halwa-instant-pot/) | desserts | 4.71/5 from 44 ratings |
-| Diwali / Indian hosting | [Quick & Easy Badam Burfi (30 Minutes)](https://ministryofcurry.com/badam-burfi/) | desserts | 4.81/5 from 77 ratings |
-| Christmas / Goan | [Easy Tuna Croquettes](https://withwendyandshannon.com/blog/easy-tuna-croquettes/) | starters | No rating verified |
-| Christmas / Goan | [Goan Pork Vindaloo](https://theaspiringhomecook.com/2019/10/goan-pork-vindaloo.html) | mains | No rating verified |
-| Christmas / Goan | [Chicken Cafreal](https://aromaticessence.co/chicken-cafreal/) | mains | 5/5 from 9 ratings |
-| Christmas / Goan | [The Ultimate Goan Caldin Curry](https://withwendyandshannon.com/blog/the-ultimate-goan-caldin-curry/) | mains | No rating verified |
-| Christmas / Goan | [Easy Traditional Goan Sannas](https://withwendyandshannon.com/blog/easy-traditional-goan-sannas-recipe/) | sides | No rating verified |
-| Christmas / Goan | [The Best Doce](https://withwendyandshannon.com/blog/the-best-doce/) | desserts | No rating verified |
-| Christmas / Goan | [Easy Christmas Fruit Cake Without Alcohol](https://www.ruchikrandhap.com/christmas-fruit-cake-without-alcohol/) | desserts | 4.92/5 from 12 ratings |
-| Christmas / Goan | [Super Easy Snowball Cookies](https://withwendyandshannon.com/blog/super-easy-snowball-cookies/) | desserts | No rating verified |
-| Thanksgiving / US Christmas | [Baked Brie En Croute](https://www.wellplated.com/brie-en-croute/) | starters | 5/5 from 7 ratings |
-| Thanksgiving / US Christmas | [Stuffed Dates (6 Ways!)](https://www.wellplated.com/stuffed-dates/) | starters | 5/5 from 3 ratings |
-| Thanksgiving / US Christmas | [Thanksgiving Turkey](https://www.wellplated.com/how-to-cook-a-turkey/) | mains | 4.98/5 from 302 ratings |
-| Thanksgiving / US Christmas | [Garlic Mashed Potatoes Recipe](https://www.wellplated.com/garlic-mashed-potatoes/) | sides | 5/5 from 6 ratings |
-| Thanksgiving / US Christmas | [Healthy Sweet Potato Casserole](https://www.wellplated.com/healthy-sweet-potato-casserole/) | sides | 4.95/5 from 35 ratings |
-| Thanksgiving / US Christmas | [Cornbread Stuffing Recipe](https://www.wellplated.com/cornbread-sausage-stuffing/) | sides | 4.99/5 from 51 ratings |
-| Thanksgiving / US Christmas | [Cranberry Orange Sauce](https://www.wellplated.com/homemade-cranberry-sauce/) | sides | 4.96/5 from 42 ratings |
-| Thanksgiving / US Christmas | [Healthy Green Bean Casserole](https://www.wellplated.com/healthy-green-bean-casserole/) | sides | 4.92/5 from 45 ratings |
-| Thanksgiving / US Christmas | [Caramelized Brussels Sprouts](https://www.wellplated.com/caramelized-brussels-sprouts/) | sides | 5/5 from 4 ratings |
-| Thanksgiving / US Christmas | [Chocolate Pecan Pie](https://www.wellplated.com/chocolate-pecan-pie/) | desserts | 5/5 from 14 ratings |
-| Thanksgiving / US Christmas | [Sweet Potato Pie](https://www.wellplated.com/old-fashioned-sweet-potato-pie/) | desserts | 4.99/5 from 64 ratings |
-| Thanksgiving / US Christmas | [Gluten Free Apple Crisp](https://www.wellplated.com/gluten-free-apple-crisp/) | desserts | 4.87/5 from 23 ratings |
-| Christmas / Mangalorean | [Mushroom Cutlets](https://www.ruchikrandhap.com/mushroom-cutlets/) | starters | No rating verified |
-| Christmas / Mangalorean | [Mince Meat Cutlets](https://www.ruchikrandhap.com/mince-meat-cutlets/) | starters | 5/5 from 2 ratings |
-| Christmas / Mangalorean | [Pork Bafat | Dukra Maas](https://www.ruchikrandhap.com/pork-bafa/) | mains | 5/5 from 10 ratings |
-| Christmas / Mangalorean | [Sonay Sukhe (Black Chana Sukka)](https://www.ruchikrandhap.com/sonay-sukhe-black-chana-fugadsukka/) | sides | No rating verified |
-| Christmas / Mangalorean | [Coffee Fruit Cake](https://www.ruchikrandhap.com/coffee-fruit-cake-no-alcohol-las/) | desserts | No rating verified |
+| Recipe | App review flag |
+| --- | --- |
+| [Indian Cucumber Salad (Kakdi Koshimbir)](https://ministryofcurry.com/indian-cucumber-salad/) | Reviewed |
+| [Cilantro Mint Chutney](https://ministryofcurry.com/cilantro-mint-chutney/) | Reviewed |
+| [Instant Pot Rice Pudding](https://ministryofcurry.com/rice-pudding-instant-pot/) | Reviewed |
+| [Instant Pot Carrot Halwa Recipe](https://ministryofcurry.com/carrot-halwa-instant-pot/) | Reviewed |
+| [Butter Paneer {Paneer Makhani}](https://ministryofcurry.com/paneer-butter-masala/) | Reviewed |
+| [Sweet Potato Pie](https://www.wellplated.com/old-fashioned-sweet-potato-pie/) | Reviewed |
+| [Tandoori chicken wings](https://ministryofcurry.com/tandoori-chicken-wings/) | Reviewed |
+| [Chicken Cafreal](https://aromaticessence.co/chicken-cafreal/) | Reviewed |
+| [Goan Sannas (yeast method)](https://xantilicious.com/recipe/sanna/) | Reviewed |
+| [Cranberry Orange Sauce](https://www.wellplated.com/homemade-cranberry-sauce/) | Reviewed |
+| [Coffee Fruit Cake](https://www.ruchikrandhap.com/coffee-fruit-cake-no-alcohol-las/) | Reviewed |
+| [Cornbread Stuffing Recipe](https://www.wellplated.com/cornbread-sausage-stuffing/) | Reviewed |
+| [Healthy Sweet Potato Casserole](https://www.wellplated.com/healthy-sweet-potato-casserole/) | Reviewed |
+| [Garlic Mashed Potatoes Recipe](https://www.wellplated.com/garlic-mashed-potatoes/) | Reviewed |
+| [Easy Christmas Fruit Cake Without Alcohol](https://www.ruchikrandhap.com/christmas-fruit-cake-without-alcohol/) | Reviewed |
+| [Masala Nuts](https://ministryofcurry.com/masala-nuts/) | Reviewed |
+| [Sonay Sukhe (Black Chana Sukka)](https://www.ruchikrandhap.com/sonay-sukhe-black-chana-fugadsukka/) | Reviewed |
+| [Baked Brie En Croute](https://www.wellplated.com/brie-en-croute/) | Reviewed |
+| [Chicken Mince Cutlets](https://www.ruchikrandhap.com/mince-meat-cutlets/) | Reviewed |
+| [Stuffed Dates (6 Ways!)](https://www.wellplated.com/stuffed-dates/) | Needs review |
+| [Instant Pot Chana Masala (Punjabi Chole)](https://ministryofcurry.com/instant-pot-chana-masala-recipe/) | Reviewed |
+| [Healthy Green Bean Casserole](https://www.wellplated.com/healthy-green-bean-casserole/) | Reviewed |
+| [The Ultimate Goan Caldin Curry](https://withwendyandshannon.com/blog/the-ultimate-goan-caldin-curry/) | Reviewed |
+| [Chocolate Pecan Pie](https://www.wellplated.com/chocolate-pecan-pie/) | Reviewed |
+| [The Best Doce](https://withwendyandshannon.com/blog/the-best-doce/) | Reviewed |
+| [Instant Pot Butter Chicken](https://ministryofcurry.com/instant-pot-butter-chicken/) | Reviewed |
+| [Goan Pork Vindaloo](https://theaspiringhomecook.com/2019/10/goan-pork-vindaloo.html) | Reviewed |
+| [Caramelized Brussels Sprouts](https://www.wellplated.com/caramelized-brussels-sprouts/) | Reviewed |
+| [Gluten Free Apple Crisp](https://www.wellplated.com/gluten-free-apple-crisp/) | Reviewed |
+| [Mushroom Cutlets](https://www.ruchikrandhap.com/mushroom-cutlets/) | Reviewed |
+| [Pork Bafat — Dukra Maas](https://www.ruchikrandhap.com/pork-bafa/) | Reviewed |
+| [Quick & Easy Badam Burfi (30 Minutes)](https://ministryofcurry.com/badam-burfi/) | Reviewed |
+| [Air Fryer Paneer Tikka](https://ministryofcurry.com/paneer-tikka/) | Reviewed |
+| [Instant Pot Palak Paneer](https://ministryofcurry.com/palak-paneer-instant-pot/) | Reviewed |
+| [Vegetable Pulao Recipe — Veg Pulav](https://ministryofcurry.com/moms-veg-pulao/) | Reviewed |
+| [Aloo Chaat in Phyllo Shells](https://ministryofcurry.com/aloo-chaat-in-phyllo-cups/) | Reviewed |
+| [Easy Tuna Croquettes](https://withwendyandshannon.com/blog/easy-tuna-croquettes/) | Reviewed |
+| [Instant Pot Dal Makhani](https://ministryofcurry.com/madras-lentils-daal-makhani-instant-pot/) | Reviewed |
+| [Super Easy Snowball Cookies](https://withwendyandshannon.com/blog/super-easy-snowball-cookies/) | Needs review |
+| [Thanksgiving Turkey](https://www.wellplated.com/how-to-cook-a-turkey/) | Reviewed |
+
+The review flag does not prove safety, exact timing or allergy-free preparation. See the PRD for screening and scheduler checks; use the current evaluation summary for test evidence. No recipe or Notion records were modified by this inventory read.

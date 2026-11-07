@@ -1,5 +1,7 @@
 # Recipe replacements — October 28, 2026
 
+Source/review reference, not current library status. See [current collection](recipe-collection.md), [PRD](../PRD.md) and [latest evaluations](reviews/current-evaluation-results.md).
+
 The four original entries without usable ingredient and instruction data were removed from the active Notion Recipe Library. French Beans Foogath was briefly added, then removed at the user's request. The current collection has 40 candidates, each with an ingredient list and an approximate task timing draft.
 
 | Removed | Current replacement | Why it fits | Timing or review point |

@@ -1,55 +1,31 @@
-# Simmer and Gather — architecture refinement implementation plan
+# Simmer and Gather — current build plan
 
-Updated October 28, 2026. Spec: PRD.md. Native Superpowers execution. Existing implementation is retained; earlier plan is archived under docs/archive. Do not recreate integrations or databases.
+Updated November 7, 2026. Branch: `build/hosting-demo`. Requirements: [PRD](../../../PRD.md). Native implementation; retain existing integrations and data.
 
-## Global constraints
-Preserve daily 120-minute defaults (weekdays and weekends), 15-minute flexible cleanup, one-hour arrival buffer and 20-minute finishing allowance. One batch per dish for demo. No standalone measuring tasks. No calendar writes without exact approval. No model call on ordinary calendar-only replanning. No hidden fallback to an old plan. Preserve existing recipe and gathering snapshots.
+## Implemented
+- [x] Versioned recipe preparation v5; typed quantities, source text, dependencies, storage policies, attention segments and granular readiness; cached results invalidate on relevant recipe/schema/prompt/preference changes.
+- [x] Bounded scheduling and host-only constraint fallback with independent validation; explicit missing-input, no-fit, search-limit, unsupported and validation-failure outcomes.
+- [x] Immutable plan snapshots, stale-version checks, exact approval and idempotent calendar operations.
+- [x] Current food-led responsive UI, schedule-first day/session groups, expandable practical instructions, active versus elapsed time, readable portions and photos.
+- [x] Explicit allergy confirmation; one Save and continue action and one Build my prep plan action.
+- [x] Checked dietary/vegetarian alternatives and bought-prepared previews; fresh recheck and atomic menu/new-plan acceptance; previous snapshots preserved.
+- [x] Read-only alternative previews, grouped conflict explanations, one option first, inline guest contributions.
+- [x] Device-local Have checklist, crossed-out items, reversible filtering and changed-amount reconfirmation. No hosting import/pantry-entry panel.
+- [x] Scoped Notion persistence and Google OAuth integration; local runtime tracing and LangSmith experiment runners.
+- [x] Refreshed README screenshots and silent generic-data walkthrough.
 
-## Task 1: Versioned recipe preparation
-- [x] Add explicit same-day/advance preparation policy, next-step storage anchor, start/end attention segments and granular readiness.
-- [x] Test missing storage remains unknown unless same-day selected; end attention is counted; source/schema/preferences invalidate cached preparation.
-- [x] Preserve source-backed guidance, provenance and recipe versions. Curated catalog is seed-only, not a permanent override of Notion edits.
-- [x] Keep source interpretation separate from gathering ingredient scaling and scheduling.
+## Latest verification
+Use [current evaluation results](../../reviews/current-evaluation-results.md) as the single result summary. Keep executable fixtures and automated regressions. Synthetic-calendar tests, DOM interaction tests and isolated browser captures have different scopes; none establishes production or physical-cooking reliability.
 
-## Task 2: Schedule and independent validation
-- [x] Test presence at task start/end, dependency storage anchors, limits, buffer and one-batch ingredient scaling.
-- [x] Validate candidate independently, including missing/duplicate work, helpers/resources and cleanup.
-- [x] Keep optional menu counts advisory; retain dietary and required-work blockers.
-- [x] Bounded adjustment search proposes changes only. Never claim infeasibility proven or apply a larger allowance silently.
+## Remaining release work
+- [ ] Full responsive browser journeys for conflict recovery, checked swaps, bought-food approval, long content and error/retry states. Current desktop/mobile captures cover a sample path, not every case.
+- [ ] Controlled Google calendar-write acceptance with explicit authorization, including retry/partial failure and stale approval. Generation alone never authorizes booking.
+- [ ] Verify deployed OAuth refresh/reconnect, Notion lifecycle, backups/restores, monitoring and account isolation if hosting resumes. Replit deployment is paused; no hosted app claimed.
+- [ ] Verify an all-in deployment topology within the $5/month target before any deployment.
+- [ ] Further practical recipe review, quantity ambiguity and helper/multiple-window/finishing coverage. Never relax constraints or source steps merely to increase completion rate.
 
-## Task 3: Plan lifecycle and output
-- [x] Store generation time; retain prior plans internally and show only the current proposal, with recipe-version staleness. Never substitute previous assignments.
-- [x] Show menu/quantity/reason table; daily fit summary; compact When/What/Details rows with expanded quantities/source/helper notes.
-- [x] Passive waits remain notes and dependencies; split separated work sessions. Retain small finishing checklist and grouped shopping.
-- [x] Frontend tests cover output, outdated plan state and approval disabled for outdated inputs.
+## Deferred
+Additional accounts, cross-device shopping sync, cooking progress, voice, live recovery and weekly meal prep. Live receipt/pantry upload remains gated on verified independent retention cleanup. Jev and paid semantic judges are optional experiments, not required runtime components.
 
-## Task 4: Evaluation and observability
-- [x] Add real recipe-preparation regression scenarios, cache tests and scheduling scenarios reflecting observed Diwali failures.
-- [x] Link sanitized preparation/schedule/validation trace stages; preserve privacy and recorded model/prompt/schema provenance.
-- [x] Run backend/frontend suites and build; distinguish local fixture evidence from live LangSmith and hosted verification.
-
-## Task 5: Acceptance and release
-- [x] Verify app rendering and existing selected gathering with current recipes; preserve menu and limits. No Google writes.
-- [x] Fresh-context whole-change review and targeted fixes, then record evidence and remaining external setup honestly.
-- [ ] Controlled calendar-write acceptance and deployment remain separately gated by approval and verified $5/month topology.
-
-## Review focus
-Stale input/recipe versions; missing storage versus same-day; attention after waiting; source-supported component storage; preserved daily limits and buffer; old/current UI separation; cached model output and evidence; no hidden calendar writes.
-
-## Verification evidence
-92 backend tests and 6 UI tests plus production build passed; see docs/architecture-refinement-ledger.md for actual runs. Current Diwali proposal regenerated with primary calendar, 22 assignments, no scheduling violations and 45/90/115 minutes Fri/Sat/Sun. Live LangSmith delivery is unverified because credentials are absent; no hosted cost or calendar-write acceptance is claimed. Previous approvals require revalidation after the schema change.
-
-### October 29: five-menu make-ahead regression pass
-- Implemented explicit dependency-gap limits and reviewed 18 recipe splits, including cooked-ahead storage and reheating.
-- Added a bounded OR-Tools fallback for solo-host plans after the greedy search fails. Uses no model tokens; unsupported helper/finishing cases retain the existing path. Independent final validation remains mandatory.
-- Added five complete-menu regression fixtures plus blocked-calendar and impossible-budget tests. All five draft schedules fit without buying dishes or increasing cooking limits; the existing cleanup allowance is retained.
-- Library changes are version-guarded and read back. All 45 non-recipe records remain unchanged; no calendar writes or saved-plan regeneration.
-- Remaining validation: live-calendar runs only when requested, physical cooking estimates/quantities, and hosted resource footprint of the added local solver. Do not describe fixture success as a live LangSmith evaluation.
-
-### November 7 architecture work
-Implemented additive quantity metadata, recipe graph checks, explicit scheduling outcomes, current library image rendering and removal of the import panel.
-Acceptance suite: scripts/evaluate_architecture.py (20 isolated controlled cases), backend/tests/test_architecture_contracts.py (including API generation/readback), and frontend/tests/architecture-audit.spec.ts (mocked desktop/phone flow).
-Use frontend/playwright.audit.config.ts for the isolated browser test; no real API writes.
-LangSmith export is explicit via scripts/export_architecture_evals.py with a privately configured key. Do not claim hosted reliability, live evaluation delivery, or current recipe completeness from fixture results. Remaining priorities are recorded in docs/reviews/2026-11-07-architecture-implementation.md.
-
-Pantry walkthrough implemented: per-gathering browser-local checks, strikethrough before filtering, reversible “Show only what I need,” and amount-change invalidation. Cross-device sync remains future work. Frontend build and 27 unit tests passed.
+## Invariants
+Two-hour daily defaults, flexible cleanup allowance and editable arrival buffer. No standalone measuring tasks. No silent buy/swap or larger time allowance. Preserve saved plans. Book only exact approved versions in the dedicated hosting calendar. No personal-event changes.

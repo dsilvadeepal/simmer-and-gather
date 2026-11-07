@@ -1,7 +1,7 @@
 import {test,expect} from '@playwright/test';
 import fs from 'node:fs';
 import path from 'node:path';
-const fixture=JSON.parse(fs.readFileSync(path.resolve('../docs/reviews/2026-10-29-five-menu-rerun.json'),'utf8'))[0];
+const fixture=JSON.parse(fs.readFileSync(path.resolve('../evals/fixtures/hosting-menus.json'),'utf8'))[0];
 test('desktop and phone show library photos, no import control, and precise schedule outcome',async({page})=>{
  const inputs=fixture.inputs;
  const photo='https://ministryofcurry.com/wp-content/uploads/2017/02/Tandoori-Chicken-Wings_-6.jpg';

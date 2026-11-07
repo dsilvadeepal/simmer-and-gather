@@ -1,7 +1,7 @@
 # Simmer and Gather — PRD
 
 Date: October 27, 2026. Status: **Design approved by Deepal on October 27, 2026; implementation plan prepared for review.**
-Detailed behavior, architecture and proposed implementation decisions: [Design](docs/superpowers/specs/2026-10-27-simmer-and-gather-design.md).
+Detailed behavior, architecture and proposed implementation decisions: [Design](../superpowers/specs/2026-10-27-simmer-and-gather-design.md).
 
 ## Problem and audience
 Hosting combines menu decisions, ingredient shopping, kitchen bottlenecks and preparation around work. Deepal wants most cooking finished before guests arrive, without exhausting evenings. Initial product is private and single-user. Friends/family using their own accounts are future work.

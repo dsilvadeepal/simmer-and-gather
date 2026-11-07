@@ -1,24 +1,22 @@
-# LangSmith regression evaluations
+# LangSmith configuration and evaluations
 
-Run from the repository root:
+Updated November 7, 2026. Local runtime traces and code-based experiments have been recorded. See [current evidence and experiment link](../reviews/current-evaluation-results.md).
 
+## Credentials
+Keep the app tracing key in ignored `.env.services` with `LANGSMITH_API_KEY`, `LANGSMITH_TRACING` and `LANGSMITH_PROJECT` as configured by the runtime. Load it privately into the server environment; files are not automatically loaded by the production factory.
+
+Evaluation runners use ignored `.env.langsmith-evals` containing `LANGSMITH_EVAL_API_KEY`, with dataset/experiment permissions. The evaluation token was created with a 30-day expiry; rotate when required. Never print or commit either key. A tracing-only key may not allow experiment/read operations.
+
+## Reproduce experiments
 ```sh
 uv run python scripts/run_langsmith_regression.py
+uv run python scripts/run_langsmith_heldout.py --corrected
+uv run python scripts/run_langsmith_realistic.py
+uv run python scripts/evaluate_random_ux_batch.py
 ```
+Read each script's frozen inputs and database requirements first. Regression scenarios use synthetic availability; randomized service runs isolate their records and check the real owner's records remain unchanged. No calendar integration writes. Uploads send redacted metrics/case labels, not personal event text.
 
-Create a private, gitignored `.env.langsmith-evals` file containing `LANGSMITH_EVAL_API_KEY`. Use a LangSmith personal access token with dataset and experiment access. Keep the app's tracing-only key in `.env.services`; do not copy either file to GitHub. The current evaluation token expires after 30 days.
+## What to inspect
+Open Datasets & Experiments, select the suite, then inspect expected outcome, actual outcome, validator violations and linked trace. A blocked case can pass. Compare against the frozen inputs instead of changing constraints just to improve the completion percentage.
 
-Dataset: `simmer-hosting-regression-v1`. Five historical menu fixtures are tested with baseline availability, more time, a fully busy calendar, and a missing dependency. The script runs the actual local scheduler. Only case labels and redacted outcomes are uploaded; no live calendar is accessed or changed.
-
-Scores:
-- `valid_complete_only`: a plan marked feasible has no independent-validator violations.
-- `constraint_handling`: blocked days cannot produce feasible plans; missing dependencies require input.
-- `complete_plan`: whether the result is complete. This is a separate outcome metric, not a correctness score; deliberately invalid inputs should not produce complete plans.
-
-First experiment (November 7, 2026): `hosting-regression-b5695b7e`. All 20 cases passed the two correctness checks; 6 were complete, 11 needed input, and 3 had no fit found. This is a limited scheduler regression suite, not proof of recipe accuracy, food safety, usability, or full live-integration correctness. Add human review and broader representative cases before treating it as product acceptance.
-
-No model judge is used, so the evaluation invokes no paid model. LangSmith storage/tracing allowances still apply. Results appear under simmer-and-gather-dev → Datasets & Experiments → simmer-hosting-regression-v1.
-
-## Reviewed follow-up
-
-The follow-up experiment adds `expected_outcome`: normal/expanded-time cases must complete; deliberately busy calendars must return `no_fit_found`; missing dependencies must return `needs_input`. The same 20 fixtures now yield 10 complete, 5 no-fit, 5 needs-input. Ingredient-label reminders remain visible, while actual missing or conflicting allergen information remains blocking. See `docs/reviews/2026-11-07-regression-outcome-review.md`.
+No model judge is used and these evaluators do not invoke paid judging models. LangSmith usage allowances still apply. Exact current results and scope live in the single evidence summary rather than duplicated counts here.

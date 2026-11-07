@@ -11,7 +11,7 @@ ROOT = Path(__file__).resolve().parents[1]
 def main():
     values = dict(line.split('=', 1) for line in (ROOT / '.env.langsmith-evals').read_text().splitlines() if '=' in line)
     client = Client(api_key=values['LANGSMITH_EVAL_API_KEY'])
-    fixtures = json.loads((ROOT / 'docs/reviews/2026-10-29-five-menu-rerun.json').read_text())[:5]
+    fixtures = json.loads((ROOT / 'evals/fixtures/hosting-menus.json').read_text())[:5]
     name = 'simmer-hosting-regression-v1'
     if client.has_dataset(dataset_name=name):
         dataset = client.read_dataset(dataset_name=name)

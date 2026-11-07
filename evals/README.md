@@ -1,12 +1,21 @@
-# Evaluation evidence
+# Evaluations
 
-Two separate evaluation tracks:
+Current recorded results: [evaluation summary](../docs/reviews/current-evaluation-results.md). Only the latest result per suite is retained in review documents. Frozen inputs and regression fixtures are retained to reproduce failures and prevent regressions.
 
-- `vision_benchmark.py`: actual paid-provider inference on four synthetic labeled image cases. Reports exact ingredient fields, unsupported quantities, latency and estimated token cost. See `docs/vision-benchmark.md`. No real pantry-photo accuracy claim.
-- `run.py --mode fixtures --split all`: 25 versioned executable hard-constraint/authorization scenarios, split 18 development / 7 heldout. Runs real application services against local PostgreSQL with external-service fakes. These are code regression evaluations, not 25 AI-generated menus or hosted acceptance tests. The heldout label reserves cases for future prompt/model comparisons; current deterministic code has been tested against them.
+## Run offline
+```sh
+uv run python evals/run.py --mode fixtures --split all
+uv run python scripts/evaluate_architecture.py
+uv run python scripts/evaluate_heldout_gatherings.py --corrected
+```
+The service regression runner exercises hard constraints and authorization against local PostgreSQL with external fakes. Architecture cases use frozen recipe fixtures. Corrected heldout cases preserve their input constraints. Review each runner before use: library/integration scripts are separate from offline evaluations.
 
-Human rubric for real plan review: acceptable / needs changes / unusable; record the recipe evidence, workload concern and proposed correction. No human scores are filled in yet. Real recipe/source adequacy, cooking effort and menu practicality remain unvalidated. Live planning semantic evaluation is not yet configured; runner refuses `--mode live` rather than substituting fixture success.
+For current random inputs see `random-ux-2026-11-07.json` and [human-readable inputs](../docs/demo/20-random-ux-test-inputs.md). `scripts/evaluate_random_ux_batch.py` runs the actual PlanningService/LangGraph under an isolated owner with simulated availability and publishes sanitized results to configured LangSmith.
 
-LangSmith: sanitized synthetic trace submitted using the configured tracing key. Readback returned 403: `runs:read` is not permitted for tracing keys. Submission is not verified dashboard persistence. No raw image, private calendar text, secrets or helper names sent. Trace `6204d85c-fb70-439c-a39e-bb684ba89311`, project `simmer-and-gather-dev`. Check dashboard with the user account; do not broaden key permissions just to read it. Runtime traces are opt-in and allowlisted, not automatic full LangGraph state capture. Paid judges remain disabled. Jev not selected without access and a labeled comparison.
+## Interpretation
+Independent code evaluators check valid complete schedules, expected blocks and constraints. Completion is not correctness: allergies, missing information or impossible budgets should block. No LLM-as-judge is used. Paid semantic/model-quality evaluation and physical cooking validation remain separate work. `run.py --mode live` is not configured and fails rather than claiming fixture success.
 
-Failure/fix example: scheduler initially allowed active work with zero presence to evade daily/calendar constraints. A failing regression reproduced it; source-duration validation now rejects that inconsistent task. Calendar retry tests similarly caught resurrection of deleted reservations. These are local code correctness improvements, not proof of real hosting success.
+Vision benchmarks use synthetic labeled images and paid-provider inference; see [benchmark](../docs/vision-benchmark.md). They do not establish real pantry-photo accuracy. Jev is not a selected dependency.
+
+## Privacy
+No live calendar writes in these suites. Never publish credentials, private calendar text or real household data. Keep tracing and evaluation credentials in ignored environment files. See [LangSmith setup](../docs/setup/langsmith-evaluations.md).

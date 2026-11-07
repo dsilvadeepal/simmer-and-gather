@@ -2984,8 +2984,7 @@
       "status": "feasible",
       "violations": [],
       "adjustments": []
-    },
-    "menu_findings": []
+    }
   },
   {
     "name": "Indian vegetarian",
@@ -5464,8 +5463,7 @@
       "status": "feasible",
       "violations": [],
       "adjustments": []
-    },
-    "menu_findings": []
+    }
   },
   {
     "name": "Thanksgiving",
@@ -8501,8 +8499,7 @@
       "status": "feasible",
       "violations": [],
       "adjustments": []
-    },
-    "menu_findings": []
+    }
   },
   {
     "name": "Goan Christmas",
@@ -11079,8 +11076,7 @@
       "status": "feasible",
       "violations": [],
       "adjustments": []
-    },
-    "menu_findings": []
+    }
   },
   {
     "name": "Christmas mixed table",
@@ -13499,7 +13495,6 @@
       "status": "feasible",
       "violations": [],
       "adjustments": []
-    },
-    "menu_findings": []
+    }
   }
 ]

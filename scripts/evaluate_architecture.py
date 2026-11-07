@@ -9,7 +9,7 @@ from simmer.agent import apply_menu_validation
 
 def run():
     root=Path(__file__).resolve().parents[1]
-    fixtures=json.loads((root/'docs/reviews/2026-10-29-five-menu-rerun.json').read_text())
+    fixtures=json.loads((root/'evals/fixtures/hosting-menus.json').read_text())
     results=[]
     for fixture in fixtures[:5]:
         for condition in ('baseline','more_time','busy_calendar','missing_dependency'):

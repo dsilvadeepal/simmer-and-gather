@@ -1,7 +1,7 @@
 import json,re,copy
 from pathlib import Path
 root=Path(__file__).resolve().parents[1]
-s=copy.deepcopy(json.loads((root/'docs/reviews/2026-10-29-five-menu-rerun.json').read_text())[1])
+s=copy.deepcopy(json.loads((root/'evals/fixtures/hosting-menus.json').read_text())[1])
 notes={
 'paneer-tikka':{'coat':'Cut paneer, peppers and onion into 1-inch pieces. Mix yogurt, spices, ginger, garlic and lemon juice; coat the pieces evenly.','cook':'Soak wooden skewers for 10 minutes. Alternate paneer and vegetables. Preheat at 400°F for 5 minutes; cook at 360°F for 5 minutes, turn, then cook 2–3 minutes more. Leave space between skewers; do not crowd the basket.'},
 'palak-paneer-instant-pot':{'prep':'Finely chop the onion. Wash spinach. Blend cashews with milk until smooth. Green chili: use 1–2 tsp per original 4-serving recipe, to taste; shopping allows the upper end.','base':'Sauté cumin, ginger, garlic and chili for a minute; add onion for 2 minutes. Add spinach, water and salt. Pressure-cook on high: 0 minutes for fresh spinach, 1 minute for frozen. Quick-release.','blend':'Blend spinach until smooth, then stir in the cashew paste.','finish':'Add paneer and garam masala to the reheated sauce. Stir gently until hot throughout; avoid breaking the cubes.'},

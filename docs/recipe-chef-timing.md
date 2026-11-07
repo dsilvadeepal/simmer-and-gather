@@ -1,5 +1,7 @@
 # Home-cook recipe timing draft
 
+Source/review reference, not current library status. See [current collection](recipe-collection.md), [PRD](../PRD.md) and [latest evaluations](reviews/current-evaluation-results.md).
+
 These are **untested estimates for one base recipe**, not publisher timings. Active minutes include hands-on work, occasional checks and cleanup; unattended minutes cover marinating, soaking, cooking, resting and cooling. Elapsed minutes add the two as a conservative sequential estimate. Some passive time can overlap another task. For 15 guests, scaling and extra batches can increase active and elapsed time.
 
 The [task breakdown](recipe-chef-timing.json) and the Notion pages include these estimates. `Planning Ready=false` remains in Notion. The black chana has a 10–12 hour or overnight soak, and the Christmas fruit cake has a 6–8 hour or overnight fruit soak; those waits should appear on the calendar even though they are not continuous labor. For the 14–16 lb turkey, the roast allowance follows [FoodSafety.gov’s size chart](https://www.foodsafety.gov/food-safety-charts/meat-poultry-charts); use a thermometer to confirm 165°F in poultry, rather than relying on minutes alone. [FoodSafety.gov](https://www.foodsafety.gov/food-safety-charts/safe-minimum-internal-temperatures)

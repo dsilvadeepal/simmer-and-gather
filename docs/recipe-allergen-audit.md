@@ -1,5 +1,7 @@
 # Recipe gluten and nut screening
 
+Source/review reference, not current library status. See [current collection](recipe-collection.md), [PRD](../PRD.md) and [latest evaluations](reviews/current-evaluation-results.md).
+
 Screened the current 40 recipe candidates for the demo’s two requested concerns: gluten and peanuts/tree nuts. All 40 Notion entries have `Dietary Notes` and remain `Planning Ready=false`. The [recipe manifest](recipe-collection.json) records the source ingredient evidence and label-review items.
 
 | Screen result | Recipes |

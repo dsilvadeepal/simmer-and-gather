@@ -290,8 +290,8 @@ All unlisted dietary restrictions are absent; no helper unless specified.
   - Instant Pot Rice Pudding: 6 recipe servings; cook.
 - Helper: none.
 
-Run: `uv run python scripts/evaluate_heldout_gatherings.py`. Exact frozen data: `evals/heldout-gatherings-v1.json`.
+Run: `uv run python scripts/evaluate_heldout_gatherings.py --corrected`. Current corrected snapshots: `evals/heldout-gatherings-corrected.json`; original inputs remain frozen in `evals/heldout-gatherings-v1.json`.
 
-## Actual results
+## Latest results
 
-13 complete plans; 17 of 20 matched the original expectations. See `docs/reviews/2026-11-07-heldout-review.md` for all results and recommended fixes. Cases 11, 14 and 20 need attention. The expectations above remain unchanged to preserve the test record.
+15 complete plans; all 20 expected outcomes matched. Cases 16–20 remain expected blocks (nut/gluten conflicts, vegetarian coverage, zero prep budget and unconfirmed allergies). See [current evaluation evidence](../reviews/current-evaluation-results.md). Inputs and expectations above are unchanged.

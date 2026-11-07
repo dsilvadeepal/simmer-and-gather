@@ -20,7 +20,7 @@ if __name__=='__main__':
     if not key:raise SystemExit('Set LANGSMITH_API_KEY privately before exporting. No upload attempted.')
     from langsmith import Client
     root=Path(__file__).resolve().parents[1]
-    report=json.loads((root/'docs/reviews/2026-11-07-architecture-evals.json').read_text())
+    report=json.loads((root/'docs/reviews/2026-11-07-architecture-evals-after.json').read_text())
     client=Client(api_key=key)
     ids=export(client,report,os.getenv('LANGSMITH_PROJECT','simmer-and-gather-dev'))
     print(f'Submitted {len(ids)} synthetic metric records; check LangSmith for persistence.')

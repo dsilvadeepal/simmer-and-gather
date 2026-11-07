@@ -1,18 +1,24 @@
-# Simmer and Gather — current architecture design
+# Simmer and Gather — current architecture
 
-Updated October 28, 2026. The current normative requirements are [PRD](../../../PRD.md). Historical design is preserved in docs/archive. The approved compact menu / daily-fit / When–What–Details output is the implementation target.
+Updated November 7, 2026. Product behavior: [PRD](../../../PRD.md). Work status: [build plan](../plans/2026-10-27-hosting-demo.md).
 
-## Boundaries
-Recipe preparation produces reusable typed task graphs; gathering planning scales quantities and schedules those graphs; publication applies exact approved versions. React calls authenticated FastAPI services. One LangGraph workflow orchestrates deterministic scheduling and validation. Models interpret recipe content and rank known menu options; external content never authorizes a write.
+## Data and responsibilities
+React/TypeScript calls authenticated FastAPI services. One bounded LangGraph workflow coordinates recipe retrieval, scheduling and validation. PostgreSQL stores owner-scoped input snapshots, recipe versions, plans, approvals, credentials and the operation ledger. Notion is the editable recipe library and readable plan projection. Google Calendar supplies selected availability and receives separately approved hosting blocks.
 
-## Recipe contract
-Retain recipe source/version, ingredients and source text, preparation provenance, dependency IDs, active/presence/elapsed minutes, optional explicit attention segments, timing basis, preparation policy and storage anchor. Unknown storage is preserved for legacy data. Explicit same-day policy permits same-day preparation without inventing advance storage. Next-step storage describes component lifetime; serving storage describes completed dish lifetime. Semantic support still requires review; substring evidence checks alone are not certification.
+## Preparation
+`prepare_recipe_for_hosting` v5 creates typed task graphs, source evidence, active/presence/elapsed durations, attention segments and advance-preparation/storage constraints. It never approves its own output. Quantity metadata distinguishes exact, range, to-taste and unknown amounts and preserves original text. Cache keys include source/content, schema, prompt, model and preferences; calendar-only replanning does not re-extract recipes.
 
-## State and ownership
-Notion edits create new imported versions. The app stores recipe snapshots and immutable plan inputs. A changed saved recipe is surfaced and must be explicitly refreshed into selections; prior schedules remain separate. Calendar writes require exact revision/hash, current recipe checks and fresh calendar availability. Generated timestamps order plans and do not affect semantic content hashes. Old schema approvals must be revalidated rather than silently trusted.
+## Scheduling and recovery
+Validate recipe graphs before scheduling. Scale ingredients independently of the standard single-batch kitchen assumption. Use bounded heuristic/search and a supported host-only OR-Tools fallback, then independently validate completeness, dependencies, storage, attention, resources, daily allowances, helper availability and buffer. Search failure is not proof of impossibility.
 
-## Scheduling
-Single batch per dish is the demo default; ingredient scaling is independent. Active attention segments preserve end-of-cook work. Continuous supervision counts in presence. Passive waiting consumes elapsed time/resources where applicable but not daily effort; UI displays notes. Validator checks exact task completeness, dependencies, window anchors, helpers, resources, attention, daily totals, cleanup and one-hour buffer. Bounded search failures report unresolved work, not mathematical impossibility. Optional category-count suggestions do not block an otherwise valid schedule.
+Outcomes distinguish complete, needs_input, no_fit_found, search_exhausted, unsupported search and final validation failure. Menu requirements can block an otherwise time-feasible schedule. Guest allergies must be explicit; missing screening is not absence of allergens.
 
-## Evaluation and cost
-Versioned recipe cache keys include source content, task schema, prompt, preparation preferences and model ID. Calendar-only planning does not re-extract recipes. Sanitized linked LangSmith stage summaries retain counts, codes, versions and timings, not personal calendar text. Tests cover lifecycle and actual failure classes; live LangSmith/hosting acceptance remain separately evidenced. Keep $5/month deployment gate and no automatic purchases.
+Checked alternatives use reviewed owner-library recipes, preserve must-haves and limits, and validate the entire menu and schedule. Search is bounded to 12 schedule attempts, 256 combinations, five candidates per dish and three results. Bought-prepared options use the same read-only preview/explicit acceptance pattern. Accepting a choice refreshes availability and recipe versions, validates again, and atomically saves the menu plus a new plan. Existing plan snapshots remain unchanged.
+
+## UI and write boundaries
+Gathering → Menu → Prep plan, with Schedule first and Menu/Shopping/Finishing secondary views. Previews contain read-only schedules, never shared shopping controls. Have checks use per-gathering browser storage with amount-change reconfirmation; they do not modify recipe quantities or server plans.
+
+Calendar approval and application remain separate from planning and menu acceptance. Exact revision/hash, fresh availability, recipe-version checks and idempotent operations guard booking. No background calendar polling or alerts. No automatic personal-event movement.
+
+## Evidence and deployment
+Sanitized LangSmith traces and code-based experiments record bounded summaries. See [current evidence](../../reviews/current-evaluation-results.md). LLM judges are not used. Local fixture success is not hosted acceptance. Replit is paused; $5/month remains a deployment target requiring verification. Upload retention, additional accounts and cross-device checklist sync are deferred.

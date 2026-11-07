@@ -1,5 +1,7 @@
 # Starter recipe review queue
 
+Source/review reference, not current library status. See [current collection](recipe-collection.md), [PRD](../PRD.md) and [latest evaluations](reviews/current-evaluation-results.md).
+
 Source-linked candidates, not yet imported/reviewed or proven schedulable. No recipe photographs are reused without permission. Open the link, preview structured data or paste the recipe, then review ingredients/servings and task evidence before saving. Source timing is not automatically a per-step duration or permission to store ahead.
 
 | Category | Candidate | Source | Review state |

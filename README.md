@@ -2,32 +2,24 @@
 
 A hosting assistant that turns a recipe collection, your menu choices and calendar availability into a practical prep plan—so you can enjoy time with your guests.
 
-Built as a personal agentic-AI course demo. The working implementation includes a React app, a LangGraph planning workflow, recipe preparation tools, deterministic scheduling, Notion persistence and approval-gated Google Calendar booking. Hosting deployment and multi-user access are separate from the local demo.
+Built as a Team 44 agentic-AI course project. The working implementation includes a React app, a LangGraph planning workflow, recipe preparation tools, deterministic scheduling, Notion persistence and approval-gated Google Calendar booking. Hosting deployment and multi-user access are separate from the local demo.
 
 ## Demo walkthrough
 
-[▶ Watch the silent walkthrough (2 min 10 sec)](https://drive.google.com/file/d/12PDSjSkLR9ifBV-xXBWccVpl4ZFs9V5D/view)
+[▶ Watch the updated silent walkthrough (88 seconds)](https://drive.google.com/file/d/1uc2Jl4eteHiK9Bc-QaiD3a42bexY9sZJ/view)
 
-A captioned walkthrough assembled from actual app screenshots, covering gathering setup, menu choices, prep sessions, shopping and the mobile view. Uses generic sample data and a precomputed plan; no personal calendar events or saved plans are changed.
+Recorded November 7, 2026 from the current UI with brief captions: gathering setup → menu → Build my prep plan → grouped sessions and expandable instructions → shopping checklist → finishing → phone prep view. All app API responses use isolated generic sample data and a precomputed plan; the video does not demonstrate live integrations or a fresh solver run. Saved plans and calendars are unchanged.
 
-### Diwali use case: review clickpath
+### Try the current flow
 
-**Scenario:** 15 people arriving November 1 at 6 pm, two hours of active prep per selected day, and major cooking finished by 5 pm. Menu: vegetable pulao, dal makhani, butter chicken, paneer tikka, bought dessert and ready-to-serve drinks.
+1. **Gathering:** choose guests, explicitly confirm allergies, select prep days, daily time and the arrival buffer. Choose **Save and continue**.
+2. **Menu:** review recipe-yield portions, must-haves, cook/buy choices, helpers and guest contributions. Select **Build my prep plan**.
+3. **Schedule:** check the outcome, daily active allowance and elapsed session time. Expand **How to** only for task-specific details.
+4. **Resolve conflicts:** review a checked recipe swap or bought-food option. Previews are read-only. **Use this menu and plan** or **Use this option and plan** rechecks availability and saves a new plan after approval.
+5. **Shopping:** tick ingredients already at home; they remain crossed out until **Show only what I need** is selected. Checks are local to this device.
+6. **Finishing:** review minor serving jobs. Calendar booking is separate and requires explicit approval.
 
-This is a review scenario, **not yet a passing end-to-end scheduling demo**. The November 6 rerun used updated recipe-library versions and an older calendar snapshot, not live availability. It scheduled 14 tasks but left work unscheduled, reported two storage/dependency conflicts, and retained three unresolved shopping amounts (medium yellow onion, large yellow onion and plum tomatoes). Do not treat the partial schedule as ready to cook from.
-
-| Step | Where to click | What to review |
-| --- | --- | --- |
-| 1 | **Gathering** | Check 15 guests, arrival time, prep days, daily allowance and one-hour buffer. Use a separate test gathering, not an existing saved plan. |
-| 2 | **Menu → Adjust dish** | Review the dishes above, servings and Cook/Buy choices. Servings follow recipe yield; they are not automatic buffet portions. |
-| 3 | **Prep plan → Regenerate prep plan** | Generate only in the separate test gathering. Check the result status before following any session. The default local seed is a different illustrative menu; it does not automatically load this Diwali review copy. |
-| 4 | **Plan checks** | Inspect unscheduled work and storage/dependency issues. A partial plan is a test finding, not evidence that the host must buy more dishes or allow more time. |
-| 5 | **Schedule → How to** | Review grouped sessions, active versus elapsed time, cutting instructions and cooking settings. |
-| 6 | **Shopping → category / Amounts to confirm** | Review scaled amounts and unresolved items. “About” denotes shopping rounding; use recipe amounts when cooking. |
-| 7 | **Menu / Finishing** within the plan | Review recipe links, quantities and menu-specific finishing notes. |
-| 8 | Stop before calendar approval | Reviewing the plan does not book events. Do not approve calendar blocks during this review. |
-
-The linked video above shows an earlier generic sample walkthrough; it does **not** demonstrate a successful run of this Diwali test. The isolated review copy is local and is not a publicly hosted app. Existing saved plans and calendar events were unchanged by the test.
+For reproducible menus, guest counts, dates and constraints, use the [20 current UX test inputs](docs/demo/20-random-ux-test-inputs.md). The default local seed differs from the video fixture. Neither is a publicly hosted service.
 
 ## A look inside
 
@@ -48,7 +40,7 @@ Refreshed November 7, 2026. These screenshots show the current UI—including ex
 1. **Set up a gathering.** Choose guests, dietary needs, prep days, daily time limits and a buffer before arrival. The default prep allowance is two hours per day, adjustable for each gathering.
 2. **Review the menu.** Use recipes from Notion, swap dishes, mark must-haves, choose bought dishes and record guest contributions. Helper availability can vary by session.
 3. **Generate a proposed plan.** Review grouped cooking sessions, task details, ingredient lists and recipe links. Waiting and soaking appear as notes rather than large standalone work blocks.
-4. **Adjust and recheck.** Refine the proposal before saving. Calendar availability is checked on demand; there are no background alerts.
+4. **Adjust and recheck.** Review checked alternatives before accepting a new menu and plan. Calendar availability is checked on demand; there are no background alerts.
 5. **Approve calendar booking separately.** Reviewing or generating a plan does not add events. Approved blocks go into a dedicated hosting calendar.
 
 The current personal UI focuses on the Personal calendar. A proposed schedule remains reviewable even when nothing has been booked.
@@ -81,7 +73,7 @@ One orchestration workflow coordinates bounded tools. Recipe interpretation can 
 
 ## Current scope and limits
 
-- Reviewed recipe collection and repeatable five-menu scheduling audits, with explicit remaining review gaps recorded in the review documents.
+- Versioned recipe collection, structured quantities and dependencies, plus repeatable menu and scheduling evaluations. Readiness is recipe-specific; no blanket culinary certification.
 - Compact session-first presentation, expandable practical instructions, recipe links and grouped shopping information.
 - Notion recipe/plan save paths and Google OAuth integration; real credentials must be configured locally.
 - Schedule validation for dependencies, daily effort limits, availability and arrival buffers. A feasible test schedule is not a physical cooking trial.
@@ -140,7 +132,7 @@ npm --prefix frontend run build
 uv run python evals/run.py --mode fixtures --split all
 ```
 
-Tests cover recipe preparation contracts, scheduling, approval boundaries, persistence and UI behavior. Fixture evaluations are repeatable offline checks; live-provider evaluations are separate and can consume credits. The [five-menu review](docs/reviews/2026-10-29-five-menu-rerun.md) records scheduling outcomes and limitations.
+Tests cover recipe preparation contracts, scheduling, approval boundaries, persistence and UI behavior. See [current evaluation evidence](docs/reviews/current-evaluation-results.md) for the latest results per suite and their limits. Code-based evaluators are used, not an LLM judge. Completion rate is separate from correctness: deliberately invalid inputs should remain blocked.
 
 README screenshots can be reproduced using `frontend/scripts/readme-screenshots.mjs` with Vite on port 5178 and a Playwright browser installed. The script intercepts API requests with fixture responses; it does not modify saved plans or calendars. Set `CHROME_PATH` to a local Chrome executable if required.
 

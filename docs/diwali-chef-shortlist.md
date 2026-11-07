@@ -1,5 +1,7 @@
 # Proposed Diwali cooking shortlist
 
+Source/review reference, not current library status. See [current collection](recipe-collection.md), [PRD](../PRD.md) and [latest evaluations](reviews/current-evaluation-results.md).
+
 Seven dishes for a 15-person mixed vegetarian/nonvegetarian gathering. This is a draft menu; bought/guest starters, dessert and drinks can be swapped in later. Estimated task minutes include setup and cleanup where noted; source recipe times are not a guaranteed workload.
 
 | Dish | Prep window and chef task breakdown | Still to check |

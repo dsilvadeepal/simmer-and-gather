@@ -21,8 +21,8 @@ Load the ignored `.env.google` into process environment without printing its con
 - Approval and Apply remain separate. Review the exact plan revision before booking. Retry uses stored operation IDs; changed/deleted remote events need review, not automatic replacement.
 - Back up PostgreSQL and preserve encryption/session secrets before changing hosts. Never store user records in ephemeral app files.
 - Paid models are disabled by default. Set `ENABLE_PAID_MODELS=true` only with the approved Fireworks model contract and credentials. Text requests reserve $0.05 against the persisted $3/month AI envelope; remaining $2 is budget headroom. This is an application guard, not a provider invoice guarantee. No automatic recharge or hidden provider fallback.
-- Uploaded images remain disabled in real mode until independent expiry cleanup is installed and verified. Manual ingredients work without uploads.
-- LangSmith runtime activation, Notion integration credentials, hosted database/hosting entitlement and live end-to-end checks are still release gates. Do not treat chat connector access as app credentials.
+- Uploaded images remain disabled in real mode until independent expiry cleanup is installed and verified. Use the device-local shopping Have checklist without uploads.
+- Local LangSmith tracing/experiments and scoped Notion integration have been exercised. Hosted database/hosting entitlement, OAuth lifecycle and approved booking acceptance remain release gates. Do not treat chat connector access as app credentials.
 
 ## Validation
 
@@ -32,4 +32,7 @@ GitHub Actions runs these checks with temporary PostgreSQL. Browser journeys req
 
 When the paid text model is enabled, recipe previews also propose source-quoted preparation steps. The result remains unreviewed; extraction failures retain the original source for manual editing. Make-ahead/storage limits remain unknown until reviewed.
 
-Local integration verification October 28: load private `.env.google`, `.env.notion` and `.env.services` into the server configuration. Google listing, Notion reads, reviewed snapshot exports and source discovery were verified. No keys are committed. The 35 recipe candidates need review before scheduling.
+## Current runtime and documentation
+Load private `.env.google`, `.env.notion` and `.env.services` into the server environment; never rely on a machine-specific `/tmp` launcher for onboarding. The checked-in factory is the supported entry point. Recipe import/review APIs remain implementation utilities, but the hosting UI no longer exposes an import panel or pantry-entry form.
+
+Replit deployment is paused. No publicly hosted app is claimed. Current evaluation evidence is in `docs/reviews/current-evaluation-results.md`; broader responsive and live-write acceptance remain separate. Browser-local shopping checks do not sync across devices.

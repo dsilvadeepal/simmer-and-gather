@@ -1,5 +1,7 @@
 # Recipe planning enrichment — October 28, 2026
 
+Source/review reference, not current library status. See [current collection](recipe-collection.md), [PRD](../PRD.md) and [latest evaluations](reviews/current-evaluation-results.md).
+
 This pass fills practical planning gaps without claiming that the dishes were cooked or tested. All 40 recipes now have a proposed base portion count and equipment list in the local manifest and Notion. For 22 recipes lacking publisher-confirmed make-ahead notes, a conservative **chef proposal** was added. Existing publisher-backed notes were preserved. All 40 retain `Planning Ready=false`.
 
 ## Basis and limits

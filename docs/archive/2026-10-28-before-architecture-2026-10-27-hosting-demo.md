@@ -230,7 +230,6 @@ Detailed connection steps and current evidence: `docs/google-oauth-setup.md`. Vi
 
 GitHub: https://github.com/dsilvadeepal/simmer-and-gather (private, verified October 28). Local implementation branch: `build/hosting-demo`. Implementation branch was pushed on October 28. Subsequent work is committed and pushed in verified increments; the main branch is not merged automatically. Never include `.env.google` or other credentials.
 
-October 28 continuation: runtime text-model budget wiring, calendar checkbox picker, recipe review form, Google refresh-race recovery, CI workflow, Docker packaging and operating runbook added. Backend 54 tests, frontend 3 tests, production build and 25 fixture eval checks pass; Docker image builds locally. Live integrations and final acceptance remain incomplete.
 
 Recipe preview now uses the explicitly enabled, budgeted text model for candidate steps; original source survives failures and candidates never become automatically reviewed. Latest local backend run: 55 passed. Existing Deepal Old project databases will be reused; app-owned Notion connection is awaiting browser sign-in.
 
@@ -260,7 +259,6 @@ October 28 current collection update: Four incomplete recipes were replaced with
 
 October 28 planning enrichment: All 40 Notion recipe pages now have base portion counts and equipment assumptions. Twenty-two recipes without a source-backed make-ahead note received a labeled chef proposal; publisher-backed notes were preserved for the others. Planning Ready remains false because quantities, labels and actual equipment capacity depend on the selected gathering. The sample-mode UI uses plain sample-workspace wording rather than demo caveats. See docs/recipe-planning-enrichment.md.
 
-October 28 app import slice: Scoped Notion MCP reads a selected recipe page's content and creates an editable, unreviewed recipe draft with parsed ingredients, servings and task timing estimates. A live structural audit found all three fields nonempty in 40/40 active pages. The app exposes the draft in Recipe Review rather than treating Notion's planning flag as approval. Allowlisted LangSmith run summaries are now wired into the production server when tracing is explicitly configured; no live LangSmith trace has been verified. Backend 71 tests and frontend 3 tests plus production build pass. Agentic concept coverage and remaining evidence are in `docs/agentic-build-coverage.md`.
 # Demo kitchen update — October 28
 
 Assume a typical family kitchen (one oven, two stovetop positions, one air fryer and one Instant Pot). Remove appliance configuration from the demo UI; helper profiles remain editable. Existing equipment fields support internal scheduling and are not a user setup requirement. Earlier tasks requiring users to enter equipment capacities are superseded. Batch counts remain estimates until actual vessel capacity is known; verify timing and conflicts without claiming that a recipe's base yield is an appliance capacity.

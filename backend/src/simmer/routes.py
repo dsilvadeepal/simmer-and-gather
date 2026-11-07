@@ -100,7 +100,7 @@ def install_routes(app,owner,store,availability=None,fixture_mode=False,model=No
             try:telemetry.record_run({'revision':data.gathering.revision},{'checked_candidates':result['checked_candidates'],'valid_options':len(result['suggestions'])},name='suggest_checked_alternatives')
             except Exception:pass
         return result
-    @app.post('/api/menu/{id}/alternatives/approve',response_model=PlanInputs)
+    @app.post('/api/menu/{id}/alternatives/approve')
     def approve_alternative(id:str,body:AlternativeApproval,o=Depends(owner)):
         from .alternatives import trial_for,checked
         from .db import Conflict
@@ -108,10 +108,12 @@ def install_routes(app,owner,store,availability=None,fixture_mode=False,model=No
         if data.gathering.revision!=body.expected_revision:raise Conflict('Gathering changed; find alternatives again')
         data.availability=snapshot(o,data.gathering,True)
         trial=trial_for(data,recipes.list_recipes(o),[s.model_dump() for s in body.swaps])
-        if checked(trial) is None:raise Conflict('This alternative no longer fits. Find alternatives again.')
+        plan=checked(trial)
+        if plan is None:raise Conflict('This alternative no longer fits. Find alternatives again.')
         ids={s.selection_id for s in body.swaps}
         changes=[{'action':'update','id':s.id,'values':s.model_dump(mode='json')} for s in trial.selections if s.id in ids]
-        return planning.apply_menu_changes(o,id,changes,body.expected_revision)
+        updated=planning.apply_menu_changes(o,id,changes,body.expected_revision,checked_plan=plan,checked_availability=trial.availability)
+        return {"inputs":updated,"plan":plan}
     @app.post('/api/availability/{id}',response_model=AvailabilitySnapshot)
     def recheck(id:str,o=Depends(owner)): return snapshot(o,planning.load(o,id).gathering,True)
     @app.post('/api/plans/{id}/generate',response_model=PlanCandidate)

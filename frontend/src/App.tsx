@@ -1,3 +1,4 @@
+import {AllergyChoices} from "./AllergyChoices";
 import {RecipePhoto,recipePhoto} from './RecipePhoto';
 import { useEffect, useState } from "react";
 import {
@@ -69,7 +70,7 @@ export default function App() {
   const [calendars,setCalendars] = useState<{id:string;name:string}[]>([]);
   const [calendarError,setCalendarError] = useState("");
   const [proposal,setProposal]=useState<Selection[]|null>(null);
-  async function run(action: () => Promise<void>) {
+  async function run(action: () => Promise<unknown>) {
     setLoading(true);
     setError("");
     setNotice("");
@@ -111,20 +112,29 @@ export default function App() {
     setDirty(true);
     setApproval(null);
   }
-  async function save() {
+  async function save(values: Partial<Gathering> = {}) {
     if (!g) return;
     const saved = await api<Gathering>("/gatherings", {
-      gathering: g,
+      gathering: {...g,...values},
       expected_revision: g.revision,
     });
     await load(saved.id!);
     setNotice("Saved");
+    return saved;
+  }
+  async function buildPlan(){
+    if(!g)return;
+    const current=dirty?await save():g;
+    if(!current)return;
+    const next=await api<Plan>("/plans/"+current.id+"/generate",{expected_revision:current.revision});
+    setPlan(next);setApproval(null);setBooking(null);setStep(2);
   }
   async function edit(changes: unknown[]) {
     if (!g) return;
-    if (dirty) throw new Error("Save your gathering changes first.");
+    const current=dirty?await save():g;
+    if(!current)return;
     const result = await api<Inputs>("/menu/" + g.id, {
-      expected_revision: g.revision,
+      expected_revision: current.revision,
       changes,
     });
     await load(result.gathering.id!);
@@ -269,20 +279,7 @@ export default function App() {
                   />
                 </label>
               </div>
-              <label>
-                Allergies (for example, peanuts; leave blank for none)
-                <input
-                  value={(g.allergies || []).join(", ")}
-                  onChange={(e) =>
-                    change({
-                      allergies: e.target.value
-                        .split(",")
-                        .map((x) => x.trim())
-                        .filter(Boolean),
-                    })
-                  }
-                />
-              </label>
+              <AllergyChoices value={g.allergies} onChange={allergies=>change({allergies})}/>
               <label>
                 Preferences
                 <input
@@ -521,11 +518,8 @@ export default function App() {
             <span className="meta">
               {dirty ? "Unsaved changes" : "No unsaved gathering changes"}
             </span>
-            <button disabled={loading || !dirty} onClick={() => run(save)}>
-              Save gathering
-            </button>
-            <button className="secondary" onClick={() => setStep(1)}>
-              Review menu <ArrowRight size={16} />
+            <button disabled={loading} onClick={()=>run(async()=>{if(dirty)await save();setStep(1);})}>
+              Save and continue <ArrowRight size={16}/>
             </button>
           </div>
         </>
@@ -549,8 +543,9 @@ export default function App() {
                   <button
                     className={g.spread === value ? "active" : "secondary"}
                     key={value}
-                    onClick={() =>
-                      change({
+                    disabled={loading}
+                    onClick={() => run(()=>
+                      save({
                         spread: value as Gathering["spread"],
                         category_counts: {
                           starters: value === "generous" ? 2 : 1,
@@ -564,7 +559,7 @@ export default function App() {
                           desserts: value === "generous" ? 2 : 1,
                           drinks: 2,
                         },
-                      })
+                      }))
                     }
                   >
                     {value === "manageable" ? "Manageable" : "More generous"}
@@ -578,6 +573,8 @@ export default function App() {
                   {c}
                   <input
                     aria-label={c + " count"}
+                    disabled={loading}
+                    onBlur={()=>{if(dirty)run(()=>save());}}
                     type="number"
                     min="0"
                     max="12"
@@ -601,13 +598,7 @@ export default function App() {
             <p className="meta">
               Counts include bought dishes and guest contributions. Your selected dishes stay until you change them.
             </p>
-            <button
-              className="secondary"
-              onClick={() => run(save)}
-              disabled={loading}
-            >
-              Save menu preferences
-            </button>
+
           </details>
           <div className="menu-grid">
             {(ws.inputs.selections || []).map((s) => (
@@ -818,8 +809,8 @@ export default function App() {
           </section>
 
           <div className="footer-actions">
-            <button onClick={() => setStep(2)}>
-              Review prep plan <ArrowRight size={16} />
+            <button disabled={loading} onClick={()=>run(buildPlan)}>
+              Build my prep plan <ArrowRight size={16} />
             </button>
           </div>
         </>
@@ -943,7 +934,7 @@ export default function App() {
                 </details>
               )}
               {(plan.advisories||[]).filter(a=>a.code==='buy_prepared').map(a=><section className="card" key={a.affected_ids?.[0]}><h2>Save cooking time</h2><p>{a.explanation}</p><button className="secondary" disabled={loading||dirty} onClick={()=>run(async()=>{await edit([{action:'update',id:a.affected_ids?.[0],values:{mode:'buy'}}]);setNotice('Menu updated. Regenerate the prep plan to review the change.');})}>Choose bought prepared</button></section>)}
-              <MenuAlternatives inputs={ws.inputs} plan={plan} disabled={dirty} onApproved={async()=>{await load(g.id!);setNotice("Swaps approved. Generate a proposed plan for your updated menu.");}}/>
+              <MenuAlternatives inputs={ws.inputs} plan={plan} disabled={dirty} onApproved={async(result)=>{await load(g.id!);setPlan(result.plan);setNotice("Menu and checked prep plan updated.");}}/>
               <PlanViews inputs={ws.inputs} plan={plan}/>
               <details className="card save-plan"><summary>Save plan & calendar options</summary><div className="grid">
                   {!ws.fixture_mode && <section className="card">

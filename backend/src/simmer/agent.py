@@ -53,7 +53,7 @@ class PlanningService:
     def __init__(self,store,model=None,telemetry=None): self.store=store; self.host=HostingService(store); self.model=model; self.telemetry=telemetry
     def load(self,owner,id): return self.host.load_plan_inputs(owner,id)
     @serialized
-    def apply_menu_changes(self,owner,gathering_id,changes,expected_revision):
+    def apply_menu_changes(self,owner,gathering_id,changes,expected_revision,checked_plan=None,checked_availability=None):
         with Session(self.store.engine) as session, session.begin():
             row=session.scalar(select(Document).where(Document.owner==owner,Document.kind=='gathering',Document.id==gathering_id).with_for_update())
             if row is None: raise Missing('Gathering not found')
@@ -81,6 +81,17 @@ class PlanningService:
             inputs.gathering.revision+=1; row.revision+=1; row.body=inputs.gathering.model_dump(mode='json')
             if saved: saved.body=inputs.model_dump(mode='json'); saved.revision+=1
             else: session.add(Document(owner=owner,kind='inputs',id=gathering_id,revision=1,body=inputs.model_dump(mode='json')))
+            if checked_plan is not None:
+                inputs.availability=checked_availability
+                saved.body=inputs.model_dump(mode="json")
+                from .scheduler import validate_schedule
+                if checked_plan.status!='feasible' or validate_schedule(inputs,checked_plan) or menu_blockers(validate_menu(inputs)):
+                    raise Conflict('The checked alternative no longer fits')
+                checked_plan.revision=inputs.gathering.revision
+                checked_plan.input_hash=digest(inputs)
+                checked_plan.content_hash=content_hash(checked_plan)
+                checked_plan.id=str(uuid5(NAMESPACE_URL,owner+gathering_id+checked_plan.content_hash))
+                session.add(Document(owner=owner,kind='plan',id=checked_plan.id,body={'plan':checked_plan.model_dump(mode='json'),'inputs':inputs.model_dump(mode='json')},revision=1))
             return inputs
     def propose(self,owner,id):
         graph=StateGraph(State)

@@ -50,6 +50,7 @@ def test_preview_is_read_only_and_approval_rechecks_calendar(store,owner):
     for r in library():store.put(owner,'recipe',r.id,r.model_dump(mode='json'))
     app=create_app(store,Auth(),availability=calendar);client=TestClient(app);h={'Authorization':'Bearer test'}
     path='/api/menu/'+data.gathering.id+'/alternatives'
+    store.put(owner,'plan','historical',{'test':'preserve historical plan'})
     before=store.list(owner,'inputs');plans=store.list(owner,'plan')
     response=client.post(path,headers=h,json={'expected_revision':data.gathering.revision})
     assert response.status_code==200,response.text
@@ -61,5 +62,12 @@ def test_preview_is_read_only_and_approval_rechecks_calendar(store,owner):
     assert store.list(owner,'inputs')==before
     calendar.blocked=False
     assert client.post(path+'/approve',headers=h,json=body).status_code==200
-    assert store.list(owner,'plan')==plans
+    saved_plans=store.list(owner,'plan')
+    assert len(saved_plans)==len(plans)+1
+    assert store.get(owner,'plan','historical')[0]=={'test':'preserve historical plan'}
+    new_plan=next(p for p in saved_plans if 'plan' in p)
+    assert new_plan['plan']['status']=='feasible'
+    assert new_plan['plan']['revision']==data.gathering.revision+1
+    from simmer.scheduler import digest
+    assert new_plan['plan']['input_hash']==digest(PlanInputs.model_validate(new_plan['inputs']))
     assert client.post(path+'/approve',headers=h,json=body).status_code==409

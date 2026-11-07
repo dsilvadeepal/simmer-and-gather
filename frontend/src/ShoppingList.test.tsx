@@ -20,7 +20,8 @@ test('cleans import artifacts, categorizes produce and frozen, labels rounding',
 });
 test('separates source ranges and optional quantities from unresolved amounts',()=>{
  render(<ShoppingList items={[{name:'1 to 2 tsp spice (scaled range: 2–4 tsp)',quantity:null},{name:'salt, to taste',quantity:null},{name:'mystery ingredient',quantity:null}]} selections={[]}/>);
- expect(screen.getByText('Recipe ranges · 1')).toBeVisible();
+ expect(screen.queryByText('Recipe ranges · 1')).not.toBeInTheDocument();
+ expect(screen.getByText('Pantry & spices · 1')).toBeVisible();
  expect(screen.getByText('To taste & optional · 1')).toBeVisible();
  expect(screen.getByText('Amounts to confirm · 1')).toBeVisible();
 });

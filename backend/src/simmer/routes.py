@@ -22,6 +22,10 @@ class AlternativeApproval(BaseModel):
     expected_revision: int
     swaps: list[AlternativeSwap] = Field(min_length=1,max_length=20)
 
+class PreparedChoice(BaseModel):
+    expected_revision: int
+    selection_id: str
+
 class Preview(BaseModel): source: str
 class SaveRecipe(BaseModel):
     recipe: RecipeSnapshot
@@ -114,6 +118,27 @@ def install_routes(app,owner,store,availability=None,fixture_mode=False,model=No
         changes=[{'action':'update','id':s.id,'values':s.model_dump(mode='json')} for s in trial.selections if s.id in ids]
         updated=planning.apply_menu_changes(o,id,changes,body.expected_revision,checked_plan=plan,checked_availability=trial.availability)
         return {"inputs":updated,"plan":plan}
+    def prepared_trial(id,body,o):
+        from .alternatives import checked
+        from .db import Conflict
+        data=planning.load(o,id)
+        if data.gathering.revision!=body.expected_revision:raise Conflict('Gathering changed; review the option again')
+        item=next((s for s in data.selections if s.id==body.selection_id),None)
+        if not item or item.must_have or item.mode!='cook':raise ValueError('Choose an optional cooked dish')
+        item.mode='buy'
+        data.availability=snapshot(o,data.gathering,True)
+        plan=checked(data)
+        if plan is None:raise Conflict('This bought option still needs dietary or schedule review')
+        return data,plan
+    @app.post('/api/menu/{id}/prepared-preview')
+    def preview_prepared(id:str,body:PreparedChoice,o=Depends(owner)):
+        data,plan=prepared_trial(id,body,o)
+        return {'inputs':data,'plan':plan}
+    @app.post('/api/menu/{id}/prepared-approve')
+    def approve_prepared(id:str,body:PreparedChoice,o=Depends(owner)):
+        data,plan=prepared_trial(id,body,o)
+        updated=planning.apply_menu_changes(o,id,[{'action':'update','id':body.selection_id,'values':{'mode':'buy'}}],body.expected_revision,checked_plan=plan,checked_availability=data.availability)
+        return {'inputs':updated,'plan':plan}
     @app.post('/api/availability/{id}',response_model=AvailabilitySnapshot)
     def recheck(id:str,o=Depends(owner)): return snapshot(o,planning.load(o,id).gathering,True)
     @app.post('/api/plans/{id}/generate',response_model=PlanCandidate)

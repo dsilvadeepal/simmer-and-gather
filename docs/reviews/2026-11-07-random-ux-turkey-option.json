@@ -1,0 +1,762 @@
+{
+  "status": "feasible",
+  "outcome": {
+    "code": "complete",
+    "message": "All preparation tasks are scheduled and passed the schedule checks.",
+    "solver_status": null
+  },
+  "violations": [],
+  "validator_codes": [],
+  "assignment_count": 11,
+  "fit_days": [
+    {
+      "day": "2027-01-22",
+      "presence_minutes": 180,
+      "cooking_minutes": 165,
+      "limit_minutes": 180,
+      "cleanup_allowance": 15
+    },
+    {
+      "day": "2027-01-23",
+      "presence_minutes": 0,
+      "cooking_minutes": 0,
+      "limit_minutes": 180,
+      "cleanup_allowance": 15
+    }
+  ],
+  "seconds": 0.01,
+  "plan": {
+    "id": "47727fbb-9f2d-4a44-8f4e-5fbb9f4c38db",
+    "gathering_id": "random-ux-03",
+    "revision": 1,
+    "input_hash": "b2f63dc841f7f1abd54c6a90c83b202bff1b7611c7f7eac97d3b2846c4eeef38",
+    "content_hash": "a6a60760fb22d7f457ebafea57ba61e9deb4cc3160fcbd14fd5765d4b49d9366",
+    "assignments": [
+      {
+        "task": {
+          "id": "dish-1:0:hosting-1",
+          "title": "Cranberry Orange Sauce \u00b7 Wash cranberries and zest orange",
+          "recipe_id": "dish-1",
+          "dependencies": [],
+          "minutes": 10,
+          "active_minutes": 10,
+          "presence_minutes": 10,
+          "skill": "cook",
+          "resource": null,
+          "capacity": 1,
+          "temperature": null,
+          "eligible": null,
+          "max_ahead_hours": 48.0,
+          "evidence": "https://www.wellplated.com/homemade-cranberry-sauce/ \u2014 method and storage reviewed 2026-10-29; duration/attention are planning estimates",
+          "ingredients": [],
+          "guidance": "Rinse the cranberries and prepare the orange zest and juice.",
+          "phase": "cooking",
+          "unattended": false,
+          "scale_mode": "combined",
+          "preparation_policy": "advance",
+          "storage_anchor": "serving",
+          "max_dependency_gap_minutes": null,
+          "min_dependency_gap_minutes": 0,
+          "attention_segments": [],
+          "timing_basis": "estimate"
+        },
+        "interval": {
+          "start": "2027-01-22T14:00:00Z",
+          "end": "2027-01-22T14:10:00Z"
+        },
+        "person": "host"
+      },
+      {
+        "task": {
+          "id": "dish-1:0:hosting-2",
+          "title": "Cranberry Orange Sauce \u00b7 Simmer cranberry sauce",
+          "recipe_id": "dish-1",
+          "dependencies": [
+            "dish-1:0:hosting-1"
+          ],
+          "minutes": 15,
+          "active_minutes": 15,
+          "presence_minutes": 15,
+          "skill": "cook",
+          "resource": "stovetop",
+          "capacity": 1,
+          "temperature": null,
+          "eligible": null,
+          "max_ahead_hours": 48.0,
+          "evidence": "https://www.wellplated.com/homemade-cranberry-sauce/ \u2014 method and storage reviewed 2026-10-29; duration/attention are planning estimates",
+          "ingredients": [],
+          "guidance": "Simmer, stirring frequently, until berries burst and the sauce thickens. It thickens further as it cools.",
+          "phase": "cooking",
+          "unattended": false,
+          "scale_mode": "combined",
+          "preparation_policy": "advance",
+          "storage_anchor": "serving",
+          "max_dependency_gap_minutes": null,
+          "min_dependency_gap_minutes": 0,
+          "attention_segments": [],
+          "timing_basis": "estimate"
+        },
+        "interval": {
+          "start": "2027-01-22T14:10:00Z",
+          "end": "2027-01-22T14:25:00Z"
+        },
+        "person": "host"
+      },
+      {
+        "task": {
+          "id": "dish-1:0:hosting-3",
+          "title": "Cranberry Orange Sauce \u00b7 Transfer sauce to a container and refrigerate",
+          "recipe_id": "dish-1",
+          "dependencies": [
+            "dish-1:0:hosting-2"
+          ],
+          "minutes": 5,
+          "active_minutes": 5,
+          "presence_minutes": 5,
+          "skill": "cook",
+          "resource": null,
+          "capacity": 1,
+          "temperature": null,
+          "eligible": null,
+          "max_ahead_hours": 48.0,
+          "evidence": "https://www.wellplated.com/homemade-cranberry-sauce/ \u2014 method and storage reviewed 2026-10-29; duration/attention are planning estimates",
+          "ingredients": [],
+          "guidance": "Let the sauce cool, then cover and refrigerate; serve chilled or at room temperature.",
+          "phase": "cooking",
+          "unattended": false,
+          "scale_mode": "combined",
+          "preparation_policy": "advance",
+          "storage_anchor": "serving",
+          "max_dependency_gap_minutes": null,
+          "min_dependency_gap_minutes": 0,
+          "attention_segments": [],
+          "timing_basis": "estimate"
+        },
+        "interval": {
+          "start": "2027-01-22T14:25:00Z",
+          "end": "2027-01-22T14:30:00Z"
+        },
+        "person": "host"
+      },
+      {
+        "task": {
+          "id": "dish-2:0:reviewed-step-1",
+          "title": "Sweet Potato Pie \u00b7 Prepare and chill crust",
+          "recipe_id": "dish-2",
+          "dependencies": [],
+          "minutes": 45,
+          "active_minutes": 15,
+          "presence_minutes": 15,
+          "skill": "cook",
+          "resource": null,
+          "capacity": 1,
+          "temperature": null,
+          "eligible": null,
+          "max_ahead_hours": 48.0,
+          "evidence": "Method reviewed against publisher; hands-on and waiting times are planning estimates",
+          "ingredients": [],
+          "guidance": "Roll crust, fit into the dish, cover and refrigerate at least 30 minutes.",
+          "phase": "cooking",
+          "unattended": false,
+          "scale_mode": "combined",
+          "preparation_policy": "advance",
+          "storage_anchor": "serving",
+          "max_dependency_gap_minutes": null,
+          "min_dependency_gap_minutes": 0,
+          "attention_segments": [
+            {
+              "offset_minutes": 0,
+              "minutes": 15
+            }
+          ],
+          "timing_basis": "estimate"
+        },
+        "interval": {
+          "start": "2027-01-22T14:30:00Z",
+          "end": "2027-01-22T15:15:00Z"
+        },
+        "person": "host"
+      },
+      {
+        "task": {
+          "id": "dish-2:0:reviewed-step-2",
+          "title": "Sweet Potato Pie \u00b7 Peel, cut and boil sweet potatoes",
+          "recipe_id": "dish-2",
+          "dependencies": [
+            "dish-2:0:reviewed-step-1"
+          ],
+          "minutes": 40,
+          "active_minutes": 15,
+          "presence_minutes": 40,
+          "skill": "cook",
+          "resource": "stovetop",
+          "capacity": 1,
+          "temperature": null,
+          "eligible": null,
+          "max_ahead_hours": 48.0,
+          "evidence": "Method reviewed against publisher; hands-on and waiting times are planning estimates",
+          "ingredients": [],
+          "guidance": "Cook and mash the sweet potatoes up to three days ahead, then measure the required amount. The full pie assembly window still needs review.",
+          "phase": "cooking",
+          "unattended": false,
+          "scale_mode": "batch",
+          "preparation_policy": "advance",
+          "storage_anchor": "serving",
+          "max_dependency_gap_minutes": 15,
+          "min_dependency_gap_minutes": 0,
+          "attention_segments": [],
+          "timing_basis": "estimate"
+        },
+        "interval": {
+          "start": "2027-01-22T15:15:00Z",
+          "end": "2027-01-22T15:55:00Z"
+        },
+        "person": "host"
+      },
+      {
+        "task": {
+          "id": "dish-2:0:reviewed-step-3",
+          "title": "Sweet Potato Pie \u00b7 Mash and cook filling base; cool before adding eggs",
+          "recipe_id": "dish-2",
+          "dependencies": [
+            "dish-2:0:reviewed-step-2"
+          ],
+          "minutes": 35,
+          "active_minutes": 15,
+          "presence_minutes": 35,
+          "skill": "cook",
+          "resource": "stovetop",
+          "capacity": 1,
+          "temperature": null,
+          "eligible": null,
+          "max_ahead_hours": 48.0,
+          "evidence": "Method reviewed against publisher; hands-on and waiting times are planning estimates",
+          "ingredients": [],
+          "guidance": "Cook and mash the sweet potatoes up to three days ahead, then measure the required amount. The full pie assembly window still needs review.",
+          "phase": "cooking",
+          "unattended": false,
+          "scale_mode": "batch",
+          "preparation_policy": "advance",
+          "storage_anchor": "serving",
+          "max_dependency_gap_minutes": 15,
+          "min_dependency_gap_minutes": 0,
+          "attention_segments": [],
+          "timing_basis": "estimate"
+        },
+        "interval": {
+          "start": "2027-01-22T15:55:00Z",
+          "end": "2027-01-22T16:30:00Z"
+        },
+        "person": "host"
+      },
+      {
+        "task": {
+          "id": "dish-2:0:reviewed-step-4",
+          "title": "Sweet Potato Pie \u00b7 Mix egg mixture and fill crust",
+          "recipe_id": "dish-2",
+          "dependencies": [
+            "dish-2:0:reviewed-step-3"
+          ],
+          "minutes": 10,
+          "active_minutes": 10,
+          "presence_minutes": 10,
+          "skill": "cook",
+          "resource": null,
+          "capacity": 1,
+          "temperature": null,
+          "eligible": null,
+          "max_ahead_hours": 48.0,
+          "evidence": "Method reviewed against publisher; hands-on and waiting times are planning estimates",
+          "ingredients": [],
+          "guidance": "Cook and mash the sweet potatoes up to three days ahead, then measure the required amount. The full pie assembly window still needs review.",
+          "phase": "cooking",
+          "unattended": false,
+          "scale_mode": "batch",
+          "preparation_policy": "advance",
+          "storage_anchor": "serving",
+          "max_dependency_gap_minutes": 15,
+          "min_dependency_gap_minutes": 0,
+          "attention_segments": [],
+          "timing_basis": "estimate"
+        },
+        "interval": {
+          "start": "2027-01-22T16:30:00Z",
+          "end": "2027-01-22T16:40:00Z"
+        },
+        "person": "host"
+      },
+      {
+        "task": {
+          "id": "dish-2:0:reviewed-step-5",
+          "title": "Sweet Potato Pie \u00b7 Bake, lowering temperature as directed",
+          "recipe_id": "dish-2",
+          "dependencies": [
+            "dish-2:0:reviewed-step-4"
+          ],
+          "minutes": 65,
+          "active_minutes": 15,
+          "presence_minutes": 15,
+          "skill": "cook",
+          "resource": "oven",
+          "capacity": 1,
+          "temperature": 375,
+          "eligible": null,
+          "max_ahead_hours": 48.0,
+          "evidence": "Method reviewed against publisher; hands-on and waiting times are planning estimates",
+          "ingredients": [],
+          "guidance": "Bake at 375\u00b0F for 10 minutes, then reduce to 325\u00b0F for about 50 minutes until set. Shield the crust if it browns too quickly.",
+          "phase": "cooking",
+          "unattended": false,
+          "scale_mode": "batch",
+          "preparation_policy": "advance",
+          "storage_anchor": "serving",
+          "max_dependency_gap_minutes": 15,
+          "min_dependency_gap_minutes": 0,
+          "attention_segments": [
+            {
+              "offset_minutes": 0,
+              "minutes": 5
+            },
+            {
+              "offset_minutes": 15,
+              "minutes": 5
+            },
+            {
+              "offset_minutes": 60,
+              "minutes": 5
+            }
+          ],
+          "timing_basis": "estimate"
+        },
+        "interval": {
+          "start": "2027-01-22T16:40:00Z",
+          "end": "2027-01-22T17:45:00Z"
+        },
+        "person": "host"
+      },
+      {
+        "task": {
+          "id": "dish-2:0:reviewed-step-6",
+          "title": "Sweet Potato Pie \u00b7 Cool pie on a rack, then cover and refrigerate",
+          "recipe_id": "dish-2",
+          "dependencies": [
+            "dish-2:0:reviewed-step-5"
+          ],
+          "minutes": 115,
+          "active_minutes": 5,
+          "presence_minutes": 5,
+          "skill": "cook",
+          "resource": null,
+          "capacity": 1,
+          "temperature": null,
+          "eligible": null,
+          "max_ahead_hours": 48.0,
+          "evidence": "Method reviewed against publisher; hands-on and waiting times are planning estimates",
+          "ingredients": [],
+          "guidance": "Cool on a rack and refrigerate within two hours of baking. Keep refrigerated until serving; the source supports preparing one or two days ahead.",
+          "phase": "cooking",
+          "unattended": false,
+          "scale_mode": "batch",
+          "preparation_policy": "advance",
+          "storage_anchor": "serving",
+          "max_dependency_gap_minutes": 15,
+          "min_dependency_gap_minutes": 0,
+          "attention_segments": [
+            {
+              "offset_minutes": 110,
+              "minutes": 5
+            }
+          ],
+          "timing_basis": "estimate"
+        },
+        "interval": {
+          "start": "2027-01-22T17:45:00Z",
+          "end": "2027-01-22T19:40:00Z"
+        },
+        "person": "host"
+      },
+      {
+        "task": {
+          "id": "dish-2:0:whipped-cream",
+          "title": "Sweet Potato Pie \u00b7 Whip optional cream and refrigerate separately",
+          "recipe_id": "dish-2",
+          "dependencies": [
+            "dish-2:0:reviewed-step-6"
+          ],
+          "minutes": 15,
+          "active_minutes": 15,
+          "presence_minutes": 15,
+          "skill": "cook",
+          "resource": null,
+          "capacity": 1,
+          "temperature": null,
+          "eligible": null,
+          "max_ahead_hours": 24.0,
+          "evidence": "https://www.wellplated.com/old-fashioned-sweet-potato-pie/",
+          "ingredients": [],
+          "guidance": "Whip cream with the optional topping ingredients; refrigerate until serving.",
+          "phase": "cooking",
+          "unattended": false,
+          "scale_mode": "batch",
+          "preparation_policy": "advance",
+          "storage_anchor": "serving",
+          "max_dependency_gap_minutes": null,
+          "min_dependency_gap_minutes": 0,
+          "attention_segments": [],
+          "timing_basis": "estimate"
+        },
+        "interval": {
+          "start": "2027-01-22T22:45:00Z",
+          "end": "2027-01-22T23:00:00Z"
+        },
+        "person": "host"
+      },
+      {
+        "task": {
+          "id": "cleanup:0",
+          "title": "Cleanup",
+          "recipe_id": "",
+          "dependencies": [],
+          "minutes": 15,
+          "active_minutes": null,
+          "presence_minutes": null,
+          "skill": "cook",
+          "resource": null,
+          "capacity": 1,
+          "temperature": null,
+          "eligible": null,
+          "max_ahead_hours": null,
+          "evidence": "Planning allowance: 15-minute cleanup estimate",
+          "ingredients": [],
+          "guidance": null,
+          "phase": "cleanup",
+          "unattended": false,
+          "scale_mode": "batch",
+          "preparation_policy": "unknown",
+          "storage_anchor": "serving",
+          "max_dependency_gap_minutes": null,
+          "min_dependency_gap_minutes": 0,
+          "attention_segments": [],
+          "timing_basis": "estimate"
+        },
+        "interval": {
+          "start": "2027-01-22T23:00:00Z",
+          "end": "2027-01-22T23:15:00Z"
+        },
+        "person": "host"
+      }
+    ],
+    "shopping": [
+      {
+        "name": "Thanksgiving Turkey",
+        "quantity": 8.0,
+        "unit": "servings",
+        "amount_detail": null
+      },
+      {
+        "name": "fresh cranberries",
+        "quantity": 6.0,
+        "unit": "oz",
+        "amount_detail": {
+          "kind": "exact",
+          "minimum": null,
+          "maximum": null,
+          "optional": false,
+          "source_text": "12 ounces fresh cranberries (thawed if frozen)",
+          "basis": "unverified"
+        }
+      },
+      {
+        "name": "orange",
+        "quantity": 0.5,
+        "unit": "count",
+        "amount_detail": {
+          "kind": "exact",
+          "minimum": null,
+          "maximum": null,
+          "optional": false,
+          "source_text": "Zest of 1 orange",
+          "basis": "unverified"
+        }
+      },
+      {
+        "name": "fresh orange juice",
+        "quantity": 0.375,
+        "unit": "cup",
+        "amount_detail": {
+          "kind": "exact",
+          "minimum": null,
+          "maximum": null,
+          "optional": false,
+          "source_text": "fresh orange juice",
+          "basis": "unverified"
+        }
+      },
+      {
+        "name": "honey )",
+        "quantity": 0.125,
+        "unit": "cup",
+        "amount_detail": {
+          "kind": "exact",
+          "minimum": null,
+          "maximum": null,
+          "optional": false,
+          "source_text": "honey (plus 2 tablespoons (plus additional 1 to 2 tablespoons to taste))",
+          "basis": "unverified"
+        }
+      },
+      {
+        "name": "ground cinnamon",
+        "quantity": 1.725,
+        "unit": "tsp",
+        "amount_detail": {
+          "kind": "exact",
+          "minimum": null,
+          "maximum": null,
+          "optional": false,
+          "source_text": "ground cinnamon",
+          "basis": "unverified"
+        }
+      },
+      {
+        "name": "cloves",
+        "quantity": 0.0625,
+        "unit": "tsp",
+        "amount_detail": {
+          "kind": "exact",
+          "minimum": null,
+          "maximum": null,
+          "optional": false,
+          "source_text": "cloves",
+          "basis": "unverified"
+        }
+      },
+      {
+        "name": "kosher salt",
+        "quantity": 0.2625,
+        "unit": "tsp",
+        "amount_detail": {
+          "kind": "exact",
+          "minimum": null,
+          "maximum": null,
+          "optional": false,
+          "source_text": "kosher salt",
+          "basis": "unverified"
+        }
+      },
+      {
+        "name": "9-inch pie crust",
+        "quantity": 0.8,
+        "unit": "count",
+        "amount_detail": {
+          "kind": "exact",
+          "minimum": null,
+          "maximum": null,
+          "optional": false,
+          "source_text": "1 9-inch pie crust",
+          "basis": "unverified"
+        }
+      },
+      {
+        "name": "large sweet potatoes",
+        "quantity": 1.6,
+        "unit": "count",
+        "amount_detail": {
+          "kind": "exact",
+          "minimum": null,
+          "maximum": null,
+          "optional": false,
+          "source_text": "2 large sweet potatoes",
+          "basis": "unverified"
+        }
+      },
+      {
+        "name": "light brown sugar",
+        "quantity": 0.6,
+        "unit": "cup",
+        "amount_detail": {
+          "kind": "exact",
+          "minimum": null,
+          "maximum": null,
+          "optional": false,
+          "source_text": "light brown sugar (packed)",
+          "basis": "unverified"
+        }
+      },
+      {
+        "name": "ground ginger",
+        "quantity": 0.8,
+        "unit": "tsp",
+        "amount_detail": {
+          "kind": "exact",
+          "minimum": null,
+          "maximum": null,
+          "optional": false,
+          "source_text": "ground ginger",
+          "basis": "unverified"
+        }
+      },
+      {
+        "name": "allspice",
+        "quantity": 0.4,
+        "unit": "tsp",
+        "amount_detail": {
+          "kind": "exact",
+          "minimum": null,
+          "maximum": null,
+          "optional": false,
+          "source_text": "allspice",
+          "basis": "unverified"
+        }
+      },
+      {
+        "name": "unsalted butter )",
+        "quantity": 0.2,
+        "unit": "cup",
+        "amount_detail": {
+          "kind": "exact",
+          "minimum": null,
+          "maximum": null,
+          "optional": false,
+          "source_text": "unsalted butter ((about 1/2 stick))",
+          "basis": "unverified"
+        }
+      },
+      {
+        "name": "2% evaporated milk, divided )",
+        "quantity": 1.0,
+        "unit": "cup",
+        "amount_detail": {
+          "kind": "exact",
+          "minimum": null,
+          "maximum": null,
+          "optional": false,
+          "source_text": "2% evaporated milk, divided ((about 10 ounces))",
+          "basis": "unverified"
+        }
+      },
+      {
+        "name": "granulated sugar",
+        "quantity": 0.266667,
+        "unit": "cup",
+        "amount_detail": {
+          "kind": "exact",
+          "minimum": null,
+          "maximum": null,
+          "optional": false,
+          "source_text": "granulated sugar",
+          "basis": "unverified"
+        }
+      },
+      {
+        "name": "large eggs",
+        "quantity": 2.4,
+        "unit": "count",
+        "amount_detail": {
+          "kind": "exact",
+          "minimum": null,
+          "maximum": null,
+          "optional": false,
+          "source_text": "3 large eggs",
+          "basis": "unverified"
+        }
+      },
+      {
+        "name": "bourbon",
+        "quantity": 0.8,
+        "unit": "tbsp",
+        "amount_detail": {
+          "kind": "exact",
+          "minimum": null,
+          "maximum": null,
+          "optional": false,
+          "source_text": "bourbon (or 2 additional teaspoons pure vanilla extract)",
+          "basis": "unverified"
+        }
+      },
+      {
+        "name": "pure vanilla extract",
+        "quantity": 1.6,
+        "unit": "tsp",
+        "amount_detail": {
+          "kind": "exact",
+          "minimum": null,
+          "maximum": null,
+          "optional": false,
+          "source_text": "pure vanilla extract",
+          "basis": "unverified"
+        }
+      },
+      {
+        "name": "unsweetened coconut flakes",
+        "quantity": 0.4,
+        "unit": "cup",
+        "amount_detail": {
+          "kind": "exact",
+          "minimum": null,
+          "maximum": null,
+          "optional": true,
+          "source_text": "unsweetened coconut flakes (optional, for serving)",
+          "basis": "unverified"
+        }
+      },
+      {
+        "name": "cold heavy whipping cream",
+        "quantity": 0.8,
+        "unit": "cup",
+        "amount_detail": {
+          "kind": "exact",
+          "minimum": null,
+          "maximum": null,
+          "optional": false,
+          "source_text": "cold heavy whipping cream",
+          "basis": "unverified"
+        }
+      },
+      {
+        "name": "(7-ounce) jar marshmallow cream",
+        "quantity": 0.8,
+        "unit": "count",
+        "amount_detail": {
+          "kind": "exact",
+          "minimum": null,
+          "maximum": null,
+          "optional": false,
+          "source_text": "1 (7-ounce) jar marshmallow cream (for marshmallow variation only)",
+          "basis": "unverified"
+        }
+      }
+    ],
+    "checklist": [
+      "Transfer to serving dishes",
+      "Check serving spoons",
+      "Finish drinks"
+    ],
+    "generated_at": "2026-11-07T15:56:15.466594Z",
+    "advisories": [],
+    "fit_days": [
+      {
+        "day": "2027-01-22",
+        "presence_minutes": 180,
+        "cooking_minutes": 165,
+        "limit_minutes": 180,
+        "cleanup_allowance": 15
+      },
+      {
+        "day": "2027-01-23",
+        "presence_minutes": 0,
+        "cooking_minutes": 0,
+        "limit_minutes": 180,
+        "cleanup_allowance": 15
+      }
+    ],
+    "status": "feasible",
+    "violations": [],
+    "adjustments": [],
+    "outcome": {
+      "code": "complete",
+      "message": "All preparation tasks are scheduled and passed the schedule checks.",
+      "solver_status": null
+    }
+  }
+}

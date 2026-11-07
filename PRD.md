@@ -98,3 +98,7 @@ Alternatives are unsaved previews with dish changes, servings and expandable pre
 ### First-pass flow simplification (November 7, 2026)
 
 Allergies require explicit confirmation: No known allergies, Avoid nuts, Avoid gluten, or Other. Untouched/cleared inputs stay unknown. Gathering has one Save and continue action. Menu variety saves when selected; category counts save on leaving the field; dish changes retain automatic save feedback. Build my prep plan saves pending edits, generates and opens the proposal in one action. Use this menu and plan rechecks the alternative and atomically saves the menu and new plan; no separate regeneration is required. Earlier saved plans and calendar events are preserved. Existing colors remain unchanged.
+
+### Preview isolation and conflict recovery
+
+Alternative previews display read-only prep schedules, never shopping controls or shared checklist state. Show one option initially and reveal more on demand. Missing allergy confirmation shows explicit choices and Confirm and build plan; hide empty plan tabs and save/calendar controls. Group dependency failures by dish, retaining full task details behind disclosure. Differentiate known dietary conflicts from missing screening; never infer no allergies or silently remove restrictions. Bought-prepared previews and approval use fresh availability checks and atomic new-plan saving, like recipe swaps. Guest contributions use one inline form. Shopping ranges remain in grocery categories. Existing colors and historical plans remain unchanged.

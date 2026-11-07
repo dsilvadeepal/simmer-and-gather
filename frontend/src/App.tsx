@@ -1,3 +1,6 @@
+import {GuestContribution} from "./GuestContribution";
+import {PreparedAlternative} from "./PreparedAlternative";
+import {ConflictSummary} from "./ConflictSummary";
 import {AllergyChoices} from "./AllergyChoices";
 import {RecipePhoto,recipePhoto} from './RecipePhoto';
 import { useEffect, useState } from "react";
@@ -162,6 +165,7 @@ export default function App() {
     equipment: {},
     helpers: [],
   };
+  const allergyPending=g.allergies==null || !!plan?.violations?.some(v=>v.code==="dietary");
   const selected = g.prep_days || [];
   const prepDays = daysBetween(
     g.earliest_prep || localDate(g.arrival).slice(0, 10),
@@ -652,33 +656,7 @@ export default function App() {
                     />
                   </label>
                 </div>
-                {s.mode === "guest" && (
-                  <button
-                    className="secondary"
-                    onClick={() => {
-                      const person = prompt("Who is bringing this?");
-                      const serves =
-                        person &&
-                        prompt("How many does it serve?", String(s.servings));
-                      const warm =
-                        serves && prompt("Warming minutes (0 if none)", "0");
-                      if (person && serves && warm !== null)
-                        updateItem(s, {
-                          contribution: {
-                            name: s.title,
-                            person,
-                            servings: +serves,
-                            confirmed: true,
-                            warming_minutes: +warm!,
-                            arrival: g.arrival,
-                            equipment: +warm! ? "oven" : null,
-                          },
-                        });
-                    }}
-                  >
-                    Set guest contribution
-                  </button>
-                )}
+                {s.mode === "guest" && <details><summary>Guest contribution</summary><GuestContribution key={JSON.stringify(s.contribution)} item={s} arrival={g.arrival} onSave={values=>updateItem(s,values)}/></details>}
                 {s.mode === "semi" && (
                   <p className="meta">
                     Review package instructions and preparation steps before
@@ -818,7 +796,8 @@ export default function App() {
       {step === 2 && (
         <>
           <div className="intro plan-intro"><p className="eyebrow">YOUR HOSTING PLAN</p><h1>{g.title}</h1><p>{g.arrival ? new Date(g.arrival).toLocaleString('en-US',{weekday:'long',month:'short',day:'numeric',hour:'numeric',minute:'2-digit',timeZone:g.profile?.timezone||'America/New_York'}) : 'Set your arrival time'} · {g.guests} guests</p></div>
-          <section className="plan-actions">
+          {allergyPending&&<section className="card"><h2>Confirm guest allergies first</h2><AllergyChoices value={g.allergies} onChange={allergies=>change({allergies})}/><button disabled={loading||g.allergies==null} onClick={()=>run(buildPlan)}>Confirm and build plan</button></section>}
+          {!allergyPending&&<><section className="plan-actions">
             <div className="actions">
               <button
                 className="secondary"
@@ -861,13 +840,13 @@ export default function App() {
               </button>
             </div>
           </section>
-          <p className="meta">Check conflicts to refresh calendar availability. Regenerate to rebuild the schedule after changing your menu or prep time. Neither books calendar events.</p>
-          {dirty && (
+          <p className="meta">Check conflicts to refresh calendar availability. Regenerate to rebuild the schedule after changing your menu or prep time. Neither books calendar events.</p></>}
+          {dirty && !allergyPending && (
             <p className="alert">
               Save your gathering changes before generating a plan.
             </p>
           )}
-          {!plan && (
+          {!plan && !allergyPending && (
             <div className="empty">
               <ChefHat size={36} />
               <h2>Ready when you are.</h2>
@@ -881,7 +860,7 @@ export default function App() {
             <button disabled={loading||dirty} onClick={()=>run(()=>edit((ws.inputs.selections||[]).filter(s=>s.recipe&&ws.recipe_updates?.includes(s.title)).map(s=>({action:'update',id:s.id,values:{recipe:ws.recipes.find(r=>r.id===s.recipe?.id)}}))))}>Refresh selected recipes</button>
 
           </div>}
-          {plan && (
+          {plan && !allergyPending && (
             <>
               <div
                 className={
@@ -899,15 +878,8 @@ export default function App() {
                     : "Timings are estimates. Review before adding to your calendar."}
                 </p>
               </div>
-              {(plan.violations || []).length > 0 && (
-                <details className="card plan-checks">
-                  <summary>ⓘ Plan checks · {new Set((plan.violations||[]).map(v => v.explanation)).size} to review</summary>
-                  <ul>
-                    {Array.from(new Set((plan.violations||[]).map(v => v.explanation))).map(message => {
-                      const count = (plan.violations||[]).filter(v => v.explanation === message).length;
-                      return <li key={message}>{message}{count > 1 ? ` (${count} items)` : ''}</li>;
-                    })}
-                  </ul>
+              <ConflictSummary inputs={ws.inputs} plan={plan} onEditDiet={()=>setStep(0)}/>
+              {!!plan.adjustments?.length&&<details className="card"><summary>Optional time changes</summary>
                   {plan.adjustments?.map((a, i) => (
                     <div key={i} className="adjustment">
                       <p>
@@ -931,12 +903,11 @@ export default function App() {
                       </button>
                     </div>
                   ))}
-                </details>
-              )}
-              {(plan.advisories||[]).filter(a=>a.code==='buy_prepared').map(a=><section className="card" key={a.affected_ids?.[0]}><h2>Save cooking time</h2><p>{a.explanation}</p><button className="secondary" disabled={loading||dirty} onClick={()=>run(async()=>{await edit([{action:'update',id:a.affected_ids?.[0],values:{mode:'buy'}}]);setNotice('Menu updated. Regenerate the prep plan to review the change.');})}>Choose bought prepared</button></section>)}
+                </details>}
+              {(plan.advisories||[]).filter(a=>a.code==='buy_prepared'&&a.affected_ids?.[0]).map(a=><PreparedAlternative key={a.affected_ids![0]} inputs={ws.inputs} selectionId={a.affected_ids![0]} disabled={dirty||loading} onApproved={async(result)=>{await load(g.id!);setPlan(result.plan);setNotice("Bought option and checked plan saved.");}}/>)}
               <MenuAlternatives inputs={ws.inputs} plan={plan} disabled={dirty} onApproved={async(result)=>{await load(g.id!);setPlan(result.plan);setNotice("Menu and checked prep plan updated.");}}/>
               <PlanViews inputs={ws.inputs} plan={plan}/>
-              <details className="card save-plan"><summary>Save plan & calendar options</summary><div className="grid">
+              {plan.status==="feasible"&&<details className="card save-plan"><summary>Save plan & calendar options</summary><div className="grid">
                   {!ws.fixture_mode && <section className="card">
                     <h2>Save to Notion</h2>
                     <p>Save your menu and prep schedule. This does not add calendar events.</p>
@@ -1004,7 +975,7 @@ export default function App() {
                       </p>
                     ))}
                   </section>
-              </div></details>
+              </div></details>}
             </>
           )}
         </>

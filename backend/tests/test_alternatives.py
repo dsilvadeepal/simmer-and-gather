@@ -71,3 +71,28 @@ def test_preview_is_read_only_and_approval_rechecks_calendar(store,owner):
     from simmer.scheduler import digest
     assert new_plan['plan']['input_hash']==digest(PlanInputs.model_validate(new_plan['inputs']))
     assert client.post(path+'/approve',headers=h,json=body).status_code==409
+
+def test_bought_option_preview_and_atomic_approval(store,owner):
+    from fastapi.testclient import TestClient
+    from simmer.api import create_app
+    class Auth:
+        def require_owner(self,token):return owner
+    data=PlanInputs.model_validate(CASES[0]['inputs'])
+    store.put(owner,'gathering',data.gathering.id,data.gathering.model_dump(mode='json'))
+    store.put(owner,'inputs',data.gathering.id,data.model_dump(mode='json'))
+    store.put(owner,'plan','keep',{'historical':True})
+    client=TestClient(create_app(store,Auth(),fixture_mode=True));h={'Authorization':'Bearer test'}
+    body={'expected_revision':data.gathering.revision,'selection_id':data.selections[0].id}
+    path='/api/menu/'+data.gathering.id
+    before=store.list(owner,'inputs')
+    response=client.post(path+'/prepared-preview',headers=h,json=body)
+    assert response.status_code==200,response.text
+    assert response.json()['plan']['status']=='feasible'
+    assert store.list(owner,'inputs')==before
+    assert len(store.list(owner,'plan'))==1
+    approved=client.post(path+'/prepared-approve',headers=h,json=body)
+    assert approved.status_code==200,approved.text
+    assert approved.json()['inputs']['selections'][0]['mode']=='buy'
+    assert len(store.list(owner,'plan'))==2
+    assert store.get(owner,'plan','keep')[0]=={'historical':True}
+    assert client.post(path+'/prepared-approve',headers=h,json=body).status_code==409

@@ -52,14 +52,14 @@ export function ShoppingList({items,selections,gatheringId}:{items:NonNullable<P
  const ranges=unknown.filter(i=>!flexible.includes(i)&&(i.amount_detail?.kind==='range'||/scaled range:/i.test(i.name)));
  const review=unknown.filter(i=>!flexible.includes(i)&&!ranges.includes(i));
  const groups=new Map<string,typeof items>();
- for(const i of known){const group=shoppingGroup(ingredientName(i.name));groups.set(group,[...(groups.get(group)||[]),i]);}
+ for(const i of [...known,...ranges]){const group=shoppingGroup(ingredientName(i.name));groups.set(group,[...(groups.get(group)||[]),i]);}
  const all=[...combined.values()], haveCount=all.filter(have).length;
  return <div className="shopping-list"><p className="meta">Tick what you have at home. “About” means rounded for shopping; use the recipe amounts when cooking.</p>
  <div className="row"><button className="secondary" aria-pressed={onlyNeeded} onClick={()=>setOnlyNeeded(!onlyNeeded)}>{onlyNeeded?'Show all ingredients':'Show only what I need'}</button><span role="status">{all.length-haveCount} to buy · {haveCount} already have</span></div>
  {storageKey&&<p className="meta">{saveError?'Checks could not be saved. Keep this tab open.':'Checks saved for this gathering on this device.'}</p>}
  {onlyNeeded&&all.length>0&&haveCount===all.length&&<p>You have everything on this list.</p>}
   {['Produce','Dairy & proteins','Pantry & spices','Frozen'].filter(name=>groups.has(name)&&visible(groups.get(name)!).length>0).map(name=><details key={name}><summary>{name} · {visible(groups.get(name)!).length}</summary><ul>{visible(groups.get(name)!).map(row)}</ul></details>)}
-  {!!visible(ranges).length&&<details><summary>Recipe ranges · {visible(ranges).length}</summary><p>The source gives a range; choose an amount that suits your guests.</p><ul>{visible(ranges).map(row)}</ul></details>}
+
   {!!visible(flexible).length&&<details><summary>To taste & optional · {visible(flexible).length}</summary><p>The source leaves the amount to your preference or use.</p><ul>{visible(flexible).map(row)}</ul></details>}
   {!!visible(review).length&&<details><summary>Amounts to confirm · {visible(review).length}</summary><p>Check the original recipe for your guest count before buying.</p><ul>{visible(review).map(row)}</ul></details>}
   {!rows.length&&<p>No shopping items in this proposal.</p>}

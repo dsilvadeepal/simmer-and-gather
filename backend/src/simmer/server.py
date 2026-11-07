@@ -31,7 +31,11 @@ def build_app(config=None):
     if len(config['SESSION_SECRET'])<32: raise RuntimeError('Session secret must be at least 32 characters')
     store=Store(config['DATABASE_URL'])
     google=GoogleCalendar(GoogleCredentials(store,config['ALLOWED_OWNER_ID'],config).access_token)
-    availability=AvailabilityService(google.events)
+    def hosting_calendar(owner):
+        from .db import Missing
+        try:return store.get(owner,'calendar','hosting')[0].get('id')
+        except Missing:return None
+    availability=AvailabilityService(google.events,hosting_calendar=hosting_calendar)
     auth=Authenticator(config['SESSION_SECRET'],config['ALLOWED_OWNER_ID'],'simmer','simmer')
     from .runtime import build_text_model
     from .telemetry import configured_telemetry

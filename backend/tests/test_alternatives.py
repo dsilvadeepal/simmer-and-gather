@@ -57,6 +57,14 @@ def test_preview_is_read_only_and_approval_rechecks_calendar(store,owner):
     option=response.json()['suggestions'][0]
     assert store.list(owner,'inputs')==before and store.list(owner,'plan')==plans
     body={'expected_revision':data.gathering.revision,'swaps':option['swaps']}
+    # Changing a dish that is NOT being swapped must reject acceptance too.
+    swapped={x['selection_id'] for x in option['swaps']}
+    untouched=next(s.recipe for s in data.selections if s.recipe and s.id not in swapped)
+    original,rev=store.get(owner,'recipe',untouched.id)
+    store.put(owner,'recipe',untouched.id,{**original,'version':original['version']+'-changed'},rev)
+    assert client.post(path+'/approve',headers=h,json=body).status_code==409
+    assert store.list(owner,'inputs')==before and store.list(owner,'plan')==plans
+    store.put(owner,'recipe',untouched.id,original,rev+1)
     calendar.blocked=True
     assert client.post(path+'/approve',headers=h,json=body).status_code==409
     assert store.list(owner,'inputs')==before
@@ -96,3 +104,52 @@ def test_bought_option_preview_and_atomic_approval(store,owner):
     assert len(store.list(owner,'plan'))==2
     assert store.get(owner,'plan','keep')[0]=={'historical':True}
     assert client.post(path+'/prepared-approve',headers=h,json=body).status_code==409
+
+@pytest.mark.parametrize('stage',['before_preview','after_preview'])
+def test_bought_option_rejects_changed_unchanged_recipe(store,owner,stage):
+    from fastapi.testclient import TestClient
+    from simmer.api import create_app
+    class Auth:
+        def require_owner(self,token):return owner
+    data=PlanInputs.model_validate(CASES[0]['inputs'])
+    store.put(owner,'gathering',data.gathering.id,data.gathering.model_dump(mode='json'))
+    store.put(owner,'inputs',data.gathering.id,data.model_dump(mode='json'))
+    for s in data.selections:
+        if s.recipe:store.put(owner,'recipe',s.recipe.id,s.recipe.model_dump(mode='json'))
+    client=TestClient(create_app(store,Auth(),fixture_mode=True));h={'Authorization':'Bearer test'}
+    body={'expected_revision':data.gathering.revision,'selection_id':data.selections[0].id}
+    path='/api/menu/'+data.gathering.id
+    if stage=='after_preview':assert client.post(path+'/prepared-preview',headers=h,json=body).status_code==200
+    r=data.selections[1].recipe.model_copy(deep=True);r.version+='-changed'
+    store.put(owner,'recipe',r.id,r.model_dump(mode='json'),1)
+    before=store.list(owner,'inputs')
+    endpoint='/prepared-preview' if stage=='before_preview' else '/prepared-approve'
+    response=client.post(path+endpoint,headers=h,json=body)
+    assert response.status_code==409,response.text
+    assert store.list(owner,'inputs')==before and store.list(owner,'plan')==[]
+
+
+def test_checked_acceptance_rechecks_recipe_after_schedule_before_commit(store,owner,monkeypatch):
+    from fastapi.testclient import TestClient
+    from simmer.api import create_app
+    import simmer.alternatives as alternatives
+    class Auth:
+        def require_owner(self,token):return owner
+    data=PlanInputs.model_validate(CASES[0]['inputs'])
+    store.put(owner,'gathering',data.gathering.id,data.gathering.model_dump(mode='json'))
+    store.put(owner,'inputs',data.gathering.id,data.model_dump(mode='json'))
+    for s in data.selections:
+        if s.recipe:store.put(owner,'recipe',s.recipe.id,s.recipe.model_dump(mode='json'))
+    original=alternatives.checked
+    def change_after_check(inputs):
+        plan=original(inputs)
+        recipe=data.selections[1].recipe.model_copy(deep=True);recipe.version+='-concurrent'
+        store.put(owner,'recipe',recipe.id,recipe.model_dump(mode='json'),1)
+        return plan
+    monkeypatch.setattr(alternatives,'checked',change_after_check)
+    client=TestClient(create_app(store,Auth(),fixture_mode=True))
+    before=store.list(owner,'inputs');gatherings=store.list(owner,'gathering')
+    response=client.post('/api/menu/'+data.gathering.id+'/prepared-approve',headers={'Authorization':'Bearer test'},json={'expected_revision':data.gathering.revision,'selection_id':data.selections[0].id})
+    assert response.status_code==409
+    assert store.list(owner,'inputs')==before and store.list(owner,'gathering')==gatherings
+    assert not store.list(owner,'plan')

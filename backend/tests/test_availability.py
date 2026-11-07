@@ -21,3 +21,14 @@ def test_disconnect_never_means_free():
     g=Gathering(arrival='2026-11-07T18:00:00-05:00',earliest_prep='2026-11-05',selected_calendars=['work'])
     result=AvailabilityService(unavailable).read_availability('o',g)
     assert result.status=='unavailable' and result.errors
+
+def test_hosting_reservations_checked_without_changing_selected_calendars():
+    calls=[]
+    def events(calendar,start,end):
+        calls.append(calendar)
+        return [{'id':'reserved','start':{'dateTime':'2026-11-05T18:00:00-05:00'},'end':{'dateTime':'2026-11-05T19:00:00-05:00'}}] if calendar=='hosting' else []
+    g=Gathering(arrival='2026-11-07T18:00:00-05:00',earliest_prep='2026-11-05',selected_calendars=['personal'])
+    service=AvailabilityService(events,clock=lambda:NOW,hosting_calendar=lambda owner:'hosting')
+    assert len(service.read_availability('o',g).busy)==1
+    assert calls==['personal','hosting'] and g.selected_calendars==['personal']
+    assert not service.read_availability('o',g,owned={('hosting','reserved')},force=True).busy

@@ -82,6 +82,9 @@ class PlanningService:
             if saved: saved.body=inputs.model_dump(mode='json'); saved.revision+=1
             else: session.add(Document(owner=owner,kind='inputs',id=gathering_id,revision=1,body=inputs.model_dump(mode='json')))
             if checked_plan is not None:
+                # Recheck under the same owner lock used by recipe saves.
+                from .recipe_readiness import require_current_recipes
+                require_current_recipes(inputs,RecipeService(self.store).list_recipes(owner))
                 inputs.availability=checked_availability
                 saved.body=inputs.model_dump(mode="json")
                 from .scheduler import validate_schedule

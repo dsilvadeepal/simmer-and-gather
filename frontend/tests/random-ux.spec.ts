@@ -4,6 +4,7 @@ import path from 'node:path';
 const report=path.resolve('../docs/reviews');
 const rows=JSON.parse(fs.readFileSync(path.join(report,'2026-11-07-random-ux-results.json'),'utf8'));
 const findings:any[]=[];
+const output=process.env.UX_REPORT_DIR||'/tmp/simmer-random-ux';fs.mkdirSync(output,{recursive:true});
 for(const width of [1440,390]){
  test(`${width}px: all 20 generated plans, build flow and controls`,async({page})=>{
   await page.setViewportSize({width,height:900});
@@ -27,8 +28,17 @@ for(const width of [1440,390]){
    current=row;await page.goto('/?view=menu');
    await expect(page.getByRole('button',{name:'Build my prep plan',exact:true})).toBeVisible();
    await page.getByRole('button',{name:'Build my prep plan',exact:true}).click();
+   if(row.inputs.gathering.allergies==null){
+    await expect(page.getByRole('heading',{name:'Confirm guest allergies first'})).toBeVisible();
+    await expect(page.getByRole('button',{name:'Confirm and build plan'})).toBeDisabled();
+    await expect(page.getByRole('tablist')).toHaveCount(0);
+    expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true);
+    findings.push({case:row.id,width,outcome:row.outcome,allergyConfirmation:true});
+    continue;
+   }
    await expect(page.locator('.plan-status')).toBeVisible();
    const overflow=await page.evaluate(()=>document.documentElement.scrollWidth>window.innerWidth);
+   expect(overflow).toBe(false);
    const buttons=await page.getByRole('button').allTextContents();
    const nestedTabs=await page.getByRole('tablist').count();
    const checks=await page.locator('.plan-checks summary').allTextContents();
@@ -40,10 +50,11 @@ for(const width of [1440,390]){
    }
    if(['random-ux-01','random-ux-16','random-ux-18','random-ux-20'].includes(row.id)){
     await page.getByRole('tab',{name:'Schedule',exact:true}).first().click();
-    await page.screenshot({path:path.join(report,`random-ux-${row.id}-${width}.png`),fullPage:true});
+    await page.screenshot({path:path.join(output,`random-ux-${row.id}-${width}.png`),fullPage:true});
    }
   }
-  fs.writeFileSync(path.join(report,`2026-11-07-ui-${width}.json`),JSON.stringify({findings:findings.filter(x=>x.width===width),dialogs,errors},null,2));
+  fs.writeFileSync(path.join(output,`2026-11-07-ui-${width}.json`),JSON.stringify({findings:findings.filter(x=>x.width===width),dialogs,errors},null,2));
+  expect(findings.filter(x=>x.width===width)).toHaveLength(20);
   expect(dialogs).toEqual([]);expect(errors).toEqual([]);
  });
 }

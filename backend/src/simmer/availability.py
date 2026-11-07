@@ -12,11 +12,14 @@ def event_interval(event,zone):
     return Interval(start=parse(event['start']),end=parse(event['end']))
 
 class AvailabilityService:
-    def __init__(self,events,clock=None):
+    def __init__(self,events,clock=None,hosting_calendar=None):
+        self.hosting_calendar=hosting_calendar or (lambda owner:None)
         self.events=events; self.clock=clock or (lambda:datetime.now(timezone.utc)); self.cache={}; self.lock=Lock()
     def read_availability(self,owner,gathering,owned=None,force=False):
         owned=owned or set(); now=self.clock()
-        key=(owner,gathering.id,gathering.revision,tuple(sorted(owned)),gathering.model_dump_json())
+        hosting=self.hosting_calendar(owner)
+        calendars=list(dict.fromkeys([*gathering.selected_calendars,*([hosting] if hosting else [])]))
+        key=(owner,gathering.id,gathering.revision,tuple(sorted(owned)),tuple(calendars),gathering.model_dump_json())
         with self.lock:
             old=self.cache.get(key)
             if not force and old and now-old.checked_at<timedelta(seconds=5): return old.model_copy(deep=True)
@@ -25,7 +28,7 @@ class AvailabilityService:
             start=datetime.combine(gathering.earliest_prep,time.min,ZoneInfo(gathering.profile.timezone))
             busy=list(gathering.profile.protected)
             try:
-                for calendar in gathering.selected_calendars:
+                for calendar in calendars:
                     for event in self.events(calendar,start,gathering.arrival):
                         if (calendar,event['id']) in owned or event.get('status')=='cancelled' or event.get('transparency')=='transparent': continue
                         if any(a.get('self') and a.get('responseStatus')=='declined' for a in event.get('attendees',[])): continue

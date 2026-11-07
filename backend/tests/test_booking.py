@@ -95,3 +95,21 @@ def test_changed_remote_reservation_blocks_remaining_writes(store,owner):
     service.availability=inspect
     result=service.apply_booking(owner,a.id)
     assert result.outcomes[0]['status']=='conflict'
+
+def test_second_gathering_cannot_overlap_hosting_reservations(store,owner):
+    from simmer.availability import AvailabilityService
+    p=ready(store,owner);a=ApprovalService(store).approve_plan(owner,p.id,p.revision,p.content_hash)
+    google=Google();BookingService(store,google,fresh).apply_booking(owner,a.id)
+    before=google.inserts
+    second=ready(store,owner);approval=ApprovalService(store).approve_plan(owner,second.id,second.revision,second.content_hash)
+    calls=[]
+    def events(calendar,start,end):
+        calls.append(calendar)
+        return list(google.remote.values()) if calendar=='dedicated' else []
+    availability=AvailabilityService(events).read_availability
+    with pytest.raises(Conflict,match='Calendar changed'):
+        BookingService(store,google,availability).apply_booking(owner,approval.id)
+    assert 'dedicated' in calls and google.inserts==before
+    # Retry of the first exact approval excludes only its verified reservations.
+    BookingService(store,google,availability).apply_booking(owner,a.id)
+    assert google.inserts==before

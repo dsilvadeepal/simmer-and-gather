@@ -52,7 +52,10 @@ class BookingService:
                 if conflicts:
                     return BookingResult(approval_id=approval.id,outcomes=[{'id':e['id'],'title':e['summary'],'status':'conflict' if e['id'] in conflicts else 'not_attempted'} for e in approval.events],notion_status='not_attempted')
         except Missing: calendar=None
-        fresh=self.availability(owner,inputs.gathering,owned=own,force=True)
+        # Include prior hosting reservations without modifying the approved inputs.
+        gathering=inputs.gathering.model_copy(deep=True)
+        if calendar and calendar not in gathering.selected_calendars:gathering.selected_calendars.append(calendar)
+        fresh=self.availability(owner,gathering,owned=own,force=True)
         if fresh.status!='fresh' or not fresh.checked_at or datetime.now(timezone.utc)-fresh.checked_at>timedelta(seconds=60): raise Conflict('Fresh calendar availability is required')
         current=inputs.model_copy(update={'availability':fresh})
         if validate_schedule(current,plan): raise Conflict('Calendar changed; review a new plan before booking')

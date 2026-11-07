@@ -11,6 +11,18 @@ Updated November 7, 2026. Latest recorded result per distinct suite only. These 
 
 Latest randomized experiment: https://smith.langchain.com/o/8ea48a8e-b636-497e-a9eb-ecd377951afe/datasets/1f7f374d-2553-4f71-bf5c-a821dff6b0ab/compare?selectedSessions=c11e89ee-b866-4639-93a0-34f2128cb82b
 
+## Final traced randomized batch
+
+20 fresh scenarios (seed 20261108), generated and run November 7, 2026 against the current merge-fix working tree. Guest counts 4–16; 2–4 prep days; 0/90/120/180/240 minute allowances; 30/60 minute buffers; varied helpers and dietary needs. Three cases include simulated midday calendar conflicts. All writes used a dedicated test database; the real owner's before/after fingerprint was unchanged.
+
+**20/20 expected outcomes matched.** Fifteen complete schedules passed independent validation. Four correctly need input (nut conflict, gluten conflict, vegetarian coverage, unconfirmed allergies); one correctly has no fit with zero prep budget. Checked alternatives were returned for the nut, gluten and vegetarian cases (3, 2 and 3 options). No changes were approved on the user's behalf.
+
+LangSmith readback verified **20 experiment runs and 60 application trace records**: 20 hosting-plan parents, 20 build_prep_schedule stages and 20 validate_hosting_plan stages. Individual reads were rate-limited; a batch query verified every recorded trace ID. Traces contain allowlisted summaries, not raw calendar or recipe payloads. Evaluation is code-based, not LLM-as-judge.
+
+[Open final traced experiment](https://smith.langchain.com/o/8ea48a8e-b636-497e-a9eb-ecd377951afe/datasets/0508a433-17bf-4fe3-b2b7-b8d822cc9111/compare?selectedSessions=c860c3b5-ebc3-4402-8fd2-a9964995d359).
+
+Inputs: [20 reproducible cases](../demo/20-final-traced-test-inputs.md). Frozen JSON: `evals/final-traced-2026-11-07.json`. Detailed results/readback: `2026-11-07-final-traced-results.json` and `2026-11-07-final-traced-run.json`. Runner: `scripts/evaluate_final_traced_batch.py`.
+
 ## Correctness versus completion
 A pass means the expected valid outcome, not necessarily a complete plan. Unknown allergies, known dietary conflicts and zero prep budgets must not silently become feasible. Code checks cover independent validation and expected outcomes. No LLM judge or paid inference quality claim.
 
@@ -27,5 +39,13 @@ All 20 randomized outcomes were exercised in a React DOM interaction harness. Re
 
 No actual-calendar writes in these evaluations. No physical cooking validation, exhaustive solver proof, live model ranking benchmark, hosted cost acceptance or production reliability claim. Recipe product-label and cross-contact checks remain distinct from ingredient screening.
 
-## Documentation refresh verification
-54 frontend tests, two targeted telemetry tests and the production frontend build passed. All five relocated regression fixtures validated against current input/plan schemas. Local Markdown links and whitespace checks passed. This documentation change did not rerun the full backend suite or live-provider experiments.
+## Final merge checks — November 7, 2026
+
+- 171 backend tests passed against a dedicated test database.
+- 54 frontend tests and the production build passed.
+- 25/25 fixture evaluations passed.
+- All 20 randomized scenarios passed at 1440px and 390px (40 browser case checks); no unexpected dialogs, JavaScript errors or page-width overflow. The separate desktop/phone architecture audit also passed. API responses were mocked throughout browser runs.
+- Regression coverage verifies overlapping hosting reservations, retry exclusions, stale unchanged dishes, stale bought-food previews/acceptance, and a recipe change between scheduling and final commit.
+- Independent code review found no remaining merge blockers in these fixes. Nonblocking follow-up: a stale recipe may still be offered in a swap preview; acceptance correctly rejects it.
+
+These are local results for the merge-fix working tree. Remote CI must run on its eventual commit; earlier green CI does not cover uncommitted changes. No saved user records or actual calendar events were modified. Production deployment and controlled real-calendar booking acceptance remain separate release gates.

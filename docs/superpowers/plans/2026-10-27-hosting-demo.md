@@ -11,6 +11,7 @@ Updated November 7, 2026. Branch: `build/hosting-demo`. Requirements: [PRD](../.
 - [x] Checked dietary/vegetarian alternatives and bought-prepared previews; fresh recheck and atomic menu/new-plan acceptance; previous snapshots preserved.
 - [x] Read-only alternative previews, grouped conflict explanations, one option first, inline guest contributions.
 - [x] Device-local Have checklist, crossed-out items, reversible filtering and changed-amount reconfirmation. No hosting import/pantry-entry panel.
+- [x] Include existing hosting reservations in conflict checks; recheck all selected recipe versions under the shared recipe-save/acceptance lock.
 - [x] Scoped Notion persistence and Google OAuth integration; local runtime tracing and LangSmith experiment runners.
 - [x] Refreshed README screenshots and silent generic-data walkthrough.
 
@@ -18,7 +19,7 @@ Updated November 7, 2026. Branch: `build/hosting-demo`. Requirements: [PRD](../.
 Use [current evaluation results](../../reviews/current-evaluation-results.md) as the single result summary. Keep executable fixtures and automated regressions. Synthetic-calendar tests, DOM interaction tests and isolated browser captures have different scopes; none establishes production or physical-cooking reliability.
 
 ## Remaining release work
-- [ ] Full responsive browser journeys for conflict recovery, checked swaps, bought-food approval, long content and error/retry states. Current desktop/mobile captures cover a sample path, not every case.
+- [ ] Full responsive browser journeys for conflict recovery, checked swaps, bought-food approval, long content and error/retry states. The 20-case mocked desktop/phone suite passes; live integration and all recovery/error journeys are not covered.
 - [ ] Controlled Google calendar-write acceptance with explicit authorization, including retry/partial failure and stale approval. Generation alone never authorizes booking.
 - [ ] Verify deployed OAuth refresh/reconnect, Notion lifecycle, backups/restores, monitoring and account isolation if hosting resumes. Replit deployment is paused; no hosted app claimed.
 - [ ] Verify an all-in deployment topology within the $5/month target before any deployment.

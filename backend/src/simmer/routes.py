@@ -112,6 +112,8 @@ def install_routes(app,owner,store,availability=None,fixture_mode=False,model=No
         if data.gathering.revision!=body.expected_revision:raise Conflict('Gathering changed; find alternatives again')
         data.availability=snapshot(o,data.gathering,True)
         trial=trial_for(data,recipes.list_recipes(o),[s.model_dump() for s in body.swaps])
+        from .recipe_readiness import require_current_recipes
+        require_current_recipes(trial,recipes.list_recipes(o))
         plan=checked(trial)
         if plan is None:raise Conflict('This alternative no longer fits. Find alternatives again.')
         ids={s.selection_id for s in body.swaps}
@@ -125,6 +127,8 @@ def install_routes(app,owner,store,availability=None,fixture_mode=False,model=No
         if data.gathering.revision!=body.expected_revision:raise Conflict('Gathering changed; review the option again')
         item=next((s for s in data.selections if s.id==body.selection_id),None)
         if not item or item.must_have or item.mode!='cook':raise ValueError('Choose an optional cooked dish')
+        from .recipe_readiness import require_current_recipes
+        require_current_recipes(data,recipes.list_recipes(o))
         item.mode='buy'
         data.availability=snapshot(o,data.gathering,True)
         plan=checked(data)

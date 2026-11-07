@@ -2,7 +2,7 @@ import hashlib, html, http.client, ipaddress, json, re, socket, ssl
 from html.parser import HTMLParser
 from urllib.parse import urlsplit, urljoin
 from .domain import RecipeSnapshot, PrepTask, Ingredient
-from .db import Conflict
+from .db import Conflict, serialized
 
 
 def validate_public_url(url):
@@ -90,6 +90,7 @@ class RecipeService:
     def list_recipes(self,owner): return [RecipeSnapshot.model_validate(x) for x in self.store.list(owner,'recipe')]
     def preview_recipe(self,owner,source):
         return preview_html(fetch_recipe_html(source),source) if source.startswith(('https:','http:')) else preview_text(source)
+    @serialized
     def save_reviewed_recipe(self,owner,recipe,expected_source_version):
         if not recipe.reviewed: raise ValueError('Review the recipe before saving')
         revision=None

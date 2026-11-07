@@ -11,3 +11,9 @@ def readiness(recipe):
 def changed_recipes(inputs,library):
     by_id={r.id:r for r in library}
     return [s.title for s in inputs.selections if s.recipe and s.recipe.id in by_id and s.recipe.version!=by_id[s.recipe.id].version]
+
+
+def require_current_recipes(inputs,library):
+    from .db import Conflict
+    if changed_recipes(inputs,library):
+        raise Conflict('Recipe collection changed; refresh selected recipes and review the option again')
